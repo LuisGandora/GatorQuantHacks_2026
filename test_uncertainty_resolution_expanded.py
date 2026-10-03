@@ -40,6 +40,30 @@ def _event(accession='a', tag='executive_officer_appointment', cik='0000000001',
             't_0': filing_date, 't_pre': filing_date, 'event_date': filing_date}
 
 
+# The single reviewed Experiment 9B same-issuer same-day pair (General Dynamics, CIK
+# 0000040533, filed 2025-12-05): a president promotion and a controller succession. They
+# are genuinely distinct filings, so both accession identities are retained.
+REVIEWED_ACCESSIONS = ('0001193125-25-309762', '0001193125-25-309757')
+REVIEWED_CIK = '0000040533'
+REVIEWED_DATE = '2025-12-05'
+
+
+def _fake_ns():
+    """Minimal namespace for the reused event_frame calendar/ticker helpers."""
+    return {
+        'normalize_ticker': lambda ticker: str(ticker).upper(),
+        'TOP_100': {'GD'},
+        'session_on_or_after': lambda value: value,
+        'session_before': lambda value: value,
+    }
+
+
+def _raw_row(accession, cik=REVIEWED_CIK, filing_date=REVIEWED_DATE, ticker='GD'):
+    return {'accession_number': accession, 'cik': cik, 'filing_date': filing_date,
+            'tickers': [ticker], 'supporting_text': 'Item 5.02 officer transition.'}
+
+
+
 def _delta_row(accession, tag, cik, valid, delta, closing, opening):
     return {'accession_number': accession, 'tag': tag, 'cik': cik,
             'valid_transitions': valid, 'resolution_delta': delta,
@@ -384,6 +408,76 @@ class EnrollmentMergeTests(unittest.TestCase):
             _event(accession='y', filing_date='2024-06-01')])}
         self.assertRaises(ValueError, sources.merge_enrollments, frames)
 
+    def test_reviewed_same_company_same_day_pair_is_retained(self):
+        frames = {'executive_officer_appointment': _frame([
+            _event(accession=REVIEWED_ACCESSIONS[0], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE),
+            _event(accession=REVIEWED_ACCESSIONS[1], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE)])}
+        events = sources.merge_enrollments(frames)
+        self.assertEqual([event['accession_number'] for event in events],
+                         sorted(REVIEWED_ACCESSIONS))
+        # Both identities survive, and the linkage is recorded on both without touching
+        # the tag, supporting text or canonical dates.
+        for event in events:
+            linkage = event['same_issuer_day_linkage']
+            self.assertEqual(linkage['cik'], REVIEWED_CIK)
+            self.assertEqual(linkage['filing_date'], REVIEWED_DATE)
+            self.assertEqual(linkage['adjudication'], 'retained_explicit_review')
+            self.assertEqual(
+                linkage['linked_accessions'],
+                [accession for accession in sorted(REVIEWED_ACCESSIONS)
+                 if accession != event['accession_number']])
+            self.assertEqual(event['tag'], 'executive_officer_appointment')
+
+    def test_reviewed_pair_diagnostics_warn_and_keep_issuer_bootstrap(self):
+        frames = {'executive_officer_appointment': _frame([
+            _event(accession=REVIEWED_ACCESSIONS[0], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE),
+            _event(accession=REVIEWED_ACCESSIONS[1], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE)])}
+        events = sources.merge_enrollments(frames)
+        diagnostics = sources.same_issuer_day_linkage_diagnostics(events)
+        self.assertTrue(diagnostics['warn'])
+        self.assertEqual(len(diagnostics['correlated_pairs']), 1)
+        self.assertEqual(diagnostics['correlated_pairs'][0]['accessions'],
+                         sorted(REVIEWED_ACCESSIONS))
+        self.assertIn('issuer-cluster', diagnostics['bootstrap'])
+        # The diagnostic never removes or rewrites an event.
+        self.assertEqual(len(events), 2)
+
+    def test_unreviewed_same_company_same_day_pair_still_fails(self):
+        # The reviewed accessions on a different CIK or filing date are not the reviewed
+        # group, so they fail. There is no general fallback.
+        for cik, filing_date in (('0000000001', REVIEWED_DATE),
+                                 (REVIEWED_CIK, '2025-12-08')):
+            frames = {'executive_officer_appointment': _frame([
+                _event(accession=REVIEWED_ACCESSIONS[0], cik=cik,
+                       filing_date=filing_date),
+                _event(accession=REVIEWED_ACCESSIONS[1], cik=cik,
+                       filing_date=filing_date)])}
+            self.assertRaises(ValueError, sources.merge_enrollments, frames)
+
+    def test_reviewed_pair_with_a_third_accession_is_not_partially_selected(self):
+        frames = {'executive_officer_appointment': _frame([
+            _event(accession=REVIEWED_ACCESSIONS[0], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE),
+            _event(accession=REVIEWED_ACCESSIONS[1], cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE),
+            _event(accession='0001193125-25-309999', cik=REVIEWED_CIK,
+                   filing_date=REVIEWED_DATE)])}
+        self.assertRaises(ValueError, sources.merge_enrollments, frames)
+
+    def test_unique_accessions_are_retained_once(self):
+        frames = {
+            'ceo_appointment': _frame([_event(accession='a', filing_date='2024-06-01'),
+                                       _event(accession='b', filing_date='2024-06-02')]),
+            'cfo_appointment': _frame([_event(accession='c', filing_date='2024-06-03')]),
+        }
+        events = sources.merge_enrollments(frames)
+        self.assertEqual([event['accession_number'] for event in events], ['a', 'b', 'c'])
+        self.assertTrue(all('same_issuer_day_linkage' not in event for event in events))
+
     def test_conflicting_metadata_rejected(self):
         frames = {
             'ceo_appointment': _frame([_event(accession='x', cik='0000000001')]),
@@ -435,6 +529,41 @@ class EnrollmentMergeTests(unittest.TestCase):
     def test_enroll_tag_rejects_excluded_tag(self):
         self.assertRaises(ValueError, sources.enroll_tag, None,
                           'executive_compensation_change')
+
+
+class CanonicalSameIssuerDayFramingTests(unittest.TestCase):
+    def test_partitioned_framing_retains_distinct_same_day_accessions(self):
+        raw = [_raw_row(REVIEWED_ACCESSIONS[0]), _raw_row(REVIEWED_ACCESSIONS[1])]
+        ns = _fake_ns()
+        frame = sources.frame_by_accession(raw, ns)
+        self.assertEqual(sorted(frame['accession_number']), sorted(REVIEWED_ACCESSIONS))
+        # The reused global check is unchanged and still rejects the raw list as a whole;
+        # that is the defect the per-accession partition works around.
+        self.assertRaises(ValueError, sources.event_frame, raw, ns)
+
+    def test_partitioned_framing_dedupes_within_one_accession(self):
+        raw = [_raw_row(REVIEWED_ACCESSIONS[0]), _raw_row(REVIEWED_ACCESSIONS[0])]
+        frame = sources.frame_by_accession(raw, _fake_ns())
+        self.assertEqual(len(frame), 1)
+        self.assertEqual(frame.iloc[0]['accession_number'], REVIEWED_ACCESSIONS[0])
+
+    def test_partitioned_framing_carries_canonical_calendar_fields(self):
+        frame = sources.frame_by_accession(
+            [_raw_row(REVIEWED_ACCESSIONS[0])], _fake_ns())
+        self.assertIn('t_0', frame.columns)
+        self.assertIn('t_pre', frame.columns)
+        self.assertIn('event_date', frame.columns)
+
+    def test_reviewed_pair_is_not_a_before_source_for_itself(self):
+        sibling = {'cik': REVIEWED_CIK, 'ticker': 'GD',
+                   'accession_number': REVIEWED_ACCESSIONS[1], 'form_type': '8-K',
+                   'filing_date': REVIEWED_DATE, 'items_text': 'Item 5.02 text',
+                   'filing_url': 'u'}
+        index = sources.index_by_cik([sibling])
+        event = _event(accession=REVIEWED_ACCESSIONS[0], cik=REVIEWED_CIK,
+                       filing_date=REVIEWED_DATE)
+        self.assertEqual(sources.prior_rows_for(event, index), [])
+        self.assertEqual(sources.class_p_rows(event, index), [])
 
 
 class OversizedPackageExclusionTests(unittest.TestCase):

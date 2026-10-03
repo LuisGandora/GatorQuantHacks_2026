@@ -100,6 +100,31 @@ def _url_by_accession(raw):
     return urls
 
 
+def frame_by_accession(raw, ns):
+    """Canonical Experiment 9B framing: reuse ``event_frame`` on raw partitions by accession.
+
+    ``departure_experiment.event_frame`` supplies the canonical provenance, accession-level
+    dedupe and trading-calendar fields (``t_0``, ``t_pre``, ``event_date``) exactly, and is
+    reused unchanged. It also enforces a global ``(cik, filing_date)`` uniqueness check that
+    rejects a legitimate same-company same-day set of otherwise distinct accessions. The
+    canonical Experiment 9B path therefore partitions ``raw`` by accession and frames each
+    partition with the unmodified ``event_frame``. The cross-accession same-day decision is
+    applied once, explicitly, in ``merge_enrollments``; nothing about provenance, dedupe or
+    the calendar is reimplemented here.
+    """
+    grouped = {}
+    for row in raw:
+        grouped.setdefault(row['accession_number'], []).append(row)
+    partitions = [event_frame(grouped[accession], ns) for accession in sorted(grouped)]
+    if not partitions:
+        return pd.DataFrame(columns=['accession_number', 'ticker', 'cik', 'filing_date',
+                                     'supporting_text'])
+    frame = pd.concat(partitions, ignore_index=True)
+    if frame.empty:
+        return frame
+    return frame.sort_values(['filing_date', 'accession_number']).reset_index(drop=True)
+
+
 def enroll_tag(ns, tag):
     """Fetch and frame one included tag's 2024-2025 universe filings.
 
@@ -110,7 +135,7 @@ def enroll_tag(ns, tag):
     raw = ns['api_get_all'](DISCLOSURES_ENDPOINT, {
         'tertiary_category': tag, 'filing_date.gte': spec.START,
         'filing_date.lte': spec.END, 'limit': 1000, 'sort': 'filing_date.asc'})
-    frame = event_frame(raw, ns)
+    frame = frame_by_accession(raw, ns)
     urls = _url_by_accession(raw)
     if not frame.empty:
         frame['filing_url'] = frame['accession_number'].map(urls)
@@ -177,6 +202,86 @@ def _finalize_supporting_text(record):
     return record
 
 
+# ---------------------------------------------------------------------------
+# Explicit same-issuer same-day enrollment adjudication (reviewed before semantics).
+# ---------------------------------------------------------------------------
+# The original Experiment 9B freeze framed each tag with departure_experiment.event_frame,
+# whose global (cik, filing_date) uniqueness check rejects every same-company same-day
+# multi-accession group. A real executive_officer_appointment pass returned two genuinely
+# distinct General Dynamics Corporation (CIK 0000040533) Item 5.02 filings dated
+# 2025-12-05: 0001193125-25-309762 (Danny Deep promoted to president, effective
+# 2025-12-03) and 0001193125-25-309757 (Dana O. Maisano controller succession, effective
+# 2026-04-01). They are separate transitions with separate accession identities, so both
+# are retained. This is the ONLY adjudicated group. There is no general fallback: any other
+# same-CIK same-day multi-accession group still fails fast in merge_enrollments.
+REVIEWED_SAME_ISSUER_DAY_GROUPS = {
+    ('0000040533', '2025-12-05'): frozenset({
+        '0001193125-25-309762',
+        '0001193125-25-309757',
+    }),
+}
+SAME_ISSUER_DAY_ADJUDICATION_NOTE = (
+    'Reviewed same-company same-day filings retained as separate accession identities. '
+    'Recorded for economic-correlation awareness only: the linkage never changes a tag, '
+    'supporting text, canonical date or count, so it cannot affect semantics or '
+    'eligibility. Neither filing is a before source for the other, and the issuer-cluster '
+    '(CIK) bootstrap retains an issuer\'s events together.')
+
+
+def _record_same_issuer_day_linkage(group, key):
+    """Record the reviewed same-issuer same-day linkage on every event in the group.
+
+    The linkage is metadata only. It is attached after tag selection, supporting-text
+    finalization and date canonicalization, and it is read by no semantic or eligibility
+    rule, so it cannot affect semantics or eligibility. It exists so the diagnostic can
+    warn that the events are economically correlated and so the issuer-cluster bootstrap's
+    retention of an issuer's events together is traceable.
+    """
+    cik, filing_date = key
+    accessions = sorted(event['accession_number'] for event in group)
+    for event in group:
+        event['same_issuer_day_linkage'] = {
+            'cik': cik,
+            'filing_date': filing_date,
+            'linked_accessions': [accession for accession in accessions
+                                  if accession != event['accession_number']],
+            'adjudication': 'retained_explicit_review',
+            'note': SAME_ISSUER_DAY_ADJUDICATION_NOTE,
+        }
+    return group
+
+
+def same_issuer_day_linkage_diagnostics(events):
+    """Warn about reviewed, economically correlated same-issuer same-day pairs.
+
+    Diagnostic only: it never filters, merges, re-tags or reweights events, so it cannot
+    change semantics or eligibility. The pinned inference is an issuer-cluster (CIK)
+    bootstrap that resamples issuers with all of an issuer's events together, so a reviewed
+    correlated pair is retained together and its shared-issuer correlation enters the
+    interval instead of being treated as independent.
+    """
+    pairs, seen = [], set()
+    for event in events:
+        linkage = event.get('same_issuer_day_linkage')
+        if not linkage:
+            continue
+        key = (linkage['cik'], linkage['filing_date'])
+        if key in seen:
+            continue
+        seen.add(key)
+        pairs.append({
+            'cik': key[0], 'filing_date': key[1],
+            'accessions': sorted([event['accession_number']]
+                                 + list(linkage['linked_accessions'])),
+            'adjudication': linkage['adjudication'],
+            'warning': 'same-company same-day filings are economically correlated; the '
+                       'issuer-cluster bootstrap retains them together and neither is a '
+                       'before source for the other.',
+        })
+    return {'correlated_pairs': pairs, 'warn': bool(pairs),
+            'bootstrap': 'issuer-cluster (CIK); an issuer\'s events are retained together'}
+
+
 def merge_enrollments(frames):
     """Merge per-tag frames into one accession-level table.
 
@@ -185,8 +290,9 @@ def merge_enrollments(frames):
     ``supporting_text`` for the same accession is legitimate evidence: the core filing
     metadata must agree, and every tag-specific text is retained and concatenated
     deterministically (identical texts once) with its provenance. A same-issuer same-day
-    pair of different accessions needs explicit adjudication and is rejected rather than
-    silently resolved.
+    group of different accessions is rejected unless it is the exact reviewed pair in
+    ``REVIEWED_SAME_ISSUER_DAY_GROUPS``; the pair is retained with a recorded linkage and
+    no silent first-row selection is ever made.
     """
     merged = {}
     for tag in spec.TAXONOMY_TAGS:
@@ -217,14 +323,21 @@ def merge_enrollments(frames):
         record = canonical_event_dates(record)
         events.append({**record, 'tag': tags[0], 'all_tags': tags})
     events.sort(key=lambda row: (row['filing_date'], row['accession_number']))
-    seen = {}
+    groups = {}
     for event in events:
         key = (str(event['cik']).zfill(10), event['filing_date'])
-        if key in seen:
-            raise ValueError('Multiple same-company same-day accessions need explicit '
-                             'enrollment adjudication: %s vs %s' % (
-                                 seen[key], event['accession_number']))
-        seen[key] = event['accession_number']
+        groups.setdefault(key, []).append(event)
+    for key, group in groups.items():
+        if len(group) == 1:
+            continue
+        accessions = frozenset(event['accession_number'] for event in group)
+        reviewed = REVIEWED_SAME_ISSUER_DAY_GROUPS.get(key)
+        if reviewed is None or accessions != reviewed:
+            raise ValueError(
+                'Multiple same-company same-day accessions need explicit enrollment '
+                'adjudication and this group is not the exact reviewed pair: %s'
+                % sorted(accessions))
+        _record_same_issuer_day_linkage(group, key)
     assert_unique_events(events)
     for event in events:
         window_check(event['filing_date'])
@@ -267,6 +380,7 @@ def run_enrollment(ns, output=OUTPUT):
         'total_events': len(events),
         'date_range': ([min(event['filing_date'] for event in events),
                         max(event['filing_date'] for event in events)] if events else None),
+        'linkage_diagnostics': same_issuer_day_linkage_diagnostics(events),
         'events_sha256': digest(events),
         'note': 'Outcome-blind enrollment only. No semantic request, price, option, '
                 'payoff or market record is read.',
