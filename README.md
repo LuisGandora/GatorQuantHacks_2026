@@ -94,3 +94,29 @@ See [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md) for the completed comparison:
 42/50 class matches, role-scope failures in the challenge cohort, and no aggregate
 binary improvement over the simple baseline. Aggregate counts are versioned in
 [BENCHMARK_METRICS.json](BENCHMARK_METRICS.json).
+
+## Departure fingerprints and full-source recovery
+
+Experiment 2's stability test ended with `no_candidate`; see
+[STABILITY_EXPERIMENT_RESULTS.md](STABILITY_EXPERIMENT_RESULTS.md).
+Experiment 3 retained a predeclared abruptness × succession-uncertainty mechanism,
+but only five short-excerpt filings passed its evidence gate; see
+[FINGERPRINT_EXPERIMENT_RESULTS.md](FINGERPRINT_EXPERIMENT_RESULTS.md).
+
+Experiment 3B recovered the original SEC packages for the same 132 filings from
+2024–2025, preserving all prior experiments. The source audit passed with 69
+filings across 46 companies. The unchanged JEV measurement qualified 53 filings
+across 37 companies, below the frozen minimum of 60. Its final decision is
+`no_candidate`: the economic hypothesis remains untested, and no strategy,
+2026 OOS or judges' sealed replication was run.
+
+Read [FULL_SOURCE_EVIDENCE_AUDIT.md](FULL_SOURCE_EVIDENCE_AUDIT.md) for coverage,
+provenance, manual validation, semantic distributions, latency and limitations.
+[FULL_SOURCE_EXPERIMENT_PROTOCOL.md](FULL_SOURCE_EXPERIMENT_PROTOCOL.md) contains
+the specification frozen before retrieval; aggregate results are in
+[FULL_SOURCE_METRICS.json](FULL_SOURCE_METRICS.json). Complete original packages,
+officer-level citations, locked JEV inputs and response records remain local in
+the ignored `full_source_results/` directory. Reproduction requires those local
+artifacts; the report describes their integrity checks and stage commands.
+Completed measurements are reused without rescoring. Do not lower the gate or
+enable the starter's OOS cells to work around this stopped experiment.
