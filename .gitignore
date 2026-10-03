@@ -30,3 +30,6 @@ full_source_results/
 guidance_results/
 expanded_guidance_results/
 risk_composition_results/
+
+# Earnings-resolution numerical benchmark market panel and controls
+earnings_payoff_results/
