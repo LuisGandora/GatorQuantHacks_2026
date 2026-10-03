@@ -17,11 +17,13 @@ CENTRAL INDEX KEY: 0000050863
 </SEC-HEADER>
 <DOCUMENT>
 <TYPE>8-K
+<SEQUENCE>1
 <FILENAME>original.htm
 <TEXT><html><p>Item 5.02</p><p>Ms. Example retires.</p></html></TEXT>
 </DOCUMENT>
 <DOCUMENT>
 <TYPE>EX-99.1
+<SEQUENCE>2
 <FILENAME>press.htm
 <TEXT><p>A successor is named.</p></TEXT>
 </DOCUMENT>'''
@@ -48,6 +50,17 @@ CENTRAL INDEX KEY: 0000050863
 
     def test_hidden_inline_xbrl_not_evidence(self):
         self.assertEqual(study.normalized_text('<ix:hidden>future</ix:hidden><p>Original visible fact</p><script>fake</script>'), 'Original visible fact')
+
+    def test_after_hours_acceptance_not_filed_as_of_date(self):
+        parsed = study.parse_package(self.package.replace('20240103160000','20240102193000'), self.event)
+        self.assertTrue(parsed['acceptance_date_differs'])
+        self.assertEqual(parsed['filing_date'], '2024-01-03')
+        self.assertIn('2024-01-02 19:30:00', parsed['filing_timestamp'])
+
+    def test_primary_report_not_secondary_xbrl_document(self):
+        secondary = '<DOCUMENT>\n<TYPE>8-K\n<SEQUENCE>9\n<FILENAME>R1.htm\n<TEXT>Cover rendering</TEXT>\n</DOCUMENT>'
+        parsed = study.parse_package(self.package+secondary, self.event)
+        self.assertEqual(len(parsed['documents']), 3)
 
 
 if __name__ == '__main__':

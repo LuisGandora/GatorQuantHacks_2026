@@ -64,6 +64,8 @@ def verify():
     previous.verify()
     if json.loads((OUTPUT / 'protocol.json').read_text()) != PROTOCOL:
         raise ValueError('Experiment3B frozen protocol changed.')
+    if json.loads((OUTPUT / 'protocol_hash.json').read_text())['sha256'] != digest(PROTOCOL):
+        raise ValueError('Experiment3B protocol checksum changed.')
     if json.loads((OUTPUT / 'preservation.json').read_text()) != preservation():
         raise ValueError('Previous research changed; stop.')
     cohort = json.loads((OUTPUT / 'cohort.json').read_text())
@@ -196,8 +198,11 @@ def parse_package(raw, event):
     company = value(r'COMPANY CONFORMED NAME:\s*([^\r\n]+)')
     if accession != event['accession_number'] or form != '8-K' or cik != event['cik'].zfill(10) or date != event['filing_date'].replace('-',''):
         raise ValueError('SEC header does not match original enrollment.')
-    if stamp[:8] != date:
-        raise ValueError('SEC acceptance date and enrolled filing date differ; needs explicit diagnosis.')
+    # SEC acceptance time and official filed-as-of date are separate facts.
+    # After-hours acceptance can precede the official filing date; never replace
+    # the enrolled date or existing economic entry with the acceptance date.
+    if not '20240101' <= stamp[:8] <= '20251231' or stamp[:8] > date:
+        raise ValueError('SEC acceptance timestamp escaped the authorized original filing boundary.')
     docs = []
     for block in re.findall(r'<DOCUMENT>(.*?)</DOCUMENT>', raw, re.S | re.I):
         def field(name):
@@ -206,11 +211,13 @@ def parse_package(raw, event):
         body = re.search(r'<TEXT>(.*?)</TEXT>', block, re.S | re.I)
         if not body:
             continue
-        docs.append({'filename':field('FILENAME'),'type':field('TYPE'),'description':field('DESCRIPTION'),
+        docs.append({'filename':field('FILENAME'),'type':field('TYPE'),'sequence':field('SEQUENCE'),'description':field('DESCRIPTION'),
             'text':normalized_text(body.group(1)), 'body_sha256':hashlib.sha256(body.group(1).encode()).hexdigest()})
-    if sum(d['type'] == '8-K' for d in docs) != 1:
-        raise ValueError('Exactly one original8-K document required.')
-    return {'accession': accession, 'company': company, 'filing_timestamp': f'{stamp[:4]}-{stamp[4:6]}-{stamp[6:8]} {stamp[8:10]}:{stamp[10:12]}:{stamp[12:14]} America/New_York (SEC acceptance)', 'documents':docs}
+    if sum(d['type'] == '8-K' and d['sequence'] == '1' for d in docs) != 1:
+        raise ValueError('Exactly one sequence1 original8-K document required; no rendered-XBRL substitution.')
+    return {'accession': accession, 'company': company, 'filing_date':event['filing_date'],
+        'acceptance_date_differs':stamp[:8] != date,
+        'filing_timestamp': f'{stamp[:4]}-{stamp[4:6]}-{stamp[6:8]} {stamp[8:10]}:{stamp[10:12]}:{stamp[12:14]} America/New_York (SEC acceptance)', 'documents':docs}
 
 
 def stage_prepare():
