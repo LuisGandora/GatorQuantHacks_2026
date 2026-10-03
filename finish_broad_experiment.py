@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 STAGES = [
     ['verify_broad_completion.py', '--require-complete'],
     ['repair_broad_control_duplicates.py'],
+    ['annotate_broad_premiums.py'],
     ['verify_broad_strategy_data.py'],
     ['broad_strategy_analysis.py', '--expanded'],
     ['broad_strategy_relationships.py', '--expanded'],

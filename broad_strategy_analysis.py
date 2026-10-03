@@ -80,7 +80,10 @@ def analyze(expanded=False, observed=False):
         if observed:
             for frame in [a, b]:
                 frame['net'] = frame.net_per_observed_stock
-                frame['premium_fraction'] *= frame.entry_spot_proxy/frame.observed_entry
+                for column in ['premium_fraction', 'closing_fraction', 'atm_call_premium_fraction',
+                               'otm_call_premium_fraction', 'otm_put_premium_fraction', 'entry_net_debit_fraction']:
+                    if column in frame:
+                        frame[column] *= frame.entry_spot_proxy/frame.observed_entry
                 frame['absolute_move'] = frame.observed_absolute_move
                 frame['stock_return'] = frame.observed_stock_return
                 frame['upside_tail'] = frame.observed_upside_tail
@@ -120,6 +123,9 @@ def analyze(expanded=False, observed=False):
                     intervals=[(str(day.date()), str(event.exit_date.date()))] +
                         [(str(r.entry_date.date()), str(r.exit_date.date())) for r in ordinary.itertuples()],
                     entry_premium=event.premium_fraction, ordinary_premium=ordinary.premium_fraction.mean(),
+                    closing_premium=event.closing_fraction, ordinary_closing_premium=ordinary.closing_fraction.mean(),
+                    entry_net_debit=getattr(event, 'entry_net_debit_fraction', float('nan')),
+                    ordinary_entry_net_debit=ordinary.entry_net_debit_fraction.mean() if 'entry_net_debit_fraction' in ordinary else float('nan'),
                     absolute_move=event.absolute_move, ordinary_absolute_move=ordinary.absolute_move.mean(),
                     stock_return=event.stock_return, ordinary_stock_return=ordinary.stock_return.mean(),
                     upside=max(event.stock_return, 0), ordinary_upside=ordinary.stock_return.clip(lower=0).mean(),
@@ -148,6 +154,8 @@ def analyze(expanded=False, observed=False):
                 difference=group.difference.mean(), ci_lo=lo, ci_hi=hi,
                 event_net=group.event_net.mean(), ordinary_net=group.ordinary_net.mean(),
                 entry_premium=group.entry_premium.mean(), ordinary_entry_premium=group.ordinary_premium.mean(),
+                closing_premium=group.closing_premium.mean(), ordinary_closing_premium=group.ordinary_closing_premium.mean(),
+                entry_net_debit=group.entry_net_debit.mean(), ordinary_entry_net_debit=group.ordinary_entry_net_debit.mean(),
                 absolute_move=group.absolute_move.mean(), ordinary_absolute_move=group.ordinary_absolute_move.mean(),
                 upside=group.upside.mean(), ordinary_upside=group.ordinary_upside.mean(),
                 downside=group.downside.mean(), ordinary_downside=group.ordinary_downside.mean(),
