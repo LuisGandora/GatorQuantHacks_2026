@@ -16,6 +16,33 @@ SPEC = dict(primary_horizon='21', primary_otm=.05, primary_cost=.05,
             interpretation='synthetic stock screening only; no tradable edge or independent validation claim')
 
 
+def fast_dependence_clusters(frame):
+    """Same union graph as the reference implementation, via an interval sweep."""
+    parent = list(range(len(frame)))
+    def root(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+    def union(i, j):
+        parent[root(i)] = root(j)
+    companies, intervals = {}, []
+    for i, row in enumerate(frame.itertuples(index=False)):
+        if row.ticker in companies:
+            union(i, companies[row.ticker])
+        companies[row.ticker] = i
+        intervals.extend((start, end, i) for start, end in row.intervals)
+    intervals.sort()
+    anchor, latest = None, None
+    for start, end, i in intervals:
+        if latest is not None and start <= latest:
+            union(i, anchor)
+            latest = max(latest, end)
+        else:
+            anchor, latest = i, end
+    return np.array([root(i) for i in range(len(frame))])
+
+
 def register():
     path = OUT / 'matching_inference_registration.json'
     if path.exists() and json.loads(path.read_text()) != SPEC:
@@ -23,31 +50,40 @@ def register():
     path.write_text(json.dumps(SPEC, indent=2))
 
 
-def analyze(expanded=False):
+def analyze(expanded=False, observed=False):
     register()
     # Only the session calendar is needed; load_starter also preserves its conventions.
     p.load_starter()
     source = pd.read_csv(ROOT / 'covered_call_csv_results' / 'jev_texts.csv')
     source.filing_date = pd.to_datetime(source.filing_date)
     disclosure_dates = source.groupby('ticker').filing_date.apply(list).to_dict()
-    prefix = 'expanded_' if expanded else ''
+    prefix = ('observed_' if observed else '') + ('expanded_' if expanded else '')
     shared_controls = None
     if expanded:
         pool = OUT / 'expanded_control_pool'
         if not (pool / 'collection_complete.json').exists():
             raise RuntimeError('Expanded control collection is incomplete.')
-        frames = [pd.read_csv(path, parse_dates=['entry_date', 'exit_date']) for path in sorted(pool.glob('batch_*.csv.gz'))]
+        pattern = 'batch_*_observed_stock.csv.gz' if observed else 'batch_[0-9][0-9][0-9][0-9][0-9].csv.gz'
+        frames = [pd.read_csv(path, parse_dates=['entry_date', 'exit_date']) for path in sorted(pool.glob(pattern))]
         shared_controls = pd.concat([frame for frame in frames if not frame.empty], ignore_index=True)
         if shared_controls.empty:
             raise RuntimeError('No priced expanded controls.')
     tables, exclusions = [], []
     for folder in sorted(OUT.iterdir()):
-        event_path = folder / 'events_cost_sensitivity.csv.gz'
-        control_path = folder / 'ordinary_cost_sensitivity.csv.gz'
+        suffix = '_observed_stock' if observed else ''
+        event_path = folder / f'events_cost_sensitivity{suffix}.csv.gz'
+        control_path = folder / f'ordinary_cost_sensitivity{suffix}.csv.gz'
         if not event_path.exists() or (not expanded and not control_path.exists()):
             continue
         a = pd.read_csv(event_path, parse_dates=['entry_date', 'exit_date'])
         b = shared_controls.copy() if expanded else pd.read_csv(control_path, parse_dates=['entry_date', 'exit_date'])
+        if observed:
+            for frame in [a, b]:
+                frame['net'] = frame.net_per_observed_stock
+                frame['premium_fraction'] *= frame.entry_spot_proxy/frame.observed_entry
+                frame['absolute_move'] = frame.observed_absolute_move
+                frame['upside_tail'] = frame.observed_upside_tail
+                frame['downside_tail'] = frame.observed_downside_tail
         b = b.drop_duplicates(['ticker', 'entry_date', 'exit_date', 'horizon', 'otm', 'cost_fraction', 'strategy'])
         b = b[[not any(abs((day-d).days) <= 30 for d in disclosure_dates.get(ticker, []))
                for ticker, day in zip(b.ticker, b.entry_date)]]
@@ -92,7 +128,7 @@ def analyze(expanded=False):
         if matched.empty:
             continue
         for keys, group in matched.groupby(['strategy', 'horizon', 'otm', 'cost'], sort=False):
-            clusters = p.dependence_clusters(group)
+            clusters = fast_dependence_clusters(group)
             labels = np.unique(clusters)
             lo = hi = np.nan
             if len(group) >= 40 and len(labels) >= 5:
@@ -118,4 +154,4 @@ if __name__ == '__main__':
     if '--register' in sys.argv:
         register()
     else:
-        analyze(expanded='--expanded' in sys.argv)
+        analyze(expanded='--expanded' in sys.argv, observed='--observed-stock' in sys.argv)
