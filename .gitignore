@@ -19,3 +19,6 @@ departure_results_initial_selection/
 stability_results/
 stability_results_api_rejected_v1/
 .stability_cache_api_rejected_v1/
+
+.fingerprint_cache/
+fingerprint_results/
