@@ -1,0 +1,16 @@
+{
+  "category_collections_complete": 10,
+  "category_collections_required": 10,
+  "primary_comparisons": 50,
+  "correction_family": 120,
+  "primary_comparisons_analyzed": 50,
+  "adequately_sized_comparisons": 25,
+  "estimable_primary_intervals": 0,
+  "discovery_signals": 0,
+  "independently_validated_findings": 0,
+  "conclusion": "INCONCLUSIVE",
+  "control_pool": "expanded calendar",
+  "stock_basis": "starter synthetic stock",
+  "research_complete": false,
+  "goal_achieved": false
+}

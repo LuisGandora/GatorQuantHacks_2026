@@ -52,7 +52,12 @@ starter['cells'] = [
          "        frame = pd.read_csv(path)\n"
          "        if not frame.empty:\n"
          "            primary = frame[(frame.horizon.astype(str)=='21') & (frame.otm==.05) & (frame.cost==.05)]\n"
-         "            print(name)\n            display(primary)\n"
+         "            print(name)\n"
+         "            compact = primary[['tag', 'strategy', 'events', 'companies', 'dependence_clusters', 'difference', 'ci_lo', 'ci_hi', 'conclusion']].copy()\n"
+         "            compact[['difference', 'ci_lo', 'ci_hi']] *= 100\n"
+         "            compact = compact.rename(columns={'difference': 'difference_pp', 'ci_lo': 'ci_lo_pp', 'ci_hi': 'ci_hi_pp'})\n"
+         "            display(compact)\n"
+         "            print('Differences are percentage points of entry stock notional; missing intervals do not imply no effect.')\n"
          "    else:\n        print(name, 'not yet completed')\n"),
     md('## Interpretation and remaining validation\n\n'
        'A discovery signal is not an established trading edge. Review entry premiums, stock movements and tails, '

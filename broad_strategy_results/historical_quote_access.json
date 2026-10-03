@@ -1,0 +1,46 @@
+{
+  "selection": "first three distinct companies in ticker/date order; no performance-based selection",
+  "samples": [
+    {
+      "ticker": "AAPL",
+      "option_symbol": "O:AAPL240621C00180000",
+      "day": "2024-02-29",
+      "http_status": 200,
+      "returned_quotes": 100,
+      "positive_two_sided_quotes": 100,
+      "bid": 9.7,
+      "ask": 10.45,
+      "bid_size": 5,
+      "ask_size": 1,
+      "sip_timestamp": 1709240399450991616
+    },
+    {
+      "ticker": "ABBV",
+      "option_symbol": "O:ABBV240517C00160000",
+      "day": "2024-01-08",
+      "http_status": 200,
+      "returned_quotes": 100,
+      "positive_two_sided_quotes": 100,
+      "bid": 8.3,
+      "ask": 8.5,
+      "bid_size": 152,
+      "ask_size": 40,
+      "sip_timestamp": 1704747597520712960
+    },
+    {
+      "ticker": "ABT",
+      "option_symbol": "O:ABT240816C00105000",
+      "day": "2024-04-30",
+      "http_status": 200,
+      "returned_quotes": 41,
+      "positive_two_sided_quotes": 41,
+      "bid": 5.7,
+      "ask": 5.85,
+      "bid_size": 54,
+      "ask_size": 68,
+      "sip_timestamp": 1714507154191346176
+    }
+  ],
+  "interpretation": "access and sample coverage probe only; does not prove fills or general quote availability",
+  "documentation": "https://www.massive.com/docs/rest/options/trades-quotes/quotes"
+}
