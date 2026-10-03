@@ -1,0 +1,424 @@
+{
+  "decision": "no_candidate: implementation_or_data_integrity_failure",
+  "semantic_gate_decision": "adverse_intact_gate_passed",
+  "decision_reasons": [
+    {
+      "order": 1,
+      "priority": "PRIMARY",
+      "reason": "The frozen group definition was not faithfully implemented: 13 of the 42 INTACT_FORWARD signal rows rest on a metric the measurement itself judged not comparable, so the signal as frozen is not the signal as predeclared. This is a code-versus-frozen-rule mismatch, verifiable from the frozen artifacts alone, and disqualifying on its own."
+    },
+    {
+      "order": 2,
+      "priority": "SECONDARY",
+      "reason": "The direction labels do not survive independent blinded verification: exact-label agreement 13 of 42 signal rows, and a maintained-or-raised direction is supported on only 16 of 42. JEV answered raised on 30 signal rows with independent agreement on 8, and maintained on 12 with agreement on 5. The reviewer is a fresh instance of the same model family while the instrument is a separate TypeSafe System One model; neither read is ground truth and the disqualifying fact is the instability itself."
+    },
+    {
+      "order": 3,
+      "priority": "TERTIARY",
+      "reason": "Market-data coverage at the frozen +21 primary cell is below the frozen floor: INTACT_FORWARD has 19 events with at least 2 control dates and 11 issuer clusters against a floor of 20 matched events."
+    },
+    {
+      "order": 4,
+      "priority": "FOURTH",
+      "reason": "The frozen rule had almost no arithmetic corroboration: 5 filings produced a comparable numeric pair and the deterministic numeric path never fired (0 filings with a numeric direction source), so direction rested on one uncorroborated answer per filing."
+    }
+  ],
+  "comparability_defect": {
+    "description": "The frozen Stage 6 INTACT_FORWARD definition requires at least one comparable material metric maintained or raised and no comparable material metric reduced or withdrawn. The implementation took the direction from the model's explicit_direction answer and admitted the filing whenever that answer was maintained or raised, without requiring the model's own comparability answer to be comparable.",
+    "intact_forward_rows": 42,
+    "comparability_counts": {
+      "comparable": 29,
+      "not_comparable_fiscal_period": 6,
+      "insufficient_evidence": 4,
+      "not_comparable_accounting_basis": 2,
+      "not_comparable_metric": 1
+    },
+    "intact_forward_rows_not_comparable": 13,
+    "not_comparable_by_direction": {
+      "RAISED": 10,
+      "MAINTAINED": 3
+    },
+    "not_comparable_distinct_issuers": 11,
+    "strict_stage6_recompute": {
+      "events": 29,
+      "issuers": 14,
+      "max_issuer_share": 0.1724137931034483,
+      "gate_thresholds": {
+        "min_events": 20,
+        "min_issuers": 10,
+        "max_issuer_share": 0.2
+      },
+      "gate_would_still_pass": true,
+      "note": "The defect changed the composition and the membership of the signal rather than flipping the gate verdict."
+    },
+    "mechanism_illustrations": [
+      {
+        "accession_number": "0000059478-25-000037",
+        "ticker": "LLY",
+        "filing_date": "2025-02-06",
+        "frozen_direction": "RAISED",
+        "comparability": "not_comparable_fiscal_period"
+      },
+      {
+        "accession_number": "0000070858-24-000186",
+        "ticker": "BAC",
+        "filing_date": "2024-07-16",
+        "frozen_direction": "RAISED",
+        "comparability": "not_comparable_fiscal_period"
+      }
+    ],
+    "note": "Illustrations of the mechanism, not proof about any individual filing; accessions, tickers and dates are already public in this repository's earlier reports."
+  },
+  "economic_outcomes_computed": false,
+  "economic_stage": {
+    "coverage": {
+      "coverage_floor": {
+        "min_distinct_ciks": 10,
+        "min_events": 20
+      },
+      "coverage_floor_passed": false,
+      "float_tolerance": 1e-09,
+      "groups": {
+        "DETERIORATED_FORWARD": {
+          "distinct_ciks_2plus": 6,
+          "events_with_2plus_control_dates": 11,
+          "events_with_control_row": 12,
+          "events_with_event_row": 7
+        },
+        "GUIDANCE_ONLY_INTACT": {
+          "distinct_ciks_2plus": 12,
+          "events_with_2plus_control_dates": 22,
+          "events_with_control_row": 39,
+          "events_with_event_row": 29
+        },
+        "INTACT_FORWARD": {
+          "distinct_ciks_2plus": 11,
+          "events_with_2plus_control_dates": 19,
+          "events_with_control_row": 33,
+          "events_with_event_row": 26
+        }
+      },
+      "intact_forward_floor_passed": false,
+      "min_controls_per_event": 2,
+      "outcome_blind": true,
+      "primary_cell": {
+        "bucket": "3-6m",
+        "entry_delay": 0.0,
+        "haircut": 0.05,
+        "horizon": "21",
+        "otm": 0.05,
+        "stale": 0.0,
+        "strategy": "cash_secured_put"
+      },
+      "return_columns_read": [],
+      "stage": "coverage"
+    },
+    "decision": "no_candidate: implementation_or_data_integrity_failure",
+    "judges_opened": false,
+    "new_jev_requests": 0,
+    "new_massive_requests": 0,
+    "note": "Experiment 8 economic stage. The semantic gate is frozen and was not re-evaluated. Costs are modeled scenarios inside net.",
+    "oos_opened": false,
+    "year_2026_read": false
+  },
+  "event_table_sha256": "781ca5728e48b95adaa5be6af3eafdb7e183eb23d73657efefe4c6e7d6e433ab",
+  "events": 130,
+  "experiment": "8 adverse-current / intact-forward 8-K semantic and feasibility stage",
+  "frontier": {
+    "current_guidance_filings": 98,
+    "direction_distribution": {
+      "INSUFFICIENT_EVIDENCE": 28,
+      "MAINTAINED": 12,
+      "NOT_COMPARABLE": 6,
+      "RAISED": 37,
+      "REDUCED": 15
+    },
+    "eligibility_reasons": {
+      "A_FALSE": 8,
+      "INSUFFICIENT_EVIDENCE": 25,
+      "NOT_COMPARABLE": 6,
+      "NOT_CURRENT_GUIDANCE": 29,
+      "NO_MATERIAL_METRIC": 3,
+      "SOURCE_INTEGRITY": 3,
+      "classified": 56
+    },
+    "eligible_filings_examined": 127,
+    "not_current_guidance": 29
+  },
+  "gate": {
+    "counterfactual_issuer_share": {
+      "10": {
+        "issuers": 10,
+        "max_issuer_share": 0.1,
+        "n": 10
+      },
+      "15": {
+        "issuers": 14,
+        "max_issuer_share": 0.13333333333333333,
+        "n": 15
+      },
+      "20": {
+        "issuers": 14,
+        "max_issuer_share": 0.15,
+        "n": 20
+      },
+      "25": {
+        "issuers": 16,
+        "max_issuer_share": 0.12,
+        "n": 25
+      },
+      "30": {
+        "issuers": 17,
+        "max_issuer_share": 0.1,
+        "n": 30
+      },
+      "40": {
+        "issuers": 18,
+        "max_issuer_share": 0.125,
+        "n": 40
+      },
+      "5": {
+        "issuers": 5,
+        "max_issuer_share": 0.2,
+        "n": 5
+      },
+      "50": {
+        "issuers": 18,
+        "max_issuer_share": 0.11904761904761904,
+        "n": 42
+      }
+    },
+    "foundations_complete": true,
+    "issuer_counts": {
+      "0000021344": 3,
+      "0000034088": 4,
+      "0000051143": 1,
+      "0000059478": 3,
+      "0000066740": 2,
+      "0000070858": 3,
+      "0000072971": 1,
+      "0000077476": 3,
+      "0000200406": 2,
+      "0000310158": 4,
+      "0000732712": 3,
+      "0000773840": 2,
+      "0001048911": 2,
+      "0001075531": 1,
+      "0001099219": 1,
+      "0001364742": 1,
+      "0001413329": 5,
+      "0001467858": 1
+    },
+    "issuers_intact_forward": 18,
+    "max_issuer_share": 0.11904761904761904,
+    "n_intact_forward": 42,
+    "passed": true,
+    "thresholds": {
+      "max_issuer_share": 0.2,
+      "min_intact_forward": 20,
+      "min_issuers": 10
+    }
+  },
+  "groups": {
+    "DETERIORATED_FORWARD": {
+      "events": 14,
+      "issuer_counts": {
+        "0000021344": 1,
+        "0000059478": 1,
+        "0000077476": 4,
+        "0000310158": 3,
+        "0001048911": 3,
+        "0001099219": 1,
+        "0001413329": 1
+      },
+      "issuers": 7,
+      "max_issuer_share": 0.2857142857142857
+    },
+    "INTACT_FORWARD": {
+      "events": 42,
+      "issuer_counts": {
+        "0000021344": 3,
+        "0000034088": 4,
+        "0000051143": 1,
+        "0000059478": 3,
+        "0000066740": 2,
+        "0000070858": 3,
+        "0000072971": 1,
+        "0000077476": 3,
+        "0000200406": 2,
+        "0000310158": 4,
+        "0000732712": 3,
+        "0000773840": 2,
+        "0001048911": 2,
+        "0001075531": 1,
+        "0001099219": 1,
+        "0001364742": 1,
+        "0001413329": 5,
+        "0001467858": 1
+      },
+      "issuers": 18,
+      "max_issuer_share": 0.11904761904761904
+    },
+    "MIXED_FORWARD": {
+      "events": 0,
+      "issuer_counts": {},
+      "issuers": 0,
+      "max_issuer_share": 0.0
+    },
+    "UNCLASSIFIED": {
+      "events": 74,
+      "issuer_counts": {
+        "0000002488": 1,
+        "0000004962": 1,
+        "0000019617": 8,
+        "0000021344": 1,
+        "0000034088": 4,
+        "0000051143": 1,
+        "0000059478": 4,
+        "0000066740": 2,
+        "0000070858": 5,
+        "0000077476": 1,
+        "0000092122": 1,
+        "0000093410": 6,
+        "0000200406": 5,
+        "0000310158": 1,
+        "0000316709": 1,
+        "0000732712": 2,
+        "0000773840": 1,
+        "0000796343": 2,
+        "0000895421": 3,
+        "0001045810": 1,
+        "0001048911": 2,
+        "0001075531": 7,
+        "0001099219": 6,
+        "0001364742": 1,
+        "0001413329": 2,
+        "0002012383": 5
+      },
+      "issuers": 26,
+      "max_issuer_share": 0.10810810810810811
+    }
+  },
+  "guidance_table_sha256": "f27009b70c59097a61a3182790737e7e23627ebfdeb6d203c3d3e5306fbba8c2",
+  "hypothesis": "Among earnings-related 8-K disclosures containing a material adverse current-period operating development, events where the company's material quantitative forward outlook is maintained or raised relative to its most recent comparable previously disclosed outlook will realize less subsequent downside than events in which the forward outlook deteriorates. A 5%-OTM cash-secured put entered using the Massive starter's tradeable post-filing t0 entry rule, with the 3-to-6-month expiry bucket, should outperform issuer-matched ordinary-day cash-secured puts after costs. The primary evaluation horizon is +21 trading sessions.",
+  "issuers": 28,
+  "jev": {
+    "cache_hits": 1098,
+    "judgments": 4215,
+    "judgments_per_second": 111.88559653620894,
+    "latency_mean_s": 0.33045973168280623,
+    "latency_median_s": 0.3213338335044682,
+    "latency_p95_s": 0.44376150000607595,
+    "live_requests": 114,
+    "malformed_rate": 0.0024752475247524753,
+    "malformed_responses": 3,
+    "requests": 1212,
+    "valid_rate": 0.9975247524752475,
+    "valid_responses": 1209,
+    "wall_s": 8.808971000020392
+  },
+  "judges_opened": false,
+  "label_verification": {
+    "kind": "bounded blinded guidance-direction verification",
+    "packet_filings": 98,
+    "verdicts": 98,
+    "filings_with_zero_passages": 0,
+    "total_passages": 156,
+    "truncated_passages": 19,
+    "overall_agreement": {
+      "matched": 54,
+      "n": 98,
+      "rate": 0.551,
+      "convention": "frozen INSUFFICIENT_EVIDENCE and NOT_COMPARABLE read as none"
+    },
+    "overall_agreement_strict": {
+      "matched": 26,
+      "n": 98,
+      "rate": 0.265,
+      "convention": "direct identity on maintained, raised, lowered, withdrawn only"
+    },
+    "intact_forward_exact": {
+      "matched": 13,
+      "n": 42,
+      "rate": 0.31
+    },
+    "intact_forward_maintained_or_raised": {
+      "matched": 16,
+      "n": 42
+    },
+    "intact_forward_unsupported": {
+      "count": 26,
+      "n": 42
+    },
+    "deteriorated_forward_exact": {
+      "matched": 9,
+      "n": 14,
+      "rate": 0.643
+    },
+    "signal_confusion": {
+      "raised_to_none": 14,
+      "raised_to_unclear": 6,
+      "raised_to_raised": 8,
+      "raised_to_maintained": 2,
+      "maintained_to_none": 5,
+      "maintained_to_maintained": 5,
+      "maintained_to_raised": 1,
+      "maintained_to_unclear": 1
+    },
+    "raised_all_filings_confusion": {
+      "raised_to_none": 17,
+      "raised_to_unclear": 7,
+      "raised_to_raised": 11,
+      "raised_to_maintained": 2
+    },
+    "jev_raised_signal": {
+      "n": 30,
+      "independent_agreed": 8
+    },
+    "jev_maintained_signal": {
+      "n": 12,
+      "independent_agreed": 5
+    },
+    "confound_prior_source": {
+      "signal_with_prior": 38,
+      "signal_n": 42,
+      "unsupported_with_prior": 22,
+      "unsupported_n": 26
+    },
+    "confound_passage_clipping": {
+      "signal_fewer_passages": 3,
+      "signal_n": 42,
+      "supported": 1,
+      "unsupported": 2
+    },
+    "reviewer": "fresh instance of the same model family that did the implementation work",
+    "measurement_instrument": "separate TypeSafe System One model",
+    "ground_truth": false,
+    "return_columns_read": []
+  },
+  "note": "Semantic measurement only. No price, option, payoff, ordinary-day market record, 2026 filing or judges artifact was read, and no P&L was computed.",
+  "oos_opened": false,
+  "ordinary_day_market_read": false,
+  "prices_read": 0,
+  "prior": {
+    "comparable_pairs_found": 5,
+    "filings_needing_prior_search": 78,
+    "filings_with_current_guidance": 98,
+    "filings_with_no_prior_candidate": 20,
+    "filings_with_prior_selection": 74,
+    "no_prior_comparable_guidance": 93,
+    "steps_back_distribution": {
+      "1": 70,
+      "2": 3,
+      "3": 1
+    }
+  },
+  "protocol_sha256": "47352c861a43c6f0f782427578b03519daf2e2eb2a1faef64ae4c424ca10b6ce",
+  "stage1": {
+    "locator_ran_empty_union": 29,
+    "locator_recovered": 0,
+    "malformed_source_rows": 3,
+    "not_current_guidance_after_step1": 29,
+    "reused_nonempty_union": 98
+  }
+}

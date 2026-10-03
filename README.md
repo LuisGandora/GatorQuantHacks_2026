@@ -6,6 +6,10 @@
 > The notebook and organizer announcements govern conflicts; the Devpost listing matters only
 > for submission.
 
+## Experiment 8: adverse-current / intact-forward economic stage
+
+Experiment 8 tests whether an earnings-related Item 2.02 package that discloses a material adverse current-period operating development while maintaining or raising its quantitative forward outlook realizes less subsequent downside than the issuer-matched ordinary days. The frozen protocol is [ADVERSE_INTACT_PROTOCOL.md](ADVERSE_INTACT_PROTOCOL.md), the aggregate economic report is [ADVERSE_INTACT_RESULTS.md](ADVERSE_INTACT_RESULTS.md), and the machine-readable summary is [ADVERSE_INTACT_SUMMARY.json](ADVERSE_INTACT_SUMMARY.json). The frozen primary cell is `cash_secured_put`, bucket `3-6m`, OTM 0.05, entry delay 0, stale 0, premium haircut 0.05 per side at horizon +21, with the issuer-aware cluster bootstrap (seed 20261008) and floors of 20 matched events and 10 issuer clusters. The decision is `no_candidate: implementation_or_data_integrity_failure`: the frozen signal's direction labels did not survive independent blinded verification, so the economic question was left unopened. Coverage at the frozen primary cell also fell below the frozen floor, and no return column was read. The 2026 out-of-sample window and the judges sealed window remain unopened.
+
 ## Experiment 7: contained-shock / intact-outlook semantic gate
 
 Experiment 7 asked whether an earnings-related Item 2.02 package that discloses material
