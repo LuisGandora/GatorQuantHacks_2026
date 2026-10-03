@@ -3,7 +3,10 @@
 ## Status and scope
 
 This is the research prompt for a **new in-sample experiment**, not a report of
-completed results or an executable runner. It replaces automatic selection of
+completed results or an executable runner. The implemented departure audit and
+its failed readiness gate are documented in [DEPARTURE_EXPERIMENT.md](DEPARTURE_EXPERIMENT.md)
+and [DEPARTURE_RESULTS.md](DEPARTURE_RESULTS.md). That study did not open economic
+outcomes or either validation window. This prompt replaces automatic selection of
 the largest backtest payoff with an evidence-led discovery and validation plan.
 The existing stability, novelty and reference-label studies retain their original
 protocols and results. Do not overwrite them or relax their failed gates.

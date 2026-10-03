@@ -56,12 +56,18 @@ Keep `.env` out of anything you share or submit; `.gitignore` already excludes i
 
 ## JEV judgment-stability experiment
 
-For the next research assignment, use [SEMANTIC_DISCOVERY_PROMPT.md](SEMANTIC_DISCOVERY_PROMPT.md):
+The research workflow is defined in [SEMANTIC_DISCOVERY_PROMPT.md](SEMANTIC_DISCOVERY_PROMPT.md):
 in-sample semantic discovery and comparison of all five Massive strategies,
 followed by one supported frozen hypothesis (or a null), one 2026 OOS test and
-judges' sealed replication. This is a research prompt, not a completed experiment
-or an implemented runner. The starter's automatic largest-edge selection does
-not meet its evidence and freeze requirements.
+judges' sealed replication. The departure implementation and completed audit are
+documented in [DEPARTURE_EXPERIMENT.md](DEPARTURE_EXPERIMENT.md) and
+[DEPARTURE_RESULTS.md](DEPARTURE_RESULTS.md). The audit failed its frozen
+measurement gate: 79 primary filings included only one abrupt/adverse event,
+and 25/132 filings failed evidence/response checks. All five economic structures
+were recorded as not run; no final hypothesis was frozen and neither validation
+window was opened. Aggregate evidence is in [DEPARTURE_METRICS.json](DEPARTURE_METRICS.json).
+The starter's automatic largest-edge selection does not meet this workflow's
+evidence and freeze requirements.
 
 See [EXPERIMENT.md](EXPERIMENT.md) for the in-sample-only CFO appointment experiment,
 credential setup, exact scoring protocol, all-horizon statistical outputs, and limitations.

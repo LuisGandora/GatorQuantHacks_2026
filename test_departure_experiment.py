@@ -10,6 +10,7 @@ import numpy as np
 import pandas as pd
 
 import departure_experiment as e
+from departure_report import build_summary
 from jev_experiment import digest, validate_response, starter
 
 
@@ -122,6 +123,48 @@ class ResearchBoundaryTests(unittest.TestCase):
                 ns['api_get'](cursor)
             with self.assertRaises(ValueError):
                 ns['api_get']('/stocks/filings/8-K/vX/text?cursor=opaque')
+
+    def test_rejected_feature_is_excluded_without_resampling(self):
+        packet = {'accession_number': 'x', 'ticker': 'T', 'cik': '1', 'filing_date': '2024-01-02',
+                  'baseline_severity': 1, 'baseline_abruptness': 2, 'baseline_adverse_circumstances': False,
+                  'baseline_group': 'routine', 'baseline_cues': {}, 'baseline_evidence': {}, 'state': {}}
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp)
+            with patch.object(e, 'cached_judgment', side_effect=e.RejectedJudgment('ref', 'malformed')) as call:
+                frame = e.classify([packet], 'offline', output)
+            self.assertEqual(call.call_count, 1)
+            self.assertFalse(frame.iloc[0].eligible)
+            self.assertEqual(frame.iloc[0].jev_group, 'insufficient')
+            self.assertIsNone(e.records(frame)[0]['severity'])
+
+    def test_failure_report_checks_hashes_and_never_claims_payoffs(self):
+        labels = pd.DataFrame([dict(cik=str(i), eligible=True, priceable=True, earnings_nearby=False,
+                                    jev_group='routine', baseline_group='routine', severity=1, abruptness=1,
+                                    filing_date='2024-02-01', request_references=[], review_issues='', confidence=.5)
+                               for i in range(12)])
+        selection = {'category': 'test', 'protocol_hash': digest(e.PROTOCOL), 'candidates': []}
+        coverage = {'protocol_hash': digest(e.PROTOCOL), 'selection_hash': digest(selection),
+                    'labels_hash': digest(e.records(labels))}
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp)
+            for name, value in [('protocol', e.PROTOCOL), ('selection', selection), ('coverage', coverage),
+                                ('semantic_labels', e.records(labels)), ('gate', e.readiness(labels))]:
+                e.save(output/f'{name}.json', value)
+            e.skipped_results(output, 'sparse')
+            summary = build_summary(output)
+            self.assertEqual(summary['decision']['status'], 'no_candidate')
+            self.assertIsNone(summary['endpoints']['net_edge'])
+            self.assertEqual(summary['endpoints']['strategy_cells'], 1620)
+            # Presence alone is enough to reject economic evidence in this study;
+            # the report must not open or summarize this deliberately invalid file.
+            (output/'outcomes.csv').write_text('this is not an outcome file')
+            with self.assertRaises(ValueError):
+                build_summary(output)
+            (output/'outcomes.csv').unlink()
+            labels.loc[0, 'severity'] = 3
+            e.save(output/'semantic_labels.json', e.records(labels))
+            with self.assertRaises(ValueError):
+                build_summary(output)
 
 
 if __name__ == '__main__':
