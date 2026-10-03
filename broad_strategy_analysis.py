@@ -76,7 +76,7 @@ def analyze(expanded=False, observed=False):
         if not event_path.exists() or (not expanded and not control_path.exists()):
             continue
         a = pd.read_csv(event_path, parse_dates=['entry_date', 'exit_date'])
-        b = shared_controls.copy() if expanded else pd.read_csv(control_path, parse_dates=['entry_date', 'exit_date'])
+        b = shared_controls[shared_controls.ticker.isin(a.ticker.unique())].copy() if expanded else pd.read_csv(control_path, parse_dates=['entry_date', 'exit_date'])
         if observed:
             for frame in [a, b]:
                 frame['net'] = frame.net_per_observed_stock
