@@ -1,5 +1,29 @@
 # Gator Quant Hacks 2026 · Trade the 8-K
 
+## Earnings-resolution numerical payoff benchmark
+
+The completed experiment 6 tests whether selling the 5% out-of-the-money put after an
+earnings-tagged Item 2.02 disclosure has a positive net 5-session event-minus-ordinary edge,
+with the other four starter structures reported descriptively. The frozen specification is
+[EARNINGS_PAYOFF_PROTOCOL.md](EARNINGS_PAYOFF_PROTOCOL.md) and the identity is
+[EARNINGS_PAYOFF_FREEZE.json](EARNINGS_PAYOFF_FREEZE.json). The completed run is in
+[EARNINGS_PAYOFF_RESULTS.md](EARNINGS_PAYOFF_RESULTS.md); public aggregates are in
+[EARNINGS_PAYOFF_METRICS.json](EARNINGS_PAYOFF_METRICS.json).
+
+The decision is `no_supported_numerical_candidate`: nine frozen gates failed, the primary
+cell has 54 matched events across 17 CIK clusters with a +0.000881 net paired edge against a
+required 0.005, horizon 10 and 2025 are negative, and no confidence interval was estimable for
+the primary cell at the frozen floor. The fixed sensitivity grid does carry two computable
+intervals (bucket 2m and max stale 3), but both contain zero. This is not an economic null.
+Fixed-baseline horizon and sensitivity
+summaries are public in [EARNINGS_PAYOFF_HORIZONS.json](EARNINGS_PAYOFF_HORIZONS.json) and
+[EARNINGS_PAYOFF_SENSITIVITY.json](EARNINGS_PAYOFF_SENSITIVITY.json). The frozen
+implementation is audited read-only in
+[EARNINGS_PAYOFF_REVIEW.md](EARNINGS_PAYOFF_REVIEW.md): it confirms the frozen identity and
+stage fences, finds no fatal look-ahead or fencing defect, and records six material
+mechanism limitations. There were no new JEV requests, no predictive claim, and no
+out-of-sample or judges reads. New direction research runs separately.
+
 ## Risk-composition measurement audit
 
 Experiment 5A tests whether JEV can distinguish demand deterioration, margin
@@ -185,3 +209,26 @@ new model calls. The failed semantic gate blocks historical five-strategy
 evaluation, final strategy selection, 2026 OOS and judges' replication. Subsequent
 research designs must remain distinct exploratory experiments; do not edit the
 frozen thresholds or rescore successful requests to qualify this cohort.
+
+## Next direction
+
+The direction decision is owned by GPT. It is to continue outcome-blind
+source-integrity checks and to document a separate 2022-2025 credit-facility
+coverage study. There is no positive economic finding and no final trading
+hypothesis yet. [RESEARCH_NEXT_DIRECTION.md](RESEARCH_NEXT_DIRECTION.md) is advisory
+input to that decision, not the decision itself: it records the competing routes,
+source-only sample feasibility, prior exposure, and corrections to its earlier
+overstated claims. The earlier claim that no fresh confirmation is feasible under
+the frozen long-only strategy library and a material-effect gate is removed. The
+0.005 net-per-five-session threshold is the team's internal Experiment 6 benchmark,
+not an organizer rule; no examined route has yet passed a frozen source gate, which
+is not proof that none exists. No opt-in exposed exploration is specified or run.
+
+[CREDIT_FACILITY_FEASIBILITY.md](CREDIT_FACILITY_FEASIBILITY.md) is a source-only
+2024-2025 raw-count audit of the Massive `credit_facility` tag. Its counts are the
+de-duplicated tag population for a provisional direct-ticker TOP_100 universe, not
+a clean event cohort, and it stops as `source_infeasible` on the raw 80/20 floor.
+The wider 2022-2025 credit-facility coverage study is to be documented separately.
+
+No classifier or model semantic call, no JEV request, and no 2026 filing,
+out-of-sample, or sealed judges window is involved.
