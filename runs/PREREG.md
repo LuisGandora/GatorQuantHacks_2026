@@ -68,3 +68,27 @@ All P&L stages (insample, oos, portfolio) require harness.py, jev.py, and jev_sc
 **Prediction**: Fresh − stale edge will be **negative** (fresh underperforms stale), and its 95% confidence interval **will include zero** at the sealed window's sample size (n=25 fresh, n=40 stale OOS). The hypothesis fails all three pre-registered conditions.
 
 **Rationale**: In-sample already showed fresh-stale = -1.03% with stale arms outperforming. The period-of-report date source dilutes freshness, but the direction of the in-sample result is strong enough that OOS is unlikely to flip sign. Sample size is too small for the interval to exclude zero.
+
+---
+
+## Correction (2026-10-03)
+
+The study windows stated in the **Primary Test** section above were misstated. The windows actually run in the notebook and harness are:
+- **In-sample**: 2024-01-01 to 2025-12-31
+- **Out-of-sample**: 2026-01-01 to 2026-08-31
+
+The original text (2024-01-01 to 2025-06-30 / 2025-07-01 to 2026-08-31) reflected an earlier plan. The correction does not change any pre-registered hypothesis, failure condition, or test definition.
+
+---
+
+## Sealed-window predictions, reframed (2026-10-03)
+
+**These predictions were written after the out-of-sample look (2026-01-01 to 2026-08-31) and before anyone has seen the sealed window (2023-06-01 to 2023-08-31).**
+
+1. **Fresh cash-secured put below ordinary days (negative edge).** The reframed hypothesis is that fresh leadership 8-Ks are under-priced, so put-sellers lose. We predict the fresh arm will show a negative edge vs placebo in the sealed window.
+
+2. **Fresh − stale negative.** The fresh-stale gap will be negative (fresh underperforms stale), consistent with both in-sample (−1.03%) and out-of-sample (−2.82%).
+
+3. **At the sealed window's size (about 3 months, likely under 20 fresh events), both intervals include zero: the sign is the prediction, not significance.** The sample is too small for statistical significance; the prediction is directional only.
+
+4. **Mirror trade, a prediction only (no test is run): a protective put entered after fresh filings beats ordinary days.** If the market under-prices the move after fresh filings, buying protection (protective put) should have positive edge vs placebo. This is a mirror prediction; no test is run in this submission.
