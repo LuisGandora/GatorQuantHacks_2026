@@ -12,3 +12,5 @@ experiment_results/
 .novelty_cache/
 novelty_results/
 label_benchmark/
+.departure_cache/
+departure_results/
