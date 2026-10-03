@@ -1,7 +1,11 @@
 """Source scope and parent-preservation checks for the expanded experiment."""
 import unittest
+import tempfile
+import json
+from pathlib import Path
 from unittest.mock import patch
 import expanded_guidance_sources as sources
+import expanded_guidance_semantics as semantic
 from expanded_guidance_spec import PROTOCOL
 from guidance_spec import PROTOCOL as PARENT
 
@@ -29,6 +33,44 @@ class ExpandedGuidance(unittest.TestCase):
         rows,counts=sources.enroll([row,dict(row,tertiary_category='guidance_issuance_or_update')],['AAPL'])
         self.assertEqual(counts['filings'],1)
         self.assertEqual(len(rows[0]['tags']),2)
+
+    def test_citation_numeric_conversion(self):
+        from decimal import Decimal
+        self.assertEqual(semantic.normalize({'quote':'1.20 to $1.40 billion'},'usd_billion'),
+                         (Decimal('1200.00'),Decimal('1400.00')))
+        self.assertEqual(semantic.normalize({'quote':'8.50 to $8.70'},'usd_share'),
+                         (Decimal('8.50'),Decimal('8.70')))
+        with self.assertRaises(ValueError):semantic.normalize({'quote':'invented 1 to 2'},'usd_share')
+
+    def test_effective_company_gate_rejects_concentration(self):
+        rows=[{'eligible':True,'cik':i%20,'group':'deteriorated' if i%2 else 'unchanged',
+               'uncertainty_score':i%2,'malformed':False} for i in range(80)]
+        self.assertTrue(semantic.feasibility(rows)['passed'])
+        for row in rows[:40]:row['cik']=0
+        self.assertFalse(semantic.feasibility(rows)['passed'])
+
+    def test_immutable_malformed_success_is_not_resampled(self):
+        class Response:
+            status_code=200;ok=True
+            def json(self):return {'model':'wrong','answers':{}}
+        with tempfile.TemporaryDirectory() as d:
+            output=Path(d)
+            (output/'measurement_specification.json').write_text('{}')
+            with patch.object(semantic,'OUTPUT',output),patch.object(semantic.requests,'post',return_value=Response()) as post:
+                payload=semantic.request({}, {'test':semantic.choice('Question',{'a':'A','b':'B'})})
+                first=semantic.judge(payload,'test-key')
+                second=semantic.judge(payload,'test-key')
+                self.assertEqual(first,second)
+                self.assertIsNone(first[0]);self.assertIsNotNone(first[2])
+                self.assertEqual(post.call_count,1)
+
+    def test_requests_use_official_schema_and_unique_physical_prior(self):
+        candidate={'accession_number':'a','filename':'f','start':1,'end':2,'context':'2024 guidance','quote':'1 to 2'}
+        packet={'current_candidates':[candidate],'prior_candidates':[candidate]}
+        request,_=semantic.first(packet)
+        self.assertTrue(all('instructions' in q and 'text' not in q for q in request['questions'].values()))
+        _,priors=semantic.second(packet,candidate)
+        self.assertFalse(priors)
 
 
 if __name__=='__main__':unittest.main()
