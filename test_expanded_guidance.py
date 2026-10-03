@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest.mock import patch
 import expanded_guidance_sources as sources
 import expanded_guidance_semantics as semantic
+import expanded_guidance_report as report
 from expanded_guidance_spec import PROTOCOL
 from guidance_spec import PROTOCOL as PARENT
 
@@ -71,6 +72,19 @@ class ExpandedGuidance(unittest.TestCase):
         self.assertTrue(all('instructions' in q and 'text' not in q for q in request['questions'].values()))
         _,priors=semantic.second(packet,candidate)
         self.assertFalse(priors)
+
+    def test_failed_semantic_gate_blocks_economics(self):
+        with self.assertRaisesRegex(RuntimeError,'economic analysis is blocked'):
+            report.block_failed_gate({'passed':False})
+
+    def test_completed_expanded_measurement_replays_without_http(self):
+        with patch('requests.sessions.Session.request',side_effect=AssertionError('Unexpected HTTP')):
+            packets=sources.verify_sources()
+            rows=json.loads((sources.OUTPUT/'semantic_features.json').read_text())
+            records=report.verify_measurement(rows,packets)
+            self.assertEqual(len(records),sum(len(r['request_hashes']) for r in rows))
+            self.assertFalse(semantic.feasibility(rows)['passed'])
+            self.assertEqual(report.metrics()[0],json.loads((sources.OUTPUT/'metrics.json').read_text()))
 
 
 if __name__=='__main__':unittest.main()

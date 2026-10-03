@@ -143,3 +143,30 @@ The later semantic and economic stages are specified but were not implemented or
 executed after the source gate failed. There were no JEV calls, five-strategy
 outcomes, final strategy selection, 2026 OOS or judges-window reads. Do not lower
 the floors or expand the window to turn this stopped audit into a candidate.
+
+## Expanded guidance sources and semantic pairing
+
+Experiment 4B expanded candidate sources to quarterly earnings, annual earnings
+and preliminary results within the same 2024–2025 window and original universe.
+It recovered 208 original filings across 54 companies; potential numerical ranges
+in 127 filings across 36 companies passed the unchanged source feasibility gate.
+The frozen JEV range/pair/evidence measurement then retained only three eligible
+Verizon reaffirmations, with no explicit uncertainty changes. The decision is
+`semantic_infeasible`; there is no economic null or demonstrated strategy edge.
+
+Read [EXPANDED_GUIDANCE_RESULTS.md](EXPANDED_GUIDANCE_RESULTS.md) for complete
+attrition, source review, measured latency, token usage and limitations.
+[EXPANDED_GUIDANCE_PROTOCOL.md](EXPANDED_GUIDANCE_PROTOCOL.md) records the source
+and economic specification; [EXPANDED_GUIDANCE_MEASUREMENT.md](EXPANDED_GUIDANCE_MEASUREMENT.md)
+documents the exact semantic stages and conservative capacity limit.
+[EXPANDED_GUIDANCE_METRICS.json](EXPANDED_GUIDANCE_METRICS.json) contains public
+aggregates. Immutable raw sources and model responses remain local in ignored
+`expanded_guidance_results/`. The parent audit is preserved.
+
+Run `.venv/bin/python expanded_guidance_sources.py verify`,
+`.venv/bin/python expanded_guidance_semantics.py measure` and
+`.venv/bin/python expanded_guidance_report.py` to verify the completed run without
+new model calls. The failed semantic gate blocks historical five-strategy
+evaluation, final strategy selection, 2026 OOS and judges' replication. Subsequent
+research designs must remain distinct exploratory experiments; do not edit the
+frozen thresholds or rescore successful requests to qualify this cohort.
