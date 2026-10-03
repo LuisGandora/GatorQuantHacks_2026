@@ -44,7 +44,6 @@ LEVELS = [
     'Major change with broad implications for operating execution or company economics.',
     'Very significant leadership change with disclosed company-wide operating or economic implications.',
     'Highly consequential change materially reshaping company-wide operations or economic strategy.',
-    'Exceptionally consequential change causing major company-wide operating or economic disruption or transformation.',
     'Extraordinary personnel event fundamentally altering the company\'s operating or economic state.',
 ]
 INSTRUCTIONS = (' Use only `supporting_text` in the supplied state. Assess the disclosed departure(s) '
@@ -55,14 +54,15 @@ INSTRUCTIONS = (' Use only `supporting_text` in the supplied state. Assess the d
 QUESTIONS = {f'q{i+1:02d}': {'type': 'score', 'instructions': q + INSTRUCTIONS,
                            'criteria': LEVELS} for i, q in enumerate(WORDINGS)}
 PROTOCOL = {
-    'experiment': 2, 'version': 1, 'category': 'executive_officer_departure',
+    'experiment': 2, 'version': 2, 'category': 'executive_officer_departure',
+    'technical_revision': 'V1 sent eleven Score levels; API rejected all132 requests plus one diagnostic with HTTP400 before scoring. Preserved in stability_results_api_rejected_v1 and .stability_cache_api_rejected_v1. V2 uses the documented ten-level maximum, scaling native0..9 by10/9. No valid judgments or market outcomes preceded this correction; all questions, gate thresholds and analysis/decision rules unchanged.',
     'window': ['2024-01-01', '2025-12-31'], 'model': MODEL, 'questions': QUESTIONS,
     'input': 'Only supporting_text, concatenated unique same-category excerpts per accession; no ticker, date, prior history, prior labels or market data in JEV state.',
     'enrollment': 'Reuse the 132 outcome-blind accession-level enrollments from Experiment 1 without its labels, validity exclusions, priceability or earnings exclusions; verify source hashes and dates. Static starter September-2026 TOP_100 universe unchanged.',
-    'judgments': 10, 'scale': 'API Score is the continuous expected ordinal level on 0..10; eleven ordered criteria; preserve returned score without rescaling or reconstructing rounded probabilities.',
+    'judgments': 10, 'scale': 'API Score is the continuous expected ordinal level on0..9; ten ordered criteria; normalized score=returned score*10/9. Preserve native and normalized scores; do not reconstruct from rounded probabilities.',
     'stability': '1 - mean(abs(x_j-x_l) for j<l)/10; all 45 unordered pairs; no fitted normalization',
     'features': ['intensity', 'score_median', 'score_min', 'score_max', 'score_sd', 'score_range', 'score_iqr', 'mpad', 'stability', 'confidence_mean', 'confidence_min', 'confidence_sd'],
-    'validity': 'Exact pinned model and ten question IDs; score type; finite scores in [0,10]; finite confidence in [0,1]; complete probability keys 0..10, finite probabilities in [0,1], positive mass and sum within 11*0.005+1e-9 of 1 for API hundredth rounding. No renormalization. All ten answers required; reject entire malformed filing.',
+    'validity': 'Exact pinned model and ten question IDs; score type; finite native scores in [0,9], normalized [0,10]; finite confidence in [0,1]; complete probability keys0..9, finite probabilities in [0,1], positive mass and sum within10*0.005+1e-9 of1 for API hundredth rounding. No renormalization. All ten answers required; reject entire malformed filing.',
     'retries': 'Up to four HTTP attempts per request for transport exceptions or HTTP 429/529/5xx, backoff 1/2/4 seconds. Persist all attempt status/timing and successful raw response before parsing. Malformed successful responses never retried. Exhausted transport/API failures are preserved and excluded without later automatic retry.',
     'cache': 'Experiment-2-only request SHA256 includes protocol hash and exact payload; stored response checksum and request checked on every read. Existing response immutable, never rescore to obtain a preferred answer.',
     'semantic_gate': {'min_valid': 60, 'min_companies': 20, 'min_company_effective_n': 20,
@@ -107,7 +107,7 @@ def checksum(path):
 
 def old_manifest():
     paths = [p for p in ROOT.iterdir() if p.is_file() and (p.name.startswith(('DEPARTURE_', 'EXPERIMENT_', 'NOVELTY_', 'SEMANTIC_')) or p.name in ['departure_experiment.py', 'departure_report.py', 'jev_experiment.py', 'novelty_experiment.py', 'gator-quant-hacks-8k-options-challenge.ipynb'])]
-    for name in ['departure_results', 'departure_results_initial_selection', 'experiment_results', 'novelty_results', 'label_benchmark', '.departure_cache', '.jev_cache', '.novelty_cache']:
+    for name in ['departure_results', 'departure_results_initial_selection', 'experiment_results', 'novelty_results', 'label_benchmark', '.departure_cache', '.jev_cache', '.novelty_cache', 'stability_results_api_rejected_v1', '.stability_cache_api_rejected_v1']:
         paths.extend(p for p in (ROOT / name).rglob('*') if p.is_file())
     return {str(p.relative_to(ROOT)): checksum(p) for p in sorted(paths)}
 
@@ -185,6 +185,7 @@ def judge(payload, key, namespace, output=OUTPUT):
                         record['error'] = 'Successful response is not JSON.'
                 else:
                     record['error'] = f'HTTP {response.status_code}'
+                    record['error_body'] = response.text
                 break
             except requests.RequestException as error:
                 record['attempts'].append({'http_status': None, 'wall_s': time.perf_counter() - started, 'response_s': None, 'error_type': type(error).__name__})
@@ -295,16 +296,17 @@ def measure(output=OUTPUT):
         print('Completed semantic measurement preserved; no new calls.', flush=True)
         return frame
     events = enroll(output)
-    key, rows = credentials('JEV_API_KEY'), []
+    key, rows = credentials('TYPESAFE_API_KEY'), []
     started = time.perf_counter()
     for index, event in events.iterrows():
         record, timing = judge(request_payload(event.supporting_text), key, 'research', output)
         row = {**event.to_dict(), **timing, 'judgments_requested': 10, 'judgments_valid': 10 if timing['valid'] else 0}
         if timing['valid']:
             answers = record['response']['answers']
-            scores = [answers[q]['score'] for q in QUESTIONS]
+            native_scores = [answers[q]['score'] for q in QUESTIONS]
+            scores = [x*10/9 for x in native_scores]
             confidence = [answers[q]['confidence'] for q in QUESTIONS]
-            row.update(feature_values(scores, confidence), scores=json.dumps(scores), confidences=json.dumps(confidence))
+            row.update(feature_values(scores, confidence), scores=json.dumps(scores), native_scores=json.dumps(native_scores), confidences=json.dumps(confidence))
         rows.append(row)
         if (index + 1) % 10 == 0:
             print(f'Semantics {index+1}/{len(events)}; invalid {sum(not r["valid"] for r in rows)}; elapsed {time.perf_counter()-started:.1f}s', flush=True)
@@ -337,7 +339,7 @@ def benchmark(output=OUTPUT):
         print('Completed benchmark preserved; no new calls.', flush=True)
         return
     events = enroll(output).head(PROTOCOL['benchmark']['n_filings'])
-    key, rows = credentials('JEV_API_KEY'), []
+    key, rows = credentials('TYPESAFE_API_KEY'), []
     for i, event in events.iterrows():
         modes = ['sequential', 'batched'] if i % 2 == 0 else ['batched', 'sequential']
         for mode in modes:

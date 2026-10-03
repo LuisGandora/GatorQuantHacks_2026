@@ -17,3 +17,5 @@ departure_results/
 departure_results_initial_selection/
 .stability_cache/
 stability_results/
+stability_results_api_rejected_v1/
+.stability_cache_api_rejected_v1/

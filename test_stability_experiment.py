@@ -13,7 +13,7 @@ import stability_experiment as s
 
 def response(payload):
     return {'model': s.MODEL, 'answers': {q: {'type': 'score', 'score': 2., 'confidence': .8,
-            'probabilities': {str(i): 1. if i == 2 else 0. for i in range(11)}} for q in payload['questions']}}
+            'probabilities': {str(i): 1. if i == 2 else 0. for i in range(10)}} for q in payload['questions']}}
 
 
 class StabilityTests(unittest.TestCase):
@@ -32,7 +32,7 @@ class StabilityTests(unittest.TestCase):
         p = s.request_payload('target text')
         self.assertEqual(p['state'], {'supporting_text': 'target text'})
         self.assertEqual(len(p['questions']), 10)
-        self.assertTrue(all(len(q['criteria']) == 11 for q in p['questions'].values()))
+        self.assertTrue(all(len(q['criteria']) == 10 for q in p['questions'].values()))
 
     def test_flat_gate_and_deterministic_transformation(self):
         rng = np.random.default_rng(22)
