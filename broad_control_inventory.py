@@ -53,6 +53,9 @@ def inventory():
 def price_controls():
     """Run after the original sequential collection finishes; checkpoint each batch."""
     import broad_strategy_screen as screen
+    eligible = pd.read_csv(OUT / 'category_inventory.csv').query('eligible_for_discovery').tag
+    if not all((OUT / tag / 'pricing_complete.json').exists() for tag in eligible):
+        raise RuntimeError('Finish the original category collection before pricing expanded controls.')
     p.load_starter()
     candidates = pd.read_csv(OUT / 'full_calendar_control_candidates.csv',
         parse_dates=['filing_date', 'event_date', 't_0', 't_pre'])

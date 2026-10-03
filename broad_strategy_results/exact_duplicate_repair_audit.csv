@@ -1,0 +1,4 @@
+category,file,original_rows,retained_rows,exact_duplicate_rows
+debt_issuance,ordinary_cost_sensitivity.csv.gz,63300,62700,600
+debt_issuance,ordinary_gross_outcomes.csv.gz,6330,6270,60
+debt_issuance,ordinary_entries.csv,120,119,1

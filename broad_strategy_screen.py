@@ -122,6 +122,7 @@ def price(tag, enrichment=False):
         if result_path.exists() and (not enrichment or enriched_path.exists()):
             continue
         selected_events = events if arm == 'events' else p.sample_placebo(events, p.N_PLACEBO, p.STUDY_START, p.STUDY_END)
+        selected_events = selected_events.drop_duplicates(['ticker', 't_0']).reset_index(drop=True)
         selected_events.to_csv(dest / f'{arm}_entries.csv', index=False)
         priced, exclusions = p.price_events(selected_events, buckets={p.BASELINE_BUCKET: p.EXPIRY_BUCKETS[p.BASELINE_BUCKET]}, label=f'{tag} {arm}')
         exclusions.to_csv(dest / f'{arm}_pricing_exclusions.csv', index=False)

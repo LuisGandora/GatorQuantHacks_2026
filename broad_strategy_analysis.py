@@ -48,6 +48,7 @@ def analyze(expanded=False):
             continue
         a = pd.read_csv(event_path, parse_dates=['entry_date', 'exit_date'])
         b = shared_controls.copy() if expanded else pd.read_csv(control_path, parse_dates=['entry_date', 'exit_date'])
+        b = b.drop_duplicates(['ticker', 'entry_date', 'exit_date', 'horizon', 'otm', 'cost_fraction', 'strategy'])
         b = b[[not any(abs((day-d).days) <= 30 for d in disclosure_dates.get(ticker, []))
                for ticker, day in zip(b.ticker, b.entry_date)]]
         control_lookup = {}
