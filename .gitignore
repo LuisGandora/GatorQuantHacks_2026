@@ -64,3 +64,9 @@ transaction_identity_review/
 # date-candidate pilot. Only the aggregate public reports
 # (EXECUTIVE_RUNWAY_PILOT.md/json) and the protocol are repository-visible.
 executive_runway_pilot/
+
+# Private model-assisted reference, raw TypeSafe JEV requests/responses and derived
+# outputs for the executive effective-date span-selection validation. Only the
+# aggregate public reports (EXECUTIVE_DATE_VALIDATION.md/json) and the protocol are
+# repository-visible.
+executive_date_validation/
