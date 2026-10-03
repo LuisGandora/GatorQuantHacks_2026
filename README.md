@@ -120,3 +120,26 @@ the ignored `full_source_results/` directory. Reproduction requires those local
 artifacts; the report describes their integrity checks and stage commands.
 Completed measurements are reused without rescoring. Do not lower the gate or
 enable the starter's OOS cells to work around this stopped experiment.
+
+## Guidance uncertainty: frozen source audit
+
+Experiment 4 asks whether explicit changes in full-year forecast visibility add
+information beyond numerical guidance changes and a fixed keyword baseline.
+The source stage is implemented and completed. The frozen Massive guidance tags
+returned 60 unique 2024–2025 filings across 27 companies in the unchanged universe.
+All original packages were recovered, but only 43 filings across 17 companies
+contained deterministic bounded-range candidates, below the frozen 80/20 floors.
+The decision is `source_infeasible`, not an economic null.
+
+Read [GUIDANCE_RESULTS.md](GUIDANCE_RESULTS.md) for coverage, checked citations,
+limitations and reproduction. [GUIDANCE_EXPERIMENT_PROTOCOL.md](GUIDANCE_EXPERIMENT_PROTOCOL.md)
+contains the specification committed before acquisition; public aggregates are in
+[GUIDANCE_METRICS.json](GUIDANCE_METRICS.json). Original packages and immutable
+response/source manifests remain local in ignored `guidance_results/`.
+
+Run `.venv/bin/python guidance_sources.py verify` and
+`.venv/bin/python guidance_report.py` to verify and regenerate the completed audit.
+The later semantic and economic stages are specified but were not implemented or
+executed after the source gate failed. There were no JEV calls, five-strategy
+outcomes, final strategy selection, 2026 OOS or judges-window reads. Do not lower
+the floors or expand the window to turn this stopped audit into a candidate.
