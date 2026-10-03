@@ -82,3 +82,15 @@ contained_shock_results/
 # instructions and verdicts for the Experiment 7 contained-shock audit. Only the
 # root-level runner contained_shock_audit.py is repository-visible.
 contained_shock_audit/
+
+# Private Experiment 8 adverse-current / intact-forward source passages, raw TypeSafe
+# JEV requests/responses and frozen semantic outputs. Only the aggregate public reports
+# (ADVERSE_INTACT_EVIDENCE_AUDIT.md, ADVERSE_INTACT_SUMMARY.json) and the protocol are
+# repository-visible.
+adverse_intact_results/
+.adverse_intact_cache/
+
+# Private bounded blinded label-verification packet, deterministic subset, reviewer
+# instructions and verdicts for the Experiment 8 guidance-direction audit. Only the
+# root-level runner adverse_intact_label_audit.py is repository-visible.
+adverse_intact_label_audit/
