@@ -17,3 +17,5 @@ financing_results/*_matched_outcomes.json
 !financing_results/*_baseline_matched_outcomes.json
 financing_results/*_sensitivity.csv
 financing_results/*_execution.log
+four_hypothesis_results/*execution.log
+four_hypothesis_results/core_text_evidence_audit.csv

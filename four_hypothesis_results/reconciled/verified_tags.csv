@@ -1,0 +1,8 @@
+primary_category,secondary_category,tertiary_category,description,taxonomy
+financial_results,guidance_and_outlook,guidance_issuance_or_update,"Issuance, revision, or reaffirmation of financial guidance including revenue projections, earnings estimates, and key metric forecasts. Consolidates all guidance-related disclosures regardless of disclosure mechanism.",1.0
+capital_and_financing,debt_activity,debt_issuance,"Bonds, notes, or debentures issuance with principal, rate, maturity, covenants, and use of proceeds.",1.0
+capital_and_financing,equity_activity,underwriting_agreement,Underwriting or placement agent agreement for securities distribution in offerings.,1.0
+capital_and_financing,shareholder_returns,share_repurchase_program,"Share buyback program authorization, expansion, or update with amount and timing.",1.0
+operations_and_strategy,restructuring,restructuring_plan,"Restructuring or cost reduction initiative with expected charges, timeline, and anticipated savings.",1.0
+operations_and_strategy,restructuring,facility_closure,"Facility closures, consolidations, or relocations with locations, employees, and charges.",1.0
+operations_and_strategy,restructuring,workforce_reduction,"Significant layoffs, RIFs, or voluntary separation programs with positions, severance, and timeline.",1.0

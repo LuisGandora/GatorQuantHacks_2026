@@ -1,0 +1,20 @@
+{
+  "status": "completed_feasibility",
+  "verdicts": {
+    "H1_buyback_put": "inconclusive",
+    "H2_guidance_put": "inconclusive",
+    "H3_restructuring_call": "inconclusive",
+    "H4_refinancing_put": "inconclusive"
+  },
+  "P_and_L_tests_run": 0,
+  "validation_outcome_looks": 0,
+  "gate": 40,
+  "final_eligible": {
+    "H1_buyback_put": 17,
+    "H2_guidance_put": 0,
+    "H3_restructuring_call": 2,
+    "H4_refinancing_put": 0
+  },
+  "not_a_return_test": true,
+  "reason": "all four below AGENTS Tier C pricing gate; unknown evidence is not absence of economic effect"
+}

@@ -1,0 +1,11 @@
+{
+  "audited_hypotheses": 4,
+  "return_tests_run": 0,
+  "gate_preserved": 40,
+  "counts_reconcile": true,
+  "source_hashes_verified": true,
+  "historical_materiality_only": true,
+  "executed_notebook_cells": 3,
+  "notebook_errors": 0,
+  "fuller_items_audited": 353
+}

@@ -1,0 +1,91 @@
+{
+  "bucket": "3-6m",
+  "candidate_gate": 40,
+  "capacity": "floor(1% min(entry/exit daily volume)); quotes/assignment/funding limitations disclosed",
+  "classification_rules": {
+    "H1": "new/additional/increased authorization; exclude recap/reauthorization, mixed dividends without distinct buyback amount, private holder-specific deals, >7-day dated board action; incremental minimum amount or shares >=1% of dated issuer market cap/weighted shares; unknown materiality excluded; ASR separately",
+    "H2": "explicit upward earnings/EPS forecast and downward operating/free-cash-flow forecast for the same period, or numerical old/new comparison; no inference from actual earnings or generic guidance update; missing comparison unknown",
+    "H3": "new plan, quantified savings, quantified implementation costs and stated timetable; repeated/ongoing program extensions excluded; no inference that closures imply distress",
+    "H4": "completed conventional issuance and explicit debt replacement; new borrowing <=105% of retired principal, or explicit unchanged/reduced total debt; general-purpose repayment mention insufficient; convertible/acquisition/structured debt excluded"
+  },
+  "code_sha256": "49b9ba9b2444cf101cb3a1956e7928a87fd7c3f384ba4d35330fdbe8eeb2012b",
+  "commission_per_contract_side": 0.65,
+  "costs": [
+    0,
+    0.025,
+    0.05,
+    0.1
+  ],
+  "decision": "below-gate or insufficient evidence is inconclusive/feasibility failure, never evidence of no effect; no P&L estimates, CIs or robustness claims when not priced",
+  "entry": "first session close strictly after filing date; one extra session sensitivity",
+  "family_confidence": 0.9875,
+  "family_control": "Bonferroni 95% family confidence for four primary tests; horizons/sensitivities secondary",
+  "fixed_horizons": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    21,
+    42,
+    63,
+    "exp"
+  ],
+  "metrics": "stock absolute movement, upside/downside tails, initial/final option premium, net P&L; overlays incremental over identical stock, cash-secured puts per cash collateral",
+  "ordinary": "same company/year/quarter/weekday +/-63 sessions; same bucket/strike rules; DTE +/-7; nearest 3 usable controls, minimum 1; full API disclosure calendar +/-30-day primary exclusion",
+  "policy": "AGENTS.md: do not price Tier C; no relaxing event definitions or sample gates",
+  "primary_horizon": 21,
+  "research_history": "four newly proposed tests, earlier leadership and financing tests plus 24 team comparisons acknowledged",
+  "sensitivity": "starter 1m/2m/3-6m, 3/5/10% OTM, 0/1 entry delay, 0/3 stale exit; all fixed horizons",
+  "source": "teammate CSV plus same-accession public excerpts; verify against complete Massive IS tag inventory",
+  "source_sha256": "d42d27119d4395381f82a06a58520295e2908e1146d2a579f02953049381529d",
+  "specs": {
+    "H1_buyback_put": {
+      "hypothesis": "New material buyback authorizations produce higher mean net cash-secured-put P&L than equivalent ordinary-day puts because downside is smaller relative to the premium. Accelerated repurchases are a separate secondary arm.",
+      "materiality": 0.01,
+      "strategy": "cash_secured_put",
+      "tags": [
+        "share_repurchase_program"
+      ]
+    },
+    "H2_guidance_put": {
+      "hypothesis": "Raised earnings guidance alongside reduced cash-flow guidance produces greater net protective-put incremental value over stock alone than ordinary-day hedges because subsequent downside is underpriced.",
+      "strategy": "protective_put",
+      "tags": [
+        "guidance_issuance_or_update"
+      ]
+    },
+    "H3_restructuring_call": {
+      "hypothesis": "A newly announced restructuring with quantified savings, costs and timing produces greater net covered-call incremental value over stock alone than ordinary-day overlays because gradual benefits limit near-term upside.",
+      "strategy": "covered_call",
+      "tags": [
+        "restructuring_plan",
+        "workforce_reduction",
+        "facility_closure"
+      ]
+    },
+    "H4_refinancing_put": {
+      "hypothesis": "Completed refinancing explicitly replacing existing debt without material incremental borrowing produces higher mean net cash-secured-put P&L than ordinary-day puts because downside financing risk declines more than premiums.",
+      "strategy": "cash_secured_put",
+      "tags": [
+        "debt_issuance",
+        "underwriting_agreement"
+      ]
+    }
+  },
+  "strikes": "starter 5% OTM puts/calls; protective put uses starter put; no selection on returns",
+  "uncertainty": "repeated companies and overlapping event/control intervals; minimum five connected components; company-only diagnostic not a decision gate",
+  "universe": "starter TOP_100",
+  "validation_policy": "do not spend any outcome validation look for below-gate hypotheses; these historical periods were already researched for other categories",
+  "version": 1,
+  "windows": {
+    "historical_validation": [
+      "2026-01-01",
+      "2026-08-31"
+    ],
+    "in_sample": [
+      "2024-01-01",
+      "2025-12-31"
+    ]
+  }
+}

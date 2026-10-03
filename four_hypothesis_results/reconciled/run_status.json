@@ -1,0 +1,64 @@
+{
+  "status": "completed_feasibility",
+  "hypotheses": [
+    {
+      "id": "H1_buyback_put",
+      "strategy": "cash_secured_put",
+      "raw_tag_rows": 36,
+      "distinct_company_filings": 36,
+      "evidence_candidates": 18,
+      "verified_eligible": 18,
+      "eligible_companies": 14,
+      "minimum_events": 40,
+      "pricing_gate": "FAIL",
+      "return_tests_run": false,
+      "conclusion": "inconclusive",
+      "reason": "insufficient independently verified candidates; Tier C; not priced"
+    },
+    {
+      "id": "H2_guidance_put",
+      "strategy": "protective_put",
+      "raw_tag_rows": 61,
+      "distinct_company_filings": 60,
+      "evidence_candidates": 0,
+      "verified_eligible": 0,
+      "eligible_companies": 0,
+      "minimum_events": 40,
+      "pricing_gate": "FAIL",
+      "return_tests_run": false,
+      "conclusion": "inconclusive",
+      "reason": "insufficient independently verified candidates; Tier C; not priced"
+    },
+    {
+      "id": "H3_restructuring_call",
+      "strategy": "covered_call",
+      "raw_tag_rows": 29,
+      "distinct_company_filings": 20,
+      "evidence_candidates": 2,
+      "verified_eligible": 2,
+      "eligible_companies": 2,
+      "minimum_events": 40,
+      "pricing_gate": "FAIL",
+      "return_tests_run": false,
+      "conclusion": "inconclusive",
+      "reason": "insufficient independently verified candidates; Tier C; not priced"
+    },
+    {
+      "id": "H4_refinancing_put",
+      "strategy": "cash_secured_put",
+      "raw_tag_rows": 430,
+      "distinct_company_filings": 293,
+      "evidence_candidates": 0,
+      "verified_eligible": 0,
+      "eligible_companies": 0,
+      "minimum_events": 40,
+      "pricing_gate": "FAIL",
+      "return_tests_run": false,
+      "conclusion": "inconclusive",
+      "reason": "insufficient independently verified candidates; Tier C; not priced"
+    }
+  ],
+  "P_and_L_tests_run": 0,
+  "historical_validation_outcome_looks": 0,
+  "no_evidence_of_absence_claim": true
+}

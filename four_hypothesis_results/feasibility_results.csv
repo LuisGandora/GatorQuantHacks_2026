@@ -1,0 +1,5 @@
+id,strategy,raw_tag_rows,distinct_company_filings,evidence_candidates,verified_eligible,eligible_companies,minimum_events,pricing_gate,return_tests_run,conclusion,reason
+H1_buyback_put,cash_secured_put,36,36,24,0,0,40,FAIL,False,inconclusive,insufficient independently verified candidates; Tier C; not priced
+H2_guidance_put,protective_put,60,60,0,0,0,40,FAIL,False,inconclusive,insufficient independently verified candidates; Tier C; not priced
+H3_restructuring_call,covered_call,29,20,2,2,2,40,FAIL,False,inconclusive,insufficient independently verified candidates; Tier C; not priced
+H4_refinancing_put,cash_secured_put,423,292,0,0,0,40,FAIL,False,inconclusive,insufficient independently verified candidates; Tier C; not priced

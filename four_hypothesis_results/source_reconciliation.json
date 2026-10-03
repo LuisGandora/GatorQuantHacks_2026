@@ -1,0 +1,15 @@
+{
+  "original_sha256": "d42d27119d4395381f82a06a58520295e2908e1146d2a579f02953049381529d",
+  "reconciled_sha256": "7bc57a7c0e304603b2e942624894503aa1d9560b9009dcff61ecfcfdd7a01e3d",
+  "adapter_sha256": "efa82f6d13ccc8a197762abdb290d431b2faf6e08e68ad55a5908b33715e32a9",
+  "returns_inspected": false,
+  "economic_rules_changed": false,
+  "differences": [
+    {
+      "tag": "debt_issuance",
+      "ticker": "C",
+      "accession_number": "0001193125-24-033696",
+      "status": "added_api_record"
+    }
+  ]
+}

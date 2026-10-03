@@ -1,0 +1,6 @@
+{
+  "purpose": "text-only enrichment for H2/H4 before any returns; same economic definitions and 40-event gate",
+  "endpoint": "/stocks/filings/8-K/vX/text",
+  "exhibits": "endpoint does not supply full exhibit text; do not infer absent facts",
+  "code_sha256": "b2efd6bb1006ffc61a79f9c96b51011f394b2f7d966a8f8d1026a3d88380132d"
+}
