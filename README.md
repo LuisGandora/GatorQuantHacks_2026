@@ -9,6 +9,11 @@ review are defined in [RISK_COMPOSITION_PROTOCOL.md](RISK_COMPOSITION_PROTOCOL.m
 The freeze identity is [RISK_COMPOSITION_FREEZE.json](RISK_COMPOSITION_FREEZE.json).
 This is measurement validation; no historical payoff or 2026 analysis is part
 of this stage. Completed earlier experiments retain their original conclusions.
+The completed [audit results](RISK_COMPOSITION_RESULTS.md) and
+[interpretation](RISK_COMPOSITION_REVIEW.md) report failed coverage/positive-example
+checks: 12/24 filings fit the request limit and none of those contained explicit
+demand deterioration under the frozen source-review rubric. JEV agreement on
+this small selected sample does not establish a trading signal.
 
 Starter notebook for the Massive challenge. You need **Python 3.10+** ([python.org](https://www.python.org/downloads/))
 and a **Massive API key** (from the Discord channel).
