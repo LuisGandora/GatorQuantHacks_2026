@@ -5,6 +5,7 @@ pandas>=2.2        # tested 3.0.5
 numpy>=2.0         # tested 2.5.2
 requests>=2.31     # tested 2.34.2
 matplotlib>=3.8    # tested 3.11.1
+typesafe-sdk>=0.7  # tested 0.7.2; only for `python jev.py --fill` (TypeSafe Jev scores)
 
 # Running the notebook
 ipykernel>=6.29    # tested 7.3.0

@@ -69,7 +69,8 @@ def spec_hash(spec: dict) -> str:
                                  sort_keys=True).encode())
 
 
-JEV_HASH = short_hash((ROOT / "jev.py").read_bytes())
+# jev.py plus its cached Jev scores: filling the cache is a new JEV version, same as editing the lexicon
+JEV_HASH = short_hash((ROOT / "jev.py").read_bytes() + ((ROOT / "jev_scores.csv").read_bytes() if (ROOT / "jev_scores.csv").exists() else b""))
 
 
 def ledger() -> list[dict]:
