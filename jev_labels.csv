@@ -1,1 +1,72 @@
 accession_number,tag,label,note
+0000040533-25-000017,annual_meeting_results,low,routine annual meeting results
+0001104659-25-008670,director_appointment,low,routine director appointment
+0001193125-25-290864,underwriting_agreement,low,routine underwriting agreement
+0001193125-25-237960,quarterly_earnings,low,routine quarterly earnings
+0000950103-25-007460,director_appointment,low,routine director appointment
+0001628280-25-055122,director_appointment,low,routine director appointment
+0001090727-24-000038,cfo_appointment,low,planned CFO appointment
+0000051143-24-000033,quarterly_earnings,low,routine quarterly earnings
+0001140361-25-043790,debt_issuance,low,routine debt issuance
+0001467858-25-000112,annual_meeting_results,low,routine annual meeting
+0000080424-25-000111,executive_compensation_change,low,planned retirement separation agreement
+0000950103-25-006128,annual_meeting_results,low,routine annual meeting
+0001193125-25-134108,underwriting_agreement,low,routine underwriting
+0001613103-25-000034,executive_officer_appointment,low,routine internal promotion
+0000070858-25-000257,share_repurchase_program,low,routine repurchase authorization
+0001104659-25-064857,share_repurchase_program,low,routine repurchase program
+0001413329-25-000091,quarterly_earnings,low,routine quarterly earnings
+0001193125-25-201421,underwriting_agreement,low,routine underwriting
+0001166691-24-000039,shareholder_proposal_outcome,low,routine shareholder proposal
+0001075531-24-000003,cfo_departure,low,planned CFO transition
+0001140361-25-002798,executive_compensation_change,low,planned special advisor compensation
+0000310158-25-000047,debt_issuance,low,routine debt issuance
+0001193125-24-236734,director_departure,low,planned director not standing for re-election
+0000040545-24-000089,executive_officer_appointment,low,planned post-spinoff appointments
+0001193125-25-117791,director_departure,high,abrupt resignation due to external government appointment
+0000063908-24-000097,debt_issuance,low,routine debt issuance
+0000002488-25-000182,executive_compensation_change,low,planned new hire compensation
+0000018230-24-000011,director_departure,low,planned director not standing for re-election
+0000316709-24-000011,restructuring_plan,low,planned 6% workforce reduction announcement
+0001104659-25-044364,shareholder_proposal_outcome,low,routine shareholder proposal outcome
+0001193125-24-141821,equity_compensation_grant,low,routine equity plan approval
+0001283699-25-000116,guidance_issuance_or_update,low,routine guidance raise at earnings
+0000040545-24-000056,share_repurchase_program,low,routine repurchase authorization
+0001104659-24-057038,shareholder_proposal_outcome,low,routine shareholder proposals
+0001193125-25-034283,guidance_issuance_or_update,low,routine guidance reaffirmation
+0001193125-24-229532,ceo_appointment,low,planned CEO succession with transition date
+0000050863-25-000153,acquisition_completion,low,planned acquisition closing
+0000050863-25-000004,guidance_issuance_or_update,low,routine earnings guidance
+0001193125-24-036201,restructuring_plan,low,planned restructuring announcement
+0000066740-24-000070,cfo_departure,low,planned CFO resignation with transition
+0001193125-25-014216,ceo_appointment,low,planned CEO appointment with future effective date
+0000882095-25-000035,executive_officer_appointment,low,planned officer appointment
+0001193125-25-314935,cfo_appointment,low,planned CFO appointment with future date
+0001193125-24-011295,cybersecurity_incident,high,abrupt nation-state cyber attack with data exfiltration
+0001104659-25-114632,cfo_departure,low,planned CFO role change to Executive Vice Chair
+0001193125-25-044184,acquisition_completion,low,planned acquisition completion
+0001193125-24-159578,workforce_reduction,low,announced workforce reduction plan
+0000732712-25-000119,workforce_reduction,low,announced workforce reduction plan
+0001467858-25-000136,strategic_initiative,high,adverse EV capacity realignment $1.6B charges
+0000021665-25-000040,restructuring_plan,low,planned 3-year productivity program
+0000050863-25-000107,workforce_reduction,low,announced workforce reduction plan
+0001104659-25-002897,ceo_departure,low,planned CEO retirement
+0001193125-25-231018,ceo_appointment,low,planned CEO appointment
+0001035267-25-000161,ceo_departure,low,planned CEO transition to Executive Chair
+0000050863-24-000173,ceo_departure,high,abrupt immediate CEO resignation
+0001104659-24-025567,business_line_exit,low,planned multi-year market exits
+0000066740-24-000088,cfo_appointment,low,planned CFO appointment
+0001193125-25-072357,equity_compensation_grant,low,routine PSU grant
+0000936468-24-000101,significant_contract_award,low,routine contract award
+000101829-25-000036,cybersecurity_incident,high,abrupt ransomware incident on passenger systems
+0001193125-25-250803,acquisition_completion,low,planned acquisition completion
+0000950142-24-001825,equity_compensation_grant,low,routine performance award
+0000050863-24-000169,strategic_initiative,low,planned CHIPS Act funding
+0000731766-24-000045,cybersecurity_incident,high,abrupt nation-state cyber attack on Change Healthcare
+0000021344-25-000047,business_line_exit,low,planned segment sunsetting
+0001613103-25-000078,business_line_exit,low,planned Diabetes business spin-off
+0000829224-25-000067,facility_closure,low,announced store closure plan
+0001193125-25-152035,significant_contract_award,low,routine large cloud agreement
+0000050863-24-000169,significant_contract_award,low,planned CHIPS Act funding
+0000050863-24-000147,facility_closure,low,announced real estate consolidation
+0000050863-25-000107,facility_closure,low,announced asset impairment from business exits

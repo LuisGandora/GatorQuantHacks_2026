@@ -6,14 +6,21 @@ import re
 
 HIGH = 0.5    # score >= HIGH is a high-JEV filing
 
-ABRUPT = [r"effective immediately", r"\binterim\b", r"was terminated", r"terminat\w* (?:of )?(?:his|her|their) employment",
-          r"for cause", r"without cause", r"investigation", r"misconduct", r"(?<!any )(?<!no )disagreement",
+ABRUPT = [r"\binterim (?:ceo|cfo|executive officer)\b", r"was terminated", r"terminat\w* (?:of )?(?:his|her|their) employment",
+          r"for cause", r"without cause(?!.*(?:plan|agreement|severance))", r"investigation", r"misconduct", r"(?<!any )(?<!no )disagreement",
           r"passed away", r"\bdeath\b", r"medical leave", r"health reasons", r"unauthori[sz]ed", r"ransomware",
-          r"cybersecurity incident", r"material(?:ly)? (?:adverse|impact)", r"impairment", r"wind(?:ing)? down",
-          r"workforce reduction", r"layoffs?\b", r"reduction in force"]
+          r"cybersecurity incident", r"cyber security incident", r"nation.state.*threat actor",
+          r"detected.*threat actor", r"exfiltrat", r"material(?:ly)? (?:adverse|impact)", r"impairment", r"wind(?:ing)? down",
+          r"workforce reduction", r"layoffs?\b", r"reduction in force", r"\bresign(?:ed|ing)\b.*effective (?:immediately|now)",
+          r"resign(?:ed|ing)\b.*effective (?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* \d{1,2},? \d{4}"]
 ROUTINE = [r"retire", r"succession", r"\bplanned\b", r"previously (?:announced|disclosed|reported)",
            r"not the result of any disagreement", r"will continue to serve", r"orderly transition",
-           r"annual meeting", r"(?:stockholders|shareholders) (?:approved|elected|voted)", r"ordinary course"]
+           r"annual meeting", r"(?:stockholders|shareholders) (?:approved|elected|voted)", r"ordinary course",
+           r"expects? to", r"intends? to", r"announced.*plan", r"previously announced plan",
+           r"criteria", r"\bappointed\b(?!.*immediately)", r"\belected\b(?!.*immediately)",
+           r"one.time grant", r"standard.*practices", r"approved an award", r"termination.*(?:death|disability)",
+           r"effective immediately.*board", r"board.*effective immediately", r"severance.*plan",
+           r"income continuation plan", r"resulting from"]
 _ABRUPT, _ROUTINE = re.compile("|".join(ABRUPT), re.I), re.compile("|".join(ROUTINE), re.I)
 
 
