@@ -15,3 +15,5 @@ label_benchmark/
 .departure_cache/
 departure_results/
 departure_results_initial_selection/
+.stability_cache/
+stability_results/
