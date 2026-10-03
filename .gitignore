@@ -13,3 +13,7 @@ runs/*.csv
 covered_call_results/*_matched_outcomes.json
 !covered_call_results/*_baseline_matched_outcomes.json
 covered_call_results/all_horizons_sensitivity.csv
+financing_results/*_matched_outcomes.json
+!financing_results/*_baseline_matched_outcomes.json
+financing_results/*_sensitivity.csv
+financing_results/*_execution.log

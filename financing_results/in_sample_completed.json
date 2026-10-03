@@ -1,0 +1,83 @@
+[
+  {
+    "window": "in_sample",
+    "horizon": 1,
+    "n_events": 20,
+    "difference": 0.004018180674823653,
+    "ci_lo": -0.0022244922172158653,
+    "ci_hi": 0.01570138471512105,
+    "dependence_clusters": 13
+  },
+  {
+    "window": "in_sample",
+    "horizon": 2,
+    "n_events": 20,
+    "difference": 0.0009043481282030166,
+    "ci_lo": -0.004866150779225534,
+    "ci_hi": 0.011057875090868577,
+    "dependence_clusters": 9
+  },
+  {
+    "window": "in_sample",
+    "horizon": 3,
+    "n_events": 20,
+    "difference": -0.001076582564560834,
+    "ci_lo": -0.011848299203139652,
+    "ci_hi": 0.008332260468505874,
+    "dependence_clusters": 8
+  },
+  {
+    "window": "in_sample",
+    "horizon": 5,
+    "n_events": 20,
+    "difference": 0.0001026617137028677,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 3
+  },
+  {
+    "window": "in_sample",
+    "horizon": 10,
+    "n_events": 20,
+    "difference": 0.004174846468910415,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 1
+  },
+  {
+    "window": "in_sample",
+    "horizon": 21,
+    "n_events": 20,
+    "difference": 0.0017491254971226413,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 1
+  },
+  {
+    "window": "in_sample",
+    "horizon": 42,
+    "n_events": 19,
+    "difference": 0.011404716951572916,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 1
+  },
+  {
+    "window": "in_sample",
+    "horizon": 63,
+    "n_events": 17,
+    "difference": -0.00037230423583923617,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 1
+  },
+  {
+    "window": "in_sample",
+    "horizon": "exp",
+    "n_events": 20,
+    "difference": -0.012700414389140999,
+    "ci_lo": NaN,
+    "ci_hi": NaN,
+    "dependence_clusters": 1
+  }
+]

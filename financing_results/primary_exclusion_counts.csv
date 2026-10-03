@@ -1,0 +1,12 @@
+window,reason,events
+in_sample,no_bucket_expiry,1
+in_sample,no_entry_day_call_trade,3
+in_sample,no_paired_listed_strikes,2
+in_sample,no_usable_ordinary_control,84
+in_sample,no_valid_primary_5pct_call,14
+in_sample,usable,20
+out_of_sample,no_entry_day_call_trade,2
+out_of_sample,no_paired_listed_strikes,1
+out_of_sample,no_usable_ordinary_control,35
+out_of_sample,no_valid_primary_5pct_call,2
+out_of_sample,usable,7

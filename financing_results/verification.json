@@ -1,0 +1,20 @@
+{
+  "in_sample": {
+    "candidates": 124,
+    "usable_primary": 20,
+    "all_fixed_horizons": true,
+    "accounting_verified": true,
+    "exclusions_reconcile": true
+  },
+  "out_of_sample": {
+    "candidates": 47,
+    "usable_primary": 7,
+    "all_fixed_horizons": true,
+    "accounting_verified": true,
+    "exclusions_reconcile": true
+  },
+  "notebook": {
+    "executed_code_cells": 4,
+    "errors": 0
+  }
+}
