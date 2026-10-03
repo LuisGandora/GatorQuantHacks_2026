@@ -1,0 +1,108 @@
+{
+  "kind": "bounded_independent_mechanism_review_corrected",
+  "status": "corrected_advisory",
+  "authority": {
+    "direction_owner": "GPT",
+    "mechanism_model": "opencode-go/deepseek-v4.1-flash",
+    "named_requirement": "deepseek",
+    "provenance": "this actual DeepSeek implementation/mechanism invocation; the earlier 'not re-invoked' provenance note was wrong and is corrected",
+    "advisory": true
+  },
+  "boundaries": {
+    "gate_note_read_only": true,
+    "gate_note_network": false,
+    "executed_source_audit": "equity_issuance_source_audit.py performed bounded source-only network reads of /stocks/taxonomies/vX/disclosures and /stocks/filings/8-K/vX/disclosures only, 2024-2025",
+    "financial_run": false,
+    "classifier_or_semantic_score": false,
+    "filing_text": false,
+    "jev": false,
+    "options_or_market_prices": false,
+    "year_2026_or_reserved": false,
+    "private_payoff_rows": false,
+    "commit": false,
+    "files_written": [
+      "CONTINUATION_GATE.md",
+      "CONTINUATION_GATE.json",
+      "EQUITY_ISSUANCE_SOURCE_PROTOCOL.md",
+      "EQUITY_ISSUANCE_SOURCE.md",
+      "EQUITY_ISSUANCE_SOURCE.json",
+      "equity_issuance_source_audit.py",
+      ".gitignore (one line)"
+    ]
+  },
+  "decision": "no_defensible_new_route",
+  "decision_status": "advisory; bounded limits, not impossibility",
+  "queries_used": [
+    {"stage": "expanded_guidance", "endpoint": "/stocks/taxonomies/vX/disclosures", "params": {"limit": 1000}, "source": "expanded_guidance_sources.py:194"},
+    {"stage": "expanded_guidance", "endpoint": "/stocks/filings/8-K/vX/disclosures", "params": "tertiary_category=<tag>; filing_date 2024-01-01..2025-12-31; limit 1000; sort=filing_date.asc", "tags": ["guidance_issuance_or_update", "guidance_withdrawal", "quarterly_earnings", "annual_earnings", "preliminary_results"], "source": "expanded_guidance_sources.py:201-207"},
+    {"stage": "earnings_freeze", "endpoint": "none", "reads": "expanded_guidance_results/enrollment.json", "source": "earnings_payoff_experiment.py:64,107-121"},
+    {"stage": "earnings_controls", "endpoint": "/stocks/filings/8-K/vX/text", "params": "cik.any_of=<event CIKs>; filing_date 2024-01-01..2025-12-31; limit 1000", "purpose": "ordinary-day exclusion", "source": "earnings_payoff_experiment.py:167-169"},
+    {"stage": "earnings_prices", "endpoint": "guarded option bars/contracts", "window": "2024-2025", "source": "guarded_starter"},
+    {"stage": "equity_issuance_source", "endpoint": "/stocks/taxonomies/vX/disclosures", "params": {"limit": 1000}, "purpose": "validate the three exact tags against the cached saved-taxonomy-1.0 reference", "source": "equity_issuance_source_audit.py"},
+    {"stage": "equity_issuance_source", "endpoint": "/stocks/filings/8-K/vX/disclosures", "params": "tertiary_category=<exact tag>; filing_date 2024-01-01..2025-12-31; limit 1000; sort=filing_date.asc", "tags": ["public_offering", "private_placement", "pipe_transaction"], "pagination": "complete, max 30 pages/tag, repeated-cursor fail-fast", "source": "equity_issuance_source_audit.py"}
+  ],
+  "lawful_expansion_remaining": {
+    "allowed": [
+      "source-only direct re-query of quarterly_earnings/annual_earnings over 2024-2025 in TOP_100",
+      "add preliminary_results as source-only",
+      "source-only audits of other exact taxonomy tags under the same fixed window and universe"
+    ],
+    "unavailable": ["2026", "judges window", "reserved 2023-06-01..2023-08-31", "earlier options window", "universe outside contest keys", "NBBO feed", "point-in-time universe"],
+    "note": "unavailable items block matched economic power, not all source-only research"
+  },
+  "earnings_cohort": {
+    "guidance_content_selected": false,
+    "strictly_complete_vendor_tag_cohort": false,
+    "best_label": "static-TOP_100 vendor earnings-tag cohort within a 5-tag union, under single-core-8-K/Item-2.02/EX-99/no-collision filters",
+    "observed_tagged_issuers": 28,
+    "observed_count_is_proven_upper_bound": false,
+    "evidence": {"208_to_130_attrition": "EARNINGS_PAYOFF_RESULTS.md:230 (68 not earnings-tagged, 10 no Item 2.02)", "enrollment_source": "expanded_guidance_results/enrollment.json via earnings_payoff_experiment.py:64", "tags_queried": "expanded_guidance_spec.py:7-8"}
+  },
+  "complete_cohort_resolves_source_limitation": false,
+  "complete_cohort_reason": "Source gate passed (130/28). Binding failure is the matched sample (54/17 vs 60/20). Under the fixed TOP_100 universe and strict marks a completion re-spec is not expected to add issuers, but that is an evidence-bounded expectation, not proven certainty. Window fixed 2024-2025; earnings outcomes already opened, so a re-spec is exposed exploration, not confirmation.",
+  "independent_confirmation_with_exposed_outcomes_disallowed": true,
+  "candidate_routes": [
+    {"route": "equity_issuance_taxonomy_tags", "tags": ["public_offering", "private_placement", "pipe_transaction"], "classifier_free": true, "outcome_side": "unopened", "expressible_structures": ["protective_put", "collar"], "clears_source_and_identification": false, "source_audit": {"executed": true, "window": ["2024-01-01", "2025-12-31"], "universe": "canonical static TOP_100", "dedup_accessions": 23, "unambiguous_canonical_ticker_issuers": 10, "per_tag": {"public_offering": {"accessions": 19, "issuers": 9}, "private_placement": {"accessions": 4, "issuers": 1}, "pipe_transaction": {"accessions": 0, "issuers": 0}}, "gate": {"min_dedup_accessions": 80, "min_unambiguous_canonical_ticker_issuers": 20, "passed": false}, "census_complete": true, "collisions": 0}, "rejection": "Exact vendor-tag counts now verified (not keyword proxies); prospective source gate fails on both checks in the fixed scope. Economic result unknown. Failure in this scope is not proof that no related mechanism can exist elsewhere.", "role": "source-audit candidate closed on source gate"}
+  ],
+  "prior_failure_generalization": {
+    "type": "coverage/identification limits under fixed TOP_100, fixed 2024-2025 window and strict marks",
+    "is_economic_null": false,
+    "is_mathematical_proof_of_no_route": false,
+    "source_or_measurement": ["guidance", "expanded_guidance", "repurchase", "novelty", "risk_composition", "fingerprint", "credit_clean_cohort", "equity_issuance"],
+    "underpowered_run": ["earnings_payoff", "departure_stability"]
+  },
+  "genuine_missing_external_evidence": ["larger authorized options universe with more issuers and resolved horizons", "sealed out-of-sample window", "spread-aware marks"],
+  "missing_external_evidence_barrier_scope": "blocks matched economic power; not a blanket barrier to all source-only research",
+  "massive_fit": {
+    "scale": "1-5",
+    "earnings_completeness_respec": {"score": 2, "evidence": "native tags and Item 2.02 fields, but issuer count fixed by the contest universe and strict marks infeasible"},
+    "equity_issuance_tags": {"score": 3, "evidence": "exact native tags verified, but the audited cohort is 23 accessions / 10 issuers and fails the source gate"}
+  },
+  "equity_issuance_five_criteria": {
+    "source": "RESEARCH_ROUTE_REVIEW.json route_3_equity_issuance (advisory prior, unchanged by the source count)",
+    "novelty": 3,
+    "economic_mechanism": 3,
+    "feasible_source_and_market_data": 2,
+    "robustness_to_uncertainty_and_costs": 2,
+    "massive_fit": 3,
+    "total": 13,
+    "economic_result": "unknown"
+  },
+  "corrections": [
+    {"claim_removed": "provenance is the model recorded by prior adjudications, not re-invoked", "correction": "provenance is this actual DeepSeek implementation/mechanism invocation", "status": "corrected"},
+    {"claim_removed": "TOP_100 yields at most ~28 tagged issuers", "correction": "28 is an observed earnings CIK count under a specific 5-tag static-TOP_100 2024-2025 union with shape filters, not a proven upper bound", "status": "corrected"},
+    {"claim_removed": "completion cannot repair the binding limit", "correction": "completion is not expected to repair the matched-power limit under the fixed universe and strict marks, but that expectation is evidence-bounded, not proven certainty", "status": "corrected"},
+    {"claim_removed": "absence of a larger options universe or NBBO stops all source research", "correction": "that absence blocks matched economic power, not all source-only research, which remains lawful", "status": "corrected"},
+    {"claim_removed": "any mathematically impossible / absolute no-route claim", "correction": "prior failures are coverage and identification limits under fixed scope; no route is proven impossible", "status": "corrected"},
+    {"claim_removed": "equity-issuance counts are unverified keyword proxies, not tag counts", "correction": "counts are now exact vendor-tag counts from an executed source audit; the route fails the prospective source gate (23/10 vs 80/20)", "status": "corrected"},
+    {"claim_kept": "a re-spec with exposed earnings outcomes is not independent confirmation", "status": "correct_as_stated"}
+  ],
+  "floors_relaxed": false,
+  "guaranteed_positive_finding_claimed": false,
+  "no_observed_positive_is_not_mathematical_proof": true,
+  "preservation": {
+    "earnings_payoff_freeze_all_six_hashes_unchanged": true,
+    "credit_terms_protocol_unchanged": true,
+    "credit_terms_protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+  }
+}

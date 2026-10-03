@@ -1,0 +1,243 @@
+{
+  "experiment": "equity-issuance source-only taxonomy/disclosure feasibility audit",
+  "protocol_sha256": "7b5a6bd640763aa760f7da3ace3365de091b903c088e1d79f1078397278ca9b4",
+  "implementation_sha256": "7ca3797f613b7a8455c924267e4a11524cfaa0118d2a3bd694f7cea4d2aa66af",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "targets": [
+    "public_offering",
+    "private_placement",
+    "pipe_transaction"
+  ],
+  "universe": {
+    "size": 100,
+    "sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "requests": {
+    "taxonomy_pages": 1,
+    "network_requests": 12,
+    "cache_hits": 0,
+    "pages_by_tag": {
+      "public_offering": 4,
+      "private_placement": 6,
+      "pipe_transaction": 1
+    },
+    "raw_request_envelopes_preserved": 12
+  },
+  "raw_and_dedup": {
+    "public_offering": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 3618,
+      "in_universe_rows": 19,
+      "outside_universe_rows": 3599,
+      "pages": 4,
+      "pagination_complete": true,
+      "truncated": false,
+      "accessions": 19,
+      "unambiguous_accessions": 19,
+      "unambiguous_issuers": 9,
+      "tickers": [
+        "BA",
+        "BAC",
+        "BK",
+        "GS",
+        "JPM",
+        "MO",
+        "NEE",
+        "SCHW",
+        "SO"
+      ],
+      "ticker_count": 9,
+      "ciks": [
+        "0000012927",
+        "0000019617",
+        "0000070858",
+        "0000092122",
+        "0000316709",
+        "0000753308",
+        "0000764180",
+        "0000886982",
+        "0001390777"
+      ],
+      "cik_count": 9,
+      "yearly": {
+        "2024": 8,
+        "2025": 11
+      }
+    },
+    "private_placement": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 5116,
+      "in_universe_rows": 4,
+      "outside_universe_rows": 5112,
+      "pages": 6,
+      "pagination_complete": true,
+      "truncated": false,
+      "accessions": 4,
+      "unambiguous_accessions": 4,
+      "unambiguous_issuers": 1,
+      "tickers": [
+        "INTC"
+      ],
+      "ticker_count": 1,
+      "ciks": [
+        "0000050863"
+      ],
+      "cik_count": 1,
+      "yearly": {
+        "2025": 4
+      }
+    },
+    "pipe_transaction": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 98,
+      "in_universe_rows": 0,
+      "outside_universe_rows": 98,
+      "pages": 1,
+      "pagination_complete": true,
+      "truncated": false,
+      "accessions": 0,
+      "unambiguous_accessions": 0,
+      "unambiguous_issuers": 0,
+      "tickers": [],
+      "ticker_count": 0,
+      "ciks": [],
+      "cik_count": 0,
+      "yearly": {}
+    }
+  },
+  "union": {
+    "accessions": 23,
+    "unambiguous_accessions": 23,
+    "ambiguous_accessions": 0,
+    "unambiguous_issuers": 10,
+    "tickers": [
+      "BA",
+      "BAC",
+      "BK",
+      "GS",
+      "INTC",
+      "JPM",
+      "MO",
+      "NEE",
+      "SCHW",
+      "SO"
+    ],
+    "ticker_count": 10,
+    "ciks": [
+      "0000012927",
+      "0000019617",
+      "0000050863",
+      "0000070858",
+      "0000092122",
+      "0000316709",
+      "0000753308",
+      "0000764180",
+      "0000886982",
+      "0001390777"
+    ],
+    "cik_count": 10,
+    "tag_membership_counts": {
+      "private_placement": 4,
+      "public_offering": 19
+    },
+    "multi_tag_accessions": 0,
+    "yearly": {
+      "2024": 8,
+      "2025": 15
+    }
+  },
+  "collisions": {
+    "ambiguous_multi_ticker_accessions": 0,
+    "conflicting_metadata_accessions": 0,
+    "cik_with_multiple_tickers": 0,
+    "ticker_with_multiple_ciks": 0,
+    "same_cik_filing_date_groups": 0,
+    "same_cik_filing_date_accessions": 0,
+    "unresolved_identity_accessions": 0
+  },
+  "yearly_distribution": {
+    "2024": 8,
+    "2025": 15
+  },
+  "gate": {
+    "rule": {
+      "min_dedup_accessions": 80,
+      "min_unambiguous_canonical_ticker_issuers": 20
+    },
+    "checks": {
+      "dedup_accessions": false,
+      "unambiguous_canonical_ticker_issuers": false
+    },
+    "passed": false,
+    "census_complete": true,
+    "observed": {
+      "dedup_accessions": 23,
+      "unambiguous_canonical_ticker_issuers": 10
+    },
+    "targets_absent": [],
+    "decision": "source_gate_failed",
+    "caveat": "Prospective source-only feasibility screen; not an organizer rule and not proof of matched economic power."
+  },
+  "decision": "source_gate_failed",
+  "source_only": true,
+  "financial_outcomes_read": false,
+  "market_data_requests": 0,
+  "text_endpoint_requests": 0,
+  "model_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "classification_source": "vendor taxonomy reused as-is; no classifier or keyword proxy built",
+  "provenance_note": "A tag is a vendor classification and does not prove completed issuance or dilution.",
+  "source_vs_financial": "This is a source metadata count only. It is not a financial finding and says nothing about returns, dilution pricing, option value or strategy profitability; relative-downside structures were never opened or priced.",
+  "five_criteria_scores": {
+    "source": "RESEARCH_ROUTE_REVIEW.json route_3_equity_issuance (advisory prior score, unchanged by this audit)",
+    "novelty": 3,
+    "economic_mechanism": 3,
+    "feasible_source_and_market_data": 2,
+    "robustness_to_uncertainty_and_costs": 2,
+    "massive_fit": 3,
+    "total": 13,
+    "economic_result": "unknown"
+  },
+  "preservation": {
+    "earnings_payoff_freeze": {
+      "all_unchanged": true,
+      "checks": {
+        "protocol_sha256": true,
+        "events_sha256": true,
+        "universe_sha256": true,
+        "implementation_sha256": true,
+        "implementation_files_6": true,
+        "source_preservation_sha256": true
+      },
+      "implementation_file_hashes": {
+        "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+        "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+        "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+        "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+        "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+        "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+      }
+    },
+    "credit_terms_protocol": {
+      "all_unchanged": true,
+      "checks": {
+        "declared_matches_protocol_file": true,
+        "metrics_matches_declared": true
+      },
+      "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+    }
+  },
+  "source_constraints": [
+    "static September-2026 TOP_100 carries survivorship bias",
+    "2024-2025 only; 2026 and the sealed judges window are unopened",
+    "tag rows are vendor classifications, not verified completed issuances",
+    "no original filing text, classifier, semantic score or model call",
+    "a source gate pass is not a matched-power or profitability claim"
+  ]
+}
