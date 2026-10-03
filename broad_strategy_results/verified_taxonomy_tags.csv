@@ -1,0 +1,25 @@
+primary_category,secondary_category,tertiary_category,description,taxonomy
+leadership_and_governance,executive_leadership,ceo_appointment,"New CEO appointment with background, employment terms, and compensation.",1.0
+leadership_and_governance,executive_leadership,ceo_departure,"CEO departure, resignation, retirement, termination, or death with circumstances and transition.",1.0
+leadership_and_governance,executive_leadership,cfo_appointment,"New CFO appointment with background, terms, and transition timeline.",1.0
+leadership_and_governance,executive_leadership,cfo_departure,CFO departure with circumstances and transition arrangements.,1.0
+leadership_and_governance,executive_leadership,executive_officer_appointment,Other named executive officer appointment with position and terms.,1.0
+leadership_and_governance,executive_leadership,executive_compensation_change,"Material executive or director compensation changes including new employment agreements, amendments, severance, change-in-control provisions, or equity awards. Consolidates all compensation-related events into a single tag.",1.0
+leadership_and_governance,board_of_directors,director_appointment,"New director election or appointment with background, qualifications, and committee assignments.",1.0
+leadership_and_governance,board_of_directors,director_departure,"Director resignation, removal, retirement, or decision not to stand for re-election, including any disagreements causing departure.",1.0
+financial_results,earnings_and_performance,quarterly_earnings,"Quarterly financial results including revenue, net income, EPS, and key operating metrics with management commentary.",1.0
+financial_results,guidance_and_outlook,guidance_issuance_or_update,"Issuance, revision, or reaffirmation of financial guidance including revenue projections, earnings estimates, and key metric forecasts. Consolidates all guidance-related disclosures regardless of disclosure mechanism.",1.0
+strategic_transactions,deal_completions,acquisition_completion,"Completed business acquisition with final purchase price, financing, and integration plans.",1.0
+capital_and_financing,debt_activity,debt_issuance,"Bonds, notes, or debentures issuance with principal, rate, maturity, covenants, and use of proceeds.",1.0
+capital_and_financing,equity_activity,equity_compensation_grant,"Unregistered securities under equity compensation plans for employees, directors, or consultants.",1.0
+capital_and_financing,equity_activity,underwriting_agreement,Underwriting or placement agent agreement for securities distribution in offerings.,1.0
+capital_and_financing,shareholder_returns,share_repurchase_program,"Share buyback program authorization, expansion, or update with amount and timing.",1.0
+operations_and_strategy,restructuring,restructuring_plan,"Restructuring or cost reduction initiative with expected charges, timeline, and anticipated savings.",1.0
+operations_and_strategy,restructuring,facility_closure,"Facility closures, consolidations, or relocations with locations, employees, and charges.",1.0
+operations_and_strategy,restructuring,workforce_reduction,"Significant layoffs, RIFs, or voluntary separation programs with positions, severance, and timeline.",1.0
+operations_and_strategy,restructuring,business_line_exit,"Decision to exit or discontinue a business line, product category, or market segment.",1.0
+operations_and_strategy,business_developments,significant_contract_award,Material contract win or commercial agreement outside ordinary course affecting future revenues.,1.0
+operations_and_strategy,business_developments,strategic_initiative,"Strategic plans, business transformation, or market entry/exit that represent material changes to business direction.",1.0
+risk_events,security_and_safety,cybersecurity_incident,"Material cybersecurity incident, data breach, ransomware, or information security event affecting systems or data.",1.0
+shareholder_activity,shareholder_meetings,annual_meeting_results,"Annual meeting results including elections, ratifications, and proposal outcomes.",1.0
+shareholder_activity,shareholder_activism,shareholder_proposal_outcome,Shareholder proposal outcomes with support levels and management response.,1.0

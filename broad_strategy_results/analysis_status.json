@@ -1,9 +1,9 @@
 {
-  "category_collections_complete": 7,
+  "category_collections_complete": 8,
   "category_collections_required": 10,
   "primary_comparisons": 50,
   "correction_family": 120,
-  "primary_comparisons_analyzed": 20,
+  "primary_comparisons_analyzed": 40,
   "adequately_sized_comparisons": 0,
   "estimable_primary_intervals": 0,
   "discovery_signals": 0,
