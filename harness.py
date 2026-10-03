@@ -316,8 +316,8 @@ def stage_dates(P, cfg):
     pool = pool.drop_duplicates(["accession_number", "tag"])
     pool["parsed"] = pd.to_datetime([announce_date(t, f) for t, f in zip(pool.supporting_text.fillna(""), pool.filing_date)])
     key = ["accession_number", "tag"]
-    labels = pd.read_csv(DATE_LABELS, dtype=str) if DATE_LABELS.exists() else pd.DataFrame(columns=key + ["announce_date"])
-    labels["label"] = pd.to_datetime(labels.announce_date, errors="coerce")
+    labels = pd.read_csv(DATE_LABELS, dtype=str) if DATE_LABELS.exists() else pd.DataFrame(columns=key + ["announcement_date"])
+    labels["label"] = pd.to_datetime(labels.announcement_date, errors="coerce")
     lab = pool.merge(labels[key + ["label"]], on=key)
 
     unlabeled = pool[~pool.set_index(key).index.isin(labels.set_index(key).index)].assign(dated=lambda d: d.parsed.notna())
