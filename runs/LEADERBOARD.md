@@ -1,13 +1,13 @@
-# Leaderboard · 2026-10-03 04:29
+# Leaderboard · 2026-10-03 04:37
 
 JEV `89552f7a`: latest check **PASS** (controls high 0%, 69 labels, balanced acc 0.80)
-In-sample comparisons logged: **6** across 1 JEV versions. Expect some starred horizons by chance at this count; only out-of-sample confirms.
+In-sample comparisons logged: **10** across 1 JEV versions. Expect some starred horizons by chance at this count; only out-of-sample confirms.
 
 | pairing | tier | arm | strategy | n | in-sample edge | low−high edge | in-sample verdict | versions | OOS edge | OOS verdict | flags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | P-leadership-low | A→A (170) | low | cash_secured_put | 150 | -0.53% |  | NOT SUPPORTED | 1/3 |  |  |  |
-| A1-ceo-change-low | A→B (33) | low | cash_secured_put |  |  |  | not run | 0/3 |  |  |  |
-| A1-ceo-change-low | A→B (33) | low | covered_call |  |  |  | not run | 0/3 |  |  |  |
+| A1-ceo-change-low | A→B (33) | low | cash_secured_put | 31 | -1.01% |  | FRAGILE | 1/3 |  |  |  |
+| A1-ceo-change-low | A→B (33) | low | covered_call | 31 | -1.78% |  | NOT SUPPORTED | 1/3 |  |  |  |
 | A2-ceo-exit-abrupt | A→B (0) | high | protective_put |  |  |  | not run | 0/3 |  |  |  |
 | A3-cfo-exec-low | A→A (134) | low | cash_secured_put | 116 | -0.58% |  | NOT SUPPORTED | 1/3 |  |  |  |
 | A3-cfo-exec-low | A→A (134) | low | covered_call | 115 | -1.10% |  | NOT SUPPORTED | 1/3 |  |  |  |
