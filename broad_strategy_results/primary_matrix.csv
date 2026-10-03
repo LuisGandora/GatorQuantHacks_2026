@@ -1,0 +1,51 @@
+tag,strategy,horizon,otm,cost,events,companies,dependence_clusters,difference,ci_lo,ci_hi,conclusion,analysis_available,limitation
+annual_meeting_results,long_call,21,0.05,0.05,1,1,1,-0.0819007684317914,,,INCONCLUSIVE,True,fewer than 40 usable events
+annual_meeting_results,covered_call,21,0.05,0.05,1,1,1,0.0585234316320702,,,INCONCLUSIVE,True,fewer than 40 usable events
+annual_meeting_results,protective_put,21,0.05,0.05,1,1,1,0.0796758264961617,,,INCONCLUSIVE,True,fewer than 40 usable events
+annual_meeting_results,collar,21,0.05,0.05,1,1,1,0.1381992581282318,,,INCONCLUSIVE,True,fewer than 40 usable events
+annual_meeting_results,cash_secured_put,21,0.05,0.05,1,1,1,-0.0733383062816308,,,INCONCLUSIVE,True,fewer than 40 usable events
+debt_issuance,long_call,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+debt_issuance,covered_call,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+debt_issuance,protective_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+debt_issuance,collar,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+debt_issuance,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+director_appointment,long_call,21,0.05,0.05,1,1,1,0.1258248829350203,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_appointment,covered_call,21,0.05,0.05,1,1,1,-0.0987057483781148,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_appointment,protective_put,21,0.05,0.05,1,1,1,-0.0454603699883481,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_appointment,collar,21,0.05,0.05,1,1,1,-0.1441661183664631,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_appointment,cash_secured_put,21,0.05,0.05,1,1,1,0.0483974544207007,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_departure,long_call,21,0.05,0.05,1,1,1,0.0941698352499869,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_departure,covered_call,21,0.05,0.05,1,1,1,-0.0840882426330507,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_departure,protective_put,21,0.05,0.05,1,1,1,-0.0395666767572267,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_departure,collar,21,0.05,0.05,1,1,1,-0.1236549193902773,,,INCONCLUSIVE,True,fewer than 40 usable events
+director_departure,cash_secured_put,21,0.05,0.05,1,1,1,0.0446941572693119,,,INCONCLUSIVE,True,fewer than 40 usable events
+executive_compensation_change,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_compensation_change,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_compensation_change,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_compensation_change,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_compensation_change,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_officer_appointment,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_officer_appointment,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_officer_appointment,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_officer_appointment,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+executive_officer_appointment,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+guidance_issuance_or_update,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+guidance_issuance_or_update,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+guidance_issuance_or_update,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+guidance_issuance_or_update,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+guidance_issuance_or_update,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+quarterly_earnings,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+quarterly_earnings,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+quarterly_earnings,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+quarterly_earnings,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+quarterly_earnings,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+underwriting_agreement,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+underwriting_agreement,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+underwriting_agreement,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+underwriting_agreement,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+underwriting_agreement,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
