@@ -46,3 +46,7 @@ credit_terms_pilot/
 equity_issuance_source/
 dividend_source/
 transaction_source/
+
+# Private frozen input manifest for the transaction identity review. Only the public
+# aggregate reports (TRANSACTION_IDENTITY_REVIEW.md/json) are committed.
+transaction_identity_review/

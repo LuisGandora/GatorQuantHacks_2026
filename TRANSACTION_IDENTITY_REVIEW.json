@@ -1,0 +1,1151 @@
+{
+  "review": "transaction-identity-review",
+  "kind": "offline, read-only, metadata-only transaction identity review; no outcomes, options, prices, JEV, models, 2026, out-of-sample or reserved 2023 data; no text classifier; no economic validation",
+  "scope": "identity-augmented review of the frozen TRANSACTION_SOURCE census; the original 80-filing / 20-issuer family gates are unchanged and are not rescued by this review",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "canonical_universe": {
+    "path": "transaction_source/universe.json",
+    "tickers": 100,
+    "sha256": "d93e29066a00b03288a79eb541e737685e763b0cd133b6c91e5776e61ed634ee",
+    "digest": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "freeze": {
+    "manifest_path": "transaction_identity_review/input_manifest.json",
+    "manifest_sha256": "287cc872d4f0b986e6a616f5fb1816d1e2204c1d1edc4bdc02e8b2b427f9a42f",
+    "manifest_frozen_before_counts": false,
+    "runtime_manifest_verified_before_counts": true,
+    "manifest_frozen_before_counts_rationale": "false for session history: the prior worker printed exploratory CIK/recovered counts before the input manifest existed; runtime order on every subsequent script run is manifest-first",
+    "manifest_immutable": true,
+    "manifest_uninterrupted_custody": false,
+    "original_manifest_creation_once": true,
+    "identity_method_sha256": "37dab9a4161595e67ead0f955ac4ed9eeb6e1512431e14d36f602743119f7153",
+    "gates_unchanged": {
+      "min_unambiguous_dedup_accessions": 80,
+      "min_unambiguous_canonical_ticker_issuers": 20
+    }
+  },
+  "provenance": {
+    "pre_manifest_exploratory_exposure": true,
+    "pre_manifest_exposure_detail": "Before the input manifest was created the prior worker computed and printed exploratory identity figures: 818 tickerless accessions, zero canonical identity recovery, the known-outside CIKs and the family tallies. They were therefore not frozen at first sight.",
+    "final_script_recomputes_after_manifest_validation": true,
+    "runtime_order_vs_chronology": "This is a statement about session chronology, not about the code path: every actual script run (the final generator run and the verification rerun) builds and verifies the immutable manifest before recomputing any count.",
+    "prospective_inference": false,
+    "custody": {
+      "uninterrupted_custody": false,
+      "detail": "During verification the whole transaction_identity_review/ directory was backed up to /tmp/tir_manifest_backup, then removed, then restored. The manifest bytes were retained and restored, but custody was not uninterrupted. This concerns only the new review's private manifest directory; no original transaction_source manifest was removed, rebuilt or altered."
+    },
+    "filing_text_exposure": {
+      "vendor_supporting_text_snippets_displayed": 2,
+      "detail": "A prior schema peek printed the first merger_agreement record and the first acquisition_completion record, including their vendor supporting_text snippets (two snippets, limited to a first-record preview). No full SEC package was read; those snippets were not used for any semantic judgment or decision, and the script's analytical extraction ignores supporting_text and filing_url."
+    }
+  },
+  "input_manifest": {
+    "review": "transaction-identity-review",
+    "manifest_version": 1,
+    "kind": "metadata-only offline input manifest; no filing text, no prices, no models",
+    "window": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "identity_method": {
+      "version": 1,
+      "statement": "Exact normalized CIK-to-ticker evidence only. An accession is identity-recovered for the canonical universe only when it has no usable recorded ticker and its recorded CIK maps, through explicitly recorded (cik, ticker) pairs in the frozen metadata-only evidence corpus, to exactly one canonical TOP_100 ticker. No company name, alias inference, share-class bridge, historical migration or silent fallback; multiple canonical mappings stay UNKNOWN.",
+      "ticker_normalization": "strip, upper-case, '/' and '-' -> '.' (identical to the frozen audits)",
+      "cik_normalization": "str(cik).zfill(10)",
+      "evidence_fields_used": [
+        "cik",
+        "tickers (list of strings)",
+        "ticker (single string)"
+      ],
+      "evidence_fields_refused": [
+        "company name",
+        "targets",
+        "supporting_text",
+        "filing_url"
+      ],
+      "recovery_scope": "only accessions with no usable recorded ticker; an accession carrying an explicit non-canonical ticker is never re-labelled canonical even when its CIK has canonical evidence (share-class/alias conflict stays UNKNOWN)",
+      "ambiguity_rule": "a CIK mapping to more than one canonical ticker is UNKNOWN; a canonical ticker mapping to more than one CIK (BLK has two) is UNKNOWN for issuer counting",
+      "date_fence": "every dated record in every input must be inside 2024-01-01..2025-12-31; an out-of-window date fails fast",
+      "hash_fence": "every evidence and target file must match its expected sha256; a mismatch or a missing file fails fast",
+      "freeze_order": "the input path/hash manifest and this method are written and verified before any recovered count is computed; later runs must reproduce the manifest byte-for-byte"
+    },
+    "identity_method_sha256": "37dab9a4161595e67ead0f955ac4ed9eeb6e1512431e14d36f602743119f7153",
+    "universe": {
+      "path": "transaction_source/universe.json",
+      "sha256": "d93e29066a00b03288a79eb541e737685e763b0cd133b6c91e5776e61ed634ee",
+      "digest": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5",
+      "tickers": 100,
+      "cross_checked_against": [
+        "credit_facility_feasibility/universe.json",
+        "repurchase_results/universe.json"
+      ]
+    },
+    "identity_evidence_files": [
+      {
+        "path": "earnings_payoff_results/filing_inventory.json",
+        "role": "identity_evidence",
+        "sha256": "40c35e5e4a14677ad36df3ee5c7c676b1ed67acfd9e3144a360c613f8c9625e3",
+        "expected_sha256": "40c35e5e4a14677ad36df3ee5c7c676b1ed67acfd9e3144a360c613f8c9625e3",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 798,
+        "distinct_ciks": 28,
+        "pairs": 798,
+        "dated": 798,
+        "undated": 0
+      },
+      {
+        "path": "earnings_payoff_results/events.json",
+        "role": "identity_evidence",
+        "sha256": "a5eeb11940f418ade7fa10f7e05033087deadf84bcfb84fc9ad58b2afb85d600",
+        "expected_sha256": "a5eeb11940f418ade7fa10f7e05033087deadf84bcfb84fc9ad58b2afb85d600",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 130,
+        "distinct_ciks": 28,
+        "pairs": 130,
+        "dated": 130,
+        "undated": 0
+      },
+      {
+        "path": "full_source_results/candidate_packets.json",
+        "role": "identity_evidence",
+        "sha256": "0a9ada17b249536d8db5b1d95d723ca30860a8c0cee9d36000e94f79b75876ef",
+        "expected_sha256": "0a9ada17b249536d8db5b1d95d723ca30860a8c0cee9d36000e94f79b75876ef",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 132,
+        "distinct_ciks": 68,
+        "pairs": 132,
+        "dated": 132,
+        "undated": 0
+      },
+      {
+        "path": "guidance_results/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "4997b249b8dbe13a88b42866671489e1bb0bda272d87b5fef417d6dfabde9eef",
+        "expected_sha256": "4997b249b8dbe13a88b42866671489e1bb0bda272d87b5fef417d6dfabde9eef",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 60,
+        "distinct_ciks": 27,
+        "pairs": 60,
+        "dated": 60,
+        "undated": 0
+      },
+      {
+        "path": "guidance_results/disclosures_guidance_issuance_or_update.json",
+        "role": "identity_evidence",
+        "sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "expected_sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1618,
+        "distinct_ciks": 692,
+        "pairs": 1901,
+        "dated": 1618,
+        "undated": 0
+      },
+      {
+        "path": "guidance_results/disclosures_guidance_withdrawal.json",
+        "role": "identity_evidence",
+        "sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "expected_sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 27,
+        "distinct_ciks": 26,
+        "pairs": 34,
+        "dated": 27,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "c75f2addd0f6979bf2f3739b3073b94bf1c6d086be1b9193860f9672996b846d",
+        "expected_sha256": "c75f2addd0f6979bf2f3739b3073b94bf1c6d086be1b9193860f9672996b846d",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 208,
+        "distinct_ciks": 54,
+        "pairs": 208,
+        "dated": 208,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_annual_earnings.json",
+        "role": "identity_evidence",
+        "sha256": "8bee095b4fced858f10ca39df3b788025888355f3c23905f2dbd26b9d6f54090",
+        "expected_sha256": "8bee095b4fced858f10ca39df3b788025888355f3c23905f2dbd26b9d6f54090",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 98,
+        "distinct_ciks": 73,
+        "pairs": 167,
+        "dated": 98,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_guidance_issuance_or_update.json",
+        "role": "identity_evidence",
+        "sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "expected_sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1618,
+        "distinct_ciks": 692,
+        "pairs": 1901,
+        "dated": 1618,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_guidance_withdrawal.json",
+        "role": "identity_evidence",
+        "sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "expected_sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 27,
+        "distinct_ciks": 26,
+        "pairs": 34,
+        "dated": 27,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_preliminary_results.json",
+        "role": "identity_evidence",
+        "sha256": "65dd8c6ad7af4a94d2b2cae337ca9f68750995f6e72df7d097e6a972ca625e4d",
+        "expected_sha256": "65dd8c6ad7af4a94d2b2cae337ca9f68750995f6e72df7d097e6a972ca625e4d",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1946,
+        "distinct_ciks": 949,
+        "pairs": 2341,
+        "dated": 1946,
+        "undated": 0
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_quarterly_earnings.json",
+        "role": "identity_evidence",
+        "sha256": "44cc1608c336db8655366051d36af8aa198f9eea36492ab5658ad01b18408156",
+        "expected_sha256": "44cc1608c336db8655366051d36af8aa198f9eea36492ab5658ad01b18408156",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1776,
+        "distinct_ciks": 521,
+        "pairs": 2579,
+        "dated": 1776,
+        "undated": 0
+      },
+      {
+        "path": "credit_facility_feasibility/disclosures.json",
+        "role": "identity_evidence",
+        "sha256": "c2a32cdad9ae34afd4054cef0edaf0be6f14d1e5e2a88eeb6bfdfe861c5cadde",
+        "expected_sha256": "c2a32cdad9ae34afd4054cef0edaf0be6f14d1e5e2a88eeb6bfdfe861c5cadde",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 6983,
+        "distinct_ciks": 2342,
+        "pairs": 7385,
+        "dated": 6983,
+        "undated": 0
+      },
+      {
+        "path": "credit_facility_feasibility/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "4ea6b2b0e425d9845029e36f2f56dc46121cab685ae3e6bd0a5f7acac8eeea66",
+        "expected_sha256": "4ea6b2b0e425d9845029e36f2f56dc46121cab685ae3e6bd0a5f7acac8eeea66",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 62,
+        "distinct_ciks": 39,
+        "pairs": 62,
+        "dated": 62,
+        "undated": 0
+      },
+      {
+        "path": "repurchase_results/disclosures.json",
+        "role": "identity_evidence",
+        "sha256": "c9b9e12eeb6bd6064f4bfa282855a2bf38a0136620fa7d32ff6636a66ef0f8bc",
+        "expected_sha256": "c9b9e12eeb6bd6064f4bfa282855a2bf38a0136620fa7d32ff6636a66ef0f8bc",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 2108,
+        "distinct_ciks": 1036,
+        "pairs": 2981,
+        "dated": 2108,
+        "undated": 0
+      },
+      {
+        "path": "repurchase_results/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "fb757c483f41b4490369cded2ef39128e29d1511525aaf1d3cd5dc4a6e7f674d",
+        "expected_sha256": "fb757c483f41b4490369cded2ef39128e29d1511525aaf1d3cd5dc4a6e7f674d",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 36,
+        "distinct_ciks": 26,
+        "pairs": 36,
+        "dated": 36,
+        "undated": 0
+      },
+      {
+        "path": "departure_results/candidate_ceo_departure.json",
+        "role": "identity_evidence",
+        "sha256": "ce72cee57adc21f08e2f5a337e4370d8eb71e1455f551a30e4c82140a34c7337",
+        "expected_sha256": "ce72cee57adc21f08e2f5a337e4370d8eb71e1455f551a30e4c82140a34c7337",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1951,
+        "distinct_ciks": 1132,
+        "pairs": 1969,
+        "dated": 1951,
+        "undated": 0
+      },
+      {
+        "path": "departure_results/candidate_cfo_departure.json",
+        "role": "identity_evidence",
+        "sha256": "5d7f6c5d8eaf5c4f68550eec0193c922c86559accf0de55b312dafd72efd7862",
+        "expected_sha256": "5d7f6c5d8eaf5c4f68550eec0193c922c86559accf0de55b312dafd72efd7862",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 1859,
+        "distinct_ciks": 1225,
+        "pairs": 2053,
+        "dated": 1859,
+        "undated": 0
+      },
+      {
+        "path": "departure_results/candidate_executive_officer_departure.json",
+        "role": "identity_evidence",
+        "sha256": "47086b3556dbf849e66f4408b61e497f6f271bee46cbfff3da343ac7855a4d8a",
+        "expected_sha256": "47086b3556dbf849e66f4408b61e497f6f271bee46cbfff3da343ac7855a4d8a",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 3964,
+        "distinct_ciks": 2231,
+        "pairs": 4520,
+        "dated": 3964,
+        "undated": 0
+      },
+      {
+        "path": "departure_results/candidate_director_departure.json",
+        "role": "identity_evidence",
+        "sha256": "7d9f279566ca7e5613b0d83fb7ef4117aa3c4631abc3b854a273ecfb8e22b5cd",
+        "expected_sha256": "7d9f279566ca7e5613b0d83fb7ef4117aa3c4631abc3b854a273ecfb8e22b5cd",
+        "expected_source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+        "records_total": 6108,
+        "distinct_ciks": 2818,
+        "pairs": 6602,
+        "dated": 6108,
+        "undated": 0
+      },
+      {
+        "path": "dividend_source/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "9b5ee0b3ec4d32ab5594ba20fa5586b648fa6d6c280d19ffaf1b236b291f53dd",
+        "expected_sha256": "9b5ee0b3ec4d32ab5594ba20fa5586b648fa6d6c280d19ffaf1b236b291f53dd",
+        "expected_source": "source_manifest.json (added metadata-only enrollment)",
+        "records_total": 79,
+        "distinct_ciks": 18,
+        "pairs": 79,
+        "dated": 79,
+        "undated": 0
+      },
+      {
+        "path": "equity_issuance_source/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "9b860174f84a77cbd8d6aa619012ca6aa6d6bdad86dba775e3b3552bf3386f18",
+        "expected_sha256": "9b860174f84a77cbd8d6aa619012ca6aa6d6bdad86dba775e3b3552bf3386f18",
+        "expected_source": "source_manifest.json (added metadata-only enrollment)",
+        "records_total": 23,
+        "distinct_ciks": 10,
+        "pairs": 23,
+        "dated": 23,
+        "undated": 0
+      },
+      {
+        "path": "transaction_source/enrollment.json",
+        "role": "identity_evidence",
+        "sha256": "c550677878056fb47ce92f867bf94c5ead06faa83279ec503786de7053429859",
+        "expected_sha256": "c550677878056fb47ce92f867bf94c5ead06faa83279ec503786de7053429859",
+        "expected_source": "source_manifest.json (added metadata-only enrollment)",
+        "records_total": 84,
+        "distinct_ciks": 36,
+        "pairs": 84,
+        "dated": 84,
+        "undated": 0
+      }
+    ],
+    "target_metadata_files": [
+      {
+        "path": "transaction_source/disclosures_merger_agreement.json",
+        "role": "target_metadata",
+        "sha256": "065ff941346f33b53932abc8bee7f9d2287b8e59052c0228a816522e5e6c81f6",
+        "expected_sha256": "065ff941346f33b53932abc8bee7f9d2287b8e59052c0228a816522e5e6c81f6",
+        "expected_source": "transaction_source/source_manifest.json",
+        "raw_rows": 2918,
+        "dated": 2918,
+        "undated": 0,
+        "fields_read": [
+          "accession_number",
+          "filing_date",
+          "cik",
+          "tickers",
+          "tertiary_category"
+        ],
+        "fields_ignored": [
+          "primary_category",
+          "secondary_category",
+          "supporting_text",
+          "filing_url"
+        ]
+      },
+      {
+        "path": "transaction_source/disclosures_acquisition_agreement.json",
+        "role": "target_metadata",
+        "sha256": "6974090f3b74a93e1af60733316e797b36a739f8bfc4b3faab5c05cae6c9a286",
+        "expected_sha256": "6974090f3b74a93e1af60733316e797b36a739f8bfc4b3faab5c05cae6c9a286",
+        "expected_source": "transaction_source/source_manifest.json",
+        "raw_rows": 1425,
+        "dated": 1425,
+        "undated": 0,
+        "fields_read": [
+          "accession_number",
+          "filing_date",
+          "cik",
+          "tickers",
+          "tertiary_category"
+        ],
+        "fields_ignored": [
+          "primary_category",
+          "secondary_category",
+          "supporting_text",
+          "filing_url"
+        ]
+      },
+      {
+        "path": "transaction_source/disclosures_merger_completion.json",
+        "role": "target_metadata",
+        "sha256": "deffed0f1f3e5a7a37f1f2ff68caa19261a791d4ea987a9017274c97400f0015",
+        "expected_sha256": "deffed0f1f3e5a7a37f1f2ff68caa19261a791d4ea987a9017274c97400f0015",
+        "expected_source": "transaction_source/source_manifest.json",
+        "raw_rows": 880,
+        "dated": 880,
+        "undated": 0,
+        "fields_read": [
+          "accession_number",
+          "filing_date",
+          "cik",
+          "tickers",
+          "tertiary_category"
+        ],
+        "fields_ignored": [
+          "primary_category",
+          "secondary_category",
+          "supporting_text",
+          "filing_url"
+        ]
+      },
+      {
+        "path": "transaction_source/disclosures_acquisition_completion.json",
+        "role": "target_metadata",
+        "sha256": "a0bc7425622960a3a387a035ad44037747e941ef47cad4b1b5ddfe003700f232",
+        "expected_sha256": "a0bc7425622960a3a387a035ad44037747e941ef47cad4b1b5ddfe003700f232",
+        "expected_source": "transaction_source/source_manifest.json",
+        "raw_rows": 1076,
+        "dated": 1076,
+        "undated": 0,
+        "fields_read": [
+          "accession_number",
+          "filing_date",
+          "cik",
+          "tickers",
+          "tertiary_category"
+        ],
+        "fields_ignored": [
+          "primary_category",
+          "secondary_category",
+          "supporting_text",
+          "filing_url"
+        ]
+      }
+    ],
+    "excluded_corpus": {
+      "path": "novelty_results/source_filings.json",
+      "reason": "reserved notebook example holdout window 2023-06-01..2023-08-31; excluded entirely from the evidence corpus and never read by this review",
+      "reserved_june_august_2023_records": 74
+    },
+    "gates_unchanged": {
+      "min_unambiguous_dedup_accessions": 80,
+      "min_unambiguous_canonical_ticker_issuers": 20
+    },
+    "authorized_additions": {
+      "core": "the exact 20 paths in SOURCE_IDENTITY_REVIEW.json evidence_corpus.files",
+      "added_metadata_only": [
+        "dividend_source/enrollment.json",
+        "equity_issuance_source/enrollment.json",
+        "transaction_source/enrollment.json"
+      ],
+      "target": "the four transaction_source disclosure metadata files, metadata fields only"
+    }
+  },
+  "identity_evidence_coverage": {
+    "full_corpus": {
+      "universe_tickers": 100,
+      "tickers_with_cik_evidence": 98,
+      "tickers_without_cik_evidence": [
+        "AMGN",
+        "AMZN"
+      ],
+      "universe_tickers_with_multiple_ciks": {
+        "BLK": [
+          "0001364742",
+          "0002012383"
+        ]
+      },
+      "ciks_mapping_to_multiple_universe_tickers": {}
+    },
+    "core_20_only": {
+      "tickers_with_cik_evidence": 96,
+      "tickers_without_cik_evidence": [
+        "AMGN",
+        "AMZN",
+        "TMO",
+        "V"
+      ]
+    },
+    "prior_reported_coverage": {
+      "tickers_with_cik_evidence": 96,
+      "tickers_without_cik_evidence": [
+        "AMGN",
+        "AMZN",
+        "TMO",
+        "V"
+      ],
+      "source": "SOURCE_IDENTITY_REVIEW.json evidence_corpus.universe_coverage"
+    }
+  },
+  "direct_reproduction": {
+    "source": "recomputed from the four transaction disclosure metadata files",
+    "expected": {
+      "signing": {
+        "accessions": 56,
+        "unambiguous_accessions": 52,
+        "ambiguous_accessions": 4,
+        "unambiguous_issuers": 24
+      },
+      "completion": {
+        "accessions": 30,
+        "unambiguous_accessions": 26,
+        "ambiguous_accessions": 4,
+        "unambiguous_issuers": 21
+      }
+    },
+    "result": {
+      "signing": {
+        "accessions": 56,
+        "unambiguous_accessions": 52,
+        "ambiguous_accessions": 4,
+        "unambiguous_issuers": 24,
+        "tickers": [
+          "ABT",
+          "AMD",
+          "BA",
+          "CHTR",
+          "COF",
+          "COP",
+          "CRM",
+          "CVX",
+          "EMR",
+          "GOOGL",
+          "HD",
+          "INTC",
+          "ISRG",
+          "LOW",
+          "NFLX",
+          "NOW",
+          "QCOM",
+          "SCHW",
+          "T",
+          "TMO",
+          "TMUS",
+          "UBER",
+          "UNP",
+          "VZ"
+        ],
+        "reproduced_matches_frozen": true
+      },
+      "completion": {
+        "accessions": 30,
+        "unambiguous_accessions": 26,
+        "ambiguous_accessions": 4,
+        "unambiguous_issuers": 21,
+        "tickers": [
+          "ABBV",
+          "AMD",
+          "AVGO",
+          "BA",
+          "BMY",
+          "COF",
+          "COP",
+          "CSCO",
+          "CVX",
+          "EMR",
+          "FDX",
+          "GILD",
+          "HD",
+          "HON",
+          "INTC",
+          "LOW",
+          "MET",
+          "PFE",
+          "TMO",
+          "TMUS",
+          "XOM"
+        ],
+        "reproduced_matches_frozen": true
+      },
+      "union": {
+        "accessions": 84,
+        "unambiguous_accessions": 76,
+        "ambiguous_accessions": 8,
+        "unambiguous_issuers": 34,
+        "tickers": [
+          "ABBV",
+          "ABT",
+          "AMD",
+          "AVGO",
+          "BA",
+          "BMY",
+          "CHTR",
+          "COF",
+          "COP",
+          "CRM",
+          "CSCO",
+          "CVX",
+          "EMR",
+          "FDX",
+          "GILD",
+          "GOOGL",
+          "HD",
+          "HON",
+          "INTC",
+          "ISRG",
+          "LOW",
+          "MET",
+          "NFLX",
+          "NOW",
+          "PFE",
+          "QCOM",
+          "SCHW",
+          "T",
+          "TMO",
+          "TMUS",
+          "UBER",
+          "UNP",
+          "VZ",
+          "XOM"
+        ]
+      }
+    },
+    "cross_family_overlap_accessions": 2,
+    "tickerless_accessions": 818,
+    "diagnostics": {
+      "raw_rows_by_tag": {
+        "merger_agreement": 2918,
+        "acquisition_agreement": 1425,
+        "merger_completion": 880,
+        "acquisition_completion": 1076
+      },
+      "missing_ticker_rows_by_tag": {
+        "merger_agreement": 281,
+        "acquisition_agreement": 207,
+        "merger_completion": 152,
+        "acquisition_completion": 265
+      },
+      "tickerless_accessions": 818
+    },
+    "reproduced_matches_frozen": true
+  },
+  "population_identity_categories": {
+    "direct_ticker_match": {
+      "accessions": 84,
+      "ciks": 36,
+      "mapped_canonical_tickers": [
+        "ABBV",
+        "ABT",
+        "AMD",
+        "AVGO",
+        "BA",
+        "BLK",
+        "BMY",
+        "CHTR",
+        "COF",
+        "COP",
+        "CRM",
+        "CSCO",
+        "CVX",
+        "EMR",
+        "FDX",
+        "GILD",
+        "GOOGL",
+        "HD",
+        "HON",
+        "INTC",
+        "ISRG",
+        "LOW",
+        "MET",
+        "NFLX",
+        "NOW",
+        "PFE",
+        "QCOM",
+        "SCHW",
+        "T",
+        "TMO",
+        "TMUS",
+        "UBER",
+        "UNP",
+        "VZ",
+        "XOM"
+      ]
+    },
+    "with_ticker_non_universe": {
+      "accessions": 4412,
+      "ciks": 1590,
+      "mapped_canonical_tickers": []
+    },
+    "with_ticker_cik_unreferenced": {
+      "accessions": 440,
+      "ciks": 191,
+      "mapped_canonical_tickers": []
+    },
+    "with_ticker_cik_canonical_conflict": {
+      "accessions": 0,
+      "ciks": 0,
+      "mapped_canonical_tickers": []
+    },
+    "with_ticker_cik_ambiguous": {
+      "accessions": 0,
+      "ciks": 0,
+      "mapped_canonical_tickers": []
+    },
+    "tickerless_identity_recovered": {
+      "accessions": 0,
+      "ciks": 0,
+      "mapped_canonical_tickers": []
+    },
+    "tickerless_cik_ambiguous": {
+      "accessions": 0,
+      "ciks": 0,
+      "mapped_canonical_tickers": []
+    },
+    "tickerless_cik_non_universe": {
+      "accessions": 178,
+      "ciks": 92,
+      "mapped_canonical_tickers": []
+    },
+    "tickerless_unresolved": {
+      "accessions": 640,
+      "ciks": 413,
+      "mapped_canonical_tickers": []
+    }
+  },
+  "transaction_known_vs_full_cached": {
+    "note": "recovery applied to accessions with no usable ticker; transaction-known uses only CIK/ticker pairs recorded in the four transaction disclosure files, full-cached adds the 20 frozen evidence files plus three added metadata-only enrollment files",
+    "transaction_known": {
+      "identity_recovered_accessions": 0,
+      "tickerless_cik_non_universe": 160,
+      "tickerless_unresolved": 658
+    },
+    "full_cached": {
+      "identity_recovered_accessions": 0,
+      "tickerless_cik_non_universe": 178,
+      "tickerless_unresolved": 640
+    },
+    "delta_recovered_accessions": 0
+  },
+  "family_identity_augmentation": {
+    "signing": {
+      "categories": {
+        "direct_ticker_match": {
+          "accessions": 56,
+          "ciks": 26,
+          "mapped_canonical_tickers": [
+            "ABT",
+            "AMD",
+            "BA",
+            "BLK",
+            "CHTR",
+            "COF",
+            "COP",
+            "CRM",
+            "CVX",
+            "EMR",
+            "GOOGL",
+            "HD",
+            "INTC",
+            "ISRG",
+            "LOW",
+            "NFLX",
+            "NOW",
+            "QCOM",
+            "SCHW",
+            "T",
+            "TMO",
+            "TMUS",
+            "UBER",
+            "UNP",
+            "VZ"
+          ]
+        },
+        "with_ticker_non_universe": {
+          "accessions": 3115,
+          "ciks": 1364,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_unreferenced": {
+          "accessions": 375,
+          "ciks": 170,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_canonical_conflict": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_ambiguous": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_identity_recovered": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_cik_ambiguous": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_cik_non_universe": {
+          "accessions": 128,
+          "ciks": 54,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_unresolved": {
+          "accessions": 323,
+          "ciks": 216,
+          "mapped_canonical_tickers": []
+        }
+      },
+      "direct_accessions": 56,
+      "direct_unambiguous_accessions": 52,
+      "direct_ambiguous_accessions": 4,
+      "direct_unambiguous_issuers": 24,
+      "identity_recovered_accessions": 0,
+      "identity_recovered_issuers": 0,
+      "known_outside_accessions": 3618,
+      "identity_ambiguous_not_outside_accessions": 0,
+      "unknown_non_direct_accessions": 323,
+      "residual_safe_upper_accessions": 379,
+      "residual_unknown_cik_ceiling": 241,
+      "residual_safe_upper_issuers": 100,
+      "residual_safe_upper_issuers_capped": true,
+      "families": [
+        "merger_agreement",
+        "acquisition_agreement"
+      ]
+    },
+    "completion": {
+      "categories": {
+        "direct_ticker_match": {
+          "accessions": 30,
+          "ciks": 23,
+          "mapped_canonical_tickers": [
+            "ABBV",
+            "AMD",
+            "AVGO",
+            "BA",
+            "BLK",
+            "BMY",
+            "COF",
+            "COP",
+            "CSCO",
+            "CVX",
+            "EMR",
+            "FDX",
+            "GILD",
+            "HD",
+            "HON",
+            "INTC",
+            "LOW",
+            "MET",
+            "PFE",
+            "TMO",
+            "TMUS",
+            "XOM"
+          ]
+        },
+        "with_ticker_non_universe": {
+          "accessions": 1382,
+          "ciks": 1046,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_unreferenced": {
+          "accessions": 72,
+          "ciks": 67,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_canonical_conflict": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "with_ticker_cik_ambiguous": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_identity_recovered": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_cik_ambiguous": {
+          "accessions": 0,
+          "ciks": 0,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_cik_non_universe": {
+          "accessions": 53,
+          "ciks": 49,
+          "mapped_canonical_tickers": []
+        },
+        "tickerless_unresolved": {
+          "accessions": 354,
+          "ciks": 297,
+          "mapped_canonical_tickers": []
+        }
+      },
+      "direct_accessions": 30,
+      "direct_unambiguous_accessions": 26,
+      "direct_ambiguous_accessions": 4,
+      "direct_unambiguous_issuers": 21,
+      "identity_recovered_accessions": 0,
+      "identity_recovered_issuers": 0,
+      "known_outside_accessions": 1507,
+      "identity_ambiguous_not_outside_accessions": 0,
+      "unknown_non_direct_accessions": 354,
+      "residual_safe_upper_accessions": 384,
+      "residual_unknown_cik_ceiling": 319,
+      "residual_safe_upper_issuers": 100,
+      "residual_safe_upper_issuers_capped": true,
+      "families": [
+        "merger_completion",
+        "acquisition_completion"
+      ]
+    }
+  },
+  "overlap": {
+    "direct_accessions": 84,
+    "identity_recovered_accessions": 0,
+    "direct_and_recovered_overlap": 0,
+    "full_cached_and_transaction_known_recovered_overlap": 0,
+    "recovered_signing_and_completion_overlap": 0,
+    "direct_signing_and_completion_overlap": 2,
+    "note": "direct and identity-recovered sets are disjoint by construction; the recovered sets are empty here, so every recovered overlap is zero"
+  },
+  "unresolved_ambiguities": {
+    "blk_two_ciks": {
+      "canonical_ticker": "BLK",
+      "ciks": [
+        "0001364742",
+        "0002012383"
+      ],
+      "accessions": [
+        {
+          "accession_number": "0000950170-24-004107",
+          "ciks": [
+            "0001364742"
+          ],
+          "tickers": [
+            "BLK"
+          ],
+          "mapped_tickers": [
+            "BLK"
+          ],
+          "tags": [
+            "acquisition_agreement"
+          ]
+        },
+        {
+          "accession_number": "0001193125-24-007623",
+          "ciks": [
+            "0001364742"
+          ],
+          "tickers": [
+            "BLK"
+          ],
+          "mapped_tickers": [
+            "BLK"
+          ],
+          "tags": [
+            "acquisition_agreement"
+          ]
+        },
+        {
+          "accession_number": "0001193125-24-172680",
+          "ciks": [
+            "0001364742"
+          ],
+          "tickers": [
+            "BLK"
+          ],
+          "mapped_tickers": [
+            "BLK"
+          ],
+          "tags": [
+            "acquisition_agreement"
+          ]
+        },
+        {
+          "accession_number": "0001193125-24-229654",
+          "ciks": [
+            "0001364742"
+          ],
+          "tickers": [
+            "BLK"
+          ],
+          "mapped_tickers": [
+            "BLK"
+          ],
+          "tags": [
+            "merger_completion"
+          ]
+        },
+        {
+          "accession_number": "0001193125-24-261807",
+          "ciks": [
+            "0002012383"
+          ],
+          "tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "mapped_tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "tags": [
+            "acquisition_completion"
+          ]
+        },
+        {
+          "accession_number": "0001193125-24-269350",
+          "ciks": [
+            "0002012383"
+          ],
+          "tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "mapped_tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "tags": [
+            "acquisition_agreement"
+          ]
+        },
+        {
+          "accession_number": "0001193125-25-044184",
+          "ciks": [
+            "0002012383"
+          ],
+          "tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "mapped_tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "tags": [
+            "acquisition_completion"
+          ]
+        },
+        {
+          "accession_number": "0001193125-25-153573",
+          "ciks": [
+            "0002012383"
+          ],
+          "tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "mapped_tickers": [
+            "BLK",
+            "DIVB"
+          ],
+          "tags": [
+            "acquisition_completion"
+          ]
+        }
+      ],
+      "resolution": "UNKNOWN; both CIKs legitimately carry the BLK ticker, so the one-CIK-per-ticker rule cannot be satisfied and the accessions stay out of the unambiguous count"
+    },
+    "cik_mapping_to_multiple_universe_tickers": {},
+    "share_class_or_alias_conflicts": {
+      "accessions": 0,
+      "ciks": 0,
+      "mapped_canonical_tickers": []
+    },
+    "universe_tickers_without_cik_evidence": [
+      "AMGN",
+      "AMZN"
+    ]
+  },
+  "preservation": {
+    "all_unchanged": true,
+    "checks": {
+      "transaction_implementation_sha256_matches": true,
+      "transaction_reused_module_sha256_matches": true,
+      "transaction_source_manifest_self_hash_matches": true,
+      "transaction_source_manifest_entries_match": true,
+      "transaction_protocol_sha256_matches": true,
+      "transaction_universe_digest_matches": true,
+      "transaction_enrollment_digest_matches": true,
+      "transaction_public_gate_outcome_preserved": true,
+      "transaction_audit_history_preserved": true,
+      "earnings_payoff_freeze_files_match": true,
+      "transaction_preservation_report_all_unchanged": true
+    },
+    "transaction_source_manifest_entries": 27,
+    "transaction_public_report_sha256": "0c2d9d932fbb5350b73b49b998664c67415b8e31f3c10bab665fb8ed418f8de6",
+    "transaction_public_report_md_sha256": "2b0f62cd8a1998293a9c2874a3f29d69223488450eba251a7804725556281cce",
+    "note": "Original transaction code, protocol, raw HTTP envelopes, manifests and the public TRANSACTION_SOURCE report (including audit_history) are byte-for-byte unchanged; no original manifest is deleted or rebuilt."
+  },
+  "boundaries": {
+    "network_requests": 0,
+    "market_or_option_data_read": false,
+    "filing_text_read": {
+      "session_schema_peek_vendor_supporting_snippets": 2,
+      "full_sec_packages_read": 0,
+      "used_for_semantic_judgment_or_decision": false,
+      "script_analytical_extraction_ignores_text": true,
+      "note": "a schema peek displayed two vendor supporting_text snippets (first merger_agreement and first acquisition_completion records); they did not enter the analysis"
+    },
+    "jev_or_model_calls": 0,
+    "text_classifier_or_semantic_rule_built": false,
+    "identity_resolver_is_not_a_classifier_or_model": true,
+    "economic_prices_or_models": false,
+    "original_manifests_rebuilt_or_deleted": false,
+    "original_code_protocol_http_reports_unmodified": true,
+    "prior_experiment_or_oos_files_modified": false,
+    "commit_made": false
+  },
+  "conclusions": [
+    "The frozen direct census reproduces exactly: signing 56 deduplicated / 52 unambiguous accessions and 24 unambiguous issuers; completion 30 / 26 and 21.",
+    "Full cached universe identity recovers ZERO additional canonical accessions or issuers for either family; the direct-ticker census is not enlarged by CIK identity evidence.",
+    "178 of the 818 tickerless accessions have CIK evidence inside the cached corpus that maps only to non-universe tickers, so they are treated as outside for this bounded review. That is corpus-bounded evidence, not timeless proof that the issuer cannot carry an unseen canonical ticker. The remaining 640 stay genuinely unknown.",
+    "Residual issuer ceilings are reported on two bases: a distinct-CIK ceiling (signing 241, completion 319) that is not a canonical issuer bound, and a canonical ticker ceiling capped at the 100-ticker universe (signing 100, completion 100).",
+    "The identity-augmented result is an exploratory corrected source-feasibility check, not economic validation and not a pristine prospective census; it does not change the original 80/20 gate outcomes, which remain failing on accession count.",
+    "A source-feasibility gate failure is not evidence that no alpha exists."
+  ],
+  "limitations": [
+    "Recovery and non-universe exclusion are bounded by the cached evidence corpus. A universe issuer whose CIK never appears in the 20 frozen evidence files or the three added enrollment files cannot be recovered and stays UNKNOWN; conversely, a CIK whose only cached tickers are non-universe is treated as outside for this review, which is corpus-bounded evidence and not timeless proof that the issuer cannot carry an unseen canonical ticker.",
+    "Two canonical tickers still lack cached CIK evidence: AMGN, AMZN.",
+    "The 2024-2025 static September-2026 TOP_100 carries survivorship bias; targets already acquired or delisted before the snapshot are excluded.",
+    "Vendor tertiary-category tags are classifications, not proof of a signed deal or a completed transaction; the analytical extraction reads only metadata fields and no filing text is used in any computation.",
+    "Session chronology is not pristine prospective processing: exploratory identity counts were printed before the manifest was created (see provenance), so no prospective inference is claimed.",
+    "The private manifest has content immutability but not uninterrupted custody: during verification the directory was backed up to /tmp/tir_manifest_backup, removed and restored byte-for-byte. Original transaction_source manifests were never touched.",
+    "A prior schema peek displayed two vendor supporting_text snippets (first merger_agreement and first acquisition_completion records). No full SEC package was read and the snippets did not enter the analysis or any decision.",
+    "The transaction_source manifests were disclosed as rebuilt twice after acquisition; the original first manifests remain lost and this review cannot recover them."
+  ]
+}
