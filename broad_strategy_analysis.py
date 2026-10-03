@@ -82,6 +82,7 @@ def analyze(expanded=False, observed=False):
                 frame['net'] = frame.net_per_observed_stock
                 frame['premium_fraction'] *= frame.entry_spot_proxy/frame.observed_entry
                 frame['absolute_move'] = frame.observed_absolute_move
+                frame['stock_return'] = frame.observed_stock_return
                 frame['upside_tail'] = frame.observed_upside_tail
                 frame['downside_tail'] = frame.observed_downside_tail
         b = b.drop_duplicates(['ticker', 'entry_date', 'exit_date', 'horizon', 'otm', 'cost_fraction', 'strategy'])
@@ -120,6 +121,9 @@ def analyze(expanded=False, observed=False):
                         [(str(r.entry_date.date()), str(r.exit_date.date())) for r in ordinary.itertuples()],
                     entry_premium=event.premium_fraction, ordinary_premium=ordinary.premium_fraction.mean(),
                     absolute_move=event.absolute_move, ordinary_absolute_move=ordinary.absolute_move.mean(),
+                    stock_return=event.stock_return, ordinary_stock_return=ordinary.stock_return.mean(),
+                    upside=max(event.stock_return, 0), ordinary_upside=ordinary.stock_return.clip(lower=0).mean(),
+                    downside=max(-event.stock_return, 0), ordinary_downside=(-ordinary.stock_return).clip(lower=0).mean(),
                     upside_tail=event.upside_tail, ordinary_upside_tail=ordinary.upside_tail.mean(),
                     downside_tail=event.downside_tail, ordinary_downside_tail=ordinary.downside_tail.mean(),
                     capacity=event.capacity_contracts))
@@ -142,6 +146,14 @@ def analyze(expanded=False, observed=False):
             tables.append(dict(tag=folder.name, strategy=keys[0], horizon=keys[1], otm=keys[2], cost=keys[3],
                 events=len(group), companies=group.ticker.nunique(), dependence_clusters=len(labels),
                 difference=group.difference.mean(), ci_lo=lo, ci_hi=hi,
+                event_net=group.event_net.mean(), ordinary_net=group.ordinary_net.mean(),
+                entry_premium=group.entry_premium.mean(), ordinary_entry_premium=group.ordinary_premium.mean(),
+                absolute_move=group.absolute_move.mean(), ordinary_absolute_move=group.ordinary_absolute_move.mean(),
+                upside=group.upside.mean(), ordinary_upside=group.ordinary_upside.mean(),
+                downside=group.downside.mean(), ordinary_downside=group.ordinary_downside.mean(),
+                upside_tail=group.upside_tail.mean(), ordinary_upside_tail=group.ordinary_upside_tail.mean(),
+                downside_tail=group.downside_tail.mean(), ordinary_downside_tail=group.ordinary_downside_tail.mean(),
+                available_stock_movements=int(group.absolute_move.notna().sum()),
                 conclusion=('EXPLORATORY SENSITIVITY' if str(keys[1]) != '21' or keys[2] != .05 or keys[3] != .05 else
                     'INCONCLUSIVE' if not np.isfinite(lo) or lo <= 0 <= hi else 'DISCOVERY SIGNAL: VALIDATION REQUIRED')))
     pd.DataFrame(tables).to_csv(OUT / f'{prefix}strict_matched_summary.csv', index=False)
