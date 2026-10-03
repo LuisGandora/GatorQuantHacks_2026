@@ -1,0 +1,191 @@
+{
+  "document": "REMAINING_MECHANISM_FRONTIER",
+  "kind": "bounded independent remaining-mechanism review; advisory; freezes nothing; not an authority and not an authorization barrier; records no supported solution and no verified global impasse or impossibility proof",
+  "author": "research mechanism worker (recorded from the actual model invocation)",
+  "authority": "advisory input to the research owner; GPT owns direction",
+  "owner_files": ["REMAINING_MECHANISM_FRONTIER.md", "REMAINING_MECHANISM_FRONTIER.json"],
+  "decision": "no_supported_solution_from_this_advisory_review",
+  "decision_status": "bounded advisory statement about the reviewed candidates under this scope; not a verified global impasse and not an impossibility proof; not an authorization barrier",
+  "requires": ["Massive", "JEV", "no_classifiers", "supported_positive_options_solution"],
+  "not_a_redefined_null_success": true,
+  "no_actions_this_review": {
+    "network_or_api": false,
+    "jev_or_model_call": false,
+    "price_option_or_payoff_read": false,
+    "filing_text_read": false,
+    "env_or_credential_read": false,
+    "year_2026_or_reserved_window": false,
+    "classifier_built": false,
+    "other_file_write": false,
+    "commit": false
+  },
+  "inference_exposure_ledger": {
+    "read_public_cached": [
+      "MASSIVE_TRACK_REFERENCE.md",
+      "CONTINUATION_GATE.md",
+      "CONTINUATION_GATE.json",
+      "JEV_ROLE_DECISION.md",
+      "JEV_ROLE_DECISION.json",
+      "LITERAL_MEASUREMENT_FEASIBILITY.md",
+      "LITERAL_MEASUREMENT_FEASIBILITY.json",
+      "DIVIDEND_SOURCE.md",
+      "EQUITY_ISSUANCE_SOURCE.md",
+      "MECHANISM_DECISION.md",
+      "MECHANISM_DECISION.json",
+      "RESEARCH_ROUTE_REVIEW.md",
+      "RESEARCH_NEXT_DIRECTION.md",
+      "departure_results/taxonomy.json"
+    ],
+    "taxonomy_use": "authoritative taxonomy only (exact tertiary_category ids and descriptions)",
+    "targeted_greps": "public root *.md and *.json only",
+    "exposure_correction": "A repository root directory listing (pathnames only) displayed private folder names such as .massive_cache/, .jev_cache/, .departure_cache/, .novelty_cache/, .repurchase_cache/ and .stability_cache/; a previous worker's directory pathname listing likewise showed private folder names. Only pathnames appeared in either listing; no private file contents were read from those folders.",
+    "not_read": [
+      ".env or any credential",
+      "any private cache (.massive_cache, .jev_cache, .departure_cache, ...)",
+      "any raw payoff/price/option row or outcome sqlite",
+      "any 8-K filing body text",
+      "any 2026 filing or outcome",
+      "any record inside the reserved 2023-06-01..2023-08-31 window",
+      "no recursive grep over private folders"
+    ]
+  },
+  "structural_premises": {
+    "survivorship": "static September-2026 TOP_100 with survivorship baked in; it excludes filer-as-target names already acquired or delisted before the snapshot, but it does not logically exclude historical target agreements that remained unresolved through the snapshot, nor all target scenarios; those qualifier counts are UNKNOWN",
+    "role_verdict_prohibited": "the exact transaction tags do not encode whether the filer is acquirer or target; recovering that role is a prohibited role verdict; a mechanism needing to know whose stock the consideration pins is unavailable unless role-symmetric; a short-premium/vol-crush hypothesis needs neither the role nor a directional signal",
+    "no_stock_feed": "parity-synthetic spot only; no point-in-time membership, no NBBO"
+  },
+  "taxonomy_tags_exact_from_cached_departure_results": {
+    "merger_agreement": "strategic_transactions/deal_agreements",
+    "acquisition_agreement": "strategic_transactions/deal_agreements",
+    "divestiture_agreement": "strategic_transactions/deal_agreements",
+    "merger_completion": "strategic_transactions/deal_completions",
+    "acquisition_completion": "strategic_transactions/deal_completions",
+    "divestiture_completion": "strategic_transactions/deal_completions",
+    "spinoff_completion": "strategic_transactions/deal_completions",
+    "asset_purchase_or_sale": "strategic_transactions/deal_completions",
+    "deal_termination": "strategic_transactions/deal_terminations",
+    "deal_breach_default": "strategic_transactions/deal_terminations",
+    "deal_withdrawal": "strategic_transactions/deal_terminations",
+    "tender_offer": "capital_and_financing/shareholder_returns",
+    "going_private_transaction": "leadership_and_governance/corporate_control",
+    "control_acquisition": "leadership_and_governance/corporate_control",
+    "control_disposition": "leadership_and_governance/corporate_control"
+  },
+  "three_predefined_strategies_used_for_mapping": {
+    "five_permitted": ["long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+    "note": "only the five permitted structures are referenced; no structure is invented"
+  },
+  "candidates": [
+    {
+      "id": "C1",
+      "name": "completion-versus-signing lifecycle (uncertainty resolution)",
+      "vendor_tags": ["merger_agreement", "acquisition_agreement", "merger_completion", "acquisition_completion"],
+      "jev_task": "select the verbatim stated expected-close/outside date and completion date from regex-enumerated date spans; code does the calendar arithmetic",
+      "single_economic_primary": "acute event uncertainty resolves from signing to completion, so implied vol should fall more than realized movement",
+      "structure_and_why": "covered_call or cash_secured_put; these are the only two of the five that structurally express a vol-crush (short premium), while long_call and protective put are hurt by it and the collar is roughly neutral",
+      "main_falsifier_confound": "completion is pre-announced with a known expected date, so the crush may be priced; this anticipation is a falsifier to test, not proof of a zero edge; effect diluted by acquirer/target mix and by anticipation",
+      "known_counts": "UNKNOWN",
+      "role_independent": true,
+      "directional_signal_required": false,
+      "role_independence_note": "the selling-premium (covered_call / cash_secured_put) hypothesis is a volatility statement, not a sign-of-return statement, so no acquirer/target role and no direction is required",
+      "differs_from_failed": "exact strategic-transaction lifecycle tags instead of the Item 1.01 keyword proxy (Route F); its endpoint duplicates the already-graded Route 2 calibration, which is a limited-novelty observation and not an empirical rejection",
+      "jev_date_measurement_status": "later verbatim JEV date-span measurement is useful but unvalidated; incremental measurement utility is not yet demonstrated",
+      "grades": {"novelty": 2, "economic_mechanism": 2, "data_feasibility": 2, "robustness": 2, "massive_fit": 3, "total": 11},
+      "role_symmetric": true,
+      "selected": false,
+      "selected_for_source_census_by_direction_owner": true
+    },
+    {
+      "id": "C2",
+      "name": "literal cash consideration versus option strike (deal-spread convergence)",
+      "vendor_tags": ["merger_agreement", "acquisition_agreement", "tender_offer"],
+      "jev_task": "select the verbatim cash consideration per share (USD value span) and expected close date; code computes consideration minus parity spot and compares to strikes/expiry (deterministic arithmetic, no direction/materiality label)",
+      "single_economic_primary": "an all-cash deal pins the target stock to the cash price at completion; long_call struck below the stated cash consideration is a defined convergence bet",
+      "structure_and_why": "long_call; its payoff is bounded by cash minus strike on completion and its direction is the literal convergence, with no sentiment or role label",
+      "main_falsifier_confound": "in TOP_100 the filer is almost always the acquirer, so the consideration relates to the target, not the filer; target-side events are only partly excluded by the static 2026 snapshot (pre-snapshot acquired/delisted cases; unresolved historical target agreements remain possible and their count is UNKNOWN); selecting spot-below-cash to recover the target role is itself a role verdict",
+      "known_counts": "UNKNOWN; only an UNVERIFIED Item 1.01 keyword reconnaissance (110 filings / 43 issuers) exists in RESEARCH_NEXT_DIRECTION.md Route F, which is not this tag count and is not used as one",
+      "differs_from_failed": "exact tags plus a literal cash-amount extraction versus Route F's acquirer-announcement keyword proxy; fails on structural role/survivorship, not on a count",
+      "grades": {"novelty": 3, "economic_mechanism": 3, "data_feasibility": 1, "robustness": 2, "massive_fit": 3, "total": 12},
+      "role_symmetric": false,
+      "selected": false
+    },
+    {
+      "id": "C3",
+      "name": "contractual future date versus option expiry (timing realism)",
+      "vendor_tags": ["merger_agreement", "acquisition_agreement", "debt_issuance", "credit_facility", "lease_agreement", "supply_or_distribution_agreement", "tender_offer"],
+      "jev_task": "select the verbatim maturity/term/expiration date; code compares it to the 3-6m option expiry",
+      "single_economic_primary": "none: it measures whether the contractual event resolves before or after expiry, which is entry-lag/coverage realism, not a sign or magnitude",
+      "structure_and_why": "no one of the five structures is implicated; no directional channel exists",
+      "main_falsifier_confound": "no payoff channel; dates frequently absent from the summary; debt_issuance/credit_facility re-imports the excluded credit respec",
+      "known_counts": "UNKNOWN",
+      "differs_from_failed": "structurally the same class as LITERAL_MEASUREMENT_FEASIBILITY Route B (release delay, graded 2/1/2/2/2 and not selected), so it is not new",
+      "grades": {"novelty": 2, "economic_mechanism": 1, "data_feasibility": 3, "robustness": 2, "massive_fit": 2, "total": 10},
+      "role_symmetric": true,
+      "selected": false
+    }
+  ],
+  "grade_scale": "1 weakest - 5 strongest; higher novelty is not automatically better",
+  "candidate_count": 3,
+  "direction_owner_decision": {
+    "decision": "select_C1_acquisition_lifecycle_source_census",
+    "selected_by": "GPT (direction owner)",
+    "candidate": "C1",
+    "tags": ["merger_agreement", "acquisition_agreement", "merger_completion", "acquisition_completion"],
+    "reason": "role-independent and no directional signal required for the short-premium hypothesis; exact-tag, outcome-blind, metadata-only and cheap; converts UNKNOWN counts into a measured count without opening any outcome",
+    "anticipated_completion_is": "a falsifier to test, not proof of a zero edge",
+    "route_2_overlap_is": "limited novelty, not an empirical rejection",
+    "jev_date_measurement_status": "later verbatim JEV date-span measurement is useful but unvalidated; incremental measurement utility not yet demonstrated",
+    "executed": true,
+    "executed_artifacts": ["transaction_source_audit.py", "TRANSACTION_SOURCE.md", "TRANSACTION_SOURCE.json"],
+    "executed_result": "signing family 56 in-universe deduplicated accessions (52 unambiguous, 24 unambiguous issuers); completion family 30 (26 unambiguous, 21 unambiguous issuers); union descriptive 84; cross-family overlap 2; census complete; payload hashes and custody verified",
+    "gate_result": "both the primary completion gate and the independent signing comparison gate fail on the >=80 unambiguous-accession floor; 21 and 24 issuers clear the >=20 issuer floor; the union never rescues a failing family and both failures stop at metadata",
+    "executed_result_provenance_correction": "post-acquisition corrected snapshot, not a pristine single run. First protocol freeze cc91ca0487e00d1eb77e9fdeda9e14bb75cba3c961c4fc9f3e9fe9b443523514 preceded the first acquisition (9 live network requests: 1 taxonomy + 8 disclosure pages, 6299 raw rows, 0 initial cache hits); the first implementation retained missing-ticker rows in enrollment (union 902, signing 507, completion 437) while the unambiguous counts already read signing 52/24 and completion 26/21, both gate-fail; enrollment was corrected to exclude missing-ticker rows and the protocol hash changed to 870a1f428ace3f456f198a145e53300357dcdbebc04fcb289e0856b5092003a7; non-http manifests were deleted and rebuilt twice, violating immutable-manifest discipline; the 9 raw HTTP envelopes were preserved and reused so the final invocation shows 0 network / 9 cache hits; final protocol and code were therefore not frozen before initial acquisition and the counts are corrected descriptive reprocessing; original taxonomy/window/universe/family/80-20 gate and gate-fail outcome unchanged; no text/model/JEV/price/OOS read; first manifests lost and original implementation snapshot unavailable, so no hash is fabricated; verify covers current code, current manifests and raw payload integrity only",
+    "invocation_scope": "final invocation 0 network / 9 cache hits; cumulative observed 9 network / 0 initial cache hits",
+    "submission_obligation": "a final submission must show incremental measurement utility and report all five structures, all fixed horizons, net costs, company-cluster CIs and the same-issuer ordinary-day baseline"
+  },
+  "exact_tag_source_audit_justified": true,
+  "exact_tag_audit_reason": "the earlier advisory no was overstated and is not an authorization barrier; the direction owner selected the C1 census because it is role-independent, exact-tag, outcome-unopened and cheap, even though its economic endpoint overlaps Route 2 (limited novelty, not rejection)",
+  "preferred_candidate_for_audit": "C1",
+  "least_bad_audit_target_if_forced": {
+    "candidate": "C1",
+    "tags": ["merger_agreement", "acquisition_agreement", "merger_completion", "acquisition_completion"],
+    "why": "role-independent, outcome-unopened, exact-tag, metadata-only and cheap",
+    "why_not_selected": "superseded: the direction owner did select the C1 source census; the earlier advisory non-selection was not binding"
+  },
+  "reopening_conditions_external_changes": [
+    "a universe that does not bake in survivorship (point-in-time membership, or a wider authorized universe including actual target filers), a coverage upgrade not a logical impossibility claim about the current one",
+    "a vendor metadata field that states the filer's transaction role (acquirer/target), so role is read not judged",
+    "a sealed out-of-sample window to test any new mechanism independently of opened 2024-2025 outcomes; future validation, useful but not a prerequisite to source-only research, which remains lawful under the fixed window and universe",
+    "spread-aware marks / an NBBO feed; absent NBBO limits executions and marks, not a blanket block on source research",
+    "a completion-timeline field (expected close) consumable without role attribution"
+  ],
+  "limits": {
+    "universe": "static September-2026 TOP_100, survivorship-biased; excludes what was already acquired/delisted before the snapshot, not all target scenarios; qualifier counts UNKNOWN",
+    "window": "2024-2025 only",
+    "marks": "no NBBO; parity-synthetic spot; strict-mark attrition; limits executions, not source research",
+    "internal_floors": "80/20 and 60/20 are team conventions, not organizer rules, and are not borrowed as law",
+    "advisory_only": "not an authority and not an authorization barrier; no verified global impasse and no impossibility proof",
+    "no_guaranteed_alpha": true,
+    "prior_failures_are": "coverage/identification/constraint limits, not economic nulls and not impossibility proofs"
+  },
+  "corrections_applied": [
+    "verified_impasse reframed to no supported solution, not a verified global impasse and not an impossibility proof",
+    "reviewer role clarified as advisory, not an authority and not an authorization barrier",
+    "survivorship corrected: static 2026 membership excludes targets already acquired/delisted before the snapshot, does not logically exclude historical unresolved target agreements nor all target scenarios; qualifier counts UNKNOWN",
+    "C1 corrected: role-independent and no directional signal required for the selling-premium hypothesis; anticipated completion is a falsifier, not proof of a zero edge",
+    "C1 similarity to another calibration recorded as limited novelty, not empirical rejection",
+    "direction recorded: GPT selects the C1 source census; later JEV date measurement useful but unvalidated; final submission must show incremental measurement utility and all five structures/horizons/costs/CIs/ordinary baseline",
+    "sealed OOS recorded as future validation, not a prerequisite to source research; absent NBBO limits executions/marks, not source research",
+    "factual exposure recorded: a repository and a previous worker directory pathname listing showed private folder names but no contents",
+    "provenance corrected: the C1 census is a post-acquisition corrected snapshot, not a pristine single run. First protocol freeze cc91ca04... preceded first acquisition (9 live network requests, 6299 raw rows, 0 initial cache hits); first implementation retained missing-ticker rows (union 902, signing 507, completion 437) with unambiguous counts already signing 52/24 and completion 26/21, both gate-fail; enrollment corrected, protocol hash changed to 870a1f42..., non-http manifests deleted and rebuilt twice in violation of immutable-manifest discipline; 9 raw HTTP envelopes preserved and reused (final invocation 0 network / 9 cache hits); final protocol/code not frozen before initial acquisition; counts are corrected descriptive reprocessing; original taxonomy/window/universe/family/80-20 gate and gate-fail outcome unchanged; no text/model/JEV/price/OOS read; first manifests lost, no hash fabricated; verify covers current artifacts only"
+  ],
+  "next_action": {
+    "verdict": "no_supported_solution_from_this_advisory_review_not_verified_global_impasse_and_not_impossibility_proof",
+    "scope": "supported positive Massive options solution on the remaining frontier under the current universe, window, strict marks and no-classifier constraint",
+    "defensible_deliverable": "the honest null / measurement write-up already recommended",
+    "single_residual_candidate": "C1, selected by the direction owner for the executed source census; both family gates failed on metadata and the route stops there; re-open C1 first if the universe changes, a role metadata field appears, or the JEV date measurement is validated, then C2",
+    "authorized_by_this_review": {"new_api_calls": false, "classifier": false, "price_reads": false, "oos_access": false, "commit": false}
+  },
+  "files_written": ["REMAINING_MECHANISM_FRONTIER.md", "REMAINING_MECHANISM_FRONTIER.json"],
+  "commit": false
+}
