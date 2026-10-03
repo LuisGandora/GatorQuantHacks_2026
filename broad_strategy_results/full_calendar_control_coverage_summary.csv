@@ -1,0 +1,11 @@
+tag,events,events_with_candidate,candidate_date_links
+annual_meeting_results,150,99,330
+debt_issuance,277,160,478
+director_appointment,97,53,167
+director_departure,101,49,184
+executive_compensation_change,174,103,336
+executive_officer_appointment,105,62,227
+guidance_issuance_or_update,60,30,103
+quarterly_earnings,131,69,222
+shareholder_proposal_outcome,121,81,252
+underwriting_agreement,146,92,268

@@ -23,20 +23,31 @@ def register():
     path.write_text(json.dumps(SPEC, indent=2))
 
 
-def analyze():
+def analyze(expanded=False):
     register()
     # Only the session calendar is needed; load_starter also preserves its conventions.
     p.load_starter()
     source = pd.read_csv(ROOT / 'covered_call_csv_results' / 'jev_texts.csv')
     source.filing_date = pd.to_datetime(source.filing_date)
     disclosure_dates = source.groupby('ticker').filing_date.apply(list).to_dict()
+    prefix = 'expanded_' if expanded else ''
+    shared_controls = None
+    if expanded:
+        pool = OUT / 'expanded_control_pool'
+        if not (pool / 'collection_complete.json').exists():
+            raise RuntimeError('Expanded control collection is incomplete.')
+        frames = [pd.read_csv(path, parse_dates=['entry_date', 'exit_date']) for path in sorted(pool.glob('batch_*.csv.gz'))]
+        shared_controls = pd.concat([frame for frame in frames if not frame.empty], ignore_index=True)
+        if shared_controls.empty:
+            raise RuntimeError('No priced expanded controls.')
     tables, exclusions = [], []
     for folder in sorted(OUT.iterdir()):
         event_path = folder / 'events_cost_sensitivity.csv.gz'
         control_path = folder / 'ordinary_cost_sensitivity.csv.gz'
-        if not event_path.exists() or not control_path.exists():
+        if not event_path.exists() or (not expanded and not control_path.exists()):
             continue
-        a, b = [pd.read_csv(path, parse_dates=['entry_date', 'exit_date']) for path in [event_path, control_path]]
+        a = pd.read_csv(event_path, parse_dates=['entry_date', 'exit_date'])
+        b = shared_controls.copy() if expanded else pd.read_csv(control_path, parse_dates=['entry_date', 'exit_date'])
         b = b[[not any(abs((day-d).days) <= 30 for d in disclosure_dates.get(ticker, []))
                for ticker, day in zip(b.ticker, b.entry_date)]]
         control_lookup = {}
@@ -76,7 +87,7 @@ def analyze():
                     downside_tail=event.downside_tail, ordinary_downside_tail=ordinary.downside_tail.mean(),
                     capacity=event.capacity_contracts))
         matched = pd.DataFrame(matches)
-        matched.to_json(folder / 'strict_matches.json.gz', orient='records', compression='gzip', date_format='iso')
+        matched.to_json(folder / f'{prefix}strict_matches.json.gz', orient='records', compression='gzip', date_format='iso')
         if matched.empty:
             continue
         for keys, group in matched.groupby(['strategy', 'horizon', 'otm', 'cost'], sort=False):
@@ -96,8 +107,8 @@ def analyze():
                 difference=group.difference.mean(), ci_lo=lo, ci_hi=hi,
                 conclusion=('EXPLORATORY SENSITIVITY' if str(keys[1]) != '21' or keys[2] != .05 or keys[3] != .05 else
                     'INCONCLUSIVE' if not np.isfinite(lo) or lo <= 0 <= hi else 'DISCOVERY SIGNAL: VALIDATION REQUIRED')))
-    pd.DataFrame(tables).to_csv(OUT / 'strict_matched_summary.csv', index=False)
-    pd.DataFrame(exclusions).to_csv(OUT / 'strict_matching_exclusions.csv.gz', index=False, compression='gzip')
+    pd.DataFrame(tables).to_csv(OUT / f'{prefix}strict_matched_summary.csv', index=False)
+    pd.DataFrame(exclusions).to_csv(OUT / f'{prefix}strict_matching_exclusions.csv.gz', index=False, compression='gzip')
     print(f'Saved {len(tables)} matched comparisons; historical validation remains separate.')
 
 
@@ -106,4 +117,4 @@ if __name__ == '__main__':
     if '--register' in sys.argv:
         register()
     else:
-        analyze()
+        analyze(expanded='--expanded' in sys.argv)

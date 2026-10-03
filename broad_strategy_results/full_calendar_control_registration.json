@@ -1,0 +1,8 @@
+{
+  "source_sha256": "d42d27119d4395381f82a06a58520295e2908e1146d2a579f02953049381529d",
+  "purpose": "Count-based control data expansion; no outcomes used in date selection",
+  "selection": "enumerate every ordinary date meeting the existing issuer/year/quarter/weekday/63-session/30-day-disclosure rules",
+  "pricing": "starter rules; DTE within 7 sessions checked after chain retrieval; nearest three eligible controls per event",
+  "preservation": "retain original random-placebo results separately; expanded pool is a separately identified data-coverage experiment",
+  "limitations": "CSV disclosure calendar is incomplete outside its 2024\u20132025 coverage; expanded sample is not a new independent validation window"
+}
