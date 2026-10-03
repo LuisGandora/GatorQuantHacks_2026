@@ -10,3 +10,6 @@ runs/audit/
 runs/*.csv
 .omo/
 .hypothesis_deps/
+covered_call_results/*_matched_outcomes.json
+!covered_call_results/*_baseline_matched_outcomes.json
+covered_call_results/all_horizons_sensitivity.csv

@@ -1,5 +1,5 @@
 """Build the submission assessment from frozen measured outputs; presentation only."""
-import json,hashlib,contextlib,io
+import json,hashlib,contextlib,io,gzip,shutil
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -16,13 +16,19 @@ metrics=['window','group','n_events','difference','ci_lo','ci_hi','dependence_cl
 primary.reindex(columns=metrics).to_csv(out/'primary_21_sessions.csv',index=False)
 
 audit=[]
+invalid_role_ids={}
 for window in ['in_sample','out_of_sample']:
  ev=pd.read_csv(out/f'{window}_event_audit.csv')
  drops=pd.read_csv(out/f'{window}_baseline_exclusions.csv')
  matched=json.loads((out/f'{window}_baseline_matched_outcomes.json').read_text())
- successful={r['event_id'] for r in matched if r['horizon']==21}
+ invalid=set(ev.loc[(ev.group=='ceo_resignation') & ev.supporting_text.str.contains('resignation',case=False,na=False)
+                    & ev.supporting_text.str.contains('as a member of the Board',case=False,na=False)
+                    & ev.supporting_text.str.contains('previously served',case=False,na=False),'event_id'])
+ invalid_role_ids[window]=invalid
+ successful={r['event_id'] for r in matched if r['horizon']==21 and r['event_id'] not in invalid}
  for r in ev.to_dict('records'):
-  if r['group'].endswith('appointment') and r['class']!='routine':reason='classification_'+r['class']
+  if r['event_id'] in invalid:reason='invalid_role_former_ceo_board_resignation'
+  elif r['group'].endswith('appointment') and r['class']!='routine':reason='classification_'+r['class']
   elif r['event_id'] in successful:reason='usable'
   else:
    d=drops[drops.event_id==r['event_id']]
@@ -33,6 +39,24 @@ audit=pd.DataFrame(audit)
 audit.to_csv(out/'primary_exclusion_audit.csv',index=False)
 counts=audit.groupby(['window','group','reason']).size().reset_index(name='distinct_events')
 counts.to_csv(out/'primary_exclusion_counts.csv',index=False)
+
+# Correct a text-audited secondary role error without changing appointment tests.
+# Keep baseline_every_horizon.csv as the exact frozen raw output.
+for window,invalid in invalid_role_ids.items():
+ if not invalid:continue
+ matched=json.loads((out/f'{window}_baseline_matched_outcomes.json').read_text())
+ for h in board.horizon.astype(str).unique():
+  raw=[r for r in matched if str(r['horizon'])==h and r['group']=='ceo_resignation']
+  valid=[r for r in raw if r['event_id'] not in invalid]
+  if not raw:continue
+  ix=(board.window==window)&(board.group=='ceo_resignation')&(board.horizon.astype(str)==h)
+  assert not valid,'Additional valid events require re-estimating audited secondary statistics.'
+  board.loc[ix,['n_events','dependence_clusters']]=0
+  numeric=[c for c in board.select_dtypes(include='number').columns if c not in ['n_events','dependence_clusters']]
+  board.loc[ix,numeric]=np.nan
+board.to_csv(out/'audited_baseline_every_horizon.csv',index=False)
+primary=board[board.horizon.astype(str)=='21']
+primary.reindex(columns=metrics).to_csv(out/'primary_21_sessions.csv',index=False)
 
 def pct(x):return 'unavailable' if pd.isna(x) else f'{float(x)*100:+.3f}%'
 lines=['# Covered-call submission assessment','',f"**Conclusion: {status['overall']}.**",'',
@@ -68,6 +92,11 @@ for r in primary.to_dict('records'):
  if not r['n_events']:continue
  lines.append(f"| {r['window']} / {r['group']} | {pct(r['entry_premium'])} / {pct(r['ordinary_entry_premium'])} | {pct(r['exit_premium'])} / {pct(r['ordinary_exit_premium'])} | {pct(r['stock_return'])} / {pct(r['ordinary_stock_return'])} |")
 lines+=['','## Every fixed horizon','',
+        'The audited secondary view excludes CAT\'s board-member resignation by a former CEO. '
+        'It is not a current CEO resignation. The frozen tag/proximity-filter output is retained '
+        'unchanged in `baseline_every_horizon.csv`; corrected secondary coverage is in '
+        '`audited_baseline_every_horizon.csv`. Appointment results and primary decisions '
+        'are unchanged. The secondary role error was identified from text, not performance.','',
         '| Window | Group | Sessions / expiry close | Usable events | Incremental difference | Primary CI |',
         '|---|---|---:|---:|---:|---|']
 for r in board.to_dict('records'):
@@ -144,7 +173,7 @@ note=['# CC1 pre-registration','',
       'registration file is preserved as `frozen_protocol_registration_v0.json`. No choices were '
       'changed in response to P&L. Infrastructure and presentation files are separate from the '
       'hashed core implementation.']
-(out/'PREREG.md').write_text('\n'.join(note),encoding='utf-8')
+(out/'execution_provenance.md').write_text('\n'.join(note),encoding='utf-8')
 nbfile=Path('gator-quant-hacks-8k-options-covered-call-hypothesis.ipynb')
 n=json.loads(nbfile.read_text(encoding='utf-8'))
 n['cells']=[c for c in n['cells'] if not c.get('metadata',{}).get('covered_final_result')]
@@ -158,5 +187,7 @@ n['metadata']['execution_validation']={'all_code_cells_executed':True,'count':5,
 nbfile.write_text(json.dumps(n,indent=1),encoding='utf-8')
 protocol=json.loads((out/'frozen_protocol.json').read_text())
 for f,digest in protocol['hashes'].items():assert hashlib.sha256(Path(f).read_bytes()).hexdigest()==digest,f
+with (out/'all_horizons_sensitivity.csv').open('rb') as source, (out/'all_horizons_sensitivity.csv.gz').open('wb') as target:
+ with gzip.GzipFile(filename='',mode='wb',fileobj=target,mtime=0) as compressed:shutil.copyfileobj(source,compressed)
 print(primary.reindex(columns=metrics).to_string(index=False))
 print('Written final report, primary exclusion counts and saved notebook assessment. Frozen hashes verified.')

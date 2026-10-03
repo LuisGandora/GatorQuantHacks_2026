@@ -1,0 +1,5 @@
+primary_category,secondary_category,tertiary_category,description,taxonomy
+leadership_and_governance,executive_leadership,ceo_appointment,"New CEO appointment with background, employment terms, and compensation.",1.0
+leadership_and_governance,executive_leadership,ceo_departure,"CEO departure, resignation, retirement, termination, or death with circumstances and transition.",1.0
+leadership_and_governance,executive_leadership,cfo_appointment,"New CFO appointment with background, terms, and transition timeline.",1.0
+leadership_and_governance,executive_leadership,cfo_departure,CFO departure with circumstances and transition arrangements.,1.0

@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "conclusions": {
+    "ceo_appointment": "inconclusive",
+    "cfo_appointment": "inconclusive",
+    "ceo_resignation": "inconclusive",
+    "cfo_resignation": "inconclusive"
+  },
+  "overall": "inconclusive",
+  "sealed_prediction": "fragile/inconclusive: sparse routine events, asymmetric upside tails, costs and matched-control exclusions; positive replication not presumed",
+  "historical_oos_contaminated_by_prior_research": true,
+  "notes": "No reliable primary CI below five independent company/overlap components. Insignificance does not establish no effect. Company-only CIs are diagnostics, never decision gates."
+}

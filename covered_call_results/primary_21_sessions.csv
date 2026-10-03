@@ -1,0 +1,9 @@
+window,group,n_events,difference,ci_lo,ci_hi,dependence_clusters,incremental_net,ordinary_incremental_net,stock_return,ordinary_stock_return,entry_premium,ordinary_entry_premium,exit_premium,ordinary_exit_premium,intrinsic_upside_surrendered,ordinary_intrinsic_upside_surrendered,upside_tail,ordinary_upside_tail,downside_tail,ordinary_downside_tail,entry_volume,exit_volume,capacity_contracts
+in_sample,ceo_appointment,3,-0.0192150021332983,,,2,-0.0024875817005402,0.0167274204327581,-0.0057651726515841,-0.0418917442804224,0.0417162883300192,0.0400027723906054,0.0400319323979782,0.0201952431751231,0.0175217048145224,0.0,0.3333333333333333,0.0,0.3333333333333333,0.3333333333333333,39.333333333333336,87.66666666666667,0.0
+in_sample,cfo_appointment,3,-0.01233873666057,,,3,-0.0081950091107396,0.0041437275498304,0.0269576539506215,-0.0146775739222957,0.0393154343002623,0.032863978630566,0.043288963746662,0.0257003042666087,0.0,0.0,0.6666666666666666,0.0,0.0,0.3333333333333333,27.666666666666668,46.0,0.0
+in_sample,ceo_resignation,0,,,,0,,,,,,,,,,,,,,,,,
+in_sample,cfo_resignation,0,,,,0,,,,,,,,,,,,,,,,,
+out_of_sample,ceo_appointment,0,,,,0,,,,,,,,,,,,,,,,,
+out_of_sample,cfo_appointment,1,0.0068855421087406,,,1,-0.0165515577404469,-0.0234370998491876,0.0396598003438188,0.0700281706171925,0.0416201707030189,0.0436786842329909,0.0533823928582199,0.0618046268104601,0.0,0.0171869220043821,0.0,1.0,0.0,0.0,5.0,143.0,0.0
+out_of_sample,ceo_resignation,0,,,,0,,,,,,,,,,,,,,,,,
+out_of_sample,cfo_resignation,0,,,,0,,,,,,,,,,,,,,,,,
