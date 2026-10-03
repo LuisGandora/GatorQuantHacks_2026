@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -38,7 +39,7 @@ def prepare():
     events = pd.DataFrame([{**{k: by_accession[a][k] for k in ['cik','filing_date','accession_number']},
                            'ticker': original_tickers.get(a, by_accession[a]['ticker'])} for a in people])
     events.filing_date = pd.to_datetime(events.filing_date)
-    packets = prepare_from_sources(starter(credentials('MASSIVE_API_KEY')), OUTPUT, people, events, sources)
+    packets = prepare_from_sources(starter('cached-source-only'), OUTPUT, people, events, sources)
     by_packet = {p['accession_number']: p for p in packets}
     if any(by_packet[p['accession_number']] != p for p in originals):
         raise ValueError('Original packets changed; cached JEV comparison would not be identical.')
@@ -97,6 +98,8 @@ def validate_reference(rows, cases):
         for citation in row['corroboration']:
             if urlparse(citation['url']).scheme != 'https' or not citation['evidence'].strip():
                 raise ValueError('Invalid corroboration source.')
+            if citation['publication_date']:
+                date.fromisoformat(citation['publication_date'])
             if citation['publication_date'] and citation['publication_date'] > state['current']['filing_date']:
                 raise ValueError('Corroboration escaped the event publication-date boundary.')
 

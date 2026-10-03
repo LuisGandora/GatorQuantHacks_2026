@@ -20,7 +20,9 @@ def test():
     for changed in [dict(current_evidence='An invented appointment sentence, not supplied.'),
                     dict(prior_appointment_accession='future'), dict(reference_class='new_appointment'),
                     dict(corroboration=[{'url': 'https://www.sec.gov/example',
-                        'publication_date': '2026-01-01', 'evidence': 'Future content.'}])]:
+                        'publication_date': '2026-01-01', 'evidence': 'Future content.'}]),
+                    dict(corroboration=[{'url': 'https://www.sec.gov/example',
+                        'publication_date': '2024-02-30', 'evidence': 'Invalid calendar date.'}])]:
         invalid = copy.deepcopy(reference); invalid.update(changed)
         try: validate_reference([invalid], cases)
         except ValueError: pass

@@ -76,3 +76,8 @@ GPT-6 Luna annotation benchmark, frozen company split, evidence checks and JEV
 comparison. The additional filings deliberately include non-appointment traps.
 These are model-reviewed references, not human gold labels. This workflow never
 reads returns; the 2026 filing holdout remains sealed.
+
+See [BENCHMARK_RESULTS.md](BENCHMARK_RESULTS.md) for the completed comparison:
+42/50 class matches, role-scope failures in the challenge cohort, and no aggregate
+binary improvement over the simple baseline. Aggregate counts are versioned in
+[BENCHMARK_METRICS.json](BENCHMARK_METRICS.json).

@@ -148,3 +148,12 @@ under an explicitly named archive before a new benchmark. Do not delete failed
 evidence, reinterpret missing sources, automatically migrate caches, or rerun
 against a different rubric in the same directory. This benchmark does not open
 the novelty return gate or authorize a price backtest.
+
+## Completed run
+
+See `BENCHMARK_RESULTS.md` for cohort/split scores and limitations,
+`BENCHMARK_METRICS.json` for aggregate class metrics, and
+`BENCHMARK_EVIDENCE_AUDIT.json` for the separate post-freeze semantic audit.
+The same reviewers performed that audit with predictions visible; their references
+remained frozen. One 3M reference conflicts with its later evidence interpretation
+and requires human adjudication. Do not overwrite it to improve agreement.
