@@ -93,12 +93,20 @@ def validate_sources(rows, ciks):
 def prepare(ns, output, people):
     # Disclosure acquisition reads only 2024–2025; it contains no market outcomes.
     events = acquire(ns)
-    if set(events.accession_number) != set(people):
-        raise ValueError('Appointee audit does not exactly cover the original event sample.')
     ciks = {str(c).zfill(10) for c in events.cik}
     rows = ns['api_get_all']('/stocks/filings/8-K/vX/text', {
         'cik.any_of': ','.join(sorted(ciks)), 'filing_date.gte': PROTOCOL['source_start'],
         'filing_date.lte': PROTOCOL['source_end'], 'limit': 100, 'sort': 'filing_date.asc'})
+    return prepare_from_sources(ns, output, people, events, rows)
+
+
+def prepare_from_sources(ns, output, people, events, rows):
+    """Build the same blinded packets from an explicitly supplied filing cohort."""
+    if set(events.accession_number) != set(people) or events.accession_number.duplicated().any():
+        raise ValueError('Appointee audit must exactly cover unique event accessions.')
+    if not events.filing_date.astype(str).between(PROTOCOL['start'], PROTOCOL['end']).all():
+        raise ValueError('Event cohort escaped the authorized in-sample window.')
+    ciks = {str(c).zfill(10) for c in events.cik}
     validate_sources(rows, ciks)
     by_accession = {r['accession_number']: r for r in rows}
     packets = []

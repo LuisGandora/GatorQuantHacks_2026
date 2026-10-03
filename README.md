@@ -68,3 +68,11 @@ versus confirmation audit, source-history rules, earnings exclusion and sample-s
 gate. Run `.venv/bin/python novelty_experiment.py --audit-only` to inspect labels
 without opening returns, or `.venv/bin/python novelty_experiment.py` for the guarded
 experiment. The follow-up reuses the original in-sample outcomes and keeps 2026 sealed.
+
+## Luna reference-label benchmark
+
+See [LABEL_BENCHMARK.md](LABEL_BENCHMARK.md) for the 50-case, source-blinded
+GPT-6 Luna annotation benchmark, frozen company split, evidence checks and JEV
+comparison. The additional filings deliberately include non-appointment traps.
+These are model-reviewed references, not human gold labels. This workflow never
+reads returns; the 2026 filing holdout remains sealed.
