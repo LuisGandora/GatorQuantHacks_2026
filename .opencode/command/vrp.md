@@ -17,8 +17,9 @@ sections. AGENTS.md's file rules still apply.
    estimate or round a number in your head. Next to each number, write which file it came from.** Earlier agents
    reported numbers that did not exist; that is the one unacceptable failure here.
 4. Never run `vrp.py oos` more than once, and never with `--force`.
-5. `vrp.py map` and `vrp.py oos` can take an hour or more on the first run (option pricing, EDGAR headers). Run them
-   and wait for them to finish. Do not start another command while one is running.
+5. Never run `vrp.py map` or `vrp.py oos` yourself: they take 1-2 hours, longer than your command timeout. The human
+   runs `run_vrp.ps1`, which runs them and calls you for V4 and V6. If you reach V3 or V5, stop and tell the human:
+   "Run powershell -ExecutionPolicy Bypass -File run_vrp.ps1".
 
 ## Find your place
 
