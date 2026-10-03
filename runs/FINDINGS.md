@@ -14,7 +14,7 @@ The pre-registered hypothesis was that fresh leadership 8-Ks over-price the move
 Leadership-change 8-Ks at the top 100 over-price the move only when the 8-K is the first public disclosure ("fresh"). Holders surprised by a governance shock over-pay for protection right after it. When the 8-K is filed days after a press release ("stale"), the chain has already re-priced. Prediction: a cash-secured put entered at the post-filing close beats ordinary days on fresh filings, but not on stale ones. It fails if fresh and stale filings earn the same.
 
 **Reframed hypothesis (after seeing both windows)**:  
-Fresh leadership 8-Ks are **under-priced**. The market does not charge enough for the move that follows a fresh governance shock, so selling puts loses money. Stale filings (lag > 1) behave like ordinary days.
+Fresh leadership 8-Ks are **under-priced**. The market does not charge enough for the move that follows a fresh governance shock, so selling puts loses money. Stale filings (lag > 1) show no stable edge: −0.16% in-sample, +2.13% out-of-sample.
 
 **Failure condition (pre-registered)**:  
 The original hypothesis is rejected if (a) fresh vs placebo edge ≤ 0, OR (b) fresh − stale edge ≤ 0, OR (c) edge does not shrink with lag. All three held in the opposite direction.
@@ -64,9 +64,9 @@ Market makers and volatility sellers who price index/ETF options without disting
 
 | Comparison | n | Edge | 95% CI | Verdict |
 |------------|---|------|--------|---------|
-| Fresh vs Placebo | 25 | -0.70% | excludes 0 at 1 of 3 horizons | **SUPPORTED (worse than ordinary days)** |
-| Stale vs Placebo | 40 | +2.13% | includes 0 | NOT SUPPORTED |
-| Fresh − Stale | 25 | -2.82% | excludes 0 at 2 of 3 horizons | **SUPPORTED (fresh underperforms stale)** |
+| Fresh vs Placebo | 25 | -0.70% | includes 0 at all 3 horizons | **SUPPORTED (worse than ordinary days)**: significant in-sample, survives dropping its best 3, same sign out-of-sample |
+| Stale vs Placebo | 40 | +2.13% | excludes 0 at 2 of 3 horizons | NOT SUPPORTED (not significant in-sample, where it was −0.16%: the sign flipped) |
+| Fresh − Stale | 25 | -2.82% | excludes 0 at 2 of 3 horizons | NOT SUPPORTED by the gates (not significant in-sample), but the same sign in both windows |
 
 ### 3.4 Out-of-Sample by Lag Bucket
 
@@ -86,14 +86,18 @@ Market makers and volatility sellers who price index/ETF options without disting
 
 ## 4. Exploratory (after out-of-sample): Mechanism Diagnostic
 
-Why put-sellers lose on fresh filings: the realized ÷ implied move ratio.
+Why put-sellers lose on fresh filings: the realized ÷ implied move ratio (|realized move| ÷ the move the 3-6m ATM chain implied on the pre-event session, scaled to the horizon; above 1 = the move was bigger than priced). Mean ratio by horizon, from the notebook's `decay_table`:
 
-| Window | Fresh | Stale | Placebo |
-|--------|-------|-------|---------|
-| In-sample | 1.12 | 0.89 | 0.95 |
-| Out-of-sample | 1.08 | 0.82 | 0.91 |
+| Window | Group | h=5 | h=21 | h=42 | expiry | n (h=21) |
+|--------|-------|-----|------|------|--------|----------|
+| In-sample | Fresh | 1.34 | 1.09 | 1.17 | 1.14 | 53 |
+| In-sample | Stale | 1.02 | 0.99 | 0.99 | 1.01 | 90 |
+| In-sample | Placebo | 0.86 | 0.91 | 0.91 | 0.90 | 103 |
+| Out-of-sample | Fresh | 0.82 | 1.03 | 1.00 | 0.84 | 23 |
+| Out-of-sample | Stale | 1.01 | 1.08 | 0.88 | 0.70 | 35 |
+| Out-of-sample | Placebo | 0.94 | 0.87 | 0.86 | 0.97 | 100 |
 
-Fresh shows a higher realized/implied ratio than stale in both windows (1.12 vs 0.89 in-sample; 1.08 vs 0.82 out-of-sample), consistent with the market **under-pricing fresh leadership shocks**. The post-filing chain doesn't charge enough for the move that follows.
+In-sample, fresh filings moved more than the chain priced at every horizon, and more than stale filings and ordinary days. That fits the market **under-pricing fresh leadership shocks**. Out-of-sample the picture is mixed: fresh is below stale at h=5 and h=21, above at h=42 and expiry, on 12-25 fresh events. So the mechanism is supported in-sample only, and we do not claim it replicated.
 
 ---
 
