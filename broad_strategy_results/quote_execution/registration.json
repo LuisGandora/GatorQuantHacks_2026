@@ -1,0 +1,24 @@
+{
+  "stage": "primary 21-session quote coverage; no returns calculated in collection",
+  "categories": "all ten eligible categories, with their full-calendar controls",
+  "strategies": [
+    "long_call",
+    "covered_call",
+    "protective_put",
+    "collar",
+    "cash_secured_put"
+  ],
+  "bucket": "starter 3\u20136 months",
+  "strikes": "starter ATM call and 5% OTM call/put",
+  "entry": "following trading close after date-only filing; preserve saved event entries",
+  "quote": "latest quote strictly before 16:00 ET; request preceding five minutes; no replacement of an invalid latest quote",
+  "primary_max_quote_age_seconds": 60,
+  "sensitivity_max_quote_age_seconds": 300,
+  "validity": "positive bid and ask, ask >= bid, positive displayed sizes on both sides",
+  "fills": "buy at ask; sell at bid; one contract; $0.65 commission per side; no additional percentage spread cost",
+  "capacity": "minimum relevant displayed side size across required entry and exit legs; diagnostic, not guaranteed fills",
+  "missing": "exclude and report; never substitute aggregate marks for missing quotes",
+  "research_history": "quotes already inspected for three predetermined access probes; broad aggregate outcomes already inspected",
+  "inference": "retain registered dependence and 120-comparison correction; quote coverage cannot establish an edge",
+  "later_stages": "all fixed horizons retained in aggregate study; full quote-horizon extension remains pending"
+}
