@@ -70,3 +70,15 @@ executive_runway_pilot/
 # aggregate public reports (EXECUTIVE_DATE_VALIDATION.md/json) and the protocol are
 # repository-visible.
 executive_date_validation/
+
+# Private Experiment 7 contained-shock source passages, raw TypeSafe JEV
+# requests/responses and frozen semantic outputs. Only the aggregate public reports
+# (CONTAINED_SHOCK_EVIDENCE_AUDIT.md, CONTAINED_SHOCK_SUMMARY.json) and the protocol
+# are repository-visible.
+contained_shock_results/
+.contained_shock_cache/
+
+# Private bounded blinded diagnostic packet, deterministic subset, reviewer
+# instructions and verdicts for the Experiment 7 contained-shock audit. Only the
+# root-level runner contained_shock_audit.py is repository-visible.
+contained_shock_audit/

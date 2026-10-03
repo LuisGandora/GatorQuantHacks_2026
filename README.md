@@ -6,6 +6,30 @@
 > The notebook and organizer announcements govern conflicts; the Devpost listing matters only
 > for submission.
 
+## Experiment 7: contained-shock / intact-outlook semantic gate
+
+Experiment 7 asked whether an earnings-related Item 2.02 package that discloses material
+current adversity, keeps or raises quantitative guidance, and shows already-operational
+remediation of the causal problem identifies a tradeable edge. The frozen specification is
+[CONTAINED_SHOCK_PROTOCOL.md](CONTAINED_SHOCK_PROTOCOL.md), the aggregate semantic report is
+[CONTAINED_SHOCK_EVIDENCE_AUDIT.md](CONTAINED_SHOCK_EVIDENCE_AUDIT.md), the machine-readable
+summary is [CONTAINED_SHOCK_SUMMARY.json](CONTAINED_SHOCK_SUMMARY.json), and the terminal
+write-up is [CONTAINED_SHOCK_RESULTS.md](CONTAINED_SHOCK_RESULTS.md).
+
+The decision is `no_candidate: semantic_feasibility_failure`. The outcome-blind feasibility
+gate failed because the frozen four-condition conjunction was satisfied by zero of 130
+filings: material adversity was affirmed for 103, but realized containment of the causal
+problem was effectively absent, and the causal-link half of the fourth condition was never
+affirmed at all. A blinded re-check over an issuer-balanced subset, run after the frozen
+measurement with a separate lexical extraction path and an independent reader, found no filing
+with realized containment either.
+
+This is a statement about how often the semantic pattern occurs in this corpus, and it is
+explicitly **not** evidence that the economic effect is zero. Because the feasibility gate is a
+precondition, no economic stage ran: no price, option, payoff or ordinary-day record was read,
+no payoff was priced and no interval was computed. The 2026 out-of-sample window and the
+judges' sealed window remain unopened.
+
 ## Earnings-resolution numerical payoff benchmark
 
 The completed experiment 6 tests whether selling the 5% out-of-the-money put after an
