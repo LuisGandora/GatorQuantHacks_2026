@@ -91,14 +91,26 @@ in the commit message, then `git tag freeze-v1`. Stop the cycle and tell the hum
 
 Gate: 50 labels. Tell the human: "Checkpoint 2: check 10 rows of date_labels.csv against their text."
 
-## Phase 3: Validate the parser (text only)
+## Phase 3: Event-date source (decided by the human; no P&L has been run)
 
-1. Run `harness.py dates`.
-2. If it fails, fix the largest error class in the date parser, rerun the self-tests, commit, and tag the
-   next `freeze-vN`. Parser fixes are allowed only in this phase.
-3. Never pass the gate by making more events undated.
+The excerpt-date parser is retired: 47% of excerpts state no usable date, and the phase-2 labels used the
+filing date as a stand-in, so they cannot validate anything. Use the 8-K's own event date instead:
+`CONFORMED PERIOD OF REPORT` ("date of earliest event reported") from the EDGAR submission header that
+`fetch_acceptance_time` already caches in `.massive_cache/sec_*.txt`.
 
-Gate: `dates` prints PASS.
+1. Delegate to one deep-high subagent:
+   - In `events()`, lag = trading sessions from the period-of-report date to `t_0`, after the after-close
+     shift. Fresh if lag <= `fresh_max_lag`, stale if greater. Undated only if the header has no period.
+   - `harness.py dates` becomes a coverage check. Log the undated rate and PASS if it is <= 0.05. Report
+     agreement with `date_labels.csv` as information only, not a gate.
+   - Update the self-tests: a header with a period of report, one without, same-day, and a 3-session lag.
+2. Rerun the self-tests and `harness.py dates`. Add a "Resolved:" line to runs/BLOCKED.md naming the new
+   source. Commit with the rule in plain English (include the column-name fix made after freeze-v1), then
+   tag `freeze-v2`.
+3. Write this limitation down for the note: the period of report is when the event happened, which can be
+   before the public heard about it. That mixes the two arms, which can only hide a difference, not create one.
+
+Gate: `dates` prints PASS, and `freeze-v2` exists.
 
 ## Phase 4: Pre-register. Write and commit runs/PREREG.md before any P&L
 
