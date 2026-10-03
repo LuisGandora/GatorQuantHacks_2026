@@ -1,0 +1,15 @@
+{
+  "protocol_sha256": "531665c818f330af2b3ea27ec7829508e441d4bff24365d71a619f16fc0d8688",
+  "events_sha256": "4898c3d7a1099b40617d927179553a22623ac8c1d8d89e7997fcd5c2d6ee9629",
+  "universe_sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5",
+  "implementation_sha256": "8428e845725079ad281ab41e2f18abed86ca0c49ff36b4e93d0fb0ad15f98c41",
+  "implementation_files": {
+    "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+    "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+    "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+    "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+    "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+    "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+  },
+  "source_preservation_sha256": "5dddc14ca2a3c5565ae33a08af55972e893344edd3d91e9fad5ea0689b7376bb"
+}

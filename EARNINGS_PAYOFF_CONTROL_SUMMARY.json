@@ -1,0 +1,14 @@
+{
+  "inventory_rows": 798,
+  "item2_02_rows": 223,
+  "unique_excluded_issuer_dates": 223,
+  "controls": 390,
+  "control_count_distribution": {
+    "3": 130
+  },
+  "events": 130,
+  "companies": 28,
+  "financial_outcomes_opened": false,
+  "oos_opened": false,
+  "judges_opened": false
+}
