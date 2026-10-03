@@ -116,25 +116,34 @@ def analyze(expanded=False, observed=False):
                     exclusions.append(dict(tag=folder.name, strategy=strategy, horizon=horizon,
                         otm=otm, cost=cost, ticker=event.ticker, entry_date=day, reason='no strict matched control or missing event net'))
                     continue
-                ordinary = pd.DataFrame([item[2]._asdict() for item in selected[:3]])
+                ordinary = [item[2] for item in selected[:3]]
+                def ordinary_mean(column):
+                    values = np.array([getattr(row, column, np.nan) for row in ordinary], dtype=float)
+                    valid = values[~np.isnan(values)]
+                    return float(valid.mean()) if len(valid) else float('nan')
+                stock_moves = np.array([row.stock_return for row in ordinary], dtype=float)
+                valid_stock = stock_moves[~np.isnan(stock_moves)]
+                ordinary_upside = float(np.maximum(valid_stock, 0).mean()) if len(valid_stock) else float('nan')
+                ordinary_downside = float(np.maximum(-valid_stock, 0).mean()) if len(valid_stock) else float('nan')
                 matches.append(dict(tag=folder.name, strategy=strategy, horizon=str(horizon), otm=otm,
-                    cost=cost, ticker=event.ticker, entry_date=day, difference=event.net-ordinary.net.mean(),
-                    event_net=event.net, ordinary_net=ordinary.net.mean(), controls=len(ordinary),
+                    cost=cost, ticker=event.ticker, entry_date=day, difference=event.net-ordinary_mean('net'),
+                    event_net=event.net, ordinary_net=ordinary_mean('net'), controls=len(ordinary),
                     intervals=[(str(day.date()), str(event.exit_date.date()))] +
-                        [(str(r.entry_date.date()), str(r.exit_date.date())) for r in ordinary.itertuples()],
-                    entry_premium=event.premium_fraction, ordinary_premium=ordinary.premium_fraction.mean(),
-                    closing_premium=event.closing_fraction, ordinary_closing_premium=ordinary.closing_fraction.mean(),
+                        [(str(r.entry_date.date()), str(r.exit_date.date())) for r in ordinary],
+                    entry_premium=event.premium_fraction, ordinary_premium=ordinary_mean('premium_fraction'),
+                    closing_premium=event.closing_fraction, ordinary_closing_premium=ordinary_mean('closing_fraction'),
                     entry_net_debit=getattr(event, 'entry_net_debit_fraction', float('nan')),
-                    ordinary_entry_net_debit=ordinary.entry_net_debit_fraction.mean() if 'entry_net_debit_fraction' in ordinary else float('nan'),
-                    absolute_move=event.absolute_move, ordinary_absolute_move=ordinary.absolute_move.mean(),
-                    stock_return=event.stock_return, ordinary_stock_return=ordinary.stock_return.mean(),
-                    upside=max(event.stock_return, 0), ordinary_upside=ordinary.stock_return.clip(lower=0).mean(),
-                    downside=max(-event.stock_return, 0), ordinary_downside=(-ordinary.stock_return).clip(lower=0).mean(),
-                    upside_tail=event.upside_tail, ordinary_upside_tail=ordinary.upside_tail.mean(),
-                    downside_tail=event.downside_tail, ordinary_downside_tail=ordinary.downside_tail.mean(),
+                    ordinary_entry_net_debit=ordinary_mean('entry_net_debit_fraction'),
+                    absolute_move=event.absolute_move, ordinary_absolute_move=ordinary_mean('absolute_move'),
+                    stock_return=event.stock_return, ordinary_stock_return=ordinary_mean('stock_return'),
+                    upside=max(event.stock_return, 0), ordinary_upside=ordinary_upside,
+                    downside=max(-event.stock_return, 0), ordinary_downside=ordinary_downside,
+                    upside_tail=event.upside_tail, ordinary_upside_tail=ordinary_mean('upside_tail'),
+                    downside_tail=event.downside_tail, ordinary_downside_tail=ordinary_mean('downside_tail'),
                     capacity=event.capacity_contracts))
         matched = pd.DataFrame(matches)
         matched.to_json(folder / f'{prefix}strict_matches.json.gz', orient='records', compression='gzip', date_format='iso')
+        print(f'Matched category {folder.name}: {len(matched):,} rows across all sensitivity cells', flush=True)
         if matched.empty:
             continue
         for keys, group in matched.groupby(['strategy', 'horizon', 'otm', 'cost'], sort=False):
