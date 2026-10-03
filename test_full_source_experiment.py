@@ -1,7 +1,10 @@
 """Source recovery must reject wrong accessions and preserve contemporaneity."""
 import unittest
+import json
 
 import full_source_experiment as study
+import full_source_audit as audit
+import full_source_annotations as review
 
 
 class RecoveryTests(unittest.TestCase):
@@ -61,6 +64,55 @@ CENTRAL INDEX KEY: 0000050863
         secondary = '<DOCUMENT>\n<TYPE>8-K\n<SEQUENCE>9\n<FILENAME>R1.htm\n<TEXT>Cover rendering</TEXT>\n</DOCUMENT>'
         parsed = study.parse_package(self.package+secondary, self.event)
         self.assertEqual(len(parsed['documents']), 3)
+
+
+class ReviewedSourceTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.packets = json.loads((audit.OUTPUT/'candidate_packets.json').read_text())
+
+    def test_exact_original_normalized_spans(self):
+        for packet in self.packets:
+            for officer in packet['targets']:
+                record = audit.officer_fields(packet,officer)
+                for fact in [*record['fields'].values(),record.get('timing_evidence',audit.unknown())]:
+                    for citation in fact['citations']:
+                        source = packet['sources'][citation['candidate_source_index']]
+                        self.assertEqual(citation['quote'],source['quote'][citation['start']-source['start']:citation['end']-source['start']])
+                        self.assertEqual(citation['normalized_document_sha256'],source['normalized_document_sha256'])
+
+    def test_unknown_is_not_negative_and_wrong_officer_not_successor(self):
+        for i,officer in [(0,'Rivera'),(40,'Desai'),(71,'Scally'),(92,'Whited'),(96,'Parameswaran')]:
+            self.assertIsNone(audit.officer_fields(self.packets[i],officer)['fields']['succession_arrangement']['value'])
+        self.assertFalse(audit.officer_fields(self.packets[48],'Goel')['fields']['successor_named']['value'])
+
+    def test_departure_and_successor_dates_remain_separate(self):
+        fields = audit.officer_fields(self.packets[82],'Kirk')['fields']
+        self.assertIn('May 2',fields['departure_effective_date']['value'])
+        self.assertEqual(fields['successor_effective_date']['value'],'March 17, 2025')
+        for i,officer in [(19,'Timko'),(31,'Daugherty'),(66,'Hearne'),(93,"D'Ambrosia")]:
+            self.assertIsNone(audit.officer_fields(self.packets[i],officer)['fields']['departure_reason']['value'])
+
+    def test_missing_target_does_not_inherit_other_officers_facts(self):
+        p = self.packets[71]
+        self.assertFalse(audit.officer_fields(p,'Scally')['joint'])
+        self.assertFalse(audit.officer_fields(p,'Scally',short=True)['timing'])
+        self.assertFalse(audit.coverage([audit.officer_fields(p,o) for o in p['targets']])['joint'])
+
+    def test_transcriptions_align_and_month_is_not_officer(self):
+        self.assertEqual(len(review.DEPARTURE_TIMING),132)
+        self.assertFalse(audit.name_pattern('May').search('effective May 22, 2025'))
+        self.assertTrue(audit.name_pattern('May').search('James M. May'))
+
+    def test_source_gate_cannot_pass_with_only_settled_succession(self):
+        rows = json.loads((audit.OUTPUT/'source_audits_draft.json').read_text())
+        selected = [r for r in rows if r['coverage']['full']['joint']]
+        for row in selected:
+            for officer in row['full_officers']:
+                officer['fields']['succession_arrangement']['value'] = 'permanent'
+        gate = audit.source_gate(selected)
+        self.assertFalse(gate['checks']['unresolved_filings'])
+        self.assertEqual(gate['decision'],'source_feasibility_failed')
 
 
 if __name__ == '__main__':

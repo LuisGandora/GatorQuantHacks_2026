@@ -1,0 +1,537 @@
+{
+  "experiment": "3B",
+  "protocol_hash": "9c1f6e2a2ad727e14c841759f1a84fdf5c3e8f745a02d292e1e776a5d123a69c",
+  "cohort_filings": 132,
+  "cohort_companies": 68,
+  "source_gate": {
+    "decision": "source_feasibility_passed",
+    "checks": {
+      "joint_filings": true,
+      "companies": true,
+      "company_effective_n": true,
+      "company_concentration": true,
+      "retrieval_failure_fraction": true,
+      "on_or_before_filings": true,
+      "on_or_before_companies": true,
+      "future_14_days_filings": true,
+      "future_14_days_companies": true,
+      "settled_filings": true,
+      "settled_companies": true,
+      "unresolved_filings": true,
+      "unresolved_companies": true
+    },
+    "eligible": {
+      "filings": 69,
+      "companies": 46,
+      "percent_of_cohort": 52.27272727272727,
+      "effective_company_n": 38.707317073170735,
+      "max_company_share": 0.043478260869565216
+    },
+    "variation_groups": {
+      "on_or_before": {
+        "filings": 10,
+        "companies": 10,
+        "percent_of_cohort": 7.575757575757576,
+        "effective_company_n": 10.0,
+        "max_company_share": 0.1
+      },
+      "future_14_days": {
+        "filings": 36,
+        "companies": 30,
+        "percent_of_cohort": 27.27272727272727,
+        "effective_company_n": 25.92,
+        "max_company_share": 0.08333333333333333
+      },
+      "settled": {
+        "filings": 57,
+        "companies": 40,
+        "percent_of_cohort": 43.18181818181818,
+        "effective_company_n": 34.2,
+        "max_company_share": 0.05263157894736842
+      },
+      "unresolved": {
+        "filings": 14,
+        "companies": 12,
+        "percent_of_cohort": 10.606060606060606,
+        "effective_company_n": 10.88888888888889,
+        "max_company_share": 0.14285714285714285
+      }
+    },
+    "variation_accessions": {
+      "on_or_before": [
+        "0001193125-24-139371",
+        "0001104659-24-098637",
+        "0001654954-24-013677",
+        "0000002488-24-000172",
+        "0000072971-25-000043",
+        "0001373715-25-000124",
+        "0000320187-25-000020",
+        "0001613103-25-000078",
+        "0001140361-25-027340",
+        "0000804328-25-000049"
+      ],
+      "future_14_days": [
+        "0001193125-24-003197",
+        "0000027419-24-000003",
+        "0000764180-24-000007",
+        "0001193125-24-064820",
+        "0001104659-24-034815",
+        "0000731766-24-000159",
+        "0001193125-24-140547",
+        "0001467373-24-000189",
+        "0001193125-24-170036",
+        "0000002488-24-000115",
+        "0000063908-24-000116",
+        "0000093410-24-000037",
+        "0000200406-24-000079",
+        "0001053507-24-000132",
+        "0001193125-24-269487",
+        "0000804328-24-000079",
+        "0001104659-24-128413",
+        "0001104659-25-006571",
+        "0001140361-25-002798",
+        "0001193125-25-020881",
+        "0000063908-25-000017",
+        "0000753308-25-000019",
+        "0001613103-25-000034",
+        "0001193125-25-079096",
+        "0001104659-25-044364",
+        "0000764180-25-000057",
+        "0000909832-25-000036",
+        "0001193125-25-169311",
+        "0001654954-25-009209",
+        "0000882095-25-000035",
+        "0001558370-25-011829",
+        "0000950103-25-013275",
+        "0000093410-25-000105",
+        "0001140361-25-044561",
+        "0001193125-25-309757",
+        "0001104659-25-120496"
+      ],
+      "settled": [
+        "0000101829-24-000003",
+        "0001193125-24-003197",
+        "0000027419-24-000003",
+        "0000764180-24-000007",
+        "0001193125-24-064820",
+        "0001104659-24-034815",
+        "0000731766-24-000159",
+        "0001193125-24-139371",
+        "0001193125-24-140547",
+        "0001467373-24-000189",
+        "0001193125-24-170036",
+        "0000101829-24-000022",
+        "0000002488-24-000115",
+        "0000063908-24-000116",
+        "0000093410-24-000037",
+        "0000200406-24-000079",
+        "0001654954-24-013677",
+        "0000002488-24-000172",
+        "0001193125-24-269487",
+        "0001193125-24-271502",
+        "0000804328-24-000079",
+        "0001104659-24-128413",
+        "0001104659-25-006571",
+        "0000072971-25-000043",
+        "0001140361-25-002798",
+        "0001193125-25-020881",
+        "0000070858-25-000147",
+        "0001321655-25-000033",
+        "0000063908-25-000017",
+        "0000050863-25-000036",
+        "0000753308-25-000019",
+        "0001613103-25-000034",
+        "0001193125-25-079096",
+        "0001373715-25-000124",
+        "0000731766-25-000125",
+        "0000320187-25-000020",
+        "0001104659-25-044364",
+        "0000764180-25-000057",
+        "0001613103-25-000078",
+        "0001552781-25-000201",
+        "0000909832-25-000036",
+        "0001467373-25-000170",
+        "0001140361-25-027340",
+        "0001140361-25-027350",
+        "0001193125-25-169311",
+        "0000909832-25-000064",
+        "0001654954-25-009209",
+        "0000882095-25-000035",
+        "0000773840-25-000074",
+        "0000804328-25-000049",
+        "0001558370-25-011829",
+        "0000950103-25-013275",
+        "0000093410-25-000105",
+        "0000320187-25-000115",
+        "0001140361-25-044561",
+        "0001193125-25-309757",
+        "0001104659-25-120496"
+      ],
+      "unresolved": [
+        "0000027419-24-000003",
+        "0000078003-24-000130",
+        "0001104659-24-080355",
+        "0001193125-24-204316",
+        "0001104659-24-098637",
+        "0001053507-24-000132",
+        "0000004962-25-000010",
+        "0001140361-25-005012",
+        "0001321655-25-000033",
+        "0001104659-25-023012",
+        "0000829224-25-000036",
+        "0000002488-25-000147",
+        "0001075531-25-000039",
+        "0001053507-25-000153"
+      ]
+    },
+    "retrieval_failure_fraction": 0.0,
+    "frozen_thresholds": {
+      "min_joint_scope_filings": 60,
+      "min_companies": 20,
+      "min_company_effective_n": 20,
+      "max_company_share": 0.15,
+      "max_retrieval_or_package_failure_fraction": 0.05,
+      "min_each_timing_fact_group": 5,
+      "min_each_timing_group_companies": 3,
+      "min_each_succession_fact_group": 5,
+      "min_each_succession_group_companies": 3
+    }
+  },
+  "coverage": {
+    "short": {
+      "scope": {
+        "filings": 130,
+        "companies": 68,
+        "percent_of_cohort": 98.48484848484848,
+        "effective_company_n": 55.22875816993464,
+        "max_company_share": 0.038461538461538464
+      },
+      "timing": {
+        "filings": 121,
+        "companies": 66,
+        "percent_of_cohort": 91.66666666666666,
+        "effective_company_n": 53.24,
+        "max_company_share": 0.04132231404958678
+      },
+      "succession": {
+        "filings": 18,
+        "companies": 16,
+        "percent_of_cohort": 13.636363636363635,
+        "effective_company_n": 14.727272727272727,
+        "max_company_share": 0.1111111111111111
+      },
+      "joint": {
+        "filings": 14,
+        "companies": 13,
+        "percent_of_cohort": 10.606060606060606,
+        "effective_company_n": 12.25,
+        "max_company_share": 0.14285714285714285
+      }
+    },
+    "FULL_ITEM_5_02": {
+      "scope": {
+        "filings": 127,
+        "companies": 65,
+        "percent_of_cohort": 96.21212121212122,
+        "effective_company_n": 52.881967213114756,
+        "max_company_share": 0.03937007874015748
+      },
+      "timing": {
+        "filings": 126,
+        "companies": 66,
+        "percent_of_cohort": 95.45454545454545,
+        "effective_company_n": 53.2751677852349,
+        "max_company_share": 0.03968253968253968
+      },
+      "succession": {
+        "filings": 53,
+        "companies": 38,
+        "percent_of_cohort": 40.15151515151515,
+        "effective_company_n": 32.28735632183908,
+        "max_company_share": 0.05660377358490566
+      },
+      "joint": {
+        "filings": 53,
+        "companies": 38,
+        "percent_of_cohort": 40.15151515151515,
+        "effective_company_n": 32.28735632183908,
+        "max_company_share": 0.05660377358490566
+      }
+    },
+    "OTHER_8K_SECTION": {
+      "scope": {
+        "filings": 127,
+        "companies": 65,
+        "percent_of_cohort": 96.21212121212122,
+        "effective_company_n": 52.881967213114756,
+        "max_company_share": 0.03937007874015748
+      },
+      "timing": {
+        "filings": 126,
+        "companies": 66,
+        "percent_of_cohort": 95.45454545454545,
+        "effective_company_n": 53.2751677852349,
+        "max_company_share": 0.03968253968253968
+      },
+      "succession": {
+        "filings": 53,
+        "companies": 38,
+        "percent_of_cohort": 40.15151515151515,
+        "effective_company_n": 32.28735632183908,
+        "max_company_share": 0.05660377358490566
+      },
+      "joint": {
+        "filings": 53,
+        "companies": 38,
+        "percent_of_cohort": 40.15151515151515,
+        "effective_company_n": 32.28735632183908,
+        "max_company_share": 0.05660377358490566
+      }
+    },
+    "EXHIBIT_99_1": {
+      "scope": {
+        "filings": 128,
+        "companies": 66,
+        "percent_of_cohort": 96.96969696969697,
+        "effective_company_n": 53.54248366013072,
+        "max_company_share": 0.0390625
+      },
+      "timing": {
+        "filings": 127,
+        "companies": 67,
+        "percent_of_cohort": 96.21212121212122,
+        "effective_company_n": 53.94314381270903,
+        "max_company_share": 0.03937007874015748
+      },
+      "succession": {
+        "filings": 66,
+        "companies": 45,
+        "percent_of_cohort": 50.0,
+        "effective_company_n": 37.55172413793103,
+        "max_company_share": 0.045454545454545456
+      },
+      "joint": {
+        "filings": 66,
+        "companies": 45,
+        "percent_of_cohort": 50.0,
+        "effective_company_n": 37.55172413793103,
+        "max_company_share": 0.045454545454545456
+      }
+    },
+    "OTHER_EXHIBIT": {
+      "scope": {
+        "filings": 130,
+        "companies": 67,
+        "percent_of_cohort": 98.48484848484848,
+        "effective_company_n": 54.516129032258064,
+        "max_company_share": 0.038461538461538464
+      },
+      "timing": {
+        "filings": 129,
+        "companies": 68,
+        "percent_of_cohort": 97.72727272727273,
+        "effective_company_n": 54.92079207920792,
+        "max_company_share": 0.03875968992248062
+      },
+      "succession": {
+        "filings": 69,
+        "companies": 46,
+        "percent_of_cohort": 52.27272727272727,
+        "effective_company_n": 38.707317073170735,
+        "max_company_share": 0.043478260869565216
+      },
+      "joint": {
+        "filings": 69,
+        "companies": 46,
+        "percent_of_cohort": 52.27272727272727,
+        "effective_company_n": 38.707317073170735,
+        "max_company_share": 0.043478260869565216
+      }
+    },
+    "full": {
+      "scope": {
+        "filings": 130,
+        "companies": 67,
+        "percent_of_cohort": 98.48484848484848,
+        "effective_company_n": 54.516129032258064,
+        "max_company_share": 0.038461538461538464
+      },
+      "timing": {
+        "filings": 129,
+        "companies": 68,
+        "percent_of_cohort": 97.72727272727273,
+        "effective_company_n": 54.92079207920792,
+        "max_company_share": 0.03875968992248062
+      },
+      "succession": {
+        "filings": 69,
+        "companies": 46,
+        "percent_of_cohort": 52.27272727272727,
+        "effective_company_n": 38.707317073170735,
+        "max_company_share": 0.043478260869565216
+      },
+      "joint": {
+        "filings": 69,
+        "companies": 46,
+        "percent_of_cohort": 52.27272727272727,
+        "effective_company_n": 38.707317073170735,
+        "max_company_share": 0.043478260869565216
+      }
+    }
+  },
+  "newly_recovered": {
+    "filings": 55,
+    "companies": 37,
+    "percent_of_cohort": 41.66666666666667,
+    "effective_company_n": 31.842105263157894,
+    "max_company_share": 0.05454545454545454
+  },
+  "still_insufficient": {
+    "filings": 63,
+    "companies": 47,
+    "percent_of_cohort": 47.72727272727273,
+    "effective_company_n": 39.2970297029703,
+    "max_company_share": 0.047619047619047616
+  },
+  "prior_JEV_qualified": 5,
+  "source_contributions": {
+    "FULL_ITEM_5_02": {
+      "abruptness_facts_recovered": 8,
+      "succession_facts_recovered": 38,
+      "filings_helped": 42
+    },
+    "OTHER_8K_SECTION": {
+      "abruptness_facts_recovered": 0,
+      "succession_facts_recovered": 0,
+      "filings_helped": 0
+    },
+    "EXHIBIT_99_1": {
+      "abruptness_facts_recovered": 0,
+      "succession_facts_recovered": 14,
+      "filings_helped": 13
+    },
+    "OTHER_EXHIBIT": {
+      "abruptness_facts_recovered": 3,
+      "succession_facts_recovered": 6,
+      "filings_helped": 3
+    }
+  },
+  "field_recovery_counts": {
+    "FULL_ITEM_5_02": 408,
+    "EXHIBIT_99_1": 57,
+    "OTHER_EXHIBIT": 39,
+    "MULTIPLE_SOURCES": 1
+  },
+  "retrieved_packages": 132,
+  "used_relevant_exhibits_filings": 17,
+  "validation": {
+    "strata": {
+      "newly_recovered": [
+        1,
+        2,
+        7
+      ],
+      "still_insufficient": [
+        0,
+        3,
+        4
+      ],
+      "exhibit99_supported": [
+        2,
+        7,
+        26
+      ],
+      "item_only": [
+        1,
+        5,
+        16
+      ],
+      "ambiguous_multiple": [
+        0,
+        5,
+        12
+      ]
+    },
+    "sample_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      12,
+      16,
+      26
+    ],
+    "additional_review_indices": [
+      19,
+      31,
+      40,
+      66,
+      71,
+      76,
+      79,
+      82,
+      90,
+      91,
+      92,
+      93,
+      97,
+      100,
+      111,
+      114,
+      119,
+      123,
+      125
+    ],
+    "findings": {
+      "0": "Different-role appointment does not establish replacement of departing DCAI head.",
+      "1": "Same-role successor and January7 role exit explicitly supported in Item5.02.",
+      "2": "Exhibit names Combat Systems successor; April15 successor start differs from April30 retirement.",
+      "3": "Separation agreement and January31 exit do not identify a successor.",
+      "4": "Explicit retirement date, but succession remains unsupported.",
+      "5": "Separate Liu/Mulligan records; conditional search and named COO handover retained separately.",
+      "7": "EX99.2, not99.1, names same-role General Counsel successor.",
+      "12": "Role elimination does not by itself explicitly establish responsibility coverage.",
+      "16": "June30 role exit and December31 retirement remain separate; CIO succession explicit.",
+      "19": "Giglietti replaces Timko only; the package does not provide succession for Holston or Cox.",
+      "26": "Clark appears in attached exhibit; Martinetto duties explicitly reassigned. All original targets retained.",
+      "31": "Reviewed departure/successor identity and date binding; unrelated new-role or contract wording excluded.",
+      "40": "Bedi is appointed interim Chief Product Officer; no explicit link to Desai\u2019s COO responsibilities supports counting him as the COO successor.",
+      "66": "Retirement is mentioned, but compensation effective dates cannot supply the departure date.",
+      "71": "The short excerpt names Patrick Scally, but Scally is absent from the original package; retain the original target and mark its full-source facts unsupported.",
+      "76": "An interim accounting handover and a later permanent appointment are disclosed; the actual Planishek exit date is not specified.",
+      "79": "Immediate interim handover supports timing; the target\u2019s employee exit date remains unspecified.",
+      "82": "Kirk\u2019s disclosed resignation date is May 2; Blomquist\u2019s accounting-role start is March 17. Keep those dates separate.",
+      "90": "Role elimination alone is insufficient; the exhibit explicitly describes the split of Consumer, Product and Brand responsibilities.",
+      "91": "Core retirement date is June 30, whereas the exhibit says July 1. Preserve the discrepancy; both imply a future transition, not a precise reconciled date.",
+      "92": "Powers covers Rynaski\u2019s accounting role; no President successor is disclosed for Whited.",
+      "93": "Reviewed departure/successor identity and date binding; unrelated new-role or contract wording excluded.",
+      "97": "Macdonald\u2019s new remit explicitly includes Delivery. Immediate handover is supported, but a separate Gore-Coty employee exit date is not stated.",
+      "100": "The press release explicitly dates the leadership changes September 1. That is a handover date, not a separately stated employee exit date.",
+      "111": "Permanent successor is named, but his October 15 start follows Boldea\u2019s August 31 exit; preserve the disclosed coverage gap.",
+      "114": "Saw replaces Ewaldsson but the handover date is unstated; Field\u2019s Business Group replacement is not explicitly identified.",
+      "119": "Core states new chairman effective on December 31 retirement; the attached announcement says January 2026. Do not silently reconcile.",
+      "123": "Cancelled future appointment, not an actual employee departure. Keep the original cohort member; do not invent a successor or replace the filing.",
+      "125": "Change of executive-officer designation, not a disclosed departure from employment. General co-president oversight is not explicit replacement of each target\u2019s role."
+    },
+    "all_supported_spans_verified": 1210,
+    "repairs": [
+      "Primary8K sequence1 rather than supplementary XBRL cover rendering.",
+      "Retain SEC acceptance time separately from next-day FILED AS OF date.",
+      "Officer-specific manual dates replace first-effective-date extraction.",
+      "Exclude successor promotion motives and separation-contract boilerplate from departure reason.",
+      "Undated Scally replacement in short excerpt does not satisfy timing; Scally absent from original package.",
+      "Preserve contradictory core/exhibit dates for Duke and Texas Instruments."
+    ],
+    "thresholds_changed": false,
+    "new_market_outcomes_inspected": false
+  },
+  "semantic": null,
+  "economic": null,
+  "decision": null,
+  "oos_opened": false,
+  "judges_opened": false,
+  "preservation_verified": true
+}
