@@ -1,0 +1,13 @@
+{
+  "purpose": "Diagnostic enrichment of the registered discovery screen, specified before inspecting new outcomes",
+  "primary_otm": 0.05,
+  "otm_sensitivity": [0.03, 0.05, 0.10],
+  "primary_cost_fraction_of_each_option_mark": 0.05,
+  "cost_fraction_sensitivity": [0, 0.025, 0.05, 0.10],
+  "commission_dollars_per_contract_per_side": 0.65,
+  "overlays": "covered call, protective put and collar incremental over starter synthetic stock",
+  "normalization": "entry synthetic stock notional; not return on option premium or cash collateral",
+  "capacity": "floor of 1% of minimum required option-leg entry/exit daily volume",
+  "limitations": "aggregate closing marks do not establish executable fills; observed stock, matching quality, financing and assignment require additional checks before an edge claim",
+  "inference_status": "not implemented; no significance or conclusive claim permitted from these diagnostics"
+}
