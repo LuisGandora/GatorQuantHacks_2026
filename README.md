@@ -56,6 +56,13 @@ Keep `.env` out of anything you share or submit; `.gitignore` already excludes i
 
 ## JEV judgment-stability experiment
 
+For the next research assignment, use [SEMANTIC_DISCOVERY_PROMPT.md](SEMANTIC_DISCOVERY_PROMPT.md):
+in-sample semantic discovery and comparison of all five Massive strategies,
+followed by one supported frozen hypothesis (or a null), one 2026 OOS test and
+judges' sealed replication. This is a research prompt, not a completed experiment
+or an implemented runner. The starter's automatic largest-edge selection does
+not meet its evidence and freeze requirements.
+
 See [EXPERIMENT.md](EXPERIMENT.md) for the in-sample-only CFO appointment experiment,
 credential setup, exact scoring protocol, all-horizon statistical outputs, and limitations.
 Run only the final JEV notebook cell from a fresh kernel, or `.venv/bin/python jev_experiment.py`.
