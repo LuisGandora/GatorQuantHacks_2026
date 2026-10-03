@@ -1,0 +1,10 @@
+{
+  "purpose": "Mandatory robustness evidence before promoting synthetic-stock discovery signals",
+  "selection": "all priced trades; no selection by returns or parity gap",
+  "data": "Massive raw and split-adjusted daily stock closes",
+  "normalization": "option P&L per actual entry stock notional",
+  "movements": "actual close-to-close stock returns, absolute moves and plus/minus 5% tails",
+  "exclusions": "missing actual entry or exit close; adjustment-factor range exceeding 0.5% during holding period",
+  "limitations": "not total return; equity dividends, option assignment, financing and executable spreads remain unmodeled",
+  "interpretation": "robustness evidence, not a fresh independent out-of-sample experiment"
+}

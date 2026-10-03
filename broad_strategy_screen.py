@@ -40,6 +40,7 @@ def enrich(priced, p):
                 output.append(dict(ticker=row['ticker'], entry_date=row['entry_date'],
                     exit_date=row['exit_date'], horizon=row['horizon'], otm=row['otm'],
                     expiry=row['expiry'], dte_sessions=row['dte_sessions'],
+                    entry_spot_proxy=row['S_entry'], exit_spot_proxy=row['S_exit'],
                     strategy=strategy, cost_fraction=cost, gross=gross,
                     net=gross-(cost*sum(premiums+closing)+.013*len(legs))/row['S_entry'],
                     premium_fraction=sum(premiums)/row['S_entry'],
