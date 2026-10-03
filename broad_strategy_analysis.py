@@ -51,7 +51,7 @@ def analyze():
                     & (controls.entry_date.dt.quarter == day.quarter)
                     & (controls.entry_date.dt.dayofweek == day.dayofweek)
                     & ((controls.dte_sessions-event.dte_sessions).abs() <= 7)].copy()
-                ordinary['distance'] = ordinary.entry_date.map(lambda d: abs(p.CAL.get_loc(d)-p.CAL.get_loc(day)))
+                ordinary['distance'] = ordinary.entry_date.map(lambda d: abs(p.CAL.get_loc(d)-p.CAL.get_loc(day))).astype('int64')
                 ordinary = ordinary[(ordinary.distance > 0) & (ordinary.distance <= 63)].sort_values(['distance', 'entry_date']).head(3)
                 if ordinary.empty or not np.isfinite(event.net):
                     exclusions.append(dict(tag=folder.name, strategy=strategy, horizon=horizon,
