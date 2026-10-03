@@ -24,13 +24,24 @@ def report(summary,frame):
            'A primary filing must explicitly provide departure timing, succession/coverage status and officer role, with each evidence check selecting present at reported probability ≥0.80. Silence about succession is not treated as proof of an unfilled role. All ten features and three checks must validate. Score confidence alone does not determine inclusion.','',
            'Overlapping evidence exclusion counts: '+json.dumps(m['evidence_exclusions'],sort_keys=True)+'. Counts include invalid responses and must not be added as unique filings.','',
            f'Frozen gate: **{"PASS" if gate["passed"] else "FAIL"}**. Reasons: '+json.dumps(gate['reasons'])+'. No threshold changed after measurement.','',
-           f'Residual interaction SD after baseline features: **{m["residual_interaction_sd"]:.4f}**; fraction of raw SD **{m["residual_sd_fraction"]:.3f}**. Standardized condition number: **{m["condition_number"]}**. Gate floors protect variation and identifiability, not statistical power.','',
+           ('Residual interaction SD and design condition number were **not estimated**, because too few eligible rows remain to assess the full joint design. The zero initialization values in gate diagnostics are failure sentinels, not measured absence of interaction variation.' if 'insufficient joint design rows' in gate['reasons'] else f'Residual interaction SD after baseline features: **{m["residual_interaction_sd"]:.4f}**; fraction of raw SD **{m["residual_sd_fraction"]:.3f}**. Standardized condition number: **{m["condition_number"]}**.'), 'Gate floors protect variation and identifiability, not statistical power.','',
            '## Semantic fingerprint','',
-           'These are evidence-eligible distributions; the figure shows all ten feature correlations in that cohort. Per-filing native and normalized scores, confidences and probability vectors remain in the private audit trail. Scores on secondary dimensions describe disclosed evidence, not verified undisclosed facts.','',
+           'These are evidence-eligible distributions. The correlation figure separately describes all valid responses as extraction diagnostics, including unsupported primary scores. Per-filing native and normalized scores, confidences and probability vectors remain in the private audit trail. Scores on secondary dimensions describe disclosed evidence, not verified undisclosed facts.','',
            '| Feature | Mean | Median | SD | IQR | Min | Max |','|---|---:|---:|---:|---:|---:|---:|']
     for name,v in m['distributions'].items():
         values=['not measured' if v[k] is None else f'{v[k]:.4f}' for k in ['mean','median','sd','iqr','min','max']]
         lines.append('| '+name+' | '+' | '.join(values)+' |')
+    valid=frame[frame.valid]
+    lines += ['', '### All valid responses: extraction diagnostics', '',
+              'The following table includes all valid responses, including those without adequate primary evidence. A syntactically valid score on an ambiguous excerpt is not a verified economic feature and is not admitted to the primary test. These distributions describe extraction behavior only.', '',
+              '| Feature | N | Mean | Median | SD | IQR |', '|---|---:|---:|---:|---:|---:|']
+    for name in f.DIMENSIONS:
+        v=f.previous.describe(valid[name])
+        lines.append(f'| {name} | {v["n"]} | {v["mean"]:.4f} | {v["median"]:.4f} | {v["sd"]:.4f} | {v["iqr"]:.4f} |')
+    selected=int((valid.succession_evidence=='present').sum())
+    supported=int(((valid.succession_evidence=='present') & (valid.succession_evidence_probability>=.8)).sum())
+    lines += ['', f'Succession evidence selected present in **{selected} / {len(valid)}** responses; **{supported}** meet its frozen probability threshold. Only **{m["eligible"]}** also satisfy the timing and scope checks. The supplied excerpts have median length **{valid.supporting_text.str.len().median():.0f} characters**, range **{valid.supporting_text.str.len().min()}–{valid.supporting_text.str.len().max()}**. These are excerpts, not an audit of full 8-K content. An absent evidence judgment therefore does not establish that the underlying filing lacks a succession plan.', '',
+              'The stopped study identifies inadequate supported sample size under this evidence rule and input representation. It neither confirms nor rejects the abruptness × succession-uncertainty economic mechanism. Retrieving fuller source evidence would be a separate study with a new input specification; this run was not silently expanded or rescored.']
     lines += ['', 'Abruptness and uncertainty are divided by ten. Their centered product uses means frozen on the evidence-eligible cohort before economic joins. Severity and both main effects remain in the model, so the interaction is not a substitute for a simple high-severity comparison. The uncentered product (“shock”) is used only for descriptive matching.','',
               '## Measured performance and costs','',
               f'One request per filing contains **ten feature Scores plus three evidence Choices**. Actual HTTP requests: **{latency["http_requests"]}**, retries: **{latency["retries"]}**, malformed successful responses: **{latency["malformed"]}**. Valid feature scores: **{latency["valid_feature_scores"]}**; valid evidence checks: **{latency["valid_evidence_checks"]}**.','',
@@ -68,8 +79,8 @@ def report(summary,frame):
     (f.ROOT/'FINGERPRINT_EXPERIMENT_RESULTS.md').write_text('\n'.join(lines))
     folder=f.OUTPUT/'figures';folder.mkdir(exist_ok=True)
     eligible=frame[frame.valid & frame.eligible]
-    fig,ax=plt.subplots(figsize=(11,9));corr=eligible[list(f.DIMENSIONS)].corr()
-    im=ax.imshow(corr,vmin=-1,vmax=1,cmap='coolwarm');ax.set_xticks(range(10),list(f.DIMENSIONS),rotation=70,ha='right');ax.set_yticks(range(10),list(f.DIMENSIONS));ax.set_title(f'Descriptive feature dependence; evidence-eligible N={len(eligible)}');fig.colorbar(im,ax=ax,label='Pearson correlation');fig.tight_layout();fig.savefig(folder/'01_feature_correlations.png',dpi=160);plt.close(fig)
+    fig,ax=plt.subplots(figsize=(11,9));corr=valid[list(f.DIMENSIONS)].corr()
+    im=ax.imshow(corr,vmin=-1,vmax=1,cmap='coolwarm');ax.set_xticks(range(10),list(f.DIMENSIONS),rotation=70,ha='right');ax.set_yticks(range(10),list(f.DIMENSIONS));ax.set_title(f'Extraction diagnostics, all valid N={len(valid)}; eligibility not required');fig.colorbar(im,ax=ax,label='Pearson correlation');fig.tight_layout();fig.savefig(folder/'01_feature_correlations.png',dpi=160);plt.close(fig)
     fig,ax=plt.subplots(figsize=(7,5));plot=ax.scatter(eligible.abruptness,eligible.succession_uncertainty,c=eligible.severity,cmap='viridis');ax.set_xlabel('Abruptness (0–10)');ax.set_ylabel('Succession uncertainty (0–10)');ax.set_title('Outcome-blind semantic geometry');fig.colorbar(plot,ax=ax,label='Severity');fig.tight_layout();fig.savefig(folder/'02_shock_geometry.png',dpi=160);plt.close(fig)
     fig,ax=plt.subplots(figsize=(9,5))
     if economic is None:ax.text(.5,.5,'Economic test not evaluated: semantic gate failed',ha='center',va='center',transform=ax.transAxes);ax.set_axis_off()

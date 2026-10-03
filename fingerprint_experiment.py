@@ -131,7 +131,8 @@ def preservation():
 
 
 def verify():
-    if json.loads((OUTPUT/'protocol.json').read_text()) != PROTOCOL:
+    if (json.loads((OUTPUT/'protocol.json').read_text()) != PROTOCOL
+            or json.loads((OUTPUT/'protocol_hash.json').read_text())['sha256'] != digest(PROTOCOL)):
         raise ValueError('Frozen Experiment3 protocol changed; stop.')
     if json.loads((OUTPUT/'preservation.json').read_text()) != preservation():
         raise ValueError('Previous experiment artifact changed; stop.')
@@ -186,7 +187,7 @@ def judge(payload, key, namespace, output=OUTPUT):
     if hit:
         record = json.loads(path.read_text())
         if record['request'] != payload or record['protocol_hash'] != digest(PROTOCOL) or record['record_hash'] != digest({k: v for k, v in record.items() if k != 'record_hash'}):
-            raise ValueError('Experiment 2 response cache integrity failure.')
+            raise ValueError('Experiment 3 response cache integrity failure.')
     else:
         begun = time.perf_counter()
         record = {'request': payload, 'protocol_hash': digest(PROTOCOL), 'attempts': [], 'response': None}

@@ -1,7 +1,10 @@
 """Offline tests of evidence exclusions, guarded outcomes and conditional inference."""
 import copy
 import unittest
-from unittest.mock import patch
+import tempfile
+from pathlib import Path
+from datetime import timedelta
+from unittest.mock import patch, Mock
 import numpy as np
 import pandas as pd
 import fingerprint_experiment as f
@@ -69,6 +72,18 @@ class FingerprintTests(unittest.TestCase):
         gate=f.feasibility(d)
         self.assertFalse(gate['passed']);self.assertIn('interaction insufficient IQR',gate['reasons'])
         self.assertFalse(f.association(None)['qualified'])
+
+    def test_systemic_api_failure_preserved_without_rescoring(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            folder=Path(tmp);http=Mock(status_code=400,ok=False,text='schema rejection',elapsed=timedelta(seconds=.1))
+            payload={'model':f.MODEL,'state':{'supporting_text':'test'},'questions':f.QUESTIONS}
+            with patch.object(f,'CACHE',folder/'cache'),patch.object(f.requests,'post',return_value=http) as post:
+                for _ in range(2):
+                    with self.assertRaises(RuntimeError):f.judge(payload,'fake-key','research',folder/'output')
+                self.assertEqual(post.call_count,1)
+            raw=list((folder/'output/raw_jev/research').glob('*.json'))
+            self.assertEqual(len(raw),1)
+            self.assertEqual(f.json.loads(raw[0].read_text())['error_body'],'schema rejection')
 
 
 if __name__=='__main__':unittest.main()
