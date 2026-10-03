@@ -106,3 +106,16 @@ uncertainty_resolution_results/
 # subset provenance, reviewer instructions and verdicts. Only the root-level runner
 # uncertainty_resolution_validation.py is repository-visible.
 uncertainty_resolution_validation/
+
+# Private Experiment 9B expanded leadership-transition source packages, raw
+# TypeSafe JEV requests/responses and frozen semantic outputs. Only the aggregate
+# public reports (UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md,
+# UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json), the protocol and the taxonomy
+# decision table are repository-visible.
+uncertainty_resolution_expanded_results/
+.uncertainty_resolution_expanded_cache/
+
+# Private Experiment 9B blinded governance-state validation packet, deterministic
+# subset provenance, reviewer instructions and verdicts. Only the root-level runner
+# uncertainty_resolution_expanded_validation.py is repository-visible.
+uncertainty_resolution_expanded_validation/
