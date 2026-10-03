@@ -221,8 +221,7 @@ organizer rule.
 There is no positive economic finding and no final trading hypothesis. A passed
 source gate is a raw sparsity safeguard only; it does not establish a clean cohort,
 a mechanism, a direction, or an effect. The historical credit economic result
-remains UNKNOWN, and a small fixed 12-term credit-facility pilot is in progress
-under another worker. [RESEARCH_NEXT_DIRECTION.md](RESEARCH_NEXT_DIRECTION.md) is
+remains UNKNOWN. [RESEARCH_NEXT_DIRECTION.md](RESEARCH_NEXT_DIRECTION.md) is
 advisory input to the direction decision, not the decision itself: it records the
 competing routes, source-only sample feasibility, prior exposure, the reserved-window
 exposure ledger, and corrections to its earlier overstated claims. The earlier claim
@@ -230,7 +229,8 @@ that no fresh confirmation is feasible under the frozen long-only strategy libra
 and a material-effect gate is removed. The earlier claim that no examined route has
 passed a frozen source gate is also removed: the historical raw credit gate passed,
 which is still not proof of a clean cohort or an effect. No opt-in exposed
-exploration is specified or run.
+exploration is specified or run. There is still **no qualified positive candidate**,
+and the independent route-review scores are advisory only.
 
 [CREDIT_FACILITY_FEASIBILITY.md](CREDIT_FACILITY_FEASIBILITY.md) is a source-only
 2024-2025 raw-count audit of the Massive `credit_facility` tag. Its 62 direct-ticker
@@ -248,6 +248,40 @@ the independent verification of that study: it reproduces the 147/54 counts, che
 the request and cursor dates against the holdout, confirms all six
 `EARNINGS_PAYOFF_FREEZE.json` hashes, and corrects the "complete population" and
 "zero unresolved" readings.
+
+## Mechanism decision and research findings draft
+
+[MECHANISM_DECISION.md](MECHANISM_DECISION.md) records the bounded mechanism critique and
+next-action decision: **no new financial test or out-of-sample freeze is justified now**
+under the reviewed candidates, and the one bounded next action is a
+measurement/replication-integrity result that claims no positive edge. This is **not a
+categorical impossibility of all future ideas**: the user has already authorized research,
+so no new approval barrier is invented, and any future idea is judged on its own frozen
+source/power gate. [RESEARCH_FINDINGS_DRAFT.md](RESEARCH_FINDINGS_DRAFT.md) is the short
+standalone DRAFT built from already-published public aggregates; it is incomplete, has no
+qualified candidate and no out-of-sample freeze, and is not a finished submission.
+
+## Credit-term measurement pilot (audited, corrected)
+
+[CREDIT_TERMS_PILOT.md](CREDIT_TERMS_PILOT.md) reports the fixed 12-filing credit-term
+measurement pilot. Its read-only independent audit is
+[CREDIT_TERMS_PILOT_REVIEW.md](CREDIT_TERMS_PILOT_REVIEW.md), the frozen protocol is
+[CREDIT_TERMS_PILOT_PROTOCOL.md](CREDIT_TERMS_PILOT_PROTOCOL.md), and the corrections
+record is [CREDIT_TERMS_PILOT_CORRECTIONS.md](CREDIT_TERMS_PILOT_CORRECTIONS.md); the
+frozen protocol and selection are not edited. Two open audit deviations are closed:
+the two AMD raw dollar figures are null under the frozen scaling-word rule (retained
+only as off-protocol provenance, with a fail-fast validator added), and the two CAT
+2024 local-currency addendum sub-limits are recorded alongside the CAT 2022 rows with
+an explicit USD-equivalent-versus-borrowing-currency clarification. The audited yield
+is low (**1/12 paired maturity, 0/12 paired capacity; the remaining 11/12 lack a
+verifiable paired maturity change, which is unknown rather than evidence that all 11 state
+a new term**), the
+annotations are model-authored (`opencode-go/deepseek-v4.1-flash`, not human-authored,
+no additional runtime inference), and the pilot no longer recommends annotating all
+147 filings because the authorized 2024-2025 financial cohort is only about 62 credit
+events. No option price, payoff, economic outcome or trade hypothesis was opened.
+[RESEARCH_ROUTE_REVIEW.md](RESEARCH_ROUTE_REVIEW.md) scores the next-step routes
+advisory only and freezes nothing.
 
 ## Source-identity review
 

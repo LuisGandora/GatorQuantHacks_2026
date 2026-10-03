@@ -37,6 +37,16 @@ the well-argued null and fragility analysis the rubric explicitly rewards
 P&L. A well-argued null result with a clear decay curve beats a lucky backtest.").
 The earnings benchmark already supplies most of that write-up.
 
+## Direction decision (recorded)
+
+The recorded direction, from the reviewed candidates and the mechanism decision
+([MECHANISM_DECISION.md](MECHANISM_DECISION.md)), is that **no new financial test and no
+out-of-sample freeze are justified now**. This is a decision about the currently reviewed
+candidates, not a categorical impossibility of all future ideas; the user has already
+authorized research, so no new approval barrier is invented. A future idea earns its own
+frozen source/power gate on its own terms. The short standalone write-up built from the
+published public aggregates is [RESEARCH_FINDINGS_DRAFT.md](RESEARCH_FINDINGS_DRAFT.md).
+
 ## What the earnings benchmark establishes, and what it does not
 
 Source of every number below: `EARNINGS_PAYOFF_METRICS.json` (public aggregate),
@@ -370,8 +380,31 @@ verification in [HISTORICAL_CREDIT_REVIEW.md](HISTORICAL_CREDIT_REVIEW.md). It e
 passed the unchanged raw 80/20 floor, so its decision is `source_feasible`. The 147 is a
 direct-ticker lower bound with an identity-unresolved residual of about 2,000
 accessions, the clean eligible-renewal count is UNKNOWN, and the economic result is
-UNKNOWN. A passed raw gate does not authorize a trade. A small fixed 12-term
-credit-facility pilot is in progress under another worker and is not described here.
+UNKNOWN. A passed raw gate does not authorize a trade. A small fixed 12-filing
+credit-facility measurement pilot has completed and is described below.
+
+## Credit-term measurement pilot (audited, corrected, low yield)
+
+The fixed 12-filing credit-term measurement pilot is reported in
+[CREDIT_TERMS_PILOT.md](CREDIT_TERMS_PILOT.md), independently audited in
+[CREDIT_TERMS_PILOT_REVIEW.md](CREDIT_TERMS_PILOT_REVIEW.md), and corrected in
+[CREDIT_TERMS_PILOT_CORRECTIONS.md](CREDIT_TERMS_PILOT_CORRECTIONS.md); the frozen
+protocol and selection are unchanged. The audit's two open deviations are closed: the
+two AMD raw dollar figures are null under the frozen scaling-word rule (retained only
+as off-protocol provenance, with a fail-fast validator added), and the two CAT 2024
+local-currency addendum sub-limits are recorded alongside the CAT 2022 rows with an
+explicit USD-equivalent-versus-borrowing-currency clarification. The audited yield is
+low (**1/12 paired maturity, 0/12 paired capacity; the remaining 11/12 lack a
+verifiable paired maturity change, which is unknown rather than evidence that all 11 state
+a new term**), the
+annotations are model-authored by `opencode-go/deepseek-v4.1-flash` (not
+human-authored, no additional runtime inference), and the pilot no longer recommends
+annotating all 147 filings: the authorized 2024-2025 financial cohort is only about
+62 credit events, so financial feasibility is insufficient. No option price, payoff,
+economic outcome or trade hypothesis is opened. There is no qualified positive
+candidate, and the route scores in
+[RESEARCH_ROUTE_REVIEW.md](RESEARCH_ROUTE_REVIEW.md) are advisory only and freeze
+nothing.
 
 ## Explicit exclusions
 
@@ -387,7 +420,8 @@ The `share_repurchase_program` source count is no longer open; it is answered as
 `source_infeasible` for the fixed TOP_100 scope. The historical credit-facility
 coverage study is complete and passed its raw gate (`source_feasible`), with
 independent verification in [HISTORICAL_CREDIT_REVIEW.md](HISTORICAL_CREDIT_REVIEW.md);
-its clean eligible-renewal count and economic result stay UNKNOWN, and a fixed
-12-term credit-facility pilot is in progress under another worker. No trade
-hypothesis is frozen by this audit. GPT owns the direction decision; this document
+its clean eligible-renewal count and economic result stay UNKNOWN, and the fixed
+12-filing credit-term pilot is audited and corrected with a low paired yield and no
+recommendation to annotate all 147. No trade hypothesis is frozen by this audit, and
+there is no qualified positive candidate. GPT owns the direction decision; this document
 and the named-model analysis in it are advisory.

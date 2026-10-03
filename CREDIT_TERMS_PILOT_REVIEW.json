@@ -1,0 +1,298 @@
+{
+  "review": {
+    "title": "Independent bounded audit of the completed credit-term source-evidence pilot",
+    "author": "opencode-go/deepseek-v4.1-flash",
+    "author_role": "independent audit session (not the pilot author session)",
+    "human_validation": false,
+    "pilot_author": "opencode-go/deepseek-v4.1-flash",
+    "pilot_author_session_concurrent": true,
+    "pilot_author_pid": 48295,
+    "audit_snapshot_local_time": "2026-10-03 04:20 America/New_York",
+    "owned_files": [
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "CREDIT_TERMS_PILOT_REVIEW.json"
+    ],
+    "edits_to_pilot_or_other_files": false,
+    "committed": false,
+    "network_access_during_audit": false,
+    "held_out_2023_holdout_read": false,
+    "novelty_cache_read": false,
+    "new_2026_source_read": false,
+    "classifier_or_semantic_score_built": false,
+    "event_eligibility_classifier_built": false
+  },
+  "audited_snapshot_sha256": {
+    "CREDIT_TERMS_PILOT.md": "274872e6541e0f47ef0165a7a9ff0e5854bd72d3af212e0eec521cd91d070d03",
+    "CREDIT_TERMS_PILOT.json": "51038612401f93f0bbeff2618f9ea702ddd9386b21ab7d0d5055e28fbbb0303f",
+    "credit_terms_pilot/metrics.json": "51038612401f93f0bbeff2618f9ea702ddd9386b21ab7d0d5055e28fbbb0303f",
+    "credit_terms_pilot/source_evidence.json": "3e3feca4f3cc93bfa4259147eb427042e980dca31f8144f37d3b8dcad7fb4d53",
+    "credit_terms_pilot.py": "a60831528507008f783d35cdfa2c77d61515d03d7c2a9ed51bdf17114fd5f511",
+    "protocol_sha256_declared": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149",
+    "selection_sha256_declared": "633ee51633d2e11bca4c79f0b5d3adc6583366a5055020f3ea1666023ae77e10"
+  },
+  "inputs_read": [
+    "credit_terms_pilot.py",
+    "CREDIT_TERMS_PILOT_PROTOCOL.md",
+    "CREDIT_TERMS_PILOT.md",
+    "CREDIT_TERMS_PILOT.json",
+    "credit_terms_pilot/source_evidence.json",
+    "credit_terms_pilot/metrics.json",
+    "credit_terms_pilot/protocol.json",
+    "credit_terms_pilot/protocol_hash.json",
+    "credit_terms_pilot/selection.json",
+    "credit_terms_pilot/selection_hash.json",
+    "credit_terms_pilot/preservation.json",
+    "credit_terms_pilot/parsed/<12 accessions>.json",
+    "credit_terms_pilot/packages/<12 accessions>.txt/.json"
+  ],
+  "independent_verification": {
+    "accessions": 12,
+    "facility_rows": 25,
+    "bound_facts_checked": 100,
+    "fact_tally": {
+      "id": 25,
+      "old_maturity": 1,
+      "new_maturity": 16,
+      "old_capacity": 2,
+      "new_capacity": 19,
+      "currency": 21,
+      "effective_date": 15,
+      "linkage": 1
+    },
+    "quote_offset_text_errors": 0,
+    "amount_unit_currency_value_errors": 0,
+    "date_text_value_errors": 0,
+    "document_sha256_mismatches": 0,
+    "linkage_change_days_error": 0,
+    "source_evidence_json_vs_code_constants_mismatches": 0,
+    "metrics_json_equals_CREDIT_TERMS_PILOT_json": true,
+    "selection_reproduced_from_enrollment_by_sha256": true,
+    "all_filings_inside_2022_2025_and_outside_holdout": true,
+    "item_2_02_filings": 0,
+    "verify_stage_passes_on_snapshot": true
+  },
+  "pairing_conclusion": {
+    "verifiable_paired_maturity_filings": 1,
+    "verifiable_paired_capacity_filings": 0,
+    "both": 0,
+    "paired_maturity_detail": {
+      "ticker": "PM",
+      "accession": "0001104659-24-006244",
+      "filing_date": "2024-01-24",
+      "facility": "364-day revolving credit facility",
+      "old_maturity": "2024-01-30",
+      "new_maturity": "2025-01-28",
+      "change_days": 364,
+      "linkage_quote": "extends the expiration date of the Credit Agreement from January 30,\n2024 to January 28, 2025 in the amount of $1.7 billion",
+      "document": "tm243707d1_8k.htm"
+    },
+    "paired_maturity_survives_reviewed_package_text": true,
+    "paired_capacity_survives_reviewed_package_text": false,
+    "explicit_same_facility_pair_omitted_from_source_evidence": false
+  },
+  "exhibit_review": {
+    "method": "read every text-bearing attached exhibit in the 12 packages and searched for explicit old->new date or amount pairings; literal string scan used only to locate candidate spans, then read manually",
+    "paired_terms_found_in_exhibits_beyond_source_evidence": 0,
+    "audited_subset_not_exhaustive_whole_package_search": true,
+    "source_evidence_documents_used": "all 12 evidence documents are the sequence-1 original 8-K body; no exhibit is referenced by the evidence set",
+    "findings": [
+      {
+        "accession": "0001193125-22-062961",
+        "exhibits": ["d296015dex101.htm (EX-10.1 Amended and Restated Term Loan Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "Exhibit recites the Existing Credit Agreement dated January 29, 2021 but not its prior maturity or capacity; no explicit old->new pair."
+      },
+      {
+        "accession": "0001193125-22-263732",
+        "exhibits": ["d396252dex101.htm (EX-10.1 Amended and Restated Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "Exhibit references the Existing Credit Agreement dated April 1, 2020 only; prior maturity/capacity not recited as a pair."
+      },
+      {
+        "accession": "0000018230-22-000199",
+        "exhibits": ["ex104-thirdamendmendandres.htm (EX-10.4 Third A&R Three-Year)", "ex107-thirdamendedandresta.htm (EX-10.7 Third A&R Five-Year)", "EX-10.1/10.2/10.3 364-Day and addenda", "EX-10.5/10.6 Three-Year addenda", "EX-10.8/10.9 Five-Year addenda"],
+        "paired_term_found": false,
+        "note": "Restatement exhibits reference the Second A&R agreements dated September 5, 2019 but do not recite a prior maturity/capacity pair."
+      },
+      {
+        "accession": "0001193125-23-250325",
+        "exhibits": ["d468612dex101.htm (EX-10.1 364-Day Revolving Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "New facility; no prior term stated."
+      },
+      {
+        "accession": "0001075531-23-000033",
+        "exhibits": ["creditagreementexhibit.htm (EX-10.1 Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "New agreement; the terminated 2019 agreement is described only in the 8-K body."
+      },
+      {
+        "accession": "0001193125-23-010953",
+        "exhibits": ["d400939dex101.htm (EX-10.1 Term Loan Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "New term loan; relative maturity text only."
+      },
+      {
+        "accession": "0001104659-24-096572",
+        "exhibits": ["tm2423020d1_ex10-4.htm (EX-10.4 Amendment No. 2 Three-Year)", "tm2423020d1_ex10-5.htm (EX-10.5 Amendment No. 2 Five-Year)", "EX-10.1/10.2/10.3 364-Day and addenda"],
+        "paired_term_found": false,
+        "note": "Both Amendment No. 2 exhibits amend the 'Current Termination Date' definition in its entirety to the new date (August 29, 2027 / August 29, 2029); the prior date is not recited, so no paired maturity. Schedule I share changes are per-bank, not an aggregate old/new capacity pair. This confirms the pilot note."
+      },
+      {
+        "accession": "0001193125-24-174346",
+        "exhibits": ["d447517dex101.htm (EX-10.1 Second 364-Day Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "New agreement; no prior term stated."
+      },
+      {
+        "accession": "0001104659-24-006244",
+        "exhibits": ["tm243707d1_ex10-1.htm (EX-10.1 Extension Agreement)"],
+        "paired_term_found": true,
+        "note": "Extension Agreement extends the Maturity Date to 28 January 2025; the explicit old->new date pair (January 30, 2024 to January 28, 2025) is stated in the 8-K body and is captured."
+      },
+      {
+        "accession": "0001193125-25-055636",
+        "exhibits": ["d915924dex101.htm (EX-10.1 364-Day Credit Agreement)"],
+        "paired_term_found": false,
+        "note": "New agreement ($3.0B) and a same-day termination of a $1.5B 364-day agreement dated March 18, 2024; the 8-K does not state they are the same facility, so no explicit capacity pair."
+      },
+      {
+        "accession": "0000060667-25-000199",
+        "exhibits": ["exhibit991-10092025.htm (EX-99.1 press release)"],
+        "paired_term_found": false,
+        "note": "No credit agreement exhibit in this package; the Term Loan Agreement is incorporated by reference from a separate 8-K not in this package."
+      },
+      {
+        "accession": "0001193125-25-067902",
+        "exhibits": ["d943962dex101.htm (EX-10.1 ZT Credit Agreement)", "d943962dex102.htm (EX-10.2 Master Receivables Purchase Agreement)"],
+        "paired_term_found": false,
+        "note": "Pre-existing facilities described after the acquisition; no old->new pair."
+      }
+    ]
+  },
+  "deviations": [
+    {
+      "id": "DEV-1",
+      "severity": "protocol",
+      "status": "open",
+      "title": "Two AMD capacity facts violate the protocol amount rule (missing scaling word)",
+      "protocol_clause": "amounts: 'an amount is recorded only when the quote carries an explicit thousands/millions/billions word and an explicit currency token' (protocol SHA d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149; CREDIT_TERMS_PILOT_PROTOCOL.md line 68)",
+      "facts": [
+        {
+          "accession": "0001193125-25-067902",
+          "ticker": "AMD",
+          "facility": "ZT Credit Agreement",
+          "document": "d943962d8k.htm",
+          "field": "new_capacity",
+          "quote": "an amount up to $641,666,666.67",
+          "value": 641666666.67,
+          "unit": null,
+          "has_scaling_word": false,
+          "has_currency_token": true
+        },
+        {
+          "accession": "0001193125-25-067902",
+          "ticker": "AMD",
+          "facility": "master receivables purchase agreement",
+          "document": "d943962d8k.htm",
+          "field": "new_capacity",
+          "quote": "a facility limit of $850,000,000",
+          "value": 850000000.0,
+          "unit": null,
+          "has_scaling_word": false,
+          "has_currency_token": true
+        }
+      ],
+      "impact": "The two AMD amounts are recorded though they lack the required scaling word; the pilot's own validator does not enforce the scaling word, so the frozen table and public report print 641,666,667 and 850,000,000 USD.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-2",
+      "severity": "completeness",
+      "status": "open",
+      "title": "CAT 2024 local-currency sub-limit rows present in the 8-K but absent from source_evidence.json",
+      "protocol_clause": "evidence_fields.facility_id and facility_separation ('distinct facilities and loan tranches are retained as separate factual rows'); the same structure was captured for the 2022 CAT filing",
+      "accession": "0001104659-24-096572",
+      "ticker": "CAT",
+      "document": "tm2423020d1_8k.htm",
+      "present_rows": ["364-Day Facility", "Three-Year Facility", "Five-Year Facility"],
+      "missing_rows": [
+        {
+          "proposed_id_quote": "Local Currency Addendum that enables CIF to borrow in certain approved currencies including Pounds\nSterling and Euros in an aggregate amount up to the equivalent of $100 million",
+          "proposed_new_capacity_quote": "including Pounds\nSterling and Euros in an aggregate amount up to the equivalent of $100 million",
+          "value": 100,
+          "unit": "million",
+          "currency": "USD",
+          "id_quote_occurrences": 1,
+          "id_quote_start": 3336,
+          "capacity_quote_occurrences": 1,
+          "capacity_quote_start": 3418
+        },
+        {
+          "proposed_id_quote": "Japan Local Currency Addendum that enables\nCFKK to borrow Japanese Yen in an aggregate amount up to the equivalent of $100 million",
+          "proposed_new_capacity_quote": "Japanese Yen in an aggregate amount up to the equivalent of $100 million",
+          "value": 100,
+          "unit": "million",
+          "currency": "USD",
+          "id_quote_occurrences": 1,
+          "id_quote_start": 3669,
+          "capacity_quote_occurrences": 1,
+          "capacity_quote_start": 3727
+        }
+      ],
+      "impact": "The 2024 CAT package states two $100 million sub-limit addenda within the 364-Day Aggregate Commitment, exactly parallel to the two CAT 2022 addenda rows that were captured. source_evidence.json records 3 rows for 2024 vs 5 rows for 2022. This is a cross-year annotation inconsistency, not a pairing error.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-3",
+      "severity": "scope",
+      "status": "accepted-limitation",
+      "title": "Evidence set is an audited subset (sequence-1 8-K body only), not an exhaustive whole-package annotation",
+      "detail": "Every one of the 100 bound facts references the sequence-1 8-K document. No exhibit fact is recorded. The pilot is therefore an audited subset, not an exhaustive whole-package search. This audit separately inspected all text-bearing exhibits for explicit paired terms and found none beyond PM, but did not exhaustively annotate every exhibit-only term.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-4",
+      "severity": "reporting",
+      "status": "note",
+      "title": "jev_or_model_calls: 0 means no runtime JEV/model request, not no model involvement",
+      "detail": "metrics.json reports jev_or_model_calls: 0 and the protocol forbids 'JEV or other model calls' during the deterministic pipeline. That is a runtime-instrumentation count. The hand-authored annotations, reviewer notes, protocol prose and public report were authored by a language model (opencode-go/deepseek-v4.1-flash). No additional runtime model request during the pilot does not mean no model involvement.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-5",
+      "severity": "guardrail",
+      "status": "compliant",
+      "title": "No economic inference from source-only counts",
+      "detail": "The 1/12 and 0/12 figures are measurement-feasibility counts over a fixed hash-selected 12. They are not prevalence, not an effect size, and carry no market or outcome information. The pilot report already labels the result as a measurement feasibility pilot, not a population prevalence estimate or economic result.",
+      "economic_inference_from_source_counts": false
+    }
+  ],
+  "recommended_corrections": [
+    {
+      "target": "AMD rows in credit_terms_pilot/source_evidence.json (and the hand-authored SOURCE_EVIDENCE constant)",
+      "action": "Record old/new capacity as null for the AMD ZT and receivables rows because the quotes carry no explicit scaling word, per protocol clause 'amounts'; alternatively keep the raw figure only with an explicit off-protocol provenance note. The frozen protocol must not be edited to relax the scaling-word requirement.",
+      "protocol_clause": "amounts"
+    },
+    {
+      "target": "0001104659-24-096572 CAT row set",
+      "action": "Add the two $100 million local-currency addendum rows, mirroring the 2022 CAT rows, binding the exact quotes and offsets listed in DEV-2; keep them separate from the $3.15 billion 364-Day Aggregate Commitment.",
+      "protocol_clause": "facility_separation"
+    },
+    {
+      "target": "Scope statement",
+      "action": "State in the report that the evidence table audits the sequence-1 8-K body only (audited subset), while the paired-term search was extended to exhibits; do not claim an exhaustive whole-package annotation.",
+      "protocol_clause": "evidence_fields"
+    },
+    {
+      "target": "Authorship wording",
+      "action": "State that annotations and reviews were authored by opencode-go/deepseek-v4.1-flash and that jev_or_model_calls: 0 is a runtime count, not a claim of no model involvement.",
+      "protocol_clause": "research_kind"
+    }
+  ],
+  "concurrency_note": {
+    "observed": true,
+    "detail": "The pilot-authoring session (opencode-go/deepseek-v4.1-flash, PID 48295) was still running while this audit ran and rewrote the pilot artifacts at 2026-10-03 04:19:53. In an earlier transient snapshot the preservation guard compared the raw SHA256 of HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md (a683359b...) against the canonical-JSON digest of the historical protocol (726caa85...), so 'verify' raised 'Historical credit coverage protocol changed'. The authoring session then corrected protected_manifest() to digest historical_credit_coverage/protocol.json and to record the markdown SHA256 separately; 'verify' now passes on the audited snapshot (code SHA a6083152...). This audit is valid for the recorded snapshot hashes; freeze the authoring session before treating the pilot as final."
+  },
+  "outcome": "For the audited snapshot, all 12 filings and all 100 bound facts are internally exact, and the pairing result 1 paired maturity / 0 paired capacity survives reviewed package text. No explicit same-facility old->new pair detectable in the original exhibits is omitted by source_evidence.json. Two open deviations remain: the two AMD capacity facts are off-protocol because they lack a scaling word, and two CAT 2024 local-currency sub-limit rows stated in the 8-K are missing. The pilot is an audited subset, not an exhaustive whole-package search; the annotations were model-authored (opencode-go/deepseek-v4.1-flash); and no economic conclusion follows from the source-only counts."
+}
