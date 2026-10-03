@@ -51,6 +51,16 @@ transaction_source/
 # Only the aggregate public reports (SETTLEMENT_SOURCE.md/json) are repository-visible.
 settlement_source/
 
+# Standalone restructuring-plan source availability census: private HTTP cache and
+# frozen inputs. Only the aggregate public reports (RESTRUCTURING_SOURCE.md/json)
+# and the protocol are repository-visible.
+restructuring_source/
+
 # Private frozen input manifest for the transaction identity review. Only the public
 # aggregate reports (TRANSACTION_IDENTITY_REVIEW.md/json) are committed.
 transaction_identity_review/
+
+# Private frozen inputs and raw date extraction for the executive-runway
+# date-candidate pilot. Only the aggregate public reports
+# (EXECUTIVE_RUNWAY_PILOT.md/json) and the protocol are repository-visible.
+executive_runway_pilot/
