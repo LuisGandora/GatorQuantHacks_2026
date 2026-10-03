@@ -25,3 +25,6 @@ fingerprint_results/
 
 # Original filing packages and source-backed Experiment 3B audit records
 full_source_results/
+
+# Guidance source packages, exact JEV records, and historical outcomes
+guidance_results/
