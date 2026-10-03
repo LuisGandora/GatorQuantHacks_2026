@@ -1,0 +1,15 @@
+{
+  "primary_horizon": "21",
+  "primary_otm": 0.05,
+  "primary_cost": 0.05,
+  "family_size": 120,
+  "confidence": 0.9995833333333334,
+  "bootstrap_replicates": 100000,
+  "seed": 20261003,
+  "minimum_events": 40,
+  "minimum_dependence_clusters": 5,
+  "controls": "same issuer/year/quarter/weekday; within 63 sessions; DTE within 7 sessions; nearest three",
+  "disclosure_exclusion": "all CSV categories within 30 calendar days of an ordinary entry",
+  "uncertainty": "bootstrap connected components joining repeated companies, reused controls and overlapping event/control holds",
+  "interpretation": "synthetic stock screening only; no tradable edge or independent validation claim"
+}
