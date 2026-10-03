@@ -1,0 +1,13 @@
+# Your API key and raw API responses never leave your machine
+.env
+.massive_cache/
+
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+
+# Private filing evidence, JEV requests, and derived experiment outputs
+.jev_cache/
+experiment_results/
+.novelty_cache/
+novelty_results/
