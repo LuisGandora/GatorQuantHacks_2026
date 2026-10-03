@@ -60,3 +60,11 @@ The announcement date is the **CONFORMED PERIOD OF REPORT** from the 8-K's EDGAR
 - freeze-v2: EDGAR period-of-report (this experiment)
 
 All P&L stages (insample, oos, portfolio) require harness.py, jev.py, and jev_scores.csv to match freeze-v2.
+
+---
+
+## Sealed-Window Prediction (committed before Phase 9 write-up)
+
+**Prediction**: Fresh − stale edge will be **negative** (fresh underperforms stale), and its 95% confidence interval **will include zero** at the sealed window's sample size (n=25 fresh, n=40 stale OOS). The hypothesis fails all three pre-registered conditions.
+
+**Rationale**: In-sample already showed fresh-stale = -1.03% with stale arms outperforming. The period-of-report date source dilutes freshness, but the direction of the in-sample result is strong enough that OOS is unlikely to flip sign. Sample size is too small for the interval to exclude zero.

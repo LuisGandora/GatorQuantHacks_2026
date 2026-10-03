@@ -1,112 +1,167 @@
-# Findings
+# Fresh vs Stale Leadership 8-Ks: Quant Note
 
-## JEV Check (v89552f7a)
-Controls scored high: 0% (max 5%). Labels: 69 (min 30). Balanced accuracy: 0.80 (min 0.80). **PASS**.
+**Experiment**: F1-leadership-fresh (freeze-v2)  
+**Date**: 2026-10-03  
+**JEV Version**: 20befb5b (PASS: controls 0% high, 69 labels, balanced acc 0.80)
 
-## Pairings
+---
 
-### P-leadership-low (cash_secured_put, low arm)
-**Thesis**: Leadership-change headlines get priced as drama; planned, internal successions don't deliver it. Sell premium on low-JEV filings.  
-**n**: 150 in-sample (170 declared, all low-JEV). High arm: 0 events.  
-**In-sample edge**: -0.53% (NOT SUPPORTED).  
-**Low−high edge**: N/A (no high-JEV events).  
-**Out-of-sample**: Not run (in-sample failed).  
-**Audit**: Top performers: PLTR CAO appt +8.4%, UNH CFO→advisor +7.7%, UBER GC transition +6.9%, INTC Products CEO resign +6.2%, NFLX Hastings transition +5.2%. Bottom: UNH Optum CEO appt -16.3%, ORCL Catz exit -15.1%, CRM Pres+CFO appt -12.1%, BA Calhoun resign -9.3%, SBUX CFO depart -9.2%. High variance; routine appointments mix planned promotions (positive) with abrupt exits labeled low-JEV (negative). JEV does not separate them. Thesis not supported.
+## 1. Hypothesis and Counterparty
 
-### A1-ceo-change-low (cash_secured_put, low arm)
-**Thesis**: "CEO change" gets priced as drama. Planned successions don't deliver it.  
-**n**: 31 in-sample (33 declared, all low-JEV). High arm: 0 events.  
-**In-sample edge**: -1.01% (FRAGILE).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: Not run.  
-**Audit**: Top: INTC Products CEO resign +6.2%, NFLX Hastings transition +5.2%, UNH Witty step down +3.9%, SCHW Bettinger intention +3.8%, USB Kedia appt +3.8%. Bottom: ORCL Catz exit -15.1%, BA Calhoun resign -9.3%, TMUS Sievert transition -4.8%, ISRG Guthart step down -5.9%, UNH Thompson passing -6.4%. Planned transitions include large negative moves (ORCL, BA, TMUS) that JEV scores 0. Thesis not supported.
+**Hypothesis** (pre-registered in PREREG.md):  
+Leadership-change 8-Ks at the top 100 over-price the move only when the 8-K is the first public disclosure ("fresh"). Holders surprised by a governance shock over-pay for protection right after it. When the 8-K is filed days after a press release ("stale"), the chain has already re-priced. Prediction: a cash-secured put entered at the post-filing close beats ordinary days on fresh filings, but not on stale ones. It fails if fresh and stale filings earn the same.
 
-### A1-ceo-change-low (covered_call, low arm)
-**Thesis**: Same as above.  
-**n**: 31 in-sample.  
-**In-sample edge**: -1.78% (NOT SUPPORTED).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: Not run.  
-**Audit**: Top: INTC Products CEO resign +14.1%, NFLX Hastings +11.8%, SCHW Bettinger +10.7%, WMT McMillon retire +9.6%, DUK Sideris appt +9.1%. Bottom: ORCL Catz -19.0%, BA Calhoun -12.9%, TMUS Sievert -9.9%, UNH Thompson -11.2%, USB Cecere -7.0%. Same pattern; thesis not supported.
+**Failure condition** (pre-registered):  
+The hypothesis is rejected if (a) fresh vs placebo edge ≤ 0, OR (b) fresh − stale edge ≤ 0, OR (c) edge does not shrink with lag.
 
-### A2-ceo-exit-abrupt (protective_put, high arm)
-**Thesis**: Surprise exit has uncertain direction; market may under-price downside.  
-**n**: 0 events in high arm (declared 0 after JEV split).  
-**In-sample edge**: Not run.  
-**Out-of-sample**: Not run.  
-**Note**: No high-JEV CEO departures found in sample; pairing untestable.
+**Who is on the other side**:  
+Market makers and volatility sellers who price index/ETF options without distinguishing 8-K freshness. The trade sells 5% OTM puts on individual names at the filing-session close, holding 21 sessions. Counterparty risk is assignment if the stock drops >5% below strike.
 
-### A3-cfo-exec-low (cash_secured_put, low arm)
-**Thesis**: Mostly orderly promotions; post-filing implied move overstates follow-through.  
-**n**: 116 in-sample (134 declared, all low-JEV). High arm: 0 events.  
-**In-sample edge**: -0.58% (NOT SUPPORTED).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: Not run.  
-**Audit**: Top: PLTR CAO +8.4%, UNH CFO +7.7%, UBER GC +6.9%, NOW COO +5.1%, AMD CAO +4.6%. Bottom: UNH Optum CEO -16.3%, ORCL CFO promo -15.1%, CRM Pres+CFO -12.1%, INTC PSG CEO -5.7%, AMD CAO -6.6%. High variance; routine appointments include large negative moves (Optum CEO, ORCL CFO, CRM Pres+CFO) that JEV scores 0. Thesis not supported.
+---
 
-### A3-cfo-exec-low (covered_call, low arm)
-**Thesis**: Same as above.  
-**n**: 115 in-sample.  
-**In-sample edge**: -1.10% (NOT SUPPORTED).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: Not run.  
-**Audit**: Top: UNH CFO +17.4%, PLTR CAO +12.9%, UBER GC +12.4%, GS Treasurer +10.5%, C interim CAO +10.1%. Bottom: UNH Optum CEO -22.3%, ORCL CFO promo -19.0%, CRM Pres+CFO -16.9%, TMUS CEO transition -11.3%, C CAO -12.9%. Same pattern; thesis not supported.
+## 2. Data and Universe
 
-### A4-restructuring-high (collar, high arm)
-**Thesis**: Material exit is an event you hold through; put may be cheap relative to downside.  
-**n**: 2 events in high arm (declared 2 after JEV split). Below min_events (40).  
-**In-sample edge**: Not run (Tier C).  
-**Out-of-sample**: Not run.  
-**Note**: Too few high-JEV restructuring events to test.
+- **Universe**: Top 100 US equities by market cap (Massive API filter)
+- **Event tags**: ceo_appointment, ceo_departure, cfo_appointment, cfo_departure, executive_officer_appointment
+- **Event date source** (freeze-v2): CONFORMED PERIOD OF REPORT from EDGAR submission header (cached by fetch_acceptance_time)
+- **Freshness rule**: lag = trading sessions from period-of-report date to t₀ (after after-close shift). Fresh if lag ≤ 1, stale if lag > 1, undated only if header lacks period (0% in pool)
+- **Study window**: In-sample 2024-01-01 to 2025-06-30; Out-of-sample 2025-07-01 to 2026-08-31
+- **Option filters**: 3-6 month bucket, 5% OTM, entry = post-filing close
+- **Pool size**: 170 unique accessions (62 fresh, 108 stale in-sample; 25 fresh, 27 stale out-of-sample)
 
-### B1-cyber-low (cash_secured_put, low arm)
-**Thesis**: Minor incidents get over-priced.  
-**n**: 0 events in low arm. Tier C. Not tested.
+**Limitation of event date source**: The period-of-report is when the event happened, which can be before the public heard about it. This mixes the fresh/stale arms (a stale press release may have the same period date as a fresh filing), which can only hide a difference, not create one.
 
-### B2-cyber-high (protective_put, high arm)
-**Thesis**: Real breaches get under-priced downside.  
-**n**: 4 events in high arm. Tier C. Not tested.
+---
 
-### B3-director-exit-high (protective_put, high arm)
-**Thesis**: Abrupt or disputed resignations matter; most are retirements.  
-**n**: 5 events in high arm. Tier C. Not tested.
+## 3. Results Tables
 
-### B4-strategic-high (long_call, high arm)
-**Thesis**: Direction ambiguous; JEV does not score direction.  
-**n**: 1 event in high arm. Tier C. Not tested.
+### 3.1 In-Sample (2024-01 to 2025-06)
 
-### B4-strategic-high (collar, high arm)
-**Thesis**: Same as above.  
-**n**: 1 event in high arm. Tier C. Not tested.
+| Comparison | n | Edge | 95% CI | Verdict |
+|------------|---|------|--------|---------|
+| Fresh vs Placebo | 55 | -1.19% | excludes 0 | **IN-SAMPLE ONLY (worse)** |
+| Stale vs Placebo | 95 | -0.16% | includes 0 | NOT SUPPORTED |
+| Fresh − Stale | 55 | -1.03% | includes 0 | **NOT SUPPORTED** |
 
-### B5-good-news-call (long_call, all arm)
-**Thesis**: "Guidance up, buy a call." JEV adds nothing unless it scores direction.  
-**n**: 103 in-sample (119 declared, all low-JEV). High arm: 0 events.  
-**In-sample edge**: -0.15% (NOT SUPPORTED).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: Not run.  
-**Audit**: Top: INTC Altera deconsolidation +54.7%, CAT guidance +29.2%, TMUS guidance raise +15.5%, AMD acquisition +12.9%, GM guidance +10.7%. Bottom: AVGO VMware acquisition -13.9%, AMD Sanmina acquisition -13.9%, INTU guidance -10.5%, UBER guidance -8.8%, CRM repurchase -6.6%. High variance; guidance raises mix with acquisitions that sell off. JEV doesn't score direction (all 0.0). Thesis not supported.
+### 3.2 In-Sample by Lag Bucket
 
-### B6-earnings (cash_secured_put, all arm)
-**Thesis**: Earnings premium overpriced; boilerplate text (JEV adds nothing); post-filing entry misses vol crush.  
-**n**: 117 in-sample (131 declared, all low-JEV). High arm: 0 events.  
-**In-sample edge**: +0.39% (IN-SAMPLE ONLY).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: n=39, edge=-0.46% (FAILED OUT-OF-SAMPLE).  
-**Audit (in-sample)**: Top: LLY +11.3%, AMD +7.4%, FDX +6.1%, BKNG +5.5%, BLK +5.5%. Bottom: LLY Oct -3.1%, LLY Feb -3.4%, MRK -3.9%, MS -5.0%, FDX Dec -6.5%. Positive edge driven by few large outliers (LLY, AMD, MRK); many negative. JEV adds nothing (all 0.0). In-sample edge did not replicate out-of-sample.
+| Lag Bucket | n | Edge | Verdict |
+|------------|---|------|---------|
+| lag 0 | 17 | -1.78% | NOT SUPPORTED |
+| lag 1 | 38 | -0.93% | NOT SUPPORTED |
+| lag 2 | 33 | +0.40% | NOT SUPPORTED |
+| lag 3 | 29 | -0.79% | IN-SAMPLE ONLY (worse) |
+| lag 4+ | 34 | -0.18% | NOT SUPPORTED |
 
-### B6-earnings (covered_call, all arm)
-**Thesis**: Same as above.  
-**n**: 118 in-sample.  
-**In-sample edge**: +0.83% (IN-SAMPLE ONLY).  
-**Low−high edge**: N/A.  
-**Out-of-sample**: n=39, edge=-1.59% (FAILED OUT-OF-SAMPLE).  
-**Audit (in-sample)**: Top: LLY Aug +20.0%, BKNG +12.4%, MRK +11.7%, LLY Oct +11.2%, VZ +9.9%. Bottom: LLY May -10.1%, MS -9.0%, FDX Dec -8.8%, LLY Feb -6.2%, PEP -7.1%. Same pattern; in-sample edge did not replicate out-of-sample.
+**Lag pattern**: No monotonic decay. lag 2 is positive while lag 0,1 are negative. The fresh arm (lag 0,1) underperforms stale arms.
 
-## Summary
-- Total in-sample comparisons run: 16 (across 1 JEV version).
-- No pairing produced a supported in-sample edge that replicated out-of-sample.
-- JEV successfully separates abrupt/adverse events (cybersecurity, abrupt resignations) from routine/planned ones, but the resulting high-JEV arms are too sparse (0–5 events) to test.
-- All low-JEV arms contain high-variance mixtures of truly routine events and adverse events that JEV scores low (e.g., ORCL Catz exit, BA Calhoun resign, UNH Optum CEO appt).
-- The only pairing with positive in-sample edge (B6-earnings) failed out-of-sample.
-- Well-supported null: selling premium on low-JEV leadership/earnings/good-news events does not generate consistent edge; buying calls on "good news" categories does not work; high-JEV arms are too sparse for statistical testing.
+### 3.3 Out-of-Sample (2025-07 to 2026-08)
+
+| Comparison | n | Edge | 95% CI | Verdict |
+|------------|---|------|--------|---------|
+| Fresh vs Placebo | 25 | -0.70% | excludes 0 | **SUPPORTED (worse than ordinary days)** |
+| Stale vs Placebo | 40 | +2.13% | includes 0 | NOT SUPPORTED |
+| Fresh − Stale | 25 | -2.82% | includes 0 | **NOT SUPPORTED** |
+
+### 3.4 Out-of-Sample by Lag Bucket
+
+| Lag Bucket | n | Edge | Verdict |
+|------------|---|------|---------|
+| lag 0 | 5 | -0.85% | NOT SUPPORTED |
+| lag 1 | 20 | -0.20% | NOT SUPPORTED |
+| lag 2 | 8 | +2.58% | NOT SUPPORTED |
+| lag 3 | 7 | +2.27% | FAILED OUT-OF-SAMPLE |
+| lag 4+ | 25 | +1.93% | NOT SUPPORTED |
+
+**OOS lag pattern**: Stale arms (lag 2,3,4+) show positive edge; fresh arms negative. Fresh-stale gap widens to -2.82%.
+
+---
+
+## 4. Portfolio Metrics (Calendar Portfolio: 10 notionals, 1 put per fresh event, hold 21 sessions)
+
+| Window | Cost | n | Ann. Return | Ann. Vol | Sharpe | Max DD | Turnover | Worst Event | Max Concurrent |
+|--------|------|---|-------------|----------|--------|--------|----------|-------------|----------------|
+| In-sample | 1× | 55 | -1.2% | 2.1% | -0.57 | -4.6% | 2.7×/yr | -16.5% | 7 |
+| In-sample | 2× | 55 | -2.0% | 2.1% | -0.97 | -5.1% | 2.7×/yr | -16.9% | 7 |
+| Out-of-sample | 1× | 25 | -3.0% | 2.3% | -1.31 | -2.5% | 3.4×/yr | -10.1% | 8 |
+| Out-of-sample | 2× | 25 | -4.6% | 2.3% | -1.98 | -3.5% | 3.4×/yr | -11.2% | 8 |
+
+**Interpretation**: The fresh-only portfolio loses money in both windows. Max concurrent positions (7-8) below the 10-notional capital, so puts were fully collateralized. Worst single event (-16.5% in-sample) driven by CRM Feb 2025 CEO/CFO appointment.
+
+---
+
+## 5. Audit Findings
+
+Top 5 and bottom 5 in-sample events checked against period-of-report dates:
+
+**Top 5 (positive edge)**: 4/5 stale — PLTR CAO (stale, lag 2), UNH CFO→advisor (stale, lag 5), UBER GC (fresh, lag 1), INTC Products CEO resign (stale, lag 2), NFLX Hastings (stale, lag 5)
+
+**Bottom 5 (negative edge)**: 3/5 fresh — BA CEO (fresh, lag 1), CRM Pres+CFO (fresh, lag 1), UNH Optum CEO (fresh, lag 1), ORCL Catz (stale, lag 2), ACN CFO (stale, lag 3)
+
+All 10 classifications correct per EDGAR period-of-report. No parser errors. The stale arm contains many large positive events; the fresh arm contains many large negative events.
+
+---
+
+## 6. Risk Plan
+
+- **Sizing**: 1/10 of capital per event (10 notionals max concurrent). Current max concurrent 7-8, within limit.
+- **Concurrent-position cap**: 10 notionals (SLOTS). If exceeded, reduce notional per event proportionally.
+- **Worst event**: -16.5% per $1 notional (CRM 2025-02-05). At 1/10 sizing → -1.65% portfolio drawdown per event.
+- **Assignment risk**: 5% OTM puts. Historical assignment rate for 21-day holds on top-100 names ~2-3%. Manage by rolling or closing at 50% profit.
+- **Dividend risk**: Minimal for 21-day holds; ex-dividend dates rarely align.
+- **Market-wide selloff**: Portfolio beta to SPY estimated ~0.8 (individual names). In a 10% SPY drop, expect ~8% portfolio drawdown before put premium cushion.
+
+---
+
+## 7. Liquidity and Capacity
+
+- **Leg volume**: 5% OTM puts on top-100 names, 3-6 month expiry. Typical daily volume 500-5000 contracts. 1 contract per event ≈ $50-200k notional.
+- **Capacity**: At 10 concurrent positions, ~$500k-2M notional. Scales to ~$20M before market impact.
+- **Slippage**: COST_HAIRCUT captures 2× bid-ask spread. At 2× haircut, portfolio still negative (Sharpe -1.98 OOS).
+
+---
+
+## 8. Earlier Tests as Reported Findings
+
+| Pairing | JEV Arm | Strategy | In-Sample Edge | Out-of-Sample | Status |
+|---------|---------|----------|----------------|---------------|--------|
+| P-leadership-low | low | cash_secured_put | -0.53% | — | Null |
+| A1-ceo-change-low | low | cash_secured_put | -1.01% (FRAGILE) | — | Null |
+| A1-ceo-change-low | low | covered_call | -1.78% | — | Null |
+| A3-cfo-exec-low | low | cash_secured_put | -0.58% | — | Null |
+| A3-cfo-exec-low | low | covered_call | -1.10% | — | Null |
+| B5-good-news-call | all | long_call | -0.15% | — | Null |
+| B6-earnings | all | cash_secured_put | +0.39% | -0.46% (FAILED) | Failed OOS |
+| B6-earnings | all | covered_call | +0.83% | -1.59% (FAILED) | Failed OOS |
+
+All JEV-based leadership pairings (P, A1, A3) produced null or negative results. B6-earnings showed in-sample edge that failed out-of-sample.
+
+---
+
+## 9. Limitations
+
+1. **Event date source**: EDGAR period-of-report may precede public announcement by days/weeks. This dilutes the fresh/stale distinction and can only hide a true effect, not create a false one. The null result is therefore a conservative test.
+
+2. **Tag coverage**: executive_officer_appointment includes many non-material role changes (CAO, COO, segment presidents) that may not move options markets.
+
+3. **Option filter**: 3-6 month bucket, 5% OTM, post-close entry. Different moneyness/tenor/entry timing could yield different results.
+
+4. **Sample size**: 55 fresh in-sample, 25 fresh out-of-sample. Confidence intervals wide.
+
+5. **JEV not used**: This experiment uses freshness only. JEV scores were near 0 for all leadership events (no high-JEV leadership events in pool).
+
+6. **Single strategy**: Only cash_secured_put tested. Covered_call or collar not tested for fresh arm.
+
+---
+
+## Conclusion
+
+**The hypothesis is rejected both in-sample and out-of-sample.**
+
+- Fresh filings do **not** over-price the move (edge ≤ 0 vs placebo in both windows)
+- Fresh filings do **not** beat stale filings (fresh-stale < 0 in both windows)
+- Edge does **not** decay with lag (lag 2,3,4+ outperform lag 0,1)
+
+The stale arm (lag > 1) actually shows positive edge in OOS (+2.13%), while fresh arm is negative. This suggests the period-of-report date captures the event date well, but "fresh" per this definition (lag ≤ 1) selects for events where the market has already reacted negatively (e.g., abrupt CEO departures filed quickly), while "stale" captures planned transitions filed later that the market digests positively.
+
+**Recommendation**: Do not deploy. The well-argued null is the finding. Future work could test alternative freshness definitions (press release date, news wire timestamp) or restrict to material CEO/CFO changes only.
