@@ -1,0 +1,48 @@
+# Literal measurement feasibility: verbatim amount vs release-time delay
+
+**Kind.** Bounded independent economic-mechanism review (advisory; freezes nothing). Authority: GPT owns direction; user requires Massive+JEV, no classifiers. Owns only `LITERAL_MEASUREMENT_FEASIBILITY.md`/`.json`. No JEV/vendor call, price, filing text, `.env`, 2026/reserved window, other file, or commit; frozen artifacts preserved.
+
+**Read (public/cached only).** `MASSIVE_TRACK_REFERENCE.md`, `JEV_ROLE_DECISION.md`, `NOVELTY_RESULTS.md`, `REPURCHASE_SOURCE_RESULTS.md`, `CREDIT_TERMS_PILOT.md`, `EARNINGS_PAYOFF_RESULTS.md`, `departure_results/taxonomy.json`, `.agents/skills/typesafe-ai/SKILL.md`; live `docs.typesafe.ai` index plus `pre_parsed_value_extraction`, `date_extraction`, `api`. No `.env`, no 2026/reserved window, no raw filing text, and no payoff value was opened. **Exposure correction:** an earlier review ran a recursive `grep` over repository `.py`/`.json`/`.md` while matching model-version strings, so that traversal did pass through private folders; it emitted only model names, never a filing or payoff value, and this review does not claim the private caches were never read.
+
+**Taxonomy (exact cached IDs).** `dividend_declaration`, `dividend_policy_change` (capital_and_financing/shareholder_returns); `quarterly_earnings`, `annual_earnings`, `preliminary_results` (financial_results/earnings_and_performance); `guidance_issuance_or_update`. No release-timestamp tag exists. No synonym invented. The existing earnings cohort count is already known (130 enrolled / 54 matched / 17 CIK clusters); it is the raw direct `dividend_declaration` count that is unknown until the new source census runs, and it is not inferred here. That census is metadata only and makes no JEV call.
+
+**The test.** The documented `pre_parsed_value_extraction` pattern — regex over-finds spans, JEV `Choice` options *are* those spans, code copies the pick verbatim and normalizes — is literal extraction, not classification. `date_extraction` reads a date's parts off the text and code does the calendar math. A route qualifies only if JEV emits an index/part, never a label, and all comparison/arithmetic is deterministic. Any "increase/decrease/material/routine/novelty" judgment in model or code disqualifies it. Arithmetic subtraction and its sign are not classifiers, but judging a prior declaration comparable is a semantic judgment and is prohibited: any future pair must be an explicit literal-text statement that the old and new values are the same quantity, with no inferred comparability. The step authorized now is a metadata-only source census (vendor tag to disclosure counts) with no JEV call; the span-selection pattern described here is a later, separately-authorized proposal. This review assesses feasibility, not compliance.
+
+## Route A — dividend declaration/change
+Use the vendor `dividend_declaration` tag (consumed, not built; this is the Massive framework, not a new classifier). Regex-enumerate USD spans and dates; ask JEV which span is the declared cash amount **per share** and the declaration date, each with a `none` escape. Copy the span; code parses the Decimal and counts days. Subtraction and its sign are arithmetic, not a classifier. Do not ask JEV whether a prior declaration is comparable: that is a prohibited semantic judgment, and any future pair must be stated in literal text as the same quantity. No severity/regularity score. Keep `dividend_policy_change` out: its "material change" description is a severity judgment, not an amount.
+
+## Route B — earnings release time vs SEC acceptance
+Use `quarterly_earnings`/`annual_earnings`/`preliminary_results`. Ask JEV for the exhibit's explicit publication date/time; code subtracts the SEC acceptance timestamp to get elapsed delay.
+
+## Where attribution is judgment; unresolved constraint
+- **A:** role choice among regular vs special vs annualized vs aggregate is a semantic attribution; a `Choice` over regex spans supports it. Comparability of a prior declaration is not merely fragile but prohibited: it must never be inferred, only stated verbatim as the same quantity.
+- **B:** "which exhibit is the press release" is role choice, but a verbatim release *clock time* often does not exist; inferring pre-/post-market is judgment, not extraction.
+- **Attribution boundary:** consuming the vendor event tag is part of the Massive framework and is not building a new classifier. Role attribution — which span is the declared per-share amount, which section carries it — is a different kind of inference and is flagged rather than claimed classifier-free; this review cannot certify the later JEV extraction as classifier-free.
+
+## Mechanism and payoffs (five strategies)
+- **A:** a per-share dividend change is a cash-flow/carry quantity. Put–call parity synthetic shares embed expected dividends, so a declared change moves parity directly. An apparent short-premium edge (covered call, CSP) can be a **dividend-carry artifact**, not information; directional structures (long call, protective put, collar) need a signed drift the amount alone does not give.
+- **B:** an elapsed filing delay has no clean sign or magnitude link to any of the five strategies; it describes entry-lag realism, not direction or vol.
+- The ordinary-day baseline, all horizons and costs remain the financial track's job; a source-only audit cannot run them.
+- **`t_pre`/post lag:** the organizer direction is entry at the close of the filing session when the filing lands before the bell; the existing earnings convention of the next session's close is an internal choice, not a universal rule. An extracted declaration/release time cannot by itself locate that close. `EARNINGS_PAYOFF` already mixes pre-open (92/130) and post-close (38/130) acceptance offsets.
+
+## Sample / strict-mark limits; already-exposed earnings
+- Strict marks (exact outward OTM strikes, same-session volume, ≤3% ATM, ≥2 controls) already cut earnings to 54 events / 17 CIK clusters. Dividends recur quarterly per issuer, so events cluster by issuer and date and effective independent issuer n is small; strict-mark pricing will remove more.
+- **B's** natural cohort is the **already-exposed** earnings set (130 enrolled, 54 matched, 17 issuers); reusing it is not prospective independence. A avoids that exposure.
+- Internal 80/20 and 60/20 floors are this team's conventions, not organizer laws; none is borrowed as a threshold here.
+
+## Grades (1 weak–5 strong)
+| Route | Nov | Mech | Feas | Robust | Massive | Reason |
+|---|---:|---:|---:|---:|---:|---|
+| A dividend amount | 3 | 2 | 3 | 3 | 3 | known dividend-change anomaly, new only as a JEV span-selector; carry confound; verbatim but role-ambiguous and amount-extraction coverage unknown; copy resists transposition, comparability prohibited (must be a literal same-quantity statement); taxonomy fits, no stock feed |
+| B release delay | 2 | 1 | 2 | 2 | 2 | data-quality timing, not a hypothesis; no payoff channel; verbatim clock time may not exist; provenance/timezone/judgment; no release-time field, cohort consumed |
+
+## Decision
+**Route A merits exactly ONE bounded prospective source-only audit; Route B does not.** Bounded means vendor taxonomy/disclosure endpoints only; fixed universe and window. The step authorized now is a metadata-only source census with no JEV call; the regex spans plus JEV span-role/date-part questions are a later, separately-authorized proposal, not part of that census. That later step would use verbatim copy and deterministic Decimal/day arithmetic, and report measurement coverage, attribution failures and abstentions only. No price, strategy, model score, outcome, or materiality label. B's prerequisite is a timestamp-existence check (itself a second audit) and its cohort is already exposed, so it is not selected now. No route is chosen from any point estimate, and no threshold is borrowed as law.
+
+## Corrections recorded
+Six factual corrections were applied to this review. (1) The authorized dividend step is a **metadata-only source census with no JEV call**; the JEV span extraction is later and is not currently authorized. (2) Entry follows the **organizer direction**: the close of the filing session when the filing lands before the bell; the existing earnings next-session-close convention is this team's internal choice, **not a universal rule**. (3) Consuming the vendor tag is part of the **Massive framework, not a new classifier**; role attribution remains a different inference and is not certified classifier-free. (4) Subtraction and its sign are **arithmetic, not classifiers**; inferring that a prior declaration is *comparable* is **prohibited**, and any future pair must state old/new as the same quantity in literal text. (5) **Exposure:** an earlier recursive `grep` over repository `.py`/`.json`/`.md` passed through private folders while matching model-version strings and emitted only model names (no filing or payoff values); the private caches were **not** never-read. (6) The existing earnings cohort count is **known** (130 enrolled / 54 matched / 17 CIK clusters); only the raw direct `dividend_declaration` count was unknown before this census.
+
+## No guaranteed financial positivity
+A verbatim amount and a clean date difference are **measurements, not alpha**: no interval, no edge, no strategy. A positive measurement verdict would not imply positive returns, and dividend-carry or entry-lag confounds can generate or mask any later price result. The honest deliverable remains a well-argued measurement/null write-up. No guarantee of financial positivity is made or implied.
+
+Files written: `LITERAL_MEASUREMENT_FEASIBILITY.md`, `.json` only. No commit.

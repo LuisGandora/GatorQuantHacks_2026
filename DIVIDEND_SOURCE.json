@@ -1,0 +1,282 @@
+{
+  "experiment": "dividend_declaration source-only taxonomy/disclosure feasibility census",
+  "protocol_sha256": "79fab80c391fb92a95cdcb66289d1a9b0dcb94f0dca2dd6aa8584fa181dbc939",
+  "implementation_sha256": "94095dea7c194c4d3c983a132e01586938579c77820fa1b4283ce8227e7d75af",
+  "reused_module_sha256": "7ca3797f613b7a8455c924267e4a11524cfaa0118d2a3bd694f7cea4d2aa66af",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "targets": [
+    "dividend_declaration"
+  ],
+  "universe": {
+    "size": 100,
+    "sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "requests": {
+    "taxonomy_pages": 1,
+    "network_requests": 8,
+    "cache_hits": 0,
+    "pages_by_tag": {
+      "dividend_declaration": 7
+    },
+    "raw_request_envelopes_preserved": 8
+  },
+  "raw_and_dedup": {
+    "dividend_declaration": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 6073,
+      "in_universe_rows": 79,
+      "outside_universe_rows": 5994,
+      "pages": 7,
+      "pagination_complete": true,
+      "truncated": false,
+      "accessions": 79,
+      "unambiguous_accessions": 79,
+      "ambiguous_accessions": 0,
+      "unambiguous_issuers": 18,
+      "tickers": [
+        "AMT",
+        "AVGO",
+        "CAT",
+        "COST",
+        "CRM",
+        "GE",
+        "GOOGL",
+        "IBM",
+        "INTU",
+        "JNJ",
+        "MET",
+        "META",
+        "ORCL",
+        "PG",
+        "PYPL",
+        "TMUS",
+        "USB",
+        "V"
+      ],
+      "ticker_count": 18,
+      "ciks": [
+        "0000018230",
+        "0000036104",
+        "0000040545",
+        "0000051143",
+        "0000080424",
+        "0000200406",
+        "0000896878",
+        "0000909832",
+        "0001053507",
+        "0001099219",
+        "0001108524",
+        "0001283699",
+        "0001326801",
+        "0001341439",
+        "0001403161",
+        "0001633917",
+        "0001652044",
+        "0001730168"
+      ],
+      "cik_count": 18,
+      "yearly": {
+        "2024": 39,
+        "2025": 40
+      },
+      "yearly_identity": {
+        "2024": {
+          "accessions": 39,
+          "ciks": 15,
+          "tickers": 15,
+          "ambiguous_accessions": 0
+        },
+        "2025": {
+          "accessions": 40,
+          "ciks": 14,
+          "tickers": 14,
+          "ambiguous_accessions": 0
+        }
+      }
+    }
+  },
+  "union": {
+    "accessions": 79,
+    "unambiguous_accessions": 79,
+    "ambiguous_accessions": 0,
+    "unambiguous_issuers": 18,
+    "tickers": [
+      "AMT",
+      "AVGO",
+      "CAT",
+      "COST",
+      "CRM",
+      "GE",
+      "GOOGL",
+      "IBM",
+      "INTU",
+      "JNJ",
+      "MET",
+      "META",
+      "ORCL",
+      "PG",
+      "PYPL",
+      "TMUS",
+      "USB",
+      "V"
+    ],
+    "ticker_count": 18,
+    "ciks": [
+      "0000018230",
+      "0000036104",
+      "0000040545",
+      "0000051143",
+      "0000080424",
+      "0000200406",
+      "0000896878",
+      "0000909832",
+      "0001053507",
+      "0001099219",
+      "0001108524",
+      "0001283699",
+      "0001326801",
+      "0001341439",
+      "0001403161",
+      "0001633917",
+      "0001652044",
+      "0001730168"
+    ],
+    "cik_count": 18,
+    "yearly": {
+      "2024": 39,
+      "2025": 40
+    },
+    "yearly_identity": {
+      "2024": {
+        "accessions": 39,
+        "ciks": 15,
+        "tickers": 15,
+        "ambiguous_accessions": 0
+      },
+      "2025": {
+        "accessions": 40,
+        "ciks": 14,
+        "tickers": 14,
+        "ambiguous_accessions": 0
+      }
+    }
+  },
+  "collisions": {
+    "ambiguous_multi_ticker_accessions": 0,
+    "conflicting_metadata_accessions": 0,
+    "cik_with_multiple_tickers": 0,
+    "ticker_with_multiple_ciks": 0,
+    "same_cik_filing_date_groups": 0,
+    "same_cik_filing_date_accessions": 0,
+    "unresolved_identity_accessions": 0
+  },
+  "yearly_distribution": {
+    "2024": 39,
+    "2025": 40
+  },
+  "yearly_identity": {
+    "2024": {
+      "accessions": 39,
+      "ciks": 15,
+      "tickers": 15,
+      "ambiguous_accessions": 0
+    },
+    "2025": {
+      "accessions": 40,
+      "ciks": 14,
+      "tickers": 14,
+      "ambiguous_accessions": 0
+    }
+  },
+  "gate": {
+    "rule": {
+      "min_dedup_accessions": 80,
+      "min_unambiguous_canonical_ticker_issuers": 20
+    },
+    "checks": {
+      "dedup_accessions": false,
+      "unambiguous_canonical_ticker_issuers": false
+    },
+    "passed": false,
+    "census_complete": true,
+    "observed": {
+      "dedup_accessions": 79,
+      "unambiguous_canonical_ticker_issuers": 18
+    },
+    "target_absent": false,
+    "decision": "source_gate_failed",
+    "caveat": "Prospective source-only feasibility screen; not an organizer rule and not proof of matched economic power or a tradable edge."
+  },
+  "custody": {
+    "checks": {
+      "code_sha256_matches_frozen": true,
+      "reused_module_sha256_matches_frozen": true,
+      "raw_request_envelopes_preserved": true,
+      "all_payload_hashes_valid": true,
+      "pages_match_acquisition": true,
+      "rows_match_acquisition": true,
+      "rows_match_frozen_disclosures": true,
+      "rows_in_window": true,
+      "rows_exact_tag": true,
+      "private_custody_ignored": true
+    },
+    "passed": true,
+    "raw_request_envelopes": 8,
+    "disclosure_pages": 7,
+    "raw_rows": 6073,
+    "in_window_rows": 6073,
+    "exact_tag_rows": 6073
+  },
+  "decision": "source_gate_failed",
+  "source_only": true,
+  "financial_outcomes_read": false,
+  "market_data_requests": 0,
+  "text_endpoint_requests": 0,
+  "model_requests": 0,
+  "jev_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "classification_source": "vendor taxonomy reused as-is; consuming the vendor tag is part of the Massive framework, not a new classifier",
+  "provenance_note": "A tag is a vendor classification and does not prove a declared amount, a completed distribution or a tradable event.",
+  "source_vs_financial": "This is a source metadata census only. It is not a financial finding and says nothing about returns, dividend carry, option value or strategy profitability; no price, option, payoff or model was opened.",
+  "extraction_boundary": "No JEV call is made by this census. Any later verbatim span extraction is a separate, not-yet-authorized step; arithmetic subtraction and its sign are not classifiers, but judging a prior declaration comparable is a prohibited semantic judgment.",
+  "preservation": {
+    "earnings_payoff_freeze": {
+      "all_unchanged": true,
+      "checks": {
+        "protocol_sha256": true,
+        "events_sha256": true,
+        "universe_sha256": true,
+        "implementation_sha256": true,
+        "implementation_files_6": true,
+        "source_preservation_sha256": true
+      },
+      "implementation_file_hashes": {
+        "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+        "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+        "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+        "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+        "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+        "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+      }
+    },
+    "credit_terms_protocol": {
+      "all_unchanged": true,
+      "checks": {
+        "declared_matches_protocol_file": true,
+        "metrics_matches_declared": true
+      },
+      "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+    }
+  },
+  "source_constraints": [
+    "static September-2026 TOP_100 carries survivorship bias",
+    "2024-2025 only; 2026 and the sealed judges window are unopened",
+    "tag rows are vendor classifications, not verified declared amounts or completed distributions",
+    "no original filing text, classifier, semantic score, JEV or other model call",
+    "a source gate pass is not a matched-power, trading-proof or profitability claim"
+  ]
+}
