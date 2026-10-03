@@ -1,4 +1,38 @@
-# Gator Quant Hacks 2026 · Trade the 8-K
+# Fresh Leadership 8-Ks Are Under-Priced, Not Over-Priced
+
+Gator Quant Hacks 2026 · Systematic Trading track · Massive "Trade the 8-K" bonus.
+
+**Finding.** We pre-registered that fresh leadership-change 8-Ks (the filing is the first disclosure) over-price the move,
+so a cash-secured put sold after them beats ordinary days. It is rejected in the opposite direction: the put-seller did
+worse than on ordinary days in-sample (−1.19%, n=55) and out-of-sample (−0.70%, n=25), negative in all 18 parameter
+neighbours in both windows. Capacity is small (about $0.5M), so this is a research finding, not a scalable strategy.
+
+## Read in this order
+
+1. [`runs/FINDINGS.md`](runs/FINDINGS.md): the quant note (the PDF submitted on Devpost is this file).
+2. [`runs/PREREG.md`](runs/PREREG.md): the hypothesis as written before any P&L, plus dated addenda and the sealed-window predictions.
+3. [`runs/EXTRAS.md`](runs/EXTRAS.md) and [`runs/APPENDIX.md`](runs/APPENDIX.md): robustness tables, lag buckets, audit, earlier tests.
+4. [`runs/ledger.jsonl`](runs/ledger.jsonl): every test ever run, append-only. [`runs/REPRO.md`](runs/REPRO.md): how to reproduce each number.
+
+## Reproduce
+
+Set up as below (`setup.ps1` / `setup.sh`, Massive key in `.env`), then **run the notebook top to bottom**. Section 12 is
+the submission (fresh vs stale, both windows, and the exploratory move-ratio diagnostic); the sealed-window cell runs the
+same rule when `RUN_HOLDOUT = True`. The robustness tables come from `python report_extras.py`; the portfolio from
+`python harness.py portfolio F1-leadership-fresh`. Responses are cached in `.massive_cache/`; the first run takes a while.
+
+| File | Role |
+|---|---|
+| `gator-quant-hacks-8k-options-challenge.ipynb` | Massive's starter pipeline plus section 12 (our rule) |
+| `harness.py` | Events, freshness rule, tests, portfolio; frozen at git tag `freeze-v2` |
+| `pair_test.py` | The starter kit's category-strategy test, reused by the harness |
+| `report_extras.py` | Skew, months, years, costs in bps, capacity, sensitivity |
+| `vrp.py`, `runs/PREREG_VRP.md` | The next experiment: a pre-registered variance-premium map across all 8-K categories |
+| `jev.py`, `pairings.json` | The earlier JEV-based pairings (null results, appendix A3) |
+
+---
+
+# Starter kit setup (from the challenge)
 
 Starter notebook for the Massive challenge. You need **Python 3.10+** ([python.org](https://www.python.org/downloads/))
 and a **Massive API key** (from the Discord channel).

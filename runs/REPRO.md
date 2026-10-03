@@ -152,3 +152,10 @@ git show freeze-v2:jev_scores.csv | fc jev_scores.csv
 ```
 
 All three must match byte-for-byte (line endings aside) for insample/oos/portfolio to run.
+## Robustness tables and the PDF (added 2026-10-03)
+
+- `.venv\Scripts\python report_extras.py` writes `runs/EXTRAS.md`: skew, worst/best month and return by year (section 5),
+  costs in bps (section 5), capacity (section 7), the sensitivity table (section 4), direction vs size (section 4) and
+  edge by year (section 4). It reads the frozen rule (`freeze-v2`) and refuses to run if harness.py has changed.
+- `runs/FINDINGS.pdf` is `runs/FINDINGS.md` rendered at 11pt (pandoc to HTML, printed with Edge): 4 pages.
+- Lag buckets, the audit, earlier tests and process history are in `runs/APPENDIX.md`.

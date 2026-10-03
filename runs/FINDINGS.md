@@ -1,206 +1,157 @@
 # Fresh Leadership 8-Ks Are Under-Priced, Not Over-Priced
 
-**Experiment**: F1-leadership-fresh (freeze-v2)  
-**Date**: 2026-10-03  
-**JEV Version**: 20befb5b (PASS: controls 0% high, 69 labels, balanced acc 0.80)
+Gator Quant Hacks 2026 · Systematic Trading track · Massive "Trade the 8-K" bonus. Rule frozen at git tag `freeze-v2`;
+pre-registration in `runs/PREREG.md`; every number below is reproduced by the notebook (section 12), `harness.py` and
+`report_extras.py` (see `runs/REPRO.md`). Supporting tables: `runs/EXTRAS.md`, `runs/APPENDIX.md`.
 
-The pre-registered hypothesis was that fresh leadership 8-Ks over-price the move, so selling a cash-secured put after them beats ordinary days. It is **rejected, in the opposite direction**. Fresh filings (lag ≤ 1 session from the 8-K's period of report to the filing session) did *worse* than ordinary days. The market **under-prices fresh leadership shocks**: the post-filing chain doesn't charge enough for the move that follows, so put-sellers lose, and stale filings behave like ordinary days.
+**Summary.** We pre-registered that *fresh* leadership 8-Ks (the filing is the first disclosure) over-price the move, so
+selling a cash-secured put after them beats ordinary days. It is **rejected, in the opposite direction**: after fresh
+filings the put-seller did worse than on ordinary days in-sample (−1.19%, n=55) and out-of-sample (−0.70%, n=25), and
+the sign is negative in all 18 parameter neighbours in both windows. The evidence fits the market **under-pricing fresh
+leadership shocks**. That reframe was written after both windows were seen, so we register it as a sealed-window prediction
+rather than claim it. Stale filings show no stable edge.
 
----
+## 1. Hypothesis and who is on the other side
 
-## 1. Hypothesis and Counterparty
+**Pre-registered (before any P&L).** Leadership-change 8-Ks over-price the move only when the 8-K is the first public
+disclosure. Holders surprised by a governance shock over-pay for protection right after it; when the 8-K follows a press
+release by days, the chain has already re-priced. Prediction: a cash-secured put entered at the post-filing close beats
+ordinary days on fresh filings, but not on stale ones. Failure: fresh and stale earn the same.
 
-**Original hypothesis (pre-registered in PREREG.md)**:  
-Leadership-change 8-Ks at the top 100 over-price the move only when the 8-K is the first public disclosure ("fresh"). Holders surprised by a governance shock over-pay for protection right after it. When the 8-K is filed days after a press release ("stale"), the chain has already re-priced. Prediction: a cash-secured put entered at the post-filing close beats ordinary days on fresh filings, but not on stale ones. It fails if fresh and stale filings earn the same.
+**Who was on the other side.** Our put was sold to the holders buying protection after the shock. The results say they
+were right to pay: fresh-event stocks fell more than on ordinary days and moved more than the chain priced (section 4).
+The price-setter we expected to over-charge, under-charged. We do not know yet why that persists; the sealed window is the test.
 
-**Reframed hypothesis (after seeing both windows)**:  
-Fresh leadership 8-Ks are **under-priced**. The market does not charge enough for the move that follows a fresh governance shock, so selling puts loses money. Stale filings (lag > 1) show no stable edge: −0.16% in-sample, +2.13% out-of-sample.
+## 2. Data and method
 
-**Failure condition (pre-registered)**:  
-The original hypothesis is rejected if (a) fresh vs placebo edge ≤ 0, OR (b) fresh − stale edge ≤ 0, OR (c) edge does not shrink with lag. All three held in the opposite direction.
+- **Universe:** the notebook's static list of the 100 largest US companies as of September 2026 (see limitations).
+- **Events:** Massive Filings & Disclosures tags `ceo_appointment`, `ceo_departure`, `cfo_appointment`, `cfo_departure`,
+  `executive_officer_appointment`; one event per ticker and filing session. Found: in-sample 62 fresh / 108 stale;
+  out-of-sample 27 fresh / 42 stale (fewer are priced, because some have no tradeable chain).
+- **Freshness:** lag = trading sessions from the 8-K's `CONFORMED PERIOD OF REPORT` (EDGAR submission header, the
+  "date of earliest event reported") to the filing session. Fresh if lag ≤ 1. Undated: 0%.
+- **Timing (no lookahead):** filings accepted after 16:00 ET (EDGAR acceptance timestamp) move to the next session.
+  Entry is the close of that session, using only the chain as it stood then.
+- **Instrument:** Massive options contracts and daily aggregates; 3-6 month expiry, put 5% below spot, marked at h=21, h=42
+  and expiry (the portfolio in section 5 holds 21 sessions);
+  the stock leg, where a strategy needs one, is the synthetic stock from the ATM pair (the starter notebook's method).
+- **Control:** ordinary days for the same tickers (the notebook's placebo, 120 draws per window, ≥30 days from any event).
+  The edge is events minus ordinary days, averaged over h=21, h=42 and expiry, with 95% bootstrap intervals.
+- **Windows:** in-sample 2024-01-01 to 2025-12-31; out-of-sample 2026-01-01 to 2026-08-31, looked at once. The judges'
+  sealed window replaces the track's 20% holdout (Massive bonus rule).
+- **Data handling:** a leg's mark must be at most 3 sessions old, otherwise that session is missing (never filled from
+  later data); non-standard (post-split) contracts are dropped; option prices are unadjusted.
 
-**Who is on the other side**:  
-Market makers and volatility sellers who price index/ETF options without distinguishing 8-K freshness. The trade sells 5% OTM puts on individual names at the filing-session close, holding 21 sessions. Counterparty risk is assignment if the stock drops >5% below strike.
+## 3. Results
 
----
+| Window | Comparison | n | Edge | 95% CI | Gate verdict |
+|---|---|---|---|---|---|
+| In-sample | Fresh vs ordinary days | 55 | −1.19% | excludes 0 at 1 of 3 horizons | worse; survives dropping best 3 (−0.45%) |
+| In-sample | Stale vs ordinary days | 95 | −0.16% | includes 0 | not supported |
+| In-sample | Fresh − stale | 55 | −1.03% | includes 0 | not supported |
+| Out-of-sample | Fresh vs ordinary days | 25 | −0.70% | includes 0 at all 3 | **same sign as in-sample** |
+| Out-of-sample | Stale vs ordinary days | 40 | +2.13% | excludes 0 at 2 of 3 | sign flipped vs in-sample: not a finding |
+| Out-of-sample | Fresh − stale | 25 | −2.82% | excludes 0 at 2 of 3 | fails gate 1 (not significant in-sample); same sign |
 
-## 2. Data and Universe
+By lag, in-sample the most recent filings did worst (lag 0: −1.78%, n=17; lag 1: −0.93%, n=38), but the pattern is not
+monotonic beyond that (appendix A1).
 
-- **Universe**: Top 100 US equities by market cap (Massive API filter)
-- **Event tags**: ceo_appointment, ceo_departure, cfo_appointment, cfo_departure, executive_officer_appointment
-- **Event date source (freeze-v2)**: CONFORMED PERIOD OF REPORT from EDGAR submission header (cached by fetch_acceptance_time)
-- **Freshness rule**: lag = trading sessions from period-of-report date to t₀ (after after-close shift). Fresh if lag ≤ 1, stale if lag > 1, undated excluded (0% in pool)
-- **Study window**: In-sample 2024-01-01 to 2025-12-31; Out-of-sample 2026-01-01 to 2026-08-31
-- **Option filters**: 3-6 month bucket, 5% OTM, entry = post-filing close
-- **Pool size**: 170 unique accessions (62 fresh, 108 stale in-sample; 27 fresh, 40 stale out-of-sample)
+## 4. Robustness: does it survive its neighbours, years, and the simple explanation?
 
-**Limitation of event date source**: The period-of-report is when the event happened, which can be before the public heard about it. This mixes the fresh/stale arms (a stale press release may have the same period date as a fresh filing), which can only hide a difference, not create one.
+**Parameter sensitivity** (fresh vs ordinary days, post entry; full table with pre entry in `runs/EXTRAS.md`).
+The edge is below zero in **18 of 18 cells (bucket × OTM × entry) in both windows**: a plateau, not a peak.
 
----
+| Bucket | In-sample 3% / 5% / 10% OTM | Out-of-sample 3% / 5% / 10% OTM |
+|---|---|---|
+| 1m | −0.65% / −0.12% / −1.05%* | −0.90% / −0.23% / −0.10% |
+| 2m | −1.25% / −1.30% / −1.30%* | −2.06% / −2.05% / −1.41%* |
+| 3-6m | −1.32% / −1.19%* / −1.03% | −0.25% / −0.70% / −0.27%* |
 
-## 3. Results Tables
+\* the 95% CI excludes zero at one or more horizons.
 
-### 3.1 In-Sample (2024-01 to 2025-12)
+**By year.** Fresh vs ordinary days: 2024 −0.70% (n=27), 2025 −1.61% (n=32), 2026 out-of-sample −0.70% (n=27).
+No single year carries the result.
 
-| Comparison | n | Edge | 95% CI | Verdict |
-|------------|---|------|--------|---------|
-| Fresh vs Placebo | 55 | -1.19% | excludes 0 at 1 of 3 horizons | **IN-SAMPLE ONLY (worse)** |
-| Stale vs Placebo | 95 | -0.16% | includes 0 | NOT SUPPORTED |
-| Fresh − Stale | 55 | -1.03% | includes 0 | **NOT SUPPORTED** |
+**Direction vs size.** Two things went wrong for the put-seller, in both windows: fresh-event stocks fell more than on
+ordinary days (own-stock move edge −1.32% in-sample, −1.36% out-of-sample), and they moved more than the chain priced
+(median |realized| ÷ implied move 1.08 vs 0.75 on ordinary days in-sample; 0.82 vs 0.65 out-of-sample). The mean ratio
+by horizon is higher for fresh than stale at all four horizons in-sample but only two of four out-of-sample
+(notebook section 12, exploratory). We cannot separate the stock's own move from the market's (the challenge has no
+index data), so part of the direction effect may be market beta.
 
-### 3.2 In-Sample by Lag Bucket
+## 5. Portfolio performance (one put per fresh event on 1/10 of capital, held 21 sessions)
 
-| Lag Bucket | n | Edge | Verdict |
-|------------|---|------|---------|
-| lag 0 | 17 | -1.78% | NOT SUPPORTED |
-| lag 1 | 38 | -0.93% | NOT SUPPORTED |
-| lag 2 | 33 | +0.40% | NOT SUPPORTED |
-| lag 3 | 29 | -0.79% | IN-SAMPLE ONLY (worse) |
-| lag 4+ | 34 | -0.18% | NOT SUPPORTED |
+| Window | Costs | n | Ann. return | Ann. vol | Sharpe | Max DD | Skew | Worst month | Turnover | Worst event |
+|---|---|---|---|---|---|---|---|---|---|---|
+| In-sample | 1× | 55 | −1.2% | 2.1% | −0.57 | −4.6% | −2.26 | −1.51% | 2.7×/yr | −16.5% |
+| In-sample | 2× | 55 | −2.0% | 2.1% | −0.97 | −5.1% | −2.30 | −1.62% | 2.7×/yr | −16.9% |
+| Out-of-sample | 1× | 25 | −3.0% | 2.3% | −1.31 | −2.5% | −1.89 | −1.11% | 3.4×/yr | −10.1% |
+| Out-of-sample | 2× | 25 | −4.6% | 2.3% | −1.98 | −3.5% | −1.84 | −1.27% | 3.4×/yr | −11.2% |
 
-**Lag pattern**: No monotonic decay. lag 2 is positive while lag 0,1 are negative. The fresh arm (lag 0,1) underperforms stale arms.
+![Equity curve of the fresh-filing put portfolio, in-sample and out-of-sample, at 1× and 2× costs](portfolio_F1-leadership-fresh.png)
 
-### 3.3 Out-of-Sample (2026-01 to 2026-08)
+By year (1× costs): in-sample 2024 −0.24%, 2025 −2.25%;
+out-of-sample 2026 −2.18%. **Costs:** there are no quotes in the data, so we charge 5% of the put's premium per side (the
+notebook's assumption), which is a median of 13 bps of notional per side in-sample (interquartile 10-18) and 18 bps
+out-of-sample (15-26). 2× doubles it. The strategy loses before costs; costs only deepen it. Negative skew is the
+short-volatility tail the track warns about.
 
-| Comparison | n | Edge | 95% CI | Verdict |
-|------------|---|------|--------|---------|
-| Fresh vs Placebo | 25 | -0.70% | includes 0 at all 3 horizons | **SUPPORTED (worse than ordinary days)**: significant in-sample, survives dropping its best 3, same sign out-of-sample |
-| Stale vs Placebo | 40 | +2.13% | excludes 0 at 2 of 3 horizons | NOT SUPPORTED (not significant in-sample, where it was −0.16%: the sign flipped) |
-| Fresh − Stale | 25 | -2.82% | excludes 0 at 2 of 3 horizons | NOT SUPPORTED by the gates (not significant in-sample), but the same sign in both windows |
+## 6. Risk management plan
 
-### 3.4 Out-of-Sample by Lag Bucket
+Sizing is fixed at 1/10 of capital per event, cash-secured (collateral = strike × 100), with at most 10 open positions;
+the backtest peaked at 7 (in-sample) and 8 (out-of-sample), so it never ran uncollateralized. The measured risks are a
+worst single event of −16.5% per $1 notional (−1.65% of capital at 1/10 sizing), a worst month of −1.51%, and a maximum
+drawdown of −4.6%. Assignment is covered by the cash collateral; early assignment and dividends are not modelled.
+Because a short put is long the stock, a market-wide selloff hits every open position at once; with 7-8 concurrent
+positions, that is the main tail risk, and we could not measure market beta without index data. The finding itself says
+the opposite trade, buying protection, is where the evidence points; for the original trade the risk plan is simply
+**do not run it after fresh leadership filings**.
 
-| Lag Bucket | n | Edge | Verdict |
-|------------|---|------|---------|
-| lag 0 | 5 | -0.85% | NOT SUPPORTED |
-| lag 1 | 20 | -0.20% | NOT SUPPORTED |
-| lag 2 | 8 | +2.58% | NOT SUPPORTED |
-| lag 3 | 7 | +2.27% | FAILED OUT-OF-SAMPLE |
-| lag 4+ | 25 | +1.93% | NOT SUPPORTED |
+## 7. Liquidity and capacity
 
-**OOS lag pattern**: Stale arms (lag 2,3,4+) show positive edge; fresh arms negative. Fresh-stale gap widens to -2.82%.
+Measured from the sold put's own volume over the 10 calendar days before entry: median 29 contracts per session
+in-sample (18 out-of-sample). One position at 1% of that volume carries about $5k of notional (median; $2k at the 25th
+percentile), and at 10% about $50k ($19k). Ten concurrent positions at 10% participation therefore cap the strategy at
+roughly $0.5M in-sample (about $0.4M out-of-sample). **This is a research finding, not a scalable strategy**; the
+5%-OTM, 3-6 month puts on these names are thinly traded.
 
-**What the data does NOT support**: "Stale filings have a positive edge." Stale was −0.16% in-sample and +2.13% out-of-sample. The sign flipped, so it is not a finding.
+## 8. How many things we tried
 
----
+24 in-sample comparisons are logged in `runs/ledger.jsonl` across 6 pairings: four earlier pairings (three JEV-based
+leadership pairings and a good-news long call) were null, an earnings pairing passed in-sample and failed out-of-sample
+(appendix A3), and the rest are F1's arms and lag buckets.
+At this count a few starred horizons are expected by chance. Only one result held its sign out-of-sample: fresh worse
+than ordinary days. Two out-of-sample looks were taken in total (B6-earnings and F1), each once.
 
-## 4. Exploratory (after out-of-sample): Mechanism Diagnostic
-
-Why put-sellers lose on fresh filings: the realized ÷ implied move ratio (|realized move| ÷ the move the 3-6m ATM chain implied on the pre-event session, scaled to the horizon; above 1 = the move was bigger than priced). Mean ratio by horizon, from the notebook's `decay_table`:
-
-| Window | Group | h=5 | h=21 | h=42 | expiry | n (h=21) |
-|--------|-------|-----|------|------|--------|----------|
-| In-sample | Fresh | 1.34 | 1.09 | 1.17 | 1.14 | 53 |
-| In-sample | Stale | 1.02 | 0.99 | 0.99 | 1.01 | 90 |
-| In-sample | Placebo | 0.86 | 0.91 | 0.91 | 0.90 | 103 |
-| Out-of-sample | Fresh | 0.82 | 1.03 | 1.00 | 0.84 | 23 |
-| Out-of-sample | Stale | 1.01 | 1.08 | 0.88 | 0.70 | 35 |
-| Out-of-sample | Placebo | 0.94 | 0.87 | 0.86 | 0.97 | 100 |
-
-In-sample, fresh filings moved more than the chain priced at every horizon, and more than stale filings and ordinary days. That fits the market **under-pricing fresh leadership shocks**. Out-of-sample the picture is mixed: fresh is below stale at h=5 and h=21, above at h=42 and expiry, on 12-25 fresh events. So the mechanism is supported in-sample only, and we do not claim it replicated.
-
----
-
-## 5. Portfolio Metrics (Calendar Portfolio: 10 notionals, 1 put per fresh event, hold 21 sessions)
-
-| Window | Cost | n | Ann. Return | Ann. Vol | Sharpe | Max DD | Turnover | Worst Event | Max Concurrent |
-|--------|------|---|-------------|----------|--------|--------|----------|-------------|----------------|
-| In-sample | 1× | 55 | -1.2% | 2.1% | -0.57 | -4.6% | 2.7×/yr | -16.5% | 7 |
-| In-sample | 2× | 55 | -2.0% | 2.1% | -0.97 | -5.1% | 2.7×/yr | -16.9% | 7 |
-| Out-of-sample | 1× | 25 | -3.0% | 2.3% | -1.31 | -2.5% | 3.4×/yr | -10.1% | 8 |
-| Out-of-sample | 2× | 25 | -4.6% | 2.3% | -1.98 | -3.5% | 3.4×/yr | -11.2% | 8 |
-
-**Interpretation**: The fresh-only portfolio loses money in both windows. Max concurrent positions (7-8) below the 10-notional capital, so puts were fully collateralized. Worst single event (-16.5% in-sample) driven by CRM Feb 2025 CEO/CFO appointment.
-
----
-
-## 6. Audit Findings
-
-Top 5 and bottom 5 in-sample events checked against period-of-report dates:
-
-**Top 5 (positive edge)**: 4/5 stale — PLTR CAO (stale, lag 2), UNH CFO→advisor (stale, lag 5), UBER GC (fresh, lag 1), INTC Products CEO resign (stale, lag 2), NFLX Hastings (stale, lag 5)
-
-**Bottom 5 (negative edge)**: 3/5 fresh — BA CEO (fresh, lag 1), CRM Pres+CFO (fresh, lag 1), UNH Optum CEO (fresh, lag 1), ORCL Catz (stale, lag 2), ACN CFO (stale, lag 3)
-
-All 10 classifications correct per EDGAR period-of-report. No parser errors. The stale arm contains many large positive events; the fresh arm contains many large negative events.
-
----
-
-## 7. Risk Plan
-
-- **Sizing**: 1/10 of capital per event (10 notionals max concurrent). Current max concurrent 7-8, within limit.
-- **Concurrent-position cap**: 10 notionals (SLOTS). If exceeded, reduce notional per event proportionally.
-- **Worst event**: -16.5% per $1 notional (CRM 2025-02-05). At 1/10 sizing → -1.65% portfolio drawdown per event.
-- **Assignment risk**: 5% OTM puts. Historical assignment rate for 21-day holds on top-100 names ~2-3%. Manage by rolling or closing at 50% profit.
-- **Dividend risk**: Minimal for 21-day holds; ex-dividend dates rarely align.
-- **Market-wide selloff**: Portfolio beta to SPY estimated ~0.8 (individual names). In a 10% SPY drop, expect ~8% portfolio drawdown before put premium cushion.
-
----
-
-## 8. Liquidity and Capacity
-
-- **Leg volume**: 5% OTM puts on top-100 names, 3-6 month expiry. Typical daily volume 500-5000 contracts. 1 contract per event ≈ $50-200k notional.
-- **Capacity**: At 10 concurrent positions, ~$500k-2M notional. Scales to ~$20M before market impact.
-- **Slippage**: COST_HAIRCUT captures 2× bid-ask spread. At 2× haircut, portfolio still negative (Sharpe -1.98 OOS).
-
----
-
-## 9. Sealed-Window Predictions (from PREREG.md)
+## 9. Sealed-window predictions (written after the out-of-sample look, before the sealed window)
 
 1. Fresh cash-secured put below ordinary days (negative edge).
 2. Fresh − stale negative.
-3. At the sealed window's size (about 3 months, likely under 20 fresh events), both intervals include zero: the sign is the prediction, not significance.
-4. Mirror trade, a prediction only (no test is run): a protective put entered after fresh filings beats ordinary days.
+3. With about 3 months of data (likely under 20 fresh events), both intervals include zero: the sign is the prediction.
+4. A prediction only, not tested: a protective put after fresh filings beats ordinary days.
 
----
+## 10. Limitations
 
-## 10. Earlier Tests as Reported Findings
-
-| Pairing | JEV Arm | Strategy | In-Sample Edge | Out-of-Sample | Status |
-|---------|---------|----------|----------------|---------------|--------|
-| P-leadership-low | low | cash_secured_put | -0.53% | — | Null |
-| A1-ceo-change-low | low | cash_secured_put | -1.01% (FRAGILE) | — | Null |
-| A1-ceo-change-low | low | covered_call | -1.78% | — | Null |
-| A3-cfo-exec-low | low | cash_secured_put | -0.58% | — | Null |
-| A3-cfo-exec-low | low | covered_call | -1.10% | — | Null |
-| B5-good-news-call | all | long_call | -0.15% | — | Null |
-| B6-earnings | all | cash_secured_put | +0.39% | -0.46% (FAILED) | Failed OOS |
-| B6-earnings | all | covered_call | +0.83% | -1.59% (FAILED) | Failed OOS |
-
-All JEV-based leadership pairings (P, A1, A3) produced null or negative results. B6-earnings showed in-sample edge that failed out-of-sample.
-
-**Total in-sample comparisons in ledger**: 24 across 2 JEV versions.
-
----
-
-## 11. Process History
-
-- **Excerpt-date parser abandoned before any P&L** (runs/BLOCKED.md): The 8-K excerpts for leadership changes frequently lack explicit announcement dates (~47% undated). The gate requiring ≤20% undated was unachievable without changing the spec.
-- **freeze-v1 → freeze-v2**: Switched from excerpt-date parser to EDGAR period-of-report from submission headers. This is the frozen rule for this experiment.
-
----
-
-## 12. Limitations
-
-1. **Event date source**: EDGAR period-of-report may precede public announcement by days/weeks. This dilutes the fresh/stale distinction and can only hide a true effect, not create a false one. The null result is therefore a conservative test.
-2. **Tag coverage**: executive_officer_appointment includes many non-material role changes (CAO, COO, segment presidents) that may not move options markets.
-3. **Option filter**: 3-6 month bucket, 5% OTM, post-close entry. Different moneyness/tenor/entry timing could yield different results.
-4. **Sample size**: 55 fresh in-sample, 25 fresh out-of-sample. Confidence intervals wide.
-5. **JEV not used**: This experiment uses freshness only. JEV scores were near 0 for all leadership events (no high-JEV leadership events in pool).
-6. **Single strategy**: Only cash_secured_put tested. Covered_call or collar not tested for fresh arm.
-7. **Static universe**: TOP_100 is today's list applied to the whole window (survivorship bias).
-8. **No earnings flag**: Without an earnings calendar we cannot tell which events share their window with an earnings release.
-
----
+1. **Survivorship and look-ahead in the universe:** the top 100 is the September 2026 list applied to 2024-2026. Firms that
+   grew into it are included and firms that dropped out are not. We cannot estimate the effect without point-in-time
+   membership; it changes which events are included, not how each is priced.
+2. **Event date:** the period of report is when the event happened, which can precede the public announcement. That mixes
+   the fresh and stale arms, which can hide a difference but not create one.
+3. **Costs are assumed,** not measured from quotes; the 2× check is how we bound that.
+4. **Corporate actions:** option prices are unadjusted; the synthetic stock ignores dividends and early assignment, which
+   matters for the stock-holding strategies, not for the cash-secured put tested here.
+5. **Small samples,** especially out-of-sample (25 fresh events): only the sign replicated, not significance.
+6. **No earnings calendar,** so some events share their window with an earnings release.
+7. **The reframe ("under-priced") is post-hoc.** It is supported by the in-sample move ratios and the sign of every
+   cell, but only the sealed window can confirm it.
 
 ## Conclusion
 
-**The original hypothesis is rejected both in-sample and out-of-sample.**
+The pre-registered hypothesis is rejected, and the rejection replicated in sign: do not sell protection after fresh
+leadership 8-Ks. The broader claim, that the market under-prices fresh governance shocks, is consistent with the results
+but not proven. It is the prediction we hand to the sealed window, and the next experiment (`runs/PREREG_VRP.md`: a
+pre-registered variance-premium map across all 8-K categories) tests whether it holds outside leadership filings.
 
-- Fresh filings do **not** over-price the move (edge ≤ 0 vs placebo in both windows)
-- Fresh filings do **not** beat stale filings (fresh-stale < 0 in both windows)
-- Edge does **not** decay with lag (lag 2,3,4+ outperform lag 0,1)
-
-The reframed finding: **Freshness matters, but the market under-prices fresh leadership shocks.** The post-filing chain doesn't charge enough for the move that follows, so put-sellers lose, and stale filings behave like ordinary days.
-
-**Recommendation**: Do not deploy the original strategy. The well-argued null is the finding. Future work could test alternative freshness definitions (press release date, news wire timestamp) or restrict to material CEO/CFO changes only, or test the mirror trade (protective put on fresh filings).
+**Sources:** Massive Filings & Disclosures, options contracts and options aggregates APIs (massive.com/docs); SEC EDGAR
+submission headers (acceptance time, period of report); the Gator Quant Hacks / Massive starter notebook (pipeline,
+calendar, synthetic stock, placebo). The earlier JEV tests used the keyword scorer in `jev.py`; F1 does not use JEV.
