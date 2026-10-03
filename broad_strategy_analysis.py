@@ -39,24 +39,32 @@ def analyze():
         a, b = [pd.read_csv(path, parse_dates=['entry_date', 'exit_date']) for path in [event_path, control_path]]
         b = b[[not any(abs((day-d).days) <= 30 for d in disclosure_dates.get(ticker, []))
                for ticker, day in zip(b.ticker, b.entry_date)]]
+        control_lookup = {}
+        for control in b.itertuples(index=False):
+            day = control.entry_date
+            key = (control.strategy, str(control.horizon), control.otm, control.cost_fraction,
+                   control.ticker, day.year, day.quarter, day.dayofweek)
+            control_lookup.setdefault(key, []).append(control)
         matches = []
         for keys, events in a.groupby(['strategy', 'horizon', 'otm', 'cost_fraction'], sort=False):
             strategy, horizon, otm, cost = keys
-            controls = b[(b.strategy == strategy) & (b.horizon.astype(str) == str(horizon))
-                         & (b.otm == otm) & (b.cost_fraction == cost)]
             for event in events.itertuples(index=False):
                 day = event.entry_date
-                ordinary = controls[(controls.ticker == event.ticker)
-                    & (controls.entry_date.dt.year == day.year)
-                    & (controls.entry_date.dt.quarter == day.quarter)
-                    & (controls.entry_date.dt.dayofweek == day.dayofweek)
-                    & ((controls.dte_sessions-event.dte_sessions).abs() <= 7)].copy()
-                ordinary['distance'] = ordinary.entry_date.map(lambda d: abs(p.CAL.get_loc(d)-p.CAL.get_loc(day))).astype('int64')
-                ordinary = ordinary[(ordinary.distance > 0) & (ordinary.distance <= 63)].sort_values(['distance', 'entry_date']).head(3)
-                if ordinary.empty or not np.isfinite(event.net):
+                candidates = control_lookup.get((strategy, str(horizon), otm, cost, event.ticker,
+                                                  day.year, day.quarter, day.dayofweek), [])
+                selected = []
+                for control in candidates:
+                    if not np.isfinite(control.net):
+                        continue
+                    distance = abs(p.CAL.get_loc(control.entry_date)-p.CAL.get_loc(day))
+                    if 0 < distance <= 63 and abs(control.dte_sessions-event.dte_sessions) <= 7:
+                        selected.append((distance, control.entry_date, control))
+                selected.sort(key=lambda item: (item[0], item[1]))
+                if not selected or not np.isfinite(event.net):
                     exclusions.append(dict(tag=folder.name, strategy=strategy, horizon=horizon,
                         otm=otm, cost=cost, ticker=event.ticker, entry_date=day, reason='no strict matched control or missing event net'))
                     continue
+                ordinary = pd.DataFrame([item[2]._asdict() for item in selected[:3]])
                 matches.append(dict(tag=folder.name, strategy=strategy, horizon=str(horizon), otm=otm,
                     cost=cost, ticker=event.ticker, entry_date=day, difference=event.net-ordinary.net.mean(),
                     event_net=event.net, ordinary_net=ordinary.net.mean(), controls=len(ordinary),
