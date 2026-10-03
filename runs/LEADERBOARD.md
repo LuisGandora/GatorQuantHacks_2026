@@ -1,4 +1,4 @@
-# Leaderboard · 2026-10-03 15:27
+# Leaderboard · 2026-10-03 15:33
 
 JEV `20befb5b`: latest check **PASS** (controls high 0%, 69 labels, balanced acc 0.80)
 In-sample comparisons logged: **24** across 2 JEV versions. Expect some starred horizons by chance at this count; only out-of-sample confirms.
