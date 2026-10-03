@@ -87,6 +87,34 @@ class StabilityTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.checked_response(r, p['questions'])
 
+    def test_conditional_signal_cluster_intervals_and_held_company(self):
+        import stability_analysis as a
+        rng = np.random.default_rng(16)
+        n = 120
+        x, z, c = rng.uniform(1, 4, n), rng.uniform(.8, .99, n), rng.uniform(.4, .9, n)
+        d = pd.DataFrame({'intensity': x, 'stability': z, 'confidence_mean': c,
+                          'move_ratio': .3 + .05*x + 3*(z-.8) + rng.normal(0, .03, n),
+                          'cik': [str(i%30) for i in range(n)]})
+        with patch.object(a, 'B', 50):
+            result = a.horizon_analysis(d)
+        effect = result['models']['C']['effects']['stability']
+        self.assertAlmostEqual(effect['coefficient'], 3, delta=.2)
+        self.assertGreater(effect['ci95'][0], 0)
+        self.assertGreater(result['incremental']['C_vs_confidence']['ci95'][0], .9)
+        self.assertGreater(result['matched']['ci95'][0], 0)
+
+    def test_pairs_never_depend_on_returns(self):
+        import stability_analysis as a
+        d = pd.DataFrame({'cik': ['a', 'b', 'a'], 'intensity': [2, 2.1, 2.2],
+                          'stability': [.99, .9, .85], 'move_ratio': [3, 0, 8]})
+        high, low = a.fixed_pairs(d)
+        d['move_ratio'] = [9000, 0, -8000]
+        high2, low2 = a.fixed_pairs(d)
+        np.testing.assert_array_equal(high, high2)
+        np.testing.assert_array_equal(low, low2)
+        self.assertEqual(len(high), 2)
+        self.assertTrue(all(d.cik.iloc[h] != d.cik.iloc[l] for h, l in zip(high, low)))
+
 
 if __name__ == '__main__':
     unittest.main()

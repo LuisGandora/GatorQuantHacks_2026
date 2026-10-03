@@ -372,6 +372,11 @@ def market_outcomes(frame, gate, output=OUTPUT):
         raise ValueError('Economic stage requires unchanged features and passing frozen semantic gate.')
     authorization = {'protocol_hash': digest(PROTOCOL), 'features_hash': gate['features_hash'], 'gate_hash': digest(gate), 'window': PROTOCOL['window']}
     freeze(output / 'outcome_authorization.json', authorization)
+    if (output / 'outcomes.json').exists():
+        stored = json.loads((output / 'outcomes.json').read_text())
+        if json.loads((output / 'outcomes_hash.json').read_text())['sha256'] != digest(stored):
+            raise ValueError('Market outcome integrity failure; no reacquisition permitted.')
+        return pd.DataFrame(stored).merge(frame[frame.valid][['accession_number'] + PROTOCOL['features']], on='accession_number', validate='many_to_one')
     ns = guarded_starter(credentials('MASSIVE_API_KEY'))
     valid = frame[frame.valid].copy()
     for c in ['t_pre', 't_0', 'event_date']:
@@ -424,6 +429,7 @@ def market_outcomes(frame, gate, output=OUTPUT):
             print(f'Market {index}/{len(valid)}', flush=True)
     outcomes = pd.DataFrame(rows)
     freeze(output / 'outcomes.json', records(outcomes))
+    freeze(output / 'outcomes_hash.json', {'sha256': digest(records(outcomes))})
     outcomes.to_csv(output / 'outcomes.csv', index=False)
     save(output / 'pricing_attrition.json', drops)
     return outcomes.merge(valid[['accession_number'] + PROTOCOL['features']], on='accession_number', validate='many_to_one')
