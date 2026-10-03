@@ -53,10 +53,10 @@
       "strategies": ["long_call"],
       "thesis": "Massive's novelty floor ('guidance up, buy a call'). JEV adds nothing unless it also scores direction; guidance updates include cuts.",
       "notes": "In-sample long_call n=103 edge=-0.15% NOT SUPPORTED. All 119 events low-JEV (0.0), high arm empty. Top: INTC Altera deconsolidation +54.7%, CAT guidance +29.2%, TMUS guidance raise +15.5%, AMD acquisition +12.9%, GM guidance +10.7%. Bottom: AVGO VMware acquisition -13.9%, AMD Sanmina acquisition -13.9%, INTU guidance -10.5%, UBER guidance -8.8%, CRM repurchase -6.6%. High variance; guidance raises mix with acquisitions that sell off. JEV doesn't score direction (all 0.0). Thesis not supported for long_call on all 'good news' categories."},
-    {"id": "B6-earnings", "tier": "B", "arm": "all",
-     "tags": ["quarterly_earnings"],
-     "strategies": ["cash_secured_put", "covered_call"],
-     "thesis": "Earnings premium is overpriced, but obvious, boilerplate text (JEV adds nothing) and the post-filing entry misses the vol crush. Run last: largest event count.",
-     "notes": ""}
+{"id": "B6-earnings", "tier": "B", "arm": "all",
+      "tags": ["quarterly_earnings"],
+      "strategies": ["cash_secured_put", "covered_call"],
+      "thesis": "Earnings premium is overpriced, but obvious, boilerplate text (JEV adds nothing) and the post-filing entry misses the vol crush. Run last: largest event count.",
+      "notes": "In-sample cash_secured_put n=117 edge=+0.39% IN-SAMPLE ONLY; covered_call n=118 edge=+0.83% IN-SAMPLE ONLY. All 131 events low-JEV (0.0), high arm empty. Cash-secured put top: LLY +11.3%, AMD +7.4%, FDX +6.1%, BKNG +5.5%, BLK +5.5%. Bottom: LLY Oct -3.1%, LLY Feb -3.4%, MRK -3.9%, MS -5.0%, FDX Dec -6.5%. Covered call top: LLY Aug +20.0%, BKNG +12.4%, MRK +11.7%, LLY Oct +11.2%, VZ +9.9%. Bottom: LLY May -10.1%, MS -9.0%, FDX Dec -8.8%, LLY Feb -6.2%, PEP -7.1%. Positive edge driven by few large outliers (LLY, AMD, MRK); many negative. JEV adds nothing (all 0.0). Ready for OOS."}
   ]
 }

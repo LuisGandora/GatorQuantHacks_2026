@@ -1,7 +1,7 @@
-# Leaderboard · 2026-10-03 04:50
+# Leaderboard · 2026-10-03 05:03
 
 JEV `89552f7a`: latest check **PASS** (controls high 0%, 69 labels, balanced acc 0.80)
-In-sample comparisons logged: **12** across 1 JEV versions. Expect some starred horizons by chance at this count; only out-of-sample confirms.
+In-sample comparisons logged: **16** across 1 JEV versions. Expect some starred horizons by chance at this count; only out-of-sample confirms.
 
 | pairing | tier | arm | strategy | n | in-sample edge | low−high edge | in-sample verdict | versions | OOS edge | OOS verdict | flags |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -18,5 +18,5 @@ In-sample comparisons logged: **12** across 1 JEV versions. Expect some starred 
 | B4-strategic-high | B→C (1) | high | long_call |  |  |  | not run | 0/3 |  |  |  |
 | B4-strategic-high | B→C (1) | high | collar |  |  |  | not run | 0/3 |  |  |  |
 | B5-good-news-call | B→B (119) | all | long_call | 103 | -0.15% |  | NOT SUPPORTED | 1/3 |  |  |  |
-| B6-earnings | B→B (131) | all | cash_secured_put |  |  |  | not run | 0/3 |  |  |  |
-| B6-earnings | B→B (131) | all | covered_call |  |  |  | not run | 0/3 |  |  |  |
+| B6-earnings | B→B (131) | all | cash_secured_put | 117 | +0.39% |  | IN-SAMPLE ONLY (better than ordinary days) | 1/3 |  |  |  |
+| B6-earnings | B→B (131) | all | covered_call | 118 | +0.83% |  | IN-SAMPLE ONLY (better than ordinary days) | 1/3 |  |  |  |
