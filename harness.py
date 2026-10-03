@@ -4,7 +4,7 @@
     python harness.py jev                stage 1: does JEV measure something? text only, no P&L
     python harness.py insample [ID ...]  stage 2: in-sample tests, every arm, one shared placebo per pairing
     python harness.py oos ID [--force]   stage 3: the one out-of-sample look for a pairing
-    python harness.py dates              text only: does the announcement-date parser work? writes runs/date_queue.csv
+    python harness.py dates              text only: coverage of period-of-report dates in EDGAR headers; writes runs/date_queue.csv
     python harness.py portfolio ID       calendar portfolio of a fresh pairing's puts, in-sample (and OOS once looked at)
     python harness.py board              rebuild runs/LEADERBOARD.md from the ledger
 
@@ -12,10 +12,10 @@ The notebook stays the single source of truth: its functions and UPPER_CASE conf
 .ipynb (analysis statements skipped), then pair_test.py on top. Every stage appends to runs/ledger.jsonl
 and rewrites runs/LEADERBOARD.md.
 
-Freshness (arm "fresh"): announcement date = the latest date written in the excerpt (September 3, 2025 /
-Sept. 3, 2025 / 9/3/2025) on or before the filing date; later dates are effective dates and are ignored.
-lag = trading sessions from that date to t_0 (after the after-close shift). fresh if lag <= fresh_max_lag,
-else stale; no usable date = undated, which is excluded from every arm and counted (spec "undated": "exclude").
+Freshness (arm "fresh"): event date = CONFORMED PERIOD OF REPORT in the cached EDGAR header (the earliest event the
+8-K reports; a later effective date never moves it). lag = trading sessions from that date to t_0 (after the
+after-close shift), floored at 0. fresh if lag <= fresh_max_lag, else stale; header without a period = undated,
+which is excluded from every arm and counted (spec "undated": "exclude").
 
 Freeze: insample, oos and portfolio refuse to run unless harness.py, jev.py and jev_scores.csv are identical
 to the newest `freeze-v*` git tag. Every ledger row records the newest tag.
@@ -40,7 +40,7 @@ MIN_LABELS, MIN_BAL_ACC = 30, 0.80
 COMPARISONS = [("all", "placebo"), ("low", "placebo"), ("high", "placebo"), ("low", "high")]
 FRESH_COMPARISONS = [("fresh", "placebo"), ("stale", "placebo"), ("fresh", "stale")] + [(f"lag{b}", "placebo") for b in ("0", "1", "2", "3", "4+")]
 DATE_LABELS = ROOT / "date_labels.csv"    # accession_number,tag,announce_date,note ; announce_date is YYYY-MM-DD, or "none"
-DATE_AGREE_MIN, UNDATED_MAX, MIN_DATE_LABELS = 0.90, 0.20, 20
+UNDATED_MAX = 0.05    # dates gate: share of pool events whose EDGAR header has no period of report
 FROZEN = ("harness.py", "jev.py", "jev_scores.csv")
 SLOTS, HOLD = 10, 21    # portfolio: capital = SLOTS equal notionals, one put per fresh event, held HOLD sessions
 
@@ -148,7 +148,7 @@ def events(P: dict, spec: dict, start: str, end: str, timing: bool = True) -> pd
     if spec.get("fresh_max_lag") is None:
         return ev.assign(arm=np.where(ev.jev >= jev.HIGH, "high", "low")).reset_index(drop=True)
     assert spec.get("undated") == "exclude", "fresh pairings must set \"undated\": \"exclude\""
-    fr = [freshness(t, f, t0, P["CAL"], spec["fresh_max_lag"]) for t, f, t0 in zip(ev.supporting_text.fillna(""), ev.filing_date, ev.t_0)]
+    fr = [freshness(period_of_report(P, u), t0, P["CAL"], spec["fresh_max_lag"]) for u, t0 in zip(ev.filing_url, ev.t_0)]
     ev = ev.assign(announced=pd.to_datetime([a for a, _, _ in fr]), lag=[l for _, l, _ in fr], arm=[a for _, _, a in fr])
     out = ev[ev.arm != "undated"].reset_index(drop=True)
     out.attrs["n_undated"] = len(ev) - len(out)
@@ -156,42 +156,34 @@ def events(P: dict, spec: dict, start: str, end: str, timing: bool = True) -> pd
 
 
 # ---- freshness --------------------------------------------------------------------------------------------
-MONTHS = {m: i for i, m in enumerate("jan feb mar apr may jun jul aug sep oct nov dec".split(), 1)}
-MONTH_WORDS = {w: MONTHS[w[:3]] for m in ("january february march april june july august september october november december".split())
-               for w in (m, m[:3])} | {"may": 5, "sept": 9}
-DATE_RE = re.compile(r"\b(?:(?P<mon>[A-Za-z]{3,9})\.?\s+(?P<d>\d{1,2})(?:st|nd|rd|th)?,?\s+(?P<y>\d{4})|(?P<m2>\d{1,2})/(?P<d2>\d{1,2})/(?P<y2>\d{4}))\b")
+PERIOD_RE = re.compile(r"^CONFORMED PERIOD OF REPORT:\s*(\d{8})", re.M)
 
 
-def dates_in(text: str) -> list[pd.Timestamp]:
-    out = []
-    for m in DATE_RE.finditer(text or ""):
-        mon, d, y = (MONTH_WORDS.get((m["mon"] or "").lower()), m["d"], m["y"]) if m["mon"] else (int(m["m2"]), m["d2"], m["y2"])
-        try:
-            if mon:    # a word that is not a month gives None
-                out.append(pd.Timestamp(int(y), mon, int(d)))
-        except ValueError:    # an impossible day
-            pass
-    return out
+def parse_period(head: str) -> pd.Timestamp | None:
+    """CONFORMED PERIOD OF REPORT (YYYYMMDD) from an EDGAR submission header; None if absent or not a date."""
+    m = PERIOD_RE.search(head or "")
+    return pd.to_datetime(m.group(1), format="%Y%m%d", errors="coerce") if m else None
 
 
-def announce_date(text: str, filing_date) -> pd.Timestamp | None:
-    """Latest date written in the text that is on or before the filing date; later dates are effective dates."""
-    past = [d for d in dates_in(text) if d <= pd.Timestamp(filing_date).normalize()]
-    return max(past) if past else None
+def period_of_report(P: dict, filing_url: str) -> pd.Timestamp | None:
+    """Reads the header the notebook's fetch_acceptance_time caches (calling it first fills the cache)."""
+    P["fetch_acceptance_time"](filing_url)
+    f = P["CACHE_DIR"] / ("sec_" + hashlib.sha1(filing_url.encode()).hexdigest() + ".txt")
+    d = parse_period(f.read_text()) if f.exists() else None
+    return None if pd.isna(d) else d
 
 
 def lag_sessions(cal: pd.DatetimeIndex, ann, t_0) -> int:
-    """Trading sessions strictly after `ann` up to and including `t_0` (the notebook's sessions_between)."""
-    return int(cal.searchsorted(pd.Timestamp(t_0), side="right") - cal.searchsorted(pd.Timestamp(ann), side="right"))
+    """Trading sessions strictly after `ann` up to and including `t_0` (the notebook's sessions_between), floored at 0."""
+    return max(0, int(cal.searchsorted(pd.Timestamp(t_0), side="right") - cal.searchsorted(pd.Timestamp(ann), side="right")))
 
 
-def freshness(text: str, filing_date, t_0, cal: pd.DatetimeIndex, max_lag: int) -> tuple:
-    """(announcement date, lag in sessions, arm) with arm one of fresh / stale / undated."""
-    ann = announce_date(text, filing_date)
-    if ann is None:
+def freshness(period, t_0, cal: pd.DatetimeIndex, max_lag: int) -> tuple:
+    """(event date, lag in sessions, arm) with arm one of fresh / stale / undated."""
+    if period is None:
         return None, None, "undated"
-    lag = lag_sessions(cal, ann, t_0)
-    return ann, lag, "fresh" if lag <= max_lag else "stale"
+    lag = lag_sessions(cal, period, t_0)
+    return period, lag, "fresh" if lag <= max_lag else "stale"
 
 
 def in_arm(res: pd.DataFrame, ev: pd.DataFrame, arm: str) -> pd.DataFrame:
@@ -307,14 +299,14 @@ def stage_test(P, spec, window: str, force: bool = False):
 
 
 def stage_dates(P, cfg):
-    """Text-only check of the date parser against date_labels.csv. Prints no P&L."""
+    """Text-only coverage check of EDGAR period-of-report dates. Agreement with date_labels.csv is info, not a gate."""
     fresh = [s for s in cfg["pairings"] if s.get("fresh_max_lag") is not None]
     if not fresh:
         sys.exit("no pairing sets fresh_max_lag")
     tags = list(dict.fromkeys(t for s in fresh for t in s["tags"]))
     pool = pd.concat([events(P, {"tags": [t]}, P["STUDY_START"], P["OOS_END"], timing=False).assign(tag=t) for t in tags], ignore_index=True)
     pool = pool.drop_duplicates(["accession_number", "tag"])
-    pool["parsed"] = pd.to_datetime([announce_date(t, f) for t, f in zip(pool.supporting_text.fillna(""), pool.filing_date)])
+    pool["parsed"] = pd.to_datetime([period_of_report(P, u) for u in pool.filing_url])
     key = ["accession_number", "tag"]
     labels = pd.read_csv(DATE_LABELS, dtype=str) if DATE_LABELS.exists() else pd.DataFrame(columns=key + ["announcement_date"])
     labels["label"] = pd.to_datetime(labels.announcement_date, errors="coerce")
@@ -322,21 +314,17 @@ def stage_dates(P, cfg):
 
     unlabeled = pool[~pool.set_index(key).index.isin(labels.set_index(key).index)].assign(dated=lambda d: d.parsed.notna())
     queue = unlabeled.sample(frac=1, random_state=len(labels)).groupby(["tag", "dated"]).head(5)
-    queue[["accession_number", "tag", "ticker", "filing_date", "supporting_text"]].to_csv(RUNS / "date_queue.csv", index=False)
+    queue[["accession_number", "tag", "ticker", "filing_date", "parsed", "supporting_text"]].to_csv(RUNS / "date_queue.csv", index=False)
 
     undated_rate = float(pool.parsed.isna().mean())
     dl = lab[lab.label.notna()]
     agree = float((dl.parsed == dl.label).mean()) if len(dl) else np.nan
-    ok = agree >= DATE_AGREE_MIN and undated_rate <= UNDATED_MAX and len(dl) >= MIN_DATE_LABELS
-    with pd.option_context("display.max_colwidth", 200, "display.width", 250):
-        print("Dated labels the parser got wrong:")
-        print(dl[dl.parsed != dl.label][["tag", "ticker", "filing_date", "label", "parsed", "supporting_text"]].head(10).to_string())
-        print(f"\nLabeled undated but the parser found a date: {int((lab.label.isna() & lab.parsed.notna()).sum())}")
-    print(f"\nagreement on dated labels {agree:.2f} over {len(dl)} (min {DATE_AGREE_MIN}, at least {MIN_DATE_LABELS} labels) · "
-          f"undated {undated_rate:.1%} of {len(pool)} pool events (max {UNDATED_MAX:.0%}) -> {'PASS' if ok else 'FAIL'}")
+    ok = undated_rate <= UNDATED_MAX
+    print(f"info: period-of-report agrees with {len(dl)} hand-labelled dates {agree:.2f} (not a gate; labels are announcement dates, the header is the earliest event date)")
+    print(f"undated {undated_rate:.1%} of {len(pool)} pool events (max {UNDATED_MAX:.0%}) -> {'PASS' if ok else 'FAIL'}")
     print(f"{len(queue)} unlabeled excerpts queued in runs/date_queue.csv")
-    log(stage="dates", agreement=agree, undated_rate=undated_rate, n_pool=len(pool), n_labels=len(lab), n_dated_labels=len(dl),
-        status="PASS" if ok else "FAIL")
+    log(stage="dates", source="edgar_period_of_report", agreement=agree, undated_rate=undated_rate, n_pool=len(pool), n_labels=len(lab),
+        n_dated_labels=len(dl), status="PASS" if ok else "FAIL")
 
 
 def event_paths(P, ev: pd.DataFrame, label: str) -> list[tuple]:
@@ -489,14 +477,15 @@ assert demote("A", 39, 40) == "B" and demote("A", 40, 40) == "A" and demote("C",
 
 _cal = pd.bdate_range("2025-01-01", "2025-12-31")
 _ts = pd.Timestamp
-_fresh = lambda text, filed, t_0: freshness(text, _ts(filed), _ts(t_0), _cal, 1)
-assert _fresh("On September 3, 2025 the Board named Jane Doe CEO.", "2025-09-03", "2025-09-03")[1:] == (0, "fresh")      # same-day news
-assert _fresh("On September 3, 2025 the Board named Jane Doe CEO.", "2025-09-03", "2025-09-04")[1:] == (1, "fresh")      # filed after the close: t_0 is the next session
-assert _fresh("On Sept. 3, 2025 the CFO resigned.", "2025-09-08", "2025-09-08")[1:] == (3, "stale")                     # Sept 4, 5, 8: three sessions
-assert _fresh("Effective October 1, 2025 John Roe becomes CFO.", "2025-09-03", "2025-09-03") == (None, None, "undated")  # a future date is an effective date
-assert _fresh("The Board appointed a new Chief Financial Officer.", "2025-09-03", "2025-09-03") == (None, None, "undated")
-assert _fresh("Notified 8/20/2025; on 9/3/2025 he resigned, effective 12/31/2025.", "2025-09-04", "2025-09-04")[:2] == (_ts("2025-09-03"), 1)   # two past dates: the later one
-assert _fresh("Resigned on the 3rd of Septembar 31, 2025.", "2025-09-04", "2025-09-04")[2] == "undated"                  # not a month, not a date
+_hdr = lambda period: "<SEC-HEADER>\nACCESSION NUMBER:\t\t0001-25-1\nCONFORMED SUBMISSION TYPE:\t8-K\n" + (f"CONFORMED PERIOD OF REPORT:\t{period}\n" if period else "") + "FILED AS OF DATE:\t\t20250903\n"
+_fresh = lambda head, t_0: freshness(parse_period(head), _ts(t_0), _cal, 1)
+assert _fresh(_hdr("20250903"), "2025-09-03") == (_ts("2025-09-03"), 0, "fresh")      # period of report = filing day
+assert _fresh(_hdr("20250903"), "2025-09-04") == (_ts("2025-09-03"), 1, "fresh")      # filed after the close: t_0 is the next session
+assert _fresh(_hdr("20250903"), "2025-09-08")[1:] == (3, "stale")                     # Sept 4, 5, 8: three sessions before filing
+assert _fresh(_hdr(None), "2025-09-03") == (None, None, "undated")                    # header without a period of report
+assert _fresh(_hdr("20251001"), "2025-09-03")[1:] == (0, "fresh")                     # a future effective date as the period is floored, not stale
+assert _fresh(_hdr("20250902") + "Effective October 1, 2025 John Roe becomes CFO.", "2025-09-03")[:2] == (_ts("2025-09-02"), 1)   # text dates are ignored
+assert parse_period(_hdr("2025XXXX")) is None or pd.isna(parse_period(_hdr("2025XXXX")))
 _r, _o = daily_returns([(0, np.arange(HOLD + 1) * .001, .02)], _cal, 1)
 assert abs(_r.sum() - (HOLD * .001 - .02) / SLOTS) < 1e-12 and _o.max() == 1 and len(_r) == HOLD + 1
 
