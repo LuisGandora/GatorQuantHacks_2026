@@ -47,6 +47,10 @@ equity_issuance_source/
 dividend_source/
 transaction_source/
 
+# Standalone settlement source census: private HTTP cache and frozen inputs.
+# Only the aggregate public reports (SETTLEMENT_SOURCE.md/json) are repository-visible.
+settlement_source/
+
 # Private frozen input manifest for the transaction identity review. Only the public
 # aggregate reports (TRANSACTION_IDENTITY_REVIEW.md/json) are committed.
 transaction_identity_review/

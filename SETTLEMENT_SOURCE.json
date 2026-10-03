@@ -1,0 +1,189 @@
+{
+  "experiment": "litigation-settlement source-only taxonomy/disclosure feasibility census",
+  "protocol_sha256": "8395a94788cca05b33202007c97096d4b91d0e584ccb86ac313e284e23dc7880",
+  "implementation_sha256": "9bc196394474e380fde98927ac22ad020a3f673e96f4a365600744803143b454",
+  "reused_module_sha256": "7ca3797f613b7a8455c924267e4a11524cfaa0118d2a3bd694f7cea4d2aa66af",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "targets": [
+    "settlement_agreement"
+  ],
+  "target_kind": "the exact Massive tertiary_category tag id settlement_agreement only; no synonyms, no keyword proxies and no category search",
+  "universe": {
+    "size": 100,
+    "sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "requests": {
+    "taxonomy_pages": 1,
+    "network_requests": 2,
+    "cache_hits": 0,
+    "pages_by_tag": {
+      "settlement_agreement": 1
+    },
+    "raw_request_envelopes_preserved": 2
+  },
+  "exact_tag_counts": {
+    "settlement_agreement": {
+      "status": "present",
+      "raw_rows": 797,
+      "in_universe_rows": 24,
+      "outside_universe_rows": 625,
+      "missing_ticker_rows": 148,
+      "dedup_accessions": 24
+    }
+  },
+  "pagination_complete": true,
+  "population_identity": {
+    "enrolled_accessions": 24,
+    "unambiguous_accessions": 24,
+    "ambiguous_accessions": 0,
+    "unassigned_ticker_accessions": 137,
+    "identity_complete": false
+  },
+  "unassigned_accessions": 137,
+  "unassigned_ticker_rows_by_tag": {
+    "settlement_agreement": 148
+  },
+  "per_tag": {
+    "settlement_agreement": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 797,
+      "in_universe_rows": 24,
+      "outside_universe_rows": 625,
+      "missing_ticker_rows": 148,
+      "pages": 1,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 24,
+      "unambiguous_accessions": 24,
+      "unambiguous_issuers": 18,
+      "yearly": {
+        "2024": 11,
+        "2025": 13
+      }
+    }
+  },
+  "union": {
+    "accessions": 24,
+    "unambiguous_accessions": 24,
+    "ambiguous_accessions": 0,
+    "unambiguous_issuers": 18,
+    "cik_count": 18,
+    "yearly": {
+      "2024": 11,
+      "2025": 13
+    }
+  },
+  "collisions": {
+    "ambiguous_multi_ticker_accessions": 0,
+    "conflicting_metadata_accessions": 0,
+    "cik_with_multiple_tickers": 0,
+    "ticker_with_multiple_ciks": 0,
+    "same_cik_filing_date_groups": 0,
+    "same_cik_filing_date_accessions": 0,
+    "unresolved_identity_accessions": 0,
+    "outside_ticker_aliases_recorded": 15
+  },
+  "yearly_distribution": {
+    "2024": 11,
+    "2025": 13
+  },
+  "gate": {
+    "rule": {
+      "min_unambiguous_dedup_accessions": 80,
+      "min_unambiguous_canonical_ticker_issuers": 20,
+      "census_complete": true
+    },
+    "checks": {
+      "unambiguous_dedup_accessions": false,
+      "unambiguous_canonical_ticker_issuers": false,
+      "census_complete": true
+    },
+    "passed": false,
+    "census_complete": true,
+    "observed": {
+      "dedup_accessions": 24,
+      "unambiguous_dedup_accessions": 24,
+      "unambiguous_canonical_ticker_issuers": 18
+    },
+    "decision": "source_gate_failed",
+    "caveat": "Internal source-only feasibility screen; not an organizer rule and not proof of a payoff, an economic effect or a tradable edge."
+  },
+  "decision": "source_gate_failed",
+  "stop_at_metadata": true,
+  "custody": {
+    "checks": {
+      "code_sha256_matches_frozen": true,
+      "reused_module_sha256_matches_frozen": true,
+      "raw_request_envelopes_preserved": true,
+      "all_payload_hashes_valid": true,
+      "taxonomy_pages_match": true,
+      "pages_match_acquisition": true,
+      "rows_match_acquisition": true,
+      "rows_in_window": true,
+      "rows_exact_tag": true,
+      "only_settlement_tag_rows": true,
+      "private_custody_ignored": true
+    },
+    "passed": true,
+    "raw_request_envelopes": 2,
+    "taxonomy_pages": 1,
+    "disclosure_pages": 1,
+    "raw_rows": 797,
+    "in_window_rows": 797,
+    "exact_tag_rows": 797
+  },
+  "source_only": true,
+  "financial_outcomes_read": false,
+  "market_data_requests": 0,
+  "text_endpoint_requests": 0,
+  "model_requests": 0,
+  "jev_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "classification_source": "vendor taxonomy reused as-is; consuming the exact vendor tag is part of the Massive framework, not a new classifier",
+  "provenance_note": "A tag is a vendor classification and does not prove a settlement, a resolved dispute or a tradable event.",
+  "source_vs_financial": "This is a source metadata census only. It is not a financial finding and says nothing about returns, implied volatility, option value or strategy profitability; no price, option, payoff, filing text or model was opened. No economic effect is measured or proven.",
+  "extraction_boundary": "No JEV call is made by this census. Any later verbatim date-span measurement is a separate, not-yet-authorized step whose incremental utility remains unvalidated; arithmetic date subtraction and its sign are not classifiers, but judging an extracted date role is a not-yet-validated judgment.",
+  "public_report_privacy": "No individual ticker, CIK, accession row, filing text or raw API response appears in this public aggregate; only counts are reported.",
+  "preservation": {
+    "earnings_payoff_freeze": {
+      "all_unchanged": true,
+      "checks": {
+        "protocol_sha256": true,
+        "events_sha256": true,
+        "universe_sha256": true,
+        "implementation_sha256": true,
+        "implementation_files_6": true,
+        "source_preservation_sha256": true
+      },
+      "implementation_file_hashes": {
+        "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+        "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+        "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+        "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+        "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+        "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+      }
+    },
+    "credit_terms_protocol": {
+      "all_unchanged": true,
+      "checks": {
+        "declared_matches_protocol_file": true,
+        "metrics_matches_declared": true
+      },
+      "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+    }
+  },
+  "source_constraints": [
+    "static September-2026 TOP_100 carries survivorship bias",
+    "the exact 2024-2025 settlement_agreement count was unknown before this census and is now measured for this scope only",
+    "2024-2025 only; 2026 and the sealed judges window are unopened",
+    "tag rows are vendor classifications, not verified settlements",
+    "pagination completeness and population identity completeness are reported separately",
+    "a gate pass is availability only: not a payoff, matched-power or profitability claim, and not proof of JEV usefulness",
+    "the sealed out-of-sample window is future validation, not a prerequisite to source research"
+  ]
+}
