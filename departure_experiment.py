@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 from jev_experiment import ROOT, HORIZONS, credentials, digest, evaluate_request, starter, validate_response
-from novelty_experiment import sections, sentences
+from novelty_experiment import sentences
 
 OUTPUT = ROOT / 'departure_results'
 CACHE = ROOT / '.departure_cache'
@@ -25,6 +25,15 @@ START, END = '2024-01-01', '2025-12-31'
 STRATEGIES = ['long_call', 'covered_call', 'protective_put', 'collar', 'cash_secured_put']
 BOOTSTRAPS = 1000
 SEED = 20261002
+
+
+def sections(text):
+    """Parse the current Massive core-item format, preserving exact source blocks."""
+    matches = list(re.finditer(r'(?im)^\s*item\.?\s*(\d+\.\d{2})', text))
+    if not matches:
+        raise ValueError('Core-item text has no recognizable Item headers; repair the source explicitly.')
+    return [(m.group(1), text[m.start():matches[i+1].start() if i+1 < len(matches) else len(text)].strip())
+            for i, m in enumerate(matches)]
 
 CONTEXT = (
     'Judge ONLY the executive departure(s) described in `target_disclosure`, at '
@@ -108,8 +117,9 @@ PROTOCOL = {
     'candidate_requirement': 'No automatic winner. A candidate requires a positive modeled net ordinary-day edge with a positive lower 95% bound, at least 0.005 P&L per dollar of spot, corroborating semantic separation and held-company incremental improvement over baseline, and stable cost/horizon sensitivity. Measurement floors are sparsity safeguards, not power guarantees. Execution timing must be resolved before any final OOS freeze.',
     'primary_bucket': '3-6m', 'primary_otm': .05, 'strategies': STRATEGIES,
     'costs': 'starter COST_HAIRCUT=.05: 2*.05*entry premium of explicit option legs / S_entry; synthetic-stock implementation costs, quotes, fees, carry and assignment unavailable',
+    'cost_sensitivity': 'per-side premium haircuts 0%, 5%, 10%; same assumptions for events and controls; modeled scenarios, not measured executable costs',
     'sensitivities': 'all starter buckets 1m,2m,3-6m; all OTM .03,.05,.10; pre/post entry; all fixed horizons; all reported, none selected',
-    'placebo': {'n': 120, 'seed': 7, 'gap_days': 30, 'sampling': 'starter sample_placebo; same tickers weighted by event frequency; deduplicate ticker/session; same-company cluster resampling'},
+    'placebo': {'n': 120, 'seed': 7, 'gap_days': 30, 'sampling': 'starter sample_placebo; same tickers weighted by event frequency; deduplicate ticker/session; same-company cluster resampling; exclude nearby Item 2.02 in primary just as events'},
     'models': {'A': [], 'B': ['baseline_severity', 'baseline_abruptness'],
                'C': ['severity', 'abruptness'], 'D_incremental': ['baseline_severity', 'baseline_abruptness', 'severity', 'abruptness']},
     'regression_gate': '>=30 observations, >=10 companies, >=5 observations per fitted parameter; full rank required; no feature search',
@@ -121,6 +131,11 @@ PROTOCOL = {
 
 def save(path, value):
     path.write_text(json.dumps(value, indent=2, allow_nan=False, default=lambda x: x.item()) + '\n')
+
+
+def records(frame):
+    """Keep missing research measurements as JSON null, never NaN or zero."""
+    return frame.astype(object).where(pd.notna(frame), None).to_dict('records')
 
 
 def freeze(path, value):
@@ -135,7 +150,7 @@ def guarded_starter(key, *, entry_only=False):
     ns['LAST_SESSION'] = ns['CAL'][ns['CAL'].searchsorted(pd.Timestamp(END), side='right')-1]
     get = ns['api_get']
 
-    def bounded_get(path, params=None):
+    def bounded_get(path, params=None, *, scope=None):
         parsed = urlparse(path)
         if parsed.netloc and (parsed.scheme != 'https' or parsed.netloc != 'api.massive.com'):
             raise ValueError('Unexpected pagination host.')
@@ -146,10 +161,14 @@ def guarded_starter(key, *, entry_only=False):
             if not START <= start <= end <= END:
                 raise ValueError('Market request escaped 2024-2025; no cache read or network request made.')
         elif endpoint == '/v3/reference/options/contracts':
-            if not START <= query.get('as_of', '') <= END:
+            # Cursor URLs omit the original as_of. The paginator carries the
+            # already validated initial scope; standalone cursors stay blocked.
+            as_of = query.get('as_of', (scope or {}).get('as_of', '') if 'cursor' in query else '')
+            if not START <= as_of <= END:
                 raise ValueError('Contract request escaped 2024-2025.')
         elif endpoint in ['/stocks/filings/8-K/vX/text', '/stocks/filings/8-K/vX/disclosures']:
-            if 'cursor' not in query and not START <= query.get('filing_date.gte', '') <= query.get('filing_date.lte', '') <= END:
+            filing_scope = {**(scope or {}), **query}
+            if not START <= filing_scope.get('filing_date.gte', '') <= filing_scope.get('filing_date.lte', '') <= END:
                 raise ValueError('Filing request escaped 2024-2025.')
         elif endpoint != '/stocks/taxonomies/vX/disclosures':
             raise ValueError(f'Unapproved research endpoint: {endpoint}')
@@ -173,7 +192,7 @@ def guarded_starter(key, *, entry_only=False):
                 raise ValueError('Incomplete pagination; acquisition stopped rather than accepting a truncated sample.')
             if urlparse(next_url).path != urlparse(path).path:
                 raise ValueError('Pagination changed endpoint.')
-            payload = bounded_get(next_url)
+            payload = bounded_get(next_url, scope=params)
 
     ns.update(api_get=bounded_get, api_get_all=complete_get)
     bars = ns['option_bars']
@@ -324,15 +343,29 @@ def cached_judgment(state, questions, key, output):
     reference = digest({'protocol_hash': digest(PROTOCOL), 'request': request})
     path = CACHE / f'{reference}.json'
     CACHE.mkdir(exist_ok=True)
-    if path.exists():
-        record = json.loads(path.read_text())
-    else:
-        record = evaluate_request(key, state, questions, record_path=path)
-    if record['request'] != request:
-        raise ValueError('JEV cache mismatch; explicit recovery required.')
-    validate_response(record['response'], questions)
+    try:
+        if path.exists():
+            record = json.loads(path.read_text())
+        else:
+            record = evaluate_request(key, state, questions, record_path=path)
+        if record['request'] != request:
+            raise RuntimeError('JEV cache mismatch; explicit recovery required.')
+        validate_response(record['response'], questions)
+    except ValueError as exc:
+        # A malformed answer is an explicit excluded observation, never a
+        # retry until a preferred label appears. Keep its original API record.
+        if not path.exists():
+            raise
+        save(output / 'raw_jev' / f'{reference}.json', json.loads(path.read_text()))
+        raise RejectedJudgment(reference, str(exc)) from exc
     save(output / 'raw_jev' / f'{reference}.json', record)
     return record['response']['answers'], reference
+
+
+class RejectedJudgment(ValueError):
+    def __init__(self, reference, reason):
+        self.reference = reference
+        super().__init__(reason)
 
 
 def evidence_options(state, include_prior):
@@ -358,7 +391,18 @@ def classify(packets, key, output):
     for packet in packets:
         state = packet['state']
         questions = {name: {'type': 'choice', 'instructions': CONTEXT + f'Classify the target departure on {name}.', 'criteria': criteria} for name, criteria in RUBRICS.items()}
-        answers, first_ref = cached_judgment(state, questions, key, output)
+        try:
+            answers, first_ref = cached_judgment(state, questions, key, output)
+        except RejectedJudgment as exc:
+            rows.append({**{k: packet[k] for k in ['accession_number', 'ticker', 'cik', 'filing_date', 'baseline_severity', 'baseline_abruptness', 'baseline_adverse_circumstances', 'baseline_group']},
+                         **{k: None for k in RUBRICS}, 'confidence': None,
+                         'jev_group': 'insufficient', 'eligible': False,
+                         'review_issues': 'invalid_feature_response: '+str(exc), 'evidence': {}, 'probabilities': {},
+                         'baseline_cues': packet['baseline_cues'], 'baseline_evidence': packet['baseline_evidence'],
+                         'request_references': [exc.reference]})
+            save(output / 'semantic_labels.json', rows)
+            print(f'Semantic audit {len(rows)}/{len(packets)}: invalid response excluded, no retry', flush=True)
+            continue
         chosen = {name: answer['choice'] for name, answer in answers.items()}
         evidence_questions, provenance = {}, {}
         for feature in RUBRICS:
@@ -367,8 +411,13 @@ def classify(packets, key, output):
             evidence_questions[feature] = {'type': 'choice',
                 'instructions': CONTEXT + f'Select the strongest exact source span supporting {feature}={chosen[feature]} ({RUBRICS[feature][chosen[feature]]}). Choose none if inconsistent/unsupported. Evidence must concern the target departure. For absent adverse circumstances and neutral direction select the ordinary departure/transition statement; absence is bounded to supplied text.',
                 'criteria': options}
-        evidence_answers, second_ref = cached_judgment(state, evidence_questions, key, output)
         evidence, issues = {}, []
+        try:
+            evidence_answers, second_ref = cached_judgment(state, evidence_questions, key, output)
+        except RejectedJudgment as exc:
+            second_ref = exc.reference
+            evidence_answers = {feature: {'choice': 'none'} for feature in RUBRICS}
+            issues.append('invalid_evidence_response: '+str(exc))
         for feature, answer in evidence_answers.items():
             if answer['choice'] == 'none':
                 issues.append(f'unsupported_{feature}')
@@ -483,7 +532,7 @@ def audit(output=OUTPUT):
         concurrent.append({r['accession_number']: [item for item, _ in sections(r['items_text']) if item in PROTOCOL['concurrent_major_items']] for r in peers})
     labels['earnings_accessions'], labels['concurrent_major_items'] = nearby, concurrent
     labels['earnings_nearby'] = [bool(v) for v in nearby]
-    save(output / 'semantic_labels.json', labels.to_dict('records'))
+    save(output / 'semantic_labels.json', records(labels))
     csv_labels = labels.copy()
     for column in ['evidence', 'probabilities', 'baseline_cues', 'baseline_evidence', 'request_references', 'pricing_notes', 'earnings_accessions', 'concurrent_major_items']:
         csv_labels[column] = csv_labels[column].map(json.dumps)
@@ -495,12 +544,12 @@ def audit(output=OUTPUT):
     labels[numeric].astype(float).corr().to_csv(output / 'feature_correlations.csv')
     pd.crosstab(labels.jev_group, labels.baseline_group).to_csv(output / 'group_overlap.csv')
     save(output / 'feature_counts.json', {c: {str(k): int(v) for k, v in labels[c].value_counts(dropna=False).items()} for c in numeric+['prior_announcement_status', 'jev_group', 'baseline_group']})
-    save(output / 'disagreements.json', labels[labels.jev_group != labels.baseline_group].to_dict('records'))
+    save(output / 'disagreements.json', records(labels[labels.jev_group != labels.baseline_group]))
     # Selection is immutable; coverage is a separate, later non-outcome audit.
     save(output / 'coverage.json', {'total': len(labels), 'priceable': int(labels.priceable.sum()),
         'eligible': int(labels.eligible.sum()), 'earnings_nearby': int(labels.earnings_nearby.sum()),
         'jev_all': group_counts(labels, 'jev_group'), 'baseline_all': group_counts(labels, 'baseline_group'),
-        'protocol_hash': digest(PROTOCOL), 'selection_hash': digest(selection), 'labels_hash': digest(labels.to_dict('records'))})
+        'protocol_hash': digest(PROTOCOL), 'selection_hash': digest(selection), 'labels_hash': digest(records(labels))})
     print(json.dumps(gate, indent=2), flush=True)
     return labels
 
@@ -558,58 +607,62 @@ def interval(values):
 
 
 def contrast(d, p, metric, label_column='jev_group'):
-    """Resample whole companies, shared across events and ordinary-day controls."""
+    """Company-cluster bootstrap using sufficient statistics, not copied rows.
+
+    The same multinomial company weights apply to event and ordinary-day panels.
+    Ordinary-day company means are weighted by matched event counts. This is
+    algebraically equivalent to retaining repeated clusters with fresh IDs.
+    """
     d, p = d.dropna(subset=[metric]), p.dropna(subset=[metric])
-    rng = np.random.default_rng(SEED)
     tickers = sorted(set(d.cik) | set(p.cik))
+    groups = ['routine', 'abrupt_adverse', 'intermediate', 'all']
+    weights = np.random.default_rng(SEED).multinomial(
+        len(tickers), np.full(len(tickers), 1/len(tickers)), size=BOOTSTRAPS
+    ) if tickers else np.empty((BOOTSTRAPS, 0))
+    ordinary = p.groupby('cik')[metric].mean().reindex(tickers)
+    present = ordinary.notna().to_numpy()
+    ordinary_values = ordinary.fillna(0).to_numpy()
+    rows, mean_draws, valid_groups = [], {}, {}
 
-    def stats(a, b):
-        result = {}
-        for group in ['routine', 'abrupt_adverse', 'intermediate', 'all']:
-            selected = a if group == 'all' else a[a[label_column] == group]
-            # Ordinary-day cohort restricted and frequency weighted to the same companies.
-            counts = selected.cik.value_counts()
-            ordinary = b[b.cik.isin(counts.index)]
-            averages = ordinary.groupby('cik')[metric].mean()
-            paired = selected[selected.cik.isin(averages.index)]
-            event_mean = selected[metric].mean()
-            ordinary_mean = float(np.average(paired.cik.map(averages), weights=np.ones(len(paired)))) if len(paired) else np.nan
-            paired_mean = paired[metric].mean()
-            result[group] = {'mean': event_mean, 'placebo_mean': ordinary_mean,
-                             'event_minus_placebo': paired_mean-ordinary_mean,
-                             'paired_event_mean': paired_mean}
-        result['difference'] = result['abrupt_adverse']['mean']-result['routine']['mean']
-        return result
+    def weighted_mean(w, sums, counts):
+        numerator, denominator = w @ sums, w @ counts
+        return np.divide(numerator, denominator, out=np.full_like(numerator, np.nan, dtype=float), where=denominator > 0)
 
-    point = stats(d, p)
-    valid_groups = {group: len(d[d[label_column] == group]) >= 10 and d.loc[d[label_column] == group, 'cik'].nunique() >= 5
-                    for group in ['routine', 'abrupt_adverse', 'intermediate']}
-    valid_groups['all'] = len(d) >= 30 and d.cik.nunique() >= 10
-    draws = []
-    if len(tickers) >= 5:
-        event_clusters = {t: d[d.cik == t] for t in tickers}
-        placebo_clusters = {t: p[p.cik == t] for t in tickers}
-        for _ in range(BOOTSTRAPS):
-            chosen = rng.choice(tickers, len(tickers), replace=True)
-            # Each selected cluster retains multiplicity in both panels. Renaming
-            # cluster ids makes placebo matching work even for repeated draws.
-            a = pd.concat([event_clusters[t].assign(cik=str(i)) for i, t in enumerate(chosen)], ignore_index=True)
-            b = pd.concat([placebo_clusters[t].assign(cik=str(i)) for i, t in enumerate(chosen)], ignore_index=True)
-            draws.append(stats(a, b))
-    rows = []
-    for group in ['routine', 'abrupt_adverse', 'intermediate', 'all']:
+    for group in groups:
         selected = d if group == 'all' else d[d[label_column] == group]
+        agg = selected.groupby('cik')[metric].agg(['sum', 'count']).reindex(tickers, fill_value=0)
+        sums, counts = agg['sum'].to_numpy(float), agg['count'].to_numpy(float)
+        matched_counts = counts * present
+        matched_sums = sums * present
+        placebo_sums = ordinary_values * matched_counts
+        mean_boot = weighted_mean(weights, sums, counts)
+        edge_boot = weighted_mean(weights, matched_sums-placebo_sums, matched_counts)
+        point_weights = np.ones((1, len(tickers)))
+        point_mean = weighted_mean(point_weights, sums, counts)[0]
+        point_placebo = weighted_mean(point_weights, placebo_sums, matched_counts)[0]
+        point_paired = weighted_mean(point_weights, matched_sums, matched_counts)[0]
+        paired = selected[selected.cik.isin(ordinary.dropna().index)]
+        min_n, min_companies = (30, 10) if group == 'all' else (10, 5)
+        enough = len(selected) >= min_n and selected.cik.nunique() >= min_companies
+        enough_matched = len(paired) >= min_n and paired.cik.nunique() >= min_companies
+        valid_groups[group] = enough
+        mean_draws[group] = mean_boot
         row = {'group': group, 'n': len(selected), 'companies': selected.cik.nunique(),
-               'placebo_n': len(p[p.cik.isin(selected.cik)]),
-               'matched_events': int(selected.cik.isin(set(p.cik)).sum()),
-               'inferential_gate_passed': valid_groups[group], **point[group]}
-        for estimate in ['mean', 'event_minus_placebo']:
-            ci = interval([b[group][estimate] for b in draws]) if valid_groups[group] else {'ci_low': np.nan, 'ci_high': np.nan, 'bootstrap_valid': 0}
+               'placebo_n': len(p[p.cik.isin(selected.cik)]), 'matched_events': len(paired),
+               'matched_companies': paired.cik.nunique(), 'inferential_gate_passed': enough,
+               'matched_inferential_gate_passed': enough_matched,
+               'mean': point_mean, 'median': selected[metric].median(),
+               'q05': selected[metric].quantile(.05), 'share_negative': float((selected[metric] < 0).mean()) if len(selected) else np.nan,
+               'placebo_mean': point_placebo, 'paired_event_mean': point_paired,
+               'event_minus_placebo': point_paired-point_placebo}
+        for estimate, draws, permitted in [('mean', mean_boot, enough), ('event_minus_placebo', edge_boot, enough_matched)]:
+            ci = interval(draws) if permitted else {'ci_low': np.nan, 'ci_high': np.nan, 'bootstrap_valid': 0}
             row.update({estimate+'_'+k: v for k, v in ci.items()})
         rows.append(row)
-    ci = interval([b['difference'] for b in draws]) if valid_groups['routine'] and valid_groups['abrupt_adverse'] else {'ci_low': np.nan, 'ci_high': np.nan, 'bootstrap_valid': 0}
+    permitted = valid_groups['routine'] and valid_groups['abrupt_adverse']
+    ci = interval(mean_draws['abrupt_adverse']-mean_draws['routine']) if permitted else {'ci_low': np.nan, 'ci_high': np.nan, 'bootstrap_valid': 0}
     rows.append({'group': 'abrupt_adverse_minus_routine', 'n': len(d), 'companies': d.cik.nunique(),
-                 'inferential_gate_passed': valid_groups['routine'] and valid_groups['abrupt_adverse'], 'mean': point['difference'],
+                 'inferential_gate_passed': permitted, 'mean': rows[1]['mean']-rows[0]['mean'],
                  **{'mean_'+k: v for k, v in ci.items()}})
     return rows
 
@@ -669,7 +722,7 @@ def incremental_models(d, metric):
         coverage = len(delta)/len(d) if len(d) else 0
         rows.append({'model': target, 'term': 'company_held_out_MSE_improvement', 'n': len(delta),
                      'companies': d.loc[delta.index, 'cik'].nunique(), 'prediction_coverage': coverage,
-                     'estimate': delta.mean() if coverage >= .8 else np.nan,
+                     'estimate': delta.mean() if coverage >= .8 and len(delta) >= 30 else np.nan,
                      'status': 'estimated' if coverage >= .8 and len(delta) >= 30 else 'incomplete_company_held_out_predictions',
                      **(interval(loss_draws[target]) if coverage >= .8 and len(delta) >= 30 else {'ci_low': np.nan, 'ci_high': np.nan, 'bootstrap_valid': 0})})
     return rows
@@ -713,14 +766,23 @@ def analyze(long, placebo, labels, output):
 def skipped_results(output, reason):
     """Report every required endpoint as not run, never as a zero/null effect."""
     rows = [{**spec, 'horizon': h, 'strategy': strategy, 'status': 'not_run_measurement_gate', 'reason': reason,
-             'event_n': 0, 'gross': None, 'net': None, 'placebo': None, 'ci_low': None, 'ci_high': None}
+             'event_n': None, 'gross': None, 'net': None, 'placebo': None, 'ci_low': None, 'ci_high': None}
             for spec in specifications() for h in HORIZONS for strategy in STRATEGIES]
     pd.DataFrame(rows).to_csv(output / 'not_run_endpoints.csv', index=False)
 
 
 def run(output=OUTPUT):
-    labels = audit(output)
+    # Acquisition and scoring are an explicit prior command. Never reacquire or
+    # reclassify as an implicit part of opening historical outcomes.
+    if json.loads((output / 'protocol.json').read_text()) != PROTOCOL:
+        raise ValueError('Frozen protocol mismatch; outcomes remain closed.')
     gate = json.loads((output / 'gate.json').read_text())
+    selection = json.loads((output / 'selection.json').read_text())
+    labels = pd.DataFrame(json.loads((output / 'semantic_labels.json').read_text())) if selection['category'] else None
+    if labels is not None:
+        coverage = json.loads((output / 'coverage.json').read_text())
+        if coverage['labels_hash'] != digest(records(labels)) or readiness(labels) != gate:
+            raise ValueError('Audit snapshot changed; outcomes remain closed.')
     if not gate['passed']:
         skipped_results(output, '|'.join(gate['reasons']))
         return False
@@ -732,13 +794,13 @@ def run(output=OUTPUT):
         skipped_results(output, 'source_evidence_review_required')
         return False
     review = json.loads(review_file.read_text())
-    if review['labels_hash'] != digest(labels.to_dict('records')) or not review['passed']:
+    if review['labels_hash'] != digest(records(labels)) or not review['passed']:
         save(output / 'gate.json', {**gate, 'passed': False, 'reasons': ['source_evidence_review_failed_or_changed']})
         skipped_results(output, 'source_evidence_review_failed_or_changed')
         return False
     freeze(output / 'outcome_authorization.json', {'protocol_hash': digest(PROTOCOL),
         'selection_hash': digest(json.loads((output / 'selection.json').read_text())),
-        'labels_hash': digest(labels.to_dict('records')), 'measurement_gate': gate, 'evidence_review': review})
+        'labels_hash': digest(records(labels)), 'measurement_gate': gate, 'evidence_review': review})
     events = pd.read_csv(output / 'events.csv', dtype={'cik': str})
     for c in ['t_0', 't_pre', 'event_date', 'filing_date']:
         events[c] = pd.to_datetime(events[c])

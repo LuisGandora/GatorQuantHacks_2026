@@ -123,9 +123,13 @@ def validate_response(result, questions):
         else:
             raise ValueError('This integration supports Score and Choice questions.')
         p = answer['probabilities']
-        if set(p) != options or any(not 0 <= v <= 1 for v in p.values()) or not np.isclose(sum(p.values()), 1, atol=.001):
+        # The API returns probabilities rounded to hundredths. A vector with n
+        # entries can lose at most n * .005 of mass through rounding. Preserve
+        # the reported vector; never renormalize it or alter the chosen label.
+        rounding_bound = len(options) * .005 + 1e-9
+        if set(p) != options or any(not np.isfinite(v) or not 0 <= v <= 1 for v in p.values()) or sum(p.values()) <= 0 or abs(sum(p.values())-1) > rounding_bound:
             raise ValueError(f'Invalid probability distribution: keys={list(p)}, sum={sum(p.values())}')
-        if question['type'] == 'choice' and p[answer['choice']] != max(p.values()):
+        if question['type'] == 'choice' and not np.isclose(p[answer['choice']], max(p.values()), rtol=0, atol=1e-12):
             raise ValueError('JEV Choice is not a highest-probability option.')
 
 
