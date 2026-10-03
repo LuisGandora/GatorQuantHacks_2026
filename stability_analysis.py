@@ -254,6 +254,10 @@ def report(summary, output=s.OUTPUT):
     d = m['distributions']
     def fmt(value, n=4):
         return 'not measured' if value is None else f'{value:.{n}f}'
+    def interval(value, bounds, scale=1, n=3):
+        if value is None or bounds is None:
+            return 'not estimated'
+        return f'{value*scale:.{n}f} [{bounds[0]*scale:.{n}f}, {bounds[1]*scale:.{n}f}]'
     lines = ['# Experiment 2 results: continuous JEV semantic stability', '',
              f'**Decision: `{summary["decision"]["decision"]}`.** '+('The frozen semantic feasibility gate failed; economic outcomes were not opened. This is a measurement-feasibility result, not a null economic effect.' if not gate['passed'] else 'The semantic gate passed and all permitted in-sample horizons were evaluated. No strategy or OOS result was selected.'), '',
              '## 1. Implementation and preservation', '',
@@ -273,6 +277,7 @@ def report(summary, output=s.OUTPUT):
     for name, value in m['correlations'].items():
         lines.append(f'| {name} | {fmt(value["pearson"])} | {fmt(value["spearman"])} |')
     lines += ['', f'Residual stability SD after intensity and confidence: **{fmt(m["residual_stability_sd"])}**; fraction of raw SD: **{fmt(m["residual_sd_fraction"])}**. Standardized condition number: **{fmt(m["condition_number"])}**.', '',
+              'The features vary enough to pass the frozen measurement gate. Stability is strongly associated with confidence (Pearson 0.812), while retaining measurable residual variation. Passing this gate establishes that the conditional economic question can be tested; it does not establish useful market information.', '',
               f'Frozen gate: **{"PASS" if gate["passed"] else "FAIL"}**. Reasons: `{json.dumps(gate["reasons"])}`. All thresholds are in the protocol; none were relaxed.', '',
               '## 4. JEV performance', '',
               f'Research measurement: ten judgments in one logical request per filing; **{measurement["requests"]}** actual HTTP requests, **{measurement["retries"]}** retries, **{measurement["malformed"]}** malformed requests and **{measurement["valid_judgments"]}** valid judgments. Sum of first-measurement request wall times: **{measurement["first_measurement_wall_s"]:.3f}s**; processing wall time: **{measurement["processing_wall_s"]:.3f}s**. Filing wall latency mean/median/p95: **{measurement["latency_per_filing"]["mean"]:.3f}/{measurement["latency_per_filing"]["median"]:.3f}/{measurement["p95_s"]:.3f}s**. Valid judgments per summed request second: **{measurement["judgments_per_second"]:.2f}**.', '',
@@ -293,7 +298,18 @@ def report(summary, output=s.OUTPUT):
             cs = v['models'].get('C', {})
             effect = cs.get('effects', {}).get('stability', {})
             a, b = correlations.get('intensity', {}), correlations.get('stability', {})
-            lines.append(f'| {h} | {v["n"]} / {v["companies"]} | {fmt(a.get("pearson"))} {a.get("pearson_ci95")} | {fmt(b.get("pearson"))} {b.get("pearson_ci95")} | {fmt(effect.get("effect_per_iqr"))} {effect.get("iqr_ci95")} |')
+            lines.append(f'| {h} | {v["n"]} / {v["companies"]} | {interval(a.get("pearson"), a.get("pearson_ci95"))} | {interval(b.get("pearson"), b.get("pearson_ci95"))} | {interval(effect.get("effect_per_iqr"), effect.get("iqr_ci95"))} |')
+    if summary['economic'] is not None:
+        attrition = summary['economic']['attrition']
+        lines += ['', f'Entry pricing was available for **{attrition["available_entry_accessions"]} / {m["valid"]}** semantic filings. Excluding **{attrition["earnings_nearby_accessions"]}** with Item 2.02 within one trading session leaves **{attrition["primary_accessions_with_any_outcome"]}** filings from **{attrition["primary_companies_with_any_outcome"]}** companies with some usable outcome. The primary +1-session sample has 100 filings. Across all entry-priced filings and nine horizons, 41 exit rows lack usable marks and 38 fall outside 2024–2025 or after the selected expiry; these are horizon rows, not 79 distinct filings.', '',
+                  'Entry attrition: eight filings lack a liquid near-dated parity pair, six lack an ATM pair trading near the pre-event session, and one lacks paired strikes near spot. No market outcome was used to exclude a semantic filing.', '',
+                  '| Horizon | Mean ratio [95% CI] | Median | SD | IQR | Intensity Spearman [95% CI] | Stability Spearman [95% CI] |',
+                  '|---|---|---:|---:|---:|---|---|']
+        for h in s.HORIZONS:
+            v = summary['economic']['primary'][str(h)]
+            dist = v['distribution']; a, b = v['correlations']['intensity'], v['correlations']['stability']
+            lines.append(f'| {h} | {interval(dist["mean"], v["mean_ci95"])} | {fmt(dist["median"],3)} | {fmt(dist["sd"],3)} | {fmt(dist["iqr"],3)} | {interval(a["spearman"],a["spearman_ci95"])} | {interval(b["spearman"],b["spearman_ci95"])} |')
+        lines += ['', 'Intervals use 1,000 company bootstrap draws with frozen seed 20261002. They are pointwise 95% intervals, without a multiple-comparison correction. +1 session is the predeclared primary horizon. Model C includes intensity, stability and mean confidence; each IQR effect uses the feature spread in that horizon’s usable sample. Every confidence-adjusted stability interval includes zero.']
     lines += ['', 'The primary outcome divides absolute realized movement by the **full-expiry** pre-event ATM implied magnitude. Ratios below/above one at short horizons do not establish option mispricing. Pre-event entry is hypothetical; parity prices, stale trade closes, dividends/American exercise and late-year censoring limit inference.', '',
               '## 6. Main comparable-intensity comparison', '']
     if summary['economic'] is None:
@@ -301,12 +317,25 @@ def report(summary, output=s.OUTPUT):
                   f'Qualifying cross-company pairs using intensity gap≤.25 and stability gap≥.02: **{summary["semantic_pair_count"]}**. Pair counts are not independent sample sizes.']
     else:
         matched_result = summary['economic']['primary']['1']['matched']
-        lines += [f'At +1 session, matched-style results: `{json.dumps(matched_result, sort_keys=True)}`. Higher-minus-lower stability comparisons include every semantic-qualified cross-company pair; endpoints are reused and company multiplicities determine uncertainty. Regression model C is the primary adjusted test.']
+        lines += [f'At +1 session, **{matched_result["pairs"]}** qualifying pairs reuse **{matched_result["endpoints"]}** filings from **{matched_result["companies"]}** companies. Mean absolute intensity gap is **{matched_result["mean_absolute_intensity_gap"]:.3f}** and mean stability gap is **{matched_result["mean_stability_difference"]:.3f}**. Higher-minus-lower stability has mean movement-ratio difference **{interval(matched_result["mean_outcome_difference"], matched_result["ci95"])}**. Its point estimate has the opposite sign to model C and its interval includes zero.', '',
+                  'The frozen pairing rule uses intensity gap ≤0.25, stability gap ≥0.02 and different companies. Every qualifying pair is retained. Pair counts are not independent sample sizes: company bootstrap multiplicities weight both endpoints. Model C is the primary adjusted test.', '',
+                  '| Horizon | Pairs / unique filings / companies | Higher-minus-lower ratio [95% CI] |', '|---|---:|---|']
+        for h in s.HORIZONS:
+            v = summary['economic']['primary'][str(h)]['matched']
+            lines.append(f'| {h} | {v["pairs"]} / {v["endpoints"]} / {v["companies"]} | {interval(v["mean_outcome_difference"],v["ci95"])} |')
     lines += ['', '## 7. Incremental information', '']
     if summary['economic'] is None:
         lines += ['Whether intensity predicts outcomes, whether stability predicts outcomes, whether stability adds to intensity, and whether it adds beyond confidence are **all unmeasured**. Semantic correlations describe measurement geometry only. No predictive skill, coefficient, zero effect or p-value is inferred.']
     else:
-        lines += [f'Primary held-company comparisons: `{json.dumps(summary["economic"]["primary"]["1"]["incremental"], sort_keys=True)}`. Positive values mean reduced held-company MSE; confidence intervals and effect magnitudes govern interpretation. All model coefficients, R², Pearson/Spearman intervals and horizon results are in the aggregate JSON. Training fit alone is not incremental predictive evidence.']
+        lines += ['Intensity alone does not show a clear primary association: model A’s intensity effect per IQR is −0.0184, with 95% CI [−0.0464, +0.0002]. Stability’s primary intensity-adjusted effect is −0.0254 [−0.1050, +0.0207]; adding confidence gives −0.0470 [−0.2397, +0.0667]. Neither establishes a primary effect.', '',
+                  'A fits intensity; B adds stability; C adds mean confidence. The confidence comparator fits intensity and confidence. Each held-company prediction excludes every filing from that company during fitting. Positive proportional MSE improvement means better prediction; negative means worse.', '',
+                  '| Horizon | B versus A improvement %, [95% CI] | C versus confidence comparator %, [95% CI] |', '|---|---|---|']
+        for h in s.HORIZONS:
+            v = summary['economic']['primary'][str(h)]['incremental']
+            a, b = v['B_vs_A'], v['C_vs_confidence']
+            lines.append(f'| {h} | {interval(a["proportional_improvement"],a["ci95"],100,2)} | {interval(b["proportional_improvement"],b["ci95"],100,2)} |')
+        lines += ['', 'Stability worsens point-estimate prediction beyond confidence at all nine horizons. At +1 session the increase in MSE is 5.55%, with the improvement interval entirely negative. B versus A has one positive point estimate, at +10 sessions, with uncertainty including zero. These leave-one-company-out checks use only 2024–2025 data; they are internal in-sample diagnostics, not the untouched OOS test.', '',
+                  'Prediction intervals bootstrap the saved held-company errors; they do not refit every validation fold within each bootstrap draw. Training R² rises from 0.0103 (A) to 0.0189 (B) to 0.0226 (C), which does not establish incremental predictive skill. Full coefficients and training fits remain in the aggregate JSON.']
     lines += ['', '## 8. Robustness', '',
               'Planned comparisons retain all nine horizons, alternative dispersion metrics, quadratic intensity, mean confidence, company-cluster dependence, leave-one-company-out predictions, excluding/including adjacent earnings, horizon-scaled denominator and removing the largest company. '+('They were **not run economically** after the failed gate; measurement-feasibility thresholds remain fixed.' if summary['economic'] is None else 'All are reported in the aggregate JSON without selecting a preferred cell. Correlated sensitivity results are not independent replications.'), '',
               '## 9. Interpretation and practical limits', '',
@@ -320,6 +349,23 @@ def report(summary, output=s.OUTPUT):
               '## Artifacts and reproduction', '',
               'See `STABILITY_EXPERIMENT_PROTOCOL.md` for exact protocol, formulas, gates, sources, limitations and stage commands. Public `STABILITY_METRICS.json` contains aggregate evidence and immutable hashes; local `stability_results/semantic_features.csv`, `latency_metrics.json`, `gate.json`, `hypothesis_decision.json` and raw response records preserve the audit trail. Economic files exist only if the gate passed. The separate schema-rejection archive remains intact.', '',
               'Figures in `stability_results/figures/`: semantic geometry and measured latency; economic scatter/quartiles/matrix '+('are explicitly marked not evaluated.' if summary['economic'] is None else 'show all planned specifications without horizon selection.'), '']
+    if summary['economic'] is not None:
+        r = summary['economic']['robustness']['1']
+        sensitivity = ['', '| +1-session specification | Adjusted agreement effect per IQR [95% CI] |', '|---|---|']
+        effects = [('Horizon-scaled denominator', r['scaled_outcome']['models']['C']['effects']['stability']),
+                   ('Include adjacent earnings', r['include_earnings']['models']['C']['effects']['stability']),
+                   ('Quadratic intensity', r['quadratic_intensity']['effects']['stability']),
+                   ('Remove largest company', r['delete_largest_company']['result']['models']['C']['effects']['stability'])]
+        effects += [(f'Agreement = negative {name}', model['effects']['alternative_agreement']) for name, model in r['alternative_dispersion'].items()]
+        for name, effect in effects:
+            sensitivity.append(f'| {name} | {interval(effect["effect_per_iqr"],effect["iqr_ci95"])} |')
+        interaction = summary['economic']['primary']['1']['models']['interaction']['effects']['centered_intensity_times_centered_stability']
+        sensitivity += ['', f'The primary centered intensity × stability interaction effect per IQR is {interval(interaction["effect_per_iqr"], interaction["iqr_ci95"])}. All primary sensitivity intervals include zero. Negative MPAD is an exact linear transformation of primary stability, so it is not an independent confirmation. The scaled denominator changes outcome units and is a diagnostic assumption, not an option-pricing valuation.', '',
+                        'The C stability point estimate has the same sign at seven of nine horizons, and primary sensitivity point estimates retain that sign. Directional consistency passes its prerequisite, while primary magnitude/uncertainty, held-company improvement and matched confirmation fail. The +10-session matched interval excludes zero, but its confidence-adjusted regression interval includes zero; this secondary result does not replace the frozen primary horizon.', '']
+        lines[lines.index('## 9. Interpretation and practical limits'):lines.index('## 9. Interpretation and practical limits')] = sensitivity
+    usage = summary['usage_research_and_benchmark']
+    usage_line = f'Successful research and benchmark usage: **{usage["successful_responses"]:,} responses**, **{usage["input_tokens"]:,} input tokens**, **{usage["output_tokens"]:,} output tokens**. These counts exclude the 133 rejected schema requests. No dollar cost or trading cost was estimated.'
+    lines[lines.index('## 5. Primary economic results across all required horizons'):lines.index('## 5. Primary economic results across all required horizons')] = [usage_line, '']
     (s.ROOT/'STABILITY_EXPERIMENT_RESULTS.md').write_text('\n'.join(lines))
 
 
