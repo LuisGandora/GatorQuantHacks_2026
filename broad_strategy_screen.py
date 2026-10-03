@@ -39,6 +39,7 @@ def enrich(priced, p):
             for cost in [0, .025, .05, .10]:
                 output.append(dict(ticker=row['ticker'], entry_date=row['entry_date'],
                     exit_date=row['exit_date'], horizon=row['horizon'], otm=row['otm'],
+                    expiry=row['expiry'], dte_sessions=row['dte_sessions'],
                     strategy=strategy, cost_fraction=cost, gross=gross,
                     net=gross-(cost*sum(premiums+closing)+.013*len(legs))/row['S_entry'],
                     premium_fraction=sum(premiums)/row['S_entry'],
@@ -129,9 +130,58 @@ def price(tag, enrichment=False):
     (dest / 'pricing_complete.json').write_text(json.dumps(dict(status='gross starter pricing complete; no inference yet', events=len(events), caveat='synthetic stock and aggregate option marks; not executable net returns')))
 
 
+def price_all():
+    """Sequential collection, independent of any estimated performance."""
+    for tag in pd.read_csv(OUT / 'category_inventory.csv').query('eligible_for_discovery').tag:
+        print(f'BEGIN {tag}', flush=True)
+        price(tag, enrichment=True)
+        print(f'COMPLETE {tag}', flush=True)
+
+
+def summarize():
+    """Descriptive diagnostic only: no unadjusted significance or edge labels."""
+    rows = []
+    for tag in pd.read_csv(OUT / 'category_inventory.csv').query('eligible_for_discovery').tag:
+        dest = OUT / tag
+        paths = [dest / f'{arm}_cost_sensitivity.csv.gz' for arm in ['events', 'ordinary']]
+        if not all(path.exists() for path in paths):
+            continue
+        event, ordinary = [pd.read_csv(path) for path in paths]
+        for strategy in STRATEGIES:
+            for horizon in ['1', '2', '3', '5', '10', '21', '42', '63', 'exp']:
+                for cost in [0, .025, .05, .10]:
+                    frames = []
+                    for frame in [event, ordinary]:
+                        subset = frame[(frame.strategy == strategy) & (frame.horizon.astype(str) == horizon)
+                                       & (frame.otm == .05) & (frame.cost_fraction == cost)]
+                        frames.append(subset.dropna(subset=['net']))
+                    a, b = frames
+                    shared = set(a.ticker) & set(b.ticker)
+                    a, b = a[a.ticker.isin(shared)], b[b.ticker.isin(shared)]
+                    # Each event gets its company's ordinary-day average. This is a
+                    # descriptive diagnostic, not the stricter calendar/DTE match.
+                    controls = b.groupby('ticker').net.mean()
+                    differences = a.net - a.ticker.map(controls)
+                    rows.append(dict(tag=tag, strategy=strategy, horizon=horizon, cost_fraction=cost,
+                        events=len(a), ordinary_trades=len(b), companies=len(shared),
+                        event_mean=a.net.mean(), ordinary_mean=a.ticker.map(controls).mean(),
+                        difference=differences.mean(), entry_premium=a.premium_fraction.mean(),
+                        ordinary_premium=b.premium_fraction.mean(), event_abs_move=a.absolute_move.mean(),
+                        ordinary_abs_move=b.absolute_move.mean(), event_upside_tail=a.upside_tail.mean(),
+                        ordinary_upside_tail=b.upside_tail.mean(), event_downside_tail=a.downside_tail.mean(),
+                        ordinary_downside_tail=b.downside_tail.mean(), zero_capacity_events=int((a.capacity_contracts == 0).sum()),
+                        conclusion='DESCRIPTIVE ONLY: strict matching and dependence inference pending'))
+    pd.DataFrame(rows).to_csv(OUT / 'descriptive_diagnostics.csv', index=False)
+    print(f'Saved {len(rows)} descriptive diagnostics; no significance conclusions.')
+
+
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
-    if len(sys.argv) > 1:
+    if len(sys.argv) > 1 and sys.argv[1] == 'all':
+        price_all()
+    elif len(sys.argv) > 1 and sys.argv[1] == 'summarize':
+        summarize()
+    elif len(sys.argv) > 1:
         price(sys.argv[1], enrichment='--enrich' in sys.argv)
     else:
         register()
