@@ -22,3 +22,6 @@ stability_results_api_rejected_v1/
 
 .fingerprint_cache/
 fingerprint_results/
+
+# Original filing packages and source-backed Experiment 3B audit records
+full_source_results/
