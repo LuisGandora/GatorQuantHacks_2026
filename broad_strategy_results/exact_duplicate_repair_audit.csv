@@ -2,3 +2,12 @@ category,file,original_rows,retained_rows,exact_duplicate_rows
 debt_issuance,ordinary_cost_sensitivity.csv.gz,63300,62700,600
 debt_issuance,ordinary_gross_outcomes.csv.gz,6330,6270,60
 debt_issuance,ordinary_entries.csv,120,119,1
+executive_officer_appointment,ordinary_cost_sensitivity.csv.gz,65220,64620,600
+executive_officer_appointment,ordinary_gross_outcomes.csv.gz,6522,6462,60
+executive_officer_appointment,ordinary_entries.csv,120,119,1
+guidance_issuance_or_update,ordinary_cost_sensitivity.csv.gz,64680,64080,600
+guidance_issuance_or_update,ordinary_gross_outcomes.csv.gz,6558,6498,60
+guidance_issuance_or_update,ordinary_entries.csv,120,119,1
+quarterly_earnings,ordinary_cost_sensitivity.csv.gz,61620,58620,3000
+quarterly_earnings,ordinary_gross_outcomes.csv.gz,6192,5892,300
+quarterly_earnings,ordinary_entries.csv,120,114,6

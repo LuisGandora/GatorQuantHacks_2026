@@ -39,13 +39,13 @@ quarterly_earnings,covered_call,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable m
 quarterly_earnings,protective_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
 quarterly_earnings,collar,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
 quarterly_earnings,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
-shareholder_proposal_outcome,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-shareholder_proposal_outcome,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-shareholder_proposal_outcome,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-shareholder_proposal_outcome,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-shareholder_proposal_outcome,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-underwriting_agreement,long_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-underwriting_agreement,covered_call,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-underwriting_agreement,protective_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-underwriting_agreement,collar,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
-underwriting_agreement,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,False,not analyzed yet
+shareholder_proposal_outcome,long_call,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+shareholder_proposal_outcome,covered_call,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+shareholder_proposal_outcome,protective_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+shareholder_proposal_outcome,collar,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+shareholder_proposal_outcome,cash_secured_put,,,,0,0,0,,,,INCONCLUSIVE,True,no strict usable matches
+underwriting_agreement,long_call,21,0.05,0.05,1,1,1,0.0688468997220844,,,INCONCLUSIVE,True,fewer than 40 usable events
+underwriting_agreement,covered_call,21,0.05,0.05,1,1,1,-0.0449714001827917,,,INCONCLUSIVE,True,fewer than 40 usable events
+underwriting_agreement,protective_put,21,0.05,0.05,1,1,1,-0.0530762090392613,,,INCONCLUSIVE,True,fewer than 40 usable events
+underwriting_agreement,collar,21,0.05,0.05,1,1,1,-0.0980476092220532,,,INCONCLUSIVE,True,fewer than 40 usable events
+underwriting_agreement,cash_secured_put,21,0.05,0.05,1,1,1,0.0582663313672766,,,INCONCLUSIVE,True,fewer than 40 usable events

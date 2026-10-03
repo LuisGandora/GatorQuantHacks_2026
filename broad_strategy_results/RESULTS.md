@@ -2,7 +2,7 @@
 
 **Current conclusion: INCONCLUSIVE.**
 
-8/10 category collections complete. 50 primary category–strategy comparisons; familywise correction covers all 120 possible comparisons.
+10/10 category collections complete. 50 primary category–strategy comparisons; familywise correction covers all 120 possible comparisons.
 
 0 primary comparisons have at least 40 usable matched events; 0 have estimable dependence intervals; 0 discovery signals await independent validation.
 
