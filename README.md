@@ -1,5 +1,15 @@
 # Gator Quant Hacks 2026 · Trade the 8-K
 
+## Risk-composition measurement audit
+
+Experiment 5A tests whether JEV can distinguish demand deterioration, margin
+pressure, financing difficulty and execution problems in exact original filing
+passages. Its issuer-balanced, source-only audit and pre-inference reference
+review are defined in [RISK_COMPOSITION_PROTOCOL.md](RISK_COMPOSITION_PROTOCOL.md).
+The freeze identity is [RISK_COMPOSITION_FREEZE.json](RISK_COMPOSITION_FREEZE.json).
+This is measurement validation; no historical payoff or 2026 analysis is part
+of this stage. Completed earlier experiments retain their original conclusions.
+
 Starter notebook for the Massive challenge. You need **Python 3.10+** ([python.org](https://www.python.org/downloads/))
 and a **Massive API key** (from the Discord channel).
 

@@ -1,0 +1,18 @@
+{
+  "protocol_and_inputs": {
+    "protocol_sha256": "c215e001ed64181d40a83ecf2a35843be957fda5490362128d1a07e414cb1410",
+    "packets_sha256": "f92d396aba03c72487ece17f43fe68f8769f867dcf8e23358e55d5ef050dcd6a",
+    "implementation_sha256": "a9601a8f6781b8c8dec5a271ee5ee3b73885148d2696120d50def0f015d72d95"
+  },
+  "reference_review": {
+    "sha256": "13ce78c9bb68ce49b895a36354d305d4d37183a1133648c0f09c7008ef02b04d",
+    "pre_jev": true,
+    "reviewer": "Implementing assistant, source-only review; not independent human gold labels"
+  },
+  "reference_counts": {
+    "filings": 12,
+    "demand_positive": 0,
+    "margin_positive": 3
+  },
+  "prepared_before_inference": true
+}

@@ -116,3 +116,12 @@ The machine-readable source of truth is `SPEC` in `risk_composition_audit.py` an
 the immutable local `protocol.json`. The lock includes its SHA256, packet SHA256
 and implementation SHA256. The public freeze identity below is produced before
 inference, together with the reference-lock identity once review is complete.
+
+See `RISK_COMPOSITION_FREEZE.json` for the published pre-inference identity. The
+unchanged hash-selected cohort has 12 capacity-eligible filings, already below
+the 20-valid-filing minimum. Source-only review found zero demand positives and
+three margin positives among those 12. Thus the audit cannot validate the primary
+demand-versus-margin contrast even if model agreement is perfect. Remaining
+semantic calls diagnose interpretation and citation quality; they cannot rescue
+the gate or authorize economic analysis. These limitations were recorded before
+JEV outputs were observed.
