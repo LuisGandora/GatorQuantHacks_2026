@@ -15,7 +15,8 @@ stale ones. It fails if fresh and stale filings earn the same.
 
 ## Rules that hold in every phase
 
-1. Do exactly one step per cycle. Run it, read the output, then commit: `git add -A -- . ':!.env' && git commit -m "fresh: <phase>.<step> <what> -> <result>"`.
+0. The shell is Windows PowerShell 5.1. Never use `&&` or `||`: run commands one at a time, or separate them with `;`. Run Python as `.venv\Scripts\python`.
+1. Do exactly one step per cycle. Run it, read the output, then commit with two separate commands: `git add -A`, then `git commit -m "fresh: <phase>.<step> <what> -> <result>"`.
 2. Nobody runs `harness.py insample` or `harness.py oos` until phase 6, and only on a commit tagged `freeze-v*`.
 3. After any P&L has been printed, never change the freshness rule, the lag threshold, the undated
    policy, the tags, the strategy or the arm of a pairing that has been run. A new idea gets a new pairing

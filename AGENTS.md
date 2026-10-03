@@ -76,7 +76,7 @@ instead, with its thesis written before you run it.
 ## Every cycle
 
 - Change one thing. Run. Read the output.
-- Commit: `git add pairings.json jev.py jev_labels.csv runs && git commit -m "iter: <what changed> -> <result>"`.
+- Commit, as two separate commands (the shell is Windows PowerShell 5.1, which has no `&&`): `git add pairings.json jev.py jev_labels.csv runs`, then `git commit -m "iter: <what changed> -> <result>"`.
 - End with one line: what you did, what it showed, and what's next.
 
 ## Stop condition
