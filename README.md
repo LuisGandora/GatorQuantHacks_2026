@@ -1,5 +1,11 @@
 # Gator Quant Hacks 2026 · Trade the 8-K
 
+> **Massive bonus track:** [MASSIVE_TRACK_REFERENCE.md](MASSIVE_TRACK_REFERENCE.md) is a local,
+> unverified organized reference and paraphrase of the user-supplied Massive challenge page
+> (Oct 3, 2026) — provenance, rules, methodology, rubric, schedule, and the 12-item checklist.
+> The notebook and organizer announcements govern conflicts; the Devpost listing matters only
+> for submission.
+
 ## Earnings-resolution numerical payoff benchmark
 
 The completed experiment 6 tests whether selling the 5% out-of-the-money put after an
