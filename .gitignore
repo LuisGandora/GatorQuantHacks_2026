@@ -29,3 +29,4 @@ full_source_results/
 # Guidance source packages, exact JEV records, and historical outcomes
 guidance_results/
 expanded_guidance_results/
+risk_composition_results/
