@@ -1,0 +1,704 @@
+{
+  "review": "source-identity-review",
+  "kind": "offline, read-only source-identity review; no outcomes, options, JEV, 2026, out-of-sample or sealed data; no text classifier",
+  "canonical_universe": {
+    "tickers": 100,
+    "source_files": [
+      [
+        "credit_facility_feasibility/universe.json",
+        [
+          "AAPL",
+          "ABBV",
+          "ABT",
+          "ACN",
+          "ADBE",
+          "AIG",
+          "AMD",
+          "AMGN",
+          "AMT",
+          "AMZN",
+          "AVGO",
+          "AXP",
+          "BA",
+          "BAC",
+          "BK",
+          "BKNG",
+          "BLK",
+          "BMY",
+          "BRK.B",
+          "C",
+          "CAT",
+          "CHTR",
+          "CL",
+          "CMCSA",
+          "COF",
+          "COP",
+          "COST",
+          "CRM",
+          "CSCO",
+          "CVS",
+          "CVX",
+          "DE",
+          "DHR",
+          "DIS",
+          "DUK",
+          "EMR",
+          "FDX",
+          "GD",
+          "GE",
+          "GILD",
+          "GM",
+          "GOOGL",
+          "GS",
+          "HD",
+          "HON",
+          "IBM",
+          "INTC",
+          "INTU",
+          "ISRG",
+          "JNJ",
+          "JPM",
+          "KO",
+          "LIN",
+          "LLY",
+          "LMT",
+          "LOW",
+          "MA",
+          "MCD",
+          "MDLZ",
+          "MDT",
+          "MET",
+          "META",
+          "MMM",
+          "MO",
+          "MRK",
+          "MS",
+          "MSFT",
+          "NEE",
+          "NFLX",
+          "NKE",
+          "NOW",
+          "NVDA",
+          "ORCL",
+          "PEP",
+          "PFE",
+          "PG",
+          "PLTR",
+          "PM",
+          "PYPL",
+          "QCOM",
+          "RTX",
+          "SBUX",
+          "SCHW",
+          "SO",
+          "T",
+          "TGT",
+          "TMO",
+          "TMUS",
+          "TSLA",
+          "TXN",
+          "UBER",
+          "UNH",
+          "UNP",
+          "UPS",
+          "USB",
+          "V",
+          "VZ",
+          "WFC",
+          "WMT",
+          "XOM"
+        ]
+      ],
+      [
+        "repurchase_results/universe.json",
+        [
+          "AAPL",
+          "ABBV",
+          "ABT",
+          "ACN",
+          "ADBE",
+          "AIG",
+          "AMD",
+          "AMGN",
+          "AMT",
+          "AMZN",
+          "AVGO",
+          "AXP",
+          "BA",
+          "BAC",
+          "BK",
+          "BKNG",
+          "BLK",
+          "BMY",
+          "BRK.B",
+          "C",
+          "CAT",
+          "CHTR",
+          "CL",
+          "CMCSA",
+          "COF",
+          "COP",
+          "COST",
+          "CRM",
+          "CSCO",
+          "CVS",
+          "CVX",
+          "DE",
+          "DHR",
+          "DIS",
+          "DUK",
+          "EMR",
+          "FDX",
+          "GD",
+          "GE",
+          "GILD",
+          "GM",
+          "GOOGL",
+          "GS",
+          "HD",
+          "HON",
+          "IBM",
+          "INTC",
+          "INTU",
+          "ISRG",
+          "JNJ",
+          "JPM",
+          "KO",
+          "LIN",
+          "LLY",
+          "LMT",
+          "LOW",
+          "MA",
+          "MCD",
+          "MDLZ",
+          "MDT",
+          "MET",
+          "META",
+          "MMM",
+          "MO",
+          "MRK",
+          "MS",
+          "MSFT",
+          "NEE",
+          "NFLX",
+          "NKE",
+          "NOW",
+          "NVDA",
+          "ORCL",
+          "PEP",
+          "PFE",
+          "PG",
+          "PLTR",
+          "PM",
+          "PYPL",
+          "QCOM",
+          "RTX",
+          "SBUX",
+          "SCHW",
+          "SO",
+          "T",
+          "TGT",
+          "TMO",
+          "TMUS",
+          "TSLA",
+          "TXN",
+          "UBER",
+          "UNH",
+          "UNP",
+          "UPS",
+          "USB",
+          "V",
+          "VZ",
+          "WFC",
+          "WMT",
+          "XOM"
+        ]
+      ]
+    ],
+    "identical_across_audits": true
+  },
+  "evidence_corpus": {
+    "mode": "broad cached source inventory/disclosure corpus",
+    "files": [
+      {
+        "path": "earnings_payoff_results/filing_inventory.json",
+        "sha256": "40c35e5e4a14677ad36df3ee5c7c676b1ed67acfd9e3144a360c613f8c9625e3",
+        "records": 28,
+        "pairs": 798,
+        "new_pairs": 29,
+        "date_check": "798 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "earnings_payoff_results/events.json",
+        "sha256": "a5eeb11940f418ade7fa10f7e05033087deadf84bcfb84fc9ad58b2afb85d600",
+        "records": 28,
+        "pairs": 130,
+        "new_pairs": 1,
+        "date_check": "130 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "full_source_results/candidate_packets.json",
+        "sha256": "0a9ada17b249536d8db5b1d95d723ca30860a8c0cee9d36000e94f79b75876ef",
+        "records": 68,
+        "pairs": 132,
+        "new_pairs": 49,
+        "date_check": "132 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "guidance_results/enrollment.json",
+        "sha256": "4997b249b8dbe13a88b42866671489e1bb0bda272d87b5fef417d6dfabde9eef",
+        "records": 27,
+        "pairs": 60,
+        "new_pairs": 5,
+        "date_check": "60 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "guidance_results/disclosures_guidance_issuance_or_update.json",
+        "sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "records": 692,
+        "pairs": 1901,
+        "new_pairs": 864,
+        "date_check": "1618 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "guidance_results/disclosures_guidance_withdrawal.json",
+        "sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "records": 26,
+        "pairs": 34,
+        "new_pairs": 19,
+        "date_check": "27 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/enrollment.json",
+        "sha256": "c75f2addd0f6979bf2f3739b3073b94bf1c6d086be1b9193860f9672996b846d",
+        "records": 54,
+        "pairs": 208,
+        "new_pairs": 3,
+        "date_check": "208 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_annual_earnings.json",
+        "sha256": "8bee095b4fced858f10ca39df3b788025888355f3c23905f2dbd26b9d6f54090",
+        "records": 73,
+        "pairs": 167,
+        "new_pairs": 58,
+        "date_check": "98 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_guidance_issuance_or_update.json",
+        "sha256": "51e6c7fc2dbfa29e2264e0ac734dd4e338ddc5bc7c1e071f2d6f0022365eeffc",
+        "records": 692,
+        "pairs": 1901,
+        "new_pairs": 0,
+        "date_check": "1618 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_guidance_withdrawal.json",
+        "sha256": "1143dbc2c9830f9a4409663e277a0eb04aed6476472e491650f214e2cc31f835",
+        "records": 26,
+        "pairs": 34,
+        "new_pairs": 0,
+        "date_check": "27 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_preliminary_results.json",
+        "sha256": "65dd8c6ad7af4a94d2b2cae337ca9f68750995f6e72df7d097e6a972ca625e4d",
+        "records": 949,
+        "pairs": 2341,
+        "new_pairs": 900,
+        "date_check": "1946 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "expanded_guidance_results/disclosures_quarterly_earnings.json",
+        "sha256": "44cc1608c336db8655366051d36af8aa198f9eea36492ab5658ad01b18408156",
+        "records": 521,
+        "pairs": 2579,
+        "new_pairs": 411,
+        "date_check": "1776 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "credit_facility_feasibility/disclosures.json",
+        "sha256": "c2a32cdad9ae34afd4054cef0edaf0be6f14d1e5e2a88eeb6bfdfe861c5cadde",
+        "records": 2342,
+        "pairs": 7385,
+        "new_pairs": 1961,
+        "date_check": "6983 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "credit_facility_feasibility/enrollment.json",
+        "sha256": "4ea6b2b0e425d9845029e36f2f56dc46121cab685ae3e6bd0a5f7acac8eeea66",
+        "records": 39,
+        "pairs": 62,
+        "new_pairs": 0,
+        "date_check": "62 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "repurchase_results/disclosures.json",
+        "sha256": "c9b9e12eeb6bd6064f4bfa282855a2bf38a0136620fa7d32ff6636a66ef0f8bc",
+        "records": 1036,
+        "pairs": 2981,
+        "new_pairs": 430,
+        "date_check": "2108 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "repurchase_results/enrollment.json",
+        "sha256": "fb757c483f41b4490369cded2ef39128e29d1511525aaf1d3cd5dc4a6e7f674d",
+        "records": 26,
+        "pairs": 36,
+        "new_pairs": 0,
+        "date_check": "36 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "departure_results/candidate_ceo_departure.json",
+        "sha256": "ce72cee57adc21f08e2f5a337e4370d8eb71e1455f551a30e4c82140a34c7337",
+        "records": 1132,
+        "pairs": 1969,
+        "new_pairs": 405,
+        "date_check": "1951 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "departure_results/candidate_cfo_departure.json",
+        "sha256": "5d7f6c5d8eaf5c4f68550eec0193c922c86559accf0de55b312dafd72efd7862",
+        "records": 1225,
+        "pairs": 2053,
+        "new_pairs": 301,
+        "date_check": "1859 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "departure_results/candidate_executive_officer_departure.json",
+        "sha256": "47086b3556dbf849e66f4408b61e497f6f271bee46cbfff3da343ac7855a4d8a",
+        "records": 2231,
+        "pairs": 4520,
+        "new_pairs": 388,
+        "date_check": "3964 dated, 0 undated; all dated records inside 2024-2025"
+      },
+      {
+        "path": "departure_results/candidate_director_departure.json",
+        "sha256": "7d9f279566ca7e5613b0d83fb7ef4117aa3c4631abc3b854a273ecfb8e22b5cd",
+        "records": 2818,
+        "pairs": 6602,
+        "new_pairs": 500,
+        "date_check": "6108 dated, 0 undated; all dated records inside 2024-2025"
+      }
+    ],
+    "distinct_ciks": 4578,
+    "universe_coverage": {
+      "universe_tickers": 100,
+      "tickers_with_cik_evidence": 96,
+      "tickers_without_cik_evidence": [
+        "AMGN",
+        "AMZN",
+        "TMO",
+        "V"
+      ],
+      "universe_tickers_with_multiple_ciks": {
+        "BLK": [
+          "0001364742",
+          "0002012383"
+        ]
+      },
+      "ciks_mapping_to_multiple_universe_tickers": {}
+    },
+    "date_validation": "every dated record inside 2024-01-01..2025-12-31; out-of-window dates fail fast"
+  },
+  "excluded_corpus": {
+    "path": "novelty_results/source_filings.json",
+    "reason": "reserved notebook example holdout window 2023-06-01..2023-08-31; 74 reserved-date records; excluded entirely from the evidence corpus",
+    "records": 1093,
+    "reserved_june_august_2023_records": 74
+  },
+  "exposure_ledger": {
+    "first_iteration_read": {
+      "file": "novelty_results/source_filings.json",
+      "what_was_read": "previously cached filing metadata (cik, ticker, accession, filing_date, items_text) only; no option price, no payoff, no market/options data, no new source request",
+      "reserved_window": "2023-06-01..2023-08-31 (notebook HOLDOUT_START..HOLDOUT_END)",
+      "reserved_date_records_seen": 74,
+      "total_records_seen": 1093,
+      "first_iteration_status": "read; superseded by this corrected review"
+    },
+    "correction_applied_now": "novelty_results/source_filings.json is excluded entirely from EVIDENCE_CORPUS and is not read again; all identity pairs and disclosure rows must pass a 2024-2025 fail-fast date check.",
+    "cannot_restore": "A previously cached filing metadata file cannot be made pristine again. This correction drops the file but does not restore a pristine source-metadata holdout, and does not prove the reserved window was cleanly untouched before this identity work.",
+    "no_new_source_request": "No option, payoff or new source request was made during this identity interval; only local cached metadata was read.",
+    "financial_outcome_replication": "unrun. The actual judge-selected reserved window is unknown (judges change HOLDOUT_START..HOLDOUT_END), and no outcome or payoff was read by this review.",
+    "claim_boundary": "This review does not claim the sealed data was entirely untouched."
+  },
+  "narrow_corpus_sensitivity": {
+    "mode": "two audits' own caches plus earnings/guidance inventories",
+    "universe_coverage": {
+      "universe_tickers": 100,
+      "tickers_with_cik_evidence": 92,
+      "tickers_without_cik_evidence": [
+        "AMGN",
+        "AMZN",
+        "BRK.B",
+        "CHTR",
+        "TMO",
+        "UPS",
+        "V",
+        "WMT"
+      ],
+      "universe_tickers_with_multiple_ciks": {
+        "BLK": [
+          "0001364742",
+          "0002012383"
+        ]
+      },
+      "ciks_mapping_to_multiple_universe_tickers": {}
+    }
+  },
+  "tags": {
+    "share_repurchase_program": {
+      "direct": {
+        "accessions": 36,
+        "tickers": 26,
+        "ciks": 26,
+        "ticker_list": [
+          "ADBE",
+          "AIG",
+          "BAC",
+          "C",
+          "CAT",
+          "COF",
+          "CRM",
+          "CVS",
+          "DHR",
+          "DIS",
+          "EMR",
+          "GE",
+          "GM",
+          "GOOGL",
+          "ISRG",
+          "MET",
+          "META",
+          "MO",
+          "MS",
+          "NFLX",
+          "NOW",
+          "SCHW",
+          "TMUS",
+          "UBER",
+          "UNP",
+          "USB"
+        ]
+      },
+      "cik_recoverable": {
+        "rows": 0,
+        "accessions": 0,
+        "ciks": 0
+      },
+      "with_ticker_non_universe": {
+        "rows": 2009,
+        "accessions": 2003,
+        "ciks": 1010
+      },
+      "with_ticker_cik_unreferenced": {
+        "rows": 0,
+        "accessions": 0,
+        "ciks": 0
+      },
+      "tickerless_cik_non_universe": {
+        "rows": 6,
+        "accessions": 6,
+        "ciks": 6
+      },
+      "tickerless_unresolved": {
+        "rows": 57,
+        "accessions": 57,
+        "ciks": 39,
+        "unresolved_cik_count": 39,
+        "largest_cik_group_sizes": [
+          8,
+          3,
+          3,
+          2,
+          2
+        ]
+      },
+      "population_bounds_accessions": {
+        "confirmed_in_universe": 36,
+        "identity_only_upper": 93,
+        "conditional_upper_one_cik_per_uncovered_issuer": 50,
+        "conditional_bound_is_definitive": false,
+        "conditional_bound_note": "not definitive: a canonical ticker can carry more than one CIK (BLK already has two), so the one-CIK per missing-issuer assumption is unsupported"
+      },
+      "disclosure_file": "repurchase_results/disclosures.json",
+      "disclosure_sha256": "c9b9e12eeb6bd6064f4bfa282855a2bf38a0136620fa7d32ff6636a66ef0f8bc",
+      "disclosure_rows": 2108,
+      "audit_reported_direct": {
+        "accessions": 36,
+        "tickers": 26,
+        "ciks": 26
+      },
+      "direct_reproduced": true
+    },
+    "credit_facility": {
+      "direct": {
+        "accessions": 62,
+        "tickers": 38,
+        "ciks": 39,
+        "ticker_list": [
+          "ABBV",
+          "ABT",
+          "ACN",
+          "AIG",
+          "AMD",
+          "AMT",
+          "AVGO",
+          "BA",
+          "BKNG",
+          "BLK",
+          "CAT",
+          "CMCSA",
+          "CRM",
+          "CSCO",
+          "DIS",
+          "EMR",
+          "FDX",
+          "GM",
+          "HD",
+          "HON",
+          "IBM",
+          "INTU",
+          "LIN",
+          "LMT",
+          "LOW",
+          "MA",
+          "MDLZ",
+          "MO",
+          "NFLX",
+          "NKE",
+          "PEP",
+          "PM",
+          "PYPL",
+          "QCOM",
+          "SBUX",
+          "T",
+          "TGT",
+          "UBER"
+        ]
+      },
+      "cik_recoverable": {
+        "rows": 0,
+        "accessions": 0,
+        "ciks": 0
+      },
+      "with_ticker_non_universe": {
+        "rows": 5480,
+        "accessions": 4700,
+        "ciks": 2303
+      },
+      "with_ticker_cik_unreferenced": {
+        "rows": 0,
+        "accessions": 0,
+        "ciks": 0
+      },
+      "tickerless_cik_non_universe": {
+        "rows": 162,
+        "accessions": 143,
+        "ciks": 69
+      },
+      "tickerless_unresolved": {
+        "rows": 1257,
+        "accessions": 1096,
+        "ciks": 394,
+        "unresolved_cik_count": 394,
+        "largest_cik_group_sizes": [
+          42,
+          27,
+          22,
+          21,
+          19
+        ]
+      },
+      "population_bounds_accessions": {
+        "confirmed_in_universe": 62,
+        "identity_only_upper": 1158,
+        "conditional_upper_one_cik_per_uncovered_issuer": 153,
+        "conditional_bound_is_definitive": false,
+        "conditional_bound_note": "not definitive: a canonical ticker can carry more than one CIK (BLK already has two), so the one-CIK per missing-issuer assumption is unsupported"
+      },
+      "disclosure_file": "credit_facility_feasibility/disclosures.json",
+      "disclosure_sha256": "c2a32cdad9ae34afd4054cef0edaf0be6f14d1e5e2a88eeb6bfdfe861c5cadde",
+      "disclosure_rows": 6983,
+      "audit_reported_direct": {
+        "accessions": 62,
+        "tickers": 38,
+        "ciks": 39
+      },
+      "direct_reproduced": true
+    }
+  },
+  "conflicts_and_claim_corrections": [
+    "share_repurchase_program: 57 accessions are identity-unresolved (tickerless, CIK has no cached ticker evidence); the direct-ticker count is a lower bound, not a complete census.",
+    "share_repurchase_program: the 80-filing floor is not structurally impossible because the identity-only population upper bound is 93 (the tighter one-CIK-per-missing-issuer bound is not definitive; BLK already carries two CIKs).",
+    "credit_facility: 1096 accessions are identity-unresolved (tickerless, CIK has no cached ticker evidence); the direct-ticker count is a lower bound, not a complete census.",
+    "credit_facility: the 80-filing floor is not structurally impossible because the identity-only population upper bound is 1158 (the tighter one-CIK-per-missing-issuer bound is not definitive; BLK already carries two CIKs).",
+    "cached CIK evidence does not cover these canonical tickers: AMGN, AMZN, TMO, V; any tickerless row from those issuers stays unresolved.",
+    "a canonical ticker maps to more than one CIK: {\"BLK\": [\"0001364742\", \"0002012383\"]}"
+  ],
+  "provisional_repurchase_eligibility": {
+    "status": "provisional_source_extraction_not_validated_signal",
+    "raw_source_counts": {
+      "tag_rows": 2108,
+      "direct_ticker_accessions": 36,
+      "direct_ticker_issuers": 26,
+      "direct_ticker_ciks": 26,
+      "note": "reproducible raw source counts; not an eligibility or signal count"
+    },
+    "provisional_extraction_rule": "recorded fields in repurchase_results/audits.json; not re-parsed here",
+    "standalone_filings": 12,
+    "standalone_issuers": 10,
+    "earnings_bundled_filings": 15,
+    "earnings_bundled_issuers": 10,
+    "total_eligible_filings": 27,
+    "total_eligible_issuers": 18,
+    "extraction_problem": "the 12/10 standalone figure depends on amount- and date-attribution fields that the documented concerns below show are not clean; it is a provisional extraction, not a validated eligible-filing count",
+    "documented_provisional_concerns": [
+      {
+        "ticker": "GM",
+        "accession_number": "0001467858-25-000063",
+        "concern": "amount_attribution",
+        "note": "Recorded authorization_dollars include $0.3B, but the span calls it '$0.3 billion of capacity was remaining under the Company's previously authorized program', not a new authorization."
+      },
+      {
+        "ticker": "AIG",
+        "accession_number": "0000005272-25-000017",
+        "concern": "amount_attribution",
+        "note": "Recorded authorization_dollars include $3.4B, but the span calls it 'approximately $3.4 billion remaining under the Board's prior share repurchase authorization'."
+      },
+      {
+        "ticker": "ISRG",
+        "accession_number": "0001035267-25-000156",
+        "concern": "amount_kind_attribution",
+        "note": "amount_kind is 'incremental', but the span says the board 'increased the authorized amount ... to an aggregate of $4.0 billion, including amounts remaining under previous authorization'."
+      },
+      {
+        "ticker": "MO",
+        "accession_number": "0001193125-24-071340",
+        "concern": "asr_context",
+        "note": "Driver span describes ASR transactions and an existing program 'expanded to $3.4 billion in connection with the Secondary Offering and the Share Repurchase'; this is an actual-repurchase context, not a clean standalone new authorization."
+      },
+      {
+        "ticker": "BAC",
+        "accession_number": "0000070858-24-000194",
+        "concern": "date_attribution",
+        "note": "announcement_dates mixes the board date, the August 1, 2024 effective date, and a prior-program date; the recorded dates are not a single clean announcement date."
+      },
+      {
+        "ticker": "USB",
+        "accession_number": "0001193125-24-217446",
+        "concern": "date_attribution",
+        "note": "announcement_dates includes December 22, 2020, a prior-authorization date, alongside the September 12, 2024 board date."
+      }
+    ]
+  },
+  "boundaries": {
+    "network_requests": 0,
+    "market_or_option_data_read": false,
+    "jev_or_model_calls": 0,
+    "text_classifier_or_semantic_rule_built": false,
+    "frozen_audit_code_modified": false,
+    "frozen_caches_modified": false,
+    "commit_made": false
+  }
+}

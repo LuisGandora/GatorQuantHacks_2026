@@ -1,0 +1,196 @@
+{
+  "experiment": "7 standalone share-repurchase authorization source feasibility audit",
+  "protocol_sha256": "b09932d1424eb66bd7916badae68f9c414f6a6bd7bf5d4be5748e2444c8db923",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "tag": "share_repurchase_program",
+  "universe_tickers": 100,
+  "taxonomy_tag_verified": true,
+  "retrieval": {
+    "tag_rows": 2108,
+    "outside_universe_rows": 2072,
+    "filings": 36,
+    "ciks": 26,
+    "tickers": 26
+  },
+  "eligible_definition": "Eligible when original sources explicitly disclose (a) a NEW common-equity share-repurchase program or (b) an INCREASED common-equity repurchase authorization, (c) approved/authorized by the board of directors or a board committee, (d) with at least one explicitly stated authorization dollar amount. Every fact needs an exact normalized-text span.",
+  "source_gate": {
+    "passed": false,
+    "checks": {
+      "eligible_filings": false,
+      "economic_ticker_issuers": false
+    },
+    "eligible": {
+      "filings": 12,
+      "issuers": 10,
+      "effective_issuer_n": 9.0,
+      "max_issuer_share": 0.16666666666666666,
+      "by_issuer": {
+        "BAC": 2,
+        "MS": 2,
+        "AIG": 1,
+        "CAT": 1,
+        "GE": 1,
+        "GM": 1,
+        "ISRG": 1,
+        "MO": 1,
+        "UBER": 1,
+        "USB": 1
+      }
+    },
+    "broader_including_earnings_bundled": {
+      "filings": 27,
+      "issuers": 18,
+      "effective_issuer_n": 14.294117647058824,
+      "max_issuer_share": 0.14814814814814814,
+      "by_issuer": {
+        "MO": 4,
+        "BAC": 2,
+        "CRM": 2,
+        "GOOGL": 2,
+        "MET": 2,
+        "MS": 2,
+        "UBER": 2,
+        "ADBE": 1,
+        "AIG": 1,
+        "CAT": 1,
+        "COF": 1,
+        "GE": 1,
+        "GM": 1,
+        "ISRG": 1,
+        "META": 1,
+        "NFLX": 1,
+        "NOW": 1,
+        "USB": 1
+      }
+    },
+    "earnings_bundled_eligible": 15,
+    "concentration": {
+      "by_year": {
+        "2024": 7,
+        "2025": 5
+      },
+      "by_issuer": {
+        "BAC": 2,
+        "MS": 2,
+        "AIG": 1,
+        "CAT": 1,
+        "GE": 1,
+        "GM": 1,
+        "ISRG": 1,
+        "MO": 1,
+        "UBER": 1,
+        "USB": 1
+      },
+      "cik_by_ticker": {
+        "AIG": [
+          "0000005272"
+        ],
+        "BAC": [
+          "0000070858"
+        ],
+        "CAT": [
+          "0000018230"
+        ],
+        "GE": [
+          "0000040545"
+        ],
+        "GM": [
+          "0001467858"
+        ],
+        "ISRG": [
+          "0001035267"
+        ],
+        "MO": [
+          "0000764180"
+        ],
+        "MS": [
+          "0000895421"
+        ],
+        "UBER": [
+          "0001543151"
+        ],
+        "USB": [
+          "0000036104"
+        ]
+      }
+    },
+    "exclusion_counts": {
+      "actual_repurchase_only": 6,
+      "no_explicit_amount": 2,
+      "routine_update": 1
+    },
+    "classification_counts": {
+      "increased_authorization": 4,
+      "new_authorization": 8
+    }
+  },
+  "decision": "source_infeasible",
+  "audit_is_source_only": true,
+  "economic_outcomes_read": false,
+  "market_data_requests": 0,
+  "jev_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "year_concentration": {
+    "2024": 7,
+    "2025": 5
+  },
+  "issuer_concentration": {
+    "BAC": 2,
+    "MS": 2,
+    "AIG": 1,
+    "CAT": 1,
+    "GE": 1,
+    "GM": 1,
+    "ISRG": 1,
+    "MO": 1,
+    "UBER": 1,
+    "USB": 1
+  },
+  "cik_by_ticker": {
+    "AIG": [
+      "0000005272"
+    ],
+    "BAC": [
+      "0000070858"
+    ],
+    "CAT": [
+      "0000018230"
+    ],
+    "GE": [
+      "0000040545"
+    ],
+    "GM": [
+      "0001467858"
+    ],
+    "ISRG": [
+      "0001035267"
+    ],
+    "MO": [
+      "0000764180"
+    ],
+    "MS": [
+      "0000895421"
+    ],
+    "UBER": [
+      "0001543151"
+    ],
+    "USB": [
+      "0000036104"
+    ]
+  },
+  "exclusion_counts": {
+    "actual_repurchase_only": 6,
+    "no_explicit_amount": 2,
+    "routine_update": 1
+  },
+  "classification_counts": {
+    "increased_authorization": 4,
+    "new_authorization": 8
+  },
+  "forbidden_dates_present": false,
+  "oos_opened": false,
+  "judges_opened": false
+}

@@ -33,3 +33,12 @@ risk_composition_results/
 
 # Earnings-resolution numerical benchmark market panel and controls
 earnings_payoff_results/
+
+# Credit-facility liquidity-insurance source feasibility cache (vendor responses)
+credit_facility_feasibility/
+
+# Standalone share-repurchase source audit: private original SEC packages, parsed
+# text and HTTP cache. Only aggregate public reports are committed.
+repurchase_results/
+.repurchase_cache/
+historical_credit_coverage/
