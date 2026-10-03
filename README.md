@@ -6,6 +6,17 @@
 > The notebook and organizer announcements govern conflicts; the Devpost listing matters only
 > for submission.
 
+## Research-readiness and source-population audit
+
+[RESEARCH_READINESS_AUDIT.md](RESEARCH_READINESS_AUDIT.md) is a read-only, documentation-only audit
+of whether any supported candidate currently exists and which evidence gaps keep the existing
+concepts from becoming confirmatory rules. It finds no supported positive candidate, distinguishes
+the 130 stored earnings events from the Experiment 6 matched sample, and reports that the observed
+130/28 is a retrieved shape-filtered subset rather than the complete eligible Massive population. It
+evaluates economic novelty, measurement validity, population/source adequacy, option execution
+realism, and replication readiness separately. The machine-readable form is
+[RESEARCH_READINESS_AUDIT.json](RESEARCH_READINESS_AUDIT.json). 2026 remains locked.
+
 ## Experiment 9: uncertainty-resolution 8-K semantic gate
 
 Experiment 9 asks, outcome-blind, whether a leadership-change Form 8-K newly resolves material governance uncertainty that was open immediately before the filing. The frozen protocol is [UNCERTAINTY_RESOLUTION_PROTOCOL.md](UNCERTAINTY_RESOLUTION_PROTOCOL.md), the evidence audit is [UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md](UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md), and the terminal write-up is [UNCERTAINTY_RESOLUTION_RESULTS.md](UNCERTAINTY_RESOLUTION_RESULTS.md). The decision is `no_candidate_feasibility_failure`. Two verdicts stand side by side: the blinded measurement validation passed, because the aggregate transition sign survived an independent text-only read, and the outcome-blind feasibility gate failed, because the largest primary group any (K, R) grid point can produce is 15 events against the frozen floor of at least 20. The failure is therefore a population size limit, not a measurement failure, and it is not evidence of zero economic effect because the economic question was never opened: no price, option, payoff or ordinary-day record was read and no P&L was computed. The 2026 out-of-sample window and the judges' sealed window remain unopened.

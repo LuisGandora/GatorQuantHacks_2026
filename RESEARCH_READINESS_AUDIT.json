@@ -1,0 +1,181 @@
+{
+  "artifact": "RESEARCH_READINESS_AUDIT.json",
+  "kind": "descriptive research-readiness and source-population audit",
+  "read_only": true,
+  "repo_commit_read": "5fa5f1f074caa30e888c0c7d6f30cc2055b570d9",
+  "date_read": "2026-10-03",
+  "historical_scope_note": "Snapshot of the repository at commit 5fa5f1f, read 2026-10-03. It predates the user's authorization of a separately preregistered Experiment 9B (Uncertainty Resolution Delta, Expanded Leadership-Transition Cohort), which reuses Experiment 9's frozen six-dimension ontology, JEV questions, R1-R5 resolution rules, transition mapping and filing-level ResolutionDelta unchanged and changes only the event population. The advisory recommendation below is historical: it reflects the evidence available at 5fa5f1f and does not prohibit, constrain, or supersede that authorized same-mechanism expansion.",
+  "authorized_expansion_after_snapshot": {
+    "experiment": "9B",
+    "title": "Uncertainty Resolution Delta, Expanded Leadership-Transition Cohort",
+    "status": "separately preregistered and user-authorized after this snapshot",
+    "relation_to_audit": "same-mechanism population expansion; not a new mechanism and not prohibited or constrained by this audit's historical recommendation"
+  },
+  "scope": {
+    "new_experiment_started": false,
+    "new_hypothesis_proposed": false,
+    "semantic_or_api_calls": 0,
+    "price_or_payoff_reads": 0,
+    "year_2026_opened": false,
+    "oos_opened": false,
+    "judges_opened": false,
+    "protected_files_changed": false,
+    "committed": false
+  },
+  "supported_positive_candidate_exists": false,
+  "positive_outcome_guaranteed": false,
+  "headline": "No supported positive candidate exists. A positive outcome cannot be guaranteed. Experiment 6 reached and ran an economic benchmark but produced no supported result; every other candidate route stopped before or at a measurement or feasibility gate. The observed 130 earnings events / 28 issuers is a retrieved, shape-filtered subset of a much larger Massive earnings-tag population, not the complete eligible population. TOP_100 is the fixed enrollment universe, not an empirically proven binding bottleneck, and 28 issuers is an observed filtered cohort, not a hard ceiling for the challenge strategy library.",
+  "five_factors": {
+    "economic_novelty": {
+      "grade": "inadequate_for_confirmatory_rule",
+      "basis": "No external novelty review in any artifact; protocols label all runs exploratory and already-exposed; rubric weights novelty 30 percent.",
+      "evidence": [
+        "MASSIVE_TRACK_REFERENCE.md:113",
+        "MECHANISM_DECISION.md:9",
+        "RESEARCH_NEXT_DIRECTION.md:16-22"
+      ]
+    },
+    "measurement_validity": {
+      "grade": "mixed_live_failure_in_exp8_exp9",
+      "exp8_gate_passed_but_decision_failed": true,
+      "exp8_intact_forward_events": 42,
+      "exp8_intact_forward_issuers": 18,
+      "exp8_comparability_defect_rows": 13,
+      "exp8_blinded_exact_agreement": "13 of 42",
+      "exp8_strict_recompute": {"events": 29, "issuers": 14, "gate_would_still_pass": true},
+      "exp9_aggregate_sign_gate": "PASS",
+      "exp9_false_resolution_rate": "9 of 27 = 0.333",
+      "exp9_false_opening_rate": "7 of 34 = 0.206",
+      "exp9_determinate_sign_agreement": "53 of 69 = 0.768",
+      "exp9_both_sides_exact_agreement": "83 of 120 = 0.692",
+      "interpretation": "Exp9 supports an aggregate-direction claim but not event-level claims; roughly one in three closings not replicated.",
+      "evidence": [
+        "ADVERSE_INTACT_SUMMARY.json:1-53,213-215",
+        "UNCERTAINTY_RESOLUTION_SUMMARY.json:306-362"
+      ]
+    },
+    "population_source_adequacy": {
+      "grade": "binding_evidence_gap",
+      "observed_cohort": {"events": 130, "issuers": 28, "interpretation": "observed filtered earnings cohort, not a census and not a hard ceiling for the challenge strategy library"},
+      "exp6_source_gate": {"events": 130, "companies": 28, "passed": true},
+      "exp6_economic_floor": {"min_events": 60, "min_companies": 20, "matched_events": 54, "clusters": 17, "passed": false},
+      "exp9_max_primary_group_events": 15,
+      "exp9_floor_events": 20,
+      "exp7_four_condition_conjunction": "0 of 130",
+      "evidence": [
+        "earnings_payoff_results/source_gate.json",
+        "EARNINGS_PAYOFF_RESULTS.md:42-59",
+        "UNCERTAINTY_RESOLUTION_RESULTS.md:190-205",
+        "CONTAINED_SHOCK_RESULTS.md:88-101"
+      ]
+    },
+    "option_execution_realism": {
+      "grade": "not_adequacy_tested_no_positive_result",
+      "marks": "last-trade closes, no NBBO",
+      "entry_timing": "92 pre-open, 38 post-close of 130; 8 PepsiCo events a further session later",
+      "concurrent_news_unscreened": {"item_2_05": 2, "item_5_02": 2, "item_8_01": 11},
+      "movement_gate_limitation": "tests absolute movement only; put payoff responds to signed drift",
+      "evidence": [
+        "EARNINGS_PAYOFF_RESULTS.md:305-325,339-343",
+        "earnings_payoff_spec.py:30"
+      ]
+    },
+    "replication_readiness": {
+      "grade": "blocked",
+      "no_frozen_confirmatory_rule": true,
+      "largest_earnings_point_estimate": 0.004828,
+      "largest_estimate_horizon": 21,
+      "internal_material_bar": 0.005,
+      "largest_estimate_interval": "unavailable",
+      "oos_2026_opened": false,
+      "judges_window_opened": false,
+      "evidence": [
+        "EARNINGS_PAYOFF_HORIZONS.json",
+        "EARNINGS_PAYOFF_METRICS.json",
+        "UNCERTAINTY_RESOLUTION_RESULTS.md:314-315"
+      ]
+    }
+  },
+  "source_population": {
+    "question": "Is 130 events / 28 issuers the complete eligible Massive population or an enrolled/retrieved subset?",
+    "answer": "retrieved_shape_filtered_subset_not_a_census",
+    "observed_counts_are_not_a_census": true,
+    "measured_counts": {
+      "quarterly_earnings_rows_all_filers": 1776,
+      "annual_earnings_rows_all_filers": 98,
+      "earnings_tag_accessions_all_filers": 1824,
+      "earnings_tag_ciks_all_filers": 587,
+      "earnings_tag_rows_intersecting_top_100": 142,
+      "in_universe_earnings_accessions_before_shape_filters": 140,
+      "in_universe_earnings_ciks_before_shape_filters": 31,
+      "enrolled_after_item_2_02_ex99_collision_filters": 130,
+      "enrolled_issuers": 28,
+      "excluded_not_earnings_tagged": 68,
+      "excluded_no_item_2_02": 10
+    },
+    "observed_and_by_construction": [
+      "Most of the vendor earnings-tag population (1824 accessions / 587 CIKs) sits outside the fixed universe by construction.",
+      "TOP_100 is the fixed enrollment universe: the acquisition intersects its rows with that static list, so issuers outside it are never enrolled. That is a design property of the fixed enrollment universe, not an empirical demonstration that the universe is the binding sample constraint.",
+      "The 28-issuer count is an observed, shape-filtered earnings cohort, not a hard ceiling for the challenge strategy library and not a proof about other tags, windows, or universes."
+    ],
+    "unknown": [
+      "Size and composition of the complete eligible Massive earnings population inside the fixed universe; the observed 130/28 is not a census.",
+      "Count of in-universe earnings disclosures never requested by the two-tag acquisition path.",
+      "Count of in-universe preliminary-results earnings packages dropped as not_earnings_tagged.",
+      "Count of in-universe earnings 8-Ks excluded for missing same-package EX-99 or Item 2.02 shape."
+    ],
+    "evidence": [
+      "expanded_guidance_sources.py:142-183,186-211",
+      "earnings_payoff_experiment.py:63-100",
+      "expanded_guidance_spec.py:7-8",
+      "CONTINUATION_GATE.md:22-27,47-62"
+    ]
+  },
+  "event_count_distinction": {
+    "stored_events": 130,
+    "source_gate_issuers": 28,
+    "exp6_matched_csp_horizon_5": 54,
+    "exp6_matched_clusters_horizon_5": 17,
+    "exp6_matched_csp_horizon_21": 46,
+    "exp6_available_event_rows_primary_cell": 73,
+    "note": "The 130 is the source-gate enrollment; 54/46/73 are post-mark and post-control analyzed counts. They must not be equated."
+  },
+  "decision_integrity": {
+    "exp6_decision": "no_supported_numerical_candidate",
+    "exp6_reached_economic_benchmark": true,
+    "exp7_decision": "no_candidate: semantic_feasibility_failure",
+    "exp8_decision": "no_candidate: implementation_or_data_integrity_failure",
+    "exp9_decision": "no_candidate_feasibility_failure",
+    "exp9_frozen_decision_reinterpreted": false,
+    "exp8_frozen_decision_reinterpreted": false
+  },
+  "organizer_vs_internal": {
+    "organizer_requirements": [
+      "one or more disclosure categories",
+      "exactly one of five strategies",
+      "all fixed horizons",
+      "net of costs",
+      "ordinary-day control",
+      "quant note <= 5 pages",
+      "public repo with README",
+      "start/end dates parametrized for judge rerun"
+    ],
+    "internal_gates": [
+      "80/20 source-feasibility floor",
+      "60/20 matched-economic-sample floor",
+      "0.005 net per five sessions material-effect threshold",
+      "freeze/audit/evidence-gate conventions"
+    ],
+    "distinction": "A passed internal gate is not organizer compliance; a failed internal gate is not an organizer violation."
+  },
+  "recommendation": {
+    "preferred": "source-provenance audit of the eligible TOP_100 earnings population with per-filter attrition counts; no new experiment, no price or outcome read, no gate change",
+    "if_submission_required_now": "truthful null and fragility submission preparation from existing public aggregates",
+    "incomplete_submission_is_challenge_compliant": false,
+    "compliance_boundary": "No supported candidate, no strategy frozen for judges' unseen dates, and no OOS or sealed-window result; the notebook does not yet satisfy the replication and OOS arms of the organizer checklist. Frame as a null/fragility analysis, not a compliant scoring entry.",
+    "recommendation_is_historical_snapshot": true,
+    "does_not_prohibit_authorized_expansion": "The separately preregistered, user-authorized Experiment 9B same-mechanism population expansion, authorized after this snapshot, is not prohibited or constrained by this historical recommendation.",
+    "year_2026_locked": true,
+    "opening_2026_requires": "a supported_candidate decision, which does not exist"
+  }
+}
