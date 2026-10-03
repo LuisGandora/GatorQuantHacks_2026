@@ -47,7 +47,7 @@ starter['cells'] = [
        'Connected dependence components account conservatively for companies and overlapping holds; '
        'too few independent components prevents a reliable interval. Insignificance does not establish no effect.\n'),
     code("import verify_broad_strategy_data as verification\nverification.verify()\n"
-         "for name in ['strict_matched_summary.csv', 'expanded_strict_matched_summary.csv']:\n"
+         "for name in ['strict_matched_summary.csv', 'expanded_strict_matched_summary.csv', 'observed_expanded_strict_matched_summary.csv']:\n"
          "    path = OUT/name\n    if path.exists():\n"
          "        frame = pd.read_csv(path)\n"
          "        if not frame.empty:\n"

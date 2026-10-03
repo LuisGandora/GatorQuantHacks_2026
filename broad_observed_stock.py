@@ -12,7 +12,7 @@ def run():
     if not (OUT/'expanded_control_pool'/'collection_complete.json').exists():
         raise RuntimeError('Finish option and expanded-control collection before observed-stock retrieval.')
     c.initialize()
-    files = list(OUT.glob('*/*_cost_sensitivity.csv.gz')) + list((OUT/'expanded_control_pool').glob('batch_*.csv.gz'))
+    files = list(OUT.glob('*/*_cost_sensitivity.csv.gz')) + list((OUT/'expanded_control_pool').glob('batch_[0-9][0-9][0-9][0-9][0-9].csv.gz'))
     cache, audit = {}, []
     for path in files:
         destination = path.with_name(path.name.replace('.csv.gz', '_observed_stock.csv.gz'))

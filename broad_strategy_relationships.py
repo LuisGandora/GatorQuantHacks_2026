@@ -5,8 +5,8 @@ import pandas as pd
 OUT = Path(__file__).resolve().parent / 'broad_strategy_results'
 
 
-def run(expanded=False):
-    prefix = 'expanded_' if expanded else ''
+def run(expanded=False, observed=False):
+    prefix = ('observed_' if observed else '') + ('expanded_' if expanded else '')
     rows = []
     for path in OUT.glob(f'*/{prefix}strict_matches.json.gz'):
         frame = pd.read_json(path)
@@ -31,4 +31,4 @@ def run(expanded=False):
 
 if __name__ == '__main__':
     import sys
-    run(expanded='--expanded' in sys.argv)
+    run(expanded='--expanded' in sys.argv, observed='--observed-stock' in sys.argv)

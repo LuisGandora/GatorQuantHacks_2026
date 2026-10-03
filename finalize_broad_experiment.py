@@ -8,8 +8,8 @@ from broad_strategy_screen import STRATEGIES
 OUT = Path(__file__).resolve().parent / 'broad_strategy_results'
 
 
-def report(expanded=False):
-    prefix = 'expanded_' if expanded else ''
+def report(expanded=False, observed=False):
+    prefix = ('observed_' if observed else '') + ('expanded_' if expanded else '')
     path = OUT / f'{prefix}strict_matched_summary.csv'
     summary = pd.read_csv(path)
     inventory = pd.read_csv(OUT / 'category_inventory.csv')
@@ -37,6 +37,7 @@ def report(expanded=False):
         estimable_primary_intervals=int(primary.ci_lo.notna().sum()),
         discovery_signals=len(candidates), independently_validated_findings=0,
         conclusion='INCONCLUSIVE', control_pool='expanded calendar' if expanded else 'original random placebo',
+        stock_basis='observed closes' if observed else 'starter synthetic stock',
         research_complete=False, goal_achieved=False)
     (OUT/f'{prefix}analysis_status.json').write_text(json.dumps(status, indent=2))
     lines = ['# Broad 8-K × five-strategy screen', '', '**Current conclusion: INCONCLUSIVE.**', '',
@@ -53,7 +54,7 @@ def report(expanded=False):
         'Exact duplicate random-placebo observations are collapsed with backups and a repair audit.', '',
         'All fixed horizons and strike/cost sensitivities remain in saved tables. '
         'Missing matches are included explicitly in the primary matrix. '
-        'Synthetic stock prices, aggregate option marks, volume-based capacity, incomplete disclosure-calendar coverage, '
+        f'Stock basis: {status["stock_basis"]}. Aggregate option marks, volume-based capacity, incomplete disclosure-calendar coverage, '
         'and unmodeled assignment/financing limit tradability claims. Observed-stock checks and event-text audits are required.', '',
         'Uncertainty joins repeated issuers, reused controls and overlapping holds into conservative dependence components. '
         'Dense overlap can leave too few independent components. Unavailable or insignificant intervals do not establish no effect. '
@@ -66,4 +67,4 @@ def report(expanded=False):
 
 if __name__ == '__main__':
     import sys
-    report(expanded='--expanded' in sys.argv)
+    report(expanded='--expanded' in sys.argv, observed='--observed-stock' in sys.argv)
