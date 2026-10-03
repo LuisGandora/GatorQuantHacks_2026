@@ -98,3 +98,6 @@ ex = raw.explode("tickers").rename(columns={"tickers": "ticker"})
 ```
 
 Since editing `vrp.py`, `harness.py`, `jev.py`, the notebook, or `pair_test.py` is prohibited per the protocol, this experiment cannot proceed until the upstream code is fixed.
+## Resolved (2026-10-03, human)
+
+Fixed at the root in the notebook's `build_events`: when the API omits `tickers` (no filer in the pull has one), it now adds an empty list per row, so those filings drop out of the universe instead of crashing. No frozen file changed (harness.py, jev.py, vrp.py untouched). Checked: investment_impairment out-of-sample returns 0 events; F1 in-sample still 170 events. Resume at V1.
