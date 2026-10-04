@@ -1,0 +1,17 @@
+{
+  "id": "CR-prebaseline-coverage-v1",
+  "scope": "Contracts/quotes and stock inputs only, never compute P&L",
+  "equity_types": [
+    "CS",
+    "ADRC"
+  ],
+  "selection": "All count-eligible candidates in fixed SHA256 order within quarters, visit quarters round-robin",
+  "stop": "Coverage collection may stop after >=40 usable matched events and >=5 primary dependence components per window; no outcome consulted. Count checkpoint is not a final effect estimate.",
+  "contract": "Starter3-6m expiry and5%OTMcall selected prior-session observedstock; actual entry strike must exceed spot",
+  "quote": "Firstjoint sizedbid/ask and fresh completedstockminute09:45-10:15;100msmodeled latency, not guaranteed fills",
+  "controls": "Fixed5sessionpre-disclosure baseline,sameselectedexpiry,DTE\u00b17,RV20ratio.8..1.25,originalstarterstrikealgorithm",
+  "stock": "Known stock reference; pre-entryRV20 fromadjustedcloses; splitfactorchangeexcluded",
+  "sensitivity": "All fixed horizons still required for eventual performance test; only primary coverage established here",
+  "identity": "Historicalcommonstock resolved before quotes byCIK; controlsverifysameCIK; repeat/overlap groupsuseCIK",
+  "risk": "Pre-entry date is a retrospectively selected baseline, not investable using a future unknown filing date; no generic ordinary-day claim. Quote availability conditions the cohort."
+}

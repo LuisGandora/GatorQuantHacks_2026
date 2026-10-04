@@ -1,0 +1,18 @@
+{
+  "symbol": "O:RRC220916C00034000",
+  "day": "2022-04-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1649339100499777792,
+  "execution_timestamp_ns": 1649339100599777792,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.4,
+  "ask": 5,
+  "bid_size": 828,
+  "ask_size": 717,
+  "stock_reference": 31.67,
+  "stock_bar_timestamp_ms": 1649339040000,
+  "stock_reference_age_seconds": 0.499777792
+}

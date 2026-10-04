@@ -1,0 +1,12 @@
+{
+  "cik": "0001140859",
+  "date": "2023-10-11",
+  "selected": "COR",
+  "eligible": [
+    {
+      "ticker": "COR",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

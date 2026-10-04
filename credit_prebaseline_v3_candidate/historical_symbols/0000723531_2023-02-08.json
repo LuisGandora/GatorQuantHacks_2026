@@ -1,0 +1,12 @@
+{
+  "cik": "0000723531",
+  "date": "2023-02-08",
+  "selected": "PAYX",
+  "eligible": [
+    {
+      "ticker": "PAYX",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

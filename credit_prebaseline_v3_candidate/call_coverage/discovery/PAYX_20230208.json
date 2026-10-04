@@ -1,0 +1,112 @@
+{
+  "ticker": "PAYX",
+  "event_entry": "2023-02-08",
+  "status": "matched",
+  "issuer": "0000723531",
+  "source_ticker": "PAYX",
+  "event": {
+    "day": "2023-02-08",
+    "exit_date": "2023-03-10",
+    "expiry": "2023-06-16",
+    "symbol": "O:PAYX230616C00125000",
+    "strike": 125.0,
+    "spot": 116.49,
+    "rv20": 0.24867296622747934,
+    "dte_sessions": 89,
+    "entry_quote": {
+      "symbol": "O:PAYX230616C00125000",
+      "day": "2023-02-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1675867507863150848,
+      "execution_timestamp_ns": 1675867507963150848,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.95,
+      "ask": 3.3,
+      "bid_size": 138,
+      "ask_size": 30,
+      "stock_reference": 116.49,
+      "stock_bar_timestamp_ms": 1675867440000,
+      "stock_reference_age_seconds": 7.863150848
+    },
+    "exit_quote": {
+      "symbol": "O:PAYX230616C00125000",
+      "day": "2023-03-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1678459502421936384,
+      "execution_timestamp_ns": 1678459502521936384,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 2.2,
+      "bid_size": 315,
+      "ask_size": 170,
+      "stock_reference": 109.82,
+      "stock_bar_timestamp_ms": 1678459440000,
+      "stock_reference_age_seconds": 2.421936384
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-02-01",
+      "exit_date": "2023-03-03",
+      "expiry": "2023-06-16",
+      "symbol": "O:PAYX230616C00125000",
+      "strike": 125.0,
+      "spot": 115.6,
+      "rv20": 0.2455633904295456,
+      "dte_sessions": 94,
+      "entry_quote": {
+        "symbol": "O:PAYX230616C00125000",
+        "day": "2023-02-01",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1675262738180143872,
+        "execution_timestamp_ns": 1675262738280143872,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.55,
+        "ask": 2.85,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 115.6,
+        "stock_bar_timestamp_ms": 1675262640000,
+        "stock_reference_age_seconds": 38.180143872
+      },
+      "exit_quote": {
+        "symbol": "O:PAYX230616C00125000",
+        "day": "2023-03-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1677854700097955584,
+        "execution_timestamp_ns": 1677854700197955584,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.7,
+        "ask": 1.6,
+        "bid_size": 19,
+        "ask_size": 16,
+        "stock_reference": 112.42,
+        "stock_bar_timestamp_ms": 1677854640000,
+        "stock_reference_age_seconds": 0.097955584
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-02-08",
+      "2023-03-10"
+    ],
+    [
+      "2023-02-01",
+      "2023-03-03"
+    ]
+  ]
+}

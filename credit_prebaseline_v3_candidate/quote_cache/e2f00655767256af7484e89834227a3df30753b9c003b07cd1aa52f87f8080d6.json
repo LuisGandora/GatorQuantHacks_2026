@@ -1,0 +1,18 @@
+{
+  "symbol": "O:WDFC240816C00240000",
+  "day": "2024-05-28",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 33,
+  "sip_timestamp": 1716904440619592448,
+  "execution_timestamp_ns": 1716904440719592448,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 9.9,
+  "ask": 12.1,
+  "bid_size": 5,
+  "ask_size": 1,
+  "stock_reference": 231.05,
+  "stock_bar_timestamp_ms": 1716904380000,
+  "stock_reference_age_seconds": 0.619592448
+}

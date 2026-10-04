@@ -1,0 +1,12 @@
+{
+  "cik": "0000915358",
+  "date": "2022-07-25",
+  "selected": "SGMA",
+  "eligible": [
+    {
+      "ticker": "SGMA",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

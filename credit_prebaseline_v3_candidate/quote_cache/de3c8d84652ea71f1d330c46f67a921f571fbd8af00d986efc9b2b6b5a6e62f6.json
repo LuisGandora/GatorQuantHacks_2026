@@ -1,0 +1,18 @@
+{
+  "symbol": "O:BG260116C00087500",
+  "day": "2025-10-31",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1761918353976100744,
+  "execution_timestamp_ns": 1761918354076100744,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 8.2,
+  "ask": 10.7,
+  "bid_size": 188,
+  "ask_size": 65,
+  "stock_reference": 94.09,
+  "stock_bar_timestamp_ms": 1761918240000,
+  "stock_reference_age_seconds": 53.976100744
+}

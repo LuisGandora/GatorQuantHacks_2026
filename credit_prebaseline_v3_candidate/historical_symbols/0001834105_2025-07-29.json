@@ -1,0 +1,12 @@
+{
+  "cik": "0001834105",
+  "date": "2025-07-29",
+  "selected": "IBO",
+  "eligible": [
+    {
+      "ticker": "IBO",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

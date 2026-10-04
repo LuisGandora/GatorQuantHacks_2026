@@ -1,0 +1,12 @@
+{
+  "cik": "0001692819",
+  "date": "2024-10-09",
+  "selected": "VST",
+  "eligible": [
+    {
+      "ticker": "VST",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

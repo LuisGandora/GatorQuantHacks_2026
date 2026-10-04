@@ -1,0 +1,112 @@
+{
+  "ticker": "NOG",
+  "event_entry": "2025-11-11",
+  "status": "matched",
+  "issuer": "0001104485",
+  "source_ticker": "NOG",
+  "event": {
+    "day": "2025-11-11",
+    "exit_date": "2025-12-11",
+    "expiry": "2026-03-20",
+    "symbol": "O:NOG260320C00024000",
+    "strike": 24.0,
+    "spot": 22.505,
+    "rv20": 0.4328539758984314,
+    "dte_sessions": 88,
+    "entry_quote": {
+      "symbol": "O:NOG260320C00024000",
+      "day": "2025-11-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1762872301695090825,
+      "execution_timestamp_ns": 1762872301795090825,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.9,
+      "ask": 2.3,
+      "bid_size": 34,
+      "ask_size": 12,
+      "stock_reference": 22.505,
+      "stock_bar_timestamp_ms": 1762872240000,
+      "stock_reference_age_seconds": 1.695090825
+    },
+    "exit_quote": {
+      "symbol": "O:NOG260320C00024000",
+      "day": "2025-12-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1765464341564858397,
+      "execution_timestamp_ns": 1765464341664858397,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.1,
+      "ask": 2.6,
+      "bid_size": 598,
+      "ask_size": 16,
+      "stock_reference": 24.19,
+      "stock_bar_timestamp_ms": 1765464240000,
+      "stock_reference_age_seconds": 41.564858397
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-11-04",
+      "exit_date": "2025-12-04",
+      "expiry": "2026-03-20",
+      "symbol": "O:NOG260320C00024000",
+      "strike": 24.0,
+      "spot": 21.52,
+      "rv20": 0.472807752026115,
+      "dte_sessions": 93,
+      "entry_quote": {
+        "symbol": "O:NOG260320C00024000",
+        "day": "2025-11-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1762268288979234738,
+        "execution_timestamp_ns": 1762268289079234738,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.6,
+        "ask": 2,
+        "bid_size": 4,
+        "ask_size": 57,
+        "stock_reference": 21.52,
+        "stock_bar_timestamp_ms": 1762268220000,
+        "stock_reference_age_seconds": 8.979234738
+      },
+      "exit_quote": {
+        "symbol": "O:NOG260320C00024000",
+        "day": "2025-12-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1764859812866604459,
+        "execution_timestamp_ns": 1764859812966604459,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.2,
+        "ask": 2.6,
+        "bid_size": 438,
+        "ask_size": 127,
+        "stock_reference": 24.115,
+        "stock_bar_timestamp_ms": 1764859740000,
+        "stock_reference_age_seconds": 12.866604459
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-11-11",
+      "2025-12-11"
+    ],
+    [
+      "2025-11-04",
+      "2025-12-04"
+    ]
+  ]
+}

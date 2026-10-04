@@ -1,0 +1,12 @@
+{
+  "cik": "0001825088",
+  "date": "2023-07-26",
+  "selected": "DFH",
+  "eligible": [
+    {
+      "ticker": "DFH",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

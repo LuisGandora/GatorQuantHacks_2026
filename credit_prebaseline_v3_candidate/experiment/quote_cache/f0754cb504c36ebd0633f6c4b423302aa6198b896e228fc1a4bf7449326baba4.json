@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SON241018C00060000",
+  "day": "2024-05-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1714657505182235904,
+  "execution_timestamp_ns": 1714657505282235904,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.5,
+  "ask": 1.75,
+  "bid_size": 11,
+  "ask_size": 10,
+  "stock_reference": 56.59,
+  "stock_bar_timestamp_ms": 1714657440000,
+  "stock_reference_age_seconds": 5.182235904
+}

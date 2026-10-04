@@ -1,0 +1,112 @@
+{
+  "ticker": "BOOM",
+  "event_entry": "2024-02-08",
+  "status": "matched",
+  "issuer": "0000034067",
+  "source_ticker": "BOOM",
+  "event": {
+    "day": "2024-02-08",
+    "exit_date": "2024-03-11",
+    "expiry": "2024-06-21",
+    "symbol": "O:BOOM240621C00020000",
+    "strike": 20.0,
+    "spot": 17.07,
+    "rv20": 0.5026447357174569,
+    "dte_sessions": 92,
+    "entry_quote": {
+      "symbol": "O:BOOM240621C00020000",
+      "day": "2024-02-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 157,
+      "sip_timestamp": 1707403680283716352,
+      "execution_timestamp_ns": 1707403680383716352,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.15,
+      "ask": 1.65,
+      "bid_size": 64,
+      "ask_size": 69,
+      "stock_reference": 17.07,
+      "stock_bar_timestamp_ms": 1707403620000,
+      "stock_reference_age_seconds": 0.283716352
+    },
+    "exit_quote": {
+      "symbol": "O:BOOM240621C00020000",
+      "day": "2024-03-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1710164779936296192,
+      "execution_timestamp_ns": 1710164780036296192,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 1.15,
+      "bid_size": 31,
+      "ask_size": 6,
+      "stock_reference": 17.04,
+      "stock_bar_timestamp_ms": 1710164700000,
+      "stock_reference_age_seconds": 19.936296192
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-02-01",
+      "exit_date": "2024-03-04",
+      "expiry": "2024-06-21",
+      "symbol": "O:BOOM240621C00020000",
+      "strike": 20.0,
+      "spot": 17.42,
+      "rv20": 0.561436442341794,
+      "dte_sessions": 97,
+      "entry_quote": {
+        "symbol": "O:BOOM240621C00020000",
+        "day": "2024-02-01",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 12,
+        "sip_timestamp": 1706799152499076608,
+        "execution_timestamp_ns": 1706799152599076608,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.3,
+        "ask": 1.7,
+        "bid_size": 20,
+        "ask_size": 30,
+        "stock_reference": 17.42,
+        "stock_bar_timestamp_ms": 1706799060000,
+        "stock_reference_age_seconds": 32.499076608
+      },
+      "exit_quote": {
+        "symbol": "O:BOOM240621C00020000",
+        "day": "2024-03-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 27,
+        "sip_timestamp": 1709564183723837184,
+        "execution_timestamp_ns": 1709564183823837184,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.55,
+        "ask": 1,
+        "bid_size": 22,
+        "ask_size": 11,
+        "stock_reference": 16.6,
+        "stock_bar_timestamp_ms": 1709564100000,
+        "stock_reference_age_seconds": 23.723837184
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-02-08",
+      "2024-03-11"
+    ],
+    [
+      "2024-02-01",
+      "2024-03-04"
+    ]
+  ]
+}

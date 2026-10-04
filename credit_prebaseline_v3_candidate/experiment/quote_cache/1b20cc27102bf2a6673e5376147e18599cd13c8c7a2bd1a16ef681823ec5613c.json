@@ -1,0 +1,18 @@
+{
+  "symbol": "O:COMM230217C00012000",
+  "day": "2022-10-25",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1666705569385221888,
+  "execution_timestamp_ns": 1666705569485221888,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.15,
+  "ask": 2.65,
+  "bid_size": 1189,
+  "ask_size": 155,
+  "stock_reference": 12.91,
+  "stock_bar_timestamp_ms": 1666705500000,
+  "stock_reference_age_seconds": 9.385221888
+}

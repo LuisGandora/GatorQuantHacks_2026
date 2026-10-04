@@ -1,0 +1,12 @@
+{
+  "cik": "0001062231",
+  "date": "2025-02-25",
+  "selected": "AXL",
+  "eligible": [
+    {
+      "ticker": "AXL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

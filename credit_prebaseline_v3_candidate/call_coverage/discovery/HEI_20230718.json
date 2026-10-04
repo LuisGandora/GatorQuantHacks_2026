@@ -1,0 +1,60 @@
+{
+  "ticker": "HEI",
+  "event_entry": "2023-07-18",
+  "status": "no_usable_control",
+  "issuer": "0000046619",
+  "source_ticker": "HEI",
+  "event": {
+    "day": "2023-07-18",
+    "exit_date": "2023-08-16",
+    "expiry": "2023-11-17",
+    "symbol": "O:HEI231117C00185000",
+    "strike": 185.0,
+    "spot": 173.67,
+    "rv20": 0.16883045267210664,
+    "dte_sessions": 87,
+    "entry_quote": {
+      "symbol": "O:HEI231117C00185000",
+      "day": "2023-07-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 34,
+      "sip_timestamp": 1689688080046667776,
+      "execution_timestamp_ns": 1689688080146667776,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.2,
+      "ask": 5.4,
+      "bid_size": 8,
+      "ask_size": 35,
+      "stock_reference": 173.67,
+      "stock_bar_timestamp_ms": 1689688020000,
+      "stock_reference_age_seconds": 0.046667776
+    },
+    "exit_quote": {
+      "symbol": "O:HEI231117C00185000",
+      "day": "2023-08-16",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 4,
+      "sip_timestamp": 1692193680522391040,
+      "execution_timestamp_ns": 1692193680622391040,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.8,
+      "ask": 3.5,
+      "bid_size": 20,
+      "ask_size": 6,
+      "stock_reference": 168.73,
+      "stock_bar_timestamp_ms": 1692193620000,
+      "stock_reference_age_seconds": 0.52239104
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-07-11",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

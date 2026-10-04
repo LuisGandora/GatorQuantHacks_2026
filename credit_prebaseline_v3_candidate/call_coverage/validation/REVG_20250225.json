@@ -1,0 +1,112 @@
+{
+  "ticker": "REVG",
+  "event_entry": "2025-02-25",
+  "status": "matched",
+  "issuer": "0001687221",
+  "source_ticker": "REVG",
+  "event": {
+    "day": "2025-02-25",
+    "exit_date": "2025-03-26",
+    "expiry": "2025-07-18",
+    "symbol": "O:REVG250718C00035000",
+    "strike": 35.0,
+    "spot": 30.305,
+    "rv20": 0.3899075984079254,
+    "dte_sessions": 99,
+    "entry_quote": {
+      "symbol": "O:REVG250718C00035000",
+      "day": "2025-02-25",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1740494703864608256,
+      "execution_timestamp_ns": 1740494703964608256,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.25,
+      "ask": 3,
+      "bid_size": 47,
+      "ask_size": 30,
+      "stock_reference": 30.305,
+      "stock_bar_timestamp_ms": 1740494640000,
+      "stock_reference_age_seconds": 3.864608256
+    },
+    "exit_quote": {
+      "symbol": "O:REVG250718C00035000",
+      "day": "2025-03-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1742996776171014912,
+      "execution_timestamp_ns": 1742996776271014912,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.65,
+      "ask": 3.2,
+      "bid_size": 25,
+      "ask_size": 23,
+      "stock_reference": 33.615,
+      "stock_bar_timestamp_ms": 1742996700000,
+      "stock_reference_age_seconds": 16.171014912
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-02-18",
+      "exit_date": "2025-03-19",
+      "expiry": "2025-07-18",
+      "symbol": "O:REVG250718C00040000",
+      "strike": 40.0,
+      "spot": 33.735,
+      "rv20": 0.34856896352335337,
+      "dte_sessions": 104,
+      "entry_quote": {
+        "symbol": "O:REVG250718C00040000",
+        "day": "2025-02-18",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1739890056585507584,
+        "execution_timestamp_ns": 1739890056685507584,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.9,
+        "ask": 2.95,
+        "bid_size": 10,
+        "ask_size": 27,
+        "stock_reference": 33.735,
+        "stock_bar_timestamp_ms": 1739889960000,
+        "stock_reference_age_seconds": 36.585507584
+      },
+      "exit_quote": {
+        "symbol": "O:REVG250718C00040000",
+        "day": "2025-03-19",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 6,
+        "sip_timestamp": 1742393418797239040,
+        "execution_timestamp_ns": 1742393418897239040,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.8,
+        "ask": 1.25,
+        "bid_size": 33,
+        "ask_size": 13,
+        "stock_reference": 31.54,
+        "stock_bar_timestamp_ms": 1742393340000,
+        "stock_reference_age_seconds": 18.79723904
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-02-25",
+      "2025-03-26"
+    ],
+    [
+      "2025-02-18",
+      "2025-03-19"
+    ]
+  ]
+}

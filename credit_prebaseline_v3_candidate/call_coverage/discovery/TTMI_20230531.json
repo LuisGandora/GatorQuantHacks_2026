@@ -1,0 +1,60 @@
+{
+  "ticker": "TTMI",
+  "event_entry": "2023-05-31",
+  "status": "no_usable_control",
+  "issuer": "0001116942",
+  "source_ticker": "TTMI",
+  "event": {
+    "day": "2023-05-31",
+    "exit_date": "2023-06-30",
+    "expiry": "2023-09-15",
+    "symbol": "O:TTMI230915C00015000",
+    "strike": 15.0,
+    "spot": 13.71,
+    "rv20": 0.30156739796011434,
+    "dte_sessions": 74,
+    "entry_quote": {
+      "symbol": "O:TTMI230915C00015000",
+      "day": "2023-05-31",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1685540779886443264,
+      "execution_timestamp_ns": 1685540779986443264,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.55,
+      "ask": 0.65,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 13.71,
+      "stock_bar_timestamp_ms": 1685540700000,
+      "stock_reference_age_seconds": 19.886443264
+    },
+    "exit_quote": {
+      "symbol": "O:TTMI230915C00015000",
+      "day": "2023-06-30",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1688132714092911104,
+      "execution_timestamp_ns": 1688132714192911104,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.4,
+      "ask": 0.6,
+      "bid_size": 105,
+      "ask_size": 209,
+      "stock_reference": 13.96,
+      "stock_bar_timestamp_ms": 1688132640000,
+      "stock_reference_age_seconds": 14.092911104
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-05-23",
+      "reason": "unusable_quote"
+    }
+  ]
+}

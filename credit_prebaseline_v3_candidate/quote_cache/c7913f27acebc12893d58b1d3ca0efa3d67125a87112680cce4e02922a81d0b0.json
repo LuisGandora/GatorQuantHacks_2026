@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AXL250620C00006000",
+  "day": "2025-02-25",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1740494702323159040,
+  "execution_timestamp_ns": 1740494702423159040,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.2,
+  "ask": 0.5,
+  "bid_size": 898,
+  "ask_size": 634,
+  "stock_reference": 5.365,
+  "stock_bar_timestamp_ms": 1740494640000,
+  "stock_reference_age_seconds": 2.32315904
+}

@@ -1,0 +1,112 @@
+{
+  "ticker": "DAL",
+  "event_entry": "2022-11-22",
+  "status": "matched",
+  "issuer": "0000027904",
+  "source_ticker": "DAL",
+  "event": {
+    "day": "2022-11-22",
+    "exit_date": "2022-12-22",
+    "expiry": "2023-03-17",
+    "symbol": "O:DAL230317C00036000",
+    "strike": 36.0,
+    "spot": 33.97,
+    "rv20": 0.34786868324531367,
+    "dte_sessions": 78,
+    "entry_quote": {
+      "symbol": "O:DAL230317C00036000",
+      "day": "2022-11-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1669128302159512832,
+      "execution_timestamp_ns": 1669128302259512832,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.37,
+      "ask": 2.4,
+      "bid_size": 73,
+      "ask_size": 5,
+      "stock_reference": 33.97,
+      "stock_bar_timestamp_ms": 1669128240000,
+      "stock_reference_age_seconds": 2.159512832
+    },
+    "exit_quote": {
+      "symbol": "O:DAL230317C00036000",
+      "day": "2022-12-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1671720302662873600,
+      "execution_timestamp_ns": 1671720302762873600,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.57,
+      "ask": 1.7,
+      "bid_size": 896,
+      "ask_size": 875,
+      "stock_reference": 33.455,
+      "stock_bar_timestamp_ms": 1671720240000,
+      "stock_reference_age_seconds": 2.6628736
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-11-15",
+      "exit_date": "2022-12-15",
+      "expiry": "2023-03-17",
+      "symbol": "O:DAL230317C00037000",
+      "strike": 37.0,
+      "spot": 35.36,
+      "rv20": 0.3601484638544304,
+      "dte_sessions": 83,
+      "entry_quote": {
+        "symbol": "O:DAL230317C00037000",
+        "day": "2022-11-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1668523503320265728,
+        "execution_timestamp_ns": 1668523503420265728,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.81,
+        "ask": 2.86,
+        "bid_size": 18,
+        "ask_size": 14,
+        "stock_reference": 35.36,
+        "stock_bar_timestamp_ms": 1668523440000,
+        "stock_reference_age_seconds": 3.320265728
+      },
+      "exit_quote": {
+        "symbol": "O:DAL230317C00037000",
+        "day": "2022-12-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1671115503627641088,
+        "execution_timestamp_ns": 1671115503727641088,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.47,
+        "ask": 1.59,
+        "bid_size": 1617,
+        "ask_size": 3937,
+        "stock_reference": 33.6301,
+        "stock_bar_timestamp_ms": 1671115440000,
+        "stock_reference_age_seconds": 3.627641088
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-11-22",
+      "2022-12-22"
+    ],
+    [
+      "2022-11-15",
+      "2022-12-15"
+    ]
+  ]
+}

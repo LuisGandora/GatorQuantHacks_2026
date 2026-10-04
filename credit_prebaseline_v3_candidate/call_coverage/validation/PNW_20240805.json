@@ -1,0 +1,112 @@
+{
+  "ticker": "PNW",
+  "event_entry": "2024-08-05",
+  "status": "matched",
+  "issuer": "0000764622",
+  "source_ticker": "PNW",
+  "event": {
+    "day": "2024-08-05",
+    "exit_date": "2024-09-04",
+    "expiry": "2025-01-17",
+    "symbol": "O:PNW250117C00095000",
+    "strike": 95.0,
+    "spot": 86.775,
+    "rv20": 0.14389742624466711,
+    "dte_sessions": 114,
+    "entry_quote": {
+      "symbol": "O:PNW250117C00095000",
+      "day": "2024-08-05",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1722866203803326464,
+      "execution_timestamp_ns": 1722866203903326464,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.8,
+      "ask": 4.7,
+      "bid_size": 2,
+      "ask_size": 2,
+      "stock_reference": 86.775,
+      "stock_bar_timestamp_ms": 1722866100000,
+      "stock_reference_age_seconds": 43.803326464
+    },
+    "exit_quote": {
+      "symbol": "O:PNW250117C00095000",
+      "day": "2024-09-04",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1725457500217831936,
+      "execution_timestamp_ns": 1725457500317831936,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1,
+      "ask": 4.8,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 88.82,
+      "stock_bar_timestamp_ms": 1725457440000,
+      "stock_reference_age_seconds": 0.217831936
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-07-29",
+      "exit_date": "2024-08-27",
+      "expiry": "2025-01-17",
+      "symbol": "O:PNW250117C00090000",
+      "strike": 90.0,
+      "spot": 84.36,
+      "rv20": 0.13788828108842788,
+      "dte_sessions": 119,
+      "entry_quote": {
+        "symbol": "O:PNW250117C00090000",
+        "day": "2024-07-29",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1722260765622848256,
+        "execution_timestamp_ns": 1722260765722848256,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.9,
+        "ask": 2.45,
+        "bid_size": 20,
+        "ask_size": 20,
+        "stock_reference": 84.36,
+        "stock_bar_timestamp_ms": 1722260700000,
+        "stock_reference_age_seconds": 5.622848256
+      },
+      "exit_quote": {
+        "symbol": "O:PNW250117C00090000",
+        "day": "2024-08-27",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1724766309151840768,
+        "execution_timestamp_ns": 1724766309251840768,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.95,
+        "ask": 3.6,
+        "bid_size": 62,
+        "ask_size": 44,
+        "stock_reference": 86.71,
+        "stock_bar_timestamp_ms": 1724766240000,
+        "stock_reference_age_seconds": 9.151840768
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-08-05",
+      "2024-09-04"
+    ],
+    [
+      "2024-07-29",
+      "2024-08-27"
+    ]
+  ]
+}

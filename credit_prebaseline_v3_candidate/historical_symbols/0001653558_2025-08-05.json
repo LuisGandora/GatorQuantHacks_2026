@@ -1,0 +1,12 @@
+{
+  "cik": "0001653558",
+  "date": "2025-08-05",
+  "selected": "PRTH",
+  "eligible": [
+    {
+      "ticker": "PRTH",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

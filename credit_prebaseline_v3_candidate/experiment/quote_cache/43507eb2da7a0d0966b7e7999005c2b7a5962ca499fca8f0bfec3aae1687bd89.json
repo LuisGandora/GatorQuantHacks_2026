@@ -1,0 +1,18 @@
+{
+  "symbol": "O:KBR240621C00057500",
+  "day": "2024-04-05",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1712324703677375488,
+  "execution_timestamp_ns": 1712324703777375488,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 8,
+  "ask": 8.3,
+  "bid_size": 12,
+  "ask_size": 6,
+  "stock_reference": 64.425,
+  "stock_bar_timestamp_ms": 1712324640000,
+  "stock_reference_age_seconds": 3.677375488
+}

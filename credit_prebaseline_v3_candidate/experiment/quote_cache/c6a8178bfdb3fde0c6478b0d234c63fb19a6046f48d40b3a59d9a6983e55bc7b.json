@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ADC250117C00075000",
+  "day": "2024-10-31",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1730383084778139392,
+  "execution_timestamp_ns": 1730383084878139392,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.15,
+  "ask": 3.2,
+  "bid_size": 1,
+  "ask_size": 25,
+  "stock_reference": 74.52,
+  "stock_bar_timestamp_ms": 1730383020000,
+  "stock_reference_age_seconds": 4.778139392
+}

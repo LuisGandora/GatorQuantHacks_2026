@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SKY251121C00070000",
+  "day": "2025-08-28",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 5,
+  "sip_timestamp": 1756388952483840141,
+  "execution_timestamp_ns": 1756388952583840141,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 8.8,
+  "ask": 11.3,
+  "bid_size": 19,
+  "ask_size": 23,
+  "stock_reference": 74.27,
+  "stock_bar_timestamp_ms": 1756388880000,
+  "stock_reference_age_seconds": 12.483840141
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:GDYN250919C00015000",
+  "day": "2025-05-22",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 77,
+  "sip_timestamp": 1747921561831994102,
+  "execution_timestamp_ns": 1747921561931994102,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.55,
+  "ask": 1.2,
+  "bid_size": 128,
+  "ask_size": 47,
+  "stock_reference": 13.3,
+  "stock_bar_timestamp_ms": 1747921500000,
+  "stock_reference_age_seconds": 1.831994102
+}

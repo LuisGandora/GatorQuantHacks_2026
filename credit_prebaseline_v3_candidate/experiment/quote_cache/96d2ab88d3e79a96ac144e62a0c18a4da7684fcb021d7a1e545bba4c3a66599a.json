@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PNW250117C00090000",
+  "day": "2024-09-26",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1727358656865987584,
+  "execution_timestamp_ns": 1727358656965987584,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.9,
+  "ask": 3.5,
+  "bid_size": 30,
+  "ask_size": 40,
+  "stock_reference": 89.12,
+  "stock_bar_timestamp_ms": 1727358540000,
+  "stock_reference_age_seconds": 56.865987584
+}

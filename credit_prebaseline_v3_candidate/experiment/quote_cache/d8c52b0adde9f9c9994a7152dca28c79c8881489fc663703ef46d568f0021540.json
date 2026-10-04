@@ -1,0 +1,18 @@
+{
+  "symbol": "O:WRLD231020C00145000",
+  "day": "2023-07-24",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 136,
+  "sip_timestamp": 1690206820076788224,
+  "execution_timestamp_ns": 1690206820176788224,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 18.2,
+  "ask": 22.3,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 153.66,
+  "stock_bar_timestamp_ms": 1690206720000,
+  "stock_reference_age_seconds": 40.076788224
+}

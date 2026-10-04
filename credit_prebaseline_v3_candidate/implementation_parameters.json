@@ -1,0 +1,8 @@
+{
+  "bootstrap_seed": 20261003,
+  "execution_delay_seconds": 0.1,
+  "stock_reference_max_age_seconds": 60,
+  "issuer_identity": "CIK equality at event and pre-baseline dates",
+  "returns_read_before_freeze": false,
+  "counts_spec_id": "CR-prebaseline-covered-call-v3"
+}

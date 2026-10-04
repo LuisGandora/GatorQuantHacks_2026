@@ -1,0 +1,12 @@
+{
+  "cik": "0001047127",
+  "date": "2025-05-14",
+  "selected": "AMKR",
+  "eligible": [
+    {
+      "ticker": "AMKR",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

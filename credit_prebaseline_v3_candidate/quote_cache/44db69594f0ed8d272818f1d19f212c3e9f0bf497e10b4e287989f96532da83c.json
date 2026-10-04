@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LW241018C00087500",
+  "day": "2024-05-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1714657611321914624,
+  "execution_timestamp_ns": 1714657611421914624,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 5.6,
+  "ask": 5.9,
+  "bid_size": 111,
+  "ask_size": 43,
+  "stock_reference": 82.4,
+  "stock_bar_timestamp_ms": 1714657500000,
+  "stock_reference_age_seconds": 51.321914624
+}

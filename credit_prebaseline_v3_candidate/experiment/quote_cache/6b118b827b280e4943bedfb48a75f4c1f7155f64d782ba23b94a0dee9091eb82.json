@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DVA231020C00092500",
+  "day": "2023-05-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1683035101267830016,
+  "execution_timestamp_ns": 1683035101367830016,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 7,
+  "ask": 8.3,
+  "bid_size": 180,
+  "ask_size": 231,
+  "stock_reference": 89.39,
+  "stock_bar_timestamp_ms": 1683035040000,
+  "stock_reference_age_seconds": 1.267830016
+}

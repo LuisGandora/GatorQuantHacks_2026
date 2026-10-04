@@ -1,0 +1,112 @@
+{
+  "ticker": "SLVM",
+  "event_entry": "2024-08-02",
+  "status": "matched",
+  "issuer": "0001856485",
+  "source_ticker": "SLVM",
+  "event": {
+    "day": "2024-08-02",
+    "exit_date": "2024-09-03",
+    "expiry": "2024-11-15",
+    "symbol": "O:SLVM241115C00080000",
+    "strike": 80.0,
+    "spot": 69.72,
+    "rv20": 0.33904901025576245,
+    "dte_sessions": 74,
+    "entry_quote": {
+      "symbol": "O:SLVM241115C00080000",
+      "day": "2024-08-02",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1722606950019558656,
+      "execution_timestamp_ns": 1722606950119558656,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.1,
+      "ask": 3.2,
+      "bid_size": 11,
+      "ask_size": 14,
+      "stock_reference": 69.72,
+      "stock_bar_timestamp_ms": 1722606840000,
+      "stock_reference_age_seconds": 50.019558656
+    },
+    "exit_quote": {
+      "symbol": "O:SLVM241115C00080000",
+      "day": "2024-09-03",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1725371327752196352,
+      "execution_timestamp_ns": 1725371327852196352,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.9,
+      "ask": 7,
+      "bid_size": 10,
+      "ask_size": 30,
+      "stock_reference": 77.855,
+      "stock_bar_timestamp_ms": 1725371220000,
+      "stock_reference_age_seconds": 47.752196352
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-07-26",
+      "exit_date": "2024-08-26",
+      "expiry": "2024-11-15",
+      "symbol": "O:SLVM241115C00080000",
+      "strike": 80.0,
+      "spot": 74.3,
+      "rv20": 0.3101161986872986,
+      "dte_sessions": 79,
+      "entry_quote": {
+        "symbol": "O:SLVM241115C00080000",
+        "day": "2024-07-26",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1722001504458412800,
+        "execution_timestamp_ns": 1722001504558412800,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.6,
+        "ask": 6,
+        "bid_size": 30,
+        "ask_size": 20,
+        "stock_reference": 74.3,
+        "stock_bar_timestamp_ms": 1722001440000,
+        "stock_reference_age_seconds": 4.4584128
+      },
+      "exit_quote": {
+        "symbol": "O:SLVM241115C00080000",
+        "day": "2024-08-26",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1724679903544957696,
+        "execution_timestamp_ns": 1724679903644957696,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 4.8,
+        "ask": 6,
+        "bid_size": 22,
+        "ask_size": 6,
+        "stock_reference": 79.87,
+        "stock_bar_timestamp_ms": 1724679840000,
+        "stock_reference_age_seconds": 3.544957696
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-08-02",
+      "2024-09-03"
+    ],
+    [
+      "2024-07-26",
+      "2024-08-26"
+    ]
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "ticker": "CXW",
+  "event_entry": "2023-10-13",
+  "status": "no_usable_control",
+  "issuer": "0001070985",
+  "source_ticker": "CXW",
+  "event": {
+    "day": "2023-10-13",
+    "exit_date": "2023-11-13",
+    "expiry": "2024-01-19",
+    "symbol": "O:CXW240119C00012000",
+    "strike": 12.0,
+    "spot": 11.305,
+    "rv20": 0.22341519099608695,
+    "dte_sessions": 66,
+    "entry_quote": {
+      "symbol": "O:CXW240119C00012000",
+      "day": "2023-10-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1697205026008744192,
+      "execution_timestamp_ns": 1697205026108744192,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.5,
+      "ask": 0.65,
+      "bid_size": 129,
+      "ask_size": 1006,
+      "stock_reference": 11.305,
+      "stock_bar_timestamp_ms": 1697204940000,
+      "stock_reference_age_seconds": 26.008744192
+    },
+    "exit_quote": {
+      "symbol": "O:CXW240119C00012000",
+      "day": "2023-11-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1699886700009183488,
+      "execution_timestamp_ns": 1699886700109183488,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.75,
+      "ask": 1.9,
+      "bid_size": 532,
+      "ask_size": 986,
+      "stock_reference": 13.41,
+      "stock_bar_timestamp_ms": 1699886640000,
+      "stock_reference_age_seconds": 0.009183488
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-10-06",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

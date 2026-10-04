@@ -1,0 +1,10 @@
+{
+  "counts": {
+    "discovery": 40,
+    "validation": 40
+  },
+  "errors": [],
+  "returns_calculated": false,
+  "complete_inventory": true,
+  "limitation": "Verifies saved data and timing, not actual fills/assignments or complete original filing text."
+}

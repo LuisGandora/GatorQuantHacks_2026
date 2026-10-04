@@ -1,0 +1,9 @@
+{
+  "primary_arm_arithmetic_checks": 160,
+  "horizon_results_checked": 18,
+  "independent_dependence_check": true,
+  "notebook_code_cells_executed": 5,
+  "errors": 0,
+  "implementation_unchanged": true,
+  "method": "Actual saved results audited; no selection or rerun of empirical test"
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LAMR231215C00105000",
+  "day": "2023-08-03",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1691070305756625664,
+  "execution_timestamp_ns": 1691070305856625664,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.6,
+  "ask": 2.25,
+  "bid_size": 5,
+  "ask_size": 38,
+  "stock_reference": 89.895,
+  "stock_bar_timestamp_ms": 1691070240000,
+  "stock_reference_age_seconds": 5.756625664
+}

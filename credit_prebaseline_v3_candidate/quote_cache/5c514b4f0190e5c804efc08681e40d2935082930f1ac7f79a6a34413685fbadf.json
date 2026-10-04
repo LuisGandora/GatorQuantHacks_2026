@@ -1,0 +1,18 @@
+{
+  "symbol": "O:MTX250516C00090000",
+  "day": "2024-11-27",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 9,
+  "sip_timestamp": 1732719258267857408,
+  "execution_timestamp_ns": 1732719258367857408,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.5,
+  "ask": 6.5,
+  "bid_size": 20,
+  "ask_size": 20,
+  "stock_reference": 83.49,
+  "stock_bar_timestamp_ms": 1732719180000,
+  "stock_reference_age_seconds": 18.267857408
+}

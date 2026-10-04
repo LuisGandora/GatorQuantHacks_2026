@@ -1,0 +1,112 @@
+{
+  "ticker": "HLI",
+  "event_entry": "2025-08-22",
+  "status": "matched",
+  "issuer": "0001302215",
+  "source_ticker": "HLI",
+  "event": {
+    "day": "2025-08-22",
+    "exit_date": "2025-09-23",
+    "expiry": "2025-12-19",
+    "symbol": "O:HLI251219C00210000",
+    "strike": 210.0,
+    "spot": 193.3,
+    "rv20": 0.16087283407708133,
+    "dte_sessions": 83,
+    "entry_quote": {
+      "symbol": "O:HLI251219C00210000",
+      "day": "2025-08-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1755870387102806708,
+      "execution_timestamp_ns": 1755870387202806708,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.5,
+      "ask": 6,
+      "bid_size": 11,
+      "ask_size": 8,
+      "stock_reference": 193.3,
+      "stock_bar_timestamp_ms": 1755870300000,
+      "stock_reference_age_seconds": 27.102806708
+    },
+    "exit_quote": {
+      "symbol": "O:HLI251219C00210000",
+      "day": "2025-09-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1758635100003020532,
+      "execution_timestamp_ns": 1758635100103020532,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.2,
+      "ask": 11.6,
+      "bid_size": 2,
+      "ask_size": 1,
+      "stock_reference": 208.84,
+      "stock_bar_timestamp_ms": 1758635040000,
+      "stock_reference_age_seconds": 0.003020532
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-08-15",
+      "exit_date": "2025-09-16",
+      "expiry": "2025-12-19",
+      "symbol": "O:HLI251219C00210000",
+      "strike": 210.0,
+      "spot": 192.92,
+      "rv20": 0.1534454333755905,
+      "dte_sessions": 88,
+      "entry_quote": {
+        "symbol": "O:HLI251219C00210000",
+        "day": "2025-08-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 7,
+        "sip_timestamp": 1755265561539609662,
+        "execution_timestamp_ns": 1755265561639609662,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.4,
+        "ask": 6,
+        "bid_size": 10,
+        "ask_size": 9,
+        "stock_reference": 192.92,
+        "stock_bar_timestamp_ms": 1755265500000,
+        "stock_reference_age_seconds": 1.539609662
+      },
+      "exit_quote": {
+        "symbol": "O:HLI251219C00210000",
+        "day": "2025-09-16",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1758030387742081712,
+        "execution_timestamp_ns": 1758030387842081712,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 5.3,
+        "ask": 8.5,
+        "bid_size": 6,
+        "ask_size": 9,
+        "stock_reference": 202.68,
+        "stock_bar_timestamp_ms": 1758030300000,
+        "stock_reference_age_seconds": 27.742081712
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-08-22",
+      "2025-09-23"
+    ],
+    [
+      "2025-08-15",
+      "2025-09-16"
+    ]
+  ]
+}

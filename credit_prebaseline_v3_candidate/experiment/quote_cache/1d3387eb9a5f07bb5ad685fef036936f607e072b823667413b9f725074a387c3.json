@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SLVM241115C00080000",
+  "day": "2024-10-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 8,
+  "sip_timestamp": 1727877208156801280,
+  "execution_timestamp_ns": 1727877208256801280,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 5,
+  "ask": 8.3,
+  "bid_size": 32,
+  "ask_size": 44,
+  "stock_reference": 82.73,
+  "stock_bar_timestamp_ms": 1727877120000,
+  "stock_reference_age_seconds": 28.15680128
+}

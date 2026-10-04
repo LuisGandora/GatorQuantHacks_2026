@@ -1,0 +1,18 @@
+{
+  "symbol": "O:MAN220916C00095000",
+  "day": "2022-06-03",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1654263900240180224,
+  "execution_timestamp_ns": 1654263900340180224,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.4,
+  "ask": 5.1,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 87.15,
+  "stock_bar_timestamp_ms": 1654263840000,
+  "stock_reference_age_seconds": 0.240180224
+}

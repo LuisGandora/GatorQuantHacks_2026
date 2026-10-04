@@ -1,0 +1,60 @@
+{
+  "ticker": "YELP",
+  "event_entry": "2023-05-05",
+  "status": "no_usable_control",
+  "issuer": "0001345016",
+  "source_ticker": "YELP",
+  "event": {
+    "day": "2023-05-05",
+    "exit_date": "2023-06-06",
+    "expiry": "2023-08-18",
+    "symbol": "O:YELP230818C00029000",
+    "strike": 29.0,
+    "spot": 27.97,
+    "rv20": 0.2800471843478637,
+    "dte_sessions": 72,
+    "entry_quote": {
+      "symbol": "O:YELP230818C00029000",
+      "day": "2023-05-05",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1683294393507351552,
+      "execution_timestamp_ns": 1683294393607351552,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.2,
+      "ask": 2.35,
+      "bid_size": 489,
+      "ask_size": 464,
+      "stock_reference": 27.97,
+      "stock_bar_timestamp_ms": 1683294300000,
+      "stock_reference_age_seconds": 33.507351552
+    },
+    "exit_quote": {
+      "symbol": "O:YELP230818C00029000",
+      "day": "2023-06-06",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1686059101008571904,
+      "execution_timestamp_ns": 1686059101108571904,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.8,
+      "ask": 8.3,
+      "bid_size": 30,
+      "ask_size": 1,
+      "stock_reference": 34.35,
+      "stock_bar_timestamp_ms": 1686059040000,
+      "stock_reference_age_seconds": 1.008571904
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-04-28",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001476045",
+  "date": "2022-11-02",
+  "selected": "CLDT",
+  "eligible": [
+    {
+      "ticker": "CLDT",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

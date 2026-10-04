@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AKAM250919C00090000",
+  "day": "2025-05-09",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1746798312485923318,
+  "execution_timestamp_ns": 1746798312585923318,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.2,
+  "ask": 4.8,
+  "bid_size": 56,
+  "ask_size": 1,
+  "stock_reference": 82.36,
+  "stock_bar_timestamp_ms": 1746798240000,
+  "stock_reference_age_seconds": 12.485923318
+}

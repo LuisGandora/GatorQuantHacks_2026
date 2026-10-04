@@ -1,0 +1,12 @@
+{
+  "cik": "0001298946",
+  "date": "2025-07-24",
+  "selected": "DRH",
+  "eligible": [
+    {
+      "ticker": "DRH",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

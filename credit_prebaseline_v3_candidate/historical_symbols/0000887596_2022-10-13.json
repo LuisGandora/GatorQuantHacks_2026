@@ -1,0 +1,12 @@
+{
+  "cik": "0000887596",
+  "date": "2022-10-13",
+  "selected": "CAKE",
+  "eligible": [
+    {
+      "ticker": "CAKE",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

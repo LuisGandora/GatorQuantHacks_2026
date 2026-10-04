@@ -1,0 +1,112 @@
+{
+  "ticker": "TJX",
+  "event_entry": "2023-05-10",
+  "status": "matched",
+  "issuer": "0000109198",
+  "source_ticker": "TJX",
+  "event": {
+    "day": "2023-05-10",
+    "exit_date": "2023-06-09",
+    "expiry": "2023-10-20",
+    "symbol": "O:TJX231020C00085000",
+    "strike": 85.0,
+    "spot": 78.06,
+    "rv20": 0.17071946150767456,
+    "dte_sessions": 113,
+    "entry_quote": {
+      "symbol": "O:TJX231020C00085000",
+      "day": "2023-05-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1683726302294197760,
+      "execution_timestamp_ns": 1683726302394197760,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.66,
+      "ask": 2.87,
+      "bid_size": 45,
+      "ask_size": 160,
+      "stock_reference": 78.06,
+      "stock_bar_timestamp_ms": 1683726240000,
+      "stock_reference_age_seconds": 2.29419776
+    },
+    "exit_quote": {
+      "symbol": "O:TJX231020C00085000",
+      "day": "2023-06-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1686318300715118592,
+      "execution_timestamp_ns": 1686318300815118592,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.58,
+      "ask": 1.72,
+      "bid_size": 12,
+      "ask_size": 33,
+      "stock_reference": 78.61,
+      "stock_bar_timestamp_ms": 1686318240000,
+      "stock_reference_age_seconds": 0.715118592
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-05-03",
+      "exit_date": "2023-06-02",
+      "expiry": "2023-10-20",
+      "symbol": "O:TJX231020C00082500",
+      "strike": 82.5,
+      "spot": 78.25,
+      "rv20": 0.15470484029741638,
+      "dte_sessions": 118,
+      "entry_quote": {
+        "symbol": "O:TJX231020C00082500",
+        "day": "2023-05-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1683121503930509312,
+        "execution_timestamp_ns": 1683121504030509312,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.55,
+        "ask": 3.7,
+        "bid_size": 2,
+        "ask_size": 77,
+        "stock_reference": 78.25,
+        "stock_bar_timestamp_ms": 1683121440000,
+        "stock_reference_age_seconds": 3.930509312
+      },
+      "exit_quote": {
+        "symbol": "O:TJX231020C00082500",
+        "day": "2023-06-02",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1685713520263548672,
+        "execution_timestamp_ns": 1685713520363548672,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.49,
+        "ask": 2.7,
+        "bid_size": 93,
+        "ask_size": 199,
+        "stock_reference": 77.73,
+        "stock_bar_timestamp_ms": 1685713440000,
+        "stock_reference_age_seconds": 20.263548672
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-05-10",
+      "2023-06-09"
+    ],
+    [
+      "2023-05-03",
+      "2023-06-02"
+    ]
+  ]
+}

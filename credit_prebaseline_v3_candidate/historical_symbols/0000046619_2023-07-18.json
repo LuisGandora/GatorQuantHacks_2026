@@ -1,0 +1,16 @@
+{
+  "cik": "0000046619",
+  "date": "2023-07-18",
+  "selected": "HEI",
+  "eligible": [
+    {
+      "ticker": "HEI",
+      "type": "CS"
+    },
+    {
+      "ticker": "HEI.A",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

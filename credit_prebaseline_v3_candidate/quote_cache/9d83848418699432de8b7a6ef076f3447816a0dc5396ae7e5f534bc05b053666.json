@@ -1,0 +1,18 @@
+{
+  "symbol": "O:COR240119C00190000",
+  "day": "2023-11-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1698932711775705856,
+  "execution_timestamp_ns": 1698932711875705856,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.6,
+  "ask": 6.1,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 185.365,
+  "stock_bar_timestamp_ms": 1698932640000,
+  "stock_reference_age_seconds": 11.775705856
+}

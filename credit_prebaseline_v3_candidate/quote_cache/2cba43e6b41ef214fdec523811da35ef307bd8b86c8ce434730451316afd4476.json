@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ADUS250417C00140000",
+  "day": "2024-10-24",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 37,
+  "sip_timestamp": 1729779128266498816,
+  "execution_timestamp_ns": 1729779128366498816,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.1,
+  "ask": 8,
+  "bid_size": 20,
+  "ask_size": 20,
+  "stock_reference": 128.84,
+  "stock_bar_timestamp_ms": 1729779060000,
+  "stock_reference_age_seconds": 8.266498816
+}

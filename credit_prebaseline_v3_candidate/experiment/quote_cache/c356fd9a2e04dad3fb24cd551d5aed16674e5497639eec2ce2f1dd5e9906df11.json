@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AMG230317C00165000",
+  "day": "2023-02-16",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 33,
+  "sip_timestamp": 1676559004949043712,
+  "execution_timestamp_ns": 1676559005049043712,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.75,
+  "ask": 6.4,
+  "bid_size": 19,
+  "ask_size": 13,
+  "stock_reference": 163.59,
+  "stock_bar_timestamp_ms": 1676558940000,
+  "stock_reference_age_seconds": 4.949043712
+}

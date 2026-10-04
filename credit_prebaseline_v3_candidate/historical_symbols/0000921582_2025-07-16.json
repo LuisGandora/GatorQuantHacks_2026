@@ -1,0 +1,12 @@
+{
+  "cik": "0000921582",
+  "date": "2025-07-16",
+  "selected": "IMAX",
+  "eligible": [
+    {
+      "ticker": "IMAX",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

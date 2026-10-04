@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CSWC231215C00022500",
+  "day": "2023-08-10",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1691675102661331968,
+  "execution_timestamp_ns": 1691675102761331968,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.15,
+  "ask": 0.95,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 22.2398,
+  "stock_bar_timestamp_ms": 1691675040000,
+  "stock_reference_age_seconds": 2.661331968
+}

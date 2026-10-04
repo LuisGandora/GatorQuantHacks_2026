@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SCS240719C00015000",
+  "day": "2024-04-10",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1712756700324233216,
+  "execution_timestamp_ns": 1712756700424233216,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.2,
+  "ask": 0.35,
+  "bid_size": 242,
+  "ask_size": 61,
+  "stock_reference": 12.5,
+  "stock_bar_timestamp_ms": 1712756640000,
+  "stock_reference_age_seconds": 0.324233216
+}

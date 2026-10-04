@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ACGL231215C00080000",
+  "day": "2023-10-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1697809500041601280,
+  "execution_timestamp_ns": 1697809500141601280,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 5.4,
+  "ask": 7.8,
+  "bid_size": 34,
+  "ask_size": 48,
+  "stock_reference": 83.39,
+  "stock_bar_timestamp_ms": 1697809440000,
+  "stock_reference_age_seconds": 0.04160128
+}

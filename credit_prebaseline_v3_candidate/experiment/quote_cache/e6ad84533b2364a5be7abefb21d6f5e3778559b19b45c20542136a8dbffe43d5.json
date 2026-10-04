@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TEAM241220C00155000",
+  "day": "2024-08-12",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1723470346062895872,
+  "execution_timestamp_ns": 1723470346162895872,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 10.4,
+  "ask": 11.4,
+  "bid_size": 28,
+  "ask_size": 21,
+  "stock_reference": 140.505,
+  "stock_bar_timestamp_ms": 1723470240000,
+  "stock_reference_age_seconds": 46.062895872
+}

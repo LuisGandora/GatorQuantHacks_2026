@@ -1,0 +1,112 @@
+{
+  "ticker": "FLEX",
+  "event_entry": "2022-07-25",
+  "status": "matched",
+  "issuer": "0000866374",
+  "source_ticker": "FLEX",
+  "event": {
+    "day": "2022-07-25",
+    "exit_date": "2022-08-23",
+    "expiry": "2022-10-21",
+    "symbol": "O:FLEX221021C00017000",
+    "strike": 17.0,
+    "spot": 15.285,
+    "rv20": 0.3753326707759649,
+    "dte_sessions": 63,
+    "entry_quote": {
+      "symbol": "O:FLEX221021C00017000",
+      "day": "2022-07-25",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1658756817952439296,
+      "execution_timestamp_ns": 1658756818052439296,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.5,
+      "ask": 0.65,
+      "bid_size": 765,
+      "ask_size": 73,
+      "stock_reference": 15.285,
+      "stock_bar_timestamp_ms": 1658756700000,
+      "stock_reference_age_seconds": 57.952439296
+    },
+    "exit_quote": {
+      "symbol": "O:FLEX221021C00017000",
+      "day": "2022-08-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1661262300134373888,
+      "execution_timestamp_ns": 1661262300234373888,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.85,
+      "ask": 2.05,
+      "bid_size": 827,
+      "ask_size": 286,
+      "stock_reference": 18.205,
+      "stock_bar_timestamp_ms": 1661262240000,
+      "stock_reference_age_seconds": 0.134373888
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-07-18",
+      "exit_date": "2022-08-16",
+      "expiry": "2022-10-21",
+      "symbol": "O:FLEX221021C00016000",
+      "strike": 16.0,
+      "spot": 14.725,
+      "rv20": 0.4600555534422762,
+      "dte_sessions": 68,
+      "entry_quote": {
+        "symbol": "O:FLEX221021C00016000",
+        "day": "2022-07-18",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1658152725140638976,
+        "execution_timestamp_ns": 1658152725240638976,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.65,
+        "ask": 0.8,
+        "bid_size": 97,
+        "ask_size": 41,
+        "stock_reference": 14.725,
+        "stock_bar_timestamp_ms": 1658152620000,
+        "stock_reference_age_seconds": 45.140638976
+      },
+      "exit_quote": {
+        "symbol": "O:FLEX221021C00016000",
+        "day": "2022-08-16",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1660657503638203904,
+        "execution_timestamp_ns": 1660657503738203904,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.1,
+        "ask": 3.3,
+        "bid_size": 150,
+        "ask_size": 55,
+        "stock_reference": 18.8501,
+        "stock_bar_timestamp_ms": 1660657440000,
+        "stock_reference_age_seconds": 3.638203904
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-07-25",
+      "2022-08-23"
+    ],
+    [
+      "2022-07-18",
+      "2022-08-16"
+    ]
+  ]
+}

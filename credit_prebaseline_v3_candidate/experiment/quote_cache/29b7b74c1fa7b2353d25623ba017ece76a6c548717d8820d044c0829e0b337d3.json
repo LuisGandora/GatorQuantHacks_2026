@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TPG221118C00030000",
+  "day": "2022-09-13",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1663076710540961280,
+  "execution_timestamp_ns": 1663076710640961280,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.3,
+  "ask": 4.5,
+  "bid_size": 89,
+  "ask_size": 244,
+  "stock_reference": 32.0173,
+  "stock_bar_timestamp_ms": 1663076640000,
+  "stock_reference_age_seconds": 10.54096128
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0000089800",
+  "date": "2022-05-24",
+  "selected": "SHW",
+  "eligible": [
+    {
+      "ticker": "SHW",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

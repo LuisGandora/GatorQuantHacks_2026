@@ -1,0 +1,60 @@
+{
+  "ticker": "KKR",
+  "event_entry": "2024-07-11",
+  "status": "no_usable_control",
+  "issuer": "0001404912",
+  "source_ticker": "KKR",
+  "event": {
+    "day": "2024-07-11",
+    "exit_date": "2024-08-09",
+    "expiry": "2024-12-20",
+    "symbol": "O:KKR241220C00115000",
+    "strike": 115.0,
+    "spot": 109.76,
+    "rv20": 0.19750398624848253,
+    "dte_sessions": 114,
+    "entry_quote": {
+      "symbol": "O:KKR241220C00115000",
+      "day": "2024-07-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1720705518599120896,
+      "execution_timestamp_ns": 1720705518699120896,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.2,
+      "ask": 7.5,
+      "bid_size": 11,
+      "ask_size": 1,
+      "stock_reference": 109.76,
+      "stock_bar_timestamp_ms": 1720705440000,
+      "stock_reference_age_seconds": 18.599120896
+    },
+    "exit_quote": {
+      "symbol": "O:KKR241220C00115000",
+      "day": "2024-08-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1723211100189623040,
+      "execution_timestamp_ns": 1723211100289623040,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.8,
+      "ask": 10.8,
+      "bid_size": 129,
+      "ask_size": 401,
+      "stock_reference": 113.07,
+      "stock_bar_timestamp_ms": 1723211040000,
+      "stock_reference_age_seconds": 0.18962304
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-07-03",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

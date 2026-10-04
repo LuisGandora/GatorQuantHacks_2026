@@ -1,0 +1,18 @@
+{
+  "symbol": "O:MRVL230818C00042500",
+  "day": "2023-07-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1689774300462155008,
+  "execution_timestamp_ns": 1689774300562155008,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 24.05,
+  "ask": 24.15,
+  "bid_size": 1,
+  "ask_size": 38,
+  "stock_reference": 66.36,
+  "stock_bar_timestamp_ms": 1689774240000,
+  "stock_reference_age_seconds": 0.462155008
+}

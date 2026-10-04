@@ -1,0 +1,112 @@
+{
+  "ticker": "CARR",
+  "event_entry": "2024-05-20",
+  "status": "matched",
+  "issuer": "0001783180",
+  "source_ticker": "CARR",
+  "event": {
+    "day": "2024-05-20",
+    "exit_date": "2024-06-20",
+    "expiry": "2024-09-20",
+    "symbol": "O:CARR240920C00070000",
+    "strike": 70.0,
+    "spot": 65.54,
+    "rv20": 0.3781120786653695,
+    "dte_sessions": 85,
+    "entry_quote": {
+      "symbol": "O:CARR240920C00070000",
+      "day": "2024-05-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1716212712382363648,
+      "execution_timestamp_ns": 1716212712482363648,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.25,
+      "ask": 2.4,
+      "bid_size": 59,
+      "ask_size": 48,
+      "stock_reference": 65.54,
+      "stock_bar_timestamp_ms": 1716212640000,
+      "stock_reference_age_seconds": 12.382363648
+    },
+    "exit_quote": {
+      "symbol": "O:CARR240920C00070000",
+      "day": "2024-06-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1718891312761179648,
+      "execution_timestamp_ns": 1718891312861179648,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.2,
+      "ask": 2.4,
+      "bid_size": 105,
+      "ask_size": 39,
+      "stock_reference": 65.615,
+      "stock_bar_timestamp_ms": 1718891220000,
+      "stock_reference_age_seconds": 32.761179648
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-05-13",
+      "exit_date": "2024-06-12",
+      "expiry": "2024-09-20",
+      "symbol": "O:CARR240920C00070000",
+      "strike": 70.0,
+      "spot": 65.78,
+      "rv20": 0.4006528011438216,
+      "dte_sessions": 90,
+      "entry_quote": {
+        "symbol": "O:CARR240920C00070000",
+        "day": "2024-05-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1715607974621363712,
+        "execution_timestamp_ns": 1715607974721363712,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.5,
+        "ask": 2.6,
+        "bid_size": 42,
+        "ask_size": 1,
+        "stock_reference": 65.78,
+        "stock_bar_timestamp_ms": 1715607900000,
+        "stock_reference_age_seconds": 14.621363712
+      },
+      "exit_quote": {
+        "symbol": "O:CARR240920C00070000",
+        "day": "2024-06-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1718199900123822848,
+        "execution_timestamp_ns": 1718199900223822848,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.6,
+        "ask": 1.85,
+        "bid_size": 6,
+        "ask_size": 11,
+        "stock_reference": 64.27,
+        "stock_bar_timestamp_ms": 1718199840000,
+        "stock_reference_age_seconds": 0.123822848
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-05-20",
+      "2024-06-20"
+    ],
+    [
+      "2024-05-13",
+      "2024-06-12"
+    ]
+  ]
+}

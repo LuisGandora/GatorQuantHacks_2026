@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AMKR250919C00019000",
+  "day": "2025-05-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1746626504448855942,
+  "execution_timestamp_ns": 1746626504548855942,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.35,
+  "ask": 1.65,
+  "bid_size": 10,
+  "ask_size": 1,
+  "stock_reference": 17.36,
+  "stock_bar_timestamp_ms": 1746626400000,
+  "stock_reference_age_seconds": 44.448855942
+}

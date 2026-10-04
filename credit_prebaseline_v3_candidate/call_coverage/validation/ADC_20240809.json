@@ -1,0 +1,112 @@
+{
+  "ticker": "ADC",
+  "event_entry": "2024-08-09",
+  "status": "matched",
+  "issuer": "0000917251",
+  "source_ticker": "ADC",
+  "event": {
+    "day": "2024-08-09",
+    "exit_date": "2024-09-10",
+    "expiry": "2025-01-17",
+    "symbol": "O:ADC250117C00080000",
+    "strike": 80.0,
+    "spot": 71.515,
+    "rv20": 0.17809672686119352,
+    "dte_sessions": 110,
+    "entry_quote": {
+      "symbol": "O:ADC250117C00080000",
+      "day": "2024-08-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 3,
+      "sip_timestamp": 1723211313400605184,
+      "execution_timestamp_ns": 1723211313500605184,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.7,
+      "ask": 1.45,
+      "bid_size": 20,
+      "ask_size": 31,
+      "stock_reference": 71.515,
+      "stock_bar_timestamp_ms": 1723211220000,
+      "stock_reference_age_seconds": 33.400605184
+    },
+    "exit_quote": {
+      "symbol": "O:ADC250117C00080000",
+      "day": "2024-09-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1725976043109833472,
+      "execution_timestamp_ns": 1725976043209833472,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.55,
+      "ask": 2.2,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 77.02,
+      "stock_bar_timestamp_ms": 1725975960000,
+      "stock_reference_age_seconds": 23.109833472
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-08-02",
+      "exit_date": "2024-09-03",
+      "expiry": "2025-01-17",
+      "symbol": "O:ADC250117C00075000",
+      "strike": 75.0,
+      "spot": 71.5,
+      "rv20": 0.1904281187257515,
+      "dte_sessions": 115,
+      "entry_quote": {
+        "symbol": "O:ADC250117C00075000",
+        "day": "2024-08-02",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1722606320202686720,
+        "execution_timestamp_ns": 1722606320302686720,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.6,
+        "ask": 3.1,
+        "bid_size": 79,
+        "ask_size": 35,
+        "stock_reference": 71.5,
+        "stock_bar_timestamp_ms": 1722606240000,
+        "stock_reference_age_seconds": 20.20268672
+      },
+      "exit_quote": {
+        "symbol": "O:ADC250117C00075000",
+        "day": "2024-09-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1725371109399023104,
+        "execution_timestamp_ns": 1725371109499023104,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1,
+        "ask": 4,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 73.1,
+        "stock_bar_timestamp_ms": 1725371040000,
+        "stock_reference_age_seconds": 9.399023104
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-08-09",
+      "2024-09-10"
+    ],
+    [
+      "2024-08-02",
+      "2024-09-03"
+    ]
+  ]
+}

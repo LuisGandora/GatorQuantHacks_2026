@@ -1,0 +1,18 @@
+{
+  "symbol": "O:NRG230616C00037000",
+  "day": "2023-05-15",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1684158300132212224,
+  "execution_timestamp_ns": 1684158300232212224,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.3,
+  "ask": 0.65,
+  "bid_size": 125,
+  "ask_size": 782,
+  "stock_reference": 33.8,
+  "stock_bar_timestamp_ms": 1684158240000,
+  "stock_reference_age_seconds": 0.132212224
+}

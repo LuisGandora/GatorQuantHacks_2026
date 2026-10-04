@@ -1,0 +1,12 @@
+{
+  "cik": "0001710366",
+  "date": "2022-07-26",
+  "selected": "CEIX",
+  "eligible": [
+    {
+      "ticker": "CEIX",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

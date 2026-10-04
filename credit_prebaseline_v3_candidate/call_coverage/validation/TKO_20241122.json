@@ -1,0 +1,60 @@
+{
+  "ticker": "TKO",
+  "event_entry": "2024-11-22",
+  "status": "no_usable_control",
+  "issuer": "0001973266",
+  "source_ticker": "TKO",
+  "event": {
+    "day": "2024-11-22",
+    "exit_date": "2024-12-24",
+    "expiry": "2025-03-21",
+    "symbol": "O:TKO250321C00145000",
+    "strike": 145.0,
+    "spot": 138.36,
+    "rv20": 0.28960695608987913,
+    "dte_sessions": 79,
+    "entry_quote": {
+      "symbol": "O:TKO250321C00145000",
+      "day": "2024-11-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1732286701294356736,
+      "execution_timestamp_ns": 1732286701394356736,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 6,
+      "ask": 7.5,
+      "bid_size": 13,
+      "ask_size": 8,
+      "stock_reference": 138.36,
+      "stock_bar_timestamp_ms": 1732286640000,
+      "stock_reference_age_seconds": 1.294356736
+    },
+    "exit_quote": {
+      "symbol": "O:TKO250321C00145000",
+      "day": "2024-12-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 2,
+      "sip_timestamp": 1735051618516208640,
+      "execution_timestamp_ns": 1735051618616208640,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.2,
+      "ask": 9.5,
+      "bid_size": 7,
+      "ask_size": 12,
+      "stock_reference": 143.29,
+      "stock_bar_timestamp_ms": 1735051500000,
+      "stock_reference_age_seconds": 58.51620864
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-11-15",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

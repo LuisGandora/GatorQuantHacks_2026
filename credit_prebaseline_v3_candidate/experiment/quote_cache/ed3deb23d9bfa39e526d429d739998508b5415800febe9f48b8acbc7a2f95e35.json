@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ITRI240216C00065000",
+  "day": "2023-10-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 13,
+  "sip_timestamp": 1697550480355144448,
+  "execution_timestamp_ns": 1697550480455144448,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.4,
+  "ask": 3.9,
+  "bid_size": 33,
+  "ask_size": 45,
+  "stock_reference": 58.865,
+  "stock_bar_timestamp_ms": 1697550420000,
+  "stock_reference_age_seconds": 0.355144448
+}

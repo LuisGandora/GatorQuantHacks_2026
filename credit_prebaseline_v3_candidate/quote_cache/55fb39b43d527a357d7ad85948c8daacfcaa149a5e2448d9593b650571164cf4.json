@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SMPL260220C00022500",
+  "day": "2025-12-23",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1766501224267632506,
+  "execution_timestamp_ns": 1766501224367632506,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.5,
+  "ask": 2.7,
+  "bid_size": 54,
+  "ask_size": 120,
+  "stock_reference": 19.69,
+  "stock_bar_timestamp_ms": 1766501160000,
+  "stock_reference_age_seconds": 4.267632506
+}

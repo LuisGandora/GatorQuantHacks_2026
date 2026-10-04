@@ -1,0 +1,18 @@
+{
+  "symbol": "O:HEI231117C00185000",
+  "day": "2023-07-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1689083104196900864,
+  "execution_timestamp_ns": 1689083104296900864,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.7,
+  "ask": 7.8,
+  "bid_size": 100,
+  "ask_size": 97,
+  "stock_reference": 175.85,
+  "stock_bar_timestamp_ms": 1689083040000,
+  "stock_reference_age_seconds": 4.196900864
+}

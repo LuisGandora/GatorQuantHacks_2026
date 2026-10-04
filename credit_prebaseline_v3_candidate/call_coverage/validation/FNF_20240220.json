@@ -1,0 +1,112 @@
+{
+  "ticker": "FNF",
+  "event_entry": "2024-02-20",
+  "status": "matched",
+  "issuer": "0001331875",
+  "source_ticker": "FNF",
+  "event": {
+    "day": "2024-02-20",
+    "exit_date": "2024-03-20",
+    "expiry": "2024-06-21",
+    "symbol": "O:FNF240621C00060000",
+    "strike": 60.0,
+    "spot": 51.96,
+    "rv20": 0.19421349058643217,
+    "dte_sessions": 85,
+    "entry_quote": {
+      "symbol": "O:FNF240621C00060000",
+      "day": "2024-02-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1708440300541988864,
+      "execution_timestamp_ns": 1708440300641988864,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.5,
+      "ask": 0.6,
+      "bid_size": 48,
+      "ask_size": 50,
+      "stock_reference": 51.96,
+      "stock_bar_timestamp_ms": 1708440240000,
+      "stock_reference_age_seconds": 0.541988864
+    },
+    "exit_quote": {
+      "symbol": "O:FNF240621C00060000",
+      "day": "2024-03-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1710942537216891392,
+      "execution_timestamp_ns": 1710942537316891392,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 0.7,
+      "bid_size": 74,
+      "ask_size": 36,
+      "stock_reference": 49.51,
+      "stock_bar_timestamp_ms": 1710942420000,
+      "stock_reference_age_seconds": 57.216891392
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-02-12",
+      "exit_date": "2024-03-13",
+      "expiry": "2024-06-21",
+      "symbol": "O:FNF240621C00055000",
+      "strike": 55.0,
+      "spot": 51.73,
+      "rv20": 0.1909761822175992,
+      "dte_sessions": 90,
+      "entry_quote": {
+        "symbol": "O:FNF240621C00055000",
+        "day": "2024-02-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1707749123110482432,
+        "execution_timestamp_ns": 1707749123210482432,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.55,
+        "ask": 1.7,
+        "bid_size": 17,
+        "ask_size": 60,
+        "stock_reference": 51.73,
+        "stock_bar_timestamp_ms": 1707749040000,
+        "stock_reference_age_seconds": 23.110482432
+      },
+      "exit_quote": {
+        "symbol": "O:FNF240621C00055000",
+        "day": "2024-03-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1710337508142972672,
+        "execution_timestamp_ns": 1710337508242972672,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.85,
+        "ask": 1.1,
+        "bid_size": 1,
+        "ask_size": 60,
+        "stock_reference": 50.835,
+        "stock_bar_timestamp_ms": 1710337440000,
+        "stock_reference_age_seconds": 8.142972672
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-02-20",
+      "2024-03-20"
+    ],
+    [
+      "2024-02-12",
+      "2024-03-13"
+    ]
+  ]
+}

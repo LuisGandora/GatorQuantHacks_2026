@@ -1,0 +1,60 @@
+{
+  "ticker": "KTB",
+  "event_entry": "2025-04-09",
+  "status": "no_usable_control",
+  "issuer": "0001760965",
+  "source_ticker": "KTB",
+  "event": {
+    "day": "2025-04-09",
+    "exit_date": "2025-05-09",
+    "expiry": "2025-09-19",
+    "symbol": "O:KTB250919C00055000",
+    "strike": 55.0,
+    "spot": 52.8585,
+    "rv20": 0.6586277034997334,
+    "dte_sessions": 112,
+    "entry_quote": {
+      "symbol": "O:KTB250919C00055000",
+      "day": "2025-04-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1744207237127710464,
+      "execution_timestamp_ns": 1744207237227710464,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.4,
+      "ask": 7.1,
+      "bid_size": 5,
+      "ask_size": 1,
+      "stock_reference": 52.8585,
+      "stock_bar_timestamp_ms": 1744207140000,
+      "stock_reference_age_seconds": 37.127710464
+    },
+    "exit_quote": {
+      "symbol": "O:KTB250919C00055000",
+      "day": "2025-05-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 11,
+      "sip_timestamp": 1746798438375722581,
+      "execution_timestamp_ns": 1746798438475722581,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 14.8,
+      "ask": 18,
+      "bid_size": 12,
+      "ask_size": 12,
+      "stock_reference": 69.0,
+      "stock_bar_timestamp_ms": 1746798360000,
+      "stock_reference_age_seconds": 18.375722581
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2025-04-02",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DFH240119C00030000",
+  "day": "2023-08-24",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 29,
+  "sip_timestamp": 1692884825788394752,
+  "execution_timestamp_ns": 1692884825888394752,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.65,
+  "ask": 3.5,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 27.45,
+  "stock_bar_timestamp_ms": 1692884760000,
+  "stock_reference_age_seconds": 5.788394752
+}

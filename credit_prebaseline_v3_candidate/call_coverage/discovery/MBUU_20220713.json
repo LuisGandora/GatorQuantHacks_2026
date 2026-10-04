@@ -1,0 +1,112 @@
+{
+  "ticker": "MBUU",
+  "event_entry": "2022-07-13",
+  "status": "matched",
+  "issuer": "0001590976",
+  "source_ticker": "MBUU",
+  "event": {
+    "day": "2022-07-13",
+    "exit_date": "2022-08-11",
+    "expiry": "2022-11-18",
+    "symbol": "O:MBUU221118C00060000",
+    "strike": 60.0,
+    "spot": 55.9528,
+    "rv20": 0.4981338521806712,
+    "dte_sessions": 91,
+    "entry_quote": {
+      "symbol": "O:MBUU221118C00060000",
+      "day": "2022-07-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 39,
+      "sip_timestamp": 1657720219726406144,
+      "execution_timestamp_ns": 1657720219826406144,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.1,
+      "ask": 6.7,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 55.9528,
+      "stock_bar_timestamp_ms": 1657720140000,
+      "stock_reference_age_seconds": 19.726406144
+    },
+    "exit_quote": {
+      "symbol": "O:MBUU221118C00060000",
+      "day": "2022-08-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1660225516108061440,
+      "execution_timestamp_ns": 1660225516208061440,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.8,
+      "ask": 11.6,
+      "bid_size": 30,
+      "ask_size": 105,
+      "stock_reference": 65.68,
+      "stock_bar_timestamp_ms": 1660225440000,
+      "stock_reference_age_seconds": 16.10806144
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-07-06",
+      "exit_date": "2022-08-04",
+      "expiry": "2022-11-18",
+      "symbol": "O:MBUU221118C00060000",
+      "strike": 60.0,
+      "spot": 54.37,
+      "rv20": 0.5361955606521532,
+      "dte_sessions": 96,
+      "entry_quote": {
+        "symbol": "O:MBUU221118C00060000",
+        "day": "2022-07-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 58,
+        "sip_timestamp": 1657115910043067392,
+        "execution_timestamp_ns": 1657115910143067392,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.5,
+        "ask": 6,
+        "bid_size": 51,
+        "ask_size": 103,
+        "stock_reference": 54.37,
+        "stock_bar_timestamp_ms": 1657115820000,
+        "stock_reference_age_seconds": 30.043067392
+      },
+      "exit_quote": {
+        "symbol": "O:MBUU221118C00060000",
+        "day": "2022-08-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 17,
+        "sip_timestamp": 1659620917749853184,
+        "execution_timestamp_ns": 1659620917849853184,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 6.6,
+        "ask": 10.1,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 62.74,
+        "stock_bar_timestamp_ms": 1659620820000,
+        "stock_reference_age_seconds": 37.749853184
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-07-13",
+      "2022-08-11"
+    ],
+    [
+      "2022-07-06",
+      "2022-08-04"
+    ]
+  ]
+}

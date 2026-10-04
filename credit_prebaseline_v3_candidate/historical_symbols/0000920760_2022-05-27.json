@@ -1,0 +1,16 @@
+{
+  "cik": "0000920760",
+  "date": "2022-05-27",
+  "selected": "LEN",
+  "eligible": [
+    {
+      "ticker": "LEN",
+      "type": "CS"
+    },
+    {
+      "ticker": "LEN.B",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

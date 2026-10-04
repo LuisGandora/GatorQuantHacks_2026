@@ -1,0 +1,12 @@
+{
+  "cik": "0001424929",
+  "date": "2025-10-28",
+  "selected": "FOXF",
+  "eligible": [
+    {
+      "ticker": "FOXF",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

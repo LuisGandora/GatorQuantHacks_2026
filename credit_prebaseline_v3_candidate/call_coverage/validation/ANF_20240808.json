@@ -1,0 +1,112 @@
+{
+  "ticker": "ANF",
+  "event_entry": "2024-08-08",
+  "status": "matched",
+  "issuer": "0001018840",
+  "source_ticker": "ANF",
+  "event": {
+    "day": "2024-08-08",
+    "exit_date": "2024-09-09",
+    "expiry": "2024-11-15",
+    "symbol": "O:ANF241115C00140000",
+    "strike": 140.0,
+    "spot": 133.755,
+    "rv20": 0.5109176781207866,
+    "dte_sessions": 70,
+    "entry_quote": {
+      "symbol": "O:ANF241115C00140000",
+      "day": "2024-08-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1723124703520263168,
+      "execution_timestamp_ns": 1723124703620263168,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 14.7,
+      "ask": 16.2,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 133.755,
+      "stock_bar_timestamp_ms": 1723124640000,
+      "stock_reference_age_seconds": 3.520263168
+    },
+    "exit_quote": {
+      "symbol": "O:ANF241115C00140000",
+      "day": "2024-09-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1725889550154116608,
+      "execution_timestamp_ns": 1725889550254116608,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.8,
+      "ask": 8.3,
+      "bid_size": 123,
+      "ask_size": 53,
+      "stock_reference": 131.47,
+      "stock_bar_timestamp_ms": 1725889440000,
+      "stock_reference_age_seconds": 50.154116608
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-08-01",
+      "exit_date": "2024-08-30",
+      "expiry": "2024-11-15",
+      "symbol": "O:ANF241115C00155000",
+      "strike": 155.0,
+      "spot": 149.04,
+      "rv20": 0.46380357030091296,
+      "dte_sessions": 75,
+      "entry_quote": {
+        "symbol": "O:ANF241115C00155000",
+        "day": "2024-08-01",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1722519901109001984,
+        "execution_timestamp_ns": 1722519901209001984,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 16.6,
+        "ask": 17.3,
+        "bid_size": 15,
+        "ask_size": 1,
+        "stock_reference": 149.04,
+        "stock_bar_timestamp_ms": 1722519840000,
+        "stock_reference_age_seconds": 1.109001984
+      },
+      "exit_quote": {
+        "symbol": "O:ANF241115C00155000",
+        "day": "2024-08-30",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1725025500684135936,
+        "execution_timestamp_ns": 1725025500784135936,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 7.4,
+        "ask": 7.9,
+        "bid_size": 95,
+        "ask_size": 14,
+        "stock_reference": 143.01,
+        "stock_bar_timestamp_ms": 1725025440000,
+        "stock_reference_age_seconds": 0.684135936
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-08-08",
+      "2024-09-09"
+    ],
+    [
+      "2024-08-01",
+      "2024-08-30"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:HRI221216C00100000",
+  "day": "2022-08-09",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 7,
+  "sip_timestamp": 1660052922801267200,
+  "execution_timestamp_ns": 1660052922901267200,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 26.4,
+  "ask": 30,
+  "bid_size": 33,
+  "ask_size": 20,
+  "stock_reference": 122.3066,
+  "stock_bar_timestamp_ms": 1660052820000,
+  "stock_reference_age_seconds": 42.8012672
+}

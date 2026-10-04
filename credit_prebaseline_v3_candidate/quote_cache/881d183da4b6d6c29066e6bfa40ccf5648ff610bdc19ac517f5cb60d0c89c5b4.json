@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TKO250321C00145000",
+  "day": "2024-12-24",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 2,
+  "sip_timestamp": 1735051618516208640,
+  "execution_timestamp_ns": 1735051618616208640,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 8.2,
+  "ask": 9.5,
+  "bid_size": 7,
+  "ask_size": 12,
+  "stock_reference": 143.29,
+  "stock_bar_timestamp_ms": 1735051500000,
+  "stock_reference_age_seconds": 58.51620864
+}

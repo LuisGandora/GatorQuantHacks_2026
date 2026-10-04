@@ -1,0 +1,112 @@
+{
+  "ticker": "MRVL",
+  "event_entry": "2023-04-18",
+  "status": "matched",
+  "issuer": "0001835632",
+  "source_ticker": "MRVL",
+  "event": {
+    "day": "2023-04-18",
+    "exit_date": "2023-05-17",
+    "expiry": "2023-08-18",
+    "symbol": "O:MRVL230818C00042500",
+    "strike": 42.5,
+    "spot": 42.39,
+    "rv20": 0.4028542471778983,
+    "dte_sessions": 85,
+    "entry_quote": {
+      "symbol": "O:MRVL230818C00042500",
+      "day": "2023-04-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1681825505272201216,
+      "execution_timestamp_ns": 1681825505372201216,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.8,
+      "ask": 5,
+      "bid_size": 359,
+      "ask_size": 958,
+      "stock_reference": 42.39,
+      "stock_bar_timestamp_ms": 1681825440000,
+      "stock_reference_age_seconds": 5.272201216
+    },
+    "exit_quote": {
+      "symbol": "O:MRVL230818C00042500",
+      "day": "2023-05-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1684331100107227392,
+      "execution_timestamp_ns": 1684331100207227392,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.05,
+      "ask": 4.15,
+      "bid_size": 241,
+      "ask_size": 10,
+      "stock_reference": 42.275,
+      "stock_bar_timestamp_ms": 1684331040000,
+      "stock_reference_age_seconds": 0.107227392
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-04-11",
+      "exit_date": "2023-05-10",
+      "expiry": "2023-08-18",
+      "symbol": "O:MRVL230818C00042500",
+      "strike": 42.5,
+      "spot": 40.04,
+      "rv20": 0.48492065409455726,
+      "dte_sessions": 90,
+      "entry_quote": {
+        "symbol": "O:MRVL230818C00042500",
+        "day": "2023-04-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1681220705228116480,
+        "execution_timestamp_ns": 1681220705328116480,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.95,
+        "ask": 4.1,
+        "bid_size": 569,
+        "ask_size": 690,
+        "stock_reference": 40.04,
+        "stock_bar_timestamp_ms": 1681220640000,
+        "stock_reference_age_seconds": 5.22811648
+      },
+      "exit_quote": {
+        "symbol": "O:MRVL230818C00042500",
+        "day": "2023-05-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1683726300143740160,
+        "execution_timestamp_ns": 1683726300243740160,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.25,
+        "ask": 3.35,
+        "bid_size": 181,
+        "ask_size": 136,
+        "stock_reference": 40.48,
+        "stock_bar_timestamp_ms": 1683726240000,
+        "stock_reference_age_seconds": 0.14374016
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-04-18",
+      "2023-05-17"
+    ],
+    [
+      "2023-04-11",
+      "2023-05-10"
+    ]
+  ]
+}

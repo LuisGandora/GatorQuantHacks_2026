@@ -1,0 +1,112 @@
+{
+  "ticker": "OPFI",
+  "event_entry": "2025-02-19",
+  "status": "matched",
+  "issuer": "0001818502",
+  "source_ticker": "OPFI",
+  "event": {
+    "day": "2025-02-19",
+    "exit_date": "2025-03-20",
+    "expiry": "2025-07-18",
+    "symbol": "O:OPFI250718C00015000",
+    "strike": 15.0,
+    "spot": 11.925,
+    "rv20": 0.8967173178504073,
+    "dte_sessions": 103,
+    "entry_quote": {
+      "symbol": "O:OPFI250718C00015000",
+      "day": "2025-02-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1739976309179376128,
+      "execution_timestamp_ns": 1739976309279376128,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.45,
+      "ask": 1.65,
+      "bid_size": 12,
+      "ask_size": 13,
+      "stock_reference": 11.925,
+      "stock_bar_timestamp_ms": 1739976240000,
+      "stock_reference_age_seconds": 9.179376128
+    },
+    "exit_quote": {
+      "symbol": "O:OPFI250718C00015000",
+      "day": "2025-03-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1742478300163187456,
+      "execution_timestamp_ns": 1742478300263187456,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.45,
+      "ask": 0.6,
+      "bid_size": 1141,
+      "ask_size": 918,
+      "stock_reference": 9.7318,
+      "stock_bar_timestamp_ms": 1742478240000,
+      "stock_reference_age_seconds": 0.163187456
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-02-11",
+      "exit_date": "2025-03-13",
+      "expiry": "2025-07-18",
+      "symbol": "O:OPFI250718C00017500",
+      "strike": 17.5,
+      "spot": 15.84,
+      "rv20": 0.8550282109152452,
+      "dte_sessions": 108,
+      "entry_quote": {
+        "symbol": "O:OPFI250718C00017500",
+        "day": "2025-02-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1739285112064969216,
+        "execution_timestamp_ns": 1739285112164969216,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.65,
+        "ask": 2.9,
+        "bid_size": 10,
+        "ask_size": 95,
+        "stock_reference": 15.84,
+        "stock_bar_timestamp_ms": 1739285040000,
+        "stock_reference_age_seconds": 12.064969216
+      },
+      "exit_quote": {
+        "symbol": "O:OPFI250718C00017500",
+        "day": "2025-03-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1741874670314299136,
+        "execution_timestamp_ns": 1741874670414299136,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.2,
+        "ask": 0.35,
+        "bid_size": 733,
+        "ask_size": 161,
+        "stock_reference": 9.0,
+        "stock_bar_timestamp_ms": 1741874580000,
+        "stock_reference_age_seconds": 30.314299136
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-02-19",
+      "2025-03-20"
+    ],
+    [
+      "2025-02-11",
+      "2025-03-13"
+    ]
+  ]
+}

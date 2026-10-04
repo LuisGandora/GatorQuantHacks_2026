@@ -1,0 +1,112 @@
+{
+  "ticker": "EXR",
+  "event_entry": "2025-08-27",
+  "status": "matched",
+  "issuer": "0001289490",
+  "source_ticker": "EXR",
+  "event": {
+    "day": "2025-08-27",
+    "exit_date": "2025-09-26",
+    "expiry": "2025-12-19",
+    "symbol": "O:EXR251219C00150000",
+    "strike": 150.0,
+    "spot": 142.155,
+    "rv20": 0.4428173215823366,
+    "dte_sessions": 80,
+    "entry_quote": {
+      "symbol": "O:EXR251219C00150000",
+      "day": "2025-08-27",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1756302304440272498,
+      "execution_timestamp_ns": 1756302304540272498,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.3,
+      "ask": 4.2,
+      "bid_size": 147,
+      "ask_size": 5,
+      "stock_reference": 142.155,
+      "stock_bar_timestamp_ms": 1756302240000,
+      "stock_reference_age_seconds": 4.440272498
+    },
+    "exit_quote": {
+      "symbol": "O:EXR251219C00150000",
+      "day": "2025-09-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1758894505941608180,
+      "execution_timestamp_ns": 1758894506041608180,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.35,
+      "ask": 3.5,
+      "bid_size": 17,
+      "ask_size": 17,
+      "stock_reference": 138.66,
+      "stock_bar_timestamp_ms": 1758894420000,
+      "stock_reference_age_seconds": 25.94160818
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-08-20",
+      "exit_date": "2025-09-19",
+      "expiry": "2025-12-19",
+      "symbol": "O:EXR251219C00150000",
+      "strike": 150.0,
+      "spot": 140.23,
+      "rv20": 0.43983775788678287,
+      "dte_sessions": 85,
+      "entry_quote": {
+        "symbol": "O:EXR251219C00150000",
+        "day": "2025-08-20",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1755697502839101508,
+        "execution_timestamp_ns": 1755697502939101508,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.85,
+        "ask": 3.6,
+        "bid_size": 28,
+        "ask_size": 20,
+        "stock_reference": 140.23,
+        "stock_bar_timestamp_ms": 1755697440000,
+        "stock_reference_age_seconds": 2.839101508
+      },
+      "exit_quote": {
+        "symbol": "O:EXR251219C00150000",
+        "day": "2025-09-19",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1758289568652427651,
+        "execution_timestamp_ns": 1758289568752427651,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.9,
+        "ask": 5,
+        "bid_size": 33,
+        "ask_size": 20,
+        "stock_reference": 142.68,
+        "stock_bar_timestamp_ms": 1758289500000,
+        "stock_reference_age_seconds": 8.652427651
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-08-27",
+      "2025-09-26"
+    ],
+    [
+      "2025-08-20",
+      "2025-09-19"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:FLEX221021C00016000",
+  "day": "2022-10-18",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1666100703696440064,
+  "execution_timestamp_ns": 1666100703796440064,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.05,
+  "ask": 2.25,
+  "bid_size": 46,
+  "ask_size": 345,
+  "stock_reference": 18.1,
+  "stock_bar_timestamp_ms": 1666100640000,
+  "stock_reference_age_seconds": 3.696440064
+}

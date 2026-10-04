@@ -1,0 +1,18 @@
+{
+  "symbol": "O:RIVN230915C00015000",
+  "day": "2023-04-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1681911900259288064,
+  "execution_timestamp_ns": 1681911900359288064,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.77,
+  "ask": 1.8,
+  "bid_size": 19,
+  "ask_size": 32,
+  "stock_reference": 12.86,
+  "stock_bar_timestamp_ms": 1681911840000,
+  "stock_reference_age_seconds": 0.259288064
+}

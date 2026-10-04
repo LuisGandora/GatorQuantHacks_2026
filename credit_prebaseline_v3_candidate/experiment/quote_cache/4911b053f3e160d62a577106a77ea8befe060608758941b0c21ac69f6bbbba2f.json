@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LHX240517C00220000",
+  "day": "2024-04-23",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 3,
+  "sip_timestamp": 1713879969850307840,
+  "execution_timestamp_ns": 1713879969950307840,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.7,
+  "ask": 2.1,
+  "bid_size": 25,
+  "ask_size": 12,
+  "stock_reference": 209.16,
+  "stock_bar_timestamp_ms": 1713879900000,
+  "stock_reference_age_seconds": 9.85030784
+}

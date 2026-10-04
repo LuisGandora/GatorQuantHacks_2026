@@ -1,0 +1,18 @@
+{
+  "symbol": "O:MBUU221118C00060000",
+  "day": "2022-08-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1660225516108061440,
+  "execution_timestamp_ns": 1660225516208061440,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 7.8,
+  "ask": 11.6,
+  "bid_size": 30,
+  "ask_size": 105,
+  "stock_reference": 65.68,
+  "stock_bar_timestamp_ms": 1660225440000,
+  "stock_reference_age_seconds": 16.10806144
+}

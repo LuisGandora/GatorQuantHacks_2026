@@ -1,0 +1,18 @@
+{
+  "symbol": "O:KNX251121C00052500",
+  "day": "2025-10-08",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1759931261870212566,
+  "execution_timestamp_ns": 1759931261970212566,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.25,
+  "ask": 0.35,
+  "bid_size": 43,
+  "ask_size": 240,
+  "stock_reference": 42.79,
+  "stock_bar_timestamp_ms": 1759931160000,
+  "stock_reference_age_seconds": 41.870212566
+}

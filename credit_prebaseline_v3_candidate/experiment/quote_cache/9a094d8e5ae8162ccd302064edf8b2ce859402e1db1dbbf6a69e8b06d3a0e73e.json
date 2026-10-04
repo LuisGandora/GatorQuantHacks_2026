@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CAKE230120C00035000",
+  "day": "2022-10-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1666273510316491264,
+  "execution_timestamp_ns": 1666273510416491264,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.15,
+  "ask": 2.75,
+  "bid_size": 966,
+  "ask_size": 428,
+  "stock_reference": 32.795,
+  "stock_bar_timestamp_ms": 1666273440000,
+  "stock_reference_age_seconds": 10.316491264
+}

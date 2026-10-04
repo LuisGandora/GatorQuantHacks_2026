@@ -1,0 +1,16 @@
+{
+  "cik": "0000947484",
+  "date": "2023-08-25",
+  "selected": "ACGL",
+  "eligible": [
+    {
+      "ticker": "ACGL",
+      "type": "CS"
+    },
+    {
+      "ticker": "ACGLN",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

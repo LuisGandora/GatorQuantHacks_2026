@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CIEN240119C00045000",
+  "day": "2023-11-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 18,
+  "sip_timestamp": 1700232364169602048,
+  "execution_timestamp_ns": 1700232364269602048,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.8,
+  "ask": 3.1,
+  "bid_size": 65,
+  "ask_size": 67,
+  "stock_reference": 44.76,
+  "stock_bar_timestamp_ms": 1700232300000,
+  "stock_reference_age_seconds": 4.169602048
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:OPFI250718C00015000",
+  "day": "2025-03-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1742478300163187456,
+  "execution_timestamp_ns": 1742478300263187456,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.45,
+  "ask": 0.6,
+  "bid_size": 1141,
+  "ask_size": 918,
+  "stock_reference": 9.7318,
+  "stock_bar_timestamp_ms": 1742478240000,
+  "stock_reference_age_seconds": 0.163187456
+}

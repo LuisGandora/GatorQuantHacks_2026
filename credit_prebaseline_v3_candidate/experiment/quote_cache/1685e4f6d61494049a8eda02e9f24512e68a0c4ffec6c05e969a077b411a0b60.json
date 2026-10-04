@@ -1,0 +1,18 @@
+{
+  "symbol": "O:REVG250718C00035000",
+  "day": "2025-03-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1741700908986937344,
+  "execution_timestamp_ns": 1741700909086937344,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.4,
+  "ask": 2.6,
+  "bid_size": 66,
+  "ask_size": 13,
+  "stock_reference": 30.715,
+  "stock_bar_timestamp_ms": 1741700820000,
+  "stock_reference_age_seconds": 28.986937344
+}

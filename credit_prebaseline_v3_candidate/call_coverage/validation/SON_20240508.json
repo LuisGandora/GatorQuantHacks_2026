@@ -1,0 +1,112 @@
+{
+  "ticker": "SON",
+  "event_entry": "2024-05-08",
+  "status": "matched",
+  "issuer": "0000091767",
+  "source_ticker": "SON",
+  "event": {
+    "day": "2024-05-08",
+    "exit_date": "2024-06-07",
+    "expiry": "2024-10-18",
+    "symbol": "O:SON241018C00065000",
+    "strike": 65.0,
+    "spot": 57.7576,
+    "rv20": 0.2025990182396495,
+    "dte_sessions": 113,
+    "entry_quote": {
+      "symbol": "O:SON241018C00065000",
+      "day": "2024-05-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1715175917906723328,
+      "execution_timestamp_ns": 1715175918006723328,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.5,
+      "ask": 0.75,
+      "bid_size": 31,
+      "ask_size": 31,
+      "stock_reference": 57.7576,
+      "stock_bar_timestamp_ms": 1715175840000,
+      "stock_reference_age_seconds": 17.906723328
+    },
+    "exit_quote": {
+      "symbol": "O:SON241018C00065000",
+      "day": "2024-06-07",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1717767923934956288,
+      "execution_timestamp_ns": 1717767924034956288,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.85,
+      "ask": 1.1,
+      "bid_size": 31,
+      "ask_size": 31,
+      "stock_reference": 59.72,
+      "stock_bar_timestamp_ms": 1717767840000,
+      "stock_reference_age_seconds": 23.934956288
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-05-01",
+      "exit_date": "2024-05-31",
+      "expiry": "2024-10-18",
+      "symbol": "O:SON241018C00060000",
+      "strike": 60.0,
+      "spot": 57.2,
+      "rv20": 0.17892642693115857,
+      "dte_sessions": 118,
+      "entry_quote": {
+        "symbol": "O:SON241018C00060000",
+        "day": "2024-05-01",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1714571314533264640,
+        "execution_timestamp_ns": 1714571314633264640,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.75,
+        "ask": 2.1,
+        "bid_size": 20,
+        "ask_size": 8,
+        "stock_reference": 57.2,
+        "stock_bar_timestamp_ms": 1714571220000,
+        "stock_reference_age_seconds": 34.53326464
+      },
+      "exit_quote": {
+        "symbol": "O:SON241018C00060000",
+        "day": "2024-05-31",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 3,
+        "sip_timestamp": 1717163618198236160,
+        "execution_timestamp_ns": 1717163618298236160,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.4,
+        "ask": 3.6,
+        "bid_size": 5,
+        "ask_size": 32,
+        "stock_reference": 60.5,
+        "stock_bar_timestamp_ms": 1717163520000,
+        "stock_reference_age_seconds": 38.19823616
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-05-08",
+      "2024-06-07"
+    ],
+    [
+      "2024-05-01",
+      "2024-05-31"
+    ]
+  ]
+}

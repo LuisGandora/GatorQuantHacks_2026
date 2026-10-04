@@ -1,0 +1,242 @@
+[
+  {
+    "window": "discovery",
+    "arm": "event",
+    "n": 40,
+    "averages": {
+      "entry_spread_fraction": 0.026116605881960873,
+      "exit_spread_fraction": 0.02266473686073691,
+      "entry_relative_spread": 0.41685327208301537,
+      "exit_relative_spread": 0.5041242857532053,
+      "bid_ask_cost_vs_mid": 0.024390671371348892,
+      "entry_bid_quote_size": 231.625,
+      "exit_ask_quote_size": 146.375,
+      "one_contract_funded_notional": 6967.9805
+    },
+    "quantiles05_50_95": {
+      "entry_spread_fraction": [
+        0.0026867879632866336,
+        0.020258675363880044,
+        0.06668056698461104
+      ],
+      "exit_spread_fraction": [
+        0.002526768419028578,
+        0.016959052066266703,
+        0.06310862165288667
+      ],
+      "entry_relative_spread": [
+        0.04043663977218798,
+        0.3052631578947369,
+        1.1924528301886772
+      ],
+      "exit_relative_spread": [
+        0.061857810067462334,
+        0.47861635220125787,
+        1.3714285714285712
+      ],
+      "bid_ask_cost_vs_mid": [
+        0.00260792133680516,
+        0.022428216870186674,
+        0.06110969026962268
+      ],
+      "entry_bid_quote_size": [
+        1.0,
+        57.0,
+        987.5999999999997
+      ],
+      "exit_ask_quote_size": [
+        1.0,
+        49.5,
+        511.1499999999989
+      ],
+      "one_contract_funded_notional": [
+        1106.1,
+        4870.5,
+        18920.87499999998
+      ]
+    },
+    "minimum_entry_bid_quote_size": 1,
+    "minimum_exit_ask_quote_size": 1,
+    "limitation": "Descriptive quote diagnostics; raw vendor sizes are not converted into scalable capacity. Midpoint is not an executable counterfactual. No quote-spread filter or cohort change."
+  },
+  {
+    "window": "discovery",
+    "arm": "baseline",
+    "n": 40,
+    "averages": {
+      "entry_spread_fraction": 0.023917645480487894,
+      "exit_spread_fraction": 0.022271113308632375,
+      "entry_relative_spread": 0.39167271955356353,
+      "exit_relative_spread": 0.5323874071704443,
+      "bid_ask_cost_vs_mid": 0.02309437939456014,
+      "entry_bid_quote_size": 205.925,
+      "exit_ask_quote_size": 298.85,
+      "one_contract_funded_notional": 7022.1945000000005
+    },
+    "quantiles05_50_95": {
+      "entry_spread_fraction": [
+        0.002561244569242847,
+        0.0161963557005202,
+        0.05864141589955778
+      ],
+      "exit_spread_fraction": [
+        0.0026743958916482873,
+        0.013618480714027575,
+        0.06441113804999225
+      ],
+      "entry_relative_spread": [
+        0.04035322512382321,
+        0.2857142857142858,
+        1.0552380952380949
+      ],
+      "exit_relative_spread": [
+        0.060890151515151446,
+        0.3094098883572568,
+        1.7913043478260866
+      ],
+      "bid_ask_cost_vs_mid": [
+        0.002558715845861619,
+        0.017322439399581467,
+        0.05627418236125873
+      ],
+      "entry_bid_quote_size": [
+        1.0,
+        35.0,
+        763.399999999998
+      ],
+      "exit_ask_quote_size": [
+        1.0,
+        47.5,
+        1074.0999999999974
+      ],
+      "one_contract_funded_notional": [
+        1081.0,
+        4720.5,
+        18941.62499999998
+      ]
+    },
+    "minimum_entry_bid_quote_size": 1,
+    "minimum_exit_ask_quote_size": 1,
+    "limitation": "Descriptive quote diagnostics; raw vendor sizes are not converted into scalable capacity. Midpoint is not an executable counterfactual. No quote-spread filter or cohort change."
+  },
+  {
+    "window": "validation",
+    "arm": "event",
+    "n": 40,
+    "averages": {
+      "entry_spread_fraction": 0.019459534919378955,
+      "exit_spread_fraction": 0.019033426943595118,
+      "entry_relative_spread": 0.4132879045751011,
+      "exit_relative_spread": 0.4731250806652906,
+      "bid_ask_cost_vs_mid": 0.019246480931487037,
+      "entry_bid_quote_size": 103.975,
+      "exit_ask_quote_size": 107.6,
+      "one_contract_funded_notional": 8735.007000000001
+    },
+    "quantiles05_50_95": {
+      "entry_spread_fraction": [
+        0.0034277709870471685,
+        0.011009752161221256,
+        0.05250034951088148
+      ],
+      "exit_spread_fraction": [
+        0.003042243038685432,
+        0.012029347329209452,
+        0.04959758612077382
+      ],
+      "entry_relative_spread": [
+        0.050801413673809664,
+        0.24158808933002493,
+        1.4207240547063555
+      ],
+      "exit_relative_spread": [
+        0.06175850475810597,
+        0.3421645021645022,
+        1.331494252873562
+      ],
+      "bid_ask_cost_vs_mid": [
+        0.004628869482304442,
+        0.012220040874307288,
+        0.04694764186176767
+      ],
+      "entry_bid_quote_size": [
+        1.0,
+        27.0,
+        195.54999999999723
+      ],
+      "exit_ask_quote_size": [
+        1.0,
+        21.0,
+        384.09999999999843
+      ],
+      "one_contract_funded_notional": [
+        1192.325,
+        6164.88,
+        22956.45
+      ]
+    },
+    "minimum_entry_bid_quote_size": 1,
+    "minimum_exit_ask_quote_size": 1,
+    "limitation": "Descriptive quote diagnostics; raw vendor sizes are not converted into scalable capacity. Midpoint is not an executable counterfactual. No quote-spread filter or cohort change."
+  },
+  {
+    "window": "validation",
+    "arm": "baseline",
+    "n": 40,
+    "averages": {
+      "entry_spread_fraction": 0.017486355850699926,
+      "exit_spread_fraction": 0.014745171966058363,
+      "entry_relative_spread": 0.35847095069567636,
+      "exit_relative_spread": 0.4615371400818605,
+      "bid_ask_cost_vs_mid": 0.016115763908379144,
+      "entry_bid_quote_size": 56.75,
+      "exit_ask_quote_size": 88.35,
+      "one_contract_funded_notional": 8685.022500000001
+    },
+    "quantiles05_50_95": {
+      "entry_spread_fraction": [
+        0.002896652594780502,
+        0.012751486905745759,
+        0.035651865224712594
+      ],
+      "exit_spread_fraction": [
+        0.0034894185256504127,
+        0.012969504949607533,
+        0.042293624610302075
+      ],
+      "entry_relative_spread": [
+        0.041193822661808044,
+        0.22739018087855295,
+        1.2075675675675672
+      ],
+      "exit_relative_spread": [
+        0.0564439876670093,
+        0.3518324607329843,
+        1.343657817109144
+      ],
+      "bid_ask_cost_vs_mid": [
+        0.0038566955550640796,
+        0.01297545549354866,
+        0.03869429298607941
+      ],
+      "entry_bid_quote_size": [
+        5.95,
+        29.0,
+        191.45
+      ],
+      "exit_ask_quote_size": [
+        1.0,
+        29.0,
+        184.24999999999983
+      ],
+      "one_contract_funded_notional": [
+        1275.7,
+        6149.0,
+        20703.574999999993
+      ]
+    },
+    "minimum_entry_bid_quote_size": 4,
+    "minimum_exit_ask_quote_size": 1,
+    "limitation": "Descriptive quote diagnostics; raw vendor sizes are not converted into scalable capacity. Midpoint is not an executable counterfactual. No quote-spread filter or cohort change."
+  }
+]

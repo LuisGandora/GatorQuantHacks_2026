@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TJX231020C00085000",
+  "day": "2023-05-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1684331119961892864,
+  "execution_timestamp_ns": 1684331120061892864,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.1,
+  "ask": 3.4,
+  "bid_size": 353,
+  "ask_size": 170,
+  "stock_reference": 80.24,
+  "stock_bar_timestamp_ms": 1684331040000,
+  "stock_reference_age_seconds": 19.961892864
+}

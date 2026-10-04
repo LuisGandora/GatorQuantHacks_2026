@@ -1,0 +1,18 @@
+{
+  "symbol": "O:OGS260417C00090000",
+  "day": "2026-01-23",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 3,
+  "sip_timestamp": 1769180136026272474,
+  "execution_timestamp_ns": 1769180136126272474,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.1,
+  "ask": 0.45,
+  "bid_size": 34,
+  "ask_size": 1,
+  "stock_reference": 76.75,
+  "stock_bar_timestamp_ms": 1769180040000,
+  "stock_reference_age_seconds": 36.026272474
+}

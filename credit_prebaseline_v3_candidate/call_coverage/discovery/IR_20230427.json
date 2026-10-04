@@ -1,0 +1,112 @@
+{
+  "ticker": "IR",
+  "event_entry": "2023-04-27",
+  "status": "matched",
+  "issuer": "0001699150",
+  "source_ticker": "IR",
+  "event": {
+    "day": "2023-04-27",
+    "exit_date": "2023-05-26",
+    "expiry": "2023-09-15",
+    "symbol": "O:IR230915C00060000",
+    "strike": 60.0,
+    "spot": 55.02,
+    "rv20": 0.2550472104127025,
+    "dte_sessions": 97,
+    "entry_quote": {
+      "symbol": "O:IR230915C00060000",
+      "day": "2023-04-27",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1682603104036405504,
+      "execution_timestamp_ns": 1682603104136405504,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.4,
+      "ask": 2.8,
+      "bid_size": 153,
+      "ask_size": 184,
+      "stock_reference": 55.02,
+      "stock_bar_timestamp_ms": 1682603040000,
+      "stock_reference_age_seconds": 4.036405504
+    },
+    "exit_quote": {
+      "symbol": "O:IR230915C00060000",
+      "day": "2023-05-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1685108701585091840,
+      "execution_timestamp_ns": 1685108701685091840,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.3,
+      "ask": 3.7,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 58.22,
+      "stock_bar_timestamp_ms": 1685108640000,
+      "stock_reference_age_seconds": 1.58509184
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-04-20",
+      "exit_date": "2023-05-19",
+      "expiry": "2023-09-15",
+      "symbol": "O:IR230915C00060000",
+      "strike": 60.0,
+      "spot": 55.165,
+      "rv20": 0.2530121075785071,
+      "dte_sessions": 102,
+      "entry_quote": {
+        "symbol": "O:IR230915C00060000",
+        "day": "2023-04-20",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1681998321329451008,
+        "execution_timestamp_ns": 1681998321429451008,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.75,
+        "ask": 3.2,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 55.165,
+        "stock_bar_timestamp_ms": 1681998240000,
+        "stock_reference_age_seconds": 21.329451008
+      },
+      "exit_quote": {
+        "symbol": "O:IR230915C00060000",
+        "day": "2023-05-19",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1684504550763188736,
+        "execution_timestamp_ns": 1684504550863188736,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 4.4,
+        "ask": 5,
+        "bid_size": 14,
+        "ask_size": 2,
+        "stock_reference": 60.56,
+        "stock_bar_timestamp_ms": 1684504440000,
+        "stock_reference_age_seconds": 50.763188736
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-04-27",
+      "2023-05-26"
+    ],
+    [
+      "2023-04-20",
+      "2023-05-19"
+    ]
+  ]
+}

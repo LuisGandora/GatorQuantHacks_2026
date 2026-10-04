@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SSRM231215C00016000",
+  "day": "2023-09-18",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1695044777371452672,
+  "execution_timestamp_ns": 1695044777471452672,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.55,
+  "ask": 0.65,
+  "bid_size": 905,
+  "ask_size": 116,
+  "stock_reference": 14.98,
+  "stock_bar_timestamp_ms": 1695044700000,
+  "stock_reference_age_seconds": 17.371452672
+}

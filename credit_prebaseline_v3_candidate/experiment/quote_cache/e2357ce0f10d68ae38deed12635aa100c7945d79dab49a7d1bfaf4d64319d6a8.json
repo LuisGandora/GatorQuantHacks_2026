@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PRDO240517C00020000",
+  "day": "2024-02-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1707317104308282880,
+  "execution_timestamp_ns": 1707317104408282880,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.4,
+  "ask": 0.6,
+  "bid_size": 10,
+  "ask_size": 20,
+  "stock_reference": 17.27,
+  "stock_bar_timestamp_ms": 1707317040000,
+  "stock_reference_age_seconds": 4.30828288
+}

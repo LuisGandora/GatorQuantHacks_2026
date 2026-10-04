@@ -1,0 +1,112 @@
+{
+  "ticker": "LHX",
+  "event_entry": "2024-02-01",
+  "status": "matched",
+  "issuer": "0000202058",
+  "source_ticker": "LHX",
+  "event": {
+    "day": "2024-02-01",
+    "exit_date": "2024-03-04",
+    "expiry": "2024-05-17",
+    "symbol": "O:LHX240517C00220000",
+    "strike": 220.0,
+    "spot": 208.01,
+    "rv20": 0.1673728650946655,
+    "dte_sessions": 74,
+    "entry_quote": {
+      "symbol": "O:LHX240517C00220000",
+      "day": "2024-02-01",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1706798701553814528,
+      "execution_timestamp_ns": 1706798701653814528,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.1,
+      "ask": 5.3,
+      "bid_size": 12,
+      "ask_size": 22,
+      "stock_reference": 208.01,
+      "stock_bar_timestamp_ms": 1706798640000,
+      "stock_reference_age_seconds": 1.553814528
+    },
+    "exit_quote": {
+      "symbol": "O:LHX240517C00220000",
+      "day": "2024-03-04",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1709563526370312192,
+      "execution_timestamp_ns": 1709563526470312192,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 5.3,
+      "ask": 5.8,
+      "bid_size": 20,
+      "ask_size": 20,
+      "stock_reference": 212.98,
+      "stock_bar_timestamp_ms": 1709563440000,
+      "stock_reference_age_seconds": 26.370312192
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-01-25",
+      "exit_date": "2024-02-26",
+      "expiry": "2024-05-17",
+      "symbol": "O:LHX240517C00220000",
+      "strike": 220.0,
+      "spot": 205.8,
+      "rv20": 0.14240111220115234,
+      "dte_sessions": 79,
+      "entry_quote": {
+        "symbol": "O:LHX240517C00220000",
+        "day": "2024-01-25",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1706193959236933632,
+        "execution_timestamp_ns": 1706193959336933632,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 4.5,
+        "ask": 5.2,
+        "bid_size": 18,
+        "ask_size": 32,
+        "stock_reference": 205.8,
+        "stock_bar_timestamp_ms": 1706193840000,
+        "stock_reference_age_seconds": 59.236933632
+      },
+      "exit_quote": {
+        "symbol": "O:LHX240517C00220000",
+        "day": "2024-02-26",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1708958701312033792,
+        "execution_timestamp_ns": 1708958701412033792,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 5.8,
+        "ask": 6.7,
+        "bid_size": 262,
+        "ask_size": 50,
+        "stock_reference": 214.165,
+        "stock_bar_timestamp_ms": 1708958640000,
+        "stock_reference_age_seconds": 1.312033792
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-02-01",
+      "2024-03-04"
+    ],
+    [
+      "2024-01-25",
+      "2024-02-26"
+    ]
+  ]
+}

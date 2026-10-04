@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ANF241115C00140000",
+  "day": "2024-08-12",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1723470305090973696,
+  "execution_timestamp_ns": 1723470305190973696,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 23.1,
+  "ask": 23.8,
+  "bid_size": 38,
+  "ask_size": 12,
+  "stock_reference": 148.31,
+  "stock_bar_timestamp_ms": 1723470240000,
+  "stock_reference_age_seconds": 5.090973696
+}

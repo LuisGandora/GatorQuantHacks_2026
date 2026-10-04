@@ -1,0 +1,18 @@
+{
+  "symbol": "O:FSS230217C00050000",
+  "day": "2022-11-23",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 6,
+  "sip_timestamp": 1669215318200588032,
+  "execution_timestamp_ns": 1669215318300588032,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1,
+  "ask": 5,
+  "bid_size": 87,
+  "ask_size": 90,
+  "stock_reference": 49.516,
+  "stock_bar_timestamp_ms": 1669215240000,
+  "stock_reference_age_seconds": 18.200588032
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001818502",
+  "date": "2025-02-19",
+  "selected": "OPFI",
+  "eligible": [
+    {
+      "ticker": "OPFI",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

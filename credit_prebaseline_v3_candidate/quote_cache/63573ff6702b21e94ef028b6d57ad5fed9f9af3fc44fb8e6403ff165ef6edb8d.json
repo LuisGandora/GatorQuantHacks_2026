@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AL240816C00055000",
+  "day": "2024-05-01",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1714571100028354560,
+  "execution_timestamp_ns": 1714571100128354560,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.9,
+  "ask": 5,
+  "bid_size": 3,
+  "ask_size": 4,
+  "stock_reference": 50.7,
+  "stock_bar_timestamp_ms": 1714571040000,
+  "stock_reference_age_seconds": 0.02835456
+}

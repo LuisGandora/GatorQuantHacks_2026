@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ACRE240517C00010000",
+  "day": "2024-02-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1707317779679980288,
+  "execution_timestamp_ns": 1707317779779980288,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.1,
+  "ask": 0.2,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 8.9,
+  "stock_bar_timestamp_ms": 1707317700000,
+  "stock_reference_age_seconds": 19.679980288
+}

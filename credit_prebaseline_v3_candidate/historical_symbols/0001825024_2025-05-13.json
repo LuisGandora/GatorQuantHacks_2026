@@ -1,0 +1,12 @@
+{
+  "cik": "0001825024",
+  "date": "2025-05-13",
+  "selected": "OPAD",
+  "eligible": [
+    {
+      "ticker": "OPAD",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

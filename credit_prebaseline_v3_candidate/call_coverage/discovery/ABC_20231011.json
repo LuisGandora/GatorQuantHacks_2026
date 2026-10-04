@@ -1,0 +1,60 @@
+{
+  "ticker": "COR",
+  "event_entry": "2023-10-11",
+  "status": "no_usable_control",
+  "issuer": "0001140859",
+  "source_ticker": "ABC",
+  "event": {
+    "day": "2023-10-11",
+    "exit_date": "2023-11-09",
+    "expiry": "2024-02-16",
+    "symbol": "O:COR240216C00200000",
+    "strike": 200.0,
+    "spot": 187.65,
+    "rv20": 0.15166079192040416,
+    "dte_sessions": 88,
+    "entry_quote": {
+      "symbol": "O:COR240216C00200000",
+      "day": "2023-10-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 14,
+      "sip_timestamp": 1697032025121378304,
+      "execution_timestamp_ns": 1697032025221378304,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.8,
+      "ask": 5.2,
+      "bid_size": 15,
+      "ask_size": 1,
+      "stock_reference": 187.65,
+      "stock_bar_timestamp_ms": 1697031960000,
+      "stock_reference_age_seconds": 5.121378304
+    },
+    "exit_quote": {
+      "symbol": "O:COR240216C00200000",
+      "day": "2023-11-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1699541100813834752,
+      "execution_timestamp_ns": 1699541100913834752,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 5.9,
+      "ask": 7.2,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 196.39,
+      "stock_bar_timestamp_ms": 1699541040000,
+      "stock_reference_age_seconds": 0.813834752
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-10-04",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

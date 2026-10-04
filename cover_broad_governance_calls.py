@@ -8,6 +8,21 @@ import annual_meeting_iv_test as t
 from count_broad_governance_candidate import OUT
 from broad_quote_experiment import quote
 from broad_strategy_analysis import fast_dependence_clusters
+OPTION_KIND='call'
+STRIKE_KEY='U0.05'
+SUBDIR='call_coverage'
+COUNTS_FILE='call_quote_coverage_counts.csv'
+REQUIRE_SEASONED=False
+SPOT_AT_TIME=None
+BLOCK_MONTHS=3
+QUOTE_SPOT=False
+RV_MATCH=False
+VERIFY_CIK=False
+CANONICAL_SYMBOL=None
+REQUIRE_SAME_EXPIRY=False
+def normalize_cik(value):
+    value=str(value).split('.')[0].strip()
+    return value.zfill(10) if value.isdigit() else None
 
 POLICY=dict(id='GOV-broad-call-coverage-v1',scope='Contracts/quotes and stock inputs only, never compute P&L',
     equity_types=['CS','ADRC'],selection='All count-eligible candidates in fixed SHA256 order within quarters, visit quarters round-robin',
@@ -21,13 +36,13 @@ POLICY=dict(id='GOV-broad-call-coverage-v1',scope='Contracts/quotes and stock in
 def save_counts():
     rows=[]
     for window in ['discovery','validation']:
-        folder=OUT/'call_coverage'/window
+        folder=OUT/SUBDIR/window
         files=list(folder.glob('*.json')) if folder.exists() else []
         good=[json.loads(f.read_text()) for f in files if json.loads(f.read_text()).get('status')=='matched']
-        groups=len(set(fast_dependence_clusters(pd.DataFrame([dict(ticker=x['ticker'],intervals=x['intervals']) for x in good])))) if good else 0
+        groups=len(set(fast_dependence_clusters(pd.DataFrame([dict(ticker=x.get('issuer',x['ticker']),intervals=x['intervals']) for x in good])))) if good else 0
         rows.append(dict(window=window,examined=len(files),usable_matches=len(good),dependence_groups=groups,
             coverage_gate=len(good)>=40 and groups>=5,returns_calculated=False))
-    pd.DataFrame(rows).to_csv(OUT/'call_quote_coverage_counts.csv',index=False)
+    pd.DataFrame(rows).to_csv(OUT/COUNTS_FILE,index=False)
     return rows
 
 def trade(ticker,day,stock,adjustment):
@@ -35,7 +50,9 @@ def trade(ticker,day,stock,adjustment):
     if any(d not in stock.index for d in [pre,day,exitday]):return None,'missing_stock'
     ratios=adjustment.loc[pre:exitday].dropna()
     if ratios.empty or ratios.max()/ratios.min()-1>.005:return None,'split_or_adjustment_change'
-    spot=float(stock.loc[day,'close']); prior=float(stock.loc[pre,'close'])
+    spot=float(stock.loc[day,'close']) if SPOT_AT_TIME is None else SPOT_AT_TIME(ticker,day)
+    if spot is None:return None,'missing_intraday_stock'
+    prior=float(stock.loc[pre,'close'])
     if spot<=0 or prior<=0:return None,'invalid_stock'
     chain=t.c.p.fetch_chain(ticker,pre,2,t.c.p.EXPIRY_BUCKETS[t.c.p.BASELINE_BUCKET][1])
     if chain.empty:return None,'no_chain'
@@ -46,23 +63,31 @@ def trade(ticker,day,stock,adjustment):
     selected=chain[chain.expiration_date==expiry]
     strikes=t.c.p.select_strikes(selected,prior,[.05])
     if not strikes:return None,'no_strike'
-    k=strikes['U0.05']
-    if k<=spot:return None,'call_not_otm_at_entry'
-    symbol=t.c.p.contract(selected,k,'call')
+    k=strikes[STRIKE_KEY]
+    symbol=t.c.p.contract(selected,k,OPTION_KIND)
     entry=quote(symbol,day); end=quote(symbol,exitday)
     if any(q.get('status')!='valid' or q.get('age_seconds',999)>60 for q in [entry,end]):return None,'unusable_quote'
+    if QUOTE_SPOT:spot=entry['stock_reference']
+    if (OPTION_KIND=='call' and k<=spot) or (OPTION_KIND=='put' and k>=spot):return None,'option_not_otm_at_entry'
+    rv=None
+    if RV_MATCH:
+        import numpy as np
+        history=np.log(stock.close*adjustment).diff().loc[:pre].tail(20)
+        if len(history.dropna())!=20:return None,'missing_rv_history'
+        rv=float(history.std(ddof=1)*np.sqrt(252))
+        if not np.isfinite(rv) or rv<=0:return None,'invalid_rv'
     return dict(day=str(day.date()),exit_date=str(exitday.date()),expiry=str(expiry.date()),symbol=symbol,strike=k,
-        spot=spot,dte_sessions=int(t.c.p.CAL.get_loc(expiry_session)-t.c.p.CAL.get_loc(day)),entry_quote=entry,exit_quote=end),None
+        spot=spot,rv20=rv,dte_sessions=int(t.c.p.CAL.get_loc(expiry_session)-t.c.p.CAL.get_loc(day)),entry_quote=entry,exit_quote=end),None
 
 def run():
     path=OUT/'call_coverage_registration.json'
     if path.exists() and json.loads(path.read_text())!=POLICY:raise RuntimeError('Coverage design changed')
     t.save(path,POLICY); t.c.initialize()
     for window in ['discovery','validation']:
-        folder=OUT/'call_coverage'/window; folder.mkdir(parents=True,exist_ok=True)
+        folder=OUT/SUBDIR/window; folder.mkdir(parents=True,exist_ok=True)
         events=pd.read_csv(OUT/f'{window}_calendar_audit.csv',parse_dates=['event_entry'])
         events=events[events.status=='calendar_eligible'].copy()
-        events['block']=events.event_entry.dt.to_period('Q').astype(str)
+        events['block']=events.event_entry.dt.year.astype(str)+'-'+((events.event_entry.dt.month-1)//BLOCK_MONTHS).astype(str)
         events['order']=events.apply(lambda e:hashlib.sha256(f'{e.ticker}|{e.event_entry}'.encode()).hexdigest(),axis=1)
         events=events.sort_values(['block','order']); events['round']=events.groupby('block').cumcount()
         events=events.sort_values(['round','block'])
@@ -72,11 +97,25 @@ def run():
             file=folder/f'{e.ticker}_{e.event_entry:%Y%m%d}.json'
             if file.exists():continue
             result=dict(ticker=e.ticker,event_entry=str(e.event_entry.date()),status='unverified_equity')
+            if hasattr(e,'issuer'):result['issuer']=normalize_cik(e.issuer) or str(e.issuer)
+            source_ticker=e.ticker
+            if CANONICAL_SYMBOL is not None:
+                mapped=CANONICAL_SYMBOL(e.issuer,e.event_entry)
+                if mapped is None:
+                    result['status']='no_historical_common_symbol';t.save(file,result);print(save_counts(),flush=True);continue
+                e=e._replace(ticker=mapped)
+                result.update(ticker=mapped,source_ticker=source_ticker)
             types=t.c.p.api_get_all('/v3/reference/tickers',{'ticker':e.ticker,'date':str(e.event_entry.date()),'market':'stocks','limit':1000})
             valid=any(x.get('ticker')==e.ticker and x.get('type') in POLICY['equity_types'] for x in types)
+            if valid and VERIFY_CIK:
+                valid=normalize_cik(getattr(e,'issuer',None)) is not None and any(x.get('ticker')==e.ticker and x.get('type') in POLICY['equity_types'] and normalize_cik(x.get('cik'))==normalize_cik(e.issuer) for x in types)
+                if not valid:result['status']='historical_issuer_identity_mismatch'
+            if valid and REQUIRE_SEASONED:
+                old=t.c.p.api_get_all('/v3/reference/tickers',{'ticker':e.ticker,'date':str((e.event_entry-pd.Timedelta(days=365)).date()),'market':'stocks','limit':1000})
+                valid=any(x.get('ticker')==e.ticker and x.get('type') in POLICY['equity_types'] for x in old)
             if valid:
-                days=controls[(controls.ticker==e.ticker)&(controls.event_entry==e.event_entry)].control_entry.tolist()
-                earliest=min(days+[e.event_entry])-pd.Timedelta(days=7)
+                days=controls[(controls.ticker==source_ticker)&(controls.event_entry==e.event_entry)].control_entry.tolist()
+                earliest=min(days+[e.event_entry])-pd.Timedelta(days=90 if RV_MATCH else 7)
                 latest=t.c.p.CAL[t.c.p.CAL.get_loc(max(days+[e.event_entry]))+21]
                 raw=t.c.stock_bars(e.ticker,earliest,latest,False); adj=t.c.stock_bars(e.ticker,earliest,latest,True)
                 factor=(adj.close/raw.close).dropna()
@@ -86,9 +125,13 @@ def run():
                     days.sort(key=lambda d:(abs(t.c.p.CAL.get_loc(d)-t.c.p.CAL.get_loc(e.event_entry)),d))
                     selected=[]; control_failures=[]
                     for day in days:
+                        if VERIFY_CIK:
+                            reference=t.c.p.api_get_all('/v3/reference/tickers',{'ticker':e.ticker,'date':str(day.date()),'market':'stocks','limit':1000})
+                            if not any(x.get('ticker')==e.ticker and x.get('type') in POLICY['equity_types'] and normalize_cik(x.get('cik'))==normalize_cik(e.issuer) for x in reference):
+                                control_failures.append(dict(day=str(day.date()),reason='control_issuer_identity_mismatch'));continue
                         other,why=trade(e.ticker,day,raw,factor)
-                        if other and abs(other['dte_sessions']-event['dte_sessions'])<=7:selected.append(other)
-                        else:control_failures.append(dict(day=str(day.date()),reason=why or 'maturity_mismatch'))
+                        if other and (not REQUIRE_SAME_EXPIRY or other['expiry']==event['expiry']) and abs(other['dte_sessions']-event['dte_sessions'])<=7 and (not RV_MATCH or .8<=other['rv20']/event['rv20']<=1.25):selected.append(other)
+                        else:control_failures.append(dict(day=str(day.date()),reason=why or ('expiry_mismatch' if REQUIRE_SAME_EXPIRY and other['expiry']!=event['expiry'] else ('maturity_mismatch' if abs(other['dte_sessions']-event['dte_sessions'])>7 else 'rv_mismatch'))))
                         if len(selected)==3:break
                     result.update(event=event,controls=selected,control_failures=control_failures)
                     if selected:

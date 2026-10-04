@@ -1,0 +1,18 @@
+{
+  "symbol": "O:GGG250221C00095000",
+  "day": "2024-11-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1732027513368557568,
+  "execution_timestamp_ns": 1732027513468557568,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.95,
+  "ask": 4.8,
+  "bid_size": 20,
+  "ask_size": 25,
+  "stock_reference": 88.725,
+  "stock_bar_timestamp_ms": 1732027440000,
+  "stock_reference_age_seconds": 13.368557568
+}

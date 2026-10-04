@@ -1,0 +1,826 @@
+[
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 18,
+    "gate": true,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 12,
+    "gate": true,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 12,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 10,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 10,
+    "gate": false,
+    "exclusions": {
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 7,
+    "gate": true,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 33,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 2,
+      "unusable_exit_quote;unusable_exit_quote": 3,
+      "valid;unusable_exit_quote": 2
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 27,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 5,
+      "unusable_exit_quote;unusable_exit_quote": 7,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 5,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 38,
+    "dependence_groups": 18,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 17,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 12,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_exit_quote;valid": 1,
+      "unusable_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 11,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1,
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 10,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 38,
+    "dependence_groups": 7,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 33,
+    "dependence_groups": 3,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;unusable_exit_quote": 2,
+      "rv_caliper": 1,
+      "unusable_quote": 1,
+      "valid;unusable_exit_quote": 1,
+      "unusable_exit_quote;valid": 2
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 27,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;unusable_exit_quote": 9,
+      "rv_caliper": 1,
+      "unusable_exit_quote;valid": 2,
+      "unusable_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 3,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 38,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "rv_caliper": 1,
+      "unusable_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 21,
+    "dependence_groups": 17,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "rv_caliper": 4,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 22,
+    "dependence_groups": 18,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "rv_caliper": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 21,
+    "dependence_groups": 13,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "unusable_exit_quote;valid": 1,
+      "rv_caliper": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 21,
+    "dependence_groups": 11,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "rv_caliper": 4,
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 21,
+    "dependence_groups": 9,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "valid;unusable_exit_quote": 1,
+      "rv_caliper": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 22,
+    "dependence_groups": 7,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "rv_caliper": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 19,
+    "dependence_groups": 3,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "unusable_exit_quote;unusable_exit_quote": 2,
+      "rv_caliper": 4,
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 13,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "unusable_exit_quote;valid": 3,
+      "outside_quarter": 3,
+      "unusable_exit_quote;unusable_exit_quote": 4,
+      "unusable_quote": 2,
+      "rv_caliper": 4,
+      "valid;unusable_exit_quote": 2
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "discovery",
+    "baseline_sessions": 7,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 22,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "other_recent_disclosure": 6,
+      "expiry_or_maturity": 3,
+      "outside_quarter": 3,
+      "unusable_quote": 2,
+      "rv_caliper": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 21,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 16,
+    "gate": false,
+    "exclusions": {
+      "valid;unusable_exit_quote": 2,
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 14,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 39,
+    "dependence_groups": 12,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 37,
+    "dependence_groups": 10,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;valid": 3
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 8,
+    "gate": true,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 29,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "valid;unusable_exit_quote": 2,
+      "unusable_exit_quote;unusable_exit_quote": 5,
+      "unusable_exit_quote;valid": 4
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 23,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "unusable_exit_quote;unusable_exit_quote": 11,
+      "unusable_exit_quote;valid": 5,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 5,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 40,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {},
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 33,
+    "dependence_groups": 19,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 33,
+    "dependence_groups": 18,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "unusable_exit_quote;valid": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 33,
+    "dependence_groups": 18,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 34,
+    "dependence_groups": 15,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 31,
+    "dependence_groups": 11,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "unusable_exit_quote;valid": 2,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 34,
+    "dependence_groups": 8,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 27,
+    "dependence_groups": 3,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "unusable_exit_quote;valid": 4,
+      "unusable_exit_quote;unusable_exit_quote": 3
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 20,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1,
+      "unusable_exit_quote;unusable_exit_quote": 12,
+      "unusable_exit_quote;valid": 1,
+      "valid;unusable_exit_quote": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 3,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 34,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 5,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "1",
+    "examined": 40,
+    "usable_pairs": 32,
+    "dependence_groups": 22,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "2",
+    "examined": 40,
+    "usable_pairs": 31,
+    "dependence_groups": 18,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "unusable_exit_quote;valid": 1,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "3",
+    "examined": 40,
+    "usable_pairs": 32,
+    "dependence_groups": 14,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "5",
+    "examined": 40,
+    "usable_pairs": 32,
+    "dependence_groups": 12,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "10",
+    "examined": 40,
+    "usable_pairs": 30,
+    "dependence_groups": 9,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "unusable_exit_quote;valid": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "21",
+    "examined": 40,
+    "usable_pairs": 32,
+    "dependence_groups": 8,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "42",
+    "examined": 40,
+    "usable_pairs": 26,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "unusable_exit_quote;valid": 4,
+      "unusable_exit_quote;unusable_exit_quote": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "63",
+    "examined": 40,
+    "usable_pairs": 18,
+    "dependence_groups": 2,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "unusable_exit_quote;unusable_exit_quote": 7,
+      "outside_quarter": 2,
+      "unusable_exit_quote;valid": 6,
+      "option_not_otm_at_entry": 1,
+      "valid;unusable_exit_quote": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  },
+  {
+    "window": "validation",
+    "baseline_sessions": 7,
+    "horizon": "exp",
+    "examined": 40,
+    "usable_pairs": 32,
+    "dependence_groups": 1,
+    "gate": false,
+    "exclusions": {
+      "unusable_quote": 2,
+      "expiry_or_maturity": 2,
+      "outside_quarter": 2,
+      "option_not_otm_at_entry": 1,
+      "rv_caliper": 1
+    },
+    "returns_calculated": false
+  }
+]

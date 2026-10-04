@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SHO221216C00012500",
+  "day": "2022-07-28",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1659015910040023296,
+  "execution_timestamp_ns": 1659015910140023296,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.5,
+  "ask": 0.75,
+  "bid_size": 33,
+  "ask_size": 109,
+  "stock_reference": 11.085,
+  "stock_bar_timestamp_ms": 1659015840000,
+  "stock_reference_age_seconds": 10.040023296
+}

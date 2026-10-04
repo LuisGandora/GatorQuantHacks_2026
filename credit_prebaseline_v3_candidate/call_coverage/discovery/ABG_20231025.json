@@ -1,0 +1,60 @@
+{
+  "ticker": "ABG",
+  "event_entry": "2023-10-25",
+  "status": "no_usable_control",
+  "issuer": "0001144980",
+  "source_ticker": "ABG",
+  "event": {
+    "day": "2023-10-25",
+    "exit_date": "2023-11-24",
+    "expiry": "2024-04-19",
+    "symbol": "O:ABG240419C00200000",
+    "strike": 200.0,
+    "spot": 181.87,
+    "rv20": 0.39650178079414417,
+    "dte_sessions": 121,
+    "entry_quote": {
+      "symbol": "O:ABG240419C00200000",
+      "day": "2023-10-25",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1698241500117694976,
+      "execution_timestamp_ns": 1698241500217694976,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 13.3,
+      "ask": 15.8,
+      "bid_size": 21,
+      "ask_size": 30,
+      "stock_reference": 181.87,
+      "stock_bar_timestamp_ms": 1698241440000,
+      "stock_reference_age_seconds": 0.117694976
+    },
+    "exit_quote": {
+      "symbol": "O:ABG240419C00200000",
+      "day": "2023-11-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 22,
+      "sip_timestamp": 1700837160061015040,
+      "execution_timestamp_ns": 1700837160161015040,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 23.2,
+      "ask": 25.4,
+      "bid_size": 1,
+      "ask_size": 5,
+      "stock_reference": 207.24,
+      "stock_bar_timestamp_ms": 1700837100000,
+      "stock_reference_age_seconds": 0.06101504
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-10-18",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

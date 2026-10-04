@@ -1,0 +1,18 @@
+{
+  "symbol": "O:EXR251219C00150000",
+  "day": "2025-08-27",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1756302304440272498,
+  "execution_timestamp_ns": 1756302304540272498,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.3,
+  "ask": 4.2,
+  "bid_size": 147,
+  "ask_size": 5,
+  "stock_reference": 142.155,
+  "stock_bar_timestamp_ms": 1756302240000,
+  "stock_reference_age_seconds": 4.440272498
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:JWN221021C00025000",
+  "day": "2022-05-13",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1652449549096385280,
+  "execution_timestamp_ns": 1652449549196385280,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.95,
+  "ask": 4.4,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 24.56,
+  "stock_bar_timestamp_ms": 1652449440000,
+  "stock_reference_age_seconds": 49.09638528
+}

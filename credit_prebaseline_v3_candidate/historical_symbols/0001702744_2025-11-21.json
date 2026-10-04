@@ -1,0 +1,12 @@
+{
+  "cik": "0001702744",
+  "date": "2025-11-21",
+  "selected": "SMPL",
+  "eligible": [
+    {
+      "ticker": "SMPL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

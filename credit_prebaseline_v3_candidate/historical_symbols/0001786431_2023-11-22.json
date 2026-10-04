@@ -1,0 +1,12 @@
+{
+  "cik": "0001786431",
+  "date": "2023-11-22",
+  "selected": "REYN",
+  "eligible": [
+    {
+      "ticker": "REYN",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TPH251017C00035000",
+  "day": "2025-05-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1746193543273865667,
+  "execution_timestamp_ns": 1746193543373865667,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.8,
+  "ask": 2.35,
+  "bid_size": 35,
+  "ask_size": 33,
+  "stock_reference": 31.48,
+  "stock_bar_timestamp_ms": 1746193440000,
+  "stock_reference_age_seconds": 43.273865667
+}

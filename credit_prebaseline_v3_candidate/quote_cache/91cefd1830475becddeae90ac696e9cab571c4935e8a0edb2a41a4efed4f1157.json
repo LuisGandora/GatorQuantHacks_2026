@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LII250919C00630000",
+  "day": "2025-05-15",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 3,
+  "sip_timestamp": 1747317684937228721,
+  "execution_timestamp_ns": 1747317685037228721,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 26.9,
+  "ask": 32.3,
+  "bid_size": 11,
+  "ask_size": 9,
+  "stock_reference": 590.595,
+  "stock_bar_timestamp_ms": 1747317600000,
+  "stock_reference_age_seconds": 24.937228721
+}

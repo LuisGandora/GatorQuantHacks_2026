@@ -1,0 +1,60 @@
+{
+  "ticker": "SPB",
+  "event_entry": "2023-10-23",
+  "status": "no_usable_control",
+  "issuer": "0000109177",
+  "source_ticker": "SPB",
+  "event": {
+    "day": "2023-10-23",
+    "exit_date": "2023-11-21",
+    "expiry": "2024-01-19",
+    "symbol": "O:SPB240119C00080000",
+    "strike": 80.0,
+    "spot": 75.3612,
+    "rv20": 0.15670281886645931,
+    "dte_sessions": 60,
+    "entry_quote": {
+      "symbol": "O:SPB240119C00080000",
+      "day": "2023-10-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1698068710365295360,
+      "execution_timestamp_ns": 1698068710465295360,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2,
+      "ask": 2.75,
+      "bid_size": 286,
+      "ask_size": 248,
+      "stock_reference": 75.3612,
+      "stock_bar_timestamp_ms": 1698068640000,
+      "stock_reference_age_seconds": 10.36529536
+    },
+    "exit_quote": {
+      "symbol": "O:SPB240119C00080000",
+      "day": "2023-11-21",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1700578807065641984,
+      "execution_timestamp_ns": 1700578807165641984,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 0.2,
+      "bid_size": 1,
+      "ask_size": 30,
+      "stock_reference": 65.53,
+      "stock_bar_timestamp_ms": 1700578740000,
+      "stock_reference_age_seconds": 7.065641984
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-10-16",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

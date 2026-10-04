@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CWH250620C00025000",
+  "day": "2025-02-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1739976398349656064,
+  "execution_timestamp_ns": 1739976398449656064,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.9,
+  "ask": 1.75,
+  "bid_size": 42,
+  "ask_size": 159,
+  "stock_reference": 22.27,
+  "stock_bar_timestamp_ms": 1739976300000,
+  "stock_reference_age_seconds": 38.349656064
+}

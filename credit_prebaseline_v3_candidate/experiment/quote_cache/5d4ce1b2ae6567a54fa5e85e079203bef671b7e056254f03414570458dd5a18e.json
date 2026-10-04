@@ -1,0 +1,18 @@
+{
+  "symbol": "O:VST250117C00140000",
+  "day": "2024-10-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1728308700071898624,
+  "execution_timestamp_ns": 1728308700171898624,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 17,
+  "ask": 18.1,
+  "bid_size": 311,
+  "ask_size": 674,
+  "stock_reference": 136.83,
+  "stock_bar_timestamp_ms": 1728308640000,
+  "stock_reference_age_seconds": 0.071898624
+}

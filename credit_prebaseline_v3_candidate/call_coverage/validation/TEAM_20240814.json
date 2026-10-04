@@ -1,0 +1,112 @@
+{
+  "ticker": "TEAM",
+  "event_entry": "2024-08-14",
+  "status": "matched",
+  "issuer": "0001650372",
+  "source_ticker": "TEAM",
+  "event": {
+    "day": "2024-08-14",
+    "exit_date": "2024-09-13",
+    "expiry": "2024-12-20",
+    "symbol": "O:TEAM241220C00155000",
+    "strike": 155.0,
+    "spot": 143.36,
+    "rv20": 0.7389858376336463,
+    "dte_sessions": 90,
+    "entry_quote": {
+      "symbol": "O:TEAM241220C00155000",
+      "day": "2024-08-14",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1723643104515469824,
+      "execution_timestamp_ns": 1723643104615469824,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 11.5,
+      "ask": 12,
+      "bid_size": 1,
+      "ask_size": 2,
+      "stock_reference": 143.36,
+      "stock_bar_timestamp_ms": 1723643040000,
+      "stock_reference_age_seconds": 4.515469824
+    },
+    "exit_quote": {
+      "symbol": "O:TEAM241220C00155000",
+      "day": "2024-09-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1726235143831402240,
+      "execution_timestamp_ns": 1726235143931402240,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 21.1,
+      "ask": 22.8,
+      "bid_size": 24,
+      "ask_size": 14,
+      "stock_reference": 165.86,
+      "stock_bar_timestamp_ms": 1726235040000,
+      "stock_reference_age_seconds": 43.83140224
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-08-07",
+      "exit_date": "2024-09-06",
+      "expiry": "2024-12-20",
+      "symbol": "O:TEAM241220C00150000",
+      "strike": 150.0,
+      "spot": 142.86,
+      "rv20": 0.7437698303933196,
+      "dte_sessions": 95,
+      "entry_quote": {
+        "symbol": "O:TEAM241220C00150000",
+        "day": "2024-08-07",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1723038300100125184,
+        "execution_timestamp_ns": 1723038300200125184,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 13.5,
+        "ask": 15.3,
+        "bid_size": 97,
+        "ask_size": 98,
+        "stock_reference": 142.86,
+        "stock_bar_timestamp_ms": 1723038240000,
+        "stock_reference_age_seconds": 0.100125184
+      },
+      "exit_quote": {
+        "symbol": "O:TEAM241220C00150000",
+        "day": "2024-09-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1725630302613203456,
+        "execution_timestamp_ns": 1725630302713203456,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 24.1,
+        "ask": 25.9,
+        "bid_size": 44,
+        "ask_size": 104,
+        "stock_reference": 163.58,
+        "stock_bar_timestamp_ms": 1725630240000,
+        "stock_reference_age_seconds": 2.613203456
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-08-14",
+      "2024-09-13"
+    ],
+    [
+      "2024-08-07",
+      "2024-09-06"
+    ]
+  ]
+}

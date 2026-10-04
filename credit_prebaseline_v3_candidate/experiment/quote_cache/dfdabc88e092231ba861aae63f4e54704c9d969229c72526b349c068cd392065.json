@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ZBH231215C00150000",
+  "day": "2023-07-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1689860726150573824,
+  "execution_timestamp_ns": 1689860726250573824,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4,
+  "ask": 6.4,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 140.845,
+  "stock_bar_timestamp_ms": 1689860640000,
+  "stock_reference_age_seconds": 26.150573824
+}

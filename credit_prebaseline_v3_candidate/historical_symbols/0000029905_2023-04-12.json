@@ -1,0 +1,12 @@
+{
+  "cik": "0000029905",
+  "date": "2023-04-12",
+  "selected": "DOV",
+  "eligible": [
+    {
+      "ticker": "DOV",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:KKR241220C00115000",
+  "day": "2024-07-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1720705518599120896,
+  "execution_timestamp_ns": 1720705518699120896,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 7.2,
+  "ask": 7.5,
+  "bid_size": 11,
+  "ask_size": 1,
+  "stock_reference": 109.76,
+  "stock_bar_timestamp_ms": 1720705440000,
+  "stock_reference_age_seconds": 18.599120896
+}

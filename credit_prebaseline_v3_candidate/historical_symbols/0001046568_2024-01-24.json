@@ -1,0 +1,12 @@
+{
+  "cik": "0001046568",
+  "date": "2024-01-24",
+  "selected": "PRDO",
+  "eligible": [
+    {
+      "ticker": "PRDO",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

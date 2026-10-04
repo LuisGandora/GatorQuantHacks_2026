@@ -1,0 +1,18 @@
+{
+  "symbol": "O:EXP221021C00130000",
+  "day": "2022-05-16",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1652708717559777792,
+  "execution_timestamp_ns": 1652708717659777792,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 8.1,
+  "ask": 10.8,
+  "bid_size": 69,
+  "ask_size": 70,
+  "stock_reference": 119.64,
+  "stock_bar_timestamp_ms": 1652708640000,
+  "stock_reference_age_seconds": 17.559777792
+}

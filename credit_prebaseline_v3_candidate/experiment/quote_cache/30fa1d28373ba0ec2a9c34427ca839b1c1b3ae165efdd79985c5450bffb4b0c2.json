@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ELME241018C00017500",
+  "day": "2024-08-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 4,
+  "sip_timestamp": 1723038385781979648,
+  "execution_timestamp_ns": 1723038385881979648,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.35,
+  "ask": 0.7,
+  "bid_size": 78,
+  "ask_size": 19,
+  "stock_reference": 17.02,
+  "stock_bar_timestamp_ms": 1723038300000,
+  "stock_reference_age_seconds": 25.781979648
+}

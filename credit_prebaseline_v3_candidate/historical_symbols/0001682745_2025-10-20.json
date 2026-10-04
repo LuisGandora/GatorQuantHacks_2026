@@ -1,0 +1,12 @@
+{
+  "cik": "0001682745",
+  "date": "2025-10-20",
+  "selected": "VRRM",
+  "eligible": [
+    {
+      "ticker": "VRRM",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

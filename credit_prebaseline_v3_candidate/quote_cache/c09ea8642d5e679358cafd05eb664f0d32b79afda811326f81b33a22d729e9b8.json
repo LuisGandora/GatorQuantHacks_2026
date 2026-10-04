@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DKNG250321C00045000",
+  "day": "2024-12-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1733928445424135424,
+  "execution_timestamp_ns": 1733928445524135424,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3,
+  "ask": 3.15,
+  "bid_size": 34,
+  "ask_size": 38,
+  "stock_reference": 42.24,
+  "stock_bar_timestamp_ms": 1733928360000,
+  "stock_reference_age_seconds": 25.424135424
+}

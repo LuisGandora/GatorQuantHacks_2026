@@ -1,0 +1,18 @@
+{
+  "symbol": "O:MSI250815C00460000",
+  "day": "2025-04-24",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 3,
+  "sip_timestamp": 1745503082470509836,
+  "execution_timestamp_ns": 1745503082570509836,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 10.8,
+  "ask": 14.1,
+  "bid_size": 9,
+  "ask_size": 12,
+  "stock_reference": 424.5,
+  "stock_bar_timestamp_ms": 1745503020000,
+  "stock_reference_age_seconds": 2.470509836
+}

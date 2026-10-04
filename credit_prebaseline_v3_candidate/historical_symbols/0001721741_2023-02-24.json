@@ -1,0 +1,12 @@
+{
+  "cik": "0001721741",
+  "date": "2023-02-24",
+  "selected": "LAZY",
+  "eligible": [
+    {
+      "ticker": "LAZY",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

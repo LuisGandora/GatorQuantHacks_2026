@@ -1,0 +1,112 @@
+{
+  "ticker": "ZBH",
+  "event_entry": "2023-07-11",
+  "status": "matched",
+  "issuer": "0001136869",
+  "source_ticker": "ZBH",
+  "event": {
+    "day": "2023-07-11",
+    "exit_date": "2023-08-09",
+    "expiry": "2023-12-15",
+    "symbol": "O:ZBH231215C00150000",
+    "strike": 150.0,
+    "spot": 142.99,
+    "rv20": 0.19029686250801023,
+    "dte_sessions": 111,
+    "entry_quote": {
+      "symbol": "O:ZBH231215C00150000",
+      "day": "2023-07-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1689083149414687488,
+      "execution_timestamp_ns": 1689083149514687488,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 5.3,
+      "ask": 6,
+      "bid_size": 145,
+      "ask_size": 34,
+      "stock_reference": 142.99,
+      "stock_bar_timestamp_ms": 1689083040000,
+      "stock_reference_age_seconds": 49.414687488
+    },
+    "exit_quote": {
+      "symbol": "O:ZBH231215C00150000",
+      "day": "2023-08-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1691588707302173440,
+      "execution_timestamp_ns": 1691588707402173440,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.45,
+      "ask": 0.9,
+      "bid_size": 64,
+      "ask_size": 1,
+      "stock_reference": 125.515,
+      "stock_bar_timestamp_ms": 1691588640000,
+      "stock_reference_age_seconds": 7.30217344
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-07-03",
+      "exit_date": "2023-08-02",
+      "expiry": "2023-12-15",
+      "symbol": "O:ZBH231215C00155000",
+      "strike": 155.0,
+      "spot": 143.09,
+      "rv20": 0.179054564277855,
+      "dte_sessions": 116,
+      "entry_quote": {
+        "symbol": "O:ZBH231215C00155000",
+        "day": "2023-07-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1688391905740294400,
+        "execution_timestamp_ns": 1688391905840294400,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.9,
+        "ask": 6,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 143.09,
+        "stock_bar_timestamp_ms": 1688391840000,
+        "stock_reference_age_seconds": 5.7402944
+      },
+      "exit_quote": {
+        "symbol": "O:ZBH231215C00155000",
+        "day": "2023-08-02",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1690983900571329280,
+        "execution_timestamp_ns": 1690983900671329280,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.1,
+        "ask": 1.8,
+        "bid_size": 43,
+        "ask_size": 43,
+        "stock_reference": 130.455,
+        "stock_bar_timestamp_ms": 1690983840000,
+        "stock_reference_age_seconds": 0.57132928
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-07-11",
+      "2023-08-09"
+    ],
+    [
+      "2023-07-03",
+      "2023-08-02"
+    ]
+  ]
+}

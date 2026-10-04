@@ -1,0 +1,18 @@
+{
+  "symbol": "O:IR230915C00060000",
+  "day": "2023-04-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1681998321329451008,
+  "execution_timestamp_ns": 1681998321429451008,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.75,
+  "ask": 3.2,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 55.165,
+  "stock_bar_timestamp_ms": 1681998240000,
+  "stock_reference_age_seconds": 21.329451008
+}

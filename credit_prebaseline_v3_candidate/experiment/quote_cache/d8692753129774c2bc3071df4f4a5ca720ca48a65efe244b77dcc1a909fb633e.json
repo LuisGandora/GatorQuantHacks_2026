@@ -1,0 +1,18 @@
+{
+  "symbol": "O:UCTT221216C00035000",
+  "day": "2022-09-06",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1662471929355830528,
+  "execution_timestamp_ns": 1662471929455830528,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.05,
+  "ask": 1.85,
+  "bid_size": 10,
+  "ask_size": 10,
+  "stock_reference": 28.235,
+  "stock_bar_timestamp_ms": 1662471840000,
+  "stock_reference_age_seconds": 29.355830528
+}

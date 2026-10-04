@@ -1,0 +1,8 @@
+{
+  "files": {
+    "credit_renewal_test.py": "e73f9090c8d24d72c172a731fbef8e4dc44a7eb3e895dd70d479cb9f53f50e9f",
+    "test_credit_renewal_test.py": "ff65123f8941617c269506c3363811515fa21c5d0e2594de684726b25ee6efdd"
+  },
+  "empirical_effects_read": false,
+  "movement_metrics": "Both raw stock-price moves and cash-dividend-inclusive stock returns; do not conflate these."
+}

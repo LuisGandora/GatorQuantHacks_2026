@@ -1,0 +1,18 @@
+{
+  "symbol": "O:RH251121C00230000",
+  "day": "2025-07-31",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1753969518527185293,
+  "execution_timestamp_ns": 1753969518627185293,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 21,
+  "ask": 22.6,
+  "bid_size": 15,
+  "ask_size": 18,
+  "stock_reference": 205.665,
+  "stock_bar_timestamp_ms": 1753969440000,
+  "stock_reference_age_seconds": 18.527185293
+}

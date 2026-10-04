@@ -1,0 +1,112 @@
+{
+  "ticker": "ELME",
+  "event_entry": "2024-07-12",
+  "status": "matched",
+  "issuer": "0000104894",
+  "source_ticker": "ELME",
+  "event": {
+    "day": "2024-07-12",
+    "exit_date": "2024-08-12",
+    "expiry": "2024-10-18",
+    "symbol": "O:ELME241018C00017500",
+    "strike": 17.5,
+    "spot": 16.0,
+    "rv20": 0.21220817010082835,
+    "dte_sessions": 69,
+    "entry_quote": {
+      "symbol": "O:ELME241018C00017500",
+      "day": "2024-07-12",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1720791917490728704,
+      "execution_timestamp_ns": 1720791917590728704,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.15,
+      "ask": 0.5,
+      "bid_size": 46,
+      "ask_size": 7,
+      "stock_reference": 16.0,
+      "stock_bar_timestamp_ms": 1720791840000,
+      "stock_reference_age_seconds": 17.490728704
+    },
+    "exit_quote": {
+      "symbol": "O:ELME241018C00017500",
+      "day": "2024-08-12",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1723470308493673728,
+      "execution_timestamp_ns": 1723470308593673728,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.25,
+      "ask": 0.55,
+      "bid_size": 71,
+      "ask_size": 7,
+      "stock_reference": 16.93,
+      "stock_bar_timestamp_ms": 1723470240000,
+      "stock_reference_age_seconds": 8.493673728
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-07-05",
+      "exit_date": "2024-08-05",
+      "expiry": "2024-10-18",
+      "symbol": "O:ELME241018C00017500",
+      "strike": 17.5,
+      "spot": 15.41,
+      "rv20": 0.218298153166584,
+      "dte_sessions": 74,
+      "entry_quote": {
+        "symbol": "O:ELME241018C00017500",
+        "day": "2024-07-05",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1720187108933739264,
+        "execution_timestamp_ns": 1720187109033739264,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.1,
+        "ask": 0.35,
+        "bid_size": 65,
+        "ask_size": 5,
+        "stock_reference": 15.41,
+        "stock_bar_timestamp_ms": 1720187040000,
+        "stock_reference_age_seconds": 8.933739264
+      },
+      "exit_quote": {
+        "symbol": "O:ELME241018C00017500",
+        "day": "2024-08-05",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1722865507665787392,
+        "execution_timestamp_ns": 1722865507765787392,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.1,
+        "ask": 0.85,
+        "bid_size": 27,
+        "ask_size": 8,
+        "stock_reference": 16.45,
+        "stock_bar_timestamp_ms": 1722865440000,
+        "stock_reference_age_seconds": 7.665787392
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-07-12",
+      "2024-08-12"
+    ],
+    [
+      "2024-07-05",
+      "2024-08-05"
+    ]
+  ]
+}

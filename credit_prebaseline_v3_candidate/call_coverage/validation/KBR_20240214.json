@@ -1,0 +1,112 @@
+{
+  "ticker": "KBR",
+  "event_entry": "2024-02-14",
+  "status": "matched",
+  "issuer": "0001357615",
+  "source_ticker": "KBR",
+  "event": {
+    "day": "2024-02-14",
+    "exit_date": "2024-03-15",
+    "expiry": "2024-06-21",
+    "symbol": "O:KBR240621C00057500",
+    "strike": 57.5,
+    "spot": 53.825,
+    "rv20": 0.18033520816460294,
+    "dte_sessions": 88,
+    "entry_quote": {
+      "symbol": "O:KBR240621C00057500",
+      "day": "2024-02-14",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1707921909602133248,
+      "execution_timestamp_ns": 1707921909702133248,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.2,
+      "ask": 2.4,
+      "bid_size": 22,
+      "ask_size": 64,
+      "stock_reference": 53.825,
+      "stock_bar_timestamp_ms": 1707921840000,
+      "stock_reference_age_seconds": 9.602133248
+    },
+    "exit_quote": {
+      "symbol": "O:KBR240621C00057500",
+      "day": "2024-03-15",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 19,
+      "sip_timestamp": 1710510421401274112,
+      "execution_timestamp_ns": 1710510421501274112,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 5.3,
+      "ask": 5.6,
+      "bid_size": 187,
+      "ask_size": 312,
+      "stock_reference": 60.87,
+      "stock_bar_timestamp_ms": 1710510360000,
+      "stock_reference_age_seconds": 1.401274112
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-02-07",
+      "exit_date": "2024-03-08",
+      "expiry": "2024-06-21",
+      "symbol": "O:KBR240621C00057500",
+      "strike": 57.5,
+      "spot": 52.83,
+      "rv20": 0.1791604682875005,
+      "dte_sessions": 93,
+      "entry_quote": {
+        "symbol": "O:KBR240621C00057500",
+        "day": "2024-02-07",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 5,
+        "sip_timestamp": 1707317524168230400,
+        "execution_timestamp_ns": 1707317524268230400,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.8,
+        "ask": 1.95,
+        "bid_size": 23,
+        "ask_size": 21,
+        "stock_reference": 52.83,
+        "stock_bar_timestamp_ms": 1707317460000,
+        "stock_reference_age_seconds": 4.1682304
+      },
+      "exit_quote": {
+        "symbol": "O:KBR240621C00057500",
+        "day": "2024-03-08",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1709909154697794816,
+        "execution_timestamp_ns": 1709909154797794816,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 6.8,
+        "ask": 7.1,
+        "bid_size": 10,
+        "ask_size": 21,
+        "stock_reference": 62.58,
+        "stock_bar_timestamp_ms": 1709909040000,
+        "stock_reference_age_seconds": 54.697794816
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-02-14",
+      "2024-03-15"
+    ],
+    [
+      "2024-02-07",
+      "2024-03-08"
+    ]
+  ]
+}

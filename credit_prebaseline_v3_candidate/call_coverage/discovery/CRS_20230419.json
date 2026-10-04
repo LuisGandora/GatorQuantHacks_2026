@@ -1,0 +1,60 @@
+{
+  "ticker": "CRS",
+  "event_entry": "2023-04-19",
+  "status": "no_usable_control",
+  "issuer": "0000017843",
+  "source_ticker": "CRS",
+  "event": {
+    "day": "2023-04-19",
+    "exit_date": "2023-05-18",
+    "expiry": "2023-09-15",
+    "symbol": "O:CRS230915C00055000",
+    "strike": 55.0,
+    "spot": 47.065,
+    "rv20": 0.3342191189655054,
+    "dte_sessions": 103,
+    "entry_quote": {
+      "symbol": "O:CRS230915C00055000",
+      "day": "2023-04-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1681911907565943296,
+      "execution_timestamp_ns": 1681911907665943296,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.25,
+      "ask": 2.75,
+      "bid_size": 11,
+      "ask_size": 31,
+      "stock_reference": 47.065,
+      "stock_bar_timestamp_ms": 1681911840000,
+      "stock_reference_age_seconds": 7.565943296
+    },
+    "exit_quote": {
+      "symbol": "O:CRS230915C00055000",
+      "day": "2023-05-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1684417590088386304,
+      "execution_timestamp_ns": 1684417590188386304,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.05,
+      "ask": 2.35,
+      "bid_size": 7,
+      "ask_size": 11,
+      "stock_reference": 47.49,
+      "stock_bar_timestamp_ms": 1684417500000,
+      "stock_reference_age_seconds": 30.088386304
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-04-12",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

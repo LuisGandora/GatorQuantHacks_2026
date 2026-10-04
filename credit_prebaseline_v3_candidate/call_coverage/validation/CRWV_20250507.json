@@ -1,0 +1,60 @@
+{
+  "ticker": "CRWV",
+  "event_entry": "2025-05-07",
+  "status": "no_usable_control",
+  "issuer": "0001769628",
+  "source_ticker": "CRWV",
+  "event": {
+    "day": "2025-05-07",
+    "exit_date": "2025-06-06",
+    "expiry": "2025-08-15",
+    "symbol": "O:CRWV250815C00057500",
+    "strike": 57.5,
+    "spot": 52.69,
+    "rv20": 1.2352851162654979,
+    "dte_sessions": 69,
+    "entry_quote": {
+      "symbol": "O:CRWV250815C00057500",
+      "day": "2025-05-07",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1746625506531391718,
+      "execution_timestamp_ns": 1746625506631391718,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.2,
+      "ask": 8.8,
+      "bid_size": 30,
+      "ask_size": 13,
+      "stock_reference": 52.69,
+      "stock_bar_timestamp_ms": 1746625440000,
+      "stock_reference_age_seconds": 6.531391718
+    },
+    "exit_quote": {
+      "symbol": "O:CRWV250815C00057500",
+      "day": "2025-06-06",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1749217539083614164,
+      "execution_timestamp_ns": 1749217539183614164,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 88.1,
+      "ask": 91.35,
+      "bid_size": 53,
+      "ask_size": 65,
+      "stock_reference": 147.065,
+      "stock_bar_timestamp_ms": 1749217440000,
+      "stock_reference_age_seconds": 39.083614164
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2025-04-30",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

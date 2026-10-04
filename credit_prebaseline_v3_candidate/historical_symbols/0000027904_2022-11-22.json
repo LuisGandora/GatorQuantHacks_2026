@@ -1,0 +1,12 @@
+{
+  "cik": "0000027904",
+  "date": "2022-11-22",
+  "selected": "DAL",
+  "eligible": [
+    {
+      "ticker": "DAL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

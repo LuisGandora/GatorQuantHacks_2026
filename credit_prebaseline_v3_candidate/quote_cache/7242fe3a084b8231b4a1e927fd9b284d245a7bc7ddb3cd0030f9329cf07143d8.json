@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CPE230120C00045000",
+  "day": "2022-11-16",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1668609911769761536,
+  "execution_timestamp_ns": 1668609911869761536,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.9,
+  "ask": 4.5,
+  "bid_size": 866,
+  "ask_size": 256,
+  "stock_reference": 43.62,
+  "stock_bar_timestamp_ms": 1668609840000,
+  "stock_reference_age_seconds": 11.769761536
+}

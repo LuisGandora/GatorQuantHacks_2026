@@ -1,0 +1,41 @@
+{
+  "id": "CR-prebaseline-covered-call-v3",
+  "hypothesis": "Covered calls entered after completed non-acquisition revolving-credit renewals add less net value over stock at21sessions than comparable calls entered five sessions before disclosure, because financing-news resolution reduces premium income without a sufficient reduction in upside surrendered.",
+  "universe": "HistoricalCS/ADRC outside starterTOP100issuers including alternate symbols, missingCIKexcluded; point-in-time identity required",
+  "windows": {
+    "discovery": [
+      "2022-03-07",
+      "2023-12-31"
+    ],
+    "validation": [
+      "2024-01-01",
+      "2025-12-31"
+    ]
+  },
+  "public_entry": "First joint executable call quote/stock-reference market between09:45inclusiveand10:15exclusive onthefirstsessionstrictlyafterfiling; same rule21sessionslater",
+  "arm": "Actual executed revolving-credit continuation in full available context; retain original acquisition/spinoff/default/covenant-waiver exclusions. Reject proposed/process/commitment-letter cases, mixed non-facility tags, nonrevolving-only loans, and explicitly dated extensions shorterthan180days. Routine/planned investor expectations are not asserted.",
+  "controls": "Fixed five-session pre-entry, sameissuer/year/quarter; no other accession from five sessions before baseline entry through the disclosure. Require same selected expiry, DTE\u00b17,RV20ratio.8..1.25, same starter strike method; no 30-day future-disclosure purge because the baseline intentionally includes the focal disclosure.",
+  "blocks": "Quarter-contained21-session event/control holds; oneeventperCIKperwindow chosen before quotes",
+  "rationale": "Separately test a before/after information-state contrast. This changes the estimand, not the statistical gates. Lower raw credits alone do not support the mechanism: maturity/moneyness-adjusted American call IV must be examined, and a generic time-decay explanation remains competing.",
+  "primary_horizon": 21,
+  "expiry": "starter3-6m",
+  "strike": "starter5%OTM call",
+  "minimum_events": 40,
+  "minimum_dependence_components": 5,
+  "pricing": "Firstjointmarket09:45-10:15,bid sale/ask close,65ccommissionpercontractside; sameknownstock-reference rule as registered governance execution design",
+  "history": "New pre-disclosure estimand registered after clean-ordinary comparator failed maturity coverage (8/5matches). Not a rescue of its original positive ordinary-day hypothesis. No return outcomes read.",
+  "decision": "Feasible only after40usablepairs/5components perwindow and textaudit. Negative corrected discovery and validation intervals plus mechanism evidence support this explicitly pre-baseline hypothesis; positive contradicts; otherwise inconclusive. No claim of generic ordinary-day underperformance.",
+  "sensitivity": "Every fixed horizon and expiry; 300-second quotes, costs, actual moneyness/RV, text uncertainty; inference separately recomputed for long overlapping horizons; 120-comparison family retained; generic time-decay/IV explanation, stock movement differences, baseline lead3and7sessions as prespecified sensitivity; pre-baseline is not investable without an independent advance-event calendar.",
+  "execution_rationale": "An implementable rule waits for a firm two-sided market, rather than assuming a stale last quote is executable at a clock instant. One fixed opening window, first qualifying market, not best price.",
+  "stock_reference": "Lastcompleted1minute stockbar strictlyknownatthequote, <=60secondssincebarend; no dailyclosefallback or futureminuteclose",
+  "uncertainty": "Unchanged>=40matchesand>=5components; 100000componentbootstrap plus finite-component t-intervals withG-1df, both Bonferroni120corrected before any supported claim",
+  "sampling_history": "Proposed after outcome-free coverage failures; earlier TOP100 debt-related performance was inspected, so economically related hypothesis is post-discovery. Exclude those issuers; retain120-family correction. No expanded renewal P&L read.",
+  "timing_sensitivity": "Openingwindowisprimary; priorcloseand09:45fixed designs retained as infeasiblecoverage. Never claim optimized execution profits.",
+  "current_stage": "Frozen corrected text/calendar design; count and execution coverage before effects.",
+  "tag": "credit_facility",
+  "selection": "Filter textual and calendar eligibility first, then one event perCIK/window byfixedCIK/accession/day hash before quotes; resolve historical common shares before any quote; no replacement after option failure.",
+  "corrections": "Outcome-free complete text census flagged CMTL asset-sale refinancing, LTH launched process, TEX commitment letter, WTI one-month bridge, and bundled securities/governance disclosures. Apply global rules, not profitable/unprofitable-row deletion. Capacity/term changes remain recorded rather than presumed unchanged. Full-context audit also identified term-loan-only extensions with revolver repayment. Reject this general text case; retain revolving renewals whose agreement evidence is split across related excerpts.",
+  "comparator": "Retrospectively selected five-session pre-disclosure baseline for the sameissuer; not a generic ordinary-day control or a trade rule capable of knowing the future filing date. It deliberately holds through the disclosure.",
+  "assignment": "No unadjusted supported claim from never-assigned marks. Before P&L freeze conservative possible-assignment bounds from daily stock high/strike and cash dividends through horizon; require support robust to the resulting bounds. Historical broker assignment is unobserved.",
+  "benchmark_authorization": "User explicitly allowed a labeled before/after baseline after broader universe/windows approval."
+}

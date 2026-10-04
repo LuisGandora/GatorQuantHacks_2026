@@ -1,0 +1,20 @@
+{
+  "cik": "0001321741",
+  "date": "2023-11-01",
+  "selected": "GAIN",
+  "eligible": [
+    {
+      "ticker": "GAIN",
+      "type": "CS"
+    },
+    {
+      "ticker": "GAINL",
+      "type": "CS"
+    },
+    {
+      "ticker": "GAINZ",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

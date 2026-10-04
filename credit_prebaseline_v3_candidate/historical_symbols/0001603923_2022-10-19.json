@@ -1,0 +1,12 @@
+{
+  "cik": "0001603923",
+  "date": "2022-10-19",
+  "selected": "WFRD",
+  "eligible": [
+    {
+      "ticker": "WFRD",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

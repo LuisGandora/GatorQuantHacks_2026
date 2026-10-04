@@ -1,0 +1,18 @@
+{
+  "symbol": "O:BOOM240621C00020000",
+  "day": "2024-02-06",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1707230757461933824,
+  "execution_timestamp_ns": 1707230757561933824,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.2,
+  "ask": 1.55,
+  "bid_size": 30,
+  "ask_size": 34,
+  "stock_reference": 16.97,
+  "stock_bar_timestamp_ms": 1707230640000,
+  "stock_reference_age_seconds": 57.461933824
+}

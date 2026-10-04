@@ -1,0 +1,112 @@
+{
+  "ticker": "CWH",
+  "event_entry": "2025-02-20",
+  "status": "matched",
+  "issuer": "0001669779",
+  "source_ticker": "CWH",
+  "event": {
+    "day": "2025-02-20",
+    "exit_date": "2025-03-21",
+    "expiry": "2025-06-20",
+    "symbol": "O:CWH250620C00023000",
+    "strike": 23.0,
+    "spot": 21.635,
+    "rv20": 0.37141220333539127,
+    "dte_sessions": 83,
+    "entry_quote": {
+      "symbol": "O:CWH250620C00023000",
+      "day": "2025-02-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1740062749253955840,
+      "execution_timestamp_ns": 1740062749353955840,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.85,
+      "ask": 2.7,
+      "bid_size": 5,
+      "ask_size": 174,
+      "stock_reference": 21.635,
+      "stock_bar_timestamp_ms": 1740062640000,
+      "stock_reference_age_seconds": 49.25395584
+    },
+    "exit_quote": {
+      "symbol": "O:CWH250620C00023000",
+      "day": "2025-03-21",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1742564701665093632,
+      "execution_timestamp_ns": 1742564701765093632,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.25,
+      "ask": 0.45,
+      "bid_size": 205,
+      "ask_size": 79,
+      "stock_reference": 16.76,
+      "stock_bar_timestamp_ms": 1742564640000,
+      "stock_reference_age_seconds": 1.665093632
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-02-12",
+      "exit_date": "2025-03-14",
+      "expiry": "2025-06-20",
+      "symbol": "O:CWH250620C00026000",
+      "strike": 26.0,
+      "spot": 23.635,
+      "rv20": 0.35965028283870193,
+      "dte_sessions": 88,
+      "entry_quote": {
+        "symbol": "O:CWH250620C00026000",
+        "day": "2025-02-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1739371695631055104,
+        "execution_timestamp_ns": 1739371695731055104,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.8,
+        "ask": 1.95,
+        "bid_size": 5,
+        "ask_size": 9,
+        "stock_reference": 23.635,
+        "stock_bar_timestamp_ms": 1739371620000,
+        "stock_reference_age_seconds": 15.631055104
+      },
+      "exit_quote": {
+        "symbol": "O:CWH250620C00026000",
+        "day": "2025-03-14",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1741960722238372864,
+        "execution_timestamp_ns": 1741960722338372864,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.05,
+        "ask": 0.2,
+        "bid_size": 658,
+        "ask_size": 36,
+        "stock_reference": 16.38,
+        "stock_bar_timestamp_ms": 1741960620000,
+        "stock_reference_age_seconds": 42.238372864
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-02-20",
+      "2025-03-21"
+    ],
+    [
+      "2025-02-12",
+      "2025-03-14"
+    ]
+  ]
+}

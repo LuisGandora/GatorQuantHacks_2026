@@ -1,0 +1,18 @@
+{
+  "symbol": "O:UCTT240920C00050000",
+  "day": "2024-04-01",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 94,
+  "sip_timestamp": 1711979266082505728,
+  "execution_timestamp_ns": 1711979266182505728,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4,
+  "ask": 5.4,
+  "bid_size": 21,
+  "ask_size": 1,
+  "stock_reference": 46.4,
+  "stock_bar_timestamp_ms": 1711979160000,
+  "stock_reference_age_seconds": 46.082505728
+}

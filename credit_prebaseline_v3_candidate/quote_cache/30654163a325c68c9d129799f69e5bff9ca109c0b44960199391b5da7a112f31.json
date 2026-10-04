@@ -1,0 +1,18 @@
+{
+  "symbol": "O:NGL230721C00005000",
+  "day": "2023-02-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 2,
+  "sip_timestamp": 1676645594700649472,
+  "execution_timestamp_ns": 1676645594800649472,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.05,
+  "ask": 0.2,
+  "bid_size": 259,
+  "ask_size": 356,
+  "stock_reference": 2.7,
+  "stock_bar_timestamp_ms": 1676645520000,
+  "stock_reference_age_seconds": 14.700649472
+}

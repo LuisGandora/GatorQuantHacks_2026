@@ -1,0 +1,60 @@
+{
+  "ticker": "LW",
+  "event_entry": "2024-05-09",
+  "status": "no_usable_control",
+  "issuer": "0001679273",
+  "source_ticker": "LW",
+  "event": {
+    "day": "2024-05-09",
+    "exit_date": "2024-06-10",
+    "expiry": "2024-10-18",
+    "symbol": "O:LW241018C00087500",
+    "strike": 87.5,
+    "spot": 82.79,
+    "rv20": 0.24819929338972102,
+    "dte_sessions": 112,
+    "entry_quote": {
+      "symbol": "O:LW241018C00087500",
+      "day": "2024-05-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1715262304373881856,
+      "execution_timestamp_ns": 1715262304473881856,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.9,
+      "ask": 6.4,
+      "bid_size": 2,
+      "ask_size": 1,
+      "stock_reference": 82.79,
+      "stock_bar_timestamp_ms": 1715262240000,
+      "stock_reference_age_seconds": 4.373881856
+    },
+    "exit_quote": {
+      "symbol": "O:LW241018C00087500",
+      "day": "2024-06-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1718027109201667840,
+      "execution_timestamp_ns": 1718027109301667840,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 6.3,
+      "ask": 6.9,
+      "bid_size": 65,
+      "ask_size": 129,
+      "stock_reference": 86.1222,
+      "stock_bar_timestamp_ms": 1718027040000,
+      "stock_reference_age_seconds": 9.20166784
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-05-02",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CARR240920C00070000",
+  "day": "2024-05-15",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1715780707612050432,
+  "execution_timestamp_ns": 1715780707712050432,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.45,
+  "ask": 2.6,
+  "bid_size": 165,
+  "ask_size": 143,
+  "stock_reference": 65.835,
+  "stock_bar_timestamp_ms": 1715780640000,
+  "stock_reference_age_seconds": 7.612050432
+}

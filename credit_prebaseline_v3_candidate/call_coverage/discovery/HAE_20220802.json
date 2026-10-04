@@ -1,0 +1,112 @@
+{
+  "ticker": "HAE",
+  "event_entry": "2022-08-02",
+  "status": "matched",
+  "issuer": "0000313143",
+  "source_ticker": "HAE",
+  "event": {
+    "day": "2022-08-02",
+    "exit_date": "2022-08-31",
+    "expiry": "2022-12-16",
+    "symbol": "O:HAE221216C00075000",
+    "strike": 75.0,
+    "spot": 69.0,
+    "rv20": 0.20932801686819286,
+    "dte_sessions": 96,
+    "entry_quote": {
+      "symbol": "O:HAE221216C00075000",
+      "day": "2022-08-02",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1659447959110128128,
+      "execution_timestamp_ns": 1659447959210128128,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.4,
+      "ask": 6.7,
+      "bid_size": 10,
+      "ask_size": 10,
+      "stock_reference": 69.0,
+      "stock_bar_timestamp_ms": 1659447840000,
+      "stock_reference_age_seconds": 59.110128128
+    },
+    "exit_quote": {
+      "symbol": "O:HAE221216C00075000",
+      "day": "2022-08-31",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1661953500520224256,
+      "execution_timestamp_ns": 1661953500620224256,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 6.8,
+      "ask": 8,
+      "bid_size": 12,
+      "ask_size": 34,
+      "stock_reference": 74.25,
+      "stock_bar_timestamp_ms": 1661953440000,
+      "stock_reference_age_seconds": 0.520224256
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-07-26",
+      "exit_date": "2022-08-24",
+      "expiry": "2022-12-16",
+      "symbol": "O:HAE221216C00075000",
+      "strike": 75.0,
+      "spot": 67.02,
+      "rv20": 0.2595731576524759,
+      "dte_sessions": 101,
+      "entry_quote": {
+        "symbol": "O:HAE221216C00075000",
+        "day": "2022-07-26",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1658843176941386752,
+        "execution_timestamp_ns": 1658843177041386752,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 4,
+        "ask": 6.8,
+        "bid_size": 45,
+        "ask_size": 20,
+        "stock_reference": 67.02,
+        "stock_bar_timestamp_ms": 1658843100000,
+        "stock_reference_age_seconds": 16.941386752
+      },
+      "exit_quote": {
+        "symbol": "O:HAE221216C00075000",
+        "day": "2022-08-24",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 13,
+        "sip_timestamp": 1661349314611787520,
+        "execution_timestamp_ns": 1661349314711787520,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 8,
+        "ask": 9,
+        "bid_size": 2,
+        "ask_size": 1,
+        "stock_reference": 76.46,
+        "stock_bar_timestamp_ms": 1661349240000,
+        "stock_reference_age_seconds": 14.61178752
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-08-02",
+      "2022-08-31"
+    ],
+    [
+      "2022-07-26",
+      "2022-08-24"
+    ]
+  ]
+}

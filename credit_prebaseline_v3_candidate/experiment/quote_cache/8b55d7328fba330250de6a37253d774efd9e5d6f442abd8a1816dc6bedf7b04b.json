@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AVY230721C00210000",
+  "day": "2023-01-25",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1674658011084267264,
+  "execution_timestamp_ns": 1674658011184267264,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.4,
+  "ask": 7.8,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 186.91,
+  "stock_bar_timestamp_ms": 1674657900000,
+  "stock_reference_age_seconds": 51.084267264
+}

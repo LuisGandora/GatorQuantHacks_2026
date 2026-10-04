@@ -1,0 +1,112 @@
+{
+  "ticker": "DNB",
+  "event_entry": "2024-01-31",
+  "status": "matched",
+  "issuer": "0001799208",
+  "source_ticker": "DNB",
+  "event": {
+    "day": "2024-01-31",
+    "exit_date": "2024-03-01",
+    "expiry": "2024-07-19",
+    "symbol": "O:DNB240719C00012500",
+    "strike": 12.5,
+    "spot": 11.89,
+    "rv20": 0.21583568269700992,
+    "dte_sessions": 117,
+    "entry_quote": {
+      "symbol": "O:DNB240719C00012500",
+      "day": "2024-01-31",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1706712305211369728,
+      "execution_timestamp_ns": 1706712305311369728,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.8,
+      "ask": 1.4,
+      "bid_size": 20,
+      "ask_size": 179,
+      "stock_reference": 11.89,
+      "stock_bar_timestamp_ms": 1706712240000,
+      "stock_reference_age_seconds": 5.211369728
+    },
+    "exit_quote": {
+      "symbol": "O:DNB240719C00012500",
+      "day": "2024-03-01",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1709304322387034880,
+      "execution_timestamp_ns": 1709304322487034880,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 2.1,
+      "bid_size": 2,
+      "ask_size": 63,
+      "stock_reference": 10.455,
+      "stock_bar_timestamp_ms": 1709304240000,
+      "stock_reference_age_seconds": 22.38703488
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-01-24",
+      "exit_date": "2024-02-23",
+      "expiry": "2024-07-19",
+      "symbol": "O:DNB240719C00015000",
+      "strike": 15.0,
+      "spot": 11.94,
+      "rv20": 0.20645734720091755,
+      "dte_sessions": 122,
+      "entry_quote": {
+        "symbol": "O:DNB240719C00015000",
+        "day": "2024-01-24",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1706107502346019840,
+        "execution_timestamp_ns": 1706107502446019840,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.1,
+        "ask": 0.4,
+        "bid_size": 200,
+        "ask_size": 3,
+        "stock_reference": 11.94,
+        "stock_bar_timestamp_ms": 1706107440000,
+        "stock_reference_age_seconds": 2.34601984
+      },
+      "exit_quote": {
+        "symbol": "O:DNB240719C00015000",
+        "day": "2024-02-23",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1708700049323900672,
+        "execution_timestamp_ns": 1708700049423900672,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.05,
+        "ask": 0.25,
+        "bid_size": 109,
+        "ask_size": 125,
+        "stock_reference": 10.685,
+        "stock_bar_timestamp_ms": 1708699980000,
+        "stock_reference_age_seconds": 9.323900672
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-01-31",
+      "2024-03-01"
+    ],
+    [
+      "2024-01-24",
+      "2024-02-23"
+    ]
+  ]
+}

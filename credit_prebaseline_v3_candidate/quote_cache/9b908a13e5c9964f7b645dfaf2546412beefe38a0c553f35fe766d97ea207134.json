@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SHCR230519C00003000",
+  "day": "2023-02-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 2,
+  "sip_timestamp": 1676645376629574400,
+  "execution_timestamp_ns": 1676645376729574400,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.2,
+  "ask": 0.3,
+  "bid_size": 15,
+  "ask_size": 59,
+  "stock_reference": 2.505,
+  "stock_bar_timestamp_ms": 1676645280000,
+  "stock_reference_age_seconds": 36.6295744
+}

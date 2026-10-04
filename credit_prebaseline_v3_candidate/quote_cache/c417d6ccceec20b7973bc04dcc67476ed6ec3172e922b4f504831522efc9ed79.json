@@ -1,0 +1,18 @@
+{
+  "symbol": "O:FG240719C00050000",
+  "day": "2024-02-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 18,
+  "sip_timestamp": 1708441139320709376,
+  "execution_timestamp_ns": 1708441139420709376,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.9,
+  "ask": 4,
+  "bid_size": 8,
+  "ask_size": 1,
+  "stock_reference": 45.075,
+  "stock_bar_timestamp_ms": 1708441020000,
+  "stock_reference_age_seconds": 59.320709376
+}

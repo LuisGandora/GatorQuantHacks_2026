@@ -1,0 +1,18 @@
+{
+  "symbol": "O:IMAX251219C00030000",
+  "day": "2025-10-14",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1760449707747705762,
+  "execution_timestamp_ns": 1760449707847705762,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.3,
+  "ask": 3.6,
+  "bid_size": 461,
+  "ask_size": 1,
+  "stock_reference": 31.32,
+  "stock_bar_timestamp_ms": 1760449620000,
+  "stock_reference_age_seconds": 27.747705762
+}

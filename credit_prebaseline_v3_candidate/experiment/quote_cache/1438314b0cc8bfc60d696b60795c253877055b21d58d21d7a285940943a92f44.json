@@ -1,0 +1,18 @@
+{
+  "symbol": "O:NOG260320C00022000",
+  "day": "2025-12-08",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1765205719322386836,
+  "execution_timestamp_ns": 1765205719422386836,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.4,
+  "ask": 4.6,
+  "bid_size": 476,
+  "ask_size": 352,
+  "stock_reference": 24.81,
+  "stock_bar_timestamp_ms": 1765205640000,
+  "stock_reference_age_seconds": 19.322386836
+}

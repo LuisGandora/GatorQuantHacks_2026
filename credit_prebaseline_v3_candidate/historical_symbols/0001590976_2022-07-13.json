@@ -1,0 +1,12 @@
+{
+  "cik": "0001590976",
+  "date": "2022-07-13",
+  "selected": "MBUU",
+  "eligible": [
+    {
+      "ticker": "MBUU",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

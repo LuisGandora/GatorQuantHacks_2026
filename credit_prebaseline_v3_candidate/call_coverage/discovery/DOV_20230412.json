@@ -1,0 +1,112 @@
+{
+  "ticker": "DOV",
+  "event_entry": "2023-04-12",
+  "status": "matched",
+  "issuer": "0000029905",
+  "source_ticker": "DOV",
+  "event": {
+    "day": "2023-04-12",
+    "exit_date": "2023-05-11",
+    "expiry": "2023-09-15",
+    "symbol": "O:DOV230915C00155000",
+    "strike": 155.0,
+    "spot": 147.6,
+    "rv20": 0.31055001355018963,
+    "dte_sessions": 108,
+    "entry_quote": {
+      "symbol": "O:DOV230915C00155000",
+      "day": "2023-04-12",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1681307108924634880,
+      "execution_timestamp_ns": 1681307109024634880,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 6.8,
+      "ask": 7.9,
+      "bid_size": 32,
+      "ask_size": 55,
+      "stock_reference": 147.6,
+      "stock_bar_timestamp_ms": 1681307040000,
+      "stock_reference_age_seconds": 8.92463488
+    },
+    "exit_quote": {
+      "symbol": "O:DOV230915C00155000",
+      "day": "2023-05-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 11,
+      "sip_timestamp": 1683812774820568064,
+      "execution_timestamp_ns": 1683812774920568064,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.8,
+      "ask": 3.3,
+      "bid_size": 30,
+      "ask_size": 43,
+      "stock_reference": 140.4627,
+      "stock_bar_timestamp_ms": 1683812700000,
+      "stock_reference_age_seconds": 14.820568064
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-04-04",
+      "exit_date": "2023-05-04",
+      "expiry": "2023-09-15",
+      "symbol": "O:DOV230915C00160000",
+      "strike": 160.0,
+      "spot": 149.6,
+      "rv20": 0.2905976568024957,
+      "dte_sessions": 113,
+      "entry_quote": {
+        "symbol": "O:DOV230915C00160000",
+        "day": "2023-04-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1680615998733509120,
+        "execution_timestamp_ns": 1680615998833509120,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 5.2,
+        "ask": 7.5,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 149.6,
+        "stock_bar_timestamp_ms": 1680615900000,
+        "stock_reference_age_seconds": 38.73350912
+      },
+      "exit_quote": {
+        "symbol": "O:DOV230915C00160000",
+        "day": "2023-05-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1683207953461412608,
+        "execution_timestamp_ns": 1683207953561412608,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.25,
+        "ask": 3.2,
+        "bid_size": 54,
+        "ask_size": 32,
+        "stock_reference": 142.61,
+        "stock_bar_timestamp_ms": 1683207840000,
+        "stock_reference_age_seconds": 53.461412608
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-04-12",
+      "2023-05-11"
+    ],
+    [
+      "2023-04-04",
+      "2023-05-04"
+    ]
+  ]
+}

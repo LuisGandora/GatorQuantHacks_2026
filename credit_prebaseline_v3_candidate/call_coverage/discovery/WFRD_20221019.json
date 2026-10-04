@@ -1,0 +1,112 @@
+{
+  "ticker": "WFRD",
+  "event_entry": "2022-10-19",
+  "status": "matched",
+  "issuer": "0001603923",
+  "source_ticker": "WFRD",
+  "event": {
+    "day": "2022-10-19",
+    "exit_date": "2022-11-17",
+    "expiry": "2023-01-20",
+    "symbol": "O:WFRD230120C00035000",
+    "strike": 35.0,
+    "spot": 34.225,
+    "rv20": 0.5177705135468823,
+    "dte_sessions": 63,
+    "entry_quote": {
+      "symbol": "O:WFRD230120C00035000",
+      "day": "2022-10-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1666187128446832384,
+      "execution_timestamp_ns": 1666187128546832384,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.6,
+      "ask": 5,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 34.225,
+      "stock_bar_timestamp_ms": 1666187040000,
+      "stock_reference_age_seconds": 28.446832384
+    },
+    "exit_quote": {
+      "symbol": "O:WFRD230120C00035000",
+      "day": "2022-11-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1668696452825746688,
+      "execution_timestamp_ns": 1668696452925746688,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.3,
+      "ask": 9.7,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 42.61,
+      "stock_bar_timestamp_ms": 1668696360000,
+      "stock_reference_age_seconds": 32.825746688
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-10-12",
+      "exit_date": "2022-11-10",
+      "expiry": "2023-01-20",
+      "symbol": "O:WFRD230120C00040000",
+      "strike": 40.0,
+      "spot": 32.57,
+      "rv20": 0.5441339523069936,
+      "dte_sessions": 68,
+      "entry_quote": {
+        "symbol": "O:WFRD230120C00040000",
+        "day": "2022-10-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1665582317328293376,
+        "execution_timestamp_ns": 1665582317428293376,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.7,
+        "ask": 2.8,
+        "bid_size": 241,
+        "ask_size": 35,
+        "stock_reference": 32.57,
+        "stock_bar_timestamp_ms": 1665582240000,
+        "stock_reference_age_seconds": 17.328293376
+      },
+      "exit_quote": {
+        "symbol": "O:WFRD230120C00040000",
+        "day": "2022-11-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1668091538427417600,
+        "execution_timestamp_ns": 1668091538527417600,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.7,
+        "ask": 7,
+        "bid_size": 211,
+        "ask_size": 198,
+        "stock_reference": 41.58,
+        "stock_bar_timestamp_ms": 1668091440000,
+        "stock_reference_age_seconds": 38.4274176
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-10-19",
+      "2022-11-17"
+    ],
+    [
+      "2022-10-12",
+      "2022-11-10"
+    ]
+  ]
+}

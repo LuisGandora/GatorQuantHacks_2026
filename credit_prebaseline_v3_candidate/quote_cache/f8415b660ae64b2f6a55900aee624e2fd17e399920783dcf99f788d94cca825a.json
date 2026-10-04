@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AVT250516C00060000",
+  "day": "2025-01-23",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 3,
+  "sip_timestamp": 1737643795314035200,
+  "execution_timestamp_ns": 1737643795414035200,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.8,
+  "ask": 2.7,
+  "bid_size": 51,
+  "ask_size": 52,
+  "stock_reference": 54.01,
+  "stock_bar_timestamp_ms": 1737643680000,
+  "stock_reference_age_seconds": 55.3140352
+}

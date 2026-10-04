@@ -1,0 +1,112 @@
+{
+  "ticker": "TPH",
+  "event_entry": "2025-05-02",
+  "status": "matched",
+  "issuer": "0001561680",
+  "source_ticker": "TPH",
+  "event": {
+    "day": "2025-05-02",
+    "exit_date": "2025-06-03",
+    "expiry": "2025-10-17",
+    "symbol": "O:TPH251017C00035000",
+    "strike": 35.0,
+    "spot": 31.48,
+    "rv20": 0.4599199819912411,
+    "dte_sessions": 116,
+    "entry_quote": {
+      "symbol": "O:TPH251017C00035000",
+      "day": "2025-05-02",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1746193543273865667,
+      "execution_timestamp_ns": 1746193543373865667,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.8,
+      "ask": 2.35,
+      "bid_size": 35,
+      "ask_size": 33,
+      "stock_reference": 31.48,
+      "stock_bar_timestamp_ms": 1746193440000,
+      "stock_reference_age_seconds": 43.273865667
+    },
+    "exit_quote": {
+      "symbol": "O:TPH251017C00035000",
+      "day": "2025-06-03",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 2,
+      "sip_timestamp": 1748958600939472437,
+      "execution_timestamp_ns": 1748958601039472437,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.7,
+      "ask": 1.3,
+      "bid_size": 83,
+      "ask_size": 17,
+      "stock_reference": 29.52,
+      "stock_bar_timestamp_ms": 1748958540000,
+      "stock_reference_age_seconds": 0.939472437
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-04-25",
+      "exit_date": "2025-05-27",
+      "expiry": "2025-10-17",
+      "symbol": "O:TPH251017C00035000",
+      "strike": 35.0,
+      "spot": 30.25,
+      "rv20": 0.4580307776099519,
+      "dte_sessions": 121,
+      "entry_quote": {
+        "symbol": "O:TPH251017C00035000",
+        "day": "2025-04-25",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 3,
+        "sip_timestamp": 1745588824098293606,
+        "execution_timestamp_ns": 1745588824198293606,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.6,
+        "ask": 2,
+        "bid_size": 54,
+        "ask_size": 24,
+        "stock_reference": 30.25,
+        "stock_bar_timestamp_ms": 1745588760000,
+        "stock_reference_age_seconds": 4.098293606
+      },
+      "exit_quote": {
+        "symbol": "O:TPH251017C00035000",
+        "day": "2025-05-27",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1748354441471356414,
+        "execution_timestamp_ns": 1748354441571356414,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1,
+        "ask": 1.5,
+        "bid_size": 21,
+        "ask_size": 17,
+        "stock_reference": 30.07,
+        "stock_bar_timestamp_ms": 1748354340000,
+        "stock_reference_age_seconds": 41.471356414
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-05-02",
+      "2025-06-03"
+    ],
+    [
+      "2025-04-25",
+      "2025-05-27"
+    ]
+  ]
+}

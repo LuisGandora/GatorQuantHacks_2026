@@ -1,0 +1,18 @@
+{
+  "symbol": "O:FNF240621C00060000",
+  "day": "2024-02-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1708440300541988864,
+  "execution_timestamp_ns": 1708440300641988864,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.5,
+  "ask": 0.6,
+  "bid_size": 48,
+  "ask_size": 50,
+  "stock_reference": 51.96,
+  "stock_bar_timestamp_ms": 1708440240000,
+  "stock_reference_age_seconds": 0.541988864
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001090425",
+  "date": "2023-08-03",
+  "selected": "LAMR",
+  "eligible": [
+    {
+      "ticker": "LAMR",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

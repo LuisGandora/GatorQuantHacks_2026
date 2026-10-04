@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CXM230519C00010000",
+  "day": "2023-01-25",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1674657948522208768,
+  "execution_timestamp_ns": 1674657948622208768,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.55,
+  "ask": 0.9,
+  "bid_size": 147,
+  "ask_size": 121,
+  "stock_reference": 9.09,
+  "stock_bar_timestamp_ms": 1674657840000,
+  "stock_reference_age_seconds": 48.522208768
+}

@@ -1,0 +1,18 @@
+{
+  "symbol": "O:OEC240119C00022500",
+  "day": "2023-12-01",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 8,
+  "sip_timestamp": 1701442790072632576,
+  "execution_timestamp_ns": 1701442790172632576,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.05,
+  "ask": 4.1,
+  "bid_size": 1210,
+  "ask_size": 373,
+  "stock_reference": 23.815,
+  "stock_bar_timestamp_ms": 1701442680000,
+  "stock_reference_age_seconds": 50.072632576
+}

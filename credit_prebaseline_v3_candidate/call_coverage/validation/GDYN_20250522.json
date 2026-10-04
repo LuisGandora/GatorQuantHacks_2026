@@ -1,0 +1,112 @@
+{
+  "ticker": "GDYN",
+  "event_entry": "2025-05-22",
+  "status": "matched",
+  "issuer": "0001743725",
+  "source_ticker": "GDYN",
+  "event": {
+    "day": "2025-05-22",
+    "exit_date": "2025-06-24",
+    "expiry": "2025-09-19",
+    "symbol": "O:GDYN250919C00015000",
+    "strike": 15.0,
+    "spot": 13.3,
+    "rv20": 0.5144660905954206,
+    "dte_sessions": 82,
+    "entry_quote": {
+      "symbol": "O:GDYN250919C00015000",
+      "day": "2025-05-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 77,
+      "sip_timestamp": 1747921561831994102,
+      "execution_timestamp_ns": 1747921561931994102,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.55,
+      "ask": 1.2,
+      "bid_size": 128,
+      "ask_size": 47,
+      "stock_reference": 13.3,
+      "stock_bar_timestamp_ms": 1747921500000,
+      "stock_reference_age_seconds": 1.831994102
+    },
+    "exit_quote": {
+      "symbol": "O:GDYN250919C00015000",
+      "day": "2025-06-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 3,
+      "sip_timestamp": 1750773784034323001,
+      "execution_timestamp_ns": 1750773784134323001,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.2,
+      "ask": 0.3,
+      "bid_size": 6,
+      "ask_size": 11,
+      "stock_reference": 11.59,
+      "stock_bar_timestamp_ms": 1750773720000,
+      "stock_reference_age_seconds": 4.034323001
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-05-15",
+      "exit_date": "2025-06-16",
+      "expiry": "2025-09-19",
+      "symbol": "O:GDYN250919C00015000",
+      "strike": 15.0,
+      "spot": 14.16,
+      "rv20": 0.5493199928979106,
+      "dte_sessions": 87,
+      "entry_quote": {
+        "symbol": "O:GDYN250919C00015000",
+        "day": "2025-05-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1747316704091297603,
+        "execution_timestamp_ns": 1747316704191297603,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.25,
+        "ask": 1.5,
+        "bid_size": 55,
+        "ask_size": 48,
+        "stock_reference": 14.16,
+        "stock_bar_timestamp_ms": 1747316640000,
+        "stock_reference_age_seconds": 4.091297603
+      },
+      "exit_quote": {
+        "symbol": "O:GDYN250919C00015000",
+        "day": "2025-06-16",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 77,
+        "sip_timestamp": 1750081686099890769,
+        "execution_timestamp_ns": 1750081686199890769,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.2,
+        "ask": 0.4,
+        "bid_size": 173,
+        "ask_size": 50,
+        "stock_reference": 11.585,
+        "stock_bar_timestamp_ms": 1750081620000,
+        "stock_reference_age_seconds": 6.099890769
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-05-22",
+      "2025-06-24"
+    ],
+    [
+      "2025-05-15",
+      "2025-06-16"
+    ]
+  ]
+}

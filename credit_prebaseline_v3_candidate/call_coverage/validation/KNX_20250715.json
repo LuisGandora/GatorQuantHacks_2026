@@ -1,0 +1,112 @@
+{
+  "ticker": "KNX",
+  "event_entry": "2025-07-15",
+  "status": "matched",
+  "issuer": "0001492691",
+  "source_ticker": "KNX",
+  "event": {
+    "day": "2025-07-15",
+    "exit_date": "2025-08-13",
+    "expiry": "2025-11-21",
+    "symbol": "O:KNX251121C00050000",
+    "strike": 50.0,
+    "spot": 46.44,
+    "rv20": 0.3061959436245,
+    "dte_sessions": 92,
+    "entry_quote": {
+      "symbol": "O:KNX251121C00050000",
+      "day": "2025-07-15",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1752587287988510654,
+      "execution_timestamp_ns": 1752587288088510654,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.5,
+      "ask": 2.95,
+      "bid_size": 15,
+      "ask_size": 6,
+      "stock_reference": 46.44,
+      "stock_bar_timestamp_ms": 1752587220000,
+      "stock_reference_age_seconds": 7.988510654
+    },
+    "exit_quote": {
+      "symbol": "O:KNX251121C00050000",
+      "day": "2025-08-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1755092712191120560,
+      "execution_timestamp_ns": 1755092712291120560,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 0.8,
+      "bid_size": 157,
+      "ask_size": 1,
+      "stock_reference": 42.595,
+      "stock_bar_timestamp_ms": 1755092640000,
+      "stock_reference_age_seconds": 12.19112056
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-07-08",
+      "exit_date": "2025-08-06",
+      "expiry": "2025-11-21",
+      "symbol": "O:KNX251121C00050000",
+      "strike": 50.0,
+      "spot": 46.5,
+      "rv20": 0.3243443045779642,
+      "dte_sessions": 97,
+      "entry_quote": {
+        "symbol": "O:KNX251121C00050000",
+        "day": "2025-07-08",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1751982340784460783,
+        "execution_timestamp_ns": 1751982340884460783,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.6,
+        "ask": 3.2,
+        "bid_size": 6,
+        "ask_size": 6,
+        "stock_reference": 46.5,
+        "stock_bar_timestamp_ms": 1751982240000,
+        "stock_reference_age_seconds": 40.784460783
+      },
+      "exit_quote": {
+        "symbol": "O:KNX251121C00050000",
+        "day": "2025-08-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1754487909591073855,
+        "execution_timestamp_ns": 1754487909691073855,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.5,
+        "ask": 0.9,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 42.255,
+        "stock_bar_timestamp_ms": 1754487840000,
+        "stock_reference_age_seconds": 9.591073855
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-07-15",
+      "2025-08-13"
+    ],
+    [
+      "2025-07-08",
+      "2025-08-06"
+    ]
+  ]
+}

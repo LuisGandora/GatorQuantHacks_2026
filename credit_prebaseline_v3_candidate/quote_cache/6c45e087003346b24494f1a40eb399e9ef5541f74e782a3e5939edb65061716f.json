@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DK230120C00029800",
+  "day": "2022-10-21",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1666359909889155072,
+  "execution_timestamp_ns": 1666359909989155072,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.85,
+  "ask": 3.3,
+  "bid_size": 193,
+  "ask_size": 196,
+  "stock_reference": 28.6595,
+  "stock_bar_timestamp_ms": 1666359840000,
+  "stock_reference_age_seconds": 9.889155072
+}

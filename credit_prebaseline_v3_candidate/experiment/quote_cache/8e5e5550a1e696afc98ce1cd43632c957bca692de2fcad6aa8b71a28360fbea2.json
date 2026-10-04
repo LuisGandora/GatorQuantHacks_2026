@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PAYX230616C00130000",
+  "day": "2023-02-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1675781103662312448,
+  "execution_timestamp_ns": 1675781103762312448,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.4,
+  "ask": 1.7,
+  "bid_size": 228,
+  "ask_size": 48,
+  "stock_reference": 116.203,
+  "stock_bar_timestamp_ms": 1675781040000,
+  "stock_reference_age_seconds": 3.662312448
+}

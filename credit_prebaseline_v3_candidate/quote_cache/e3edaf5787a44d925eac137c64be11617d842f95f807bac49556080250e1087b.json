@@ -1,0 +1,18 @@
+{
+  "symbol": "O:KTB250919C00070000",
+  "day": "2025-05-02",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1746193813385969651,
+  "execution_timestamp_ns": 1746193813485969651,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.8,
+  "ask": 3.9,
+  "bid_size": 23,
+  "ask_size": 12,
+  "stock_reference": 61.67,
+  "stock_bar_timestamp_ms": 1746193740000,
+  "stock_reference_age_seconds": 13.385969651
+}

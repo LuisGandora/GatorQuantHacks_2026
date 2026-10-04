@@ -1,0 +1,12 @@
+{
+  "cik": "0001048268",
+  "date": "2025-01-23",
+  "selected": "IESC",
+  "eligible": [
+    {
+      "ticker": "IESC",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

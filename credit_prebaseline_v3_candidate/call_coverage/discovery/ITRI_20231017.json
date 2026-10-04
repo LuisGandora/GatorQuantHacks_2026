@@ -1,0 +1,112 @@
+{
+  "ticker": "ITRI",
+  "event_entry": "2023-10-17",
+  "status": "matched",
+  "issuer": "0000780571",
+  "source_ticker": "ITRI",
+  "event": {
+    "day": "2023-10-17",
+    "exit_date": "2023-11-15",
+    "expiry": "2024-02-16",
+    "symbol": "O:ITRI240216C00065000",
+    "strike": 65.0,
+    "spot": 58.865,
+    "rv20": 0.2400425246846399,
+    "dte_sessions": 84,
+    "entry_quote": {
+      "symbol": "O:ITRI240216C00065000",
+      "day": "2023-10-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 13,
+      "sip_timestamp": 1697550480355144448,
+      "execution_timestamp_ns": 1697550480455144448,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.4,
+      "ask": 3.9,
+      "bid_size": 33,
+      "ask_size": 45,
+      "stock_reference": 58.865,
+      "stock_bar_timestamp_ms": 1697550420000,
+      "stock_reference_age_seconds": 0.355144448
+    },
+    "exit_quote": {
+      "symbol": "O:ITRI240216C00065000",
+      "day": "2023-11-15",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1044,
+      "sip_timestamp": 1700059800751816960,
+      "execution_timestamp_ns": 1700059800851816960,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.7,
+      "ask": 6.4,
+      "bid_size": 43,
+      "ask_size": 69,
+      "stock_reference": 66.2399,
+      "stock_bar_timestamp_ms": 1700059740000,
+      "stock_reference_age_seconds": 0.75181696
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-10-10",
+      "exit_date": "2023-11-08",
+      "expiry": "2024-02-16",
+      "symbol": "O:ITRI240216C00065000",
+      "strike": 65.0,
+      "spot": 59.12,
+      "rv20": 0.22097203889724207,
+      "dte_sessions": 89,
+      "entry_quote": {
+        "symbol": "O:ITRI240216C00065000",
+        "day": "2023-10-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 36,
+        "sip_timestamp": 1696945882587192064,
+        "execution_timestamp_ns": 1696945882687192064,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3,
+        "ask": 4.4,
+        "bid_size": 5,
+        "ask_size": 71,
+        "stock_reference": 59.12,
+        "stock_bar_timestamp_ms": 1696945800000,
+        "stock_reference_age_seconds": 22.587192064
+      },
+      "exit_quote": {
+        "symbol": "O:ITRI240216C00065000",
+        "day": "2023-11-08",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 173,
+        "sip_timestamp": 1699454820068803328,
+        "execution_timestamp_ns": 1699454820168803328,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.85,
+        "ask": 5.7,
+        "bid_size": 84,
+        "ask_size": 89,
+        "stock_reference": 63.805,
+        "stock_bar_timestamp_ms": 1699454760000,
+        "stock_reference_age_seconds": 0.068803328
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-10-17",
+      "2023-11-15"
+    ],
+    [
+      "2023-10-10",
+      "2023-11-08"
+    ]
+  ]
+}

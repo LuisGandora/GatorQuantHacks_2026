@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DY240920C00160000",
+  "day": "2024-06-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 2,
+  "sip_timestamp": 1718891251598787840,
+  "execution_timestamp_ns": 1718891251698787840,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 18.5,
+  "ask": 22,
+  "bid_size": 14,
+  "ask_size": 16,
+  "stock_reference": 170.56,
+  "stock_bar_timestamp_ms": 1718891160000,
+  "stock_reference_age_seconds": 31.59878784
+}

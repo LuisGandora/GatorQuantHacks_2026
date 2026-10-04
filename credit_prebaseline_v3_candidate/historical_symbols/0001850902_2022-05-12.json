@@ -1,0 +1,12 @@
+{
+  "cik": "0001850902",
+  "date": "2022-05-12",
+  "selected": "TKNO",
+  "eligible": [
+    {
+      "ticker": "TKNO",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

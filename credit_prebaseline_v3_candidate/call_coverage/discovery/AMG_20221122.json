@@ -1,0 +1,112 @@
+{
+  "ticker": "AMG",
+  "event_entry": "2022-11-22",
+  "status": "matched",
+  "issuer": "0001004434",
+  "source_ticker": "AMG",
+  "event": {
+    "day": "2022-11-22",
+    "exit_date": "2022-12-22",
+    "expiry": "2023-03-17",
+    "symbol": "O:AMG230317C00165000",
+    "strike": 165.0,
+    "spot": 154.96,
+    "rv20": 0.5964564107441264,
+    "dte_sessions": 78,
+    "entry_quote": {
+      "symbol": "O:AMG230317C00165000",
+      "day": "2022-11-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 8,
+      "sip_timestamp": 1669128399354562560,
+      "execution_timestamp_ns": 1669128399454562560,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7,
+      "ask": 11.3,
+      "bid_size": 8,
+      "ask_size": 8,
+      "stock_reference": 154.96,
+      "stock_bar_timestamp_ms": 1669128300000,
+      "stock_reference_age_seconds": 39.35456256
+    },
+    "exit_quote": {
+      "symbol": "O:AMG230317C00165000",
+      "day": "2022-12-22",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 12,
+      "sip_timestamp": 1671720480956893952,
+      "execution_timestamp_ns": 1671720481056893952,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.7,
+      "ask": 8.3,
+      "bid_size": 19,
+      "ask_size": 36,
+      "stock_reference": 155.295,
+      "stock_bar_timestamp_ms": 1671720420000,
+      "stock_reference_age_seconds": 0.956893952
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-11-15",
+      "exit_date": "2022-12-15",
+      "expiry": "2023-03-17",
+      "symbol": "O:AMG230317C00165000",
+      "strike": 165.0,
+      "spot": 155.3,
+      "rv20": 0.6098874497410879,
+      "dte_sessions": 83,
+      "entry_quote": {
+        "symbol": "O:AMG230317C00165000",
+        "day": "2022-11-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1668523551961919232,
+        "execution_timestamp_ns": 1668523552061919232,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 7.7,
+        "ask": 11.5,
+        "bid_size": 22,
+        "ask_size": 25,
+        "stock_reference": 155.3,
+        "stock_bar_timestamp_ms": 1668523440000,
+        "stock_reference_age_seconds": 51.961919232
+      },
+      "exit_quote": {
+        "symbol": "O:AMG230317C00165000",
+        "day": "2022-12-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1671115534283473408,
+        "execution_timestamp_ns": 1671115534383473408,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 5,
+        "ask": 8.8,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 154.53,
+        "stock_bar_timestamp_ms": 1671115440000,
+        "stock_reference_age_seconds": 34.283473408
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-11-22",
+      "2022-12-22"
+    ],
+    [
+      "2022-11-15",
+      "2022-12-15"
+    ]
+  ]
+}

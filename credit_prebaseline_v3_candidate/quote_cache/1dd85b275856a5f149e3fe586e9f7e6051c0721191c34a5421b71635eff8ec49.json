@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LSI221216C00120000",
+  "day": "2022-07-18",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1658152028874704896,
+  "execution_timestamp_ns": 1658152028974704896,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.1,
+  "ask": 7.5,
+  "bid_size": 62,
+  "ask_size": 92,
+  "stock_reference": 113.305,
+  "stock_bar_timestamp_ms": 1658151960000,
+  "stock_reference_age_seconds": 8.874704896
+}

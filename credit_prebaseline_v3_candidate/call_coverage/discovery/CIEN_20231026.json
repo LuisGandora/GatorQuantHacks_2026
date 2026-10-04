@@ -1,0 +1,60 @@
+{
+  "ticker": "CIEN",
+  "event_entry": "2023-10-26",
+  "status": "no_usable_control",
+  "issuer": "0000936395",
+  "source_ticker": "CIEN",
+  "event": {
+    "day": "2023-10-26",
+    "exit_date": "2023-11-27",
+    "expiry": "2024-04-19",
+    "symbol": "O:CIEN240419C00045000",
+    "strike": 45.0,
+    "spot": 40.77,
+    "rv20": 0.3215635364231905,
+    "dte_sessions": 120,
+    "entry_quote": {
+      "symbol": "O:CIEN240419C00045000",
+      "day": "2023-10-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1698327903384012544,
+      "execution_timestamp_ns": 1698327903484012544,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3,
+      "ask": 3.1,
+      "bid_size": 17,
+      "ask_size": 38,
+      "stock_reference": 40.77,
+      "stock_bar_timestamp_ms": 1698327840000,
+      "stock_reference_age_seconds": 3.384012544
+    },
+    "exit_quote": {
+      "symbol": "O:CIEN240419C00045000",
+      "day": "2023-11-27",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1701096315754018048,
+      "execution_timestamp_ns": 1701096315854018048,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.7,
+      "ask": 4.9,
+      "bid_size": 19,
+      "ask_size": 32,
+      "stock_reference": 45.35,
+      "stock_bar_timestamp_ms": 1701096240000,
+      "stock_reference_age_seconds": 15.754018048
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2023-10-19",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0000889900",
+  "date": "2025-02-04",
+  "selected": "PTEN",
+  "eligible": [
+    {
+      "ticker": "PTEN",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

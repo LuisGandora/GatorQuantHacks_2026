@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PRAA230317C00037500",
+  "day": "2022-12-29",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 5,
+  "sip_timestamp": 1672325254789705216,
+  "execution_timestamp_ns": 1672325254889705216,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.05,
+  "ask": 1.5,
+  "bid_size": 93,
+  "ask_size": 74,
+  "stock_reference": 34.07,
+  "stock_bar_timestamp_ms": 1672325160000,
+  "stock_reference_age_seconds": 34.789705216
+}

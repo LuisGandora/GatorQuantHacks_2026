@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CRWV251017C00045000",
+  "day": "2025-05-30",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1748612715303945362,
+  "execution_timestamp_ns": 1748612715403945362,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 59.9,
+  "ask": 63.8,
+  "bid_size": 84,
+  "ask_size": 80,
+  "stock_reference": 106.88,
+  "stock_bar_timestamp_ms": 1748612640000,
+  "stock_reference_age_seconds": 15.303945362
+}

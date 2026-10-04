@@ -1,0 +1,12 @@
+{
+  "cik": "0001488139",
+  "date": "2025-01-29",
+  "selected": "AMRC",
+  "eligible": [
+    {
+      "ticker": "AMRC",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

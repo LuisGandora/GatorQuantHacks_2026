@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ETN230120C00145000",
+  "day": "2022-10-03",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1664804702728224000,
+  "execution_timestamp_ns": 1664804702828224000,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 4.5,
+  "ask": 5.8,
+  "bid_size": 317,
+  "ask_size": 305,
+  "stock_reference": 134.76,
+  "stock_bar_timestamp_ms": 1664804640000,
+  "stock_reference_age_seconds": 2.728224
+}

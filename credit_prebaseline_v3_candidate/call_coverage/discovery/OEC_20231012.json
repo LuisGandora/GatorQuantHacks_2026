@@ -1,0 +1,112 @@
+{
+  "ticker": "OEC",
+  "event_entry": "2023-10-12",
+  "status": "matched",
+  "issuer": "0001609804",
+  "source_ticker": "OEC",
+  "event": {
+    "day": "2023-10-12",
+    "exit_date": "2023-11-10",
+    "expiry": "2024-01-19",
+    "symbol": "O:OEC240119C00022500",
+    "strike": 22.5,
+    "spot": 21.1,
+    "rv20": 0.25495125748496855,
+    "dte_sessions": 67,
+    "entry_quote": {
+      "symbol": "O:OEC240119C00022500",
+      "day": "2023-10-12",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 4,
+      "sip_timestamp": 1697119320018993152,
+      "execution_timestamp_ns": 1697119320118993152,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.1,
+      "ask": 4.1,
+      "bid_size": 760,
+      "ask_size": 169,
+      "stock_reference": 21.1,
+      "stock_bar_timestamp_ms": 1697119260000,
+      "stock_reference_age_seconds": 0.018993152
+    },
+    "exit_quote": {
+      "symbol": "O:OEC240119C00022500",
+      "day": "2023-11-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1699627509927020800,
+      "execution_timestamp_ns": 1699627510027020800,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.35,
+      "ask": 1,
+      "bid_size": 16,
+      "ask_size": 6,
+      "stock_reference": 21.43,
+      "stock_bar_timestamp_ms": 1699627440000,
+      "stock_reference_age_seconds": 9.9270208
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-10-05",
+      "exit_date": "2023-11-03",
+      "expiry": "2024-01-19",
+      "symbol": "O:OEC240119C00022500",
+      "strike": 22.5,
+      "spot": 20.425,
+      "rv20": 0.24152636255750068,
+      "dte_sessions": 72,
+      "entry_quote": {
+        "symbol": "O:OEC240119C00022500",
+        "day": "2023-10-05",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 12,
+        "sip_timestamp": 1696513905289113856,
+        "execution_timestamp_ns": 1696513905389113856,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.55,
+        "ask": 2.6,
+        "bid_size": 149,
+        "ask_size": 376,
+        "stock_reference": 20.425,
+        "stock_bar_timestamp_ms": 1696513800000,
+        "stock_reference_age_seconds": 45.289113856
+      },
+      "exit_quote": {
+        "symbol": "O:OEC240119C00022500",
+        "day": "2023-11-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 20,
+        "sip_timestamp": 1699019168282677760,
+        "execution_timestamp_ns": 1699019168382677760,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.6,
+        "ask": 1.7,
+        "bid_size": 21,
+        "ask_size": 23,
+        "stock_reference": 21.11,
+        "stock_bar_timestamp_ms": 1699019100000,
+        "stock_reference_age_seconds": 8.28267776
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-10-12",
+      "2023-11-10"
+    ],
+    [
+      "2023-10-05",
+      "2023-11-03"
+    ]
+  ]
+}

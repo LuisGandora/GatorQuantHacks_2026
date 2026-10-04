@@ -1,0 +1,18 @@
+{
+  "symbol": "O:ET220715C00013000",
+  "day": "2022-04-05",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1649166302527712256,
+  "execution_timestamp_ns": 1649166302627712256,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.27,
+  "ask": 0.31,
+  "bid_size": 1837,
+  "ask_size": 291,
+  "stock_reference": 11.5501,
+  "stock_bar_timestamp_ms": 1649166240000,
+  "stock_reference_age_seconds": 2.527712256
+}

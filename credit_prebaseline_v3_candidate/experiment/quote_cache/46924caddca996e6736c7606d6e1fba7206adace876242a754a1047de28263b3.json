@@ -1,0 +1,18 @@
+{
+  "symbol": "O:NCNO240517C00035000",
+  "day": "2024-02-29",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1709217938176668672,
+  "execution_timestamp_ns": 1709217938276668672,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.6,
+  "ask": 0.95,
+  "bid_size": 22,
+  "ask_size": 24,
+  "stock_reference": 29.84,
+  "stock_bar_timestamp_ms": 1709217840000,
+  "stock_reference_age_seconds": 38.176668672
+}

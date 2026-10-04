@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CI220916C00260000",
+  "day": "2022-05-04",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1651671900442978304,
+  "execution_timestamp_ns": 1651671900542978304,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 12,
+  "ask": 14.3,
+  "bid_size": 94,
+  "ask_size": 197,
+  "stock_reference": 246.74,
+  "stock_bar_timestamp_ms": 1651671840000,
+  "stock_reference_age_seconds": 0.442978304
+}

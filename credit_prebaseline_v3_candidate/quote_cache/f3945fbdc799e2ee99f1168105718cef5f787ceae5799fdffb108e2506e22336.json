@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PTEN250516C00009000",
+  "day": "2025-02-04",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1738680300066708992,
+  "execution_timestamp_ns": 1738680300166708992,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.35,
+  "ask": 0.45,
+  "bid_size": 1768,
+  "ask_size": 1050,
+  "stock_reference": 7.878,
+  "stock_bar_timestamp_ms": 1738680240000,
+  "stock_reference_age_seconds": 0.066708992
+}

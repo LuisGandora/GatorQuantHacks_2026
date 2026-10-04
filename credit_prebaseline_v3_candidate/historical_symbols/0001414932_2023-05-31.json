@@ -1,0 +1,12 @@
+{
+  "cik": "0001414932",
+  "date": "2023-05-31",
+  "selected": "OCSL",
+  "eligible": [
+    {
+      "ticker": "OCSL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

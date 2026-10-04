@@ -1,0 +1,12 @@
+{
+  "cik": "0001437107",
+  "date": "2024-10-10",
+  "selected": "WBD",
+  "eligible": [
+    {
+      "ticker": "WBD",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

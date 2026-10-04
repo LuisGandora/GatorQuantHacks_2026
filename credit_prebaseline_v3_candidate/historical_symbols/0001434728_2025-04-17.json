@@ -1,0 +1,12 @@
+{
+  "cik": "0001434728",
+  "date": "2025-04-17",
+  "selected": "GWRS",
+  "eligible": [
+    {
+      "ticker": "GWRS",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

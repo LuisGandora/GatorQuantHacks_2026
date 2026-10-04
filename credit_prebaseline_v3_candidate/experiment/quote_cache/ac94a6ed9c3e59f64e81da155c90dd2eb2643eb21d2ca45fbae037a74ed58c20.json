@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DOV240920C00185000",
+  "day": "2024-07-12",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1720792060616428544,
+  "execution_timestamp_ns": 1720792060716428544,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 6.1,
+  "ask": 7,
+  "bid_size": 33,
+  "ask_size": 16,
+  "stock_reference": 183.29,
+  "stock_bar_timestamp_ms": 1720791960000,
+  "stock_reference_age_seconds": 40.616428544
+}

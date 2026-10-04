@@ -1,0 +1,18 @@
+{
+  "symbol": "O:HLI251219C00210000",
+  "day": "2025-08-26",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 11,
+  "sip_timestamp": 1756216320271059534,
+  "execution_timestamp_ns": 1756216320371059534,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.8,
+  "ask": 7,
+  "bid_size": 9,
+  "ask_size": 11,
+  "stock_reference": 196.585,
+  "stock_bar_timestamp_ms": 1756216260000,
+  "stock_reference_age_seconds": 0.271059534
+}

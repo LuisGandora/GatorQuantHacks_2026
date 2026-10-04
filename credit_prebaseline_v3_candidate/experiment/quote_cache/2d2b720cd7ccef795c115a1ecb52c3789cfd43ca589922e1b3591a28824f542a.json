@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SBAC240621C00250000",
+  "day": "2024-01-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1705502892274357504,
+  "execution_timestamp_ns": 1705502892374357504,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 11.3,
+  "ask": 17.4,
+  "bid_size": 36,
+  "ask_size": 28,
+  "stock_reference": 237.94,
+  "stock_bar_timestamp_ms": 1705502820000,
+  "stock_reference_age_seconds": 12.274357504
+}

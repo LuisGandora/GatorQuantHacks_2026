@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SIRI251219C00024000",
+  "day": "2025-10-22",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1761141020790956884,
+  "execution_timestamp_ns": 1761141020890956884,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.49,
+  "ask": 0.73,
+  "bid_size": 1303,
+  "ask_size": 568,
+  "stock_reference": 22.145,
+  "stock_bar_timestamp_ms": 1761140940000,
+  "stock_reference_age_seconds": 20.790956884
+}

@@ -1,0 +1,1586 @@
+[
+  {
+    "window": "discovery",
+    "variant": "baseline3",
+    "n": 38,
+    "dependence_groups": 7,
+    "mean": 0.00627362878821542,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 38,
+      "dependence_groups": 7,
+      "mean": -0.06948080683575886,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 38,
+      "dependence_groups": 7,
+      "mean": 0.07125352624930228,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.02842391890177083,
+      "entry_credit": 0.05587099362413627,
+      "entry_mid": 0.06928249152931804,
+      "upside": 0.05948418613819731,
+      "downside": 0.0332159011603287,
+      "absolute_move": 0.09270008729852601,
+      "upside_tail": 0.21052631578947367,
+      "downside_tail": 0.15789473684210525,
+      "exit_intrinsic": 0.02306018201779869,
+      "exit_time_value": 0.060791486144495976,
+      "entry_spread": 0.02682299581036349,
+      "moneyness": 1.0880828323065508,
+      "assignment_possible": 0.5526315789473685,
+      "price_return": 0.025489198622310066,
+      "price_upside": 0.059271037176826524,
+      "price_downside": 0.033781838554516455,
+      "absolute_price_move": 0.09305287573134298,
+      "price_upside_tail": 0.21052631578947367,
+      "price_downside_tail": 0.15789473684210525,
+      "stock_return_q05_q95": [
+        -0.13922149606724185,
+        0.24822784605479759
+      ]
+    },
+    "baseline": {
+      "value": -0.03469754768998626,
+      "entry_credit": 0.05535551189146613,
+      "entry_mid": 0.06911825043027847,
+      "upside": 0.06470243228583773,
+      "downside": 0.029603039163240117,
+      "absolute_move": 0.09430547144907786,
+      "upside_tail": 0.18421052631578946,
+      "downside_tail": 0.18421052631578946,
+      "exit_intrinsic": 0.022140232081152122,
+      "exit_time_value": 0.06746260675392436,
+      "entry_spread": 0.027525477077624667,
+      "moneyness": 1.097526510548495,
+      "assignment_possible": 0.5526315789473685,
+      "price_return": 0.0337014686175406,
+      "price_upside": 0.0640057227956509,
+      "price_downside": 0.03030425417811029,
+      "absolute_price_move": 0.09430997697376119,
+      "price_upside_tail": 0.18421052631578946,
+      "price_downside_tail": 0.18421052631578946,
+      "stock_return_q05_q95": [
+        -0.13875286319302452,
+        0.2676527959859127
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "baseline7",
+    "n": 22,
+    "dependence_groups": 7,
+    "mean": 0.004992734334938838,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 22,
+      "dependence_groups": 7,
+      "mean": -0.028059603702680347,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 22,
+      "dependence_groups": 7,
+      "mean": 0.0562067040876938,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.03714746836107183,
+      "entry_credit": 0.040316655990537804,
+      "entry_mid": 0.056285453032997916,
+      "upside": 0.0596514683129443,
+      "downside": 0.029266256840494685,
+      "absolute_move": 0.088917725153439,
+      "upside_tail": 0.22727272727272727,
+      "downside_tail": 0.13636363636363635,
+      "exit_intrinsic": 0.026491516343687696,
+      "exit_time_value": 0.05048766204225945,
+      "entry_spread": 0.03193759408492022,
+      "moneyness": 1.0953939900479233,
+      "assignment_possible": 0.5454545454545454,
+      "price_return": 0.029590898751531394,
+      "price_upside": 0.0596514683129443,
+      "price_downside": 0.03006056956141291,
+      "absolute_price_move": 0.08971203787435723,
+      "price_upside_tail": 0.22727272727272727,
+      "price_downside_tail": 0.13636363636363635,
+      "stock_return_q05_q95": [
+        -0.12885309840650538,
+        0.24229837853130418
+      ]
+    },
+    "baseline": {
+      "value": -0.04214020269601067,
+      "entry_credit": 0.039382161640077344,
+      "entry_mid": 0.05294452254104523,
+      "upside": 0.06511916124523544,
+      "downside": 0.04187647955036785,
+      "absolute_move": 0.1069956407956033,
+      "upside_tail": 0.2727272727272727,
+      "downside_tail": 0.18181818181818182,
+      "exit_intrinsic": 0.023095187660800542,
+      "exit_time_value": 0.057933518188550505,
+      "entry_spread": 0.027124721801935803,
+      "moneyness": 1.1048885469442664,
+      "assignment_possible": 0.3181818181818182,
+      "price_return": 0.022251802452130827,
+      "price_upside": 0.06511916124523544,
+      "price_downside": 0.04286735879310461,
+      "absolute_price_move": 0.10798652003834004,
+      "price_upside_tail": 0.2727272727272727,
+      "price_downside_tail": 0.18181818181818182,
+      "stock_return_q05_q95": [
+        -0.16365970765351398,
+        0.2613666497140923
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "commission1",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.001034944961315467,
+    "bootstrap_interval": [
+      -0.013517434358416831,
+      0.01105775675726983
+    ],
+    "t_interval": [
+      -0.03115218118651526,
+      0.029082291263884324
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.057027304364604084,
+      "bootstrap_interval": [
+        -0.11743944477120413,
+        -0.0074683625494606325
+      ],
+      "t_interval": [
+        -0.17103535488333707,
+        0.0569807461541289
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.0643906237597169,
+      "bootstrap_interval": [
+        0.026859578309044525,
+        0.09871887576277708
+      ],
+      "t_interval": [
+        -0.0033258621947522132,
+        0.132107109714186
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.030014102216559934,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.02897915725524447,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "slippage10pct",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.0012967395239937313,
+    "bootstrap_interval": [
+      -0.013234049192624801,
+      0.010741034771309528
+    ],
+    "t_interval": [
+      -0.03128265492764559,
+      0.02868917587965813
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.058488315603931904,
+      "bootstrap_interval": [
+        -0.11917874678299953,
+        -0.007335369697015565
+      ],
+      "t_interval": [
+        -0.17324792840998224,
+        0.05627129720211843
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.0655803627500577,
+      "bootstrap_interval": [
+        0.02782429821391272,
+        0.10087159978372222
+      ],
+      "t_interval": [
+        -0.003134934546471485,
+        0.13429566004658688
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.03465534498020967,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.03335860545621594,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "slippage25pct",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.001685627117030359,
+    "bootstrap_interval": [
+      -0.01307404044168489,
+      0.010388404492980082
+    ],
+    "t_interval": [
+      -0.031877509778727046,
+      0.028506255544666327
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.060756626492609586,
+      "bootstrap_interval": [
+        -0.12191044421037764,
+        -0.007149104542616559
+      ],
+      "t_interval": [
+        -0.17695457550574417,
+        0.055441322520525
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.067464304235768,
+      "bootstrap_interval": [
+        0.029310384852061208,
+        0.10427209987841587
+      ],
+      "t_interval": [
+        -0.003004370179388663,
+        0.1379329786509247
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.04197254639161434,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.04028691927458398,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "assignment5",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.001037481128635982,
+    "bootstrap_interval": [
+      -0.013519389239865964,
+      0.011052135607557446
+    ],
+    "t_interval": [
+      -0.03114731375846856,
+      0.029072351501196594
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.0562085056717971,
+      "bootstrap_interval": [
+        -0.11613083225640042,
+        -0.007235024181577337
+      ],
+      "t_interval": [
+        -0.16921586860693427,
+        0.05679885726334007
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.06341460414798082,
+      "bootstrap_interval": [
+        0.026560658881948557,
+        0.09703604233462068
+      ],
+      "t_interval": [
+        -0.003017608125462423,
+        0.12984681642142407
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.029777210705939895,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.02873972957730391,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "assignment15",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.001037481128635982,
+    "bootstrap_interval": [
+      -0.013519389239865964,
+      0.011052135607557446
+    ],
+    "t_interval": [
+      -0.03114731375846856,
+      0.029072351501196594
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.05467330032576438,
+      "bootstrap_interval": [
+        -0.11367726643970623,
+        -0.006785979611502212
+      ],
+      "t_interval": [
+        -0.16582892937386967,
+        0.05648232872234092
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.06159500892477417,
+      "bootstrap_interval": [
+        0.02601482906888485,
+        0.09389892756267586
+      ],
+      "t_interval": [
+        -0.002438146465001373,
+        0.1256281643145497
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.029777210705939895,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.02873972957730391,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "cash_interest",
+    "n": 40,
+    "dependence_groups": 7,
+    "mean": -0.001037481128635982,
+    "bootstrap_interval": [
+      -0.013519389239865964,
+      0.011052135607557446
+    ],
+    "t_interval": [
+      -0.03114731375846856,
+      0.029072351501196594
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.05775757534676247,
+      "bootstrap_interval": [
+        -0.11832378431948894,
+        -0.007749833922828097
+      ],
+      "t_interval": [
+        -0.17220426520307666,
+        0.05668911450955172
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": 0.06551886823282313,
+      "bootstrap_interval": [
+        0.02724975016340497,
+        0.10036539849428713
+      ],
+      "t_interval": [
+        -0.0034449803232605852,
+        0.13448271678890683
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.029777210705939895,
+      "entry_credit": 0.05371334843312738,
+      "entry_mid": 0.06677165137410782,
+      "upside": 0.058038657310817074,
+      "downside": 0.03155510610231227,
+      "absolute_move": 0.08959376341312933,
+      "upside_tail": 0.2,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.021907172916908756,
+      "exit_time_value": 0.061143444845292716,
+      "entry_spread": 0.026116605881960873,
+      "moneyness": 1.0892631021794228,
+      "assignment_possible": 0.55,
+      "price_return": 0.02574341917072421,
+      "price_upside": 0.05783616579751483,
+      "price_downside": 0.03209274662679064,
+      "absolute_price_move": 0.08992891242430545,
+      "price_upside_tail": 0.2,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.1328802008547947,
+        0.2460735138176327
+      ]
+    },
+    "baseline": {
+      "value": -0.02873972957730391,
+      "entry_credit": 0.055311897768814774,
+      "entry_mid": 0.06727072050905873,
+      "upside": 0.06176767035051456,
+      "downside": 0.03685293367963392,
+      "absolute_move": 0.09862060403014847,
+      "upside_tail": 0.225,
+      "downside_tail": 0.175,
+      "exit_intrinsic": 0.01857859675876197,
+      "exit_time_value": 0.06502837918546711,
+      "entry_spread": 0.023917645480487894,
+      "moneyness": 1.096471727295691,
+      "assignment_possible": 0.475,
+      "price_return": 0.02344481023306838,
+      "price_upside": 0.06100145468857804,
+      "price_downside": 0.03755664445550966,
+      "absolute_price_move": 0.09855809914408768,
+      "price_upside_tail": 0.225,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.16768102092000453,
+        0.2768103238525562
+      ]
+    }
+  },
+  {
+    "window": "discovery",
+    "variant": "same_strike",
+    "n": 24,
+    "dependence_groups": 8,
+    "mean": -0.007228890456695651,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 24,
+      "dependence_groups": 8,
+      "mean": -0.06731641775689488,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 24,
+      "dependence_groups": 8,
+      "mean": 0.0596448993430184,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.03376979402006934,
+      "entry_credit": 0.045160013852868865,
+      "entry_mid": 0.06133939520555043,
+      "upside": 0.05516339735693893,
+      "downside": 0.01643206810697143,
+      "absolute_move": 0.07159546546391037,
+      "upside_tail": 0.20833333333333334,
+      "downside_tail": 0.041666666666666664,
+      "exit_intrinsic": 0.011578946566309293,
+      "exit_time_value": 0.06682241851504016,
+      "entry_spread": 0.032358762705363114,
+      "moneyness": 1.1007114673011915,
+      "assignment_possible": 0.5833333333333334,
+      "price_return": 0.03798806324828005,
+      "price_upside": 0.05514825134942652,
+      "price_downside": 0.01716018810114647,
+      "absolute_price_move": 0.07230843945057298,
+      "price_upside_tail": 0.20833333333333334,
+      "price_downside_tail": 0.041666666666666664,
+      "stock_return_q05_q95": [
+        -0.05702174191542432,
+        0.16940688362897877
+      ]
+    },
+    "baseline": {
+      "value": -0.02654090356337369,
+      "entry_credit": 0.051525405044180295,
+      "entry_mid": 0.06347268193922158,
+      "upside": 0.05939318063578161,
+      "downside": 0.021385769798266608,
+      "absolute_move": 0.08077895043404822,
+      "upside_tail": 0.25,
+      "downside_tail": 0.08333333333333333,
+      "exit_intrinsic": 0.00855873178258229,
+      "exit_time_value": 0.06897565782392488,
+      "entry_spread": 0.023894553790082568,
+      "moneyness": 1.1037331048299983,
+      "assignment_possible": 0.5416666666666666,
+      "price_return": 0.036763858084397964,
+      "price_upside": 0.058437057113286416,
+      "price_downside": 0.021673199028888448,
+      "absolute_price_move": 0.08011025614217486,
+      "price_upside_tail": 0.25,
+      "price_downside_tail": 0.08333333333333333,
+      "stock_return_q05_q95": [
+        -0.1528523652460464,
+        0.15198143329410593
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "baseline3",
+    "n": 34,
+    "dependence_groups": 8,
+    "mean": 0.0007954356521830914,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 34,
+      "dependence_groups": 8,
+      "mean": -0.044341027231554586,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 34,
+      "dependence_groups": 8,
+      "mean": 0.03371757772322977,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.013984910961887444,
+      "entry_credit": 0.04964884605010417,
+      "entry_mid": 0.05995506132693598,
+      "upside": 0.03530169850679127,
+      "downside": 0.03715981371567723,
+      "absolute_move": 0.0724615122224685,
+      "upside_tail": 0.14705882352941177,
+      "downside_tail": 0.14705882352941177,
+      "exit_intrinsic": 0.011230407700943466,
+      "exit_time_value": 0.05202027324086046,
+      "entry_spread": 0.02061243055366364,
+      "moneyness": 1.0851952305010724,
+      "assignment_possible": 0.3235294117647059,
+      "price_return": -0.0037652981268267594,
+      "price_upside": 0.03470695326664509,
+      "price_downside": 0.038472251393471844,
+      "absolute_price_move": 0.07317920466011693,
+      "price_upside_tail": 0.14705882352941177,
+      "price_downside_tail": 0.17647058823529413,
+      "stock_return_q05_q95": [
+        -0.1286438742371793,
+        0.13128665647199764
+      ]
+    },
+    "baseline": {
+      "value": -0.014780346614070536,
+      "entry_credit": 0.05172134413955484,
+      "entry_mid": 0.061280277875609086,
+      "upside": 0.040489069705271566,
+      "downside": 0.040015993520832904,
+      "absolute_move": 0.08050506322610447,
+      "upside_tail": 0.23529411764705882,
+      "downside_tail": 0.20588235294117646,
+      "exit_intrinsic": 0.01412196225146114,
+      "exit_time_value": 0.051996322135788704,
+      "entry_spread": 0.0191178674721085,
+      "moneyness": 1.0841436720823254,
+      "assignment_possible": 0.4117647058823529,
+      "price_return": -0.0016262598842962212,
+      "price_upside": 0.03961849091899588,
+      "price_downside": 0.041244750803292096,
+      "absolute_price_move": 0.08086324172228798,
+      "price_upside_tail": 0.20588235294117646,
+      "price_downside_tail": 0.20588235294117646,
+      "stock_return_q05_q95": [
+        -0.15631746529571333,
+        0.16297965504631526
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "baseline7",
+    "n": 32,
+    "dependence_groups": 8,
+    "mean": -0.0016308416276593221,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 32,
+      "dependence_groups": 8,
+      "mean": -0.04486827698796478,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 32,
+      "dependence_groups": 8,
+      "mean": 0.028631876547042568,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.009583003742164954,
+      "entry_credit": 0.0477383750822333,
+      "entry_mid": 0.05818110736182469,
+      "upside": 0.032532301818492315,
+      "downside": 0.03761348005298562,
+      "absolute_move": 0.07014578187147792,
+      "upside_tail": 0.125,
+      "downside_tail": 0.125,
+      "exit_intrinsic": 0.009276823290337948,
+      "exit_time_value": 0.0476719600226527,
+      "entry_spread": 0.02088546455918279,
+      "moneyness": 1.0869085584372078,
+      "assignment_possible": 0.28125,
+      "price_return": -0.006923211312007143,
+      "price_upside": 0.03208473377363525,
+      "price_downside": 0.0390079450856424,
+      "absolute_price_move": 0.07109267885927764,
+      "price_upside_tail": 0.125,
+      "price_downside_tail": 0.15625,
+      "stock_return_q05_q95": [
+        -0.12866457299882234,
+        0.12987977248576635
+      ]
+    },
+    "baseline": {
+      "value": -0.007952162114505635,
+      "entry_credit": 0.050568444291944764,
+      "entry_mid": 0.06017876643229291,
+      "upside": 0.034017164776553525,
+      "downside": 0.045396360099199964,
+      "absolute_move": 0.07941352487575348,
+      "upside_tail": 0.125,
+      "downside_tail": 0.15625,
+      "exit_intrinsic": 0.00852115967535719,
+      "exit_time_value": 0.04963758894084551,
+      "entry_spread": 0.019220644280696298,
+      "moneyness": 1.087727985735243,
+      "assignment_possible": 0.3125,
+      "price_return": -0.012677049608042213,
+      "price_upside": 0.033155033508527804,
+      "price_downside": 0.04583208311657001,
+      "absolute_price_move": 0.07898711662509783,
+      "price_upside_tail": 0.125,
+      "price_downside_tail": 0.15625,
+      "stock_return_q05_q95": [
+        -0.1633351257310929,
+        0.17173852696365355
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "commission1",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.005133960485372825,
+    "bootstrap_interval": [
+      -0.025982940501879565,
+      0.009768297698424104
+    ],
+    "t_interval": [
+      -0.03578151853541191,
+      0.02551359756466626
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.0357196278259961,
+      "bootstrap_interval": [
+        -0.07145828593816726,
+        -0.01003887150323999
+      ],
+      "t_interval": [
+        -0.09823127256979233,
+        0.026792016917800136
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.026157608019433655,
+      "bootstrap_interval": [
+        -0.0030005141039882457,
+        0.05133853808804188
+      ],
+      "t_interval": [
+        -0.035840802230466415,
+        0.08815601826933372
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.013384758098594563,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.008250797613221738,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "slippage10pct",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.005754249717345637,
+    "bootstrap_interval": [
+      -0.027168524944170366,
+      0.010210255465354609
+    ],
+    "t_interval": [
+      -0.03791915694347884,
+      0.026410657508787565
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.03660461918966098,
+      "bootstrap_interval": [
+        -0.07277686254005103,
+        -0.011004394477770199
+      ],
+      "t_interval": [
+        -0.0990416329362675,
+        0.025832394556945547
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.026041175058920073,
+      "bootstrap_interval": [
+        -0.004321825157310678,
+        0.05249625379943272
+      ],
+      "t_interval": [
+        -0.038769184676988866,
+        0.09085153479482902
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.0170304453937793,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.011276195676433662,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "slippage25pct",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.006693464824278005,
+    "bootstrap_interval": [
+      -0.02917684815157952,
+      0.010907170321616987
+    ],
+    "t_interval": [
+      -0.04136493665129674,
+      0.02797800700274073
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.037973097316685786,
+      "bootstrap_interval": [
+        -0.07505430915035603,
+        -0.0120933428981102
+      ],
+      "t_interval": [
+        -0.10054863649850168,
+        0.02460244186513011
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.02589708757649024,
+      "bootstrap_interval": [
+        -0.006088025508485441,
+        0.05416025867474655
+      ],
+      "t_interval": [
+        -0.043223880677127915,
+        0.0950180558301084
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.02280438967322541,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.016110924848947404,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "assignment5",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.00512810631272406,
+    "bootstrap_interval": [
+      -0.02594964890489849,
+      0.009767261156138622
+    ],
+    "t_interval": [
+      -0.035741853652815465,
+      0.025485641027367348
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.035385540223507664,
+      "bootstrap_interval": [
+        -0.07074719928912356,
+        -0.009908332441581447
+      ],
+      "t_interval": [
+        -0.0972199176622418,
+        0.026448837215226485
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.025762536072790655,
+      "bootstrap_interval": [
+        -0.0033059029018463887,
+        0.05103570967395383
+      ],
+      "t_interval": [
+        -0.03590778421628352,
+        0.08743285636186482
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.01318114920748189,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.00805304289475783,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "assignment15",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.00512810631272406,
+    "bootstrap_interval": [
+      -0.02594964890489849,
+      0.009767261156138622
+    ],
+    "t_interval": [
+      -0.035741853652815465,
+      0.025485641027367348
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.03477201979390077,
+      "bootstrap_interval": [
+        -0.06946907355151502,
+        -0.00966362220941502
+      ],
+      "t_interval": [
+        -0.09540355654346397,
+        0.02585951695566243
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.02501314145729201,
+      "bootstrap_interval": [
+        -0.004042254978488094,
+        0.05050692878608046
+      ],
+      "t_interval": [
+        -0.0360899753592637,
+        0.08611625827384772
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.01318114920748189,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.00805304289475783,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "cash_interest",
+    "n": 40,
+    "dependence_groups": 8,
+    "mean": -0.00512810631272406,
+    "bootstrap_interval": [
+      -0.02594964890489849,
+      0.009767261156138622
+    ],
+    "t_interval": [
+      -0.035741853652815465,
+      0.025485641027367348
+    ],
+    "gate": true,
+    "assignment_lower": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.03634552183291417,
+      "bootstrap_interval": [
+        -0.07242577612753137,
+        -0.010362165501148062
+      ],
+      "t_interval": [
+        -0.09936163069470208,
+        0.026670587028873753
+      ],
+      "gate": true
+    },
+    "assignment_upper": {
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": 0.026772106430170074,
+      "bootstrap_interval": [
+        -0.0029439035082792016,
+        0.05250091598176916
+      ],
+      "t_interval": [
+        -0.03643711106690163,
+        0.08998132392724177
+      ],
+      "gate": true
+    },
+    "event": {
+      "value": -0.01318114920748189,
+      "entry_credit": 0.04896469912804076,
+      "entry_mid": 0.05869446658773023,
+      "upside": 0.03702271354465046,
+      "downside": 0.03786548987407517,
+      "absolute_move": 0.07488820341872562,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.009545846545801947,
+      "exit_time_value": 0.05222187099194001,
+      "entry_spread": 0.019459534919378955,
+      "moneyness": 1.092333066845128,
+      "assignment_possible": 0.3,
+      "price_return": -0.002628875648763851,
+      "price_upside": 0.03635218625143675,
+      "price_downside": 0.038981061900200585,
+      "absolute_price_move": 0.07533324815163733,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.175,
+      "stock_return_q05_q95": [
+        -0.13153530250634873,
+        0.13018483176605125
+      ]
+    },
+    "baseline": {
+      "value": -0.00805304289475783,
+      "entry_credit": 0.05200860976897002,
+      "entry_mid": 0.06075178769431997,
+      "upside": 0.03536828049846817,
+      "downside": 0.04606604135972618,
+      "absolute_move": 0.08143432185819437,
+      "upside_tail": 0.15,
+      "downside_tail": 0.15,
+      "exit_intrinsic": 0.012099451189326928,
+      "exit_time_value": 0.04759494271153938,
+      "entry_spread": 0.017486355850699926,
+      "moneyness": 1.0920022113384662,
+      "assignment_possible": 0.275,
+      "price_return": -0.012182021491094227,
+      "price_upside": 0.03427925689233016,
+      "price_downside": 0.046461278383424384,
+      "absolute_price_move": 0.08074053527575456,
+      "price_upside_tail": 0.15,
+      "price_downside_tail": 0.15,
+      "stock_return_q05_q95": [
+        -0.18784133087480376,
+        0.1470129558226551
+      ]
+    }
+  },
+  {
+    "window": "validation",
+    "variant": "same_strike",
+    "n": 23,
+    "dependence_groups": 10,
+    "mean": 0.0043874101114338825,
+    "bootstrap_interval": null,
+    "t_interval": null,
+    "gate": false,
+    "assignment_lower": {
+      "n": 23,
+      "dependence_groups": 10,
+      "mean": -0.015405396571291642,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "assignment_upper": {
+      "n": 23,
+      "dependence_groups": 10,
+      "mean": 0.03493387268877494,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "gate": false
+    },
+    "event": {
+      "value": -0.01403486162079575,
+      "entry_credit": 0.04162680866372877,
+      "entry_mid": 0.05132889745202993,
+      "upside": 0.03694890680244168,
+      "downside": 0.035528454108647016,
+      "absolute_move": 0.0724773609110887,
+      "upside_tail": 0.17391304347826086,
+      "downside_tail": 0.13043478260869565,
+      "exit_intrinsic": 0.010103510064465908,
+      "exit_time_value": 0.045151325170793746,
+      "entry_spread": 0.019404177576602302,
+      "moneyness": 1.0916920066970945,
+      "assignment_possible": 0.30434782608695654,
+      "price_return": -0.00012294396889129877,
+      "price_upside": 0.03669278538726784,
+      "price_downside": 0.03681572935615915,
+      "absolute_price_move": 0.073508514743427,
+      "price_upside_tail": 0.17391304347826086,
+      "price_downside_tail": 0.17391304347826086,
+      "stock_return_q05_q95": [
+        -0.12754105463841595,
+        0.12967861997174865
+      ]
+    },
+    "baseline": {
+      "value": -0.018422271732229635,
+      "entry_credit": 0.04398317856521243,
+      "entry_mid": 0.05459909316001597,
+      "upside": 0.042661730167361626,
+      "downside": 0.031543808590366346,
+      "absolute_move": 0.07420553875772798,
+      "upside_tail": 0.17391304347826086,
+      "downside_tail": 0.13043478260869565,
+      "exit_intrinsic": 0.014552887352178644,
+      "exit_time_value": 0.047448698374483136,
+      "entry_spread": 0.021231829189607084,
+      "moneyness": 1.0939829987391998,
+      "assignment_possible": 0.21739130434782608,
+      "price_return": 0.010120505698698237,
+      "price_upside": 0.042024228124018466,
+      "price_downside": 0.03190372242532024,
+      "absolute_price_move": 0.07392795054933873,
+      "price_upside_tail": 0.17391304347826086,
+      "price_downside_tail": 0.13043478260869565,
+      "stock_return_q05_q95": [
+        -0.10371579495463858,
+        0.17941929406685986
+      ]
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "cik": "0001653384",
+  "date": "2022-04-25",
+  "selected": "RWAY",
+  "eligible": [
+    {
+      "ticker": "RWAY",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

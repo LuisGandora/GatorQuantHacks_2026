@@ -1,0 +1,12 @@
+{
+  "cik": "0001834488",
+  "date": "2025-11-28",
+  "selected": "NABL",
+  "eligible": [
+    {
+      "ticker": "NABL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

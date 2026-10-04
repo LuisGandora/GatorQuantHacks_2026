@@ -1,0 +1,18 @@
+{
+  "symbol": "O:TOL230616C00065000",
+  "day": "2023-02-10",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1676040304486551552,
+  "execution_timestamp_ns": 1676040304586551552,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.2,
+  "ask": 2.6,
+  "bid_size": 687,
+  "ask_size": 23,
+  "stock_reference": 58.515,
+  "stock_bar_timestamp_ms": 1676040240000,
+  "stock_reference_age_seconds": 4.486551552
+}

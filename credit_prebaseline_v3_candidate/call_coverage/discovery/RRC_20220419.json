@@ -1,0 +1,112 @@
+{
+  "ticker": "RRC",
+  "event_entry": "2022-04-19",
+  "status": "matched",
+  "issuer": "0000315852",
+  "source_ticker": "RRC",
+  "event": {
+    "day": "2022-04-19",
+    "exit_date": "2022-05-18",
+    "expiry": "2022-09-16",
+    "symbol": "O:RRC220916C00036000",
+    "strike": 36.0,
+    "spot": 32.8224,
+    "rv20": 0.4438124644427053,
+    "dte_sessions": 104,
+    "entry_quote": {
+      "symbol": "O:RRC220916C00036000",
+      "day": "2022-04-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1650375915029210112,
+      "execution_timestamp_ns": 1650375915129210112,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.8,
+      "ask": 4.7,
+      "bid_size": 1094,
+      "ask_size": 739,
+      "stock_reference": 32.8224,
+      "stock_bar_timestamp_ms": 1650375840000,
+      "stock_reference_age_seconds": 15.029210112
+    },
+    "exit_quote": {
+      "symbol": "O:RRC220916C00036000",
+      "day": "2022-05-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1652881522865086976,
+      "execution_timestamp_ns": 1652881522965086976,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.85,
+      "ask": 2.15,
+      "bid_size": 1523,
+      "ask_size": 1061,
+      "stock_reference": 28.75,
+      "stock_bar_timestamp_ms": 1652881440000,
+      "stock_reference_age_seconds": 22.865086976
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-04-11",
+      "exit_date": "2022-05-11",
+      "expiry": "2022-09-16",
+      "symbol": "O:RRC220916C00035000",
+      "strike": 35.0,
+      "spot": 31.63,
+      "rv20": 0.5338001895315178,
+      "dte_sessions": 109,
+      "entry_quote": {
+        "symbol": "O:RRC220916C00035000",
+        "day": "2022-04-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1649684721149764608,
+        "execution_timestamp_ns": 1649684721249764608,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.7,
+        "ask": 4.8,
+        "bid_size": 1436,
+        "ask_size": 1792,
+        "stock_reference": 31.63,
+        "stock_bar_timestamp_ms": 1649684640000,
+        "stock_reference_age_seconds": 21.149764608
+      },
+      "exit_quote": {
+        "symbol": "O:RRC220916C00035000",
+        "day": "2022-05-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1652276705061470976,
+        "execution_timestamp_ns": 1652276705161470976,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2,
+        "ask": 2.8,
+        "bid_size": 1023,
+        "ask_size": 1912,
+        "stock_reference": 27.8,
+        "stock_bar_timestamp_ms": 1652276640000,
+        "stock_reference_age_seconds": 5.061470976
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-04-19",
+      "2022-05-18"
+    ],
+    [
+      "2022-04-11",
+      "2022-05-11"
+    ]
+  ]
+}

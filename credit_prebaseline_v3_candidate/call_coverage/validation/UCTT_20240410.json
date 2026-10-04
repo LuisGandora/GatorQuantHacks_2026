@@ -1,0 +1,112 @@
+{
+  "ticker": "UCTT",
+  "event_entry": "2024-04-10",
+  "status": "matched",
+  "issuer": "0001275014",
+  "source_ticker": "UCTT",
+  "event": {
+    "day": "2024-04-10",
+    "exit_date": "2024-05-09",
+    "expiry": "2024-09-20",
+    "symbol": "O:UCTT240920C00050000",
+    "strike": 50.0,
+    "spot": 46.275,
+    "rv20": 0.3219485717538777,
+    "dte_sessions": 113,
+    "entry_quote": {
+      "symbol": "O:UCTT240920C00050000",
+      "day": "2024-04-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1712757280603562240,
+      "execution_timestamp_ns": 1712757280703562240,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.4,
+      "ask": 4.9,
+      "bid_size": 30,
+      "ask_size": 6,
+      "stock_reference": 46.275,
+      "stock_bar_timestamp_ms": 1712757180000,
+      "stock_reference_age_seconds": 40.60356224
+    },
+    "exit_quote": {
+      "symbol": "O:UCTT240920C00050000",
+      "day": "2024-05-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 8,
+      "sip_timestamp": 1715262784103431424,
+      "execution_timestamp_ns": 1715262784203431424,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.35,
+      "ask": 2.75,
+      "bid_size": 14,
+      "ask_size": 20,
+      "stock_reference": 43.49,
+      "stock_bar_timestamp_ms": 1715262720000,
+      "stock_reference_age_seconds": 4.103431424
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-04-03",
+      "exit_date": "2024-05-02",
+      "expiry": "2024-09-20",
+      "symbol": "O:UCTT240920C00050000",
+      "strike": 50.0,
+      "spot": 45.5583,
+      "rv20": 0.3166157405397708,
+      "dte_sessions": 118,
+      "entry_quote": {
+        "symbol": "O:UCTT240920C00050000",
+        "day": "2024-04-03",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 3,
+        "sip_timestamp": 1712152101659641088,
+        "execution_timestamp_ns": 1712152101759641088,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.2,
+        "ask": 4.8,
+        "bid_size": 64,
+        "ask_size": 10,
+        "stock_reference": 45.5583,
+        "stock_bar_timestamp_ms": 1712152020000,
+        "stock_reference_age_seconds": 21.659641088
+      },
+      "exit_quote": {
+        "symbol": "O:UCTT240920C00050000",
+        "day": "2024-05-02",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 5,
+        "sip_timestamp": 1714657896141935616,
+        "execution_timestamp_ns": 1714657896241935616,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.65,
+        "ask": 2.5,
+        "bid_size": 20,
+        "ask_size": 69,
+        "stock_reference": 40.85,
+        "stock_bar_timestamp_ms": 1714657800000,
+        "stock_reference_age_seconds": 36.141935616
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-04-10",
+      "2024-05-09"
+    ],
+    [
+      "2024-04-03",
+      "2024-05-02"
+    ]
+  ]
+}

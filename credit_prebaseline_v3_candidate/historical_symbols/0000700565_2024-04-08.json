@@ -1,0 +1,12 @@
+{
+  "cik": "0000700565",
+  "date": "2024-04-08",
+  "selected": "FMBH",
+  "eligible": [
+    {
+      "ticker": "FMBH",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,112 @@
+{
+  "ticker": "TPG",
+  "event_entry": "2022-07-19",
+  "status": "matched",
+  "issuer": "0001880661",
+  "source_ticker": "TPG",
+  "event": {
+    "day": "2022-07-19",
+    "exit_date": "2022-08-17",
+    "expiry": "2022-11-18",
+    "symbol": "O:TPG221118C00030000",
+    "strike": 30.0,
+    "spot": 25.46,
+    "rv20": 0.42827770161470485,
+    "dte_sessions": 87,
+    "entry_quote": {
+      "symbol": "O:TPG221118C00030000",
+      "day": "2022-07-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 15,
+      "sip_timestamp": 1658238540355960320,
+      "execution_timestamp_ns": 1658238540455960320,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.1,
+      "ask": 2.55,
+      "bid_size": 1110,
+      "ask_size": 192,
+      "stock_reference": 25.46,
+      "stock_bar_timestamp_ms": 1658238480000,
+      "stock_reference_age_seconds": 0.35596032
+    },
+    "exit_quote": {
+      "symbol": "O:TPG221118C00030000",
+      "day": "2022-08-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1660744395302003712,
+      "execution_timestamp_ns": 1660744395402003712,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.9,
+      "ask": 4.2,
+      "bid_size": 6,
+      "ask_size": 1,
+      "stock_reference": 32.2461,
+      "stock_bar_timestamp_ms": 1660744320000,
+      "stock_reference_age_seconds": 15.302003712
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-07-12",
+      "exit_date": "2022-08-10",
+      "expiry": "2022-11-18",
+      "symbol": "O:TPG221118C00030000",
+      "strike": 30.0,
+      "spot": 25.35,
+      "rv20": 0.5319086985755086,
+      "dte_sessions": 92,
+      "entry_quote": {
+        "symbol": "O:TPG221118C00030000",
+        "day": "2022-07-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1657633500002122752,
+        "execution_timestamp_ns": 1657633500102122752,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.9,
+        "ask": 2.05,
+        "bid_size": 169,
+        "ask_size": 58,
+        "stock_reference": 25.35,
+        "stock_bar_timestamp_ms": 1657633440000,
+        "stock_reference_age_seconds": 0.002122752
+      },
+      "exit_quote": {
+        "symbol": "O:TPG221118C00030000",
+        "day": "2022-08-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1660140091493105920,
+        "execution_timestamp_ns": 1660140091593105920,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 4,
+        "ask": 4.5,
+        "bid_size": 11,
+        "ask_size": 27,
+        "stock_reference": 32.29,
+        "stock_bar_timestamp_ms": 1660140000000,
+        "stock_reference_age_seconds": 31.49310592
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-07-19",
+      "2022-08-17"
+    ],
+    [
+      "2022-07-12",
+      "2022-08-10"
+    ]
+  ]
+}

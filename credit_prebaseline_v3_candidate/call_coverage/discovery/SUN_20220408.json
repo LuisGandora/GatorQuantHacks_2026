@@ -1,0 +1,60 @@
+{
+  "ticker": "SUN",
+  "event_entry": "2022-04-08",
+  "status": "no_usable_control",
+  "issuer": "0001552275",
+  "source_ticker": "SUN",
+  "event": {
+    "day": "2022-04-08",
+    "exit_date": "2022-05-10",
+    "expiry": "2022-09-16",
+    "symbol": "O:SUN220916C00045000",
+    "strike": 45.0,
+    "spot": 41.38,
+    "rv20": 0.1991346210239877,
+    "dte_sessions": 110,
+    "entry_quote": {
+      "symbol": "O:SUN220916C00045000",
+      "day": "2022-04-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1649425536310859008,
+      "execution_timestamp_ns": 1649425536410859008,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.1,
+      "ask": 1.7,
+      "bid_size": 455,
+      "ask_size": 595,
+      "stock_reference": 41.38,
+      "stock_bar_timestamp_ms": 1649425440000,
+      "stock_reference_age_seconds": 36.310859008
+    },
+    "exit_quote": {
+      "symbol": "O:SUN220916C00045000",
+      "day": "2022-05-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1652190315196772864,
+      "execution_timestamp_ns": 1652190315296772864,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 2,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 40.6944,
+      "stock_bar_timestamp_ms": 1652190240000,
+      "stock_reference_age_seconds": 15.196772864
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2022-04-01",
+      "reason": "unusable_quote"
+    }
+  ]
+}

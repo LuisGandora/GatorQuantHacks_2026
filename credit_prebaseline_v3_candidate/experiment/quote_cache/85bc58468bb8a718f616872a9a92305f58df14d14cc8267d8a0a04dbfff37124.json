@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DNB240719C00015000",
+  "day": "2024-01-30",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1706625934250227712,
+  "execution_timestamp_ns": 1706625934350227712,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.15,
+  "ask": 0.35,
+  "bid_size": 54,
+  "ask_size": 3,
+  "stock_reference": 11.96,
+  "stock_bar_timestamp_ms": 1706625840000,
+  "stock_reference_age_seconds": 34.250227712
+}

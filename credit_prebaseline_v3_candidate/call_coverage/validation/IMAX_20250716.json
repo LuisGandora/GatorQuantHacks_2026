@@ -1,0 +1,112 @@
+{
+  "ticker": "IMAX",
+  "event_entry": "2025-07-16",
+  "status": "matched",
+  "issuer": "0000921582",
+  "source_ticker": "IMAX",
+  "event": {
+    "day": "2025-07-16",
+    "exit_date": "2025-08-14",
+    "expiry": "2025-12-19",
+    "symbol": "O:IMAX251219C00030000",
+    "strike": 30.0,
+    "spot": 28.0922,
+    "rv20": 0.2986002982850882,
+    "dte_sessions": 110,
+    "entry_quote": {
+      "symbol": "O:IMAX251219C00030000",
+      "day": "2025-07-16",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1752673533581199904,
+      "execution_timestamp_ns": 1752673533681199904,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.2,
+      "ask": 2.35,
+      "bid_size": 6,
+      "ask_size": 11,
+      "stock_reference": 28.0922,
+      "stock_bar_timestamp_ms": 1752673440000,
+      "stock_reference_age_seconds": 33.581199904
+    },
+    "exit_quote": {
+      "symbol": "O:IMAX251219C00030000",
+      "day": "2025-08-14",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1755179109668603071,
+      "execution_timestamp_ns": 1755179109768603071,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.65,
+      "ask": 0.9,
+      "bid_size": 223,
+      "ask_size": 37,
+      "stock_reference": 25.51,
+      "stock_bar_timestamp_ms": 1755179040000,
+      "stock_reference_age_seconds": 9.668603071
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-07-09",
+      "exit_date": "2025-08-07",
+      "expiry": "2025-12-19",
+      "symbol": "O:IMAX251219C00029000",
+      "strike": 29.0,
+      "spot": 26.26,
+      "rv20": 0.28871078138592965,
+      "dte_sessions": 115,
+      "entry_quote": {
+        "symbol": "O:IMAX251219C00029000",
+        "day": "2025-07-09",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1752068700438954942,
+        "execution_timestamp_ns": 1752068700538954942,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.75,
+        "ask": 2.3,
+        "bid_size": 25,
+        "ask_size": 1,
+        "stock_reference": 26.26,
+        "stock_bar_timestamp_ms": 1752068640000,
+        "stock_reference_age_seconds": 0.438954942
+      },
+      "exit_quote": {
+        "symbol": "O:IMAX251219C00029000",
+        "day": "2025-08-07",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1754574718692911914,
+        "execution_timestamp_ns": 1754574718792911914,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.75,
+        "ask": 0.9,
+        "bid_size": 42,
+        "ask_size": 15,
+        "stock_reference": 24.65,
+        "stock_bar_timestamp_ms": 1754574600000,
+        "stock_reference_age_seconds": 58.692911914
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-07-16",
+      "2025-08-14"
+    ],
+    [
+      "2025-07-09",
+      "2025-08-07"
+    ]
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "ticker": "LAMR",
+  "event_entry": "2023-08-03",
+  "status": "matched",
+  "issuer": "0001090425",
+  "source_ticker": "LAMR",
+  "event": {
+    "day": "2023-08-03",
+    "exit_date": "2023-09-01",
+    "expiry": "2023-12-15",
+    "symbol": "O:LAMR231215C00105000",
+    "strike": 105.0,
+    "spot": 89.895,
+    "rv20": 0.2104401750215544,
+    "dte_sessions": 94,
+    "entry_quote": {
+      "symbol": "O:LAMR231215C00105000",
+      "day": "2023-08-03",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1691070305756625664,
+      "execution_timestamp_ns": 1691070305856625664,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 2.25,
+      "bid_size": 5,
+      "ask_size": 38,
+      "stock_reference": 89.895,
+      "stock_bar_timestamp_ms": 1691070240000,
+      "stock_reference_age_seconds": 5.756625664
+    },
+    "exit_quote": {
+      "symbol": "O:LAMR231215C00105000",
+      "day": "2023-09-01",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1693575903589014528,
+      "execution_timestamp_ns": 1693575903689014528,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.35,
+      "ask": 0.6,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 91.85,
+      "stock_bar_timestamp_ms": 1693575840000,
+      "stock_reference_age_seconds": 3.589014528
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-07-27",
+      "exit_date": "2023-08-25",
+      "expiry": "2023-12-15",
+      "symbol": "O:LAMR231215C00105000",
+      "strike": 105.0,
+      "spot": 97.395,
+      "rv20": 0.18222860809376007,
+      "dte_sessions": 99,
+      "entry_quote": {
+        "symbol": "O:LAMR231215C00105000",
+        "day": "2023-07-27",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 17,
+        "sip_timestamp": 1690465625388774656,
+        "execution_timestamp_ns": 1690465625488774656,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.3,
+        "ask": 2.65,
+        "bid_size": 51,
+        "ask_size": 66,
+        "stock_reference": 97.395,
+        "stock_bar_timestamp_ms": 1690465560000,
+        "stock_reference_age_seconds": 5.388774656
+      },
+      "exit_quote": {
+        "symbol": "O:LAMR231215C00105000",
+        "day": "2023-08-25",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 4,
+        "sip_timestamp": 1692971995536706048,
+        "execution_timestamp_ns": 1692971995636706048,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.4,
+        "ask": 0.55,
+        "bid_size": 15,
+        "ask_size": 30,
+        "stock_reference": 89.125,
+        "stock_bar_timestamp_ms": 1692971880000,
+        "stock_reference_age_seconds": 55.536706048
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-08-03",
+      "2023-09-01"
+    ],
+    [
+      "2023-07-27",
+      "2023-08-25"
+    ]
+  ]
+}

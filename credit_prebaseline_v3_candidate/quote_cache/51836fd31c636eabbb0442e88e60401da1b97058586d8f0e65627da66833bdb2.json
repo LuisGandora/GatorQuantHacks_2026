@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CXW240119C00012000",
+  "day": "2023-11-13",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1699886700009183488,
+  "execution_timestamp_ns": 1699886700109183488,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.75,
+  "ask": 1.9,
+  "bid_size": 532,
+  "ask_size": 986,
+  "stock_reference": 13.41,
+  "stock_bar_timestamp_ms": 1699886640000,
+  "stock_reference_age_seconds": 0.009183488
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001492691",
+  "date": "2025-07-15",
+  "selected": "KNX",
+  "eligible": [
+    {
+      "ticker": "KNX",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

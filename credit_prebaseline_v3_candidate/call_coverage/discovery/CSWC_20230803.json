@@ -1,0 +1,112 @@
+{
+  "ticker": "CSWC",
+  "event_entry": "2023-08-03",
+  "status": "matched",
+  "issuer": "0000017313",
+  "source_ticker": "CSWC",
+  "event": {
+    "day": "2023-08-03",
+    "exit_date": "2023-09-01",
+    "expiry": "2023-12-15",
+    "symbol": "O:CSWC231215C00022500",
+    "strike": 22.5,
+    "spot": 21.32,
+    "rv20": 0.12197490167074049,
+    "dte_sessions": 94,
+    "entry_quote": {
+      "symbol": "O:CSWC231215C00022500",
+      "day": "2023-08-03",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1691070304403034880,
+      "execution_timestamp_ns": 1691070304503034880,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.4,
+      "ask": 0.55,
+      "bid_size": 56,
+      "ask_size": 55,
+      "stock_reference": 21.32,
+      "stock_bar_timestamp_ms": 1691070240000,
+      "stock_reference_age_seconds": 4.40303488
+    },
+    "exit_quote": {
+      "symbol": "O:CSWC231215C00022500",
+      "day": "2023-09-01",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 25,
+      "sip_timestamp": 1693575965588809728,
+      "execution_timestamp_ns": 1693575965688809728,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.25,
+      "ask": 2.75,
+      "bid_size": 67,
+      "ask_size": 239,
+      "stock_reference": 22.16,
+      "stock_bar_timestamp_ms": 1693575900000,
+      "stock_reference_age_seconds": 5.588809728
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-07-27",
+      "exit_date": "2023-08-25",
+      "expiry": "2023-12-15",
+      "symbol": "O:CSWC231215C00022500",
+      "strike": 22.5,
+      "spot": 21.27,
+      "rv20": 0.10162641574176519,
+      "dte_sessions": 99,
+      "entry_quote": {
+        "symbol": "O:CSWC231215C00022500",
+        "day": "2023-07-27",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1690465725221581312,
+        "execution_timestamp_ns": 1690465725321581312,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.3,
+        "ask": 0.4,
+        "bid_size": 79,
+        "ask_size": 1,
+        "stock_reference": 21.27,
+        "stock_bar_timestamp_ms": 1690465620000,
+        "stock_reference_age_seconds": 45.221581312
+      },
+      "exit_quote": {
+        "symbol": "O:CSWC231215C00022500",
+        "day": "2023-08-25",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1692971100501889280,
+        "execution_timestamp_ns": 1692971100601889280,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.45,
+        "ask": 0.6,
+        "bid_size": 18,
+        "ask_size": 21,
+        "stock_reference": 21.855,
+        "stock_bar_timestamp_ms": 1692971040000,
+        "stock_reference_age_seconds": 0.50188928
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-08-03",
+      "2023-09-01"
+    ],
+    [
+      "2023-07-27",
+      "2023-08-25"
+    ]
+  ]
+}

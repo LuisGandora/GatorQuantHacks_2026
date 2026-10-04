@@ -1,0 +1,18 @@
+{
+  "symbol": "O:KBH260320C00065000",
+  "day": "2025-11-07",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1762526845511827748,
+  "execution_timestamp_ns": 1762526845611827748,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.2,
+  "ask": 4.4,
+  "bid_size": 340,
+  "ask_size": 250,
+  "stock_reference": 60.495,
+  "stock_bar_timestamp_ms": 1762526760000,
+  "stock_reference_age_seconds": 25.511827748
+}

@@ -1,0 +1,112 @@
+{
+  "ticker": "NRG",
+  "event_entry": "2023-02-16",
+  "status": "matched",
+  "issuer": "0001013871",
+  "source_ticker": "NRG",
+  "event": {
+    "day": "2023-02-16",
+    "exit_date": "2023-03-20",
+    "expiry": "2023-06-16",
+    "symbol": "O:NRG230616C00038000",
+    "strike": 38.0,
+    "spot": 34.85,
+    "rv20": 0.22522284624798974,
+    "dte_sessions": 83,
+    "entry_quote": {
+      "symbol": "O:NRG230616C00038000",
+      "day": "2023-02-16",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1676558751726049280,
+      "execution_timestamp_ns": 1676558751826049280,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.1,
+      "ask": 1.3,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 34.85,
+      "stock_bar_timestamp_ms": 1676558640000,
+      "stock_reference_age_seconds": 51.72604928
+    },
+    "exit_quote": {
+      "symbol": "O:NRG230616C00038000",
+      "day": "2023-03-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1679319937246385664,
+      "execution_timestamp_ns": 1679319937346385664,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.35,
+      "ask": 0.95,
+      "bid_size": 1314,
+      "ask_size": 50,
+      "stock_reference": 33.0375,
+      "stock_bar_timestamp_ms": 1679319840000,
+      "stock_reference_age_seconds": 37.246385664
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-02-09",
+      "exit_date": "2023-03-13",
+      "expiry": "2023-06-16",
+      "symbol": "O:NRG230616C00037000",
+      "strike": 37.0,
+      "spot": 34.72,
+      "rv20": 0.24172657817786247,
+      "dte_sessions": 88,
+      "entry_quote": {
+        "symbol": "O:NRG230616C00037000",
+        "day": "2023-02-09",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1675953929009990144,
+        "execution_timestamp_ns": 1675953929109990144,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.55,
+        "ask": 1.7,
+        "bid_size": 3,
+        "ask_size": 3,
+        "stock_reference": 34.72,
+        "stock_bar_timestamp_ms": 1675953840000,
+        "stock_reference_age_seconds": 29.009990144
+      },
+      "exit_quote": {
+        "symbol": "O:NRG230616C00037000",
+        "day": "2023-03-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1678715176071859200,
+        "execution_timestamp_ns": 1678715176171859200,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.1,
+        "ask": 2.2,
+        "bid_size": 1556,
+        "ask_size": 905,
+        "stock_reference": 31.13,
+        "stock_bar_timestamp_ms": 1678715100000,
+        "stock_reference_age_seconds": 16.0718592
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-02-16",
+      "2023-03-20"
+    ],
+    [
+      "2023-02-09",
+      "2023-03-13"
+    ]
+  ]
+}

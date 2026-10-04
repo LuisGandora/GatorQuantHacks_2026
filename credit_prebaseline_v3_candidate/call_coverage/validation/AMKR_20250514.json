@@ -1,0 +1,60 @@
+{
+  "ticker": "AMKR",
+  "event_entry": "2025-05-14",
+  "status": "no_usable_control",
+  "issuer": "0001047127",
+  "source_ticker": "AMKR",
+  "event": {
+    "day": "2025-05-14",
+    "exit_date": "2025-06-13",
+    "expiry": "2025-09-19",
+    "symbol": "O:AMKR250919C00022000",
+    "strike": 22.0,
+    "spot": 20.09,
+    "rv20": 0.4712401282189823,
+    "dte_sessions": 88,
+    "entry_quote": {
+      "symbol": "O:AMKR250919C00022000",
+      "day": "2025-05-14",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1747230341058342712,
+      "execution_timestamp_ns": 1747230341158342712,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.3,
+      "ask": 1.65,
+      "bid_size": 11,
+      "ask_size": 93,
+      "stock_reference": 20.09,
+      "stock_bar_timestamp_ms": 1747230240000,
+      "stock_reference_age_seconds": 41.058342712
+    },
+    "exit_quote": {
+      "symbol": "O:AMKR250919C00022000",
+      "day": "2025-06-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1749822507966828107,
+      "execution_timestamp_ns": 1749822508066828107,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.05,
+      "ask": 1.55,
+      "bid_size": 10,
+      "ask_size": 49,
+      "stock_reference": 20.0,
+      "stock_bar_timestamp_ms": 1749822420000,
+      "stock_reference_age_seconds": 27.966828107
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2025-05-07",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

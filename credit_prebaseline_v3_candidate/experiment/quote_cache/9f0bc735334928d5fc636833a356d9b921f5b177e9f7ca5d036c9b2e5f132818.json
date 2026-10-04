@@ -1,0 +1,18 @@
+{
+  "symbol": "O:WFRD230120C00035000",
+  "day": "2022-12-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1671462014659961088,
+  "execution_timestamp_ns": 1671462014759961088,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 11.5,
+  "ask": 13,
+  "bid_size": 1,
+  "ask_size": 1,
+  "stock_reference": 46.34,
+  "stock_bar_timestamp_ms": 1671461940000,
+  "stock_reference_age_seconds": 14.659961088
+}

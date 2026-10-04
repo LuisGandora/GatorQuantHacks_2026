@@ -1,0 +1,112 @@
+{
+  "ticker": "PTEN",
+  "event_entry": "2025-02-04",
+  "status": "matched",
+  "issuer": "0000889900",
+  "source_ticker": "PTEN",
+  "event": {
+    "day": "2025-02-04",
+    "exit_date": "2025-03-06",
+    "expiry": "2025-05-16",
+    "symbol": "O:PTEN250516C00009000",
+    "strike": 9.0,
+    "spot": 7.878,
+    "rv20": 0.3276367847758935,
+    "dte_sessions": 71,
+    "entry_quote": {
+      "symbol": "O:PTEN250516C00009000",
+      "day": "2025-02-04",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1738680300066708992,
+      "execution_timestamp_ns": 1738680300166708992,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.35,
+      "ask": 0.45,
+      "bid_size": 1768,
+      "ask_size": 1050,
+      "stock_reference": 7.878,
+      "stock_bar_timestamp_ms": 1738680240000,
+      "stock_reference_age_seconds": 0.066708992
+    },
+    "exit_quote": {
+      "symbol": "O:PTEN250516C00009000",
+      "day": "2025-03-06",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1741272516742465792,
+      "execution_timestamp_ns": 1741272516842465792,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.1,
+      "ask": 0.2,
+      "bid_size": 1052,
+      "ask_size": 356,
+      "stock_reference": 7.085,
+      "stock_bar_timestamp_ms": 1741272420000,
+      "stock_reference_age_seconds": 36.742465792
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-01-28",
+      "exit_date": "2025-02-27",
+      "expiry": "2025-05-16",
+      "symbol": "O:PTEN250516C00009000",
+      "strike": 9.0,
+      "spot": 8.395,
+      "rv20": 0.35599776332602656,
+      "dte_sessions": 76,
+      "entry_quote": {
+        "symbol": "O:PTEN250516C00009000",
+        "day": "2025-01-28",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1738075794655709952,
+        "execution_timestamp_ns": 1738075794755709952,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.55,
+        "ask": 0.7,
+        "bid_size": 482,
+        "ask_size": 200,
+        "stock_reference": 8.395,
+        "stock_bar_timestamp_ms": 1738075680000,
+        "stock_reference_age_seconds": 54.655709952
+      },
+      "exit_quote": {
+        "symbol": "O:PTEN250516C00009000",
+        "day": "2025-02-27",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1740667625004702464,
+        "execution_timestamp_ns": 1740667625104702464,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.35,
+        "ask": 0.45,
+        "bid_size": 547,
+        "ask_size": 1583,
+        "stock_reference": 8.105,
+        "stock_bar_timestamp_ms": 1740667560000,
+        "stock_reference_age_seconds": 5.004702464
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-02-04",
+      "2025-03-06"
+    ],
+    [
+      "2025-01-28",
+      "2025-02-27"
+    ]
+  ]
+}

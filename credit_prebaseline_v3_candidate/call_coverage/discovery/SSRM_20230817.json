@@ -1,0 +1,112 @@
+{
+  "ticker": "SSRM",
+  "event_entry": "2023-08-17",
+  "status": "matched",
+  "issuer": "0000921638",
+  "source_ticker": "SSRM",
+  "event": {
+    "day": "2023-08-17",
+    "exit_date": "2023-09-18",
+    "expiry": "2023-12-15",
+    "symbol": "O:SSRM231215C00016000",
+    "strike": 16.0,
+    "spot": 14.48,
+    "rv20": 0.24802330258347283,
+    "dte_sessions": 84,
+    "entry_quote": {
+      "symbol": "O:SSRM231215C00016000",
+      "day": "2023-08-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1692279901310081280,
+      "execution_timestamp_ns": 1692279901410081280,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.6,
+      "ask": 0.75,
+      "bid_size": 598,
+      "ask_size": 706,
+      "stock_reference": 14.48,
+      "stock_bar_timestamp_ms": 1692279840000,
+      "stock_reference_age_seconds": 1.31008128
+    },
+    "exit_quote": {
+      "symbol": "O:SSRM231215C00016000",
+      "day": "2023-09-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1695044777371452672,
+      "execution_timestamp_ns": 1695044777471452672,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.55,
+      "ask": 0.65,
+      "bid_size": 905,
+      "ask_size": 116,
+      "stock_reference": 14.98,
+      "stock_bar_timestamp_ms": 1695044700000,
+      "stock_reference_age_seconds": 17.371452672
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-08-10",
+      "exit_date": "2023-09-11",
+      "expiry": "2023-12-15",
+      "symbol": "O:SSRM231215C00016000",
+      "strike": 16.0,
+      "spot": 14.69,
+      "rv20": 0.22198373291634255,
+      "dte_sessions": 89,
+      "entry_quote": {
+        "symbol": "O:SSRM231215C00016000",
+        "day": "2023-08-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1691675160768221440,
+        "execution_timestamp_ns": 1691675160868221440,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.6,
+        "ask": 0.85,
+        "bid_size": 1684,
+        "ask_size": 646,
+        "stock_reference": 14.69,
+        "stock_bar_timestamp_ms": 1691675100000,
+        "stock_reference_age_seconds": 0.76822144
+      },
+      "exit_quote": {
+        "symbol": "O:SSRM231215C00016000",
+        "day": "2023-09-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1694439903014113280,
+        "execution_timestamp_ns": 1694439903114113280,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.6,
+        "ask": 0.7,
+        "bid_size": 228,
+        "ask_size": 518,
+        "stock_reference": 14.86,
+        "stock_bar_timestamp_ms": 1694439840000,
+        "stock_reference_age_seconds": 3.01411328
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-08-17",
+      "2023-09-18"
+    ],
+    [
+      "2023-08-10",
+      "2023-09-11"
+    ]
+  ]
+}

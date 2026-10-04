@@ -1,0 +1,32 @@
+{
+  "discovery": {
+    "examined": 94,
+    "matched": 40,
+    "exclusion_counts": {
+      "no_usable_control": 24,
+      "matched": 40,
+      "no_historical_common_symbol": 2,
+      "unusable_quote": 19,
+      "no_chain": 8,
+      "no_strike": 1
+    },
+    "input_integrity_errors": [],
+    "returns_calculated": false,
+    "limitation": "Checkpoint audit; historical CIK checks are performed by the collector. Full text and fixed-horizon coverage audits remain required."
+  },
+  "validation": {
+    "examined": 110,
+    "matched": 40,
+    "exclusion_counts": {
+      "unusable_quote": 41,
+      "matched": 40,
+      "no_usable_control": 19,
+      "no_chain": 7,
+      "no_strike": 1,
+      "no_historical_common_symbol": 2
+    },
+    "input_integrity_errors": [],
+    "returns_calculated": false,
+    "limitation": "Checkpoint audit; historical CIK checks are performed by the collector. Full text and fixed-horizon coverage audits remain required."
+  }
+}

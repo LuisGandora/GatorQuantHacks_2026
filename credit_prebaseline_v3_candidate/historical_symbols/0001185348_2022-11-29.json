@@ -1,0 +1,12 @@
+{
+  "cik": "0001185348",
+  "date": "2022-11-29",
+  "selected": "PRAA",
+  "eligible": [
+    {
+      "ticker": "PRAA",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,60 @@
+{
+  "ticker": "STE",
+  "event_entry": "2024-10-08",
+  "status": "no_usable_control",
+  "issuer": "0001757898",
+  "source_ticker": "STE",
+  "event": {
+    "day": "2024-10-08",
+    "exit_date": "2024-11-06",
+    "expiry": "2025-03-21",
+    "symbol": "O:STE250321C00240000",
+    "strike": 240.0,
+    "spot": 226.7225,
+    "rv20": 0.19396770101620223,
+    "dte_sessions": 112,
+    "entry_quote": {
+      "symbol": "O:STE250321C00240000",
+      "day": "2024-10-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1728395161607531776,
+      "execution_timestamp_ns": 1728395161707531776,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 10,
+      "ask": 14.5,
+      "bid_size": 10,
+      "ask_size": 16,
+      "stock_reference": 226.7225,
+      "stock_bar_timestamp_ms": 1728395100000,
+      "stock_reference_age_seconds": 1.607531776
+    },
+    "exit_quote": {
+      "symbol": "O:STE250321C00240000",
+      "day": "2024-11-06",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 5,
+      "sip_timestamp": 1730905282950170880,
+      "execution_timestamp_ns": 1730905283050170880,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.5,
+      "ask": 12.5,
+      "bid_size": 8,
+      "ask_size": 1,
+      "stock_reference": 227.87,
+      "stock_bar_timestamp_ms": 1730905200000,
+      "stock_reference_age_seconds": 22.95017088
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-10-01",
+      "reason": "unusable_quote"
+    }
+  ]
+}

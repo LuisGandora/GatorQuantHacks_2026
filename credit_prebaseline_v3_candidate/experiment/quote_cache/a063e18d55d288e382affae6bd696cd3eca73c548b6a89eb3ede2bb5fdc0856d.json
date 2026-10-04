@@ -1,0 +1,18 @@
+{
+  "symbol": "O:SHW220916C00280000",
+  "day": "2022-06-03",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1654263900005566464,
+  "execution_timestamp_ns": 1654263900105566464,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 10.2,
+  "ask": 13.8,
+  "bid_size": 288,
+  "ask_size": 143,
+  "stock_reference": 270.13,
+  "stock_bar_timestamp_ms": 1654263840000,
+  "stock_reference_age_seconds": 0.005566464
+}

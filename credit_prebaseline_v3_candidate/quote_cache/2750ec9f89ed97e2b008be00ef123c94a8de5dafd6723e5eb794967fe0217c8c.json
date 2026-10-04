@@ -1,0 +1,18 @@
+{
+  "symbol": "O:LNW250718C00090000",
+  "day": "2025-03-06",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1741272326860306688,
+  "execution_timestamp_ns": 1741272326960306688,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 19,
+  "ask": 21.9,
+  "bid_size": 14,
+  "ask_size": 14,
+  "stock_reference": 105.055,
+  "stock_bar_timestamp_ms": 1741272240000,
+  "stock_reference_age_seconds": 26.860306688
+}

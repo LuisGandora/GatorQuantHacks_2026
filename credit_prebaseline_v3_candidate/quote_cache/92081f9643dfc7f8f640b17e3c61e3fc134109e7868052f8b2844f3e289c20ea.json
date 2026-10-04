@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CRS230915C00055000",
+  "day": "2023-04-19",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1681911907565943296,
+  "execution_timestamp_ns": 1681911907665943296,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.25,
+  "ask": 2.75,
+  "bid_size": 11,
+  "ask_size": 31,
+  "stock_reference": 47.065,
+  "stock_bar_timestamp_ms": 1681911840000,
+  "stock_reference_age_seconds": 7.565943296
+}

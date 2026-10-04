@@ -1,0 +1,60 @@
+{
+  "ticker": "LNW",
+  "event_entry": "2025-02-11",
+  "status": "no_usable_control",
+  "issuer": "0000750004",
+  "source_ticker": "LNW",
+  "event": {
+    "day": "2025-02-11",
+    "exit_date": "2025-03-13",
+    "expiry": "2025-07-18",
+    "symbol": "O:LNW250718C00105000",
+    "strike": 105.0,
+    "spot": 95.56,
+    "rv20": 0.4309086093690083,
+    "dte_sessions": 108,
+    "entry_quote": {
+      "symbol": "O:LNW250718C00105000",
+      "day": "2025-02-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1739285783448467712,
+      "execution_timestamp_ns": 1739285783548467712,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.3,
+      "ask": 6.8,
+      "bid_size": 25,
+      "ask_size": 34,
+      "stock_reference": 95.56,
+      "stock_bar_timestamp_ms": 1739285700000,
+      "stock_reference_age_seconds": 23.448467712
+    },
+    "exit_quote": {
+      "symbol": "O:LNW250718C00105000",
+      "day": "2025-03-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1741873507633999104,
+      "execution_timestamp_ns": 1741873507733999104,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.1,
+      "ask": 9.9,
+      "bid_size": 11,
+      "ask_size": 11,
+      "stock_reference": 101.86,
+      "stock_bar_timestamp_ms": 1741873440000,
+      "stock_reference_age_seconds": 7.633999104
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2025-02-04",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

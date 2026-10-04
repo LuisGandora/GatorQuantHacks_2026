@@ -1,0 +1,112 @@
+{
+  "ticker": "BX",
+  "event_entry": "2025-10-20",
+  "status": "matched",
+  "issuer": "0001393818",
+  "source_ticker": "BX",
+  "event": {
+    "day": "2025-10-20",
+    "exit_date": "2025-11-18",
+    "expiry": "2026-02-20",
+    "symbol": "O:BX260220C00165000",
+    "strike": 165.0,
+    "spot": 160.12,
+    "rv20": 0.31678133372982076,
+    "dte_sessions": 84,
+    "entry_quote": {
+      "symbol": "O:BX260220C00165000",
+      "day": "2025-10-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1760967948783484624,
+      "execution_timestamp_ns": 1760967948883484624,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.85,
+      "ask": 11.3,
+      "bid_size": 31,
+      "ask_size": 120,
+      "stock_reference": 160.12,
+      "stock_bar_timestamp_ms": 1760967840000,
+      "stock_reference_age_seconds": 48.783484624
+    },
+    "exit_quote": {
+      "symbol": "O:BX260220C00165000",
+      "day": "2025-11-18",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1763477115048159224,
+      "execution_timestamp_ns": 1763477115148159224,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.59,
+      "ask": 2.53,
+      "bid_size": 289,
+      "ask_size": 153,
+      "stock_reference": 138.21,
+      "stock_bar_timestamp_ms": 1763477040000,
+      "stock_reference_age_seconds": 15.048159224
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-10-13",
+      "exit_date": "2025-11-11",
+      "expiry": "2026-02-20",
+      "symbol": "O:BX260220C00165000",
+      "strike": 165.0,
+      "spot": 155.8344,
+      "rv20": 0.26389691561890694,
+      "dte_sessions": 89,
+      "entry_quote": {
+        "symbol": "O:BX260220C00165000",
+        "day": "2025-10-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1760363112565430177,
+        "execution_timestamp_ns": 1760363112665430177,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 8.6,
+        "ask": 10,
+        "bid_size": 20,
+        "ask_size": 106,
+        "stock_reference": 155.8344,
+        "stock_bar_timestamp_ms": 1760363040000,
+        "stock_reference_age_seconds": 12.565430177
+      },
+      "exit_quote": {
+        "symbol": "O:BX260220C00165000",
+        "day": "2025-11-11",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1762872377045113343,
+        "execution_timestamp_ns": 1762872377145113343,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3,
+        "ask": 3.95,
+        "bid_size": 175,
+        "ask_size": 181,
+        "stock_reference": 143.83,
+        "stock_bar_timestamp_ms": 1762872300000,
+        "stock_reference_age_seconds": 17.045113343
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-10-20",
+      "2025-11-18"
+    ],
+    [
+      "2025-10-13",
+      "2025-11-11"
+    ]
+  ]
+}

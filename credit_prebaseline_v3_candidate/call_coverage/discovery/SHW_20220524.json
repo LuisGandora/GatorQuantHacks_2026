@@ -1,0 +1,112 @@
+{
+  "ticker": "SHW",
+  "event_entry": "2022-05-24",
+  "status": "matched",
+  "issuer": "0000089800",
+  "source_ticker": "SHW",
+  "event": {
+    "day": "2022-05-24",
+    "exit_date": "2022-06-24",
+    "expiry": "2022-09-16",
+    "symbol": "O:SHW220916C00280000",
+    "strike": 280.0,
+    "spot": 256.35,
+    "rv20": 0.47980018172238226,
+    "dte_sessions": 79,
+    "entry_quote": {
+      "symbol": "O:SHW220916C00280000",
+      "day": "2022-05-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1653399900930800128,
+      "execution_timestamp_ns": 1653399901030800128,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 7.4,
+      "ask": 10.8,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 256.35,
+      "stock_bar_timestamp_ms": 1653399840000,
+      "stock_reference_age_seconds": 0.930800128
+    },
+    "exit_quote": {
+      "symbol": "O:SHW220916C00280000",
+      "day": "2022-06-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1656078301567652096,
+      "execution_timestamp_ns": 1656078301667652096,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1,
+      "ask": 1.65,
+      "bid_size": 220,
+      "ask_size": 76,
+      "stock_reference": 227.49,
+      "stock_bar_timestamp_ms": 1656078240000,
+      "stock_reference_age_seconds": 1.567652096
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-05-17",
+      "exit_date": "2022-06-16",
+      "expiry": "2022-09-16",
+      "symbol": "O:SHW220916C00290000",
+      "strike": 290.0,
+      "spot": 272.65,
+      "rv20": 0.47580628289909016,
+      "dte_sessions": 84,
+      "entry_quote": {
+        "symbol": "O:SHW220916C00290000",
+        "day": "2022-05-17",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1652795106457258752,
+        "execution_timestamp_ns": 1652795106557258752,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 12,
+        "ask": 15.4,
+        "bid_size": 25,
+        "ask_size": 2,
+        "stock_reference": 272.65,
+        "stock_bar_timestamp_ms": 1652795040000,
+        "stock_reference_age_seconds": 6.457258752
+      },
+      "exit_quote": {
+        "symbol": "O:SHW220916C00290000",
+        "day": "2022-06-16",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1655387104152793856,
+        "execution_timestamp_ns": 1655387104252793856,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.15,
+        "ask": 1.3,
+        "bid_size": 178,
+        "ask_size": 307,
+        "stock_reference": 219.71,
+        "stock_bar_timestamp_ms": 1655387040000,
+        "stock_reference_age_seconds": 4.152793856
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-05-24",
+      "2022-06-24"
+    ],
+    [
+      "2022-05-17",
+      "2022-06-16"
+    ]
+  ]
+}

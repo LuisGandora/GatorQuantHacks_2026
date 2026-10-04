@@ -1,0 +1,18 @@
+{
+  "symbol": "O:PRTH260116C00007500",
+  "day": "2025-09-04",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1756993506978630041,
+  "execution_timestamp_ns": 1756993507078630041,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.35,
+  "ask": 1.9,
+  "bid_size": 123,
+  "ask_size": 27,
+  "stock_reference": 8.06,
+  "stock_bar_timestamp_ms": 1756993440000,
+  "stock_reference_age_seconds": 6.978630041
+}

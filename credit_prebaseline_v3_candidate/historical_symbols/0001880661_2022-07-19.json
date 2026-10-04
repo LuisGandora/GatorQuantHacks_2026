@@ -1,0 +1,12 @@
+{
+  "cik": "0001880661",
+  "date": "2022-07-19",
+  "selected": "TPG",
+  "eligible": [
+    {
+      "ticker": "TPG",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

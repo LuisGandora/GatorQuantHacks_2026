@@ -1,0 +1,12 @@
+{
+  "cik": "0001643988",
+  "date": "2024-08-02",
+  "selected": "LPTV",
+  "eligible": [
+    {
+      "ticker": "LPTV",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

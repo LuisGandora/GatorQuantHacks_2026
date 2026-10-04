@@ -1,0 +1,112 @@
+{
+  "ticker": "CAG",
+  "event_entry": "2022-08-30",
+  "status": "matched",
+  "issuer": "0000023217",
+  "source_ticker": "CAG",
+  "event": {
+    "day": "2022-08-30",
+    "exit_date": "2022-09-29",
+    "expiry": "2022-12-16",
+    "symbol": "O:CAG221216C00037000",
+    "strike": 37.0,
+    "spot": 34.965,
+    "rv20": 0.14566481982280016,
+    "dte_sessions": 76,
+    "entry_quote": {
+      "symbol": "O:CAG221216C00037000",
+      "day": "2022-08-30",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1661867100063900672,
+      "execution_timestamp_ns": 1661867100163900672,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.7,
+      "ask": 0.9,
+      "bid_size": 390,
+      "ask_size": 385,
+      "stock_reference": 34.965,
+      "stock_bar_timestamp_ms": 1661867040000,
+      "stock_reference_age_seconds": 0.063900672
+    },
+    "exit_quote": {
+      "symbol": "O:CAG221216C00037000",
+      "day": "2022-09-29",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1664459103044255488,
+      "execution_timestamp_ns": 1664459103144255488,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.3,
+      "ask": 0.5,
+      "bid_size": 893,
+      "ask_size": 484,
+      "stock_reference": 33.38,
+      "stock_bar_timestamp_ms": 1664459040000,
+      "stock_reference_age_seconds": 3.044255488
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-08-23",
+      "exit_date": "2022-09-22",
+      "expiry": "2022-12-16",
+      "symbol": "O:CAG221216C00037000",
+      "strike": 37.0,
+      "spot": 35.205,
+      "rv20": 0.1594882412436663,
+      "dte_sessions": 81,
+      "entry_quote": {
+        "symbol": "O:CAG221216C00037000",
+        "day": "2022-08-23",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1661262300027884032,
+        "execution_timestamp_ns": 1661262300127884032,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.9,
+        "ask": 1.05,
+        "bid_size": 686,
+        "ask_size": 192,
+        "stock_reference": 35.205,
+        "stock_bar_timestamp_ms": 1661262240000,
+        "stock_reference_age_seconds": 0.027884032
+      },
+      "exit_quote": {
+        "symbol": "O:CAG221216C00037000",
+        "day": "2022-09-22",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1663854311575135488,
+        "execution_timestamp_ns": 1663854311675135488,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.5,
+        "ask": 0.7,
+        "bid_size": 215,
+        "ask_size": 1030,
+        "stock_reference": 34.58,
+        "stock_bar_timestamp_ms": 1663854240000,
+        "stock_reference_age_seconds": 11.575135488
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-08-30",
+      "2022-09-29"
+    ],
+    [
+      "2022-08-23",
+      "2022-09-22"
+    ]
+  ]
+}

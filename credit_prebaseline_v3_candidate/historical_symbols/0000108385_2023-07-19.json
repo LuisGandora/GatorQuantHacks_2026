@@ -1,0 +1,12 @@
+{
+  "cik": "0000108385",
+  "date": "2023-07-19",
+  "selected": "WRLD",
+  "eligible": [
+    {
+      "ticker": "WRLD",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

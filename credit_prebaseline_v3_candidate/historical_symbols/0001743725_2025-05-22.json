@@ -1,0 +1,12 @@
+{
+  "cik": "0001743725",
+  "date": "2025-05-22",
+  "selected": "GDYN",
+  "eligible": [
+    {
+      "ticker": "GDYN",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

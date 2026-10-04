@@ -1,0 +1,226 @@
+{
+  "conclusion": "inconclusive",
+  "primary": [
+    {
+      "window": "discovery",
+      "horizon": "21",
+      "n": 40,
+      "dependence_groups": 7,
+      "mean": -0.001037481128635982,
+      "bootstrap_interval": [
+        -0.013519389239865964,
+        0.011052135607557446
+      ],
+      "t_interval": [
+        -0.03114731375846856,
+        0.029072351501196594
+      ],
+      "gate": true,
+      "assignment_lower": {
+        "n": 40,
+        "dependence_groups": 7,
+        "mean": -0.05697610834481346,
+        "bootstrap_interval": [
+          -0.1173576151647475,
+          -0.0074595464666148996
+        ],
+        "t_interval": [
+          -0.1709137528840242,
+          0.05696153619439726
+        ],
+        "gate": true
+      },
+      "assignment_upper": {
+        "n": 40,
+        "dependence_groups": 7,
+        "mean": 0.06432440175958416,
+        "bootstrap_interval": [
+          0.02683357378848041,
+          0.09860459972059307
+        ],
+        "t_interval": [
+          -0.003311006150497481,
+          0.1319598096696658
+        ],
+        "gate": true
+      },
+      "event": {
+        "value": -0.029777210705939895,
+        "entry_credit": 0.05371334843312738,
+        "entry_mid": 0.06677165137410782,
+        "upside": 0.058038657310817074,
+        "downside": 0.03155510610231227,
+        "absolute_move": 0.08959376341312933,
+        "upside_tail": 0.2,
+        "downside_tail": 0.15,
+        "exit_intrinsic": 0.021907172916908756,
+        "exit_time_value": 0.061143444845292716,
+        "entry_spread": 0.026116605881960873,
+        "moneyness": 1.0892631021794228,
+        "assignment_possible": 0.55,
+        "price_return": 0.02574341917072421,
+        "price_upside": 0.05783616579751483,
+        "price_downside": 0.03209274662679064,
+        "absolute_price_move": 0.08992891242430545,
+        "price_upside_tail": 0.2,
+        "price_downside_tail": 0.15,
+        "stock_return_q05_q95": [
+          -0.1328802008547947,
+          0.2460735138176327
+        ]
+      },
+      "baseline": {
+        "value": -0.02873972957730391,
+        "entry_credit": 0.055311897768814774,
+        "entry_mid": 0.06727072050905873,
+        "upside": 0.06176767035051456,
+        "downside": 0.03685293367963392,
+        "absolute_move": 0.09862060403014847,
+        "upside_tail": 0.225,
+        "downside_tail": 0.175,
+        "exit_intrinsic": 0.01857859675876197,
+        "exit_time_value": 0.06502837918546711,
+        "entry_spread": 0.023917645480487894,
+        "moneyness": 1.096471727295691,
+        "assignment_possible": 0.475,
+        "price_return": 0.02344481023306838,
+        "price_upside": 0.06100145468857804,
+        "price_downside": 0.03755664445550966,
+        "absolute_price_move": 0.09855809914408768,
+        "price_upside_tail": 0.225,
+        "price_downside_tail": 0.175,
+        "stock_return_q05_q95": [
+          -0.16768102092000453,
+          0.2768103238525562
+        ]
+      }
+    },
+    {
+      "window": "validation",
+      "horizon": "21",
+      "n": 40,
+      "dependence_groups": 8,
+      "mean": -0.00512810631272406,
+      "bootstrap_interval": [
+        -0.02594964890489849,
+        0.009767261156138622
+      ],
+      "t_interval": [
+        -0.035741853652815465,
+        0.025485641027367348
+      ],
+      "gate": true,
+      "assignment_lower": {
+        "n": 40,
+        "dependence_groups": 8,
+        "mean": -0.035692300438311106,
+        "bootstrap_interval": [
+          -0.07139881845186216,
+          -0.01003068755766466
+        ],
+        "t_interval": [
+          -0.09813884814646565,
+          0.02675424726984344
+        ],
+        "gate": true
+      },
+      "assignment_upper": {
+        "n": 40,
+        "dependence_groups": 8,
+        "mean": 0.02613723338053997,
+        "bootstrap_interval": [
+          -0.003005484465528184,
+          0.051313517643779054
+        ],
+        "t_interval": [
+          -0.03583909968615473,
+          0.08811356644723467
+        ],
+        "gate": true
+      },
+      "event": {
+        "value": -0.01318114920748189,
+        "entry_credit": 0.04896469912804076,
+        "entry_mid": 0.05869446658773023,
+        "upside": 0.03702271354465046,
+        "downside": 0.03786548987407517,
+        "absolute_move": 0.07488820341872562,
+        "upside_tail": 0.15,
+        "downside_tail": 0.15,
+        "exit_intrinsic": 0.009545846545801947,
+        "exit_time_value": 0.05222187099194001,
+        "entry_spread": 0.019459534919378955,
+        "moneyness": 1.092333066845128,
+        "assignment_possible": 0.3,
+        "price_return": -0.002628875648763851,
+        "price_upside": 0.03635218625143675,
+        "price_downside": 0.038981061900200585,
+        "absolute_price_move": 0.07533324815163733,
+        "price_upside_tail": 0.15,
+        "price_downside_tail": 0.175,
+        "stock_return_q05_q95": [
+          -0.13153530250634873,
+          0.13018483176605125
+        ]
+      },
+      "baseline": {
+        "value": -0.00805304289475783,
+        "entry_credit": 0.05200860976897002,
+        "entry_mid": 0.06075178769431997,
+        "upside": 0.03536828049846817,
+        "downside": 0.04606604135972618,
+        "absolute_move": 0.08143432185819437,
+        "upside_tail": 0.15,
+        "downside_tail": 0.15,
+        "exit_intrinsic": 0.012099451189326928,
+        "exit_time_value": 0.04759494271153938,
+        "entry_spread": 0.017486355850699926,
+        "moneyness": 1.0920022113384662,
+        "assignment_possible": 0.275,
+        "price_return": -0.012182021491094227,
+        "price_upside": 0.03427925689233016,
+        "price_downside": 0.046461278383424384,
+        "absolute_price_move": 0.08074053527575456,
+        "price_upside_tail": 0.15,
+        "price_downside_tail": 0.15,
+        "stock_return_q05_q95": [
+          -0.18784133087480376,
+          0.1470129558226551
+        ]
+      }
+    }
+  ],
+  "mechanism": [
+    {
+      "n": 40,
+      "dependence_groups": 1,
+      "regression_rank": 4,
+      "gate": false,
+      "mean": -0.024831856252154037,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "mean_raw_difference": -0.00034842975033098146,
+      "event_iv": 0.4137760199772565,
+      "baseline_iv": 0.41412444972758744,
+      "window": "discovery",
+      "variant": "primary",
+      "inversion_exclusions": []
+    },
+    {
+      "n": 40,
+      "dependence_groups": 2,
+      "regression_rank": 4,
+      "gate": false,
+      "mean": -0.019553006113402053,
+      "bootstrap_interval": null,
+      "t_interval": null,
+      "mean_raw_difference": 0.0013248062369166126,
+      "event_iv": 0.3797567185896441,
+      "baseline_iv": 0.37843191235272744,
+      "window": "validation",
+      "variant": "primary",
+      "inversion_exclusions": []
+    }
+  ],
+  "qualification": "Before/after baseline only; no ordinary-day or sealed-window claim. Assignment bounds/model assumptions and multiplicity limit interpretation."
+}

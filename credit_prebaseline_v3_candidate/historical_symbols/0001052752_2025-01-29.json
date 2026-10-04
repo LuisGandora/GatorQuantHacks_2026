@@ -1,0 +1,12 @@
+{
+  "cik": "0001052752",
+  "date": "2025-01-29",
+  "selected": "GTY",
+  "eligible": [
+    {
+      "ticker": "GTY",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

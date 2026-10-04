@@ -1,0 +1,112 @@
+{
+  "ticker": "OGS",
+  "event_entry": "2025-10-31",
+  "status": "matched",
+  "issuer": "0001587732",
+  "source_ticker": "OGS",
+  "event": {
+    "day": "2025-10-31",
+    "exit_date": "2025-12-02",
+    "expiry": "2026-04-17",
+    "symbol": "O:OGS260417C00085000",
+    "strike": 85.0,
+    "spot": 79.465,
+    "rv20": 0.15501615813266417,
+    "dte_sessions": 114,
+    "entry_quote": {
+      "symbol": "O:OGS260417C00085000",
+      "day": "2025-10-31",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1761918356596421279,
+      "execution_timestamp_ns": 1761918356696421279,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.75,
+      "ask": 4.9,
+      "bid_size": 29,
+      "ask_size": 33,
+      "stock_reference": 79.465,
+      "stock_bar_timestamp_ms": 1761918240000,
+      "stock_reference_age_seconds": 56.596421279
+    },
+    "exit_quote": {
+      "symbol": "O:OGS260417C00085000",
+      "day": "2025-12-02",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1764686712234003428,
+      "execution_timestamp_ns": 1764686712334003428,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.95,
+      "ask": 3.3,
+      "bid_size": 16,
+      "ask_size": 18,
+      "stock_reference": 82.0,
+      "stock_bar_timestamp_ms": 1764686640000,
+      "stock_reference_age_seconds": 12.234003428
+    }
+  },
+  "controls": [
+    {
+      "day": "2025-10-24",
+      "exit_date": "2025-11-24",
+      "expiry": "2026-04-17",
+      "symbol": "O:OGS260417C00090000",
+      "strike": 90.0,
+      "spot": 82.49,
+      "rv20": 0.17370614914761265,
+      "dte_sessions": 119,
+      "entry_quote": {
+        "symbol": "O:OGS260417C00090000",
+        "day": "2025-10-24",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 5,
+        "sip_timestamp": 1761314328804151989,
+        "execution_timestamp_ns": 1761314328904151989,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.3,
+        "ask": 2.15,
+        "bid_size": 37,
+        "ask_size": 1,
+        "stock_reference": 82.49,
+        "stock_bar_timestamp_ms": 1761314220000,
+        "stock_reference_age_seconds": 48.804151989
+      },
+      "exit_quote": {
+        "symbol": "O:OGS260417C00090000",
+        "day": "2025-11-24",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 10,
+        "sip_timestamp": 1763995628945580490,
+        "execution_timestamp_ns": 1763995629045580490,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.25,
+        "ask": 2.15,
+        "bid_size": 6,
+        "ask_size": 1,
+        "stock_reference": 82.305,
+        "stock_bar_timestamp_ms": 1763995560000,
+        "stock_reference_age_seconds": 8.94558049
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2025-10-31",
+      "2025-12-02"
+    ],
+    [
+      "2025-10-24",
+      "2025-11-24"
+    ]
+  ]
+}

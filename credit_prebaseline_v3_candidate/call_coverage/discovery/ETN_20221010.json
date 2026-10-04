@@ -1,0 +1,60 @@
+{
+  "ticker": "ETN",
+  "event_entry": "2022-10-10",
+  "status": "no_usable_control",
+  "issuer": "0001551182",
+  "source_ticker": "ETN",
+  "event": {
+    "day": "2022-10-10",
+    "exit_date": "2022-11-08",
+    "expiry": "2023-01-20",
+    "symbol": "O:ETN230120C00145000",
+    "strike": 145.0,
+    "spot": 136.75,
+    "rv20": 0.3244080755437354,
+    "dte_sessions": 70,
+    "entry_quote": {
+      "symbol": "O:ETN230120C00145000",
+      "day": "2022-10-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1665409500389595392,
+      "execution_timestamp_ns": 1665409500489595392,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.9,
+      "ask": 6.3,
+      "bid_size": 129,
+      "ask_size": 156,
+      "stock_reference": 136.75,
+      "stock_bar_timestamp_ms": 1665409440000,
+      "stock_reference_age_seconds": 0.389595392
+    },
+    "exit_quote": {
+      "symbol": "O:ETN230120C00145000",
+      "day": "2022-11-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1667918700552631552,
+      "execution_timestamp_ns": 1667918700652631552,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 16.1,
+      "ask": 17.5,
+      "bid_size": 112,
+      "ask_size": 133,
+      "stock_reference": 158.035,
+      "stock_bar_timestamp_ms": 1667918640000,
+      "stock_reference_age_seconds": 0.552631552
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2022-10-03",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

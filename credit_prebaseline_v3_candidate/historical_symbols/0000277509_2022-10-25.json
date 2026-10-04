@@ -1,0 +1,12 @@
+{
+  "cik": "0000277509",
+  "date": "2022-10-25",
+  "selected": "FSS",
+  "eligible": [
+    {
+      "ticker": "FSS",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

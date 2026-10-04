@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CDMO240419C00007500",
+  "day": "2023-10-27",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1698414301279460864,
+  "execution_timestamp_ns": 1698414301379460864,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.55,
+  "ask": 1.4,
+  "bid_size": 34,
+  "ask_size": 33,
+  "stock_reference": 6.34,
+  "stock_bar_timestamp_ms": 1698414240000,
+  "stock_reference_age_seconds": 1.279460864
+}

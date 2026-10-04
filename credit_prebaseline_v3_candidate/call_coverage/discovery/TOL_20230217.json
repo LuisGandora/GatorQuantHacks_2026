@@ -1,0 +1,112 @@
+{
+  "ticker": "TOL",
+  "event_entry": "2023-02-17",
+  "status": "matched",
+  "issuer": "0000794170",
+  "source_ticker": "TOL",
+  "event": {
+    "day": "2023-02-17",
+    "exit_date": "2023-03-21",
+    "expiry": "2023-06-16",
+    "symbol": "O:TOL230616C00065000",
+    "strike": 65.0,
+    "spot": 57.8,
+    "rv20": 0.2762740422381962,
+    "dte_sessions": 82,
+    "entry_quote": {
+      "symbol": "O:TOL230616C00065000",
+      "day": "2023-02-17",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1676645100140465920,
+      "execution_timestamp_ns": 1676645100240465920,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.85,
+      "ask": 2.2,
+      "bid_size": 594,
+      "ask_size": 131,
+      "stock_reference": 57.8,
+      "stock_bar_timestamp_ms": 1676645040000,
+      "stock_reference_age_seconds": 0.14046592
+    },
+    "exit_quote": {
+      "symbol": "O:TOL230616C00065000",
+      "day": "2023-03-21",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1679406301825180672,
+      "execution_timestamp_ns": 1679406301925180672,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.5,
+      "ask": 1.8,
+      "bid_size": 410,
+      "ask_size": 222,
+      "stock_reference": 58.305,
+      "stock_bar_timestamp_ms": 1679406240000,
+      "stock_reference_age_seconds": 1.825180672
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-02-10",
+      "exit_date": "2023-03-14",
+      "expiry": "2023-06-16",
+      "symbol": "O:TOL230616C00065000",
+      "strike": 65.0,
+      "spot": 58.515,
+      "rv20": 0.28104240372761036,
+      "dte_sessions": 87,
+      "entry_quote": {
+        "symbol": "O:TOL230616C00065000",
+        "day": "2023-02-10",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1676040304486551552,
+        "execution_timestamp_ns": 1676040304586551552,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.2,
+        "ask": 2.6,
+        "bid_size": 687,
+        "ask_size": 23,
+        "stock_reference": 58.515,
+        "stock_bar_timestamp_ms": 1676040240000,
+        "stock_reference_age_seconds": 4.486551552
+      },
+      "exit_quote": {
+        "symbol": "O:TOL230616C00065000",
+        "day": "2023-03-14",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1678801500186400256,
+        "execution_timestamp_ns": 1678801500286400256,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.5,
+        "ask": 2,
+        "bid_size": 353,
+        "ask_size": 765,
+        "stock_reference": 58.0,
+        "stock_bar_timestamp_ms": 1678801440000,
+        "stock_reference_age_seconds": 0.186400256
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-02-17",
+      "2023-03-21"
+    ],
+    [
+      "2023-02-10",
+      "2023-03-14"
+    ]
+  ]
+}

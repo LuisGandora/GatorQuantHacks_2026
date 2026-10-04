@@ -1,0 +1,18 @@
+{
+  "symbol": "O:COTY231117C00013000",
+  "day": "2023-07-17",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1689601541159958784,
+  "execution_timestamp_ns": 1689601541259958784,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.87,
+  "ask": 0.89,
+  "bid_size": 6,
+  "ask_size": 1,
+  "stock_reference": 12.275,
+  "stock_bar_timestamp_ms": 1689601440000,
+  "stock_reference_age_seconds": 41.159958784
+}

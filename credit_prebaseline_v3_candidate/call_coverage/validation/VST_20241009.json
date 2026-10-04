@@ -1,0 +1,112 @@
+{
+  "ticker": "VST",
+  "event_entry": "2024-10-09",
+  "status": "matched",
+  "issuer": "0001692819",
+  "source_ticker": "VST",
+  "event": {
+    "day": "2024-10-09",
+    "exit_date": "2024-11-07",
+    "expiry": "2025-01-17",
+    "symbol": "O:VST250117C00135000",
+    "strike": 135.0,
+    "spot": 124.82,
+    "rv20": 0.687904682045089,
+    "dte_sessions": 68,
+    "entry_quote": {
+      "symbol": "O:VST250117C00135000",
+      "day": "2024-10-09",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1728481500971330816,
+      "execution_timestamp_ns": 1728481501071330816,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 11.5,
+      "ask": 12.1,
+      "bid_size": 76,
+      "ask_size": 238,
+      "stock_reference": 124.82,
+      "stock_bar_timestamp_ms": 1728481440000,
+      "stock_reference_age_seconds": 0.971330816
+    },
+    "exit_quote": {
+      "symbol": "O:VST250117C00135000",
+      "day": "2024-11-07",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1730990700020304640,
+      "execution_timestamp_ns": 1730990700120304640,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 11.7,
+      "ask": 12.9,
+      "bid_size": 1062,
+      "ask_size": 140,
+      "stock_reference": 133.525,
+      "stock_bar_timestamp_ms": 1730990640000,
+      "stock_reference_age_seconds": 0.02030464
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-10-02",
+      "exit_date": "2024-10-31",
+      "expiry": "2025-01-17",
+      "symbol": "O:VST250117C00130000",
+      "strike": 130.0,
+      "spot": 122.43,
+      "rv20": 0.6337427516670517,
+      "dte_sessions": 73,
+      "entry_quote": {
+        "symbol": "O:VST250117C00130000",
+        "day": "2024-10-02",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1727876700503587072,
+        "execution_timestamp_ns": 1727876700603587072,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 12.3,
+        "ask": 12.7,
+        "bid_size": 62,
+        "ask_size": 200,
+        "stock_reference": 122.43,
+        "stock_bar_timestamp_ms": 1727876640000,
+        "stock_reference_age_seconds": 0.503587072
+      },
+      "exit_quote": {
+        "symbol": "O:VST250117C00130000",
+        "day": "2024-10-31",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1730382300535153408,
+        "execution_timestamp_ns": 1730382300635153408,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 12.6,
+        "ask": 13.1,
+        "bid_size": 628,
+        "ask_size": 246,
+        "stock_reference": 124.88,
+        "stock_bar_timestamp_ms": 1730382240000,
+        "stock_reference_age_seconds": 0.535153408
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-10-09",
+      "2024-11-07"
+    ],
+    [
+      "2024-10-02",
+      "2024-10-31"
+    ]
+  ]
+}

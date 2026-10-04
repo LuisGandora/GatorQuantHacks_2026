@@ -1,0 +1,60 @@
+{
+  "ticker": "PRAA",
+  "event_entry": "2022-11-29",
+  "status": "no_usable_control",
+  "issuer": "0001185348",
+  "source_ticker": "PRAA",
+  "event": {
+    "day": "2022-11-29",
+    "exit_date": "2022-12-29",
+    "expiry": "2023-03-17",
+    "symbol": "O:PRAA230317C00037500",
+    "strike": 37.5,
+    "spot": 33.67,
+    "rv20": 0.2910942725786912,
+    "dte_sessions": 74,
+    "entry_quote": {
+      "symbol": "O:PRAA230317C00037500",
+      "day": "2022-11-29",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1669734572913222912,
+      "execution_timestamp_ns": 1669734573013222912,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.15,
+      "ask": 1.4,
+      "bid_size": 1,
+      "ask_size": 3,
+      "stock_reference": 33.67,
+      "stock_bar_timestamp_ms": 1669734480000,
+      "stock_reference_age_seconds": 32.913222912
+    },
+    "exit_quote": {
+      "symbol": "O:PRAA230317C00037500",
+      "day": "2022-12-29",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 5,
+      "sip_timestamp": 1672325254789705216,
+      "execution_timestamp_ns": 1672325254889705216,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 1.5,
+      "bid_size": 93,
+      "ask_size": 74,
+      "stock_reference": 34.07,
+      "stock_bar_timestamp_ms": 1672325160000,
+      "stock_reference_age_seconds": 34.789705216
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2022-11-21",
+      "reason": "unusable_quote"
+    }
+  ]
+}

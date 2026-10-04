@@ -1,0 +1,18 @@
+{
+  "symbol": "O:GETY230818C00007500",
+  "day": "2023-06-05",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1685972708634605056,
+  "execution_timestamp_ns": 1685972708734605056,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.05,
+  "ask": 0.3,
+  "bid_size": 270,
+  "ask_size": 70,
+  "stock_reference": 5.0015,
+  "stock_bar_timestamp_ms": 1685972640000,
+  "stock_reference_age_seconds": 8.634605056
+}

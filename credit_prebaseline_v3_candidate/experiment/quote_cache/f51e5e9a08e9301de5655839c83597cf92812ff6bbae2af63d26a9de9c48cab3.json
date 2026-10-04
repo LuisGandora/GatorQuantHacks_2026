@@ -1,0 +1,18 @@
+{
+  "symbol": "O:AMG230317C00165000",
+  "day": "2022-11-22",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 8,
+  "sip_timestamp": 1669128399354562560,
+  "execution_timestamp_ns": 1669128399454562560,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 7,
+  "ask": 11.3,
+  "bid_size": 8,
+  "ask_size": 8,
+  "stock_reference": 154.96,
+  "stock_bar_timestamp_ms": 1669128300000,
+  "stock_reference_age_seconds": 39.35456256
+}

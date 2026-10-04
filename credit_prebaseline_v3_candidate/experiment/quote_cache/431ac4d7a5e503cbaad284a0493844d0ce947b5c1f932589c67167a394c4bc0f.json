@@ -1,0 +1,18 @@
+{
+  "symbol": "O:CAG221216C00038000",
+  "day": "2022-09-20",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1663681500750999808,
+  "execution_timestamp_ns": 1663681500850999808,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.2,
+  "ask": 0.35,
+  "bid_size": 592,
+  "ask_size": 588,
+  "stock_reference": 34.04,
+  "stock_bar_timestamp_ms": 1663681440000,
+  "stock_reference_age_seconds": 0.750999808
+}

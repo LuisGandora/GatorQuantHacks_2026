@@ -1,0 +1,18 @@
+{
+  "symbol": "O:HAE221216C00075000",
+  "day": "2022-08-04",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1659620846385707008,
+  "execution_timestamp_ns": 1659620846485707008,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 3.4,
+  "ask": 6.5,
+  "bid_size": 22,
+  "ask_size": 117,
+  "stock_reference": 68.13,
+  "stock_bar_timestamp_ms": 1659620760000,
+  "stock_reference_age_seconds": 26.385707008
+}

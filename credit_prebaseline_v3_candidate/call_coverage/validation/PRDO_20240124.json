@@ -1,0 +1,112 @@
+{
+  "ticker": "PRDO",
+  "event_entry": "2024-01-24",
+  "status": "matched",
+  "issuer": "0001046568",
+  "source_ticker": "PRDO",
+  "event": {
+    "day": "2024-01-24",
+    "exit_date": "2024-02-23",
+    "expiry": "2024-05-17",
+    "symbol": "O:PRDO240517C00020000",
+    "strike": 20.0,
+    "spot": 18.44,
+    "rv20": 0.2466425648706763,
+    "dte_sessions": 80,
+    "entry_quote": {
+      "symbol": "O:PRDO240517C00020000",
+      "day": "2024-01-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1706107504621063680,
+      "execution_timestamp_ns": 1706107504721063680,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 1.95,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 18.44,
+      "stock_bar_timestamp_ms": 1706107440000,
+      "stock_reference_age_seconds": 4.62106368
+    },
+    "exit_quote": {
+      "symbol": "O:PRDO240517C00020000",
+      "day": "2024-02-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1708699914928270592,
+      "execution_timestamp_ns": 1708699915028270592,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.25,
+      "ask": 0.5,
+      "bid_size": 44,
+      "ask_size": 20,
+      "stock_reference": 17.15,
+      "stock_bar_timestamp_ms": 1708699800000,
+      "stock_reference_age_seconds": 54.928270592
+    }
+  },
+  "controls": [
+    {
+      "day": "2024-01-17",
+      "exit_date": "2024-02-15",
+      "expiry": "2024-05-17",
+      "symbol": "O:PRDO240517C00020000",
+      "strike": 20.0,
+      "spot": 17.53,
+      "rv20": 0.22781535518217194,
+      "dte_sessions": 85,
+      "entry_quote": {
+        "symbol": "O:PRDO240517C00020000",
+        "day": "2024-01-17",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 29,
+        "sip_timestamp": 1705503121220673280,
+        "execution_timestamp_ns": 1705503121320673280,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.35,
+        "ask": 0.8,
+        "bid_size": 110,
+        "ask_size": 36,
+        "stock_reference": 17.53,
+        "stock_bar_timestamp_ms": 1705503060000,
+        "stock_reference_age_seconds": 1.22067328
+      },
+      "exit_quote": {
+        "symbol": "O:PRDO240517C00020000",
+        "day": "2024-02-15",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 19,
+        "sip_timestamp": 1708008663532989440,
+        "execution_timestamp_ns": 1708008663632989440,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.4,
+        "ask": 0.75,
+        "bid_size": 54,
+        "ask_size": 21,
+        "stock_reference": 17.74,
+        "stock_bar_timestamp_ms": 1708008600000,
+        "stock_reference_age_seconds": 3.53298944
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2024-01-24",
+      "2024-02-23"
+    ],
+    [
+      "2024-01-17",
+      "2024-02-15"
+    ]
+  ]
+}

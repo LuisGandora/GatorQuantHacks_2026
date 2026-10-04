@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DOV230915C00155000",
+  "day": "2023-05-11",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 11,
+  "sip_timestamp": 1683812774820568064,
+  "execution_timestamp_ns": 1683812774920568064,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 1.8,
+  "ask": 3.3,
+  "bid_size": 30,
+  "ask_size": 43,
+  "stock_reference": 140.4627,
+  "stock_bar_timestamp_ms": 1683812700000,
+  "stock_reference_age_seconds": 14.820568064
+}

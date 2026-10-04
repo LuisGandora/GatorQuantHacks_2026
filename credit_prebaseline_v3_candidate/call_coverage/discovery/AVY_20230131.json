@@ -1,0 +1,112 @@
+{
+  "ticker": "AVY",
+  "event_entry": "2023-01-31",
+  "status": "matched",
+  "issuer": "0000008818",
+  "source_ticker": "AVY",
+  "event": {
+    "day": "2023-01-31",
+    "exit_date": "2023-03-02",
+    "expiry": "2023-07-21",
+    "symbol": "O:AVY230721C00195000",
+    "strike": 195.0,
+    "spot": 186.07,
+    "rv20": 0.24914709628574216,
+    "dte_sessions": 118,
+    "entry_quote": {
+      "symbol": "O:AVY230721C00195000",
+      "day": "2023-01-31",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1675176300303779328,
+      "execution_timestamp_ns": 1675176300403779328,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8.4,
+      "ask": 12.8,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 186.07,
+      "stock_bar_timestamp_ms": 1675176240000,
+      "stock_reference_age_seconds": 0.303779328
+    },
+    "exit_quote": {
+      "symbol": "O:AVY230721C00195000",
+      "day": "2023-03-02",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 40,
+      "sip_timestamp": 1677768711441771264,
+      "execution_timestamp_ns": 1677768711541771264,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.7,
+      "ask": 8.6,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 180.22,
+      "stock_bar_timestamp_ms": 1677768600000,
+      "stock_reference_age_seconds": 51.441771264
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-01-24",
+      "exit_date": "2023-02-23",
+      "expiry": "2023-07-21",
+      "symbol": "O:AVY230721C00210000",
+      "strike": 210.0,
+      "spot": 186.18,
+      "rv20": 0.23721168987093602,
+      "dte_sessions": 123,
+      "entry_quote": {
+        "symbol": "O:AVY230721C00210000",
+        "day": "2023-01-24",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1674571578942974976,
+        "execution_timestamp_ns": 1674571579042974976,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 3.4,
+        "ask": 7.9,
+        "bid_size": 1,
+        "ask_size": 1,
+        "stock_reference": 186.18,
+        "stock_bar_timestamp_ms": 1674571500000,
+        "stock_reference_age_seconds": 18.942974976
+      },
+      "exit_quote": {
+        "symbol": "O:AVY230721C00210000",
+        "day": "2023-02-23",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1677163555976190464,
+        "execution_timestamp_ns": 1677163556076190464,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1,
+        "ask": 5.8,
+        "bid_size": 37,
+        "ask_size": 51,
+        "stock_reference": 184.36,
+        "stock_bar_timestamp_ms": 1677163440000,
+        "stock_reference_age_seconds": 55.976190464
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-01-31",
+      "2023-03-02"
+    ],
+    [
+      "2023-01-24",
+      "2023-02-23"
+    ]
+  ]
+}

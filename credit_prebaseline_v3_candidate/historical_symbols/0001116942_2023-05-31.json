@@ -1,0 +1,12 @@
+{
+  "cik": "0001116942",
+  "date": "2023-05-31",
+  "selected": "TTMI",
+  "eligible": [
+    {
+      "ticker": "TTMI",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,60 @@
+{
+  "ticker": "TITN",
+  "event_entry": "2024-05-24",
+  "status": "no_usable_control",
+  "issuer": "0001409171",
+  "source_ticker": "TITN",
+  "event": {
+    "day": "2024-05-24",
+    "exit_date": "2024-06-26",
+    "expiry": "2024-09-20",
+    "symbol": "O:TITN240920C00022500",
+    "strike": 22.5,
+    "spot": 19.31,
+    "rv20": 0.6196069320367728,
+    "dte_sessions": 81,
+    "entry_quote": {
+      "symbol": "O:TITN240920C00022500",
+      "day": "2024-05-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 5,
+      "sip_timestamp": 1716558425437033472,
+      "execution_timestamp_ns": 1716558425537033472,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.65,
+      "ask": 0.85,
+      "bid_size": 32,
+      "ask_size": 148,
+      "stock_reference": 19.31,
+      "stock_bar_timestamp_ms": 1716558360000,
+      "stock_reference_age_seconds": 5.437033472
+    },
+    "exit_quote": {
+      "symbol": "O:TITN240920C00022500",
+      "day": "2024-06-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 6,
+      "sip_timestamp": 1719410977528191744,
+      "execution_timestamp_ns": 1719410977628191744,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.05,
+      "ask": 0.2,
+      "bid_size": 36,
+      "ask_size": 17,
+      "stock_reference": 16.14,
+      "stock_bar_timestamp_ms": 1719410880000,
+      "stock_reference_age_seconds": 37.528191744
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-05-17",
+      "reason": "unusable_quote"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "ticker": "ACGL",
+  "event_entry": "2023-08-25",
+  "status": "matched",
+  "issuer": "0000947484",
+  "source_ticker": "ACGL",
+  "event": {
+    "day": "2023-08-25",
+    "exit_date": "2023-09-26",
+    "expiry": "2023-12-15",
+    "symbol": "O:ACGL231215C00080000",
+    "strike": 80.0,
+    "spot": 75.27,
+    "rv20": 0.22319288822707153,
+    "dte_sessions": 78,
+    "entry_quote": {
+      "symbol": "O:ACGL231215C00080000",
+      "day": "2023-08-25",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1692971112604175104,
+      "execution_timestamp_ns": 1692971112704175104,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.45,
+      "ask": 3.9,
+      "bid_size": 12,
+      "ask_size": 14,
+      "stock_reference": 75.27,
+      "stock_bar_timestamp_ms": 1692971040000,
+      "stock_reference_age_seconds": 12.604175104
+    },
+    "exit_quote": {
+      "symbol": "O:ACGL231215C00080000",
+      "day": "2023-09-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1695735922622837760,
+      "execution_timestamp_ns": 1695735922722837760,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.4,
+      "ask": 5.6,
+      "bid_size": 33,
+      "ask_size": 20,
+      "stock_reference": 81.715,
+      "stock_bar_timestamp_ms": 1695735840000,
+      "stock_reference_age_seconds": 22.62283776
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-08-18",
+      "exit_date": "2023-09-19",
+      "expiry": "2023-12-15",
+      "symbol": "O:ACGL231215C00080000",
+      "strike": 80.0,
+      "spot": 74.73,
+      "rv20": 0.2411980200660202,
+      "dte_sessions": 83,
+      "entry_quote": {
+        "symbol": "O:ACGL231215C00080000",
+        "day": "2023-08-18",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1692366301087884544,
+        "execution_timestamp_ns": 1692366301187884544,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.5,
+        "ask": 4.8,
+        "bid_size": 21,
+        "ask_size": 82,
+        "stock_reference": 74.73,
+        "stock_bar_timestamp_ms": 1692366240000,
+        "stock_reference_age_seconds": 1.087884544
+      },
+      "exit_quote": {
+        "symbol": "O:ACGL231215C00080000",
+        "day": "2023-09-19",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1695131136560526336,
+        "execution_timestamp_ns": 1695131136660526336,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.9,
+        "ask": 6,
+        "bid_size": 13,
+        "ask_size": 133,
+        "stock_reference": 80.63,
+        "stock_bar_timestamp_ms": 1695131040000,
+        "stock_reference_age_seconds": 36.560526336
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-08-25",
+      "2023-09-26"
+    ],
+    [
+      "2023-08-18",
+      "2023-09-19"
+    ]
+  ]
+}

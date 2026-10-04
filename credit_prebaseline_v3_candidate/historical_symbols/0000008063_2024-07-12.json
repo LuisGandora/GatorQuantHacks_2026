@@ -1,0 +1,12 @@
+{
+  "cik": "0000008063",
+  "date": "2024-07-12",
+  "selected": "ATRO",
+  "eligible": [
+    {
+      "ticker": "ATRO",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

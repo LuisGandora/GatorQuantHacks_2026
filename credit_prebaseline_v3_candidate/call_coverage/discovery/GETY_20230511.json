@@ -1,0 +1,112 @@
+{
+  "ticker": "GETY",
+  "event_entry": "2023-05-11",
+  "status": "matched",
+  "issuer": "0001898496",
+  "source_ticker": "GETY",
+  "event": {
+    "day": "2023-05-11",
+    "exit_date": "2023-06-12",
+    "expiry": "2023-08-18",
+    "symbol": "O:GETY230818C00007500",
+    "strike": 7.5,
+    "spot": 6.142,
+    "rv20": 1.2544020050103633,
+    "dte_sessions": 68,
+    "entry_quote": {
+      "symbol": "O:GETY230818C00007500",
+      "day": "2023-05-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1683812701286031872,
+      "execution_timestamp_ns": 1683812701386031872,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.25,
+      "ask": 0.65,
+      "bid_size": 982,
+      "ask_size": 10,
+      "stock_reference": 6.142,
+      "stock_bar_timestamp_ms": 1683812640000,
+      "stock_reference_age_seconds": 1.286031872
+    },
+    "exit_quote": {
+      "symbol": "O:GETY230818C00007500",
+      "day": "2023-06-12",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 25,
+      "sip_timestamp": 1686578379627278080,
+      "execution_timestamp_ns": 1686578379727278080,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.1,
+      "ask": 0.45,
+      "bid_size": 50,
+      "ask_size": 492,
+      "stock_reference": 5.8,
+      "stock_bar_timestamp_ms": 1686578280000,
+      "stock_reference_age_seconds": 39.62727808
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-05-04",
+      "exit_date": "2023-06-05",
+      "expiry": "2023-08-18",
+      "symbol": "O:GETY230818C00007500",
+      "strike": 7.5,
+      "spot": 5.9999,
+      "rv20": 1.2950846570741106,
+      "dte_sessions": 73,
+      "entry_quote": {
+        "symbol": "O:GETY230818C00007500",
+        "day": "2023-05-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 42,
+        "sip_timestamp": 1683207968471857664,
+        "execution_timestamp_ns": 1683207968571857664,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.35,
+        "ask": 0.7,
+        "bid_size": 683,
+        "ask_size": 2,
+        "stock_reference": 5.9999,
+        "stock_bar_timestamp_ms": 1683207900000,
+        "stock_reference_age_seconds": 8.471857664
+      },
+      "exit_quote": {
+        "symbol": "O:GETY230818C00007500",
+        "day": "2023-06-05",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1685972708634605056,
+        "execution_timestamp_ns": 1685972708734605056,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.05,
+        "ask": 0.3,
+        "bid_size": 270,
+        "ask_size": 70,
+        "stock_reference": 5.0015,
+        "stock_bar_timestamp_ms": 1685972640000,
+        "stock_reference_age_seconds": 8.634605056
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-05-11",
+      "2023-06-12"
+    ],
+    [
+      "2023-05-04",
+      "2023-06-05"
+    ]
+  ]
+}

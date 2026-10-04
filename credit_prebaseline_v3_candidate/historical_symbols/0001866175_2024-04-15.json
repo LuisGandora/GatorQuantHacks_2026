@@ -1,0 +1,12 @@
+{
+  "cik": "0001866175",
+  "date": "2024-04-15",
+  "selected": "CRGY",
+  "eligible": [
+    {
+      "ticker": "CRGY",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

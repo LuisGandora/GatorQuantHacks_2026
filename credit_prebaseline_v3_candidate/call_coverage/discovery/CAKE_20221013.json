@@ -1,0 +1,112 @@
+{
+  "ticker": "CAKE",
+  "event_entry": "2022-10-13",
+  "status": "matched",
+  "issuer": "0000887596",
+  "source_ticker": "CAKE",
+  "event": {
+    "day": "2022-10-13",
+    "exit_date": "2022-11-11",
+    "expiry": "2023-01-20",
+    "symbol": "O:CAKE230120C00035000",
+    "strike": 35.0,
+    "spot": 31.82,
+    "rv20": 0.5105218544198001,
+    "dte_sessions": 67,
+    "entry_quote": {
+      "symbol": "O:CAKE230120C00035000",
+      "day": "2022-10-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1665668705543236864,
+      "execution_timestamp_ns": 1665668705643236864,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.3,
+      "ask": 2.95,
+      "bid_size": 691,
+      "ask_size": 729,
+      "stock_reference": 31.82,
+      "stock_bar_timestamp_ms": 1665668640000,
+      "stock_reference_age_seconds": 5.543236864
+    },
+    "exit_quote": {
+      "symbol": "O:CAKE230120C00035000",
+      "day": "2022-11-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1668177900465052672,
+      "execution_timestamp_ns": 1668177900565052672,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.6,
+      "ask": 3.9,
+      "bid_size": 139,
+      "ask_size": 161,
+      "stock_reference": 36.41,
+      "stock_bar_timestamp_ms": 1668177840000,
+      "stock_reference_age_seconds": 0.465052672
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-10-06",
+      "exit_date": "2022-11-04",
+      "expiry": "2023-01-20",
+      "symbol": "O:CAKE230120C00035000",
+      "strike": 35.0,
+      "spot": 32.2,
+      "rv20": 0.5226321460527074,
+      "dte_sessions": 72,
+      "entry_quote": {
+        "symbol": "O:CAKE230120C00035000",
+        "day": "2022-10-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1665063900284733952,
+        "execution_timestamp_ns": 1665063900384733952,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.35,
+        "ask": 2.65,
+        "bid_size": 282,
+        "ask_size": 399,
+        "stock_reference": 32.2,
+        "stock_bar_timestamp_ms": 1665063840000,
+        "stock_reference_age_seconds": 0.284733952
+      },
+      "exit_quote": {
+        "symbol": "O:CAKE230120C00035000",
+        "day": "2022-11-04",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1667569505845868800,
+        "execution_timestamp_ns": 1667569505945868800,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.1,
+        "ask": 2.3,
+        "bid_size": 83,
+        "ask_size": 244,
+        "stock_reference": 33.28,
+        "stock_bar_timestamp_ms": 1667569440000,
+        "stock_reference_age_seconds": 5.8458688
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-10-13",
+      "2022-11-11"
+    ],
+    [
+      "2022-10-06",
+      "2022-11-04"
+    ]
+  ]
+}

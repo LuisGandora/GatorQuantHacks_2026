@@ -1,0 +1,60 @@
+{
+  "ticker": "VC",
+  "event_entry": "2022-07-25",
+  "status": "no_usable_control",
+  "issuer": "0001111335",
+  "source_ticker": "VC",
+  "event": {
+    "day": "2022-07-25",
+    "exit_date": "2022-08-23",
+    "expiry": "2022-12-16",
+    "symbol": "O:VC221216C00125000",
+    "strike": 125.0,
+    "spot": 116.53,
+    "rv20": 0.4404352965208321,
+    "dte_sessions": 102,
+    "entry_quote": {
+      "symbol": "O:VC221216C00125000",
+      "day": "2022-07-25",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 8,
+      "sip_timestamp": 1658756897081746432,
+      "execution_timestamp_ns": 1658756897181746432,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 10.7,
+      "ask": 13.7,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 116.53,
+      "stock_bar_timestamp_ms": 1658756820000,
+      "stock_reference_age_seconds": 17.081746432
+    },
+    "exit_quote": {
+      "symbol": "O:VC221216C00125000",
+      "day": "2022-08-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 28,
+      "sip_timestamp": 1661263052719587328,
+      "execution_timestamp_ns": 1661263052819587328,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 10.5,
+      "ask": 12.4,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 121.11,
+      "stock_bar_timestamp_ms": 1661262960000,
+      "stock_reference_age_seconds": 32.719587328
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2022-07-18",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

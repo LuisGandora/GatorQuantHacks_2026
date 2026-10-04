@@ -1,0 +1,60 @@
+{
+  "ticker": "IESC",
+  "event_entry": "2025-01-23",
+  "status": "no_usable_control",
+  "issuer": "0001048268",
+  "source_ticker": "IESC",
+  "event": {
+    "day": "2025-01-23",
+    "exit_date": "2025-02-24",
+    "expiry": "2025-06-20",
+    "symbol": "O:IESC250620C00340000",
+    "strike": 340.0,
+    "spot": 302.0,
+    "rv20": 0.798430643074051,
+    "dte_sessions": 102,
+    "entry_quote": {
+      "symbol": "O:IESC250620C00340000",
+      "day": "2025-01-23",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 11,
+      "sip_timestamp": 1737643560161308416,
+      "execution_timestamp_ns": 1737643560261308416,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 38,
+      "ask": 42.9,
+      "bid_size": 6,
+      "ask_size": 5,
+      "stock_reference": 302.0,
+      "stock_bar_timestamp_ms": 1737643500000,
+      "stock_reference_age_seconds": 0.161308416
+    },
+    "exit_quote": {
+      "symbol": "O:IESC250620C00340000",
+      "day": "2025-02-24",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 11,
+      "sip_timestamp": 1740409274705746176,
+      "execution_timestamp_ns": 1740409274805746176,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.5,
+      "ask": 3.8,
+      "bid_size": 12,
+      "ask_size": 14,
+      "stock_reference": 186.0,
+      "stock_bar_timestamp_ms": 1740409200000,
+      "stock_reference_age_seconds": 14.705746176
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2025-01-15",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

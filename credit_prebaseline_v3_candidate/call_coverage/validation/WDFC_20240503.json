@@ -1,0 +1,60 @@
+{
+  "ticker": "WDFC",
+  "event_entry": "2024-05-03",
+  "status": "no_usable_control",
+  "issuer": "0000105132",
+  "source_ticker": "WDFC",
+  "event": {
+    "day": "2024-05-03",
+    "exit_date": "2024-06-04",
+    "expiry": "2024-08-16",
+    "symbol": "O:WDFC240816C00250000",
+    "strike": 250.0,
+    "spot": 231.78,
+    "rv20": 0.3920868825462606,
+    "dte_sessions": 72,
+    "entry_quote": {
+      "symbol": "O:WDFC240816C00250000",
+      "day": "2024-05-03",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 153,
+      "sip_timestamp": 1714745066463087616,
+      "execution_timestamp_ns": 1714745066563087616,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 8,
+      "ask": 11.2,
+      "bid_size": 35,
+      "ask_size": 7,
+      "stock_reference": 231.78,
+      "stock_bar_timestamp_ms": 1714744980000,
+      "stock_reference_age_seconds": 26.463087616
+    },
+    "exit_quote": {
+      "symbol": "O:WDFC240816C00250000",
+      "day": "2024-06-04",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 116,
+      "sip_timestamp": 1717509862584314880,
+      "execution_timestamp_ns": 1717509862684314880,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 4.8,
+      "ask": 6.8,
+      "bid_size": 34,
+      "ask_size": 38,
+      "stock_reference": 225.1501,
+      "stock_bar_timestamp_ms": 1717509780000,
+      "stock_reference_age_seconds": 22.58431488
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-04-26",
+      "reason": "unusable_quote"
+    }
+  ]
+}

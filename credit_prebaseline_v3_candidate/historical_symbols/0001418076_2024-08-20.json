@@ -1,0 +1,12 @@
+{
+  "cik": "0001418076",
+  "date": "2024-08-20",
+  "selected": "SLRC",
+  "eligible": [
+    {
+      "ticker": "SLRC",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

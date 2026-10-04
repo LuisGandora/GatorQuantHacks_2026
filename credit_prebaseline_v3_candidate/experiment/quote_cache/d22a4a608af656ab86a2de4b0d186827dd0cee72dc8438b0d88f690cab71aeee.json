@@ -1,0 +1,18 @@
+{
+  "symbol": "O:DAL230317C00037000",
+  "day": "2022-11-16",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1668609940417748736,
+  "execution_timestamp_ns": 1668609940517748736,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.45,
+  "ask": 2.51,
+  "bid_size": 66,
+  "ask_size": 11,
+  "stock_reference": 34.53,
+  "stock_bar_timestamp_ms": 1668609840000,
+  "stock_reference_age_seconds": 40.417748736
+}

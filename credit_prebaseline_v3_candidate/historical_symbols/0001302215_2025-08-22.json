@@ -1,0 +1,12 @@
+{
+  "cik": "0001302215",
+  "date": "2025-08-22",
+  "selected": "HLI",
+  "eligible": [
+    {
+      "ticker": "HLI",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001835632",
+  "date": "2023-04-18",
+  "selected": "MRVL",
+  "eligible": [
+    {
+      "ticker": "MRVL",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0000105132",
+  "date": "2024-05-03",
+  "selected": "WDFC",
+  "eligible": [
+    {
+      "ticker": "WDFC",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

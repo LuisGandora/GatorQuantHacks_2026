@@ -1,0 +1,60 @@
+{
+  "ticker": "DKNG",
+  "event_entry": "2024-11-11",
+  "status": "no_usable_control",
+  "issuer": "0001883685",
+  "source_ticker": "DKNG",
+  "event": {
+    "day": "2024-11-11",
+    "exit_date": "2024-12-11",
+    "expiry": "2025-03-21",
+    "symbol": "O:DKNG250321C00045000",
+    "strike": 45.0,
+    "spot": 41.56,
+    "rv20": 0.3568402003859396,
+    "dte_sessions": 88,
+    "entry_quote": {
+      "symbol": "O:DKNG250321C00045000",
+      "day": "2024-11-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1731336312743283200,
+      "execution_timestamp_ns": 1731336312843283200,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3.1,
+      "ask": 3.25,
+      "bid_size": 338,
+      "ask_size": 102,
+      "stock_reference": 41.56,
+      "stock_bar_timestamp_ms": 1731336240000,
+      "stock_reference_age_seconds": 12.7432832
+    },
+    "exit_quote": {
+      "symbol": "O:DKNG250321C00045000",
+      "day": "2024-12-11",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1733928445424135424,
+      "execution_timestamp_ns": 1733928445524135424,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 3,
+      "ask": 3.15,
+      "bid_size": 34,
+      "ask_size": 38,
+      "stock_reference": 42.24,
+      "stock_bar_timestamp_ms": 1733928360000,
+      "stock_reference_age_seconds": 25.424135424
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-11-04",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

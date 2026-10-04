@@ -1,0 +1,12 @@
+{
+  "cik": "0001345016",
+  "date": "2023-05-05",
+  "selected": "YELP",
+  "eligible": [
+    {
+      "ticker": "YELP",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001883685",
+  "date": "2024-11-11",
+  "selected": "DKNG",
+  "eligible": [
+    {
+      "ticker": "DKNG",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

@@ -1,0 +1,12 @@
+{
+  "cik": "0001095565",
+  "date": "2023-10-11",
+  "selected": "HSTM",
+  "eligible": [
+    {
+      "ticker": "HSTM",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

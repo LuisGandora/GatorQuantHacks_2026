@@ -1,0 +1,60 @@
+{
+  "ticker": "GGG",
+  "event_entry": "2024-10-28",
+  "status": "no_usable_control",
+  "issuer": "0000042888",
+  "source_ticker": "GGG",
+  "event": {
+    "day": "2024-10-28",
+    "exit_date": "2024-11-26",
+    "expiry": "2025-02-21",
+    "symbol": "O:GGG250221C00090000",
+    "strike": 90.0,
+    "spot": 82.915,
+    "rv20": 0.11560480882514358,
+    "dte_sessions": 78,
+    "entry_quote": {
+      "symbol": "O:GGG250221C00090000",
+      "day": "2024-10-28",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1730123180587680512,
+      "execution_timestamp_ns": 1730123180687680512,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.2,
+      "ask": 4.4,
+      "bid_size": 13,
+      "ask_size": 15,
+      "stock_reference": 82.915,
+      "stock_bar_timestamp_ms": 1730123100000,
+      "stock_reference_age_seconds": 20.587680512
+    },
+    "exit_quote": {
+      "symbol": "O:GGG250221C00090000",
+      "day": "2024-11-26",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1732632325819578368,
+      "execution_timestamp_ns": 1732632325919578368,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.2,
+      "ask": 7,
+      "bid_size": 10,
+      "ask_size": 20,
+      "stock_reference": 91.475,
+      "stock_bar_timestamp_ms": 1732632240000,
+      "stock_reference_age_seconds": 25.819578368
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-10-21",
+      "reason": "rv_mismatch"
+    }
+  ]
+}

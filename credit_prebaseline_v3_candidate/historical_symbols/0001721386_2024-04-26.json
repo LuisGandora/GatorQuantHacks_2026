@@ -1,0 +1,12 @@
+{
+  "cik": "0001721386",
+  "date": "2024-04-26",
+  "selected": "LSEA",
+  "eligible": [
+    {
+      "ticker": "LSEA",
+      "type": "CS"
+    }
+  ],
+  "quotes_read": false
+}

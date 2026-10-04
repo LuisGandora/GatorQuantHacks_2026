@@ -1,0 +1,60 @@
+{
+  "ticker": "DK",
+  "event_entry": "2022-10-28",
+  "status": "no_usable_control",
+  "issuer": "0001694426",
+  "source_ticker": "DK",
+  "event": {
+    "day": "2022-10-28",
+    "exit_date": "2022-11-29",
+    "expiry": "2023-04-21",
+    "symbol": "O:DK230421C00032500",
+    "strike": 32.5,
+    "spot": 29.9145,
+    "rv20": 0.5156153770178059,
+    "dte_sessions": 119,
+    "entry_quote": {
+      "symbol": "O:DK230421C00032500",
+      "day": "2022-10-28",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1666964700857672960,
+      "execution_timestamp_ns": 1666964700957672960,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 2.65,
+      "ask": 4.8,
+      "bid_size": 192,
+      "ask_size": 77,
+      "stock_reference": 29.9145,
+      "stock_bar_timestamp_ms": 1666964640000,
+      "stock_reference_age_seconds": 0.85767296
+    },
+    "exit_quote": {
+      "symbol": "O:DK230421C00032500",
+      "day": "2022-11-29",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1669733155578413824,
+      "execution_timestamp_ns": 1669733155678413824,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 5,
+      "ask": 5.5,
+      "bid_size": 1,
+      "ask_size": 1,
+      "stock_reference": 32.76,
+      "stock_bar_timestamp_ms": 1669733040000,
+      "stock_reference_age_seconds": 55.578413824
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2022-10-21",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

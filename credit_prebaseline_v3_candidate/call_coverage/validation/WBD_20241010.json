@@ -1,0 +1,60 @@
+{
+  "ticker": "WBD",
+  "event_entry": "2024-10-10",
+  "status": "no_usable_control",
+  "issuer": "0001437107",
+  "source_ticker": "WBD",
+  "event": {
+    "day": "2024-10-10",
+    "exit_date": "2024-11-08",
+    "expiry": "2025-02-21",
+    "symbol": "O:WBD250221C00009000",
+    "strike": 9.0,
+    "spot": 7.615,
+    "rv20": 0.555009248660639,
+    "dte_sessions": 90,
+    "entry_quote": {
+      "symbol": "O:WBD250221C00009000",
+      "day": "2024-10-10",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1728567900440313344,
+      "execution_timestamp_ns": 1728567900540313344,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.41,
+      "ask": 0.65,
+      "bid_size": 3041,
+      "ask_size": 3483,
+      "stock_reference": 7.615,
+      "stock_bar_timestamp_ms": 1728567840000,
+      "stock_reference_age_seconds": 0.440313344
+    },
+    "exit_quote": {
+      "symbol": "O:WBD250221C00009000",
+      "day": "2024-11-08",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1731077100997223424,
+      "execution_timestamp_ns": 1731077101097223424,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.84,
+      "ask": 1.09,
+      "bid_size": 3228,
+      "ask_size": 259,
+      "stock_reference": 8.94,
+      "stock_bar_timestamp_ms": 1731077040000,
+      "stock_reference_age_seconds": 0.997223424
+    }
+  },
+  "controls": [],
+  "control_failures": [
+    {
+      "day": "2024-10-03",
+      "reason": "expiry_mismatch"
+    }
+  ]
+}

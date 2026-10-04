@@ -1,0 +1,18 @@
+{
+  "symbol": "O:THR251121C00030000",
+  "day": "2025-08-28",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1756388991348901951,
+  "execution_timestamp_ns": 1756388991448901951,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 0.35,
+  "ask": 4.9,
+  "bid_size": 1,
+  "ask_size": 25,
+  "stock_reference": 26.61,
+  "stock_bar_timestamp_ms": 1756388880000,
+  "stock_reference_age_seconds": 51.348901951
+}

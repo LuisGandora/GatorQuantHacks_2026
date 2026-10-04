@@ -1,0 +1,18 @@
+{
+  "symbol": "O:BC250321C00090000",
+  "day": "2024-10-21",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 12,
+  "sip_timestamp": 1729518461588911616,
+  "execution_timestamp_ns": 1729518461688911616,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 2.65,
+  "ask": 5.8,
+  "bid_size": 19,
+  "ask_size": 37,
+  "stock_reference": 83.42,
+  "stock_bar_timestamp_ms": 1729518360000,
+  "stock_reference_age_seconds": 41.588911616
+}

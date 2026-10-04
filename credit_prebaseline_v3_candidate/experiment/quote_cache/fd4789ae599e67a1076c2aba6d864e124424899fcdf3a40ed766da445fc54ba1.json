@@ -1,0 +1,18 @@
+{
+  "symbol": "O:BX260220C00165000",
+  "day": "2025-10-21",
+  "status": "valid",
+  "rule": "first_joint_market",
+  "quote_observations_examined": 1,
+  "sip_timestamp": 1761054304975126999,
+  "execution_timestamp_ns": 1761054305075126999,
+  "assumed_execution_delay_seconds": 0.1,
+  "age_seconds": 0.1,
+  "bid": 9.85,
+  "ask": 11.9,
+  "bid_size": 241,
+  "ask_size": 135,
+  "stock_reference": 160.986,
+  "stock_bar_timestamp_ms": 1761054240000,
+  "stock_reference_age_seconds": 4.975126999
+}

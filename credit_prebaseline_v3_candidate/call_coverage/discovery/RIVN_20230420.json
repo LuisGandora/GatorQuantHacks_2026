@@ -1,0 +1,112 @@
+{
+  "ticker": "RIVN",
+  "event_entry": "2023-04-20",
+  "status": "matched",
+  "issuer": "0001874178",
+  "source_ticker": "RIVN",
+  "event": {
+    "day": "2023-04-20",
+    "exit_date": "2023-05-19",
+    "expiry": "2023-09-15",
+    "symbol": "O:RIVN230915C00015000",
+    "strike": 15.0,
+    "spot": 12.295,
+    "rv20": 0.6352369834294606,
+    "dte_sessions": 102,
+    "entry_quote": {
+      "symbol": "O:RIVN230915C00015000",
+      "day": "2023-04-20",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1681998304158836480,
+      "execution_timestamp_ns": 1681998304258836480,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.48,
+      "ask": 1.53,
+      "bid_size": 1,
+      "ask_size": 2,
+      "stock_reference": 12.295,
+      "stock_bar_timestamp_ms": 1681998240000,
+      "stock_reference_age_seconds": 4.15883648
+    },
+    "exit_quote": {
+      "symbol": "O:RIVN230915C00015000",
+      "day": "2023-05-19",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1684503902921447680,
+      "execution_timestamp_ns": 1684503903021447680,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 1.82,
+      "ask": 1.94,
+      "bid_size": 516,
+      "ask_size": 12,
+      "stock_reference": 13.94,
+      "stock_bar_timestamp_ms": 1684503840000,
+      "stock_reference_age_seconds": 2.92144768
+    }
+  },
+  "controls": [
+    {
+      "day": "2023-04-13",
+      "exit_date": "2023-05-12",
+      "expiry": "2023-09-15",
+      "symbol": "O:RIVN230915C00015000",
+      "strike": 15.0,
+      "spot": 14.34,
+      "rv20": 0.5888202112389319,
+      "dte_sessions": 107,
+      "entry_quote": {
+        "symbol": "O:RIVN230915C00015000",
+        "day": "2023-04-13",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1681393507139450112,
+        "execution_timestamp_ns": 1681393507239450112,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 2.66,
+        "ask": 2.77,
+        "bid_size": 10,
+        "ask_size": 853,
+        "stock_reference": 14.34,
+        "stock_bar_timestamp_ms": 1681393440000,
+        "stock_reference_age_seconds": 7.139450112
+      },
+      "exit_quote": {
+        "symbol": "O:RIVN230915C00015000",
+        "day": "2023-05-12",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1683899111010369280,
+        "execution_timestamp_ns": 1683899111110369280,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 1.9,
+        "ask": 1.95,
+        "bid_size": 72,
+        "ask_size": 3,
+        "stock_reference": 13.695,
+        "stock_bar_timestamp_ms": 1683899040000,
+        "stock_reference_age_seconds": 11.01036928
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2023-04-20",
+      "2023-05-19"
+    ],
+    [
+      "2023-04-13",
+      "2023-05-12"
+    ]
+  ]
+}

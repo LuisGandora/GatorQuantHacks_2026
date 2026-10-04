@@ -1,0 +1,112 @@
+{
+  "ticker": "ET",
+  "event_entry": "2022-04-13",
+  "status": "matched",
+  "issuer": "0001276187",
+  "source_ticker": "ET",
+  "event": {
+    "day": "2022-04-13",
+    "exit_date": "2022-05-13",
+    "expiry": "2022-07-15",
+    "symbol": "O:ET220715C00012000",
+    "strike": 12.0,
+    "spot": 11.445,
+    "rv20": 0.32599835524138326,
+    "dte_sessions": 63,
+    "entry_quote": {
+      "symbol": "O:ET220715C00012000",
+      "day": "2022-04-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1649857529095695872,
+      "execution_timestamp_ns": 1649857529195695872,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.51,
+      "ask": 0.54,
+      "bid_size": 171,
+      "ask_size": 81,
+      "stock_reference": 11.445,
+      "stock_bar_timestamp_ms": 1649857440000,
+      "stock_reference_age_seconds": 29.095695872
+    },
+    "exit_quote": {
+      "symbol": "O:ET220715C00012000",
+      "day": "2022-05-13",
+      "status": "valid",
+      "rule": "first_joint_market",
+      "quote_observations_examined": 1,
+      "sip_timestamp": 1652449518003462912,
+      "execution_timestamp_ns": 1652449518103462912,
+      "assumed_execution_delay_seconds": 0.1,
+      "age_seconds": 0.1,
+      "bid": 0.44,
+      "ask": 0.47,
+      "bid_size": 465,
+      "ask_size": 59,
+      "stock_reference": 11.16,
+      "stock_bar_timestamp_ms": 1652449440000,
+      "stock_reference_age_seconds": 18.003462912
+    }
+  },
+  "controls": [
+    {
+      "day": "2022-04-06",
+      "exit_date": "2022-05-06",
+      "expiry": "2022-07-15",
+      "symbol": "O:ET220715C00012000",
+      "strike": 12.0,
+      "spot": 11.0,
+      "rv20": 0.3545315525931282,
+      "dte_sessions": 68,
+      "entry_quote": {
+        "symbol": "O:ET220715C00012000",
+        "day": "2022-04-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1649252723809820672,
+        "execution_timestamp_ns": 1649252723909820672,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.36,
+        "ask": 0.4,
+        "bid_size": 728,
+        "ask_size": 323,
+        "stock_reference": 11.0,
+        "stock_bar_timestamp_ms": 1649252640000,
+        "stock_reference_age_seconds": 23.809820672
+      },
+      "exit_quote": {
+        "symbol": "O:ET220715C00012000",
+        "day": "2022-05-06",
+        "status": "valid",
+        "rule": "first_joint_market",
+        "quote_observations_examined": 1,
+        "sip_timestamp": 1651844857558831872,
+        "execution_timestamp_ns": 1651844857658831872,
+        "assumed_execution_delay_seconds": 0.1,
+        "age_seconds": 0.1,
+        "bid": 0.55,
+        "ask": 0.61,
+        "bid_size": 413,
+        "ask_size": 391,
+        "stock_reference": 11.52,
+        "stock_bar_timestamp_ms": 1651844760000,
+        "stock_reference_age_seconds": 37.558831872
+      }
+    }
+  ],
+  "control_failures": [],
+  "intervals": [
+    [
+      "2022-04-13",
+      "2022-05-13"
+    ],
+    [
+      "2022-04-06",
+      "2022-05-06"
+    ]
+  ]
+}
