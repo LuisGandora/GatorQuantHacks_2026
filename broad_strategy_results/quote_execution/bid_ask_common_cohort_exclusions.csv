@@ -1,0 +1,186 @@
+tag,max_age_seconds,ticker,entry_date,reason
+annual_meeting_results,60,ABT,2024-04-30,different matched ordinary-day controls
+annual_meeting_results,60,ABT,2025-04-29,not usable for all five strategies
+annual_meeting_results,60,AMGN,2024-06-04,different matched ordinary-day controls
+annual_meeting_results,60,AMGN,2025-05-28,different matched ordinary-day controls
+annual_meeting_results,60,COF,2025-05-09,not usable for all five strategies
+annual_meeting_results,60,COP,2024-05-17,not usable for all five strategies
+annual_meeting_results,60,COP,2025-05-16,different matched ordinary-day controls
+annual_meeting_results,60,CVS,2024-05-23,not usable for all five strategies
+annual_meeting_results,60,DIS,2025-03-25,not usable for all five strategies
+annual_meeting_results,60,INTC,2025-05-12,not usable for all five strategies
+annual_meeting_results,60,LOW,2025-06-06,not usable for all five strategies
+annual_meeting_results,60,MDT,2025-10-22,not usable for all five strategies
+annual_meeting_results,60,PFE,2025-04-29,not usable for all five strategies
+annual_meeting_results,60,SCHW,2024-05-30,not usable for all five strategies
+annual_meeting_results,60,UBER,2025-05-12,not usable for all five strategies
+annual_meeting_results,60,UNP,2024-05-13,not usable for all five strategies
+annual_meeting_results,60,USB,2025-04-21,different matched ordinary-day controls
+annual_meeting_results,60,VZ,2024-05-14,not usable for all five strategies
+annual_meeting_results,300,MDT,2025-10-22,not usable for all five strategies
+annual_meeting_results,300,PFE,2025-04-29,not usable for all five strategies
+annual_meeting_results,300,UNP,2024-05-13,not usable for all five strategies
+debt_issuance,60,ADBE,2025-01-21,not usable for all five strategies
+debt_issuance,60,AMT,2024-03-05,not usable for all five strategies
+debt_issuance,60,AMT,2024-03-08,not usable for all five strategies
+debt_issuance,60,AMT,2024-11-20,not usable for all five strategies
+debt_issuance,60,C,2024-09-20,different matched ordinary-day controls
+debt_issuance,60,CMCSA,2024-09-27,not usable for all five strategies
+debt_issuance,60,COF,2025-09-12,different matched ordinary-day controls
+debt_issuance,60,COP,2024-12-31,not usable for all five strategies
+debt_issuance,60,CVS,2024-05-10,not usable for all five strategies
+debt_issuance,60,CVS,2025-08-18,different matched ordinary-day controls
+debt_issuance,60,DE,2025-10-10,different matched ordinary-day controls
+debt_issuance,60,HD,2025-09-16,different matched ordinary-day controls
+debt_issuance,60,JPM,2025-07-24,different matched ordinary-day controls
+debt_issuance,60,KO,2024-08-12,not usable for all five strategies
+debt_issuance,60,LLY,2025-02-13,not usable for all five strategies
+debt_issuance,60,LMT,2024-12-12,different matched ordinary-day controls
+debt_issuance,60,NEE,2024-07-02,different matched ordinary-day controls
+debt_issuance,60,ORCL,2024-09-30,not usable for all five strategies
+debt_issuance,60,PEP,2025-02-10,not usable for all five strategies
+debt_issuance,60,PFE,2025-05-20,not usable for all five strategies
+debt_issuance,60,PG,2025-11-04,not usable for all five strategies
+debt_issuance,60,PG,2025-11-05,not usable for all five strategies
+debt_issuance,60,SO,2024-09-10,not usable for all five strategies
+debt_issuance,60,SO,2025-05-22,not usable for all five strategies
+debt_issuance,60,SO,2025-11-07,not usable for all five strategies
+debt_issuance,60,UBER,2025-06-09,not usable for all five strategies
+debt_issuance,60,WFC,2024-04-24,not usable for all five strategies
+debt_issuance,60,XOM,2025-04-02,not usable for all five strategies
+debt_issuance,300,AMT,2024-11-20,not usable for all five strategies
+debt_issuance,300,COP,2024-12-31,different matched ordinary-day controls
+debt_issuance,300,CVS,2024-05-10,not usable for all five strategies
+debt_issuance,300,DUK,2025-09-12,not usable for all five strategies
+debt_issuance,300,PFE,2025-05-20,not usable for all five strategies
+debt_issuance,300,SO,2024-09-10,not usable for all five strategies
+debt_issuance,300,SO,2025-11-07,different matched ordinary-day controls
+debt_issuance,300,XOM,2025-04-02,not usable for all five strategies
+director_appointment,60,AMGN,2024-06-04,different matched ordinary-day controls
+director_appointment,60,BA,2024-08-01,different matched ordinary-day controls
+director_appointment,60,CAT,2024-10-14,different matched ordinary-day controls
+director_appointment,60,CSCO,2024-06-17,not usable for all five strategies
+director_appointment,60,CVS,2024-05-23,not usable for all five strategies
+director_appointment,60,LMT,2024-12-12,different matched ordinary-day controls
+director_appointment,60,NKE,2024-09-20,different matched ordinary-day controls
+director_appointment,60,PFE,2024-07-02,not usable for all five strategies
+director_appointment,60,PYPL,2024-07-01,different matched ordinary-day controls
+director_appointment,60,T,2025-08-20,not usable for all five strategies
+director_appointment,60,UNP,2025-12-15,not usable for all five strategies
+director_appointment,300,PFE,2024-07-02,different matched ordinary-day controls
+director_appointment,300,T,2025-08-20,different matched ordinary-day controls
+director_appointment,300,UNP,2025-12-15,not usable for all five strategies
+director_departure,60,AIG,2024-02-02,not usable for all five strategies
+director_departure,60,AIG,2025-10-06,not usable for all five strategies
+director_departure,60,BA,2024-08-01,different matched ordinary-day controls
+director_departure,60,BMY,2024-03-19,not usable for all five strategies
+director_departure,60,CMCSA,2025-03-20,not usable for all five strategies
+director_departure,60,DIS,2024-07-22,different matched ordinary-day controls
+director_departure,60,HD,2024-01-11,not usable for all five strategies
+director_departure,60,MCD,2024-03-20,not usable for all five strategies
+director_departure,60,NKE,2024-06-06,not usable for all five strategies
+director_departure,60,NKE,2024-09-20,different matched ordinary-day controls
+director_departure,60,PYPL,2024-07-26,not usable for all five strategies
+director_departure,60,QCOM,2025-12-17,different matched ordinary-day controls
+director_departure,60,RTX,2025-02-04,not usable for all five strategies
+director_departure,60,T,2025-08-20,not usable for all five strategies
+director_departure,60,TXN,2025-10-17,different matched ordinary-day controls
+director_departure,300,HD,2024-01-11,not usable for all five strategies
+director_departure,300,MCD,2024-03-20,not usable for all five strategies
+director_departure,300,T,2025-08-20,different matched ordinary-day controls
+executive_compensation_change,60,AIG,2024-09-19,not usable for all five strategies
+executive_compensation_change,60,AMD,2024-11-19,not usable for all five strategies
+executive_compensation_change,60,BA,2024-08-01,different matched ordinary-day controls
+executive_compensation_change,60,BA,2025-07-07,not usable for all five strategies
+executive_compensation_change,60,BK,2025-12-12,not usable for all five strategies
+executive_compensation_change,60,CHTR,2025-12-08,not usable for all five strategies
+executive_compensation_change,60,COST,2025-06-12,not usable for all five strategies
+executive_compensation_change,60,DIS,2025-11-10,not usable for all five strategies
+executive_compensation_change,60,DIS,2025-11-13,not usable for all five strategies
+executive_compensation_change,60,DUK,2024-03-18,not usable for all five strategies
+executive_compensation_change,60,ISRG,2025-01-07,not usable for all five strategies
+executive_compensation_change,60,ISRG,2025-05-16,not usable for all five strategies
+executive_compensation_change,60,MS,2024-01-22,different matched ordinary-day controls
+executive_compensation_change,60,NKE,2024-09-20,different matched ordinary-day controls
+executive_compensation_change,60,NKE,2025-12-03,not usable for all five strategies
+executive_compensation_change,60,PYPL,2024-07-26,not usable for all five strategies
+executive_compensation_change,60,QCOM,2025-08-26,different matched ordinary-day controls
+executive_compensation_change,60,RTX,2025-02-04,not usable for all five strategies
+executive_compensation_change,60,USB,2024-05-06,not usable for all five strategies
+executive_compensation_change,60,USB,2025-04-17,not usable for all five strategies
+executive_compensation_change,60,VZ,2025-10-07,not usable for all five strategies
+executive_compensation_change,300,AIG,2024-09-19,different matched ordinary-day controls
+executive_compensation_change,300,DUK,2024-03-18,not usable for all five strategies
+executive_officer_appointment,60,AMD,2024-11-19,not usable for all five strategies
+executive_officer_appointment,60,COST,2025-06-12,not usable for all five strategies
+executive_officer_appointment,60,CVX,2024-08-05,not usable for all five strategies
+executive_officer_appointment,60,DIS,2025-11-10,not usable for all five strategies
+executive_officer_appointment,60,DUK,2024-03-18,not usable for all five strategies
+executive_officer_appointment,60,GILD,2025-03-13,not usable for all five strategies
+executive_officer_appointment,60,GM,2024-06-26,not usable for all five strategies
+executive_officer_appointment,60,ISRG,2025-01-07,not usable for all five strategies
+executive_officer_appointment,60,MA,2025-02-27,not usable for all five strategies
+executive_officer_appointment,60,MDT,2025-05-22,not usable for all five strategies
+executive_officer_appointment,60,NKE,2025-12-03,not usable for all five strategies
+executive_officer_appointment,60,NOW,2024-07-25,not usable for all five strategies
+executive_officer_appointment,60,QCOM,2025-08-26,different matched ordinary-day controls
+executive_officer_appointment,60,RTX,2024-01-05,not usable for all five strategies
+executive_officer_appointment,60,SO,2025-07-24,not usable for all five strategies
+executive_officer_appointment,60,USB,2024-05-06,not usable for all five strategies
+executive_officer_appointment,300,DUK,2024-03-18,not usable for all five strategies
+executive_officer_appointment,300,GILD,2025-03-13,not usable for all five strategies
+executive_officer_appointment,300,MDLZ,2024-12-04,not usable for all five strategies
+executive_officer_appointment,300,SO,2025-07-24,different matched ordinary-day controls
+guidance_issuance_or_update,60,ABBV,2024-10-04,not usable for all five strategies
+guidance_issuance_or_update,60,ABBV,2025-07-07,not usable for all five strategies
+guidance_issuance_or_update,60,MMM,2024-07-29,not usable for all five strategies
+guidance_issuance_or_update,60,USB,2024-03-06,not usable for all five strategies
+quarterly_earnings,60,BAC,2025-04-16,not usable for all five strategies
+quarterly_earnings,60,CVX,2024-08-05,not usable for all five strategies
+quarterly_earnings,60,LLY,2025-08-08,not usable for all five strategies
+quarterly_earnings,60,LLY,2025-10-31,not usable for all five strategies
+quarterly_earnings,60,MMM,2024-07-29,not usable for all five strategies
+quarterly_earnings,60,MRK,2024-11-01,different matched ordinary-day controls
+quarterly_earnings,60,MRK,2025-02-05,not usable for all five strategies
+quarterly_earnings,60,MS,2024-07-17,different matched ordinary-day controls
+quarterly_earnings,60,PEP,2024-10-09,not usable for all five strategies
+quarterly_earnings,60,PEP,2025-02-05,not usable for all five strategies
+quarterly_earnings,60,WFC,2024-07-15,different matched ordinary-day controls
+quarterly_earnings,60,XOM,2024-11-04,different matched ordinary-day controls
+quarterly_earnings,60,XOM,2025-05-05,not usable for all five strategies
+quarterly_earnings,300,XOM,2024-11-04,different matched ordinary-day controls
+shareholder_proposal_outcome,60,COF,2025-05-09,not usable for all five strategies
+shareholder_proposal_outcome,60,COP,2024-05-17,not usable for all five strategies
+shareholder_proposal_outcome,60,COP,2025-05-16,different matched ordinary-day controls
+shareholder_proposal_outcome,60,GILD,2024-05-10,not usable for all five strategies
+shareholder_proposal_outcome,60,INTC,2025-05-12,not usable for all five strategies
+shareholder_proposal_outcome,60,PEP,2025-05-12,different matched ordinary-day controls
+shareholder_proposal_outcome,60,PFE,2025-04-29,not usable for all five strategies
+shareholder_proposal_outcome,60,SCHW,2024-05-30,not usable for all five strategies
+shareholder_proposal_outcome,60,UNP,2024-05-13,not usable for all five strategies
+shareholder_proposal_outcome,60,USB,2025-04-21,different matched ordinary-day controls
+shareholder_proposal_outcome,60,VZ,2024-05-14,not usable for all five strategies
+shareholder_proposal_outcome,300,PFE,2025-04-29,not usable for all five strategies
+shareholder_proposal_outcome,300,UNP,2024-05-13,not usable for all five strategies
+underwriting_agreement,60,ADBE,2025-01-21,not usable for all five strategies
+underwriting_agreement,60,BA,2024-11-01,different matched ordinary-day controls
+underwriting_agreement,60,BK,2025-09-11,not usable for all five strategies
+underwriting_agreement,60,CMCSA,2024-09-27,not usable for all five strategies
+underwriting_agreement,60,COF,2025-09-12,different matched ordinary-day controls
+underwriting_agreement,60,CVS,2025-08-18,different matched ordinary-day controls
+underwriting_agreement,60,DE,2025-10-10,different matched ordinary-day controls
+underwriting_agreement,60,IBM,2025-02-10,not usable for all five strategies
+underwriting_agreement,60,KO,2024-08-12,not usable for all five strategies
+underwriting_agreement,60,LLY,2025-02-13,not usable for all five strategies
+underwriting_agreement,60,PEP,2025-02-10,not usable for all five strategies
+underwriting_agreement,60,PFE,2025-05-20,not usable for all five strategies
+underwriting_agreement,60,SO,2024-09-10,not usable for all five strategies
+underwriting_agreement,60,SO,2025-11-07,not usable for all five strategies
+underwriting_agreement,60,WFC,2024-04-24,not usable for all five strategies
+underwriting_agreement,60,WFC,2024-07-24,not usable for all five strategies
+underwriting_agreement,60,XOM,2025-04-02,not usable for all five strategies
+underwriting_agreement,300,DUK,2025-09-12,not usable for all five strategies
+underwriting_agreement,300,PFE,2025-05-20,not usable for all five strategies
+underwriting_agreement,300,SO,2024-09-10,not usable for all five strategies
+underwriting_agreement,300,SO,2025-11-07,different matched ordinary-day controls
+underwriting_agreement,300,XOM,2025-04-02,not usable for all five strategies
