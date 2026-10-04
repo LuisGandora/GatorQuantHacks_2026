@@ -3,3 +3,5 @@
 2026-10-04 01:38  START out-of-sample look, BH passers only (once)
 2026-10-04 01:38  DONE  out-of-sample look, BH passers only (once)
 2026-10-04 01:38  START opencode review
+2026-10-04 01:40  DONE  opencode review
+2026-10-04 01:40  ALL DONE. Read runs\hyp\REVIEW.md, then check its numbers against runs\hyp\RESULTS.md.

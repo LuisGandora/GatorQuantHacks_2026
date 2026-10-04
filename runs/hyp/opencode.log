@@ -27,3 +27,22 @@ Edge = strategy P&L on selected events minus on ordinary days (same tickers, buc
 Now I have both files. Let me delegate the writing of REVIEW.md to a writing subagent.
 [0m✓ [0mWrite hyp REVIEW.md[90m Unknown Agent[0m
 [0m→ [0mRead runs/hyp/REVIEW.md
+[0m
+[0m$ [0mgit add runs/hyp
+warning: in the working copy of 'runs/hyp/REVIEW.md', LF will be replaced by CRLF the next time Git touches it
+[0m
+[0m$ [0mgit commit -m "hyp: review of the twelve pre-registered hypotheses"
+[main 1c90794] hyp: review of the twelve pre-registered hypotheses
+ 10 files changed, 1621 insertions(+)
+ create mode 100644 runs/hyp/RESULTS.md
+ create mode 100644 runs/hyp/REVIEW.md
+ create mode 100644 runs/hyp/RUNNING.lock
+ create mode 100644 runs/hyp/STATUS.txt
+ create mode 100644 runs/hyp/insample.log
+ create mode 100644 runs/hyp/jev_external.csv
+ create mode 100644 runs/hyp/jev_negative.csv
+ create mode 100644 runs/hyp/jev_raise.csv
+ create mode 100644 runs/hyp/oos.log
+ create mode 100644 runs/hyp/opencode.log
+[0m
+**Zero hypotheses passed BH at q=0.10, and zero are candidate edges.**
