@@ -50,7 +50,6 @@ relative data paths resolve consistently.
 | `runs/` | Preregistrations, findings, append-only ledger, and generated experiment artifacts. Preserve these as research evidence. |
 | [docs/PAIR_TEST_README.md](docs/PAIR_TEST_README.md) | Detailed category-to-strategy testing guide, including gates and audit interpretation. |
 | [archive/](archive/README.md) | Original starter notebook and historical development scripts; these are not the current research entry points. |
-| `.opencode/command/` | Research workflow commands for OpenCode. |
 | `setup.sh`, `setup.ps1`, `requirements.txt`, `.env.example` | Environment setup; `run_vrp.ps1` runs the VRP workflow on Windows. |
 
 Research entry points and inputs retain their current paths while an experiment is underway.

@@ -24,3 +24,6 @@ data/raw/
 exports/
 runs/**/*.csv
 runs/**/*.log
+
+# Local agent command configuration
+.opencode/
