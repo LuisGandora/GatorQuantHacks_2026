@@ -1,0 +1,24 @@
+{
+  "primary_horizon": 21,
+  "fixed_horizons": [
+    1,
+    2,
+    3,
+    5,
+    10,
+    21,
+    42,
+    63,
+    "exp"
+  ],
+  "universe": "all entries in the completed primary quote inventory; no outcome-based selection",
+  "contracts": "reuse exactly the primary starter 3\u20136-month contracts and ATM/5% strikes",
+  "entry": "reuse the primary following-trading-close entry and entry quotes",
+  "exit": "fixed trading-session offset; exp uses the last starter calendar session on or before contract expiry",
+  "execution": "retain primary latest pre-16:00 ET quote, bid/ask, sizes, 60-second primary age and 300-second sensitivity",
+  "missing": "exclude missing quotes or exits beyond expiry/data boundary; no intrinsic-value or aggregate-mark replacement",
+  "comparison": "retain same issuer/year/quarter/weekday, 63-session distance, seven-session DTE tolerance and nearest three controls",
+  "inference": "21 sessions remains primary with original 120-comparison correction and dependence gates; all other horizons exploratory",
+  "limitations": "16:00 quote rule excludes early-close sessions without available quotes; assignment, dividends and financing unmodeled",
+  "validation": "no unseen or sealed-window results accessed by this extension"
+}
