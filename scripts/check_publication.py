@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Check Git's index for common publication leaks without printing their contents.
 
-Run from any directory. Stage the intended publication first; unstaged files are
-deliberately excluded so the check describes exactly what a commit would contain.
+Run from any directory. Stage the intended publication first; by default unstaged
+files are excluded so the check describes exactly what a commit would contain.
+Use --worktree to inspect tracked and unignored new working files before staging.
 No network calls or research stages are run. Exit 1 on findings, 0 on success.
 """
+import argparse
 import json
 import re
 import subprocess
@@ -29,17 +31,24 @@ def inspect(name, content):
     path = Path(name)
     if (path.name.startswith(".env") and path.name != ".env.example") or (
         any(part.startswith((".massive_cache", ".polygon_cache")) for part in path.parts)
-        or name.startswith(("data/raw/", "exports/", "runs/audit/"))
+        or name.startswith(("data/raw/", "exports/", "runs/audit/", "submission_judge_outputs/"))
+        or any(part in {".opencode", ".codex", ".agents"} for part in path.parts)
         or path.suffix.lower() in {".pem", ".key", ".p12", ".pfx"}
     ):
         reasons.append("private credential/cache/export path")
     if any(pattern.search(content) for pattern in SECRETS):
         reasons.append("possible credential")
+    if len(content) > 2_000_000:
+        reasons.append("large artifact requires explicit publication review (>2 MB)")
+    if re.search(rb"/" + rb"Users/[^/\s]+/|/" + rb"tmp/[^\s]+", content):
+        reasons.append("machine-specific absolute path")
     if path.suffix == ".ipynb":
         try:
             notebook = json.loads(content)
             if any(cell.get("outputs") for cell in notebook["cells"]):
                 reasons.append("saved notebook outputs")
+            if any(cell.get("execution_count") is not None for cell in notebook["cells"]):
+                reasons.append("saved notebook execution state")
             if notebook.get("metadata", {}).get("widgets"):
                 reasons.append("saved widget state")
         except (ValueError, KeyError, TypeError):
@@ -53,18 +62,28 @@ def inspect(name, content):
 
 
 def main():
-    names = git("ls-files", "-z").decode().split("\0")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--worktree", action="store_true",
+                        help="Check tracked and unignored new working files instead of Git's index.")
+    args = parser.parse_args()
+    flags = ("--cached", "--others", "--exclude-standard") if args.worktree else ()
+    names = git("ls-files", *flags, "-z").decode().split("\0")
     findings = []
     count = 0
-    for name in filter(None, names):
+    for name in sorted(set(filter(None, names))):
+        path = ROOT / name
+        if args.worktree and not path.is_file():
+            continue
         count += 1
-        for reason in inspect(name, git("show", ":" + name)):
+        content = path.read_bytes() if args.worktree else git("show", ":" + name)
+        for reason in inspect(name, content):
             findings.append(f"{name}: {reason}")
     if findings:
         print("Publication check FAILED:\n" + "\n".join(findings))
         return 1
-    print(f"PASS: {count} indexed files; no configured publication leaks found.")
-    print("Scope: current Git index only; history, licensing, and binary content need separate review.")
+    scope = "working files" if args.worktree else "indexed files"
+    print(f"PASS: {count} {scope}; no configured publication leaks found.")
+    print("Scope: current tree only; history, licensing, and binary content need separate review.")
     return 0
 
 

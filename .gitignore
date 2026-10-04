@@ -27,3 +27,14 @@ runs/**/*.log
 
 # Local agent command configuration
 .opencode/
+
+# Local QA/notebook execution products and agent state
+.codex/
+.agents/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.tmp
+*.bak
+submission_judge_outputs/
+runs/nb_check.ipynb

@@ -1,5 +1,13 @@
 # Reproduction Guide
 
+> Historical instructions, retained for provenance. For the current submission,
+> use [docs/REPRODUCIBILITY.md](../docs/REPRODUCIBILITY.md) and
+> `GQH_MASSIVE_FINAL.ipynb`. Commands below can write research artifacts or open
+> previously observed windows; do not replay them during submission preparation.
+> The public remote is missing the freeze tags required by guarded live stages.
+> `git status` alone does not prove secrets are untracked, `runs/audit/` is private,
+> and labels live at root `jev_labels.csv`, not `runs/jev_labels.csv`.
+
 This document provides exact commands to reproduce every number in FINDINGS.md and the notebook.
 
 ## Setup
