@@ -40,7 +40,9 @@ def analyze():
         for age in [60, 300]:
             for strategy in ['long_call', 'covered_call', 'protective_put', 'collar', 'cash_secured_put']:
                 cell = outcomes[(outcomes.strategy == strategy) & (outcomes.max_age_seconds == age)]
-                indexed = cell.set_index(['ticker', 'entry_date'], drop=False, verify_integrity=True)
+                indexed = cell.set_index(['ticker', 'entry_date'], drop=False)
+                if not indexed.index.is_unique:
+                    raise RuntimeError('Duplicate company-date observations in quote cell')
                 cell_matches = []
                 for event in events.itertuples(index=False):
                     key = (event.ticker, event.t_0)
@@ -87,7 +89,9 @@ def analyze():
     pd.DataFrame(matches).to_json(OUT/'bid_ask_strict_matches.json.gz', orient='records', compression='gzip')
     pd.DataFrame(exclusions).to_csv(OUT/'bid_ask_matching_exclusions.csv', index=False)
     pd.DataFrame(summaries).to_csv(OUT/'bid_ask_primary_and_age_sensitivity.csv', index=False)
-    print('Saved all 50 primary comparisons and 50 quote-age sensitivities; validation remains separate.')
+    primary_count = sum(row['max_age_seconds'] == 60 for row in summaries)
+    sensitivity_count = len(summaries)-primary_count
+    print(f'Saved {primary_count} primary comparisons and {sensitivity_count} quote-age sensitivities; validation remains separate.')
 
 
 if __name__ == '__main__':

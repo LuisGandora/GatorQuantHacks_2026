@@ -72,7 +72,7 @@ def run():
         close = raw.get(exit_, np.nan)
         eligibility.append(dict(ticker=ticker, entry_date=record['entry_date'], spot=spot, exit_spot=close,
                                 split=split, stock_valid=bool(spot > 0 and np.isfinite(close) and not split)))
-    eligibility = pd.DataFrame(eligibility)
+    eligibility = pd.DataFrame(eligibility, columns=['ticker', 'entry_date', 'spot', 'exit_spot', 'split', 'stock_valid'])
     eligibility.to_csv(OUT/'stock_eligibility_inventory.csv', index=False)
     usability = usability.merge(eligibility, on=['ticker', 'entry_date'], how='left', validate='many_to_one')
     usability['fully_usable'] = (usability.status == 'usable') & usability.stock_valid.fillna(False)
@@ -96,7 +96,11 @@ def run():
             expiry_date=str(expiry.date()), dte_sessions=int(((c.p.CAL > pd.Timestamp(row.entry_date)) & (c.p.CAL <= expiry)).sum()),
             atm_call_moneyness=record['legs']['C_K']['strike']/row.spot-1,
             **result))
-    pd.DataFrame(rows).to_csv(OUT/'bid_ask_trade_outcomes.csv.gz', index=False, compression='gzip')
+    columns = ['ticker', 'entry_date', 'exit_date', 'strategy', 'max_age_seconds', 'stock_return',
+        'absolute_stock_return', 'upside', 'downside', 'upside_tail_5pct', 'downside_tail_5pct',
+        'expiry_date', 'dte_sessions', 'atm_call_moneyness', 'net', 'midpoint_net', 'spread_impact',
+        'capacity_contracts', 'entry_net_debit_fraction']
+    pd.DataFrame(rows, columns=columns).to_csv(OUT/'bid_ask_trade_outcomes.csv.gz', index=False, compression='gzip')
     print('Quote return accounting completed. Matched comparison, uncertainty and validation remain pending.')
 
 
