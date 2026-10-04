@@ -152,6 +152,28 @@ def _drop_reason_counts(drops):
     return drops.reason.value_counts().to_dict()
 
 
+def _primary_net_results(P, frame, priced_pairs):
+    """Report the frozen primary after its existing two-sided premium haircut.
+
+    Apply the section-11 cost convention to each evaluated exit, including expiry.
+    Preserve missing returns and leave the original gross frame untouched. This
+    reporting transformation does not change execution, event selection or gates.
+    """
+    rows = P["slice_results"](frame, PRIMARY["bucket"], PRIMARY["entry"], PRIMARY["otm"]).copy()
+    premium = {(pe.ticker, pe.event_date): pe.marks(pe.t_0)["P_L0.05"]
+               for pe in priced_pairs if pe.bucket == PRIMARY["bucket"]}
+    rows["round_trip_cost"] = [abs(premium[(t, d)]) / s * 0.05 * 2
+                               for t, d, s in zip(rows.ticker, rows.event_date, rows.S_entry)]
+    rows[PRIMARY["strategy"]] = rows[PRIMARY["strategy"]] - rows.round_trip_cost
+    return rows
+
+
+def _fixed_horizon_table(P, board):
+    if board.empty:
+        board = P["pd"].DataFrame(columns=["horizon", "n_a", "n_b", "mean_a", "mean_b", "difference", "ci_lo", "ci_hi"])
+    return board.set_index("horizon").reindex(FIXED_HORIZONS).rename_axis("horizon").reset_index()
+
+
 def _key(root: Path) -> str:
     key = (os.environ.get("MASSIVE_API_KEY") or "").strip()
     if not key and (root / ".env").exists():
@@ -244,10 +266,24 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
     for label, a, b in (("fresh_vs_ordinary", fresh, ordinary),
                         ("stale_vs_ordinary", stale, ordinary), ("fresh_minus_stale", fresh, stale)):
         d = P["difference_board"](a, b, strategies=[PRIMARY["strategy"]])
-        if d.empty:
-            d = P["pd"].DataFrame(columns=["horizon", "n_a", "n_b", "mean_a", "mean_b", "difference", "ci_lo", "ci_hi"])
         # Reindex only the displayed rows. Do not change sampling, CI, or gates.
-        tables[label] = d.set_index("horizon").reindex(FIXED_HORIZONS).rename_axis("horizon").reset_index()
+        tables[label] = _fixed_horizon_table(P, d)
+    net_frames = {"fresh": _primary_net_results(P, fresh, priced),
+                  "stale": _primary_net_results(P, stale, priced),
+                  "ordinary": _primary_net_results(P, ordinary, ordinary_priced)}
+    net_tables = {}
+    for label, a, b in (("fresh_vs_ordinary", "fresh", "ordinary"),
+                        ("stale_vs_ordinary", "stale", "ordinary"),
+                        ("fresh_minus_stale", "fresh", "stale")):
+        net_tables[label] = _fixed_horizon_table(P, P["difference_board"](
+            net_frames[a], net_frames[b], strategies=[PRIMARY["strategy"]]))
+    net_returns = {}
+    for label, frame in net_frames.items():
+        board = P["scoreboard"](frame, horizons=list(FIXED_HORIZONS),
+                                strategies=[PRIMARY["strategy"]])
+        valid = frame[frame[PRIMARY["strategy"]].notna()]
+        board["issuer_n"] = board.horizon.map(valid.groupby("horizon").ticker.nunique()).fillna(0).astype(int)
+        net_returns[label] = board
     neighbours = []
     for bucket in P["EXPIRY_BUCKETS"]:
         for otm in P["OTM_GRID"]:
@@ -280,7 +316,9 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
             "priced_event_bucket_pairs": len(priced), "ordinary_draws": len(placebo),
             "drop_reasons": _drop_reason_counts(drops),
             "ordinary_drop_reasons": _drop_reason_counts(ordinary_drops),
-            "tables": tables, "sensitivity": neighbours, "h21_cost_diagnostics": costs,
+            "tables": tables, "net_tables": net_tables, "net_returns": net_returns,
+            "cost_convention": "Assumed 5% of entry premium per side; applied to every evaluated exit; not observed spreads",
+            "sensitivity": neighbours, "h21_cost_diagnostics": costs,
             "inference": "Original independent row bootstrap, 2000 draws, seed 1; no issuer-cluster inference added"}
 
 

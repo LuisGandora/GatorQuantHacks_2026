@@ -22,7 +22,8 @@ variance-premium map selected no category at its multiple-testing threshold.
 
 This is **preparation for the final report**, not a completed Devpost submission.
 See [SUBMISSION_QA_CHECKLIST.md](SUBMISSION_QA_CHECKLIST.md) for verified checks and
-remaining blockers. In particular, historical freeze tags are missing from the public
+remaining blockers. The independent [submission assessment](docs/SUBMISSION_ASSESSMENT.md)
+records a provisional 50/80 before sealed-window judging. In particular, historical freeze tags are missing from the public
 remote, so guarded live reproduction is blocked. Do not recreate them at today's HEAD
 or bypass the guards to get a result.
 
@@ -36,7 +37,9 @@ or bypass the guards to get a result.
 4. [runs/FINDINGS.md](runs/FINDINGS.md): existing research narrative;
    [runs/FINDINGS.pdf](runs/FINDINGS.pdf) is an existing four-page draft, **not the final
    report**. Write the final note within **two pages**, satisfying both the starter
-   maximum and the supplied five-page ceiling; review factual consistency before submission.
+   maximum and the supplied official page’s five-page ceiling (which defers conflicts
+   to the notebook or announcements); the two-page target is conservative.
+   Review factual consistency before submission.
 5. [runs/PREREG.md](runs/PREREG.md), [runs/APPENDIX.md](runs/APPENDIX.md),
    [runs/EXTRAS.md](runs/EXTRAS.md), [runs/audit_notes.md](runs/audit_notes.md), and
    [runs/APPENDIX_VRP.md](runs/APPENDIX_VRP.md): protocol, methodology, audits,
@@ -72,7 +75,7 @@ jupyter lab GQH_MASSIVE_FINAL.ipynb
 
 Select **Python (Gator Quant Hacks .venv)**. Setup creates `.env` from `.env.example`;
 replace `your-key-here` locally with your Massive key. The key must authorize the
-required reference, disclosure, equity, and historical option endpoints. Alternatively,
+required disclosure, options-reference, and historical option endpoints. Alternatively,
 set the `MASSIVE_API_KEY` environment variable. Never publish the key or `.env`.
 The notebook's default committed-summary mode needs no key and makes no API requests.
 
@@ -91,7 +94,11 @@ needed to implement entry, prior liquidity, and the fixed forward horizons.
 All fixed horizons are displayed: **1, 2, 3, 5, 10, 21, 42, 63 sessions and expiry**.
 Missing estimates are identified rather than filled with zero. A short window or recent
 end date may leave horizons unresolved. The report map distinguishes figures drawn from
-committed evidence from figures requiring a live price run.
+committed evidence from figures requiring a live price run. Authorized live runs display
+gross and net contrasts separately, plus absolute net returns with event and issuer
+counts and the original bootstrap intervals. Net reporting applies the existing assumed
+5% of entry premium per side to every evaluated exit; it does not supply the missing
+historical all-horizon net results.
 
 For safe commands and the limits of reproduction, read
 [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Do not replay research-stage commands
@@ -110,6 +117,11 @@ network reproduction of the economic result.
 | `runs/` | Preregistrations, append-only ledger, aggregate results, and research history. |
 | `docs/`, `archive/` | Setup/publication guidance and historical starter/development files. |
 | `scripts/check_publication.py`, `tests/` | Publication checks and offline submission QA. |
+
+Data inputs are Massive disclosures, as-of option references, and option daily bars;
+spot is inferred by put-call parity rather than a stock-price feed. The existing
+freshness proxy also reads public SEC EDGAR filing metadata (period-of-report and
+acceptance dates); its limitations are explained in the evidence packet.
 
 Publish source, author-written notes, annotations, and aggregate results only. Licensed
 raw Massive responses, option chains, source excerpts, and event-level exports stay

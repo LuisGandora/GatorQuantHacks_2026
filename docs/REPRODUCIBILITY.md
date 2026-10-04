@@ -74,6 +74,13 @@ The fixed horizons need forward prices, so an event inside the chosen window can
 price observations after `END_DATE`. A missing mark or unavailable horizon must remain
 missing, with counts shown. No estimate should be manufactured to fill a report table.
 
+The live display reports gross contrasts, net contrasts, and absolute net returns for
+fresh, stale, and ordinary days at all nine horizons. Net returns deduct the original
+5%-of-entry-premium assumption on both sides, including at expiry; they are not observed
+bid/ask costs. Original bootstrap functions and seeds are reused. This reporting
+plumbing does not reconstruct missing historical net results, change any research gate,
+or make the provenance-blocked live path runnable.
+
 The 2026 F1 window was already observed in the historical research. The category VRP map
 selected no categories for category OOS; its pooled H2 OOS comparison was observed.
 Neither statement authorizes reopening those raw windows during preparation. The
@@ -96,7 +103,8 @@ artifacts; disagreement must be documented in the evidence packet and QA checkli
 The existing PDF is a four-page research draft and predates the variance-premium
 extension now described in the Markdown findings. It is not a synchronized final
 report. The organizer text in the starter notebook specifies at most two pages;
-the worker brief specifies a five-page ceiling. The submission target is **at most
+the supplied official challenge page specifies a five-page ceiling and defers
+conflicts to the notebook or organizer announcements. The submission target is **at most
 two pages**, which satisfies both stated limits. A five-page layout is unnecessary.
 The older PDF is preserved solely as historical documentation and must not be uploaded
 as the final note. Current Markdown corrects interpretation and gross/net wording;

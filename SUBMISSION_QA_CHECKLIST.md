@@ -52,7 +52,7 @@ original package versions or a claim of bit-for-bit provider reproduction.
 | Item | Status | Evidence / required handling |
 |---|---|---|
 | Authoritative evidence packet | PASS | Worker A completed the 15-section packet from pinned committed aggregate sources, with missing metrics and disagreements explicit. |
-| Experiments 8–12 / newer semantic research in briefs | BLOCKER | Not present in current remote main. Do not substitute private logs, another branch, or invented results. If these are required for the intended final submission, merge their completed, reviewed, publication-safe artifacts first. |
+| Experiments 8–12 / newer semantic research in briefs | PENDING | Not present in current remote main. Do not substitute private logs, another branch, or invented results. If these are required for the intended final submission, merge their completed, reviewed, publication-safe artifacts first. |
 | F1 headline | PASS | LEADERBOARD, FINDINGS and EXTRAS agree on −1.19% IS n55 and −0.70% reported 2026 OOS n25 for the gross headline edge. |
 | Underpricing interpretation | PASS | README, notebook and current FINDINGS now report the failed payoff hypothesis and qualify the post-hoc mechanism. Counterparty motives were not observed; the protective-put mirror was not tested. Pinned historical wording is preserved with an explicit correction. |
 | Denominator consistency | BLOCKER | EXTRAS capacity n56 versus headline55; yearly rows n27/32 and OOS27 versus headline25 lack a public row-level population/horizon reconciliation. Packet records each separately. |
@@ -62,7 +62,7 @@ original package versions or a claim of bit-for-bit provider reproduction.
 | Preregistered primary versus headline | PASS | Packet distinguishes fresh-minus-stale primary (IS −1.03%, interval includes zero) from fresh-versus-ordinary headline. Neither is a supported profitable strategy. |
 | Judges' sealed status | PASS | No sealed evaluation performed in this task. Existing predictions are separate from observed replication. |
 | Historical results / protocols / research code | PASS | No research outcomes, membership, thresholds, strategies, costs, controls, budget guards or historical ledger edited by QA. Findings changes correct prose only; pinned numerical evidence remains unchanged. |
-| Official challenge reference | PASS | Organizer-provided starter notebook and supplied rubric are identifiable; internal research gates are separate requirements. No updated organizer page-limit reference has been supplied. |
+| Official challenge reference | PASS | Organizer-provided starter notebook and supplied rubric are identifiable; internal research gates are separate requirements. The user supplied the official challenge page text on October 4, 2026; it states a five-page ceiling and defers conflicts to the notebook/announcements. Live organizer-page verification was unavailable; the supplied text is the audit reference. |
 | Report page limit | PASS | Final note targets at most two pages, satisfying both the organizer starter maximum and the supplied five-page ceiling. No organizer rule change is asserted. |
 | Existing PDF versus Markdown findings | PENDING | Older four-page PDF is explicitly labeled historical and excluded from final report use. Final note remains unwritten; it must incorporate the current evidence and be checked separately. |
 
@@ -85,7 +85,7 @@ original package versions or a claim of bit-for-bit provider reproduction.
 |---|---|---|
 | Named hypothesis and category family | PASS | Fresh leadership: five declared leadership tags. |
 | Allowed strategy | PASS | Cash-secured put is present in organizer starter; no new payoff invented. |
-| All fixed horizons | PASS | Consolidated display includes 1/2/3/5/10/21/42/63/expiry, with unavailable static estimates explicit. Complete numerical evidence remains a separate blocker. |
+| All fixed horizons, net with uncertainty in IS/OOS | BLOCKER | All nine horizons are listed, but required historical estimates/counts/numeric CIs/net returns are absent. Authorized live reporting now supports unchanged-cost net tables at every horizon; no live run was performed. |
 | Ordinary-day baseline | PASS | Existing event versus ordinary-day implementation retained. |
 | Costs | PASS | Declared 5% premium haircut per side; median per-side costs 13 bps IS/18 bps reported OOS. Gross edge must not be labeled net edge. |
 | Liquidity | PASS | Committed option ADV and zero-volume summaries; no bid/ask guarantee. |
@@ -93,12 +93,14 @@ original package versions or a claim of bit-for-bit provider reproduction.
 | Sensitivity | PASS | All 18 neighboring cells per window retained; no winner selection. |
 | OOS honesty | PASS | Observed F1/pooled H2 versus unopened category OOS stated separately. |
 | Uncertainty | BLOCKER | Headline significance does not supply missing numeric per-horizon intervals; preserve original event-row bootstrap limits. |
-| Notebook runs | PASS | Offline Run All passed with HTTP blocked; live execution blocked by freeze provenance. |
+| Notebook runs with only an API key | BLOCKER | Offline Run All passed with HTTP blocked; API-backed reproduction is blocked by missing freeze provenance and has not been run. |
 | Configurable judge dates | PASS | Interface and synthetic propagation passed; frozen calendar limits disclosed. |
 | Quant note / applicable page limit | PENDING | Final note not written. Selected two-page maximum meets both supplied ceilings; check the final PDF when the report writer produces it. |
 | Public GitHub / dependencies | PASS | Current main publicly referenced; fresh submission install verified. |
 | No key / `.env` / licensed cache in current tree | PASS | Configured scan and tracked path inspection passed. Historical publication issue remains. |
 | Sealed-window replication /20 | PENDING | Unscored; no judges' window result exists in this QA. |
+
+| Devpost submission by October 4, 2026, 11:00 AM Eastern | PENDING | Deadline comes from the supplied official brief; submission receipt/time not verified. |
 
 ## Fixes and final verification
 
@@ -110,7 +112,7 @@ scanner; meaningful scanner tests; completed evidence packet, consolidated noteb
 metrics and report map; evidence-bound report-writing handoff. No final quant note
 was written and no missing research result was reconstructed.
 
-Verification: **16/16 unit/mock tests passed**; nbformat validation and ordered offline
+Verification: **17/17 unit/mock tests passed**; nbformat validation and ordered offline
 Run All passed in the fresh environment with HTTP blocked; original definition loader
 imported/bound dates with API access forbidden. Metrics source blobs and reported
 headline values checked. Local documentation links and publication scans passed.
@@ -135,5 +137,20 @@ unified notebook/metrics + QA output, with blockers retained.
 - Inspected commit metadata for freeze references. Multiple commits mention
   `freeze-v2`; commit messages do not establish the missing historical tag object.
   No tag was fabricated, research stage executed, or sealed/raw OOS data read.
+
+## Official-brief follow-up, October 4, 2026
+
+- Added the independent rubric assessment and all 12 official requirement checks in
+  `docs/SUBMISSION_ASSESSMENT.md`. The score is provisional 50/80 before sealed judging;
+  no sealed replication points have been verified.
+- Corrected checklist PASS labels that overstated all-horizon numerical completion
+  and API-only execution. Missing static measurements and provenance remain blockers.
+- Extended only live reporting: net returns and contrasts at every horizon use the
+  existing 5%-of-premium-per-side cost assumption and original bootstrap functions.
+  Gross results, historical metrics, research code and gates remain unchanged.
+- Removed the unsupported stock-feed entitlement requirement from README and
+  documented the existing SEC metadata input and synthetic spot method.
+- Newer unmerged experiments are pending scope decisions, not a prerequisite for
+  the explicitly limited F1 submission unless they are claimed in the final report.
 
 SUBMISSION QA: BLOCKED

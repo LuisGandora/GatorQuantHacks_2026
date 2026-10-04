@@ -98,12 +98,15 @@ class SubmissionSafetyTests(unittest.TestCase):
             return pd.DataFrame({"horizon": [21], "ticker": ["AAA"],
                 "event_date": [pd.Timestamp("2024-02-05")], "S_entry": [10.0],
                 S.PRIMARY["strategy"]: [-0.01]})
+        def scoreboard(frame, horizons, strategies):
+            return pd.DataFrame({"horizon": horizons})
         pipeline = {
             "N_PLACEBO": 1, "EXPIRY_BUCKETS": {"1m": (), "2m": (), "3-6m": ()},
             "OTM_GRID": [0.03, 0.05, 0.10], "pd": pd,
             "price_events": price_events, "sample_placebo": sample_placebo,
             "evaluate": lambda priced: pd.DataFrame(), "difference_board": difference_board,
             "edge": lambda table: (0.0, 0), "slice_results": slice_results,
+            "scoreboard": scoreboard,
         }
         with patch.dict(sys.modules, {"harness": fake_harness}), \
              patch.object(S, "_load_original", return_value=pipeline), \
@@ -115,6 +118,53 @@ class SubmissionSafetyTests(unittest.TestCase):
         self.assertEqual(result["tables"]["fresh_vs_ordinary"]["horizon"].tolist(),
                          list(S.FIXED_HORIZONS))
         self.assertEqual(result["freeze"], "authentic-test-freeze")
+        self.assertEqual(result["net_tables"]["fresh_vs_ordinary"].horizon.tolist(), list(S.FIXED_HORIZONS))
+        self.assertEqual(result["net_returns"]["fresh"].issuer_n.tolist(), [0, 0, 0, 0, 0, 1, 0, 0, 0])
+
+    def test_net_reporting_uses_original_cost_and_inference_without_changing_gross(self):
+        import ast
+        import numpy as np
+        import pandas as pd
+
+        # Load only the original pure reporting functions, never API/data cells.
+        ns = {"np": np, "pd": pd, "STRATEGIES": [S.PRIMARY["strategy"]],
+              "BASELINE_BUCKET": S.PRIMARY["bucket"], "ENTRY": "post", "OTM_PCT": 0.05,
+              "HORIZONS": list(S.FIXED_HORIZONS[:-1])}
+        cell = json.loads(Path("gator-quant-hacks-8k-options-challenge.ipynb").read_text())["cells"][25]
+        for node in ast.parse("".join(cell["source"])).body:
+            if isinstance(node, ast.FunctionDef) and node.name in {
+                    "bootstrap_ci", "slice_results", "scoreboard", "difference_board"}:
+                exec(compile(ast.Module(body=[node], type_ignores=[]), "synthetic_reporting", "exec"), ns)
+
+        class Pair:
+            bucket = S.PRIMARY["bucket"]
+            t_0 = pd.Timestamp("2024-02-05")
+            event_date = t_0
+            def __init__(self, ticker, premium):
+                self.ticker, self.premium = ticker, premium
+            def marks(self, session):
+                return {"P_L0.05": self.premium}
+
+        pairs = [Pair(f"TEST{i}", -(i + 1) / 10) for i in range(6)]
+        gross = pd.DataFrame([{"ticker": p.ticker, "event_date": p.event_date,
+                              "S_entry": 10.0, "bucket": p.bucket, "entry": "post", "otm": 0.05,
+                              "horizon": h, S.PRIMARY["strategy"]: (i - 3) / 100}
+                             for h in S.FIXED_HORIZONS for i, p in enumerate(pairs)])
+        untouched = gross.copy(deep=True)
+        net = S._primary_net_results(ns, gross, pairs)
+        expected = gross.copy(deep=True)
+        expected[S.PRIMARY["strategy"]] -= np.tile(np.arange(1, 7) / 1000, 9)
+        pd.testing.assert_series_equal(net[S.PRIMARY["strategy"]], expected[S.PRIMARY["strategy"]])
+        pd.testing.assert_frame_equal(gross, untouched)
+        control = gross.copy(deep=True)
+        control[S.PRIMARY["strategy"]] = 0.0
+        pd.testing.assert_frame_equal(ns["difference_board"](net, control),
+                                      ns["difference_board"](expected, control))
+        absolute = ns["scoreboard"](net, horizons=list(S.FIXED_HORIZONS))
+        self.assertTrue((absolute.n == 6).all())
+        self.assertTrue(absolute.ci_lo.notna().all())
+        gross.loc[0, S.PRIMARY["strategy"]] = np.nan
+        self.assertTrue(pd.isna(S._primary_net_results(ns, gross, pairs).iloc[0][S.PRIMARY["strategy"]]))
 
     def test_offline_sources_are_closed_allowlist_at_pinned_commit(self):
         with patch.object(socket.socket, "connect", side_effect=AssertionError("network forbidden")):
