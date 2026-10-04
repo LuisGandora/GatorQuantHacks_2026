@@ -9,9 +9,7 @@ We pre-registered a systematic test of whether fresh leadership 8-Ks create a tr
 
 ## 02 ECONOMIC HYPOTHESIS
 
-When an unplanned C-suite leadership disruption occurs (CEO or CFO departure or appointment), investors face acute operational uncertainty. Standard market microstructure theory suggests that institutional equity holders, surprised by an unexpected governance transition, overpay for immediate downside insurance. If implied volatility spikes beyond realized post-filing price volatility, put sellers should capture an attractive volatility risk premium.
-
-Crucially, we hypothesize this volatility overpricing exists only when the 8-K represents the first public disclosure ("fresh"). If an 8-K merely formalizes an executive transition announced days earlier via press release ("stale"), the options chain has already re-priced and uncertainty has decayed. Pre-registered failure conditions in runs/PREREG.md specify that if fresh filings fail to beat ordinary days, or if fresh filings perform indistinguishably from stale filings, the thesis is falsified. The counterparty is envisioned as an institutional hedger overpaying for puts; however, counterparty identities are unobserved.
+When an unplanned C-suite disruption occurs (CEO/CFO departure or appointment), investors face acute uncertainty. Microstructure theory suggests equity holders, surprised by an unexpected transition, overpay for downside insurance. If implied volatility exceeds realized post-filing volatility, put sellers should capture an attractive volatility risk premium. Crucially, we hypothesize this overpricing exists only when the 8-K represents the first public disclosure ("fresh"). If an 8-K merely formalizes an executive transition announced days earlier via press release ("stale"), the chain has already re-priced. Pre-registered failure conditions in runs/PREREG.md specify that if fresh filings fail to beat ordinary days or perform indistinguishably from stale filings, the thesis is falsified. The counterparty is envisioned as an institutional hedger overpaying for puts; however, counterparty identities are unobserved.
 
 ## 03 DATA & UNIVERSE
 
@@ -110,6 +108,9 @@ We evaluated a 21-session simulated portfolio allocating 10% capital per event, 
 | Return distribution skewness | -2.26 | -1.89 |
 *Table 3: Simulated portfolio performance, downside metrics, and modeled costs. Costs assume 5% premium haircut per side; quotes unobserved. Annualization: daily mean x 252. Sharpe assumes zero risk-free rate.*
 
+![Figure 1: Cumulative portfolio equity curves under 1x (blue) and 2x (red) modeled costs across in-sample (2024-2025) and reported out-of-sample (Jan-Aug 2026) periods. Maximum drawdown reached -5.1% under cost stress.](../runs/portfolio_F1-leadership-fresh.png)
+*Figure 1: Cumulative portfolio equity curves under 1x (blue) and 2x (red) modeled costs across in-sample (2024-2025) and reported out-of-sample (Jan-Aug 2026) periods. Maximum drawdown reached -5.1% under cost stress.*
+
 ### 6.2 Tail Risk, Negative Skewness & Market Beta
 
 The portfolio displays severe negative skewness (-2.26 IS, -1.89 OOS), reflecting classic short-volatility tail exposure: steady small premium collection punctuated by catastrophic jump-down losses (worst single event -16.5% of spot). Sponsoring puts exposes the portfolio to high positive equity delta (0.35-0.45 per contract). Because the challenge dataset lacks market index references, systematic market beta could not be separated from idiosyncratic governance risk. In a broader market downturn, multiple concurrent short puts would experience correlated losses. The primary risk mitigation rule is straightforward: do not sell puts after fresh leadership changes.
@@ -157,9 +158,9 @@ Conclusion & Next Steps: The proposed premium-harvesting trade is definitively u
 | A3 CFO / Exec | Low-JEV appointment / CSP & CC | 115-116 priced events | Null (-0.58% / -1.10%) | High arm empty; appointment disclosures mixed in realized equity direction. |
 | A4 Restructure | High-JEV restructuring / collar | 0 events in arm | Sparse Feasibility | Zero qualifying events found; demoted A->B before economic test. |
 | B1-B4 Incidents | Cybersecurity, directors, strategy | 0 to 16 events in arm | Sparse Feasibility | Breaches and disputed exits too sparse in top-100; demoted B->C. |
-| B5 Good News | All-tag positive tone / long call | 103 priced events | Null (-0.15%) | Tag labels do not imply upward stock momentum; JEV does not encode direction. |
+| B5 Good News | Positive-tone tags / long call | 103 priced events | Null (-0.15%) | Tag labels do not imply upward stock momentum; JEV does not encode direction. |
 | B6 Earnings | Quarterly earnings / CSP & CC | 117-118 IS priced events | Failed OOS | CSP +0.39% IS -> -0.46% OOS; CC +0.83% IS -> -1.59% OOS. Failed generalization. |
-| F1 Leadership | EDGAR lag <= 1 / CSP 120d | 55 IS / 25 OOS priced | Claim Rejected | Fresh-vs-ord -1.19% IS / -0.70% OOS; fresh-stale -1.03% IS. Robust negative plateau. |
+| F1 Fresh Leadership | EDGAR lag <= 1 / CSP 120d | 55 IS / 25 OOS priced | Claim Rejected | Fresh-vs-ord -1.19% IS / -0.70% OOS; fresh-stale -1.03% IS. Robust negative plateau. |
 | VRP H1 Map | 18-category variance premium map | 18 categories / 400 controls | Null Map | Zero of 18 categories pass BH q=.10; all 95% CIs include zero. No candidate. |
 | VRP H2 Pooled | Fresh-stale outside leadership tags | 666/547 IS; 229/218 OOS | Not Confirmed | IS diff +0.003 (p=.999); OOS diff -0.149 (p=.114). Movement pattern did not generalize. |
 | Exp 6 Benchmark | Earnings resolution CSP +5 | 54 events / 17 CIK clusters | Candidate Failed | Paired net edge +0.0881% below +0.50% economic hurdle; failed 9 gates. |
@@ -167,4 +168,3 @@ Conclusion & Next Steps: The proposed premium-harvesting trade is definitively u
 | Exp 10 Gov. CC | Governance uncertainty CC +21 | 6 events / 6 issuers / 17 ctrl | Coverage Failure | Net edge -0.8991%; failed 20/10 floor; all 36 sensitivity cells negative. |
 | Exp 11-13 Fwd | Adverse current x intact guidance | 435 filings -> 12 signals | Infeasible (Rarity) | Expanded across 22+10 tags; 12 signals from 6 issuers. Economically infeasible. |
 *Table A1: Comprehensive register of all 13 research stages, VRP extensions, and remote supporting experiments.*
-
