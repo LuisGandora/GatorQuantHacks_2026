@@ -1,8 +1,10 @@
 """Offline safety and orchestration checks; never fetch market observations."""
 import json
 from pathlib import Path
+import shutil
 import socket
 import sys
+import tempfile
 import types
 import unittest
 from unittest.mock import patch
@@ -43,26 +45,46 @@ class SubmissionSafetyTests(unittest.TestCase):
         self.assertEqual(S._drop_reason_counts(pd.DataFrame({"reason": ["stale", "stale", "missing"]})),
                          {"stale": 2, "missing": 1})
 
-    def test_missing_freeze_stops_before_key_cache_or_api(self):
+    def test_source_fingerprint_replaces_historical_tag_precondition(self):
         fake = types.ModuleType("harness")
-        fake.require_freeze = lambda: sys.exit("missing tag")
-        with patch.dict(sys.modules, {"harness": fake}), patch.object(S, "_load_original") as loader:
-            with self.assertRaisesRegex(S.SubmissionBlocked, "authentic historical freeze"):
+        fake.events = lambda *args: self.fail("execution should reach the event function")
+        fake.require_freeze = lambda: self.fail("historical tag guard must not be invoked")
+        with patch.dict(sys.modules, {"harness": fake}), \
+             patch.object(S, "_load_original", side_effect=S.SubmissionBlocked("test stop")), \
+             patch.object(S, "_key", return_value="mock-key"):
+            with self.assertRaisesRegex(S.SubmissionBlocked, "test stop"):
                 S.run_judge("2024-01-01", "2024-03-01", enabled=True)
-            loader.assert_not_called()
 
-    def test_judge_sources_must_match_pinned_build(self):
-        original_run = S.subprocess.run
-        for dependency in S.PINNED_CODE_PATHS:
-            with self.subTest(dependency=dependency):
-                def changed_source(command, **kwargs):
-                    if command[-1] == f"{S.BUILD_COMMIT}:{dependency}":
-                        return types.SimpleNamespace(returncode=0, stdout=b"different bytes")
-                    return original_run(command, **kwargs)
-                with patch.object(S.subprocess, "run", side_effect=changed_source):
-                    with self.assertRaisesRegex(S.SubmissionBlocked, "differs from pinned build"):
-                        S.verify_pinned_sources(Path("."))
-        S.verify_pinned_sources(Path("."))
+    def test_pinned_source_tampering_is_detected_in_clean_clone(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "submission").mkdir()
+            shutil.copy("submission/source_manifest.json", root / "submission/source_manifest.json")
+            for name in S.PINNED_CODE_PATHS:
+                target = root / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(name, target)
+            S.verify_pinned_sources(root)
+            (root / S.PINNED_CODE_PATHS[0]).write_bytes(b"tampered source")
+            with self.assertRaisesRegex(S.SubmissionBlocked, "source SHA-256 differs"):
+                S.verify_pinned_sources(root)
+
+    def test_summary_snapshot_tampering_is_detected_without_git_history(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            (root / "submission").mkdir()
+            shutil.copy("submission/source_manifest.json", root / "submission/source_manifest.json")
+            for name in S.SUMMARY_PATHS:
+                source = Path("submission/evidence") / name
+                target = root / "submission/evidence" / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy(source, target)
+            texts = S.committed_summaries(root)
+            self.assertEqual(set(texts), set(S.SUMMARY_PATHS))
+            victim = root / "submission/evidence" / S.SUMMARY_PATHS[0]
+            victim.write_text(victim.read_text() + "\ntampered\n", encoding="utf-8")
+            with self.assertRaisesRegex(S.SubmissionBlocked, "Summary SHA-256 mismatch"):
+                S.committed_summaries(root)
 
     def test_mock_judge_propagates_dates_and_displays_every_horizon(self):
         import pandas as pd
@@ -70,7 +92,7 @@ class SubmissionSafetyTests(unittest.TestCase):
         requested = ("2024-02-05", "2024-02-05")
         calls = {"events": [], "placebo": []}
         fake_harness = types.ModuleType("harness")
-        fake_harness.require_freeze = lambda: "authentic-test-freeze"
+        fake_harness.require_freeze = lambda: self.fail("historical tag guard must not be invoked")
         def events(pipeline, spec, start, end):
             calls["events"].append((start, end))
             return pd.DataFrame({"ticker": ["AAA", "BBB"], "event_date": [
@@ -101,6 +123,7 @@ class SubmissionSafetyTests(unittest.TestCase):
         def scoreboard(frame, horizons, strategies):
             return pd.DataFrame({"horizon": horizons})
         pipeline = {
+            "SEC_USER_AGENT": "GatorQuant qa@example.org",
             "N_PLACEBO": 1, "EXPIRY_BUCKETS": {"1m": (), "2m": (), "3-6m": ()},
             "OTM_GRID": [0.03, 0.05, 0.10], "pd": pd,
             "price_events": price_events, "sample_placebo": sample_placebo,
@@ -117,7 +140,8 @@ class SubmissionSafetyTests(unittest.TestCase):
         self.assertEqual(calls["placebo"], [requested])
         self.assertEqual(result["tables"]["fresh_vs_ordinary"]["horizon"].tolist(),
                          list(S.FIXED_HORIZONS))
-        self.assertEqual(result["freeze"], "authentic-test-freeze")
+        self.assertEqual(result["provenance"],
+                         "SHA-256 source integrity verified; historical preregistration not established")
         self.assertEqual(result["net_tables"]["fresh_vs_ordinary"].horizon.tolist(), list(S.FIXED_HORIZONS))
         self.assertEqual(result["net_returns"]["fresh"].issuer_n.tolist(), [0, 0, 0, 0, 0, 1, 0, 0, 0])
 
@@ -166,6 +190,15 @@ class SubmissionSafetyTests(unittest.TestCase):
         gross.loc[0, S.PRIMARY["strategy"]] = np.nan
         self.assertTrue(pd.isna(S._primary_net_results(ns, gross, pairs).iloc[0][S.PRIMARY["strategy"]]))
 
+    def test_missing_sec_contact_stops_before_requesting_events(self):
+        fake = types.ModuleType("harness")
+        fake.events = lambda *args: self.fail("No SEC or market requests permitted without contact")
+        with patch.dict(sys.modules, {"harness": fake}), \
+             patch.object(S, "_load_original", return_value={"SEC_USER_AGENT": ""}), \
+             patch.object(S, "_key", return_value="mock-key"):
+            with self.assertRaisesRegex(S.SubmissionBlocked, "Set SEC_USER_AGENT"):
+                S.run_judge("2024-01-01", "2024-03-01", enabled=True)
+
     def test_offline_sources_are_closed_allowlist_at_pinned_commit(self):
         with patch.object(socket.socket, "connect", side_effect=AssertionError("network forbidden")):
             texts = S.committed_summaries()
@@ -176,6 +209,13 @@ class SubmissionSafetyTests(unittest.TestCase):
         findings = S.markdown_tables(texts["runs/FINDINGS.md"])[0]
         self.assertEqual(findings[0]["Edge"], "−1.19%")
         self.assertEqual(findings[3]["Edge"], "−0.70%")
+
+    def test_source_manifest_disclaims_historical_preregistration(self):
+        manifest = json.loads(Path(S.SOURCE_MANIFEST).read_text(encoding="utf-8"))
+        self.assertEqual(manifest["build_commit"], S.BUILD_COMMIT)
+        self.assertIn("SHA-256", manifest["metadata"]["source_integrity"])
+        self.assertIn("not a signed historical freeze tag",
+                      manifest["metadata"]["historical_preregistration"])
 
     def test_configuration_cannot_tune_research(self):
         args = ["post", list(S.FIXED_HORIZONS[:-1]), [0.03, 0.05, 0.10],

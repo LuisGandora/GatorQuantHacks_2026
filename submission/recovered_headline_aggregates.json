@@ -1,0 +1,67 @@
+{
+  "source_artifact": "runs/ledger.jsonl",
+  "source_commit": "5871597e3ecab5e0dbbc55d80314e1939d182224",
+  "source_git_blob": "279a6f265966bdd096ab391c6dee4f5bb45edf40",
+  "records": [
+    {
+      "ledger_line": 87,
+      "stage": "insample",
+      "arm": "fresh",
+      "edge_fraction": -0.011934055638365507,
+      "n_max_per_headline_horizon": 55,
+      "significant_headline_horizons": 1,
+      "original_verdict": "IN-SAMPLE ONLY (worse than ordinary days): too few out-of-sample events to check",
+      "timestamp_as_recorded": "2026-10-03T15:15:03"
+    },
+    {
+      "ledger_line": 88,
+      "stage": "insample",
+      "arm": "stale",
+      "edge_fraction": -0.0016249592619809866,
+      "n_max_per_headline_horizon": 95,
+      "significant_headline_horizons": 0,
+      "original_verdict": "NOT SUPPORTED: worse than ordinary days on average, but no headline horizon's 95% CI excludes zero",
+      "timestamp_as_recorded": "2026-10-03T15:15:03"
+    },
+    {
+      "ledger_line": 89,
+      "stage": "insample",
+      "arm": "fresh-stale",
+      "edge_fraction": -0.01030909637638452,
+      "n_max_per_headline_horizon": 55,
+      "significant_headline_horizons": 0,
+      "original_verdict": "NOT SUPPORTED: worse than ordinary days on average, but no headline horizon's 95% CI excludes zero",
+      "timestamp_as_recorded": "2026-10-03T15:15:03"
+    },
+    {
+      "ledger_line": 95,
+      "stage": "oos",
+      "arm": "fresh",
+      "edge_fraction": -0.00695474531050351,
+      "n_max_per_headline_horizon": 25,
+      "significant_headline_horizons": 0,
+      "original_verdict": "SUPPORTED (worse than ordinary days): significant in-sample, survives dropping its best events, same sign out-of-sample",
+      "timestamp_as_recorded": "2026-10-03T15:27:18"
+    },
+    {
+      "ledger_line": 96,
+      "stage": "oos",
+      "arm": "stale",
+      "edge_fraction": 0.021274986107952126,
+      "n_max_per_headline_horizon": 40,
+      "significant_headline_horizons": 2,
+      "original_verdict": "NOT SUPPORTED: worse than ordinary days on average, but no headline horizon's 95% CI excludes zero",
+      "timestamp_as_recorded": "2026-10-03T15:27:18"
+    },
+    {
+      "ledger_line": 97,
+      "stage": "oos",
+      "arm": "fresh-stale",
+      "edge_fraction": -0.028229731418455636,
+      "n_max_per_headline_horizon": 25,
+      "significant_headline_horizons": 2,
+      "original_verdict": "NOT SUPPORTED: worse than ordinary days on average, but no headline horizon's 95% CI excludes zero",
+      "timestamp_as_recorded": "2026-10-03T15:27:18"
+    }
+  ]
+}

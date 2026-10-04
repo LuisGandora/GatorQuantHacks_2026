@@ -1,132 +1,112 @@
 # Do fresh leadership 8-Ks reward put sellers?
 
-Gator Quant Hacks 2026 · Massive “Trade the 8-K” submission preparation.
+Gator Quant Hacks 2026 · Massive **Trade the 8-K**.
 
-We hypothesized that a leadership-change filing carrying fresh news causes investors to
-pay too much for downside protection. The declared trade sells a **5% OTM cash-secured
-put**, in the **3–6 month expiry bucket**, at the **post-filing close**. Freshness is
-proxied by at most one trading session between the EDGAR period-of-report date and
-the filing-adjusted event date. The five categories are CEO appointment/departure,
-CFO appointment/departure, and executive-officer appointment.
+We tested whether freshly disclosed leadership changes cause investors to overpay for
+downside protection. The fixed trade sells a **5% OTM cash-secured put**, after the
+filing-adjusted session closes, with **90–180-day expiry targeting 120 days**. The five
+Massive categories are CEO appointment/departure, CFO appointment/departure, and
+executive-officer appointment. Freshness uses SEC EDGAR period-of-report metadata;
+it does not establish the first public disclosure.
 
-**The positive-edge hypothesis failed.** The committed F1 result reports a put-selling
-edge against ordinary days of **−1.19% in 2024–2025 (headline n=55)** and
-**−0.70% in January–August 2026 (headline n=25)**, averaged over 21 sessions,
-42 sessions, and expiry. All 18 neighboring specifications were negative in each
-window. These are trade-return differences, not annual portfolio returns. The result
-supports rejection of the original payoff hypothesis; it does not by itself establish
-that options were underpriced or that buying puts would be profitable. The broader
-variance-premium map selected no category at its multiple-testing threshold.
+**The proposed payoff is unsupported.** The primary fresh-minus-stale gross difference
+is **−1.03% in-sample**, with no headline-horizon interval excluding zero. The separate
+fresh-minus-ordinary comparison is **−1.19% in 2024–2025 (maximum valid headline N=55)**
+and **−0.70% in the already-reported January–August 2026 OOS window (N=25)**. These
+average the differences at 21 sessions, 42 sessions and expiry; they are neither
+absolute returns nor annual returns. All 18 neighboring specifications per window
+were negative. OOS ordinary-day comparisons were not significant. No profitable
+opposite-side trade was established, and judges’ sealed data remains untouched.
 
-## Submission status and reading order
+Read the **[two-page quant note](submission/QUANT_NOTE.pdf)**, then open
+**[GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb)**. The
+[QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
+[authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.
 
-This is **preparation for the final report**, not a completed Devpost submission.
-See [SUBMISSION_QA_CHECKLIST.md](SUBMISSION_QA_CHECKLIST.md) for verified checks and
-remaining blockers. The independent [submission assessment](docs/SUBMISSION_ASSESSMENT.md)
-records a provisional 50/80 before sealed-window judging. In particular, historical freeze tags are missing from the public
-remote, so guarded live reproduction is blocked. Do not recreate them at today's HEAD
-or bypass the guards to get a result.
+## Install and run
 
-1. [SUBMISSION_EVIDENCE_PACKET.md](SUBMISSION_EVIDENCE_PACKET.md): verified facts,
-   classifications, limitations, and the report handoff.
-2. [GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb): canonical judge-facing notebook;
-   historical experiments are summaries rather than additional live tests.
-3. [SUBMISSION_NOTEBOOK_REPORT_MAP.md](SUBMISSION_NOTEBOOK_REPORT_MAP.md) and
-   [submission_final_metrics.json](submission_final_metrics.json): table/figure provenance
-   and machine-readable reported metrics.
-4. [runs/FINDINGS.md](runs/FINDINGS.md): existing research narrative;
-   [runs/FINDINGS.pdf](runs/FINDINGS.pdf) is an existing four-page draft, **not the final
-   report**. Write the final note within **two pages**, satisfying both the starter
-   maximum and the supplied official page’s five-page ceiling (which defers conflicts
-   to the notebook or announcements); the two-page target is conservative.
-   Review factual consistency before submission.
-5. [runs/PREREG.md](runs/PREREG.md), [runs/APPENDIX.md](runs/APPENDIX.md),
-   [runs/EXTRAS.md](runs/EXTRAS.md), [runs/audit_notes.md](runs/audit_notes.md), and
-   [runs/APPENDIX_VRP.md](runs/APPENDIX_VRP.md): protocol, methodology, audits,
-   sensitivity, costs, capacity, and extension findings.
-
-The worker briefs refer to Experiments 8–12 and newer semantic pipelines. Those are
-not present in the audited public `main` snapshot; this submission does not claim them.
-Committed F1 and VRP aggregate reports include already-observed 2026 results. Judges'
-sealed data has not been opened during submission preparation.
-
-## Install and launch
-
-Use Python **3.10 or newer** and run from the repository root. The QA checklist records
-the fresh environment actually tested. There is one submission dependency file:
-`requirements.txt`; the optional `requirements-research.txt` is for historical score
-creation and is unnecessary for judging.
+Use **Python 3.10+**, from the repository root. One submission installation path:
 
 ```bash
-git clone https://github.com/LuisGandora/GatorQuantHacks_2026.git
-cd GatorQuantHacks_2026
+git clone https://github.com/jack-uf/GatorQuantHacks_2026_Submission.git
+cd GatorQuantHacks_2026_Submission
 bash setup.sh
 source .venv/bin/activate
 jupyter lab GQH_MASSIVE_FINAL.ipynb
 ```
 
-On Windows, replace the last three commands with:
+Windows: run `powershell -ExecutionPolicy Bypass -File setup.ps1`, then
+`.venv\Scripts\Activate.ps1` and the same Jupyter command. Select
+**Python (Gator Quant Hacks .venv)**. Setup installs `requirements.txt` and creates a
+private `.env` from `.env.example`. Replace `your-key-here` with your Massive API key,
+or set `MASSIVE_API_KEY` in the environment. Never place a key in a notebook cell.
+For the optional live path, also set `SEC_USER_AGENT` in `.env` or the environment
+to your project name and real contact email; SEC metadata requests require it.
+Default **Run All** displays the committed evidence with no key or API requests.
 
-```powershell
-powershell -ExecutionPolicy Bypass -File setup.ps1
-.venv\Scripts\Activate.ps1
-jupyter lab GQH_MASSIVE_FINAL.ipynb
-```
+For authorized judge execution, set the top configuration cell’s `START_DATE` and
+`END_DATE` to inclusive ISO dates, and set `RUN_CUSTOM_JUDGE = True`. Only dates may
+change; the economic specification is checked. Explicitly set
+`AUTHORIZE_RESTRICTED_DATES = True` if the event or forward-pricing envelope intersects
+the protected 2026 range or the starter’s holdout placeholder. The placeholder is
+not a verified judges’ window. Selection and ordinary-day sampling use your date
+bounds; lookback and forward option prices extend beyond them. Unsupported windows
+fail explicitly because the unchanged calendar spans June 2021–December 2027.
 
-Select **Python (Gator Quant Hacks .venv)**. Setup creates `.env` from `.env.example`;
-replace `your-key-here` locally with your Massive key. The key must authorize the
-required disclosure, options-reference, and historical option endpoints. Alternatively,
-set the `MASSIVE_API_KEY` environment variable. Never publish the key or `.env`.
-The notebook's default committed-summary mode needs no key and makes no API requests.
+Live execution requires disclosure, options-reference and historical-options access.
+It reports gross and net comparisons at **1, 2, 3, 5, 10, 21, 42, 63 sessions and expiry**,
+using the original bootstrap and unchanged costs. Missing prices remain missing.
+**Live endpoint entitlements and economic reproduction were not verified: no API key
+was configured during QA.** Ordered offline execution and synthetic date propagation
+passed; they are not a market-data reproduction. See
+[reproducibility instructions](docs/REPRODUCIBILITY.md).
 
-## Judge dates and reproduction
+## Evidence, provenance and layout
 
-Set **`START_DATE`** and **`END_DATE`** in the notebook's configuration cell. Dates are
-inclusive ISO strings (`YYYY-MM-DD`). Keep the predeclared trade and analysis parameters
-unchanged. Set `RUN_CUSTOM_JUDGE = True` only when you are authorized to evaluate
-that window and historical freeze verification succeeds. Set
-`AUTHORIZE_RESTRICTED_DATES = True` separately if event or forward-price dates
-overlap the configured holdout placeholder or protected 2026 range. The placeholder
-is not a verified judges' window. Date bounds feed
-event selection and ordinary-day sampling; prices outside the event window may be
-needed to implement entry, prior liquidity, and the fixed forward horizons.
+All 54 rounded historical gross horizon differences were recovered directly from
+original aggregate notebook outputs. Numeric F1 CI endpoints, horizon-specific N,
+issuer/common-matched/control-valid N, absolute event/control means, and historical
+net contrasts remain unavailable. No estimates fill those gaps. Discovery, headline,
+capacity and calendar-year counts have different eligibility rules and are labeled.
 
-All fixed horizons are displayed: **1, 2, 3, 5, 10, 21, 42, 63 sessions and expiry**.
-Missing estimates are identified rather than filled with zero. A short window or recent
-end date may leave horizons unresolved. The report map distinguishes figures drawn from
-committed evidence from figures requiring a live price run. Authorized live runs display
-gross and net contrasts separately, plus absolute net returns with event and issuer
-counts and the original bootstrap intervals. Net reporting applies the existing assumed
-5% of entry premium per side to every evaluated exit; it does not supply the missing
-historical all-horizon net results.
-
-For safe commands and the limits of reproduction, read
-[docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md). Do not replay research-stage commands
-or use `--force` to prepare a submission: they can consume a one-look allowance and
-write to the historical ledger. An offline structural/mock test is not a successful
-network reproduction of the economic result.
-
-## Repository map and data policy
+The hypothesis precedes the first recorded outcomes, but protocol date windows were
+amended after OOS. Authentic historical freeze tags and independent unlock custody
+are not established. The shipped SHA-256 manifest verifies original source bytes;
+it is **not** proof of preregistration. See [research provenance](docs/RESEARCH_PROVENANCE.md).
 
 | Location | Purpose |
 |---|---|
-| `GQH_MASSIVE_FINAL.ipynb`, `submission_pipeline.py` | Submission display and judge execution plumbing. |
-| `gator-quant-hacks-8k-options-challenge.ipynb` | Original working research notebook, retained as implementation provenance. |
-| `harness.py`, `pair_test.py`, `jev.py`, `vrp.py`, `report_extras.py` | Frozen research implementation and historical reporting. |
-| `pairings.json`, `*_labels.csv`, `jev_scores.csv` | Declared inputs, human annotations, scalar scores; no filing-response dump. |
-| `runs/` | Preregistrations, append-only ledger, aggregate results, and research history. |
-| `docs/`, `archive/` | Setup/publication guidance and historical starter/development files. |
-| `scripts/check_publication.py`, `tests/` | Publication checks and offline submission QA. |
+| `GQH_MASSIVE_FINAL.ipynb`, `submission_pipeline.py` | Canonical judge notebook and explicit execution plumbing. |
+| `submission/` | Final note/source, recovered aggregates, source hashes and bundled historical evidence. |
+| `submission_final_metrics.json`, `submission_authoritative_facts.json` | Consistent reported measurements, qualifications and unavailable fields. |
+| `docs/` | Reproduction, provenance, fair assessment, publication policy and Devpost copy. |
+| `runs/*.md`, `runs/vrp/*.md` | Author-written historical methodology, results and audits. |
+| Original notebook, `harness.py`, `pair_test.py`, `pairings.json`, `jev.py` | Preserved economic and semantic implementation; no research rerun on import. |
+| `scripts/`, `tests/` | Publication/consistency checks, PDF authoring and offline QA. |
 
-Data inputs are Massive disclosures, as-of option references, and option daily bars;
-spot is inferred by put-call parity rather than a stock-price feed. The existing
-freshness proxy also reads public SEC EDGAR filing metadata (period-of-report and
-acceptance dates); its limitations are explained in the evidence packet.
+Detailed chronology belongs in the [evidence packet](SUBMISSION_EVIDENCE_PACKET.md),
+[protocol](runs/PREREG.md), [audits](runs/audit_notes.md) and
+[report map](SUBMISSION_NOTEBOOK_REPORT_MAP.md). The separate 18-category variance-premium
+screen selected zero categories at BH q=.10; it is context, not a replacement strategy.
+[Devpost copy](docs/DEVPOST_SUBMISSION.md) is prepared; this repository does not imply
+that the Devpost form has been submitted.
 
-Publish source, author-written notes, annotations, and aggregate results only. Licensed
-raw Massive responses, option chains, source excerpts, and event-level exports stay
-local in ignored caches/output directories. Provider access and redistribution rights
-are independent of access to this repository. Ignore rules do not untrack existing
-files: run the publication check after staging. Older Git history can retain previously
-saved notebook outputs; the checklist records that unresolved publication risk. Never
-upload locally executed notebooks with raw outputs.
+## Data and publication policy
+
+This submission contains source, author-written documentation, human labels/scalar
+scores and aggregate results. Massive provides categorized disclosures, as-of option
+references and daily option bars; spot is inferred by put-call parity. Public SEC
+metadata supplies filing timing. Provider access does not grant redistribution rights.
+
+Keys, `.env`, `.massive_cache`, SEC/source dumps, raw licensed responses, event-level
+exports, internal prompts and saved notebook outputs are excluded. Executed local
+notebooks must not be committed. The public submission has a new, reviewed history;
+the original research history was preserved separately and was not rewritten.
+[Public export derivation](docs/PUBLIC_SUBMISSION_DERIVATION.md) explains the boundary.
+
+To check a proposed commit: `python scripts/check_publication.py` after staging.
+For consistency: `python scripts/check_submission_consistency.py`.
+Historical harness stage commands retain their original missing-tag guard and should
+not be run to prepare this submission. Optional report authoring uses
+`requirements-report.txt`; optional legacy score generation uses
+`requirements-research.txt`. Neither is required for notebook judging.

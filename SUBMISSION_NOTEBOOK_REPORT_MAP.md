@@ -1,32 +1,32 @@
-# Submission notebook to quant note map
+# Submission notebook to report map
 
-This map ties the report's claims to the canonical notebook and author-written committed artifacts. Notebook evidence is pinned to build commit `5d7b7b57879b6b4cb27319b827ad97d9783e63d8`. Figures or numeric cells unavailable in those sources are marked unavailable rather than inferred.
+This map routes the current two-page quant note to the canonical notebook and committed evidence. The notebook and report use static historical aggregates by default. Neither represents a new OOS look or a sealed-window result.
 
-| Report section | Notebook section | Figure/table | Supporting committed artifact |
-|---|---|---|---|
-| Hypothesis and trade | 1, 8 | Frozen hypothesis and trade specification | `runs/PREREG.md`; `runs/FINDINGS.md` |
-| Configuration and data access | 2–3 | Guarded dates; offline default; source-integrity check | Starter notebook; `submission_pipeline.py` |
-| Research journey | 4 | Historical experiment table and funnel figure | `runs/APPENDIX.md`; `runs/LEADERBOARD.md`; `runs/BLOCKED.md`; `SUBMISSION_EVIDENCE_PACKET.md` |
-| Research history | 4, 16 | Leaderboard; historical appendix | `runs/LEADERBOARD.md`; `runs/APPENDIX.md`; `runs/BLOCKED.md` |
-| Method and limitations | 5–8 | Method evolution; discovery/priced stage counts; signal audit notes | `runs/PREREG.md`; `runs/FINDINGS.md`; `runs/APPENDIX.md`; `runs/REPRO.md` |
-| Primary in-sample result | 9 | Fresh vs ordinary; fresh vs stale | `runs/FINDINGS.md`; `runs/EXTRAS.md` |
-| Fixed horizons | 10 | Nine-horizon table, unavailable for historical aggregate | `runs/FINDINGS.md` (headline only); custom output from original evaluator |
-| Ordinary-day baseline | 11 | Same-name control definition | `runs/FINDINGS.md`; starter notebook implementation |
-| Sensitivity | 12 | All 36 reported window/parameter cells | `runs/EXTRAS.md` |
-| Mechanism | 13 | Stock move and realized/implied aggregates; VRP H2 | `runs/FINDINGS.md`; `runs/APPENDIX_VRP.md`; `runs/vrp/MAP.md` |
-| Costs, liquidity, capacity | 14 | Portfolio table, cost/capacity table, existing portfolio figure | `runs/FINDINGS.md`; `runs/EXTRAS.md`; `runs/portfolio_F1-leadership-fresh.png` |
-| Out-of-sample | 15 | F1 2026 and pooled VRP H2 | `runs/FINDINGS.md`; `runs/APPENDIX_VRP.md` |
-| VRP category map | 16 | 18-category table and zero BH passes | `runs/APPENDIX_VRP.md`; `runs/vrp/MAP.md`; `runs/vrp/REVIEW.md` |
-| Final judge summary | 17 | Authoritative headline values and null fields | `runs/FINDINGS.md`; `runs/EXTRAS.md`; `runs/APPENDIX_VRP.md`; `submission_final_metrics.json` |
+| Report content | Notebook section | Current evidence and source | Qualification to retain |
+|---|---:|---|---|
+| Question, conclusion, event family | 1, 17 | `runs/PREREG.md`; `submission_authoritative_facts.json`; `submission_final_metrics.json` | The recorded pre-outcome CSP thesis failed. A protective-put mirror was not tested. |
+| Configuration and data path | 2, 3 | `GQH_MASSIVE_FINAL.ipynb`; `submission/source_manifest.json`; `submission_pipeline.py` | Default Run All reads verified aggregate files without network. The optional Massive API path requires a key and live entitlement remains unverified. |
+| Historical research journey | 4, 5, 16 | `runs/APPENDIX.md`; `runs/LEADERBOARD.md`; `runs/BLOCKED.md`; `SUBMISSION_EVIDENCE_PACKET.md` | Experiments 8-12 and 9B and later audits are absent from the published snapshot. Preserve historical classifications and unknowns. |
+| Event construction and denominators | 6, 7 | `runs/PREREG.md`; `runs/FINDINGS.md`; `submission_authoritative_facts.json` | Distinguish discovery 62/108 IS and 27/42 reported OOS, headline maxima 55/95 and 25/40, capacity counts 56/25, and yearly counts 27/32/27. They use different stage definitions. |
+| Trade mechanics | 8 | `runs/FINDINGS.md`; `runs/EXTRAS.md`; `submission_authoritative_facts.json` | CSP, 5% OTM, 90-180 day expiry bucket, 120-day target, post-filing close. Cost is assumed at 5% of premium per side, not quote-observed. |
+| Headline estimates | 9, 17 | `submission_final_metrics.json`; `runs/FINDINGS.md` | Gross event-minus-ordinary and fresh-minus-stale contrasts are not absolute or net returns. `n` is the maximum valid event count for a horizon, not issuer N or a shared matched sample. |
+| Fixed-horizon estimates | 10 | `submission/recovered_fixed_horizons.json`; `submission/recovered_reporting_aggregates.json`; `docs/RESEARCH_PROVENANCE.md` | All 54 rounded gross differences are recovered from saved original notebook output at commit `5871597e3ecab5e0dbbc55d80314e1939d182224`, cells 44/45. They are historical display values, rounded to 0.01 percentage point, not rerun estimates. |
+| Ordinary-day baseline | 11 | `runs/FINDINGS.md`; original evaluator summary | Same-name ordinary-day comparison with 120 draws per window is reported. Absolute control means, control N by horizon, and common matched N are unavailable. |
+| Sensitivity and mechanisms | 12, 13 | `runs/EXTRAS.md`; `runs/APPENDIX_VRP.md`; `runs/vrp/MAP.md`; `submission_final_metrics.json` VRP aggregates | The 18 neighbor signs per window are descriptive; nine settings use pre-entry dates and cannot be traded after an unexpected filing. VRP H1 is a null map, with no category OOS look. |
+| Costs, portfolio, liquidity, capacity | 14 | `runs/FINDINGS.md`; `runs/EXTRAS.md`; `submission/recovered_reporting_aggregates.json` | Portfolio returns after assumed costs differ from unavailable event-level net contrasts. Capacity uses historical volume and spot notional, not guaranteed fills or strike collateral. |
+| Reported OOS and sealed boundary | 15 | `runs/FINDINGS.md`; `runs/APPENDIX_VRP.md`; `docs/RESEARCH_PROVENANCE.md` | The project reported F1 OOS in 2026 and VRP H2 OOS. No raw OOS was reopened for this submission update. Judges' dates and sealed results remain unknown. |
+| Final report | All relevant sections | `submission/QUANT_NOTE.md`; `submission/QUANT_NOTE.pdf` | Final report exists and is two pages. The four-page `runs/FINDINGS.pdf` is historical and omits the completed VRP extension. |
 
-## Reconciliation status
+## Current reconciliation
 
-Worker A's completed [evidence packet](SUBMISSION_EVIDENCE_PACKET.md) is the factual handoff used to reconcile the notebook and metrics. Historical numbers are pinned to build commit `5d7b7b57879b6b4cb27319b827ad97d9783e63d8`. The notebook displays the selected reported results from committed aggregate sources, distinguishes reported OOS from sealed data, lists Experiments 8–12/9B as missing/unmerged, and preserves nulls for unavailable F1 endpoints, issuer counts, matched counts, and absolute returns. `submission_final_metrics.json` carries the same source commit and detailed gaps.
+The final report is `submission/QUANT_NOTE.md` and its two-page rendering is `submission/QUANT_NOTE.pdf`. Its 54-entry horizon table covers nine horizons, three contrasts, and two windows. The original display recovery is documented in the recovered aggregate JSON and provenance record. No horizon-specific net edge, numeric CI endpoints, event/control N by horizon, issuer N, common matched N, or absolute signal/control means are available. Keep those fields unavailable.
 
-The handoff's factual issues are represented in the notebook and metrics: stage denominator differences; F1 fresh-minus-stale preregistration versus fresh-versus-ordinary headline; no numeric F1 CI endpoints; no first-public-disclosure validation; no supported CSP or protective-put edge; zero VRP H1 BH passes; separate not-confirmed H2 OOS; VRP gross-edge versus own-net-P&L wording; unavailable freeze tags; and absent experiments/audits. The report target is at most two pages, satisfying both supplied ceilings. A final PDF remains to be written from the unified evidence inputs; the older PDF is historical documentation.
+`submission/source_manifest.json` replaces unavailable historical freeze tags for file-integrity checks on the self-contained judge path. It is an unsigned source-hash manifest. It does not prove contemporaneous preregistration, independent custody, or that sealed data remained unseen. The protocol's exact date windows were amended after OOS, which remains an explicit custody and rigor limitation.
 
-## Publication-source checks still required
+The denominator labels have source-specific meanings. Discovery counts precede pricing; headline counts are maximum valid per-horizon event counts; capacity counts valid baseline pairs before horizon eligibility; year counts cover all evaluated settings. No row-level reconciliation is present. Do not collapse these into one sample size.
 
-- The pinned four-page `runs/FINDINGS.pdf` contains a reference to the planned variance-premium map, but it does not contain the completed VRP results in the pinned `runs/FINDINGS.md`. The notebook follows the current Markdown and VRP aggregate artifacts. Regenerate or otherwise reconcile the PDF before treating the publication bundle as synchronized; the current notebook follows the completed Markdown/VRP aggregates.
-- The local organizer starter notebook says the quant note may be at most two pages; the supplied task brief requests a five-page note. Use a two-page maximum to satisfy both stated ceilings; do not treat the five-page brief as an organizer rule change.
-- The notebook judge path now checks that the starter notebook, `pair_test.py`, `pairings.json`, `harness.py`, `jev.py`, and `jev_scores.csv` exactly match the pinned build before loading their research definitions. The documented freeze guards omit some of those dependencies, so this byte check closes that provenance gap for this path without changing research logic.
+The notebook report claims must remain aligned with `submission_final_metrics.json`, `submission_authoritative_facts.json`, recovered aggregates, and `docs/RESEARCH_PROVENANCE.md`. If a source changes, update this map from that source. Do not infer missing values from displayed averages or significance markers.
+
+## QA and publication boundary
+
+Current QA records report a clean offline Run All and 20 passing tests. These verify the static submission path, not API entitlement, historical tag custody, independent reproduction, or sealed evaluation. The notebook's custom path is disabled by default. Old Git history still contains saved provider or notebook material according to the publication audit, the new clean public submission repository has been published and verified without those objects. No Devpost submission is implied by these files.

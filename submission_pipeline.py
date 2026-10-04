@@ -9,11 +9,11 @@ from __future__ import annotations
 
 import ast
 from datetime import date, timedelta
+import hashlib
 import json
 import os
 from pathlib import Path
 import re
-import subprocess
 import sys
 import types
 
@@ -27,6 +27,8 @@ PINNED_CODE_PATHS = (
     "gator-quant-hacks-8k-options-challenge.ipynb", "pair_test.py", "pairings.json",
     "harness.py", "jev.py", "jev_scores.csv",
 )
+SOURCE_MANIFEST = "submission/source_manifest.json"
+EVIDENCE_ROOT = "submission/evidence"
 FIXED_HORIZONS = (1, 2, 3, 5, 10, 21, 42, 63, "exp")
 PRIMARY = {"strategy": "cash_secured_put", "bucket": "3-6m",
            "entry": "post", "otm": 0.05, "headline_horizons": (21, 42, "exp")}
@@ -46,31 +48,59 @@ def validate_configuration(entry, horizons, otm_grid, expiry_buckets, cost_hairc
         raise SubmissionBlocked("Configuration differs from frozen F1; only judge dates may change")
 
 
+def _source_manifest(root: Path) -> dict:
+    """Load the closed source map; hashes provide integrity, not a signed freeze."""
+    try:
+        manifest = json.loads((root / SOURCE_MANIFEST).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SubmissionBlocked("Submission source manifest is missing or invalid") from exc
+    if (manifest.get("schema_version") != 1
+            or manifest.get("build_commit") != BUILD_COMMIT
+            or set(manifest.get("summaries", {})) != set(SUMMARY_PATHS)
+            or set(manifest.get("economic_sources", {})) != set(PINNED_CODE_PATHS)):
+        raise SubmissionBlocked("Submission source manifest does not match the closed build allowlist")
+    return manifest
+
+
+def _sha256(path: Path, description: str) -> str:
+    try:
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+    except OSError as exc:
+        raise SubmissionBlocked(f"Submission evidence is missing: {description}") from exc
+
+
 def committed_summaries(root: Path = Path(".")) -> dict[str, str]:
-    """Read only pinned committed aggregate Markdown; never glob research files."""
+    """Read only hash-checked aggregate Markdown shipped with the clone."""
+    manifest = _source_manifest(root)
     texts = {}
     for name in SUMMARY_PATHS:
-        result = subprocess.run(["git", "show", f"{BUILD_COMMIT}:{name}"],
-                                cwd=root, capture_output=True, text=True)
-        if result.returncode:
-            raise SubmissionBlocked(f"Missing committed summary: {name}")
-        texts[name] = result.stdout
+        entry = manifest["summaries"][name]
+        expected_file = f"{EVIDENCE_ROOT}/{name}"
+        if entry.get("file") != expected_file:
+            raise SubmissionBlocked(f"Summary manifest path differs from the closed allowlist: {name}")
+        path = root / expected_file
+        if _sha256(path, name) != entry.get("sha256"):
+            raise SubmissionBlocked(f"Summary SHA-256 mismatch: {name}")
+        try:
+            texts[name] = path.read_text(encoding="utf-8")
+        except (OSError, UnicodeDecodeError) as exc:
+            raise SubmissionBlocked(f"Summary is not readable UTF-8 Markdown: {name}") from exc
     return texts
 
 
 def verify_pinned_sources(root: Path = Path(".")) -> None:
-    """Require the original judge dependencies to match the recorded build bytes."""
+    """Verify economic source bytes against shipped SHA-256 build fingerprints.
+
+    This establishes byte integrity relative to the manifest. It does not establish
+    a signed historical preregistration or authenticate the manifest itself.
+    """
+    manifest = _source_manifest(root)
     for name in PINNED_CODE_PATHS:
-        result = subprocess.run(["git", "show", f"{BUILD_COMMIT}:{name}"],
-                                cwd=root, capture_output=True)
-        if result.returncode:
-            raise SubmissionBlocked(f"Pinned judge source is unavailable: {name}")
-        try:
-            current = (root / name).read_bytes()
-        except OSError as exc:
-            raise SubmissionBlocked(f"Pinned judge source is unavailable: {name}") from exc
-        if current != result.stdout:
-            raise SubmissionBlocked(f"Judge source differs from pinned build {BUILD_COMMIT}: {name}")
+        expected = manifest["economic_sources"][name].get("sha256")
+        if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+            raise SubmissionBlocked(f"Invalid source SHA-256 in manifest: {name}")
+        if _sha256(root / name, name) != expected:
+            raise SubmissionBlocked(f"Judge source SHA-256 differs from pinned build {BUILD_COMMIT}: {name}")
 
 
 def markdown_tables(text: str) -> list[list[dict[str, str]]]:
@@ -174,12 +204,17 @@ def _fixed_horizon_table(P, board):
     return board.set_index("horizon").reindex(FIXED_HORIZONS).rename_axis("horizon").reset_index()
 
 
-def _key(root: Path) -> str:
-    key = (os.environ.get("MASSIVE_API_KEY") or "").strip()
-    if not key and (root / ".env").exists():
+def _private_setting(root: Path, name: str) -> str:
+    value = (os.environ.get(name) or "").strip()
+    if not value and (root / ".env").exists():
         for line in (root / ".env").read_text().splitlines():
-            if line.strip().startswith("MASSIVE_API_KEY="):
-                key = line.split("=", 1)[1].strip().strip("\"'")
+            if line.strip().startswith(name + "="):
+                value = line.split("=", 1)[1].strip().strip("\"'")
+    return value
+
+
+def _key(root: Path) -> str:
+    key = _private_setting(root, "MASSIVE_API_KEY")
     if not key or key == "your-key-here":
         raise SubmissionBlocked("Set MASSIVE_API_KEY privately in the environment or .env")
     return key
@@ -218,6 +253,8 @@ def _load_original(root: Path, start: str, end: str, key: str) -> dict:
             exec(compile(ast.Module(body=[node], type_ignores=[]), "pair_test.py", "exec"), ns)
     ns.update(STUDY_START=start, STUDY_END=end, RUN_HOLDOUT=False, RUN_PLACEBO=True,
               CACHE_DIR=Path(".massive_cache"), API_KEY=key)
+    # Transport identity only; event construction and economic source stay unchanged.
+    ns["SEC_USER_AGENT"] = _private_setting(root, "SEC_USER_AGENT")
     ns["CACHE_DIR"].mkdir(exist_ok=True)
     session = ns["requests"].Session()
     session.headers["Authorization"] = f"Bearer {key}"
@@ -229,8 +266,8 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
               authorize_restricted_dates: bool = False, root: Path = Path(".")) -> dict:
     """One explicit custom F1 window. Never invoke an OOS/harness stage or ledger.
 
-    Research tags are required exactly as the original harness requires them.
-    Missing tags are provenance blockers; this function never creates a tag.
+    Original economic source bytes must match the shipped build fingerprints. This
+    check is an integrity check, not proof of historical preregistration.
     Return only aggregate tables/counts suitable for notebook display.
     """
     if not enabled:
@@ -238,13 +275,12 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
     validate_dates(start, end, authorize_restricted_dates=authorize_restricted_dates)
     if root.resolve() != Path.cwd().resolve():
         raise SubmissionBlocked("Run the notebook from the repository root")
-    import harness as H
-    try:
-        freeze = H.require_freeze()
-    except SystemExit:
-        raise SubmissionBlocked("Frozen research provenance unavailable or mismatched. Restore the authentic historical freeze tag/files from the research owner; do not manufacture a tag or bypass the guard.") from None
     verify_pinned_sources(root)
+    import harness as H
     P = _load_original(root, start, end, _key(root))
+    contact = P.get("SEC_USER_AGENT", "")
+    if not contact or "@" not in contact or "your@email" in contact:
+        raise SubmissionBlocked("Set SEC_USER_AGENT privately to your project name and contact email before live SEC requests")
     spec = next(s for s in json.loads((root / "pairings.json").read_text())["pairings"]
                 if s["id"] == "F1-leadership-fresh")
     expected_tags = ["ceo_appointment", "ceo_departure", "cfo_appointment", "cfo_departure", "executive_officer_appointment"]
@@ -310,7 +346,8 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
     P["COST_HAIRCUT"] = 0.05
     costs = {"fresh": cost_diagnostic(fresh, priced),
              "ordinary": cost_diagnostic(ordinary, ordinary_priced)}
-    return {"freeze": freeze, "start": start, "end": end,
+    return {"provenance": "SHA-256 source integrity verified; historical preregistration not established",
+            "start": start, "end": end,
             "n_signal": int((ev.arm == "fresh").sum()), "n_stale": int((ev.arm == "stale").sum()),
             "issuers_in_event_pool": int(ev.ticker.nunique()),
             "priced_event_bucket_pairs": len(priced), "ordinary_draws": len(placebo),

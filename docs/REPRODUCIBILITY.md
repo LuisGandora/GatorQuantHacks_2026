@@ -1,113 +1,81 @@
-# Submission reproduction and verification
+# Reproducing the submission
 
-## What this guide reproduces
+The canonical entry point is `GQH_MASSIVE_FINAL.ipynb`, launched from the repository
+root with Python 3.10+ and `requirements.txt`. `bash setup.sh` creates the environment,
+installs these requirements, registers the Jupyter kernel, and copies `.env.example`
+to a private `.env`. Windows uses `setup.ps1`; the PowerShell flow has been inspected,
+but was not executed during macOS QA. See the README for exact launch commands.
 
-The submission notebook has two distinct, explicit modes. Its default mode displays
-committed aggregate evidence without contacting providers or changing the research
-ledger. The live judge mode executes the declared F1 analysis for caller-supplied dates,
-using the existing implementation. It is not a new search over strategies.
+## Default evidence mode
 
-No network-dependent market reproduction was run during this QA task. An API key,
-endpoint entitlements, sufficient option coverage, and the authentic historical freeze
-tags are required for a live run. A cached run can differ after provider corrections;
-there is no public raw-response dataset or promise of bit-for-bit market reproduction.
+Run All needs no key and makes no API requests. It reads `submission_final_metrics.json`,
+`submission_authoritative_facts.json`, the three recovered aggregate JSON artifacts,
+and nine bundled author-written summaries. `submission/source_manifest.json` checks
+the summary SHA-256s. These are historical results, not a fresh price calculation.
+Ordered execution with requests/urllib HTTP blocked passed in the QA environment.
 
-## Environment
+The source bundle is self-contained. The clean public repository does not need old
+Git objects, authentic tags that were never found, or access to the original checkout.
+Missing or changed evidence fails explicitly. There is one supported current codepath.
 
-Follow the root README: Python 3.10+, `bash setup.sh` or Windows `setup.ps1`, then launch
-`GQH_MASSIVE_FINAL.ipynb` with the registered virtual-environment kernel. Both setup
-scripts stop on installation failures. The submission requirements include notebook
-execution/validation packages explicitly. TypeSafe is optional and only needed for
-historical score generation; do not regenerate scores for submission QA.
+## Authorized custom date execution
 
-`.env` is local and ignored. Set `MASSIVE_API_KEY` there or in the environment; it must
-not be printed. Keep `.massive_cache/` and `submission_judge_outputs/` private. Run from
-the root so imported modules and artifact paths resolve consistently.
+1. Put `MASSIVE_API_KEY=your-key-here` in the private `.env`, replacing the placeholder,
+   or supply the environment variable. The notebook neither prints nor prompts for it.
+   Also set `SEC_USER_AGENT` to your project name and real contact email in `.env`
+   or the environment. Missing contact fails before event requests; this overrides
+   only the original transport header, not research logic.
+2. In the top configuration cell, set inclusive ISO `START_DATE` and `END_DATE`.
+3. Set `RUN_CUSTOM_JUDGE = True` only for a window you are authorized to evaluate.
+   Protected pricing ranges require the separate `AUTHORIZE_RESTRICTED_DATES` flag.
+4. Run All from a clean kernel. Keep all trade, horizon, cost and bootstrap settings fixed.
 
-## Offline checks
+The date guard checks a conservative pricing envelope: fourteen days before the first
+event date and 190 days after the last. That envelope must fit the unchanged
+2021-06-01–2027-12-31 calendar. Future event dates fail; empty or unpriceable samples
+fail explicitly. Missing forward observations remain unavailable. Full arbitrary
+calendar support is not claimed. The 2023 holdout-placeholder and 2026 protection
+gates do not identify the judges’ actual sealed window.
 
-After dependency installation, these commands require no market access:
+`run_judge` validates dates, the fixed F1 spec and six original economic-source hashes,
+loads definitions from the original notebook without running its analysis statements,
+and passes the dates to original event selection and same-name ordinary-day sampling.
+It returns all nine gross and unchanged-cost net comparisons, absolute net means,
+counts, bootstrap intervals and descriptive sensitivity. It does not invoke harness
+OOS stages, optimize, update the ledger, or replace the failed historical finding.
+Prices outside the event window are needed for lookback, entry and forward horizons.
 
-```bash
-python -m unittest discover -s tests -v
-python scripts/check_publication.py --worktree
-```
+SHA-256 equality is source integrity relative to an unsigned submission manifest.
+It cannot repair missing preregistration custody. Historical protocol date ranges were
+amended after OOS; see `RESEARCH_PROVENANCE.md`. Original harness/VRP research commands
+still require their original freeze tags. They are not the judge interface.
 
-Before committing, stage only reviewed files and run:
+## Verification scope
 
-```bash
-python scripts/check_publication.py
-```
+Offline tests cover date propagation through selection and controls, restricted-date
+gates, fixed-spec rejection, source-integrity failure, net reporting, no-API imports,
+and publication checking. Ordered default notebook execution passed with HTTP blocked.
+A clean submission export is checked independently of original Git history.
 
-The default publication check examines Git's index, not the working directory.
-`--worktree` checks tracked and unignored new files. These checks detect configured
-patterns, not every possible credential or licensing violation. Git status alone cannot
-prove that ignored secrets are absent from tracking. Inspect tracked paths with
-`git ls-files`; review binary content separately.
+No Massive key was configured in the QA checkout. The bounded smoke command
+`python scripts/smoke_massive.py --start 2024-02-01 --end 2024-02-02` checks configuration
+first and reports `NOT_RUN_NO_KEY` without requesting data. With a key it requests
+one bounded disclosure page and one options-reference page through the original
+wrapper, prints statuses only, and makes no return calculation. This is not a full
+pricing-endpoint or economic replication test. Raw responses remain in ignored local
+caches. Entitlements, provider revisions and missing forward observations can affect
+live reproduction; no sealed dates were queried.
 
-## Freeze provenance blocker
+## Historical evidence and report generation
 
-The audited remote does not publish `freeze-v*` or `vrp-v*` tags, although committed
-research records refer to `freeze-v2` and `vrp-v1`. The existing guards correctly reject
-a live run without those tags. This QA does not synthesize old tags, change the guards,
-or assign today's code a historical preregistration timestamp.
+All 54 historical fixed-horizon gross differences are original rounded display values,
+not estimates reconstructed from a headline or chart. Exact headline aggregates,
+reporting aggregates and provenance are in `submission/recovered_*.json`. Numeric
+F1 interval endpoints, issuer/common-matched/control-valid N, horizon-specific N,
+absolute signal/control means and historical net contrasts remain unavailable.
+Portfolio net returns are a different statistic from a net event-control contrast.
 
-The research owners must locate the authentic historical references and publish them,
-then verify frozen files against those exact references. Fetch them with:
-
-```bash
-git fetch origin --tags
-git tag --list 'freeze-v*'
-git tag --list 'vrp-v*'
-```
-
-The F1 guard covers `harness.py`, `jev.py`, and `jev_scores.csv`. VRP guards `vrp.py`,
-`harness.py`, and `jev.py`, and requires the preregistration in its tag. Missing historical
-references are an unresolved provenance defect, not permission to bypass a gate.
-
-## Judge window
-
-Configure `START_DATE` and `END_DATE` near the top of the final notebook and explicitly
-enable live execution. The bounds select events and the ordinary-day comparison
-window; do not change signal membership, freshness thresholds, costs, or trade choices.
-The fixed horizons need forward prices, so an event inside the chosen window can require
-price observations after `END_DATE`. A missing mark or unavailable horizon must remain
-missing, with counts shown. No estimate should be manufactured to fill a report table.
-
-The live display reports gross contrasts, net contrasts, and absolute net returns for
-fresh, stale, and ordinary days at all nine horizons. Net returns deduct the original
-5%-of-entry-premium assumption on both sides, including at expiry; they are not observed
-bid/ask costs. Original bootstrap functions and seeds are reused. This reporting
-plumbing does not reconstruct missing historical net results, change any research gate,
-or make the provenance-blocked live path runnable.
-
-The 2026 F1 window was already observed in the historical research. The category VRP map
-selected no categories for category OOS; its pooled H2 OOS comparison was observed.
-Neither statement authorizes reopening those raw windows during preparation. The
-judges' sealed dates must be supplied and executed only by authorized evaluators.
-
-## Historical commands and artifacts
-
-[runs/REPRO.md](../runs/REPRO.md) preserves the earlier reproduction instructions and
-provenance tables. It describes commands that may write the ledger, regenerate reports,
-or open OOS. It is historical documentation, not the safe submission launch path.
-The earlier working notebook automatically evaluates multiple windows and includes a
-generic sealed-cell path; use the consolidated notebook for judging.
-
-`harness.py board` rebuilds the leaderboard. Other research commands including `counts`,
-`jev`, `insample`, `oos`, and `portfolio` may mutate the append-only research record.
-`report_extras.py` recomputes descriptive tables from priced data. Do not invoke these
-merely to make a repository look complete. Preserve the original ledger and historical
-artifacts; disagreement must be documented in the evidence packet and QA checklist.
-
-The existing PDF is a four-page research draft and predates the variance-premium
-extension now described in the Markdown findings. It is not a synchronized final
-report. The organizer text in the starter notebook specifies at most two pages;
-the supplied official challenge page specifies a five-page ceiling and defers
-conflicts to the notebook or organizer announcements. The submission target is **at most
-two pages**, which satisfies both stated limits. A five-page layout is unnecessary.
-The older PDF is preserved solely as historical documentation and must not be uploaded
-as the final note. Current Markdown corrects interpretation and gross/net wording;
-the notebook's pinned historical source and all numeric results remain unchanged.
-Check the final note against the evidence packet, metrics JSON, report map, and QA
-output. A report draft cannot resolve missing provenance or unsupported claims.
+The report source is `submission/QUANT_NOTE.md`; `submission/QUANT_NOTE.pdf` has two pages.
+To regenerate both from reviewed aggregates, install optional `requirements-report.txt`
+and run `python scripts/build_quant_note.py`. The builder uses no network or research
+stage. Keep the canonical notebook output-free; executed notebooks are private.
