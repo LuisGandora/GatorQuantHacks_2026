@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import re
 import pandas as pd
 import leadership_hypothesis as p
 
@@ -74,7 +75,8 @@ def collect():
     for number, event in enumerate(entries.itertuples(index=False), 1):
         identifier = hashlib.sha256(f'{event.ticker}|{event.t_0:%Y-%m-%d}'.encode()).hexdigest()
         path = folder/f'{identifier}.json'
-        if path.exists():
+        legacy = folder/f'{event.ticker}_{event.t_0:%Y%m%d}.json' if re.fullmatch(r'[A-Z0-9.-]+', str(event.ticker)) else None
+        if path.exists() or (legacy is not None and legacy.exists()):
             continue
         priced, reasons = p.price_event(event.ticker, event.t_pre, event.t_0, event.filing_date,
             {p.BASELINE_BUCKET: p.EXPIRY_BUCKETS[p.BASELINE_BUCKET]}, p.OTM_GRID)
