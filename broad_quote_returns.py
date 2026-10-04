@@ -38,20 +38,26 @@ def accounting(legs, positions, spot):
                 entry_net_debit_fraction=sum(premiums))
 
 
-def run():
-    if not (OUT/'collection_complete.json').exists():
+def run(out=None, all_horizons=False):
+    out = Path(out) if out is not None else OUT
+    if not (out/'collection_complete.json').exists():
         raise RuntimeError('Quote collection is incomplete; returns must not be calculated.')
-    count()
-    usability = pd.read_csv(OUT/'quote_usability_inventory.csv')
+    count(out, all_horizons=all_horizons)
+    usability = pd.read_csv(out/'quote_usability_inventory.csv')
+    if not all_horizons:
+        usability['horizon'] = '21'
+    usability['horizon'] = usability.horizon.astype(str)
     records = {}
-    for path in (OUT/'trade_snapshots').glob('*.json'):
+    for path in (out/'trade_snapshots').glob('*.json'):
         record = json.loads(path.read_text())
-        key = (record['ticker'], record['entry_date'])
+        key = (record['ticker'], record['entry_date'], str(record.get('horizon', '21')))
         if key in records and records[key] != record:
             raise RuntimeError('Conflicting duplicate snapshots')
         records[key] = record
-    inventory = pd.read_csv(OUT/'entry_inventory.csv')
-    expected = set(zip(inventory.ticker, pd.to_datetime(inventory.t_0).dt.strftime('%Y-%m-%d')))
+    inventory = pd.read_csv((out.parent if all_horizons else out)/'entry_inventory.csv')
+    horizons = json.loads((out/'registration.json').read_text())['fixed_horizons'] if all_horizons else ['21']
+    expected = {(ticker, day, str(horizon)) for ticker, day in
+        zip(inventory.ticker, pd.to_datetime(inventory.t_0).dt.strftime('%Y-%m-%d')) for horizon in horizons}
     if set(records) != expected:
         raise RuntimeError('Completion marker does not match the full snapshot inventory')
     c.initialize()
@@ -70,18 +76,19 @@ def run():
         split = not factor.empty and factor.max()/factor.min() > 1.005
         spot = raw.get(entry, np.nan)
         close = raw.get(exit_, np.nan)
-        eligibility.append(dict(ticker=ticker, entry_date=record['entry_date'], spot=spot, exit_spot=close,
+        eligibility.append(dict(ticker=ticker, entry_date=record['entry_date'], horizon=str(record.get('horizon', '21')), spot=spot, exit_spot=close,
                                 split=split, stock_valid=bool(spot > 0 and np.isfinite(close) and not split)))
-    eligibility = pd.DataFrame(eligibility, columns=['ticker', 'entry_date', 'spot', 'exit_spot', 'split', 'stock_valid'])
-    eligibility.to_csv(OUT/'stock_eligibility_inventory.csv', index=False)
-    usability = usability.merge(eligibility, on=['ticker', 'entry_date'], how='left', validate='many_to_one')
+    eligibility = pd.DataFrame(eligibility, columns=['ticker', 'entry_date', 'horizon', 'spot', 'exit_spot', 'split', 'stock_valid'])
+    eligibility.to_csv(out/'stock_eligibility_inventory.csv', index=False)
+    usability = usability.merge(eligibility, on=['ticker', 'entry_date', 'horizon'], how='left', validate='many_to_one')
     usability['fully_usable'] = (usability.status == 'usable') & usability.stock_valid.fillna(False)
-    usability.groupby(['strategy', 'max_age_seconds', 'fully_usable']).size().rename('trades').reset_index().to_csv(
-        OUT/'fully_usable_counts_before_returns.csv', index=False)
+    groups = (['horizon'] if all_horizons else [])+['strategy', 'max_age_seconds', 'fully_usable']
+    usability.groupby(groups).size().rename('trades').reset_index().to_csv(
+        out/'fully_usable_counts_before_returns.csv', index=False)
     # Counts above are persisted before the first return is evaluated.
     rows = []
     for row in usability[usability.fully_usable].itertuples(index=False):
-        record = records[(row.ticker, row.entry_date)]
+        record = records[(row.ticker, row.entry_date, row.horizon)]
         result = accounting(record['legs'], POSITIONS[row.strategy], row.spot)
         assert result['net'] <= result['midpoint_net']+1e-10
         expiries = {expiry_date(leg['symbol']) for leg in record['legs'].values()}
@@ -89,20 +96,22 @@ def run():
             raise RuntimeError('Required strategy legs have different expiries')
         expiry = expiries.pop()
         stock_return = row.exit_spot/row.spot-1
-        rows.append(dict(ticker=row.ticker, entry_date=row.entry_date, exit_date=record['exit_date'],
+        rows.append(dict(ticker=row.ticker, entry_date=row.entry_date, exit_date=record['exit_date'], horizon=row.horizon,
             strategy=row.strategy, max_age_seconds=row.max_age_seconds, stock_return=stock_return,
             absolute_stock_return=abs(stock_return), upside=max(stock_return, 0), downside=max(-stock_return, 0),
             upside_tail_5pct=stock_return > .05, downside_tail_5pct=stock_return < -.05,
             expiry_date=str(expiry.date()), dte_sessions=int(((c.p.CAL > pd.Timestamp(row.entry_date)) & (c.p.CAL <= expiry)).sum()),
             atm_call_moneyness=record['legs']['C_K']['strike']/row.spot-1,
             **result))
-    columns = ['ticker', 'entry_date', 'exit_date', 'strategy', 'max_age_seconds', 'stock_return',
+    columns = ['ticker', 'entry_date', 'exit_date', 'horizon', 'strategy', 'max_age_seconds', 'stock_return',
         'absolute_stock_return', 'upside', 'downside', 'upside_tail_5pct', 'downside_tail_5pct',
         'expiry_date', 'dte_sessions', 'atm_call_moneyness', 'net', 'midpoint_net', 'spread_impact',
         'capacity_contracts', 'entry_net_debit_fraction']
-    pd.DataFrame(rows, columns=columns).to_csv(OUT/'bid_ask_trade_outcomes.csv.gz', index=False, compression='gzip')
+    pd.DataFrame(rows, columns=columns).to_csv(out/'bid_ask_trade_outcomes.csv.gz', index=False, compression='gzip')
     print('Quote return accounting completed. Matched comparison, uncertainty and validation remain pending.')
 
 
 if __name__ == '__main__':
-    run()
+    import sys
+    expanded = '--all-horizons' in sys.argv
+    run(OUT/'all_horizons' if expanded else OUT, all_horizons=expanded)
