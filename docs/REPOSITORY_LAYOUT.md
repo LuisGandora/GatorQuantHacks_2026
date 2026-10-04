@@ -1,26 +1,37 @@
-# Repository layout
+# Repository layout and execution
 
-Start at the root README. The main research notebook is `gator-quant-hacks-8k-options-challenge.ipynb`; the separate aggregate submission notebook is `GQH_MASSIVE_FINAL.ipynb`. Run setup and notebook commands from the repository root.
+The root is the project entry point: README, aggregate submission notebook, submission execution module, setup scripts, and dependency/configuration files. The full original research workspace is in `research/`.
 
-| Directory | Contents |
+## Working directories
+
+Run setup, submission QA, public export, and `GQH_MASSIVE_FINAL.ipynb` from the repository root. Run historical research scripts, tests, and notebooks from `research/`. Python research modules and their data directories moved together, retaining module-relative paths and original import names. There are no duplicate modules or forwarding adapters at the root.
+
+```bash
+python scripts/check_submission_consistency.py
+python -m pytest tests -q
+cd research
+python -m pytest -q
+```
+
+Setup creates `research/.env` from the root template. Both research and submission execution use that canonical private file; environment variables also remain supported. Never commit it or API caches. Live execution still requires provider entitlements and SEC contact details.
+
+## Directories and ownership
+
+| Path | Purpose |
 |---|---|
-| `docs/research/` | Research hypotheses, frozen protocols, experiment narratives, results, and independent reviews formerly scattered at the root. |
-| `docs/submission/` | Submission facts, evidence packet, notebook/report map, QA checklist, and generated consistency audit. |
-| `submission/` | Submission report, canonical metrics/facts JSON, recovered aggregates, and pinned source evidence. |
-| `runs/` | Harness-owned history and research reports; ownership rules in AGENTS.md still apply. |
-| `scripts/` | Submission checks, report authoring, and public export tooling. |
-| `tests/` | Submission QA tests. Historical experiment tests retain their root locations and explicit invocation. |
-| `trial/` | Optional Filing Trial demo and its build/audio tooling. |
-| `archive/` | Archived research artifacts. |
+| `research/` | Research Python modules, notebooks, pairing configuration, labels, JSON summaries, result directories, and research tests. |
+| `research/runs/` | Historical research reports and harness-owned ledger/audit material. AGENTS.md ownership rules continue to apply. |
+| `docs/research/` | Research protocols, author-written findings, and independent reviews, retained byte-for-byte. |
+| `docs/submission/` | Submission facts, evidence packet, report map, QA checklist, and generated consistency audit. |
+| `submission/` | Final report, aggregate JSON, and pinned source evidence. |
+| `scripts/`, `tests/` | Submission tooling and QA. |
+| `trial/` | Optional voiced filing demo. |
+| `archive/` | Archived artifacts. |
 
-[The research catalog](RESEARCH_CATALOG.md) retains the longer experiment descriptions and demo instructions. Root research Python modules, experimental notebooks, JSON summaries, and label CSVs remain in place because the original scripts and frozen source manifests depend on those paths. Moving these requires a separate coordinated Python/package change; no forwarding modules or alternate paths were introduced.
+The [research catalog](RESEARCH_CATALOG.md) preserves detailed experiment descriptions. Frozen historical text may name original root paths; those are provenance references. Resolve research assets under `research/` in the current tree. New active documentation should use current paths.
 
-## Maintaining the layout
+## Integrity and validation
 
-Put new research prose in `docs/research/` and submission prose in `docs/submission/`. Keep root README focused on entry points. Use relative links from the containing Markdown file, and repository-relative paths for commands executed at the root. Submission JSON readers use only `submission/submission_final_metrics.json` and `submission/submission_authoritative_facts.json`; do not create duplicate root copies.
+The submission manifest keeps its historical source names and hash values. Submission loading resolves those files solely under `research/`; moving files does not authorize resetting fingerprints or changing economic gates. Research notebooks, harness, pricing engine, scorer, configurations, and recorded results were moved without changing their bytes.
 
-The public export keeps its explicit allowlist and includes the layout guide, research catalog, and submission documents. Preserved evidence snapshots and economic source hashes are not rewritten for link cleanup. Validate active submission plumbing with `python scripts/check_submission_consistency.py` and `python -m pytest tests -q`. These offline checks do not reproduce economic results or query market data.
-
-## Validation of this reorganization
-
-All 281 submission consistency checks passed. The submission QA tests plus the two research suites with changed documentation references produced 48 passes, 10 skips, 11 passing subtests, and 24 failures. Running the same selection from a clean archive of the unchanged remote main snapshot produced the identical failures: five source-fingerprint failures and nineteen tests requiring the unavailable departure taxonomy fixture. This change does not reset source hashes or manufacture that missing research input. Historical research documents were moved byte-for-byte to preserve frozen protocol evidence.
+All 281 submission consistency checks pass. Submission QA retains the same five existing failures as remote main, caused by original notebook structure/fingerprint divergence. Other research suites may require unavailable private taxonomy fixtures; moving the workspace does not manufacture these inputs. No market data, economic experiment, or OOS stage was run for this layout change.

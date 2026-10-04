@@ -99,7 +99,7 @@ def verify_pinned_sources(root: Path = Path(".")) -> None:
         expected = manifest["economic_sources"][name].get("sha256")
         if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
             raise SubmissionBlocked(f"Invalid source SHA-256 in manifest: {name}")
-        if _sha256(root / name, name) != expected:
+        if _sha256(root / "research" / name, name) != expected:
             raise SubmissionBlocked(f"Judge source SHA-256 differs from pinned build {BUILD_COMMIT}: {name}")
 
 
@@ -206,8 +206,8 @@ def _fixed_horizon_table(P, board):
 
 def _private_setting(root: Path, name: str) -> str:
     value = (os.environ.get(name) or "").strip()
-    if not value and (root / ".env").exists():
-        for line in (root / ".env").read_text().splitlines():
+    if not value and (root / "research/.env").exists():
+        for line in (root / "research/.env").read_text().splitlines():
             if line.strip().startswith(name + "="):
                 value = line.split("=", 1)[1].strip().strip("\"'")
     return value
@@ -228,7 +228,7 @@ def _load_original(root: Path, start: str, end: str, key: str) -> dict:
     Configuration is loaded before definitions with bound defaults, then only the
     requested event window is substituted. Calendar construction is local only.
     """
-    notebook = json.loads((root / "gator-quant-hacks-8k-options-challenge.ipynb").read_text())
+    notebook = json.loads((root / "research" / "gator-quant-hacks-8k-options-challenge.ipynb").read_text())
     module = types.ModuleType("_submission_frozen_pipeline")
     sys.modules[module.__name__] = module
     ns = module.__dict__
@@ -247,7 +247,7 @@ def _load_original(root: Path, start: str, end: str, key: str) -> dict:
                 keep = all(isinstance(t, ast.Name) and t.id in allowed for t in node.targets)
             if keep:
                 exec(compile(ast.Module(body=[node], type_ignores=[]), "original_notebook", "exec"), ns)
-    for node in ast.parse((root / "pair_test.py").read_text()).body:
+    for node in ast.parse((root / "research" / "pair_test.py").read_text()).body:
         if isinstance(node, ast.FunctionDef) or (isinstance(node, ast.Assign) and all(
                 isinstance(t, ast.Name) and t.id in allowed for t in node.targets)):
             exec(compile(ast.Module(body=[node], type_ignores=[]), "pair_test.py", "exec"), ns)
@@ -276,12 +276,13 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
     if root.resolve() != Path.cwd().resolve():
         raise SubmissionBlocked("Run the notebook from the repository root")
     verify_pinned_sources(root)
+    sys.path.insert(0, str((root / "research").resolve()))
     import harness as H
     P = _load_original(root, start, end, _key(root))
     contact = P.get("SEC_USER_AGENT", "")
     if not contact or "@" not in contact or "your@email" in contact:
         raise SubmissionBlocked("Set SEC_USER_AGENT privately to your project name and contact email before live SEC requests")
-    spec = next(s for s in json.loads((root / "pairings.json").read_text())["pairings"]
+    spec = next(s for s in json.loads((root / "research" / "pairings.json").read_text())["pairings"]
                 if s["id"] == "F1-leadership-fresh")
     expected_tags = ["ceo_appointment", "ceo_departure", "cfo_appointment", "cfo_departure", "executive_officer_appointment"]
     if (spec["tags"] != expected_tags or spec["arm"] != "fresh"

@@ -8,9 +8,9 @@ Gator Quant Hacks 2026 · Systematic Trading track · Massive **Trade the 8-K** 
 
 ## Start here (judges)
 
-1. **Read the quant note: [runs/QUANT_NOTE.pdf](../runs/QUANT_NOTE.pdf)** (5 pages plus appendix; HTML source
-   [runs/QUANT_NOTE.html](../runs/QUANT_NOTE.html)). Every number in it is printed by the notebook below.
-2. **Open the notebook: [gator-quant-hacks-8k-options-challenge.ipynb](../gator-quant-hacks-8k-options-challenge.ipynb).**
+1. **Read the quant note: [runs/QUANT_NOTE.pdf](../research/runs/QUANT_NOTE.pdf)** (5 pages plus appendix; HTML source
+   [runs/QUANT_NOTE.html](../research/runs/QUANT_NOTE.html)). Every number in it is printed by the notebook below.
+2. **Open the notebook: [gator-quant-hacks-8k-options-challenge.ipynb](../research/gator-quant-hacks-8k-options-challenge.ipynb).**
    It is committed with its outputs from a clean top-to-bottom run, so you can read the results without running anything.
    - Part A (LuisGandora): section 12 is the headline fresh-vs-stale test.
    - Part B (jack-uf): the JEV-stability and novelty experiments.
@@ -18,7 +18,7 @@ Gator Quant Hacks 2026 · Systematic Trading track · Massive **Trade the 8-K** 
      cell prints every number the note uses: every horizon, both windows, gross and net, with 95% intervals,
      the portfolio and the robustness checks.
 
-**Finding.** We pre-registered ([runs/PREREG.md](../runs/PREREG.md), git tag `freeze-v2`) that a cash-secured put sold after a
+**Finding.** We pre-registered ([runs/PREREG.md](../research/runs/PREREG.md), git tag `freeze-v2`) that a cash-secured put sold after a
 *fresh* leadership-change 8-K beats ordinary days. **It is rejected in the opposite direction, and the rejection held its sign
 out-of-sample.** Net of costs, the fresh-filing put did −1.16% vs ordinary days in-sample (n = 55) and −0.71% out-of-sample
 (n = 25), averaged over h = 21, 42 and expiry. Every other test we ran is null, and the note counts every variant tried.
@@ -132,7 +132,7 @@ it is **not** proof of preregistration. See [research provenance](../docs/RESEAR
 | `scripts/`, `tests/` | Publication/consistency checks, PDF authoring and offline QA. |
 
 Detailed chronology belongs in the [evidence packet](../docs/submission/SUBMISSION_EVIDENCE_PACKET.md),
-[protocol](../runs/PREREG.md), [audits](../runs/audit_notes.md) and
+[protocol](../research/runs/PREREG.md), [audits](../research/runs/audit_notes.md) and
 [report map](../docs/submission/SUBMISSION_NOTEBOOK_REPORT_MAP.md). The separate 18-category variance-premium
 screen selected zero categories at BH q=.10; it is context, not a replacement strategy.
 [Devpost copy](../docs/DEVPOST_SUBMISSION.md) is prepared; this repository does not imply
@@ -181,12 +181,12 @@ the 130 stored earnings events from the Experiment 6 matched sample, and reports
 130/28 is a retrieved shape-filtered subset rather than the complete eligible Massive population. It
 evaluates economic novelty, measurement validity, population/source adequacy, option execution
 realism, and replication readiness separately. The machine-readable form is
-[RESEARCH_READINESS_AUDIT.json](../RESEARCH_READINESS_AUDIT.json). 2026 remains locked.
+[RESEARCH_READINESS_AUDIT.json](../research/RESEARCH_READINESS_AUDIT.json). 2026 remains locked.
 
 <!-- BEGIN EXPERIMENT 9B FINALIZER -->
 ### Experiment 9B: expanded leadership-transition cohort (finalized)
 
-Experiment 9B applies the frozen Experiment 9 uncertainty-resolution ontology to a broader but economically coherent executive leadership-transition 8-K population. The frozen protocol is [UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md), the evidence audit is [UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md), the terminal write-up is [UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md), and the machine-readable summary is [UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json](../UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json). Enrollment: 242 accessions across 87 issuers; 226 measured across 84 issuers, with 16 explicit over-ceiling source exclusions. The primary group is 25 events across 22 issuers. In this finalization, both the blinded validation and the primary feasibility gate passed, so the status is the intermediate `eligible_for_economic_test` with a null final decision; economic work remains. Every failed-gate economic statistic is `not_run`, never zero; the 2026 out-of-sample window and the judges sealed window remain unopened. Reproduce with `.venv/bin/python uncertainty_resolution_expanded_finalize.py`.
+Experiment 9B applies the frozen Experiment 9 uncertainty-resolution ontology to a broader but economically coherent executive leadership-transition 8-K population. The frozen protocol is [UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md), the evidence audit is [UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md), the terminal write-up is [UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md](../docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md), and the machine-readable summary is [UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json](../research/UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json). Enrollment: 242 accessions across 87 issuers; 226 measured across 84 issuers, with 16 explicit over-ceiling source exclusions. The primary group is 25 events across 22 issuers. In this finalization, both the blinded validation and the primary feasibility gate passed, so the status is the intermediate `eligible_for_economic_test` with a null final decision; economic work remains. Every failed-gate economic statistic is `not_run`, never zero; the 2026 out-of-sample window and the judges sealed window remain unopened. Reproduce with `.venv/bin/python uncertainty_resolution_expanded_finalize.py`.
 <!-- END EXPERIMENT 9B FINALIZER -->
 
 ### Experiment 9: uncertainty-resolution 8-K semantic gate
@@ -195,7 +195,7 @@ Experiment 9 asks, outcome-blind, whether a leadership-change Form 8-K newly res
 
 ### Experiment 8: adverse-current / intact-forward economic stage
 
-Experiment 8 tests whether an earnings-related Item 2.02 package that discloses a material adverse current-period operating development while maintaining or raising its quantitative forward outlook realizes less subsequent downside than the issuer-matched ordinary days. The frozen protocol is [ADVERSE_INTACT_PROTOCOL.md](../docs/research/ADVERSE_INTACT_PROTOCOL.md), the aggregate economic report is [ADVERSE_INTACT_RESULTS.md](../docs/research/ADVERSE_INTACT_RESULTS.md), and the machine-readable summary is [ADVERSE_INTACT_SUMMARY.json](../ADVERSE_INTACT_SUMMARY.json). The frozen primary cell is `cash_secured_put`, bucket `3-6m`, OTM 0.05, entry delay 0, stale 0, premium haircut 0.05 per side at horizon +21, with the issuer-aware cluster bootstrap (seed 20261008) and floors of 20 matched events and 10 issuer clusters. The decision is `no_candidate: implementation_or_data_integrity_failure`: the frozen signal's direction labels did not survive independent blinded verification, so the economic question was left unopened. Coverage at the frozen primary cell also fell below the frozen floor, and no return column was read. The 2026 out-of-sample window and the judges sealed window remain unopened.
+Experiment 8 tests whether an earnings-related Item 2.02 package that discloses a material adverse current-period operating development while maintaining or raising its quantitative forward outlook realizes less subsequent downside than the issuer-matched ordinary days. The frozen protocol is [ADVERSE_INTACT_PROTOCOL.md](../docs/research/ADVERSE_INTACT_PROTOCOL.md), the aggregate economic report is [ADVERSE_INTACT_RESULTS.md](../docs/research/ADVERSE_INTACT_RESULTS.md), and the machine-readable summary is [ADVERSE_INTACT_SUMMARY.json](../research/ADVERSE_INTACT_SUMMARY.json). The frozen primary cell is `cash_secured_put`, bucket `3-6m`, OTM 0.05, entry delay 0, stale 0, premium haircut 0.05 per side at horizon +21, with the issuer-aware cluster bootstrap (seed 20261008) and floors of 20 matched events and 10 issuer clusters. The decision is `no_candidate: implementation_or_data_integrity_failure`: the frozen signal's direction labels did not survive independent blinded verification, so the economic question was left unopened. Coverage at the frozen primary cell also fell below the frozen floor, and no return column was read. The 2026 out-of-sample window and the judges sealed window remain unopened.
 
 ### Experiment 7: contained-shock / intact-outlook semantic gate
 
@@ -204,7 +204,7 @@ current adversity, keeps or raises quantitative guidance, and shows already-oper
 remediation of the causal problem identifies a tradeable edge. The frozen specification is
 [CONTAINED_SHOCK_PROTOCOL.md](../docs/research/CONTAINED_SHOCK_PROTOCOL.md), the aggregate semantic report is
 [CONTAINED_SHOCK_EVIDENCE_AUDIT.md](../docs/research/CONTAINED_SHOCK_EVIDENCE_AUDIT.md), the machine-readable
-summary is [CONTAINED_SHOCK_SUMMARY.json](../CONTAINED_SHOCK_SUMMARY.json), and the terminal
+summary is [CONTAINED_SHOCK_SUMMARY.json](../research/CONTAINED_SHOCK_SUMMARY.json), and the terminal
 write-up is [CONTAINED_SHOCK_RESULTS.md](../docs/research/CONTAINED_SHOCK_RESULTS.md).
 
 The decision is `no_candidate: semantic_feasibility_failure`. The outcome-blind feasibility
@@ -227,9 +227,9 @@ The completed experiment 6 tests whether selling the 5% out-of-the-money put aft
 earnings-tagged Item 2.02 disclosure has a positive net 5-session event-minus-ordinary edge,
 with the other four starter structures reported descriptively. The frozen specification is
 [EARNINGS_PAYOFF_PROTOCOL.md](../docs/research/EARNINGS_PAYOFF_PROTOCOL.md) and the identity is
-[EARNINGS_PAYOFF_FREEZE.json](../EARNINGS_PAYOFF_FREEZE.json). The completed run is in
+[EARNINGS_PAYOFF_FREEZE.json](../research/EARNINGS_PAYOFF_FREEZE.json). The completed run is in
 [EARNINGS_PAYOFF_RESULTS.md](../docs/research/EARNINGS_PAYOFF_RESULTS.md); public aggregates are in
-[EARNINGS_PAYOFF_METRICS.json](../EARNINGS_PAYOFF_METRICS.json).
+[EARNINGS_PAYOFF_METRICS.json](../research/EARNINGS_PAYOFF_METRICS.json).
 
 The decision is `no_supported_numerical_candidate`: nine frozen gates failed, the primary
 cell has 54 matched events across 17 CIK clusters with a +0.000881 net paired edge against a
@@ -237,8 +237,8 @@ required 0.005, horizon 10 and 2025 are negative, and no confidence interval was
 the primary cell at the frozen floor. The fixed sensitivity grid does carry two computable
 intervals (bucket 2m and max stale 3), but both contain zero. This is not an economic null.
 Fixed-baseline horizon and sensitivity
-summaries are public in [EARNINGS_PAYOFF_HORIZONS.json](../EARNINGS_PAYOFF_HORIZONS.json) and
-[EARNINGS_PAYOFF_SENSITIVITY.json](../EARNINGS_PAYOFF_SENSITIVITY.json). The frozen
+summaries are public in [EARNINGS_PAYOFF_HORIZONS.json](../research/EARNINGS_PAYOFF_HORIZONS.json) and
+[EARNINGS_PAYOFF_SENSITIVITY.json](../research/EARNINGS_PAYOFF_SENSITIVITY.json). The frozen
 implementation is audited read-only in
 [EARNINGS_PAYOFF_REVIEW.md](../docs/research/EARNINGS_PAYOFF_REVIEW.md): it confirms the frozen identity and
 stage fences, finds no fatal look-ahead or fencing defect, and records six material
@@ -251,7 +251,7 @@ Experiment 5A tests whether JEV can distinguish demand deterioration, margin
 pressure, financing difficulty and execution problems in exact original filing
 passages. Its issuer-balanced, source-only audit and pre-inference reference
 review are defined in [RISK_COMPOSITION_PROTOCOL.md](../docs/research/RISK_COMPOSITION_PROTOCOL.md).
-The freeze identity is [RISK_COMPOSITION_FREEZE.json](../RISK_COMPOSITION_FREEZE.json).
+The freeze identity is [RISK_COMPOSITION_FREEZE.json](../research/RISK_COMPOSITION_FREEZE.json).
 This is measurement validation; no historical payoff or 2026 analysis is part
 of this stage. Completed earlier experiments retain their original conclusions.
 The completed [audit results](../docs/research/RISK_COMPOSITION_RESULTS.md) and
@@ -325,7 +325,7 @@ documented in [DEPARTURE_EXPERIMENT.md](../docs/research/DEPARTURE_EXPERIMENT.md
 measurement gate: 79 primary filings included only one abrupt/adverse event,
 and 25/132 filings failed evidence/response checks. All five economic structures
 were recorded as not run; no final hypothesis was frozen and neither validation
-window was opened. Aggregate evidence is in [DEPARTURE_METRICS.json](../DEPARTURE_METRICS.json).
+window was opened. Aggregate evidence is in [DEPARTURE_METRICS.json](../research/DEPARTURE_METRICS.json).
 The starter's automatic largest-edge selection does not meet this workflow's
 evidence and freeze requirements.
 
@@ -353,7 +353,7 @@ reads returns; the 2026 filing holdout remains sealed.
 See [BENCHMARK_RESULTS.md](../docs/research/BENCHMARK_RESULTS.md) for the completed comparison:
 42/50 class matches, role-scope failures in the challenge cohort, and no aggregate
 binary improvement over the simple baseline. Aggregate counts are versioned in
-[BENCHMARK_METRICS.json](../BENCHMARK_METRICS.json).
+[BENCHMARK_METRICS.json](../research/BENCHMARK_METRICS.json).
 
 ### Departure fingerprints and full-source recovery
 
@@ -374,7 +374,7 @@ Read [FULL_SOURCE_EVIDENCE_AUDIT.md](../docs/research/FULL_SOURCE_EVIDENCE_AUDIT
 provenance, manual validation, semantic distributions, latency and limitations.
 [FULL_SOURCE_EXPERIMENT_PROTOCOL.md](../docs/research/FULL_SOURCE_EXPERIMENT_PROTOCOL.md) contains
 the specification frozen before retrieval; aggregate results are in
-[FULL_SOURCE_METRICS.json](../FULL_SOURCE_METRICS.json). Complete original packages,
+[FULL_SOURCE_METRICS.json](../research/FULL_SOURCE_METRICS.json). Complete original packages,
 officer-level citations, locked JEV inputs and response records remain local in
 the ignored `full_source_results/` directory. Reproduction requires those local
 artifacts; the report describes their integrity checks and stage commands.
@@ -394,7 +394,7 @@ The decision is `source_infeasible`, not an economic null.
 Read [GUIDANCE_RESULTS.md](../docs/research/GUIDANCE_RESULTS.md) for coverage, checked citations,
 limitations and reproduction. [GUIDANCE_EXPERIMENT_PROTOCOL.md](../docs/research/GUIDANCE_EXPERIMENT_PROTOCOL.md)
 contains the specification committed before acquisition; public aggregates are in
-[GUIDANCE_METRICS.json](../GUIDANCE_METRICS.json). Original packages and immutable
+[GUIDANCE_METRICS.json](../research/GUIDANCE_METRICS.json). Original packages and immutable
 response/source manifests remain local in ignored `guidance_results/`.
 
 Run `.venv/bin/python guidance_sources.py verify` and
@@ -419,7 +419,7 @@ attrition, source review, measured latency, token usage and limitations.
 [EXPANDED_GUIDANCE_PROTOCOL.md](../docs/research/EXPANDED_GUIDANCE_PROTOCOL.md) records the source
 and economic specification; [EXPANDED_GUIDANCE_MEASUREMENT.md](../docs/research/EXPANDED_GUIDANCE_MEASUREMENT.md)
 documents the exact semantic stages and conservative capacity limit.
-[EXPANDED_GUIDANCE_METRICS.json](../EXPANDED_GUIDANCE_METRICS.json) contains public
+[EXPANDED_GUIDANCE_METRICS.json](../research/EXPANDED_GUIDANCE_METRICS.json) contains public
 aggregates. Immutable raw sources and model responses remain local in ignored
 `expanded_guidance_results/`. The parent audit is preserved.
 

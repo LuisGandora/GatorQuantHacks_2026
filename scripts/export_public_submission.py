@@ -39,13 +39,14 @@ def main():
     dest = args.destination.resolve()
     if dest.exists():
         parser.error('Destination must not exist; choose a new empty path explicitly')
-    names = list(ROOT_FILES)
+    research_files = {"gator-quant-hacks-8k-options-challenge.ipynb", "harness.py", "pair_test.py", "pairings.json", "jev.py", "jev_scores.csv", "jev_labels.csv", "date_labels.csv", "vrp.py", "report_extras.py"}
+    names = ["research/" + name if name in research_files else name for name in ROOT_FILES]
     names += ['docs/'+name for name in DOCS]
     names += ['docs/REPOSITORY_LAYOUT.md', 'docs/RESEARCH_CATALOG.md']
     names += ['scripts/'+name for name in SCRIPTS]
     names += ['tests/test_publication.py','tests/test_submission_pipeline.py']
     # Historical author-written methodology is retained. Raw/event/ledger outputs are not.
-    names += [p.relative_to(ROOT).as_posix() for pattern in ('runs/*.md','runs/vrp/*.md') for p in ROOT.glob(pattern)]
+    names += [p.relative_to(ROOT).as_posix() for pattern in ('research/runs/*.md','research/runs/vrp/*.md') for p in ROOT.glob(pattern)]
     names += [p.relative_to(ROOT).as_posix() for p in (ROOT/'submission').rglob('*')
               if p.is_file() and p.suffix in ('.json','.md','.pdf')
               and p.name != 'public_export_manifest.json']

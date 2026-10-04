@@ -19,19 +19,19 @@ TRIAL = ROOT / "trial"
 DEFAULT = ["0000764180-25-000133", "0001193125-25-075089", "0001090727-24-000038"]   # highest, median, lowest JEV intensity
 HORIZON, STRATEGY = "21", "cash_secured_put"
 STRATEGY_NAME = "cash-secured put (5% out of the money, 3-6 month expiry)"
-RUBRIC = json.loads((ROOT / "experiment_results" / "protocol.json").read_text(encoding="utf-8"))["questions"]["intensity_0"]["criteria"]
+RUBRIC = json.loads((ROOT / "research/experiment_results" / "protocol.json").read_text(encoding="utf-8"))["questions"]["intensity_0"]["criteria"]
 ROLES = ("prosecution", "defense", "judge")
 
 
 def load(accessions):
-    o = pd.read_csv(ROOT / "experiment_results" / "outcomes.csv", dtype={"horizon": str})
+    o = pd.read_csv(ROOT / "research/experiment_results" / "outcomes.csv", dtype={"horizon": str})
     rows = []
     for acc in accessions:
         r = o[(o.accession_number == acc) & (o.horizon == HORIZON)]
         if r.empty:
             sys.exit(f"{acc}: no h={HORIZON} row in experiment_results/outcomes.csv")
         r = r.iloc[0]
-        cache = json.loads((ROOT / ".jev_cache" / f"{r.supporting_text_reference}.json").read_text(encoding="utf-8"))
+        cache = json.loads((ROOT / "research/.jev_cache" / f"{r.supporting_text_reference}.json").read_text(encoding="utf-8"))
         level = min(10, max(1, round(r.intensity)))
         rows.append({
             "accession_number": acc, "ticker": r.ticker, "filing_date": r.filing_date, "category": r.disclosure_category,

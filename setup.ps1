@@ -39,13 +39,13 @@ Write-Host "Registering the Jupyter kernel ..."
 & $vpy -m ipykernel install --user --name gator-quant-hacks --display-name "Python (Gator Quant Hacks .venv)" | Out-Null
 Assert-NativeSuccess "Kernel registration"
 
-if (-not (Test-Path .env)) {
-    Copy-Item .env.example .env
-    Write-Host "`n>> Created .env - open it and replace 'your-key-here' with your Massive API key."
-} elseif (Select-String -Path .env -Pattern "your-key-here" -Quiet) {
-    Write-Host "`n>> .env still has the placeholder - replace 'your-key-here' with your Massive API key."
+if (-not (Test-Path research/.env)) {
+    Copy-Item .env.example research/.env
+    Write-Host "`n>> Created research/.env - open it and replace 'your-key-here' with your Massive API key."
+} elseif (Select-String -Path research/.env -Pattern "your-key-here" -Quiet) {
+    Write-Host "`n>> research/.env still has the placeholder - replace 'your-key-here' with your Massive API key."
 } else {
-    Write-Host ".env found."
+    Write-Host "research/.env found."
 }
 
 Write-Host "`nDone. Start Jupyter with:"

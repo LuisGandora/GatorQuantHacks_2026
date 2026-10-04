@@ -61,11 +61,11 @@ class SubmissionSafetyTests(unittest.TestCase):
             (root / "submission").mkdir()
             shutil.copy("submission/source_manifest.json", root / "submission/source_manifest.json")
             for name in S.PINNED_CODE_PATHS:
-                target = root / name
+                target = root / "research" / name
                 target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copy(name, target)
+                shutil.copy(Path("research") / name, target)
             S.verify_pinned_sources(root)
-            (root / S.PINNED_CODE_PATHS[0]).write_bytes(b"tampered source")
+            (root / "research" / S.PINNED_CODE_PATHS[0]).write_bytes(b"tampered source")
             with self.assertRaisesRegex(S.SubmissionBlocked, "source SHA-256 differs"):
                 S.verify_pinned_sources(root)
 
@@ -154,7 +154,7 @@ class SubmissionSafetyTests(unittest.TestCase):
         ns = {"np": np, "pd": pd, "STRATEGIES": [S.PRIMARY["strategy"]],
               "BASELINE_BUCKET": S.PRIMARY["bucket"], "ENTRY": "post", "OTM_PCT": 0.05,
               "HORIZONS": list(S.FIXED_HORIZONS[:-1])}
-        cell = json.loads(Path("gator-quant-hacks-8k-options-challenge.ipynb").read_text())["cells"][25]
+        cell = json.loads(Path("research/gator-quant-hacks-8k-options-challenge.ipynb").read_text())["cells"][25]
         for node in ast.parse("".join(cell["source"])).body:
             if isinstance(node, ast.FunctionDef) and node.name in {
                     "bootstrap_ci", "slice_results", "scoreboard", "difference_board"}:

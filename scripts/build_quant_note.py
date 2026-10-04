@@ -299,7 +299,7 @@ make_tbl(
 )
 
 # EMBEDDED EQUITY CURVE IMAGE (Mandated by Track 03!)
-chart_img_path = ROOT / 'runs/portfolio_F1-leadership-fresh.png'
+chart_img_path = ROOT / 'research/runs/portfolio_F1-leadership-fresh.png'
 if chart_img_path.exists():
     img_flow = Image(str(chart_img_path), width=480, height=147)
     img_flow.hAlign = 'CENTER'

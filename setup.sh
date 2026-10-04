@@ -31,15 +31,15 @@ echo "Registering the Jupyter kernel ..."
 "$VPY" -m ipykernel install --user --name gator-quant-hacks --display-name "Python (Gator Quant Hacks .venv)" >/dev/null
 
 # API key file
-if [ ! -f .env ]; then
-  cp .env.example .env
+if [ ! -f research/.env ]; then
+  cp .env.example research/.env
   echo
-  echo ">> Created .env — open it and replace 'your-key-here' with your Massive API key."
-elif grep -q "your-key-here" .env; then
+  echo ">> Created research/.env — open it and replace 'your-key-here' with your Massive API key."
+elif grep -q "your-key-here" research/.env; then
   echo
-  echo ">> .env still has the placeholder — replace 'your-key-here' with your Massive API key."
+  echo ">> research/.env still has the placeholder — replace 'your-key-here' with your Massive API key."
 else
-  echo ".env found."
+  echo "research/.env found."
 fi
 
 echo

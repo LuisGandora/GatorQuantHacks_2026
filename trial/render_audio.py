@@ -25,7 +25,7 @@ VOICES = {"prosecution": "pNInz6obpgDQGcFmaJgB",   # Adam
 def env_key():
     if os.environ.get("ELEVENLABS_API_KEY"):
         return os.environ["ELEVENLABS_API_KEY"]
-    env = ROOT / ".env"
+    env = ROOT / "research/.env"
     for line in env.read_text(encoding="utf-8").splitlines() if env.exists() else []:
         k, _, v = line.partition("=")
         if k.strip() == "ELEVENLABS_API_KEY" and v.strip():
