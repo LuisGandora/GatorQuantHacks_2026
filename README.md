@@ -49,6 +49,33 @@ while; later runs read the cache.
 | `harness.py`, `pair_test.py`, `vrp.py`, `hyp.py`, `report_extras.py` | Research code the notebook calls |
 | `submission/`, `GQH_MASSIVE_FINAL.ipynb`, `docs/` | jack-uf's earlier submission package (below) |
 
+## Optional demo: Filing Trial (MLH Best Use of ElevenLabs)
+
+A separate demo in [trial/](trial/), built for the **MLH Best Use of ElevenLabs** prize. It is not part of the research
+and is not needed to judge it. It leaves the notebook and its dependencies untouched, so the main pipeline still needs
+only `MASSIVE_API_KEY`.
+
+Three 8-K filings go on trial. A prosecutor argues each filing is materially adverse and a defender argues the outlook is
+intact; both use only the filing's excerpt, and the page highlights the sentence each relies on. A Quant Judge then reads a
+fixed template filled only with computed values known at filing time: JEV intensity and stability, the rubric
+classification and the move the option chain priced. Only after the verdict does the page reveal the outcome, the
+realized move and the backtest P&L, clearly labeled as the outcome. ElevenLabs voices the three roles with three distinct
+voices. Data comes from jack-uf's JEV-stability results (`experiment_results/outcomes.csv`) and the exact excerpts JEV
+scored (`.jev_cache/`).
+
+Open [trial/index.html](trial/index.html) in a browser. It works offline once the MP3s in `trial/audio/` are committed.
+To rebuild or re-record:
+
+```bash
+python trial/build.py                 # writes trial/data.json + trial/index.html (no API calls); checks every quote is exact
+# review trial/scripts.json, then set "needs_human_review": false
+python trial/render_audio.py          # needs ELEVENLABS_API_KEY in .env; writes trial/audio/*.mp3
+```
+
+`python trial/build.py ACC1 ACC2 ...` swaps in other filings, which must appear in `experiment_results/outcomes.csv` and
+need an entry in `scripts.json`. The default three are the highest-, median- and lowest-intensity filings, chosen from text
+scores only, never from outcomes. The demo is not a trading signal: the main study found no edge.
+
 ---
 
 # jack-uf's submission package
