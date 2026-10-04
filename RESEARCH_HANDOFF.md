@@ -4,6 +4,8 @@ Updated: October 3, 2026. The user subsequently resumed research, prioritizing a
 
 Resume priority: `GOVERNANCE_PUT_HYPOTHESIS.md` and `governance_put_hypothesis.json` define a discovery-selected annual-meeting-results → protective-put candidate. Audit and validation counts come before new validation returns. This candidate is not a confirmed edge or an independent replication of the inspected discovery sample.
 
+Latest qualification: a complete Massive disclosure-calendar audit and metadata-only full-pool rematching leave all 50 discovery cells below 40 clean matched events. Annual-meeting protective puts have 32 clean matches, debt covered calls 35. All ten historical validation categories also fall below 40 control-eligible events (annual meetings 36). Earlier averages below use CSV-calendar controls and must be labeled qualified exploratory results. No corrected return tests or validation prices were requested. See `discovery_calendar_audit/full_pool_clean_match_counts.csv` and `validation_feasibility_results/category_coverage.csv`.
+
 ## Objective and rules
 
 Look for consistent relationships between 8-K event categories and five strategies: ATM long call, covered call, protective put, collar, and cash-secured put. Validate against comparable ordinary days, report uncertainty and sensitivities, and avoid optimizing toward confirmation.

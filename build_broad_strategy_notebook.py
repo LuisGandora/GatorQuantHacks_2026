@@ -59,6 +59,20 @@ starter['cells'] = [
          "            display(compact)\n"
          "            print('Differences are percentage points of entry stock notional; missing intervals do not imply no effect.')\n"
          "    else:\n        print(name, 'not yet completed')\n"),
+    md('## Full disclosure-calendar audit\n\n'
+       'The initial discovery baseline used the teammate CSV as its disclosure calendar. '
+       'A later all-tag Massive calendar audit identified contaminated ordinary dates. '
+       'Metadata-only rematching of the full existing quote pool leaves all 50 primary cells below 40 usable events. '
+       'Annual-meeting protective puts retain 32 clean matches; debt covered calls retain 35. '
+       'The original performance tables are preserved, but are qualified exploratory results. '
+       'No revised return test is run below the count gate. Historical validation also fails the count gate in every screened category.\n'),
+    code("AUDIT = Path('discovery_calendar_audit')\n"
+         "if (AUDIT/'full_pool_clean_match_counts.csv').exists():\n"
+         "    display(pd.read_csv(AUDIT/'full_pool_clean_match_counts.csv'))\n"
+         "    print(json.dumps(json.loads((AUDIT/'full_pool_status.json').read_text()), indent=2))\n"
+         "VALIDATION = Path('validation_feasibility_results')\n"
+         "if (VALIDATION/'category_coverage.csv').exists():\n"
+         "    display(pd.read_csv(VALIDATION/'category_coverage.csv'))\n"),
     md('## Bid/ask execution experiment\n\n'
        'This registered pass uses the latest quote strictly before the following trading close, '
        'buys at the ask, sells at the bid, and charges $0.65 per contract per side. '
