@@ -48,7 +48,7 @@ def verify():
 def run():
     if not (OUT/'collection_complete.json').exists():
         raise RuntimeError('The live collector has not completed; do not start a second collector.')
-    for script in ['broad_quote_returns.py', 'broad_quote_analysis.py']:
+    for script in ['audit_broad_quote_snapshots.py', 'broad_quote_returns.py', 'broad_quote_analysis.py']:
         subprocess.run([sys.executable, '-u', str(ROOT/script)], cwd=ROOT, check=True)
     verify()
 
