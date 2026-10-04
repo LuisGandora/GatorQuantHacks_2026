@@ -1,0 +1,10 @@
+{
+  "id": "GOV-calendar-coverage-v2",
+  "parent": "GOV-annual-meeting-protective-put-v1",
+  "reason": "The source CSV ends in 2025 and cannot establish ordinary dates for 2026; absence of CSV records is not absence of disclosures.",
+  "stage": "Before requesting validation prices or reading returns",
+  "change": "Use all-tag Massive disclosure dates within the validation window plus 30-calendar-day padding.",
+  "unchanged": "Tag, strategy, entry timing, primary horizon, expiry/strike rules, same issuer/year/quarter/weekday, 63-session distance, seven-session DTE tolerance, 30-day gap, nearest-three selection, costs, inference gates and validation-history disclosure.",
+  "boundary": "Ordinary entry candidates remain inside starter historical OOS dates; DTE and quote usability remain unchecked.",
+  "interpretation": "Data-coverage correction; no relaxation of disclosure exclusions or claim of unseen validation"
+}

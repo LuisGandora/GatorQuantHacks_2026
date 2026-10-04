@@ -44,3 +44,11 @@ Current discovery has only two registered dependence components, below the minim
 5. Retain the all-horizon quote checkpoints; full collection is currently paused. Prioritize hypothesis feasibility and validation rather than restarting a lengthy exhaustive collection before its purpose is clear.
 
 The research objective is active again at the user's request. Current conclusion for this candidate: **inconclusive, with a concrete falsifiable test.**
+
+## Validation feasibility update
+
+The January–August 2026 starter window contains 69 eligible annual-meeting company-dates, but only 36 have any ordinary-day control under the frozen same-company/date rules and 30-day disclosure exclusion. This is an upper bound before option-chain, expiry, quote, or stock exclusions, and fails the minimum of 40 usable matched events. No validation option prices or returns were requested.
+
+Because the source CSV ends in 2025, it cannot establish clean ordinary days in 2026. `governance_put_results/control_calendar_amendment.json` records a correction made before validation prices: use the full Massive all-tag disclosure calendar, with 30-day padding. It preserves the economic hypothesis, matching rules, costs and gates. Missing 2026 CSV records are not treated as proof of no disclosure.
+
+An outcome-free check of all ten previously screened categories found that none has 40 control-eligible validation events. Counts are in `validation_feasibility_results/category_coverage.csv`. The governance candidate remains a plausible discovery-selected hypothesis, but **the prescribed historical validation is currently not feasible**. Do not lower the event gate, loosen disclosure exclusions, or pool unrelated tags simply to obtain a result. A larger independent validation sample or a separately justified research design would be needed for a conclusive claim.

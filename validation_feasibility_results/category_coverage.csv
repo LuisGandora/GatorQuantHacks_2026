@@ -1,0 +1,11 @@
+tag,starter_company_dates,events_with_calendar_controls,calendar_upper_bound_gate_passed,event_only_dependence_groups,option_prices_requested,validation_returns_read,note
+annual_meeting_results,69,36,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+debt_issuance,107,24,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+director_appointment,28,12,False,1,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+director_departure,40,11,False,4,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+executive_compensation_change,72,26,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+executive_officer_appointment,39,17,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+guidance_issuance_or_update,18,4,False,3,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+quarterly_earnings,45,17,False,1,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+shareholder_proposal_outcome,57,26,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"
+underwriting_agreement,55,15,False,2,False,False,"Calendar counts are upper bounds; expiry, quotes, stock and full matched dependence remain untested"

@@ -1,0 +1,11 @@
+{
+  "candidate_events": 69,
+  "events_with_calendar_controls": 36,
+  "events_without_calendar_controls": 33,
+  "control_links": 100,
+  "unique_company_control_dates": 100,
+  "calendar_upper_bound_count_gate_passed": false,
+  "option_prices_requested": false,
+  "validation_returns_read": false,
+  "pending": "Expiry/strike availability, seven-session DTE matching, fresh bid/ask quotes, stock checks, and matched dependence groups"
+}
