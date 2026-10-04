@@ -59,6 +59,35 @@ starter['cells'] = [
          "            display(compact)\n"
          "            print('Differences are percentage points of entry stock notional; missing intervals do not imply no effect.')\n"
          "    else:\n        print(name, 'not yet completed')\n"),
+    md('## Bid/ask execution experiment\n\n'
+       'This registered pass uses the latest quote strictly before the following trading close, '
+       'buys at the ask, sells at the bid, and charges $0.65 per contract per side. '
+       'The primary freshness limit is 60 seconds; 300 seconds is exploratory. '
+       'Displayed size is a capacity diagnostic, not a fill guarantee. Missing quotes are excluded. '
+       'Category event counts are saved before P&L, separately from controls; strict matched counts follow. '
+       'The 21-session comparison remains primary. Every other fixed horizon is exploratory.\n'),
+    code("QUOTE = OUT/'quote_execution'\n"
+         "RUN_QUOTE_COLLECTION = False\nRUN_QUOTE_ANALYSIS = False\nRUN_ALL_QUOTE_HORIZONS = False\n"
+         "if RUN_QUOTE_COLLECTION:\n    import broad_quote_experiment\n    broad_quote_experiment.collect()\n"
+         "if RUN_QUOTE_ANALYSIS:\n    import finish_broad_quote_experiment\n    finish_broad_quote_experiment.run()\n"
+         "if RUN_ALL_QUOTE_HORIZONS:\n    import broad_quote_horizons\n    broad_quote_horizons.collect()\n"
+         "    import broad_quote_returns\n    broad_quote_returns.run(QUOTE/'all_horizons', all_horizons=True)\n"
+         "    import broad_quote_analysis\n"
+         "    horizons = json.loads((QUOTE/'all_horizons'/'registration.json').read_text())['fixed_horizons']\n"
+         "    frames = [broad_quote_analysis.analyze(QUOTE/'all_horizons', h, prefix=f'horizon_{h}_') for h in horizons]\n"
+         "    pd.concat(frames, ignore_index=True).to_csv(QUOTE/'all_horizons'/'all_fixed_horizon_summary.csv', index=False)\n"
+         "if (QUOTE/'registration.json').exists():\n    print(json.dumps(json.loads((QUOTE/'registration.json').read_text()), indent=2))\n"
+         "for name in ['quote_usability_counts.csv', 'category_event_counts_before_returns.csv', 'bid_ask_primary_and_age_sensitivity.csv']:\n"
+         "    path = QUOTE/name\n    if path.exists():\n"
+         "        frame = pd.read_csv(path)\n"
+         "        if not frame.empty:\n"
+         "            print(name)\n"
+         "            if 'difference' in frame:\n"
+         "                frame[['difference', 'ci_lo', 'ci_hi']] *= 100\n"
+         "                frame = frame.rename(columns={'difference': 'difference_pp', 'ci_lo': 'ci_lo_pp', 'ci_hi': 'ci_hi_pp'})\n"
+         "            display(frame)\n"
+         "if (QUOTE/'primary_execution_status.json').exists():\n    print(json.dumps(json.loads((QUOTE/'primary_execution_status.json').read_text()), indent=2))\n"
+         "else:\n    print('Primary quote analysis is pending; coverage counts are not performance results.')\n"),
     md('## Interpretation and remaining validation\n\n'
        'A discovery signal is not an established trading edge. Review entry premiums, stock movements and tails, '
        'liquidity, costs, outliers, event text, and stability before a frozen validation test. '
