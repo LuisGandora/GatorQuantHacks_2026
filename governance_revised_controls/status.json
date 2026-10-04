@@ -1,0 +1,6 @@
+{
+  "discovery_and_validation_calendar_gates_pass": false,
+  "option_prices_requested": false,
+  "outcomes_read": false,
+  "next": "Count call-specific quote coverage if both gates pass; otherwise preserve this design and report infeasibility."
+}

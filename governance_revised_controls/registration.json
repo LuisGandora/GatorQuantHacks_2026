@@ -1,0 +1,40 @@
+{
+  "id": "GOV-routine-CC-calendar-v2-feasibility",
+  "stage": "Coverage only, frozen before revised controls/prices/outcomes",
+  "candidate": "covered calls after routine affirmative annual-meeting recaps",
+  "rationale": "Separate short-lived administrative/recap contamination from potentially persistent business, earnings, financing, control, and risk news. Seven days remains an exclusion around even recap tags; all other exact tags retain the original thirty-day exclusion.",
+  "routine_calendar_exceptions": [
+    "annual_meeting_results",
+    "shareholder_meeting_notice",
+    "shareholder_proposal_outcome",
+    "dividend_declaration",
+    "equity_compensation_grant",
+    "trading_plan_10b5_1",
+    "benefit_plan_blackout"
+  ],
+  "exceptions_warning": "These tags are not guaranteed immaterial; content can invalidate an exception. Missing or unrecognized categories are conservatively material.",
+  "revised_control": "ANY disclosure within 7 calendar days excluded; all tags outside explicit exception list within 30 calendar days excluded",
+  "original_baseline": "ANY disclosure within 30 calendar days, retained side by side",
+  "matching": "unchanged company/year/quarter/weekday, distance <=63 sessions; later starter 3-6m/5% call and DTE tolerance unchanged",
+  "arm": "Existing routine-compatible text flag, additionally exclude excerpts mentioning charter/bylaw/voting-rights/control changes. Still provisional pending full-filing/expectations audit.",
+  "windows": {
+    "current_csv": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "expanded_early": [
+      "2022-03-07",
+      "2023-12-31"
+    ],
+    "replication_2026": [
+      "2026-01-01",
+      "2026-08-31"
+    ]
+  },
+  "entry": "following trading close strictly after filing date",
+  "count_gate": 40,
+  "minimum_dependence_components": 5,
+  "no_optimization": "One design chosen from taxonomy/economic rationale; do not change exception list after counts to rescue feasibility",
+  "histories": "All prior annual-meeting outcomes disclosed; this design is post-discovery; 2026 is not pristine sealed validation",
+  "pricing_policy": "No pricing in this stage; discovery and validation calendar gates must both pass before covered-call coverage collection"
+}
