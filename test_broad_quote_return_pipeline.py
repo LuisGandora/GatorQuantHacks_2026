@@ -12,10 +12,14 @@ import broad_quote_returns as returns
 class ReturnPipelineTest(unittest.TestCase):
     def test_two_horizons_are_counted_and_normalized_independently(self):
         with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent, prefix='quote_returns_test_') as directory:
-            primary = Path(directory)
+            base = Path(directory)/'broad_strategy_results'
+            primary = base/'quote_execution'
             out = primary/'all_horizons'
             folder = out/'trade_snapshots'
             folder.mkdir(parents=True)
+            event_folder = base/'test_category'
+            event_folder.mkdir()
+            pd.DataFrame({'ticker': ['XYZ'], 't_0': ['2024-03-04']}).to_csv(event_folder/'event_inventory.csv', index=False)
             pd.DataFrame({'ticker': ['XYZ'], 't_0': ['2024-03-04']}).to_csv(primary/'entry_inventory.csv', index=False)
             (out/'registration.json').write_text(json.dumps({'fixed_horizons': [1, 21]}))
             (out/'collection_complete.json').write_text('{}')
@@ -38,6 +42,10 @@ class ReturnPipelineTest(unittest.TestCase):
             counts = pd.read_csv(out/'fully_usable_counts_before_returns.csv')
             self.assertEqual(len(results), 20)
             self.assertEqual(counts.trades.sum(), 20)
+            category_counts = pd.read_csv(out/'category_event_counts_before_returns.csv')
+            self.assertEqual(len(category_counts), 20)
+            self.assertEqual(category_counts.usable_events.sum(), 20)
+            self.assertTrue((category_counts.source_events == 1).all())
             call = results[(results.strategy == 'long_call') & (results.max_age_seconds == 60)].set_index('horizon')
             self.assertAlmostEqual(call.loc[1, 'net'], 98.70/10000)
             self.assertAlmostEqual(call.loc[21, 'net'], 198.70/10000)

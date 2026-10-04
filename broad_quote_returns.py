@@ -85,6 +85,22 @@ def run(out=None, all_horizons=False):
     groups = (['horizon'] if all_horizons else [])+['strategy', 'max_age_seconds', 'fully_usable']
     usability.groupby(groups).size().rename('trades').reset_index().to_csv(
         out/'fully_usable_counts_before_returns.csv', index=False)
+    category_rows = []
+    base = out.parent.parent if all_horizons else out.parent
+    for inventory_path in sorted(base.glob('*/event_inventory.csv')):
+        events = pd.read_csv(inventory_path, usecols=['ticker', 't_0']).drop_duplicates(['ticker', 't_0'])
+        events['entry_date'] = pd.to_datetime(events.t_0).dt.strftime('%Y-%m-%d')
+        covered = events[['ticker', 'entry_date']].merge(usability,
+            on=['ticker', 'entry_date'], how='left', validate='one_to_many')
+        for keys, group in covered.groupby((['horizon'] if all_horizons else [])+['strategy', 'max_age_seconds']):
+            keys = keys if isinstance(keys, tuple) else (keys,)
+            category_rows.append(dict(tag=inventory_path.parent.name,
+                **dict(zip((['horizon'] if all_horizons else [])+['strategy', 'max_age_seconds'], keys)),
+                source_events=len(events), usable_events=int(group.fully_usable.fillna(False).sum()),
+                excluded_events=int((~group.fully_usable.fillna(False)).sum()), strict_matching_pending=True))
+    pd.DataFrame(category_rows, columns=['tag']+(['horizon'] if all_horizons else [])+
+        ['strategy', 'max_age_seconds', 'source_events', 'usable_events', 'excluded_events', 'strict_matching_pending']).to_csv(
+            out/'category_event_counts_before_returns.csv', index=False)
     # Counts above are persisted before the first return is evaluated.
     rows = []
     for row in usability[usability.fully_usable].itertuples(index=False):
