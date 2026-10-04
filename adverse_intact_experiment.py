@@ -23,8 +23,8 @@ import adverse_intact_sources as sources
 import adverse_intact_guidance as guidance
 
 OUTPUT = sources.OUTPUT
-PROTOCOL_MD = ROOT / 'ADVERSE_INTACT_PROTOCOL.md'
-AUDIT_MD = ROOT / 'ADVERSE_INTACT_EVIDENCE_AUDIT.md'
+PROTOCOL_MD = ROOT / 'docs/research/ADVERSE_INTACT_PROTOCOL.md'
+AUDIT_MD = ROOT / 'docs/research/ADVERSE_INTACT_EVIDENCE_AUDIT.md'
 SUMMARY_JSON = ROOT / 'ADVERSE_INTACT_SUMMARY.json'
 
 
@@ -188,7 +188,7 @@ def stage_freeze():
             'the parsed original source packages under expanded_guidance_results/parsed/ for the '
             'frozen cohort and the prior pool',
             'the reused frozen Experiment 7 helper modules for their API functions only',
-            'EARNINGS_PAYOFF_PROTOCOL.md and EARNINGS_PAYOFF_RESULTS.md for the frozen trade rule, '
+            'docs/research/EARNINGS_PAYOFF_PROTOCOL.md and docs/research/EARNINGS_PAYOFF_RESULTS.md for the frozen trade rule, '
             'costs and control design (no number was copied into a computed field)',
             'EARNINGS_PAYOFF_FREEZE.json for digest verification only',
         ],

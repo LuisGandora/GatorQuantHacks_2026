@@ -13,8 +13,8 @@ def normalized(text):
     return text.replace('−', '-').replace('–', '-').replace('’', "'")
 
 def main():
-    metrics = json.loads((ROOT/'submission_final_metrics.json').read_text())
-    facts = json.loads((ROOT/'submission_authoritative_facts.json').read_text())['facts']
+    metrics = json.loads((ROOT/'submission/submission_final_metrics.json').read_text())
+    facts = json.loads((ROOT/'submission/submission_authoritative_facts.json').read_text())['facts']
     headlines = json.loads((ROOT/'submission/recovered_headline_aggregates.json').read_text())['records']
     horizons = json.loads((ROOT/'submission/recovered_fixed_horizons.json').read_text())['records']
     notebook = json.loads((ROOT/'GQH_MASSIVE_FINAL.ipynb').read_text())
@@ -63,10 +63,10 @@ def main():
     check('Unrecoverable results stay null',all(v is None for v in metrics['unavailable_fields'].values()))
     code='\n'.join(''.join(c['source']) for c in notebook['cells'] if c['cell_type']=='code')
     check('Notebook loads metrics, authoritative facts and recovered horizons',all(s in code for s in
-          ('METRICS = load_metrics()', 'submission_authoritative_facts.json', 'recovered_fixed_horizons.json')))
+          ('METRICS = load_metrics()', 'submission/submission_authoritative_facts.json', 'recovered_fixed_horizons.json')))
     check('Notebook source has no saved execution or outputs',all(not c.get('outputs') and c.get('execution_count') is None for c in notebook['cells']))
     check('Notebook judge dates and explicit execution guards',all(s in code for s in ('START_DATE','END_DATE','RUN_CUSTOM_JUDGE','AUTHORIZE_RESTRICTED_DATES')))
-    for name in ('README.md','submission/QUANT_NOTE.md','SUBMISSION_EVIDENCE_PACKET.md','docs/DEVPOST_SUBMISSION.md'):
+    for name in ('README.md','submission/QUANT_NOTE.md','docs/submission/SUBMISSION_EVIDENCE_PACKET.md','docs/DEVPOST_SUBMISSION.md'):
         text=normalized((ROOT/name).read_text())
         for value in ('-1.03%','-1.19%','-0.70%'):
             check(f'{name}: named primary/ordinary comparison {value}',value in text)
@@ -130,7 +130,7 @@ def main():
     lines += [f"| {label.replace('|','/')} | {'PASS' if okay else 'FAIL'} |" for label,okay in checks]
     failed=sum(not okay for _,okay in checks)
     lines += ['',f"Result: **{'PASS' if not failed else 'FAIL'}**; {len(checks)-failed}/{len(checks)} checks passed."]
-    (ROOT/'SUBMISSION_CONSISTENCY_AUDIT.md').write_text('\n'.join(lines)+'\n')
+    (ROOT/'docs/submission/SUBMISSION_CONSISTENCY_AUDIT.md').write_text('\n'.join(lines)+'\n')
     print(f"{'PASS' if not failed else 'FAIL'}: {len(checks)-failed}/{len(checks)} consistency checks")
     for label, okay in checks:
         if not okay: print('FAIL:',label)

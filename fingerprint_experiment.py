@@ -125,7 +125,7 @@ PROTOCOL = {
 def preservation():
     result = previous.old_manifest()
     paths = list((ROOT/'stability_results').rglob('*'))+list((ROOT/'.stability_cache').rglob('*'))
-    paths += [ROOT/name for name in ['stability_experiment.py','stability_analysis.py','test_stability_experiment.py','STABILITY_EXPERIMENT_PROTOCOL.md','STABILITY_EXPERIMENT_RESULTS.md','STABILITY_METRICS.json']]
+    paths += [ROOT/name for name in ['stability_experiment.py','stability_analysis.py','test_stability_experiment.py','docs/research/STABILITY_EXPERIMENT_PROTOCOL.md','docs/research/STABILITY_EXPERIMENT_RESULTS.md','STABILITY_METRICS.json']]
     result.update({str(p.relative_to(ROOT)): previous.checksum(p) for p in paths if p.is_file()})
     return dict(sorted(result.items()))
 
@@ -165,7 +165,7 @@ def stage_freeze():
            '## Timing, costs and replication','',PROTOCOL['outcomes'],'',PROTOCOL['decision'],'',
            'No new Massive acquisition is required. Prior ATM marks and all missing outcomes are retained exactly. There is no strategy-cost or baseline-edge estimate in this study. The independent 2026 and judges windows remain unopened even if an exploratory association passes.','',
            '## Exact machine-readable specification','',f'Protocol SHA256: `{digest(PROTOCOL)}`.','', '```json',json.dumps(PROTOCOL,indent=2),'```','']
-    (ROOT/'FINGERPRINT_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT/'docs/research/FINGERPRINT_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
     print('Frozen Experiment3',digest(PROTOCOL),flush=True)
 
 

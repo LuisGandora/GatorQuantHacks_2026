@@ -17,10 +17,10 @@ ROOT_FILES = (
     'harness.py', 'pair_test.py', 'pairings.json', 'jev.py', 'jev_scores.csv',
     'jev_labels.csv', 'date_labels.csv', 'vrp.py', 'report_extras.py',
     'requirements.txt', 'requirements-research.txt', 'requirements-report.txt',
-    'setup.sh', 'setup.ps1', 'submission_final_metrics.json',
-    'submission_authoritative_facts.json', 'SUBMISSION_AUTHORITATIVE_FACTS.md',
-    'SUBMISSION_EVIDENCE_PACKET.md', 'SUBMISSION_NOTEBOOK_REPORT_MAP.md',
-    'SUBMISSION_QA_CHECKLIST.md', 'SUBMISSION_CONSISTENCY_AUDIT.md',
+    'setup.sh', 'setup.ps1', 'submission/submission_final_metrics.json',
+    'submission/submission_authoritative_facts.json', 'docs/submission/SUBMISSION_AUTHORITATIVE_FACTS.md',
+    'docs/submission/SUBMISSION_EVIDENCE_PACKET.md', 'docs/submission/SUBMISSION_NOTEBOOK_REPORT_MAP.md',
+    'docs/submission/SUBMISSION_QA_CHECKLIST.md', 'docs/submission/SUBMISSION_CONSISTENCY_AUDIT.md',
     'pytest.ini',
 )
 DOCS = (
@@ -41,6 +41,7 @@ def main():
         parser.error('Destination must not exist; choose a new empty path explicitly')
     names = list(ROOT_FILES)
     names += ['docs/'+name for name in DOCS]
+    names += ['docs/REPOSITORY_LAYOUT.md', 'docs/RESEARCH_CATALOG.md']
     names += ['scripts/'+name for name in SCRIPTS]
     names += ['tests/test_publication.py','tests/test_submission_pipeline.py']
     # Historical author-written methodology is retained. Raw/event/ledger outputs are not.

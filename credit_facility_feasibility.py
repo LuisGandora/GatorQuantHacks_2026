@@ -656,7 +656,7 @@ def stage_report():
     freeze(OUTPUT / 'metrics.json', metrics)
     (ROOT / 'CREDIT_FACILITY_FEASIBILITY.json').write_text(
         json.dumps(metrics, indent=2, allow_nan=False) + '\n')
-    (ROOT / 'CREDIT_FACILITY_FEASIBILITY.md').write_text(build_markdown(metrics) + '\n')
+    (ROOT / 'docs/research/CREDIT_FACILITY_FEASIBILITY.md').write_text(build_markdown(metrics) + '\n')
     print(json.dumps({'decision': metrics['decision'], 'gate': metrics['source_gate'],
                       'enrollment': metrics['enrollment']}, indent=2), flush=True)
     verify()

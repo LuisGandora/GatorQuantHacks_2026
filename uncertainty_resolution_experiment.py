@@ -24,7 +24,7 @@ import uncertainty_resolution_sources as sources
 import uncertainty_resolution_semantics as semantics
 
 OUTPUT = sources.OUTPUT
-PROTOCOL_MD = ROOT / 'UNCERTAINTY_RESOLUTION_PROTOCOL.md'
+PROTOCOL_MD = ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_PROTOCOL.md'
 
 LIST_FIELDS = ['dimensions_evaluated', 'valid_transitions', 'closing', 'opening',
                'unchanged', 'unknown', 'resolution_delta']

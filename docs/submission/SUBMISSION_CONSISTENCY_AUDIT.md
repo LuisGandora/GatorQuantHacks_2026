@@ -175,10 +175,10 @@ Checks of stated missing fields do not demonstrate compliance with the challenge
 | submission/QUANT_NOTE.md: named primary/ordinary comparison -1.19% | PASS |
 | submission/QUANT_NOTE.md: named primary/ordinary comparison -0.70% | PASS |
 | submission/QUANT_NOTE.md: no supported payoff, not claimed profitable | PASS |
-| SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -1.03% | PASS |
-| SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -1.19% | PASS |
-| SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -0.70% | PASS |
-| SUBMISSION_EVIDENCE_PACKET.md: no supported payoff, not claimed profitable | PASS |
+| docs/submission/SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -1.03% | PASS |
+| docs/submission/SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -1.19% | PASS |
+| docs/submission/SUBMISSION_EVIDENCE_PACKET.md: named primary/ordinary comparison -0.70% | PASS |
+| docs/submission/SUBMISSION_EVIDENCE_PACKET.md: no supported payoff, not claimed profitable | PASS |
 | docs/DEVPOST_SUBMISSION.md: named primary/ordinary comparison -1.03% | PASS |
 | docs/DEVPOST_SUBMISSION.md: named primary/ordinary comparison -1.19% | PASS |
 | docs/DEVPOST_SUBMISSION.md: named primary/ordinary comparison -0.70% | PASS |

@@ -28,7 +28,7 @@ def protected_manifest():
     paths += [ROOT/n for n in ['full_source_experiment.py','full_source_audit.py',
         'full_source_annotations.py','full_source_report.py','full_source_semantics.py',
         'test_full_source_experiment.py','test_full_source_semantics.py',
-        'FULL_SOURCE_EXPERIMENT_PROTOCOL.md','FULL_SOURCE_EVIDENCE_AUDIT.md','FULL_SOURCE_METRICS.json']]
+        'docs/research/FULL_SOURCE_EXPERIMENT_PROTOCOL.md','docs/research/FULL_SOURCE_EVIDENCE_AUDIT.md','FULL_SOURCE_METRICS.json']]
     result.update({str(p.relative_to(ROOT)):checksum(p) for p in paths if p.is_file()})
     return dict(sorted(result.items()))
 
@@ -51,7 +51,7 @@ def stage_freeze():
         'Any strategy comparison must use the existing payoff engine, all five structures, same-name ordinary days, all fixed horizons, costs and sensitivity. Entry follows signal availability; a lower realized-risk estimate is not proof of an options edge. No automatic largest-P&L selection. If evidence fails, publish the failure and stop. Final strategy freezing and OOS remain separate from this discovery assignment.', '',
         '## Exact specification', '', f'Protocol SHA256: `{digest(PROTOCOL)}`.', '',
         '```json', json.dumps(PROTOCOL,indent=2), '```','']
-    (ROOT/'GUIDANCE_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT/'docs/research/GUIDANCE_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
     print('Frozen guidance protocol',digest(PROTOCOL),'protected files',len(protected_manifest()),flush=True)
 
 

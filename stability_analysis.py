@@ -347,7 +347,7 @@ def report(summary, output=s.OUTPUT):
               f'Association prerequisite assessment: `{json.dumps(summary["decision"]["association_assessment"], sort_keys=True)}`.', '',
               'No category/threshold/strategy OOS rule is selected. January1–August31,2026 and the judges\' sealed window remain unopened. Strategy costs, net ordinary-day edges and all five payoff structures are unmeasured in this movement-only experiment, rather than assigned zero.', '',
               '## Artifacts and reproduction', '',
-              'See `STABILITY_EXPERIMENT_PROTOCOL.md` for exact protocol, formulas, gates, sources, limitations and stage commands. Public `STABILITY_METRICS.json` contains aggregate evidence and immutable hashes; local `stability_results/semantic_features.csv`, `latency_metrics.json`, `gate.json`, `hypothesis_decision.json` and raw response records preserve the audit trail. Economic files exist only if the gate passed. The separate schema-rejection archive remains intact.', '',
+              'See `docs/research/STABILITY_EXPERIMENT_PROTOCOL.md` for exact protocol, formulas, gates, sources, limitations and stage commands. Public `STABILITY_METRICS.json` contains aggregate evidence and immutable hashes; local `stability_results/semantic_features.csv`, `latency_metrics.json`, `gate.json`, `hypothesis_decision.json` and raw response records preserve the audit trail. Economic files exist only if the gate passed. The separate schema-rejection archive remains intact.', '',
               'Figures in `stability_results/figures/`: semantic geometry and measured latency; economic scatter/quartiles/matrix '+('are explicitly marked not evaluated.' if summary['economic'] is None else 'show all planned specifications without horizon selection.'), '']
     if summary['economic'] is not None:
         r = summary['economic']['robustness']['1']
@@ -366,7 +366,7 @@ def report(summary, output=s.OUTPUT):
     usage = summary['usage_research_and_benchmark']
     usage_line = f'Successful research and benchmark usage: **{usage["successful_responses"]:,} responses**, **{usage["input_tokens"]:,} input tokens**, **{usage["output_tokens"]:,} output tokens**. These counts exclude the 133 rejected schema requests. No dollar cost or trading cost was estimated.'
     lines[lines.index('## 5. Primary economic results across all required horizons'):lines.index('## 5. Primary economic results across all required horizons')] = [usage_line, '']
-    (s.ROOT/'STABILITY_EXPERIMENT_RESULTS.md').write_text('\n'.join(lines))
+    (s.ROOT/'docs/research/STABILITY_EXPERIMENT_RESULTS.md').write_text('\n'.join(lines))
 
 
 def run_analysis(output=s.OUTPUT):

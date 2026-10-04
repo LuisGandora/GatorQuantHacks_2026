@@ -4,7 +4,7 @@
 
 The report is complete. The source is [submission/QUANT_NOTE.md](../submission/QUANT_NOTE.md), and the PDF is [submission/QUANT_NOTE.pdf](../submission/QUANT_NOTE.pdf) (official 5-page blueprint body + appendix). This document records the report's factual boundaries and historical caveats; it is no longer a request to write the report.
 
-The report uses the current canonical notebook, `submission_final_metrics.json`, `submission_authoritative_facts.json`, the recovered aggregate JSON, and `docs/RESEARCH_PROVENANCE.md`. Historical research documents supply context. No market-data query, OOS rerun, raw OOS inspection, or sealed-window inspection was part of the report update.
+The report uses the current canonical notebook, `submission/submission_final_metrics.json`, `submission/submission_authoritative_facts.json`, the recovered aggregate JSON, and `docs/RESEARCH_PROVENANCE.md`. Historical research documents supply context. No market-data query, OOS rerun, raw OOS inspection, or sealed-window inspection was part of the report update.
 
 ## Reported result
 

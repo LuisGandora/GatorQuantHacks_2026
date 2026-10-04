@@ -217,7 +217,7 @@ def stage_freeze():
         'Run `freeze`, commit the protocol, then `acquire`, `retrieve`, `audit`, `report`. A source failure is reported as `source_infeasible` and stops the financial stage; it is not rescued by relaxing eligibility. `verify` recomputes offsets, dates and gates from immutable records.', '',
         '## Exact specification', '', f"Protocol SHA256: `{digest(PROTOCOL)}`.", '',
         '```json', json.dumps(PROTOCOL, indent=2), '```', '']
-    (ROOT / 'REPURCHASE_SOURCE_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT / 'docs/research/REPURCHASE_SOURCE_PROTOCOL.md').write_text('\n'.join(doc))
     print('Frozen repurchase source protocol', digest(PROTOCOL), 'universe', len(universe), flush=True)
 
 
@@ -677,7 +677,7 @@ def stage_report():
         'The public report contains only aggregate counts and short exact spans. Exact character offsets are in the ignored `repurchase_results/audits.json` and are re-verified by the `verify` stage.', '',
         '## Limits', '',
         'The count is a feasibility screen, not a statistical power estimate and not a validated signal. The whole TOP_100 `share_repurchase_program` population is only 36 accessions, so the 80-filing floor cannot be met even if every accession were eligible; the gate failure is structural for this scope, not an artifact of the eligibility heuristic. The eligibility rule is a deterministic source heuristic with exact recorded spans and a small set of exclusion reasons; borderline cases (for example a filer that simultaneously discloses an accelerated repurchase and an expanded program) are resolved conservatively and their spans remain inspectable. Retrieval uses only original SEC packages and the Massive disclosure/taxonomy endpoints; it cannot read market or option data. The static September-2026 TOP_100 carries survivorship bias. Filings outside this tag or this static universe are not counted, and a wider universe is a separate acquisition. No 2026 filing, sealed judges window or prior frozen experiment was read or changed. A passed source gate would only permit a separate, later, frozen experiment; it does not select a direction or a strategy. No trade hypothesis is frozen.', '']
-    (ROOT / 'REPURCHASE_SOURCE_RESULTS.md').write_text('\n'.join(lines))
+    (ROOT / 'docs/research/REPURCHASE_SOURCE_RESULTS.md').write_text('\n'.join(lines))
     print(json.dumps(metrics, indent=2), flush=True)
 
 

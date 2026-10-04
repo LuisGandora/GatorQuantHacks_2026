@@ -3,7 +3,7 @@
 These tests pin the blinded transition-sign validation of the frozen Experiment 9
 measurement. They recompute, from the frozen validation subset and the blinded
 reviewer verdicts and using the frozen transition mapping, exactly the arithmetic
-reported in UNCERTAINTY_RESOLUTION_RESULTS.md and UNCERTAINTY_RESOLUTION_SUMMARY.json:
+reported in docs/research/UNCERTAINTY_RESOLUTION_RESULTS.md and UNCERTAINTY_RESOLUTION_SUMMARY.json:
 
   * the audited-subset counts;
   * the exact before-state, after-state and both-side agreement rates;

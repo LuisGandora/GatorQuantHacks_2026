@@ -846,4 +846,4 @@ def write_public(state_rows, transition_rows, delta_rows, timing, audit, primary
                              f"{transition['after_state']}")
     lines += ['', 'No API key, no full filing text, and no price, option, payoff or '
               'ordinary-day market value appears in this public artifact.', '']
-    (ROOT / 'UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md').write_text('\n'.join(lines))
+    (ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md').write_text('\n'.join(lines))

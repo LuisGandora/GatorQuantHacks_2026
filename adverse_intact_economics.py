@@ -38,7 +38,7 @@ MARKET = ROOT / 'earnings_payoff_results'
 OUTCOMES = MARKET / 'outcomes.sqlite'
 OUTCOME_LOCK = MARKET / 'outcome_lock.json'
 CONTROLS = MARKET / 'controls.json'
-RESULTS_MD = ROOT / 'ADVERSE_INTACT_RESULTS.md'
+RESULTS_MD = ROOT / 'docs/research/ADVERSE_INTACT_RESULTS.md'
 SUMMARY_JSON = ROOT / 'ADVERSE_INTACT_SUMMARY.json'
 README = ROOT / 'README.md'
 
@@ -56,7 +56,7 @@ SENSITIVITY = {
     'entry_delay': [0, 1], 'stale': [0, 3], 'haircut': [0.0, 0.05, 0.10],
 }
 # Frozen inference constants; mirrors earnings_payoff_experiment's exact logic
-# with the Experiment-8 seed and floors from ADVERSE_INTACT_PROTOCOL.md.
+# with the Experiment-8 seed and floors from docs/research/ADVERSE_INTACT_PROTOCOL.md.
 INFERENCE = {
     'draws': 1000, 'seed': 20261008, 'min_finite_fraction': 0.80,
     'min_matched_events': 20, 'min_issuer_clusters': 10,
@@ -778,8 +778,8 @@ def update_readme():
         'material adverse current-period operating development while maintaining or raising '
         'its quantitative forward outlook realizes less subsequent downside than the '
         'issuer-matched ordinary days. The frozen protocol is '
-        '[ADVERSE_INTACT_PROTOCOL.md](ADVERSE_INTACT_PROTOCOL.md), the aggregate economic '
-        'report is [ADVERSE_INTACT_RESULTS.md](ADVERSE_INTACT_RESULTS.md), and the '
+        '[docs/research/ADVERSE_INTACT_PROTOCOL.md](docs/research/ADVERSE_INTACT_PROTOCOL.md), the aggregate economic '
+        'report is [docs/research/ADVERSE_INTACT_RESULTS.md](docs/research/ADVERSE_INTACT_RESULTS.md), and the '
         'machine-readable summary is [ADVERSE_INTACT_SUMMARY.json](ADVERSE_INTACT_SUMMARY.json). '
         'The frozen primary cell is `cash_secured_put`, bucket `3-6m`, OTM 0.05, entry delay 0, '
         'stale 0, premium haircut 0.05 per side at horizon +21, with the issuer-aware cluster '

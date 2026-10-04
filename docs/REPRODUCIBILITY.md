@@ -8,8 +8,8 @@ but was not executed during macOS QA. See the README for exact launch commands.
 
 ## Default evidence mode
 
-Run All needs no key and makes no API requests. It reads `submission_final_metrics.json`,
-`submission_authoritative_facts.json`, the three recovered aggregate JSON artifacts,
+Run All needs no key and makes no API requests. It reads `submission/submission_final_metrics.json`,
+`submission/submission_authoritative_facts.json`, the three recovered aggregate JSON artifacts,
 and nine bundled author-written summaries. `submission/source_manifest.json` checks
 the summary SHA-256s. These are historical results, not a fresh price calculation.
 Ordered execution with requests/urllib HTTP blocked passed in the QA environment.

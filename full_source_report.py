@@ -201,7 +201,7 @@ def report(summary):
     lines += [f'Protocol SHA256: `{summary["protocol_hash"]}`.',
         'Source/input manifest SHA256: `'+json.loads((OUTPUT/'source_manifest_hash.json').read_text())['sha256']+'`.','',
         'The source audit was committed before measurement. Successful response records retain exact requests, answers, usage and integrity hashes in a dedicated3B cache. Economic helpers reuse the parent frozen pure calculations with all writes confined to3B. No parent cache, artifact or protocol was modified.','']
-    (ROOT/'FULL_SOURCE_EVIDENCE_AUDIT.md').write_text('\n'.join(lines))
+    (ROOT/'docs/research/FULL_SOURCE_EVIDENCE_AUDIT.md').write_text('\n'.join(lines))
 
 
 if __name__=='__main__':

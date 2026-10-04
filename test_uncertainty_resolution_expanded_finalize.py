@@ -660,7 +660,7 @@ class IntegrityTests(unittest.TestCase):
                          packet_path=paths['packet_path'],
                          output=case['output'], public_dir=public, publish=True,
                          integrity_check=False, root=case['root'])
-        self.assertFalse((public / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
+        self.assertFalse((public / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
 
 
 # ---------------------------------------------------------------------------
@@ -783,7 +783,7 @@ class FinalizeIntegrationTests(unittest.TestCase):
                      'input_manifest.json', 'input_manifest_hash.json'):
             self.assertTrue((private / name).exists(), name)
         public = case['output'].parent / 'public'
-        self.assertTrue((public / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
+        self.assertTrue((public / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
         self.assertTrue((public / 'UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json').exists())
         summary = json.loads(
             (public / 'UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json').read_text())
@@ -829,7 +829,7 @@ class FinalizeIntegrationTests(unittest.TestCase):
         case = build_mock_case(tmp)
         run_case(case, publish=False)
         public = case['output'].parent / 'public'
-        self.assertFalse((public / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
+        self.assertFalse((public / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').exists())
 
 
 if __name__ == '__main__':

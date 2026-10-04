@@ -53,7 +53,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 OUT_JSON = ROOT / "TRANSACTION_IDENTITY_REVIEW.json"
-OUT_MD = ROOT / "TRANSACTION_IDENTITY_REVIEW.md"
+OUT_MD = ROOT / "docs/research/TRANSACTION_IDENTITY_REVIEW.md"
 MANIFEST_DIR = ROOT / "transaction_identity_review"
 MANIFEST_PATH = MANIFEST_DIR / "input_manifest.json"
 MANIFEST_HASH_PATH = MANIFEST_DIR / "input_manifest_hash.json"
@@ -824,7 +824,7 @@ def preservation_block():
         "checks": checks,
         "transaction_source_manifest_entries": len(manifest),
         "transaction_public_report_sha256": sha256_file(ROOT / "TRANSACTION_SOURCE.json"),
-        "transaction_public_report_md_sha256": sha256_file(ROOT / "TRANSACTION_SOURCE.md"),
+        "transaction_public_report_md_sha256": sha256_file(ROOT / "docs/research/TRANSACTION_SOURCE.md"),
         "note": "Original transaction code, protocol, raw HTTP envelopes, manifests and the "
                 "public TRANSACTION_SOURCE report (including audit_history) are byte-for-byte "
                 "unchanged; no original manifest is deleted or rebuilt.",
@@ -1394,7 +1394,7 @@ def verify():
     if committed != report:
         raise ValueError("Committed TRANSACTION_IDENTITY_REVIEW.json does not match the recompute.")
     if OUT_MD.read_text() != render_markdown(report):
-        raise ValueError("Committed TRANSACTION_IDENTITY_REVIEW.md does not match the recompute.")
+        raise ValueError("Committed docs/research/TRANSACTION_IDENTITY_REVIEW.md does not match the recompute.")
     # The committed report embeds the frozen manifest; require a byte-identical rebuild.
     if committed.get("input_manifest") != report["input_manifest"]:
         raise ValueError("Embedded input manifest does not reproduce from the frozen inputs.")

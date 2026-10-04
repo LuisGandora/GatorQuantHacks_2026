@@ -61,8 +61,8 @@ def main():
         '## Next design problem', '',
         'A subsequent protocol should first define and verify genuine earnings-release membership, then preserve complete relevant document coverage through independently validated document-sized requests. The existing taxonomy cache includes investor days, compensation reviews and standalone operational updates. Reusing it indiscriminately leaves the sample poorly matched to the proposed demand-versus-margin earnings hypothesis.', '',
         'Freeze that source and retrieval design before new semantic labels. Require enough independently reviewed positive examples in both primary dimensions before acquiring outcomes. Any broader evaluation remains exploratory; a trading hypothesis still needs an in-sample comparison of all five strategies with numerical/severity baselines, permitted entry timing, costs, sample sizes, horizon consistency and sensitivity. Neither 2026 nor the judges window has been opened.', '',
-        'Reproduce this supplement with `.venv/bin/python risk_composition_review.py`. The frozen measurement implementation and gate are unchanged. See [RISK_COMPOSITION_RESULTS.md](RISK_COMPOSITION_RESULTS.md) for the prespecified audit and [RISK_COMPOSITION_PROTOCOL.md](RISK_COMPOSITION_PROTOCOL.md) for source and reference controls.']
-    (audit.ROOT/'RISK_COMPOSITION_REVIEW.md').write_text('\n'.join(lines)+'\n')
+        'Reproduce this supplement with `.venv/bin/python risk_composition_review.py`. The frozen measurement implementation and gate are unchanged. See [docs/research/RISK_COMPOSITION_RESULTS.md](docs/research/RISK_COMPOSITION_RESULTS.md) for the prespecified audit and [docs/research/RISK_COMPOSITION_PROTOCOL.md](docs/research/RISK_COMPOSITION_PROTOCOL.md) for source and reference controls.']
+    (audit.ROOT/'docs/research/RISK_COMPOSITION_REVIEW.md').write_text('\n'.join(lines)+'\n')
     print('Published descriptive review; frozen gate and references unchanged.')
 
 

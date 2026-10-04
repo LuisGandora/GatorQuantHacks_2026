@@ -361,7 +361,7 @@ def run_judge(start: str, end: str, *, enabled: bool = False,
 
 def load_metrics(root: Path = Path(".")) -> dict:
     """Read reviewed static metrics, without synthesizing missing measurements."""
-    metrics = json.loads((root / "submission_final_metrics.json").read_text())
+    metrics = json.loads((root / "submission/submission_final_metrics.json").read_text())
     if metrics["build_commit"] != BUILD_COMMIT:
         raise SubmissionBlocked("Metrics provenance mismatch")
     return metrics

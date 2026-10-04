@@ -8,7 +8,7 @@ subsequent downside than the post-filing options market prices.
 
 This stage is outcome-blind. It reads filing text only. It never reads a price, an
 option record, a payoff, a 2026 filing, or any judges' sealed artifact, and it never
-computes P&L. The protocol document is ``CONTAINED_SHOCK_PROTOCOL.md``; the machine
+computes P&L. The protocol document is ``docs/research/CONTAINED_SHOCK_PROTOCOL.md``; the machine
 readable constants live here and are frozen into
 ``contained_shock_results/protocol.json`` before any semantic request is made.
 """

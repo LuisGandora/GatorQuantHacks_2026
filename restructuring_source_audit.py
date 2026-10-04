@@ -120,7 +120,7 @@ def write_protocol_markdown():
     md = ['# Restructuring plan tag: source availability protocol', '',
           'Kind: outcome-blind source-only metadata availability census; no classifier, semantic score, filing text, market price, option, financial outcome, JEV or other model call; no universal 80/20 gate and no economic cutoff; only `restructuring_plan` is counted and `workforce_reduction` is not censused. The frozen JSON below is the exact specification; universe and expected taxonomy are frozen before any request.', '',
           f'Protocol SHA256: `{digest(PROTOCOL)}`.', '', '```json', json.dumps(PROTOCOL, indent=2), '```', '']
-    (ROOT / 'RESTRUCTURING_SOURCE_PROTOCOL.md').write_text('\n'.join(md))
+    (ROOT / 'docs/research/RESTRUCTURING_SOURCE_PROTOCOL.md').write_text('\n'.join(md))
 
 
 def sanity():
@@ -195,7 +195,7 @@ def verify():
     preserved = preservation()
     if json.loads((OUTPUT / 'preservation.json').read_text()) != preserved or not all(preserved[k]['all_unchanged'] for k in preserved):
         raise ValueError('Protected prior research changed; stop.')
-    if not custody()['ignored'] or digest(PROTOCOL) not in (ROOT / 'RESTRUCTURING_SOURCE_PROTOCOL.md').read_text():
+    if not custody()['ignored'] or digest(PROTOCOL) not in (ROOT / 'docs/research/RESTRUCTURING_SOURCE_PROTOCOL.md').read_text():
         raise ValueError('Raw folder not private/ignored or public protocol markdown lacks the frozen hash.')
 
 
@@ -393,7 +393,7 @@ def write_report_markdown(m):
            'The private `restructuring_source/http/` envelopes preserve each exact request and response payload hash. The independent recount re-derives raw pages and rows from those envelopes and re-checks code, dependency and payload hashes, per-tag row/page counts, window dates, exact tag, endpoint scope and custody.', '',
            'This census stops at source metadata and is not a financial finding; a nonempty cohort does not show that a restructuring predicts returns, that charge-range width predicts downside, or that any option structure would profit. The universe is a static September-2026 TOP_100 with survivorship bias; the window is 2024-2025 only; a tag does not prove a restructuring or an impairment; no filing text was retrieved and no extraction is performed. No 2026 or reserved-window request was issued, and 2026 is not claimed globally pristine because of the disclosed earlier broad search.', '',
            f"Preservation: EARNINGS_PAYOFF_FREEZE.json all unchanged {m['preservation']['earnings_payoff_freeze']['all_unchanged']}; credit-terms protocol unchanged {m['preservation']['credit_terms_protocol']['all_unchanged']}. No prior frozen experiment was changed and no commit is made.", '']
-    (ROOT / 'RESTRUCTURING_SOURCE.md').write_text('\n'.join(md))
+    (ROOT / 'docs/research/RESTRUCTURING_SOURCE.md').write_text('\n'.join(md))
 
 
 def stage_verify():

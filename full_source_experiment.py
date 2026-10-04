@@ -54,8 +54,8 @@ def preservation():
     result = previous.preservation()
     paths = list(previous.OUTPUT.rglob('*')) + list(previous.CACHE.rglob('*'))
     paths += [ROOT / n for n in ['fingerprint_experiment.py', 'fingerprint_report.py',
-        'test_fingerprint_experiment.py', 'FINGERPRINT_EXPERIMENT_PROTOCOL.md',
-        'FINGERPRINT_EXPERIMENT_RESULTS.md', 'FINGERPRINT_METRICS.json']]
+        'test_fingerprint_experiment.py', 'docs/research/FINGERPRINT_EXPERIMENT_PROTOCOL.md',
+        'docs/research/FINGERPRINT_EXPERIMENT_RESULTS.md', 'FINGERPRINT_METRICS.json']]
     result.update({str(p.relative_to(ROOT)): checksum(p) for p in paths if p.is_file()})
     return dict(sorted(result.items()))
 
@@ -117,7 +117,7 @@ def stage_freeze():
         'Prior cohort outcomes were examined in Experiment2. Any eventual3B economic result is exploratory, even though new inputs and tests are frozen before this analysis. The original pre-filing movement benchmark is hypothetical and cannot alone establish an implementable option edge.', '',
         '## Exact specification', '', f'Protocol SHA256: `{digest(PROTOCOL)}`.', '',
         '```json', json.dumps(PROTOCOL, indent=2), '```', '']
-    (ROOT / 'FULL_SOURCE_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT / 'docs/research/FULL_SOURCE_EXPERIMENT_PROTOCOL.md').write_text('\n'.join(doc))
     print('Frozen3B:', digest(PROTOCOL), 'cohort:', len(cohort), flush=True)
 
 

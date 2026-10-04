@@ -71,9 +71,9 @@ PROTECTED_FILES = [
     'uncertainty_resolution_semantics.py',
     'uncertainty_resolution_experiment.py',
     'uncertainty_resolution_validation.py',
-    'UNCERTAINTY_RESOLUTION_PROTOCOL.md',
-    'UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md',
-    'UNCERTAINTY_RESOLUTION_RESULTS.md',
+    'docs/research/UNCERTAINTY_RESOLUTION_PROTOCOL.md',
+    'docs/research/UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md',
+    'docs/research/UNCERTAINTY_RESOLUTION_RESULTS.md',
     'UNCERTAINTY_RESOLUTION_SUMMARY.json',
 ]
 

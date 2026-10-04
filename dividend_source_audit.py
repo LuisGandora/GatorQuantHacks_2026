@@ -234,7 +234,7 @@ def write_protocol_markdown():
         '## Exact specification', '', f"Protocol SHA256: `{digest(PROTOCOL)}`.", '',
         '```json', json.dumps(PROTOCOL, indent=2), '```', '',
     ]
-    (ROOT / 'DIVIDEND_SOURCE_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT / 'docs/research/DIVIDEND_SOURCE_PROTOCOL.md').write_text('\n'.join(doc))
 
 
 def sanity():
@@ -293,7 +293,7 @@ def verify():
     if not custody()['ignored']:
         raise ValueError('Raw dividend source folder is not private/ignored.')
     marker = digest(PROTOCOL)
-    if marker not in (ROOT / 'DIVIDEND_SOURCE_PROTOCOL.md').read_text():
+    if marker not in (ROOT / 'docs/research/DIVIDEND_SOURCE_PROTOCOL.md').read_text():
         raise ValueError('Public protocol markdown does not embed the frozen protocol hash.')
 
 
@@ -702,7 +702,7 @@ def write_report_markdown(metrics, counts, acquisition):
         'does not authorize any later extraction. No 2026 filing, sealed judges record or prior frozen experiment was read or '
         'changed, and no commit is made.', '',
     ]
-    (ROOT / 'DIVIDEND_SOURCE.md').write_text('\n'.join(lines))
+    (ROOT / 'docs/research/DIVIDEND_SOURCE.md').write_text('\n'.join(lines))
 
 
 def stage_verify():

@@ -127,7 +127,7 @@ def report():
         '.venv/bin/python -m unittest discover -v', '```', '',
         'The completed local run reuses immutable cached records and performs no new HTTP requests. Missing credentials or network access on an uncached run fail explicitly. Do not delete records to rescore, lower thresholds, or enable the notebook’s OOS cells to bypass the gate.', '',
         f'Original packages, paginated responses, source candidates and manifests live in ignored `guidance_results/`. The completed audit checks {result["prior_research_files_preserved"]:,} prior research files against their frozen hashes. The local artifacts are needed to reproduce the provenance checks; `GUIDANCE_METRICS.json` preserves the public aggregate counts. Frozen manifests reject edits instead of migrating or replacing cached state.', '']
-    (ROOT/'GUIDANCE_RESULTS.md').write_text('\n'.join(rows))
+    (ROOT/'docs/research/GUIDANCE_RESULTS.md').write_text('\n'.join(rows))
     print(json.dumps(result['decision'],indent=2))
 
 

@@ -61,8 +61,8 @@ DEPARTURE_WORDS = ['effective', 'cease', 'resign', 'retire', 'retirement', 'tran
                    'step down', 'stepping down', 'depart', 'termination', 'as of', 'immediately']
 MAX_HTTP_ATTEMPTS = 60
 PUBLIC_JSON = ROOT / 'EXECUTIVE_DATE_VALIDATION.json'
-PUBLIC_MD = ROOT / 'EXECUTIVE_DATE_VALIDATION.md'
-PROTOCOL_MD = ROOT / 'EXECUTIVE_DATE_VALIDATION_PROTOCOL.md'
+PUBLIC_MD = ROOT / 'docs/research/EXECUTIVE_DATE_VALIDATION.md'
+PROTOCOL_MD = ROOT / 'docs/research/EXECUTIVE_DATE_VALIDATION_PROTOCOL.md'
 DOCS = {
     'index': ('https://docs.typesafe.ai/llms.txt', '2026-10-03'),
     'http_api': ('https://docs.typesafe.ai/api.md', '2026-10-03'),
@@ -552,18 +552,18 @@ def input_manifest():
              [ENROLLMENT, RECORDED_ENROLLMENT, MIRROR_ENROLLMENT, PILOT_SELECTION, PILOT_EXTRACTION, PILOT_COUNTS,
               PILOT / 'protocol.json', PILOT / 'code.json', PILOT / 'source.json', PILOT / 'input_manifest.json',
               PILOT / 'preservation.json', PILOT / 'exposure.json', PILOT / 'extraction_hash.json',
-              PILOT / 'counts_hash.json', PILOT_PUBLIC_JSON, ROOT / 'EXECUTIVE_RUNWAY_PILOT.md',
-              ROOT / 'EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md', ROOT / 'EXECUTIVE_RUNWAY_PILOT_REVIEW.md',
-              ROOT / 'EXECUTIVE_RUNWAY_REVIEW.md'])
+              PILOT / 'counts_hash.json', PILOT_PUBLIC_JSON, ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT.md',
+              ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md', ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT_REVIEW.md',
+              ROOT / 'docs/research/EXECUTIVE_RUNWAY_REVIEW.md'])
     return {str(path.relative_to(ROOT)): checksum(path) for path in paths}
 
 
 def protected_artifacts():
     paths = sorted(PILOT.glob('*')) + [ENROLLMENT, RECORDED_ENROLLMENT, MIRROR_ENROLLMENT,
-                                       PILOT_PUBLIC_JSON, ROOT / 'EXECUTIVE_RUNWAY_PILOT.md',
-                                       ROOT / 'EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md',
-                                       ROOT / 'EXECUTIVE_RUNWAY_PILOT_REVIEW.md',
-                                       ROOT / 'EXECUTIVE_RUNWAY_REVIEW.md']
+                                       PILOT_PUBLIC_JSON, ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT.md',
+                                       ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md',
+                                       ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT_REVIEW.md',
+                                       ROOT / 'docs/research/EXECUTIVE_RUNWAY_REVIEW.md']
     return {'files': {str(path.relative_to(ROOT)): checksum(path) for path in paths if path.is_file()},
             'preservation': preservation()}
 
@@ -910,10 +910,10 @@ def write_public(metrics, output=OUTPUT):
           'confirmation and a date-selection measurement is not a financial result. No price, option, payoff, market, '
           'out-of-sample or 2026 source is read; some in-sample excerpts merely mention future 2026 dates. No existing '
           'frozen script, result, protocol, README or user .agents is edited, and no commit is made.', '',
-          'Files written: `EXECUTIVE_DATE_VALIDATION.md`, `EXECUTIVE_DATE_VALIDATION.json`, '
-          '`EXECUTIVE_DATE_VALIDATION_PROTOCOL.md`, `executive_date_validation.py` and the ignored '
+          'Files written: `docs/research/EXECUTIVE_DATE_VALIDATION.md`, `EXECUTIVE_DATE_VALIDATION.json`, '
+          '`docs/research/EXECUTIVE_DATE_VALIDATION_PROTOCOL.md`, `executive_date_validation.py` and the ignored '
           '`executive_date_validation/` folder. All frozen studies preserved. No commit.', '']
-    (ROOT / 'EXECUTIVE_DATE_VALIDATION.md').write_text('\n'.join(md))
+    (ROOT / 'docs/research/EXECUTIVE_DATE_VALIDATION.md').write_text('\n'.join(md))
 
 
 def stage_verify(output=OUTPUT):
@@ -933,7 +933,7 @@ def stage_verify(output=OUTPUT):
     if recomputed != metrics:
         raise ValueError('Recomputed metrics disagree with the frozen run.')
     public_json = (ROOT / 'EXECUTIVE_DATE_VALIDATION.json').read_text()
-    public_md = (ROOT / 'EXECUTIVE_DATE_VALIDATION.md').read_text()
+    public_md = (ROOT / 'docs/research/EXECUTIVE_DATE_VALIDATION.md').read_text()
     for row in selection:
         if row['accession_number'] in public_md or row['accession_number'] in public_json:
             raise ValueError('Public report leaked an accession id.')

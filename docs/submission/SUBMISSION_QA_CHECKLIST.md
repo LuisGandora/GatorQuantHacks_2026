@@ -22,7 +22,7 @@ or not an action this preparation task can establish.
 | Judge README / setup | PASS | Question, trade, failed primary, exact comparison/count labels, note, install/key/dates and source/data policies; local links checked. |
 | Authoritative facts / metrics | PASS | Exact six headline scalars; all 54 directly recovered rounded gross horizon differences; separate count populations; unknown fields remain null. |
 | Evidence / provenance / report map | PASS | Source hashes and chronology documented; missing authentic tags disclosed. Hypothesis predates recorded outcomes, but exact date windows were amended after OOS. |
-| Consistency audit | PASS | `SUBMISSION_CONSISTENCY_AUDIT.md` checks JSON, recovered sources, notebook loading, report, README and Devpost claims; PDF generated from the same inputs. |
+| Consistency audit | PASS | `docs/submission/SUBMISSION_CONSISTENCY_AUDIT.md` checks JSON, recovered sources, notebook loading, report, README and Devpost claims; PDF generated from the same inputs. |
 | Devpost copy | PASS | `docs/DEVPOST_SUBMISSION.md`; sponsor claims bound to implementation; demo link explicitly a placeholder. |
 | Devpost form submitted | N/A | No form submission or actual demo URL established. Human submission deadline: October 4, 2026, 10:00 AM ET; code deadline 11:00 AM ET per user. |
 

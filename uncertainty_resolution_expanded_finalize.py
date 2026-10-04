@@ -65,8 +65,8 @@ SUBSET_PATH = validation.SUBSET_PATH
 VERDICTS_PATH = validation.VERDICTS_PATH
 PACKET_PATH = validation.PACKET_PATH
 
-PUBLIC_AUDIT = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md'
-PUBLIC_RESULTS = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md'
+PUBLIC_AUDIT = ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md'
+PUBLIC_RESULTS = ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md'
 PUBLIC_SUMMARY = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json'
 README_PATH = ROOT / 'README.md'
 
@@ -1312,11 +1312,11 @@ def render_readme_section(context):
         'Experiment 9B applies the frozen Experiment 9 uncertainty-resolution ontology to a '
         'broader but economically coherent executive leadership-transition 8-K population. '
         'The frozen protocol is '
-        '[UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md](UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md), '
+        '[docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md](docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md), '
         'the evidence audit is '
-        '[UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md](UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md), '
+        '[docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md](docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md), '
         'the terminal write-up is '
-        '[UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md](UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md), '
+        '[docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md](docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md), '
         'and the machine-readable summary is '
         '[UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json](UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json). '
         f'Enrollment: {composition["enrolled"]["events"]} accessions across '
@@ -1373,9 +1373,9 @@ def write_private(context, output=OUTPUT):
 
 def write_public(context, public_dir=ROOT, update_readme=True):
     public_dir = Path(public_dir)
-    (public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md').write_text(
+    (public_dir / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md').write_text(
         render_evidence_audit(context))
-    (public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').write_text(
+    (public_dir / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md').write_text(
         render_results(context))
     _write_json(public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json',
                 build_summary(context))
@@ -1385,8 +1385,8 @@ def write_public(context, public_dir=ROOT, update_readme=True):
             readme.write_text(apply_readme_section(readme.read_text(),
                                                    render_readme_section(context)))
     return {'evidence_audit': str(
-                public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md'),
-            'results': str(public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md'),
+                public_dir / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md'),
+            'results': str(public_dir / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md'),
             'summary': str(public_dir / 'UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json')}
 
 

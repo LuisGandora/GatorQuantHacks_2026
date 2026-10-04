@@ -25,7 +25,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 import pypdf
 
 ROOT = Path(__file__).resolve().parents[1]
-M = json.loads((ROOT / 'submission_final_metrics.json').read_text())
+M = json.loads((ROOT / 'submission/submission_final_metrics.json').read_text())
 R = M['fixed_horizon_detail']
 OUT = ROOT / 'submission'
 OUT.mkdir(exist_ok=True)

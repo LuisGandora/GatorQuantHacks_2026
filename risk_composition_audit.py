@@ -354,8 +354,8 @@ def report():
         f"API evidence: {metrics['requests']} requests, {metrics['questions']} questions, {metrics['wall_s']:.3f} aggregate request seconds, {metrics['transport_retries']} transport retries. Reported tokens: {input_tokens:,} input and {output_tokens:,} output; {usage_missing} requests missing complete usage. Invoice and total project costs are not measured.", '',
         'All five permitted payoff structures remain untested. No strategy, trade rule or OOS hypothesis is frozen. Historical edge, economic uncertainty intervals, cost-adjusted payoffs, horizons and sensitivity remain unavailable. Both 2026 and the judges window remain unopened.', '',
         '## Reproduction and recovery', '',
-        'See [RISK_COMPOSITION_PROTOCOL.md](RISK_COMPOSITION_PROTOCOL.md) for the immutable stage sequence and exact specification. Local private evidence is under `risk_composition_results/`; aggregate metrics are published in `RISK_COMPOSITION_METRICS.json`. `report` replays raw judgments without HTTP when records are complete. Integrity failures stop the workflow; do not delete or resample successful records. A transport failure needs explicit diagnosis, and a methodological revision needs a separate protocol and result namespace.', '']
-    (ROOT/'RISK_COMPOSITION_RESULTS.md').write_text('\n'.join(lines))
+        'See [docs/research/RISK_COMPOSITION_PROTOCOL.md](docs/research/RISK_COMPOSITION_PROTOCOL.md) for the immutable stage sequence and exact specification. Local private evidence is under `risk_composition_results/`; aggregate metrics are published in `RISK_COMPOSITION_METRICS.json`. `report` replays raw judgments without HTTP when records are complete. Integrity failures stop the workflow; do not delete or resample successful records. A transport failure needs explicit diagnosis, and a methodological revision needs a separate protocol and result namespace.', '']
+    (ROOT/'docs/research/RISK_COMPOSITION_RESULTS.md').write_text('\n'.join(lines))
     print(json.dumps(metrics,indent=2),flush=True)
 
 

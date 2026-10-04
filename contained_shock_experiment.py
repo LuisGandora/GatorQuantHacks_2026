@@ -24,8 +24,8 @@ import contained_shock_sources as sources
 import contained_shock_semantics as semantics
 
 OUTPUT = sources.OUTPUT
-PROTOCOL_MD = ROOT / 'CONTAINED_SHOCK_PROTOCOL.md'
-AUDIT_MD = ROOT / 'CONTAINED_SHOCK_EVIDENCE_AUDIT.md'
+PROTOCOL_MD = ROOT / 'docs/research/CONTAINED_SHOCK_PROTOCOL.md'
+AUDIT_MD = ROOT / 'docs/research/CONTAINED_SHOCK_EVIDENCE_AUDIT.md'
 SUMMARY_JSON = ROOT / 'CONTAINED_SHOCK_SUMMARY.json'
 
 
@@ -215,7 +215,7 @@ def stage_freeze():
             'earnings_payoff_results/controls.json, read only to count parent-accession membership; '
             'no market field was read',
             'the reused frozen helper modules for their API functions only',
-            'EARNINGS_PAYOFF_PROTOCOL.md and EARNINGS_PAYOFF_RESULTS.md for the frozen trade rule, '
+            'docs/research/EARNINGS_PAYOFF_PROTOCOL.md and docs/research/EARNINGS_PAYOFF_RESULTS.md for the frozen trade rule, '
             'costs and control design (no number was copied into a computed field)',
         ],
         'selected_text_read_before_freeze': True,

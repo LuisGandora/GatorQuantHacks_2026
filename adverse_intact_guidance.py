@@ -666,7 +666,7 @@ def write_public(rows, timing, gate, stage1):
     }
     (ROOT / 'ADVERSE_INTACT_SUMMARY.json').write_text(
         json.dumps(summary, indent=2, allow_nan=False) + '\n')
-    (ROOT / 'ADVERSE_INTACT_EVIDENCE_AUDIT.md').write_text(_audit(summary, rows, timing))
+    (ROOT / 'docs/research/ADVERSE_INTACT_EVIDENCE_AUDIT.md').write_text(_audit(summary, rows, timing))
     return summary
 
 

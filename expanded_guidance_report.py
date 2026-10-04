@@ -168,7 +168,7 @@ def report():
         '**Decision: `semantic_infeasible`. Source coverage improved; the economic hypothesis was not tested.**','',
         'Experiment 4B added quarterly earnings, annual earnings and preliminary-results sources to the original guidance tags. The 2024–2025 window, original 100-company universe, full-year guidance metric hierarchy, 2% midpoint tolerance, feasibility floors and economic hypothesis were unchanged. This expansion followed the parent source failure and is exploratory. The parent audit remains intact.','',
         '## Frozen chronology','',
-        'Source protocol commit: `f6360b8`, before acquisition. Measurement commit: `baa0488`, before the first model request. Acquisition and measurement completed October 3, 2026. Exact specifications are in `EXPANDED_GUIDANCE_PROTOCOL.md` and `EXPANDED_GUIDANCE_MEASUREMENT.md`.','',
+        'Source protocol commit: `f6360b8`, before acquisition. Measurement commit: `baa0488`, before the first model request. Acquisition and measurement completed October 3, 2026. Exact specifications are in `docs/research/EXPANDED_GUIDANCE_PROTOCOL.md` and `docs/research/EXPANDED_GUIDANCE_MEASUREMENT.md`.','',
         f'Protocol SHA256: `{result["protocol_sha256"]}`. Measurement SHA256: `{result["measurement_sha256"]}`.','',
         '## Coverage and attrition','',
         '| Stage | Parent | Expanded |','|---|---:|---:|',
@@ -211,7 +211,7 @@ def report():
         '.venv/bin/python expanded_guidance_report.py',
         '.venv/bin/python -m unittest discover -v','```','',
         f'The completed run verifies and reuses immutable local records without new HTTP calls. The audit protects {result["prior_research_files_preserved"]:,} prior research files against their original hashes. Original packages, requests, responses and manifests are in ignored `expanded_guidance_results/`; public aggregate evidence is `EXPANDED_GUIDANCE_METRICS.json`. A fresh uncached acquisition needs the configured Massive and TypeSafe keys. Changed frozen records fail explicitly; do not delete successful responses to rescore.','']
-    (ROOT/'EXPANDED_GUIDANCE_RESULTS.md').write_text('\n'.join(lines))
+    (ROOT/'docs/research/EXPANDED_GUIDANCE_RESULTS.md').write_text('\n'.join(lines))
     print(json.dumps(result['decision'],indent=2))
 
 

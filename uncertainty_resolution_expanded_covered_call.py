@@ -38,8 +38,8 @@ from departure_experiment import freeze
 FROZEN = sources.OUTPUT
 ECONOMIC9 = FROZEN / 'economic'
 EXP10 = FROZEN / 'experiment10'
-PROTOCOL = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md'
-PUBLIC_RESULTS = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_RESULTS.md'
+PROTOCOL = ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md'
+PUBLIC_RESULTS = ROOT / 'docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_RESULTS.md'
 PUBLIC_SUMMARY = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_SUMMARY.json'
 PUBLIC_FREEZE = ROOT / 'UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_FREEZE.json'
 
@@ -552,7 +552,7 @@ def write_public_results(decision, reasons, metrics):
         '`no_candidate_economic_failure` (reason `market_data_coverage`); this experiment '
         'tests whether the semantic signal was paired with the wrong side of the option '
         'payoff. The hypothesis and all primary parameters were frozen before any '
-        'covered-call outcome was read (`UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md`).', '',
+        'covered-call outcome was read (`docs/research/UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md`).', '',
         'Primary cell: `covered_call`, bucket `3-6m`, short call OTM 0.05, entry delay 0, '
         'stale 0, premium haircut 0.05 per side, horizon +21. Costs, liquidity and '
         'inference are the frozen Experiment 9B framework.', '',

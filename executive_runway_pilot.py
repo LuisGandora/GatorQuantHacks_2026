@@ -46,8 +46,8 @@ MIRROR_ENROLLMENT = ROOT / 'fingerprint_results/enrollment.json'
 RECORDED_SOURCE = 'departure_results/events.csv'
 NOTEBOOK = ROOT / 'gator-quant-hacks-8k-options-challenge.ipynb'
 PUBLIC_JSON = ROOT / 'EXECUTIVE_RUNWAY_PILOT.json'
-PUBLIC_MD = ROOT / 'EXECUTIVE_RUNWAY_PILOT.md'
-PROTOCOL_MD = ROOT / 'EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md'
+PUBLIC_MD = ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT.md'
+PROTOCOL_MD = ROOT / 'docs/research/EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md'
 NEARBY_TOKENS = ['effective', 'cease', 'resign', 'retire', 'retirement', 'transition', 'step down',
                  'stepping down', 'depart', 'termination', 'successor', 'appointment', 'as of', 'immediately']
 ADVISORY = {'rows_threshold': 10, 'issuers_threshold': 5}
@@ -468,9 +468,9 @@ def write_public(counts, selection, public=ROOT):
           'selected manifest were written before any selected text was read and are immutable; a later coding defect is reported '
           'and the run stops rather than deleting or re-freezing. The same cohort is already exposed by prior in-sample studies. '
           'The pilot is offline and issues no 2026 or reserved-window read.', '',
-          'Files written: `EXECUTIVE_RUNWAY_PILOT.md`, `EXECUTIVE_RUNWAY_PILOT.json`, `EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md`, '
+          'Files written: `docs/research/EXECUTIVE_RUNWAY_PILOT.md`, `EXECUTIVE_RUNWAY_PILOT.json`, `docs/research/EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md`, '
           '`executive_runway_pilot.py` and the ignored `executive_runway_pilot/` folder. All frozen studies preserved. No commit.', '']
-    (public / 'EXECUTIVE_RUNWAY_PILOT.md').write_text('\n'.join(md))
+    (public / 'docs/research/EXECUTIVE_RUNWAY_PILOT.md').write_text('\n'.join(md))
 
 
 def stage_verify(output=OUTPUT):

@@ -499,7 +499,7 @@ def protected_manifest():
     return {
         'historical_credit_coverage_protocol_sha256': claim,
         'historical_credit_coverage_protocol_recomputed': digest(historical_protocol),
-        'historical_credit_coverage_protocol_md_sha256': checksum(ROOT / 'HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md'),
+        'historical_credit_coverage_protocol_md_sha256': checksum(ROOT / 'docs/research/HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md'),
         'enrollment_digest': digest(enrollment),
         'enrollment_bytes_sha256': checksum(ENROLLMENT),
         'earnings_payoff_freeze_json_sha256': checksum(ROOT / 'EARNINGS_PAYOFF_FREEZE.json'),
@@ -587,7 +587,7 @@ def stage_freeze():
         '## Exact specification', '', f'Protocol SHA256: `{digest(PROTOCOL)}`.', '',
         '```json', json.dumps(PROTOCOL, indent=2), '```', '',
         '## Frozen selection', '', '```json', json.dumps(picks, indent=2), '```', '']
-    (ROOT / 'CREDIT_TERMS_PILOT_PROTOCOL.md').write_text('\n'.join(doc))
+    (ROOT / 'docs/research/CREDIT_TERMS_PILOT_PROTOCOL.md').write_text('\n'.join(doc))
     print('Frozen credit-terms protocol', digest(PROTOCOL), 'picks', len(picks), flush=True)
 
 
@@ -926,12 +926,12 @@ def stage_report():
             'human_validation': False,
             'additional_runtime_inference_during_pipeline': False,
             'runtime_model_or_jev_calls': 0,
-            'protocol_no_model_call_clause_qualification': 'The frozen protocol research_kind string says "no model call". That clause is disclosed as a limitation/ambiguity, not satisfied on every interpretation: it holds only as no additional runtime inference or model call during pipeline execution; it is NOT a claim that no model authored the annotations or this report, which were model-authored as the user required, with no human validation. See CREDIT_TERMS_PILOT.md "Provenance and annotation scope".',
+            'protocol_no_model_call_clause_qualification': 'The frozen protocol research_kind string says "no model call". That clause is disclosed as a limitation/ambiguity, not satisfied on every interpretation: it holds only as no additional runtime inference or model call during pipeline execution; it is NOT a claim that no model authored the annotations or this report, which were model-authored as the user required, with no human validation. See docs/research/CREDIT_TERMS_PILOT.md "Provenance and annotation scope".',
             'annotation_scope': 'sequence-1 original 8-K body only (exact-quote bound facts); an audited subset, not an exhaustive whole-package annotation',
             'exhibit_paired_term_search': 'the independent audit extended the paired-term search to every text-bearing exhibit and found no additional explicit same-facility old/new pair beyond PM',
             'exhaustive_package_annotation': False,
-            'independent_audit_files': ['CREDIT_TERMS_PILOT_REVIEW.md', 'CREDIT_TERMS_PILOT_REVIEW.json'],
-            'corrections_record': 'CREDIT_TERMS_PILOT_CORRECTIONS.md',
+            'independent_audit_files': ['docs/research/CREDIT_TERMS_PILOT_REVIEW.md', 'CREDIT_TERMS_PILOT_REVIEW.json'],
+            'corrections_record': 'docs/research/CREDIT_TERMS_PILOT_CORRECTIONS.md',
             'pre_correction_archive': 'credit_terms_pilot/audit_history/MANIFEST.json',
         },
         'is_measurement_feasibility_pilot': True, 'is_population_prevalence_estimate': False,
@@ -997,7 +997,7 @@ def stage_report():
         '## Corrections applied to the audited snapshot', '',
         '- **DEV-1 (closed):** the two AMD raw dollar figures (`$641,666,666.67`, ZT Credit Agreement; `$850,000,000`, master receivables purchase agreement) carry no thousands/millions/billions scaling word, so under the frozen `amounts` clause their numeric capacity is **null**; each raw figure is retained only in an off-protocol provenance note and is never scaled or counted. A fail-fast validator now rejects any numeric amount that lacks an explicit scaling word.',
         '- **DEV-2 (closed):** the CAT 2024 filing adds the two distinct local-currency addendum sub-limits (`Local Currency Addendum`, `Japan Local Currency Addendum`) at their exact quote offsets, parallel to the CAT 2022 rows; each is a $100 million USD-equivalent sub-limit inside the 364-Day Aggregate Commitment and is never summed into the $3.15 billion parent. The CAT 2022 rows now carry the same borrowing-currency clarification.',
-        '- The original audited derived snapshot and code/report hashes are archived under the ignored `credit_terms_pilot/audit_history/` with a manifest; the archive is a static record, not a compatibility execution path. The corrected snapshot replaced by this cleanup is archived separately under `credit_terms_pilot/audit_history/final_review/` with its own manifest, also a static read-only record and not a compatibility path. Full details are in `CREDIT_TERMS_PILOT_CORRECTIONS.md`.', '',
+        '- The original audited derived snapshot and code/report hashes are archived under the ignored `credit_terms_pilot/audit_history/` with a manifest; the archive is a static record, not a compatibility execution path. The corrected snapshot replaced by this cleanup is archived separately under `credit_terms_pilot/audit_history/final_review/` with its own manifest, also a static read-only record and not a compatibility path. Full details are in `docs/research/CREDIT_TERMS_PILOT_CORRECTIONS.md`.', '',
         '## Mechanism: maturity runway versus capacity', '',
         'The two credit terms carry different economics. A **capacity** change alters the size of an undrawn commitment: a larger revolver is more headroom, but an unused commitment is not cash and does not remove operating, demand or litigation risk, so its link to equity downside is weak for mega-cap issuers. '
         'A **maturity** change alters the refinancing calendar: pushing a term out reduces the near-term rollover pressure and the chance that a firm must refinance into a stressed market, which is a liquidity-runway channel that can matter to equity downside even when the commitment is undrawn. '
@@ -1017,7 +1017,7 @@ def stage_report():
         'Original SEC packages only, at most 2 requests/second, with a hash-and-header cache. The historical coverage protocol hash and all six EARNINGS_PAYOFF_FREEZE.json hashes were recomputed and preserved; prior frozen experiments were not modified and nothing was committed. '
         'The older unrelated novelty cache that exposed 74 reserved 2023 dates was not read; the financial replication is unrun and the actual judges window is unknown. '
         'Private packages, parsed text and cache live in the ignored `credit_terms_pilot/` directory; exact character offsets are in the ignored `source_evidence.json` and are re-verified by the `verify` stage.', '']
-    (ROOT / 'CREDIT_TERMS_PILOT.md').write_text('\n'.join(lines))
+    (ROOT / 'docs/research/CREDIT_TERMS_PILOT.md').write_text('\n'.join(lines))
     print(json.dumps(metrics['statistics'], indent=2, default=str), flush=True)
 
 

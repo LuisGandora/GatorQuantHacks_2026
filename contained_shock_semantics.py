@@ -760,4 +760,4 @@ def write_public(rows, timing, gate, events):
             audit.append(f'  - "{fragment}"')
     audit += ['', 'No API key, no full filing text, and no price, option, payoff or ordinary-day '
               'market value appears in this public artifact.', '']
-    (ROOT / 'CONTAINED_SHOCK_EVIDENCE_AUDIT.md').write_text('\n'.join(audit))
+    (ROOT / 'docs/research/CONTAINED_SHOCK_EVIDENCE_AUDIT.md').write_text('\n'.join(audit))

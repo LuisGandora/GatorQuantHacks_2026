@@ -332,7 +332,7 @@ def stage_freeze():
     prior = {
         'dir_absent': not OUTPUT.exists(),
         'report_json_absent': not (ROOT / 'HISTORICAL_CREDIT_COVERAGE.json').exists(),
-        'report_md_absent': not (ROOT / 'HISTORICAL_CREDIT_COVERAGE.md').exists(),
+        'report_md_absent': not (ROOT / 'docs/research/HISTORICAL_CREDIT_COVERAGE.md').exists(),
     }
     OUTPUT.mkdir(exist_ok=True)
     ns = starter('source-audit-no-market-key')
@@ -350,7 +350,7 @@ def stage_freeze():
     freeze(OUTPUT / 'universe.json', universe)
     freeze(OUTPUT / 'taxonomy.json', tag)
     freeze(OUTPUT / 'preservation.json', protected_manifest())
-    (ROOT / 'HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md').write_text(build_protocol_markdown() + '\n')
+    (ROOT / 'docs/research/HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md').write_text(build_protocol_markdown() + '\n')
     print('Recorded historical credit-coverage protocol', digest(PROTOCOL), 'universe', len(universe),
           'tag', tag['tertiary_category'], flush=True)
 
@@ -852,7 +852,7 @@ def stage_report():
     freeze(OUTPUT / 'metrics.json', metrics)
     (ROOT / 'HISTORICAL_CREDIT_COVERAGE.json').write_text(
         json.dumps(metrics, indent=2, allow_nan=False) + '\n')
-    (ROOT / 'HISTORICAL_CREDIT_COVERAGE.md').write_text(build_markdown(metrics) + '\n')
+    (ROOT / 'docs/research/HISTORICAL_CREDIT_COVERAGE.md').write_text(build_markdown(metrics) + '\n')
     print(json.dumps({'decision': metrics['decision'], 'gate': metrics['source_gate'],
                       'enrollment': metrics['enrollment']}, indent=2), flush=True)
     verify()
