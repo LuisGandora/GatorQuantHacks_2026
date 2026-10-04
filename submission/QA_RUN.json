@@ -1,0 +1,40 @@
+{
+  "source_public_commit": "27e9bb459eb1ed81032c6dcbe0c80684e0b1f616",
+  "repository": "https://github.com/jack-uf/GatorQuantHacks_2026_Submission",
+  "is_public": true,
+  "default_branch": "main",
+  "python": "3.14.7",
+  "setup": "bash setup.sh in fresh GitHub clone; temporary Jupyter user data directory",
+  "tests_passed": 20,
+  "source_and_evidence_hashes": "PASS",
+  "offline_notebook_run_all": "PASS; registered gator-quant-hacks kernel; requests/urllib HTTP blocked; outputs private",
+  "publication_files": 71,
+  "initial_history_commits": 1,
+  "initial_history_unique_blobs": 63,
+  "initial_history_findings": 0,
+  "live_smoke": "NOT_RUN_NO_KEY; zero API requests; source/date checks passed",
+  "sealed_window": "unknown; untouched",
+  "economic_research_reruns": 0,
+  "import_scope": "Standalone submission/harness/JEV/VRP/report modules plus original notebook-context definitions; pair_test.py is a notebook helper, not a standalone module",
+  "remaining_limits": [
+    "No live entitlement/economic replication verified",
+    "Numeric F1 CI endpoints and all-horizon net contrasts unavailable",
+    "Horizon/issuer/common-matched/control-valid counts unavailable",
+    "Protocol windows amended after OOS; independent custody not established",
+    "Static universe and unclustered row bootstrap unchanged"
+  ],
+  "followup_publication": "F1 table, QA and remote documentary/aggregate supplement only. Economic source functions unchanged; no raw OOS or sealed observations opened. Final published tip recorded in handoff.",
+  "consistency_checks_passed_at_initial_clone": 183,
+  "final_consistency_checks_passed": 281,
+  "verification_date": "2026-10-04",
+  "remote_history_followup": {
+    "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+    "documents": 69,
+    "aggregate_jsons": 5,
+    "source_and_publication_hashes_checked": true,
+    "notebook_run_all": "PASS, HTTP blocked after adding remote paired aggregate display",
+    "report": "Official 5-page blueprint body (Sections 01–08) + 1 uncounted appendix/references page (6 pages total); all pages reviewed",
+    "economic_research_reruns": 0,
+    "numbered_11_13": "Unpriced per user; numbered artifacts unavailable at fetched tip"
+  }
+}

@@ -18,18 +18,26 @@ if (-not $py) {
 $pyExe = $py[0]; $pyArgs = @($py | Select-Object -Skip 1)
 Write-Host "Using $(& $pyExe @pyArgs --version)"
 
+function Assert-NativeSuccess($step) {
+    if ($LASTEXITCODE -ne 0) { throw "$step failed (exit $LASTEXITCODE). Resolve the error above before continuing." }
+}
+
 if (-not (Test-Path .venv)) {
     Write-Host "Creating .venv ..."
     & $pyExe @pyArgs -m venv .venv
+    Assert-NativeSuccess "Virtual environment creation"
 }
 $vpy = ".venv\Scripts\python.exe"
 
 Write-Host "Installing packages ..."
 & $vpy -m pip install --upgrade pip --quiet
+Assert-NativeSuccess "pip upgrade"
 & $vpy -m pip install -r requirements.txt --quiet
+Assert-NativeSuccess "Dependency installation"
 
 Write-Host "Registering the Jupyter kernel ..."
 & $vpy -m ipykernel install --user --name gator-quant-hacks --display-name "Python (Gator Quant Hacks .venv)" | Out-Null
+Assert-NativeSuccess "Kernel registration"
 
 if (-not (Test-Path .env)) {
     Copy-Item .env.example .env

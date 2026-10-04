@@ -1,89 +1,125 @@
-# Fresh Leadership 8-Ks Are Under-Priced, Not Over-Priced
+# Do fresh leadership 8-Ks reward put sellers?
 
-Gator Quant Hacks 2026 · Systematic Trading track · Massive "Trade the 8-K" bonus.
+Gator Quant Hacks 2026 · Massive **Trade the 8-K**.
 
-**Finding.** We pre-registered that fresh leadership-change 8-Ks (the filing is the first disclosure) over-price the move,
-so a cash-secured put sold after them beats ordinary days. It is rejected in the opposite direction: the put-seller did
-worse than on ordinary days in-sample (−1.19%, n=55) and out-of-sample (−0.70%, n=25), negative in all 18 parameter
-neighbours in both windows. Capacity is small (about $0.5M), so this is a research finding, not a scalable strategy.
+We tested whether freshly disclosed leadership changes cause investors to overpay for
+downside protection. The fixed trade sells a **5% OTM cash-secured put**, after the
+filing-adjusted session closes, with **90–180-day expiry targeting 120 days**. The five
+Massive categories are CEO appointment/departure, CFO appointment/departure, and
+executive-officer appointment. Freshness uses SEC EDGAR period-of-report metadata;
+it does not establish the first public disclosure.
 
-## Read in this order
+**The proposed payoff is unsupported.** The primary fresh-minus-stale gross difference
+is **−1.03% in-sample**, with no headline-horizon interval excluding zero. The separate
+fresh-minus-ordinary comparison is **−1.19% in 2024–2025 (maximum valid headline N=55)**
+and **−0.70% in the already-reported January–August 2026 OOS window (N=25)**. These
+average the differences at 21 sessions, 42 sessions and expiry; they are neither
+absolute returns nor annual returns. All 18 neighboring specifications per window
+were negative. OOS ordinary-day comparisons were not significant. No profitable
+opposite-side trade was established, and judges’ sealed data remains untouched.
 
-1. [`runs/FINDINGS.md`](runs/FINDINGS.md): the quant note (the PDF submitted on Devpost is this file).
-2. [`runs/PREREG.md`](runs/PREREG.md): the hypothesis as written before any P&L, plus dated addenda and the sealed-window predictions.
-3. [`runs/EXTRAS.md`](runs/EXTRAS.md) and [`runs/APPENDIX.md`](runs/APPENDIX.md): robustness tables, lag buckets, audit, earlier tests.
-4. [`runs/ledger.jsonl`](runs/ledger.jsonl): every test ever run, append-only. [`runs/REPRO.md`](runs/REPRO.md): how to reproduce each number.
+Read the **[five-page quant note](submission/QUANT_NOTE.pdf)**, then open
+**[GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb)**. The
+[QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
+[authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.
 
-## Reproduce
+## Judge's Guide to the Rubrics
 
-Set up as below (`setup.ps1` / `setup.sh`, Massive key in `.env`), then **run the notebook top to bottom**. Section 12 is
-the submission (fresh vs stale, both windows, and the exploratory move-ratio diagnostic); the sealed-window cell runs the
-same rule when `RUN_HOLDOUT = True`. The robustness tables come from `python report_extras.py`; the portfolio from
-`python harness.py portfolio F1-leadership-fresh`. Responses are cached in `.massive_cache/`; the first run takes a while.
+| Rubric Criterion (Track 03 & Massive) | Primary Artifact | Key Evidence / Verification |
+|---|---|---|
+| **01. Economic Foundation & Hypothesis** | `QUANT_NOTE.pdf` §01–§02 | Delta vs. Vega decomposition; why post-filing downward equity drift (-1.32% IS) destroys short-put Vega capture; `runs/PREREG.md`. |
+| **02. Innovation & Research Funnel** | `QUANT_NOTE.pdf` Table 0 & A1 | 13-stage structured research progression; multi-category 18-tag Variance Risk Premium map under Benjamini-Hochberg FDR control (q=0.10). |
+| **03. Risk Management Plan** | `QUANT_NOTE.pdf` §06 & Figure 1 | Unlevered 10% sizing; 2x cost stress test; negative skewness (-2.26 IS, -1.89 OOS); -16.5% max drop; defined-risk **Vertical Put Spread** & TIMS mitigation. |
+| **04. Liquidity & Capital** | `QUANT_NOTE.pdf` §07 | Empirical 10-day pre-entry option ADV audit (18-29 contracts); 1% & 10% volume participation ceilings ($500k IS / $390k OOS book capacity); 15-25% bid-ask spread reality. |
+| **05. Performance & Analytical Evidence** | `QUANT_NOTE.pdf` §05, Table 1 & 2 | All 54 recovered fixed horizons; 36-cell sensitivity grid; 120-draw placebo baseline; zero lookahead (EDGAR <ACCEPTANCE-DATETIME> session shift); 281/281 consistency checks. |
+| **06. Sealed-Window Replication** | `GQH_MASSIVE_FINAL.ipynb` §6, §10 | Hermetically isolated holdout replication behind `RUN_CUSTOM_JUDGE` toggle; pre-registered directional prediction (`Edge < 0`); zero OOS tuning. |
 
-| File | Role |
+The [remote experiment history](submission/evidence/remote_experiments/README.md) includes the completed priced earnings benchmark, 9B cash-secured-put test and Experiment 10 covered-call test, with actual event/control net returns, costs and sensitivity. These supporting in-sample studies failed their original gates; they do not replace F1. Experiments 11–13 remain unpriced supporting work, with numbered artifacts unavailable at the fetched remote tip.
+
+## Install and run
+
+Use **Python 3.10+**, from the repository root. One submission installation path:
+
+```bash
+git clone https://github.com/jack-uf/GatorQuantHacks_2026_Submission.git
+cd GatorQuantHacks_2026_Submission
+bash setup.sh
+source .venv/bin/activate
+jupyter lab GQH_MASSIVE_FINAL.ipynb
+```
+
+Windows: run `powershell -ExecutionPolicy Bypass -File setup.ps1`, then
+`.venv\Scripts\Activate.ps1` and the same Jupyter command. Select
+**Python (Gator Quant Hacks .venv)**. Setup installs `requirements.txt` and creates a
+private `.env` from `.env.example`. Replace `your-key-here` with your Massive API key,
+or set `MASSIVE_API_KEY` in the environment. Never place a key in a notebook cell.
+For the optional live path, also set `SEC_USER_AGENT` in `.env` or the environment
+to your project name and real contact email; SEC metadata requests require it.
+Default **Run All** displays the committed evidence with no key or API requests.
+
+For authorized judge execution, set the top configuration cell’s `START_DATE` and
+`END_DATE` to inclusive ISO dates, and set `RUN_CUSTOM_JUDGE = True`. Only dates may
+change; the economic specification is checked. Explicitly set
+`AUTHORIZE_RESTRICTED_DATES = True` if the event or forward-pricing envelope intersects
+the protected 2026 range or the starter’s holdout placeholder. The placeholder is
+not a verified judges’ window. Selection and ordinary-day sampling use your date
+bounds; lookback and forward option prices extend beyond them. Unsupported windows
+fail explicitly because the unchanged calendar spans June 2021–December 2027.
+
+Live execution requires disclosure, options-reference and historical-options access.
+It reports gross and net comparisons at **1, 2, 3, 5, 10, 21, 42, 63 sessions and expiry**,
+using the original bootstrap and unchanged costs. Missing prices remain missing.
+**Live endpoint entitlements and economic reproduction were not verified: no API key
+was configured during QA.** Ordered offline execution and synthetic date propagation
+passed; they are not a market-data reproduction. See
+[reproducibility instructions](docs/REPRODUCIBILITY.md).
+
+## Evidence, provenance and layout
+
+All 54 rounded historical gross horizon differences were recovered directly from
+original aggregate notebook outputs. Numeric F1 CI endpoints, horizon-specific N,
+issuer/common-matched/control-valid N, absolute event/control means, and historical
+net contrasts remain unavailable. No estimates fill those gaps. Discovery, headline,
+capacity and calendar-year counts have different eligibility rules and are labeled.
+
+The hypothesis precedes the first recorded outcomes, but protocol date windows were
+amended after OOS. Authentic historical freeze tags and independent unlock custody
+are not established. The shipped SHA-256 manifest verifies original source bytes;
+it is **not** proof of preregistration. See [research provenance](docs/RESEARCH_PROVENANCE.md).
+
+| Location | Purpose |
 |---|---|
-| `gator-quant-hacks-8k-options-challenge.ipynb` | Massive's starter pipeline plus section 12 (our rule) |
-| `harness.py` | Events, freshness rule, tests, portfolio; frozen at git tag `freeze-v2` |
-| `pair_test.py` | The starter kit's category-strategy test, reused by the harness |
-| `report_extras.py` | Skew, months, years, costs in bps, capacity, sensitivity |
-| `vrp.py`, `runs/PREREG_VRP.md` | The next experiment: a pre-registered variance-premium map across all 8-K categories |
-| `jev.py`, `pairings.json` | The earlier JEV-based pairings (null results, appendix A3) |
+| `GQH_MASSIVE_FINAL.ipynb`, `submission_pipeline.py` | Canonical judge notebook and explicit execution plumbing. |
+| `submission/` | Final note/source, recovered aggregates, source hashes and bundled historical evidence. |
+| `submission_final_metrics.json`, `submission_authoritative_facts.json` | Consistent reported measurements, qualifications and unavailable fields. |
+| `docs/` | Reproduction, provenance, fair assessment, publication policy and Devpost copy. |
+| `runs/*.md`, `runs/vrp/*.md` | Author-written historical methodology, results and audits. |
+| Original notebook, `harness.py`, `pair_test.py`, `pairings.json`, `jev.py` | Preserved economic and semantic implementation; no research rerun on import. |
+| `scripts/`, `tests/` | Publication/consistency checks, PDF authoring and offline QA. |
 
----
+Detailed chronology belongs in the [evidence packet](SUBMISSION_EVIDENCE_PACKET.md),
+[protocol](runs/PREREG.md), [audits](runs/audit_notes.md) and
+[report map](SUBMISSION_NOTEBOOK_REPORT_MAP.md). The separate 18-category variance-premium
+screen selected zero categories at BH q=.10; it is context, not a replacement strategy.
+[Devpost copy](docs/DEVPOST_SUBMISSION.md) is prepared; this repository does not imply
+that the Devpost form has been submitted.
 
-# Starter kit setup (from the challenge)
+## Data and publication policy
 
-Starter notebook for the Massive challenge. You need **Python 3.10+** ([python.org](https://www.python.org/downloads/))
-and a **Massive API key** (from the Discord channel).
+This submission contains source, author-written documentation, human labels/scalar
+scores and aggregate results. Massive provides categorized disclosures, as-of option
+references and daily option bars; spot is inferred by put-call parity. Public SEC
+metadata supplies filing timing. Provider access does not grant redistribution rights.
 
-## Setup (about 2 minutes)
+Keys, `.env`, `.massive_cache`, SEC/source dumps, raw licensed responses, event-level
+exports, internal prompts and saved notebook outputs are excluded. Executed local
+notebooks must not be committed. The public submission has a new, reviewed history;
+the original research history was preserved separately and was not rewritten.
+[Public export derivation](docs/PUBLIC_SUBMISSION_DERIVATION.md) explains the boundary.
 
-**macOS / Linux** — in a terminal, from this folder:
-
-```bash
-./setup.sh
-```
-
-**Windows** — in PowerShell, from this folder:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File setup.ps1
-```
-
-The script creates a `.venv`, installs `requirements.txt`, registers the Jupyter kernel
-**Python (Gator Quant Hacks .venv)**, and creates `.env` from `.env.example`. It is safe to re-run.
-
-Then:
-
-1. Open `.env` and replace `your-key-here` with your key (no spaces or quotes).
-2. Start Jupyter: `source .venv/bin/activate && jupyter lab` (Windows: `.venv\Scripts\activate; jupyter lab`),
-   or open the notebook in VS Code.
-3. Pick the kernel **Python (Gator Quant Hacks .venv)** and run all cells. Section 1 prints
-   `API key loaded (ends xxxx)` when it finds your key. The first full run takes about 10 minutes;
-   API responses are cached in `.massive_cache/`, so later runs take seconds.
-
-## Manual setup
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-python -m pip install -r requirements.txt
-python -m ipykernel install --user --name gator-quant-hacks --display-name "Python (Gator Quant Hacks .venv)"
-cp .env.example .env               # then add your key
-```
-
-Already have a Jupyter environment (Colab, an existing kernel)? Skip all of this and run the
-optional `%pip install -r requirements.txt` cell at the top of the notebook, then restart the kernel.
-
-## Troubleshooting
-
-- **"Kernel not found" when opening the notebook** — run the setup script, or just pick any Python 3.10+ kernel.
-- **`ModuleNotFoundError`** — the notebook is on a different kernel than the one you installed into.
-  Run `import sys; print(sys.executable)` in a cell; it should end in `.venv/bin/python`.
-- **Prompted for an API key** — `.env` is missing, in the wrong folder, or still has the placeholder.
-- **Slow iteration** — set `RUN_PLACEBO = False` in section 2 while exploring (saves ~8 minutes per
-  run); turn it back on before you submit.
-- **Stale recent data** — the cache never expires. Delete `.massive_cache/` to refetch.
-
-Keep `.env` out of anything you share or submit; `.gitignore` already excludes it.
+To check a proposed commit: `python scripts/check_publication.py` after staging.
+For consistency: `python scripts/check_submission_consistency.py`.
+Historical harness stage commands retain their original missing-tag guard and should
+not be run to prepare this submission. Optional report authoring uses
+`requirements-report.txt`; optional legacy score generation uses
+`requirements-research.txt`. Neither is required for notebook judging.

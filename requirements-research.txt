@@ -1,0 +1,5 @@
+# Optional historical score-generation tooling. Not needed by the submission
+# notebook: existing scores are committed. Filling them changes research state
+# and must follow the research protocol; it is not a reproduction setup step.
+-r requirements.txt
+typesafe-sdk>=0.7.2,<0.8

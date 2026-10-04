@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "build_commit": "5d7b7b57879b6b4cb27319b827ad97d9783e63d8",
+  "metadata": {
+    "summary_attribution": "Author aggregate Markdown copied from 5d7b7b57879b6b4cb27319b827ad97d9783e63d8 with git show.",
+    "source_integrity": "SHA-256 hashes pin the shipped source bytes to the recorded build snapshot.",
+    "historical_preregistration": "Not established by this manifest; it is not a signed historical freeze tag."
+  },
+  "summaries": {
+    "runs/FINDINGS.md": {
+      "file": "submission/evidence/runs/FINDINGS.md",
+      "sha256": "27c8cafb1eab2e3cc39b44c738eb5644f966ca7311e8fdd5f37bc31087f3fbc3"
+    },
+    "runs/PREREG.md": {
+      "file": "submission/evidence/runs/PREREG.md",
+      "sha256": "1018a665d930b1816ac5008414c83efe538705aa123adbcc021da5286f2b3837"
+    },
+    "runs/EXTRAS.md": {
+      "file": "submission/evidence/runs/EXTRAS.md",
+      "sha256": "b8ff81d23e93383e43cb801b445737200a981ff0cdafb203f3df829e07f2a609"
+    },
+    "runs/APPENDIX.md": {
+      "file": "submission/evidence/runs/APPENDIX.md",
+      "sha256": "3317143cd9e5254be4432ebf67717f5df9c4fc7de718c96c1f5a46cc17973e57"
+    },
+    "runs/APPENDIX_VRP.md": {
+      "file": "submission/evidence/runs/APPENDIX_VRP.md",
+      "sha256": "ec2dc5e901e8c5c53ab20ecc606e5973c5361ea60a4c50dbb096fa6c105b16ef"
+    },
+    "runs/vrp/MAP.md": {
+      "file": "submission/evidence/runs/vrp/MAP.md",
+      "sha256": "9ffe10d12700adc217f74aee8c1dfffa7ef9d28c692c39600899273bf1595a95"
+    },
+    "runs/vrp/REVIEW.md": {
+      "file": "submission/evidence/runs/vrp/REVIEW.md",
+      "sha256": "57c844d732bd52980ed39d4519a3cba2d55a61185ca2ff6387cb0af095894b04"
+    },
+    "runs/LEADERBOARD.md": {
+      "file": "submission/evidence/runs/LEADERBOARD.md",
+      "sha256": "2d6a3d8e77a14df1fb62c3018be55fc810dee9916adfa95a44be4bd274284746"
+    },
+    "runs/BLOCKED.md": {
+      "file": "submission/evidence/runs/BLOCKED.md",
+      "sha256": "8e3aaeee2f25e6744f1a1cfec8a135d4957a402ee5f3fd72a8b896c079a4bbb8"
+    }
+  },
+  "economic_sources": {
+    "gator-quant-hacks-8k-options-challenge.ipynb": {
+      "sha256": "2caab638797dfce942d29fe054b684422c75950b16ef665356d2afa1894ceb58"
+    },
+    "pair_test.py": {
+      "sha256": "1636cd7782378737efc0ab8b6cdb0a7ce8b8270a05a0b032133a2fc5a1a97339"
+    },
+    "pairings.json": {
+      "sha256": "2b79c808888f21f6216e3dd2263025ee3a04fa354d106ea08a01ee89e7754540"
+    },
+    "harness.py": {
+      "sha256": "a18ee64a075f8bc065216d977515f5df1d02de877c21c48c5ed4ba5a6e27efbf"
+    },
+    "jev.py": {
+      "sha256": "14456ead47b10a2f954ca2a64796bb105cd9b3b85fac585721088872c80de949"
+    },
+    "jev_scores.csv": {
+      "sha256": "efb4dd84e6d642349496ab727385c15e981965363009cb926b8ae17d47aabcb5"
+    }
+  }
+}

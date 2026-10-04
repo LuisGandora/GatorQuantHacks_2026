@@ -1,15 +1,27 @@
-# Fresh Leadership 8-Ks Are Under-Priced, Not Over-Priced
+# Fresh Leadership 8-Ks Did Not Reward Put Sellers
 
 Gator Quant Hacks 2026 · Systematic Trading track · Massive "Trade the 8-K" bonus. Rule frozen at git tag `freeze-v2`;
-pre-registration in `runs/PREREG.md`; every number below is reproduced by the notebook (section 12), `harness.py` and
-`report_extras.py` (see `runs/REPRO.md`). Supporting tables: `runs/EXTRAS.md`, `runs/APPENDIX.md`.
+pre-registration in `runs/PREREG.md`. These are historical aggregate findings, not a
+claim that a fresh public clone has completed live reproduction. The referenced freeze
+tags are currently unavailable. Use `GQH_MASSIVE_FINAL.ipynb` and
+`docs/REPRODUCIBILITY.md` for the current submission path. Supporting tables:
+`runs/EXTRAS.md`, `runs/APPENDIX.md`.
 
-**Summary.** We pre-registered that *fresh* leadership 8-Ks (the filing is the first disclosure) over-price the move, so
+> Documentation correction, October 4, 2026: the title and interpretation below no
+> longer claim established option underpricing. VRP gross edge and own net P&L are
+> distinguished correctly. No hypothesis, strategy, parameter, or numeric result was
+> changed. The submission notebook retains its original pinned evidence snapshot;
+> `runs/FINDINGS.pdf` remains an older historical draft, not the final note.
+
+**Summary.** We pre-registered that *fresh* leadership 8-Ks (hypothesized to be the first disclosure) over-price the move, so
 selling a cash-secured put after them beats ordinary days. It is **rejected, in the opposite direction**: after fresh
 filings the put-seller did worse than on ordinary days in-sample (−1.19%, n=55) and out-of-sample (−0.70%, n=25), and
-the sign is negative in all 18 parameter neighbours in both windows. The evidence fits the market **under-pricing fresh
-leadership shocks**. That reframe was written after both windows were seen, so we register it as a sealed-window prediction
-rather than claim it. Stale filings show no stable edge.
+the sign is negative in all 18 parameter neighbours in both windows. This does not
+establish option underpricing: the fresh-minus-stale primary contrast was not
+significant in-sample, and the fresh-versus-ordinary OOS intervals include zero.
+The underpricing explanation was written after both windows were seen and remains
+a post-hoc, unconfirmed sealed-window prediction. The protective-put mirror was
+not tested. Stale filings show no stable edge.
 
 ## 1. Hypothesis and who is on the other side
 
@@ -18,9 +30,11 @@ disclosure. Holders surprised by a governance shock over-pay for protection righ
 release by days, the chain has already re-priced. Prediction: a cash-secured put entered at the post-filing close beats
 ordinary days on fresh filings, but not on stale ones. Failure: fresh and stale earn the same.
 
-**Who was on the other side.** Our put was sold to the holders buying protection after the shock. The results say they
-were right to pay: fresh-event stocks fell more than on ordinary days and moved more than the chain priced (section 4).
-The price-setter we expected to over-charge, under-charged. We do not know yet why that persists; the sealed window is the test.
+**Who was on the other side.** The economic hypothesis envisioned holders buying
+protection after a governance shock as the counterparties to the sold put. Their
+identity and motive were not observed. The movement diagnostics in section 4 are
+exploratory; the short-put return comparison alone does not establish that option
+prices were too low. Sealed-window replication has not been observed.
 
 ## 2. Data and method
 
@@ -138,7 +152,7 @@ than ordinary days. Two out-of-sample looks were taken in total (B6-earnings and
 
 **The map.** **No category was flagged in-sample** (BH, q = 0.10). All 18 categories have `bh_pass = False` (CSV, MAP.md). The smallest p is 0.182 (bylaw_amendment); BH threshold at q = 0.10 over 18 categories is ≈0.0056. No category reaches it. Consequently, no category received an out-of-sample look. The out-of-sample look was taken for H2 only (verdict: NOT CONFIRMED). The map is a **null map in-sample**, which PREREG_VRP.md calls "a reported finding, not a failure."
 
-Strategy mapping (descriptive only, with the caveat that *strategy edge* and *net P&L* columns are gross, untested, and not significant — net P&L mostly reflects the 2024-25 rising market where protective puts own the stock): the 9 categories with positive in-sample diff (director_appointment +0.108, credit_facility +0.122, guarantee_or_letter_of_credit +0.157, executive_officer_appointment +0.090, executive_compensation_change +0.038, director_departure +0.049, business_update +0.056, investor_presentation +0.042, guidance_issuance_or_update +0.042) map to protective put; the 9 with negative diff (bylaw_amendment −0.179, underwriting_agreement −0.084, debt_retirement −0.147, debt_issuance −0.070, dividend_declaration −0.027, quarterly_earnings −0.027, shareholder_proposal_outcome −0.022, annual_meeting_results −0.021, executive_officer_departure −0.008) map to cash-secured put. Every 95% CI includes 0 (MAP.md).
+Strategy mapping (descriptive only, with the caveat that *strategy edge* is gross event-minus-ordinary return, whereas *net P&L* is the strategy's own mean return after assumed costs; neither validates a profitable category strategy — net P&L mostly reflects the 2024-25 rising market where protective puts own the stock): the 9 categories with positive in-sample diff (director_appointment +0.108, credit_facility +0.122, guarantee_or_letter_of_credit +0.157, executive_officer_appointment +0.090, executive_compensation_change +0.038, director_departure +0.049, business_update +0.056, investor_presentation +0.042, guidance_issuance_or_update +0.042) map to protective put; the 9 with negative diff (bylaw_amendment −0.179, underwriting_agreement −0.084, debt_retirement −0.147, debt_issuance −0.070, dividend_declaration −0.027, quarterly_earnings −0.027, shareholder_proposal_outcome −0.022, annual_meeting_results −0.021, executive_officer_departure −0.008) map to cash-secured put. Every 95% CI includes 0 (MAP.md).
 
 **Honesty lines.** 18 categories tested in-sample. Benjamini-Hochberg correction at q = 0.10 across 18 categories; zero pass. Categories marked `seen before` (from earlier pairings): executive_officer_appointment, director_departure, quarterly_earnings, guidance_issuance_or_update (MAP.md, CSV). Volatility-level confound: `implied_gap` spans 0.943 (underwriting_agreement) to 1.075 (business_update) across all 18 categories (MAP.md); no category falls below 0.8 or above 1.25, so the confound does not look material on this column (REVIEW.md). In-sample comparisons run for this map: 18 (MAP.md).
 
