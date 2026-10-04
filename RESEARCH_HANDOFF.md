@@ -1,6 +1,8 @@
 # 8-K options research handoff
 
-Updated: October 3, 2026. Research paused at the user's request. **No conclusive trading edge has been established.**
+Updated: October 3, 2026. The user subsequently resumed research, prioritizing a data-grounded testable hypothesis. **No conclusive trading edge has been established.** The historical pause/checkpoint details below remain valid; the all-horizon collector has not been restarted.
+
+Resume priority: `GOVERNANCE_PUT_HYPOTHESIS.md` and `governance_put_hypothesis.json` define a discovery-selected annual-meeting-results → protective-put candidate. Audit and validation counts come before new validation returns. This candidate is not a confirmed edge or an independent replication of the inspected discovery sample.
 
 ## Objective and rules
 

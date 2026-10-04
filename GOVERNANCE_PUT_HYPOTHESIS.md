@@ -1,0 +1,46 @@
+# Testable hypothesis: cheaper downside insurance after annual meetings
+
+**Primary candidate:** Following an `annual_meeting_results` disclosure, the starter protective put adds more net value over stock alone than it does on comparable ordinary days. The proposed mechanism is cheaper downside insurance without a proportionate reduction in subsequent downside exposure.
+
+This is a predictive category-to-strategy link, not a claim that routine voting causes a selloff. A plausible explanation is that a scheduled governance milestone coincides with reduced option uncertainty while residual business and calendar risks remain. Earnings timing, volatility differences, and contract moneyness are competing explanations that must be checked.
+
+## Why prioritize it
+
+The completed bid/ask discovery sample has 49 matched events across 37 companies. The mean incremental advantage is +0.6615 percentage points of entry stock value. It remains +0.3180 points after removing the three best event differences; the minimum leave-one-company estimate is +0.5166 points.
+
+The mechanism is distinguishable from simply buying protection around scary headlines:
+
+- Entry put premium: 3.47% of stock value on event dates versus 4.43% on ordinary dates.
+- Mean subsequent downside magnitude: 1.90% versus 1.47%.
+- Fraction falling more than 5%: 20.4% versus 13.6%.
+- Average absolute stock move: 6.58% versus 6.41%.
+
+On the common cohort with identical controls for all five strategies, the protective-put difference remains +0.4490 points and +0.1052 points after removing the three best observations. However, that stricter sample has only 34 events and is below the 40-event gate.
+
+Shareholder-proposal outcomes show a similar pattern, but 32 of their 40 usable company-dates overlap with the 49 annual-meeting events. Their union is 57 company-dates, not 89 independent events. Do not present this as replication.
+
+Debt-covered-call performance is an alternative, but its identical-cohort estimate reverses when the three best events are removed. The governance-put candidate is therefore the better next hypothesis to investigate, not a proven superior strategy.
+
+## Exact primary test
+
+Use the starter's 3–6-month expiry bucket and 5% OTM protective put. Enter only after disclosure is public, retaining the existing conservative following-session close for date-only filings. Buy at the ask, close at the bid after 21 trading sessions, and include commissions. Express incremental option P&L per entry stock notional; compare each event with the nearest three eligible matched ordinary-day entries under the existing company/date/expiry rules.
+
+Prediction: event mean incremental net P&L minus ordinary-day mean incremental net P&L is positive. Report all fixed horizons, premiums, stock movements/tails, quote exclusions, and capacity. Other horizons do not replace the primary result.
+
+The structured frozen design is `governance_put_hypothesis.json`. It retains the existing uncertainty and sample gates, contains the calendar-confound and text-audit checks, and discloses that selection followed discovery. It is a freeze before new validation, not a claim of pre-discovery preregistration.
+
+## What could reject or weaken it
+
+An independently validated negative effect contradicts the primary hypothesis. Cheaper premiums without a positive net protection advantage fail the trading thesis. An effect that vanishes under volatility/earnings-calendar comparisons weakens the proposed category-specific explanation. A small, concentrated, execution-infeasible, or statistically unestimable sample remains inconclusive.
+
+Current discovery has only two registered dependence components, below the minimum of five. There is no valid primary interval or established edge. Lower raw premium fractions are not proof of lower implied volatility: expiry, entry moneyness, skew, and volatility state must be examined.
+
+## Next actions
+
+1. Freeze this specification before reading any new historical validation prices. Preserve the original broader results and count this as a discovery-selected candidate.
+2. Audit the filing text and check available pre-entry volatility and earnings-calendar coverage, without outcome-selected exclusions.
+3. Count usable validation events and dependence groups first. Do not price a count-ineligible arm or bypass the inference gate.
+4. Run one frozen historical replication in the starter OOS window, labeling prior related-window exposure. A genuinely sealed judges window is a separate replication requirement.
+5. Retain the all-horizon quote checkpoints; full collection is currently paused. Prioritize hypothesis feasibility and validation rather than restarting a lengthy exhaustive collection before its purpose is clear.
+
+The research objective is active again at the user's request. Current conclusion for this candidate: **inconclusive, with a concrete falsifiable test.**
