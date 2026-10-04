@@ -23,6 +23,17 @@ Read the **[five-page quant note](submission/QUANT_NOTE.pdf)**, then open
 [QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
 [authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.
 
+## Judge's Guide to the Rubrics
+
+| Rubric Criterion (Track 03 & Massive) | Primary Artifact | Key Evidence / Verification |
+|---|---|---|
+| **01. Economic Foundation & Hypothesis** | `QUANT_NOTE.pdf` §01–§02 | Delta vs. Vega decomposition; why post-filing downward equity drift (-1.32% IS) destroys short-put Vega capture; `runs/PREREG.md`. |
+| **02. Innovation & Research Funnel** | `QUANT_NOTE.pdf` Table 0 & A1 | 13-stage structured research progression; multi-category 18-tag Variance Risk Premium map under Benjamini-Hochberg FDR control (q=0.10). |
+| **03. Risk Management Plan** | `QUANT_NOTE.pdf` §06 & Figure 1 | Unlevered 10% sizing; 2x cost stress test; negative skewness (-2.26 IS, -1.89 OOS); -16.5% max drop; defined-risk **Vertical Put Spread** & TIMS mitigation. |
+| **04. Liquidity & Capital** | `QUANT_NOTE.pdf` §07 | Empirical 10-day pre-entry option ADV audit (18-29 contracts); 1% & 10% volume participation ceilings ($500k IS / $390k OOS book capacity); 15-25% bid-ask spread reality. |
+| **05. Performance & Analytical Evidence** | `QUANT_NOTE.pdf` §05, Table 1 & 2 | All 54 recovered fixed horizons; 36-cell sensitivity grid; 120-draw placebo baseline; zero lookahead (EDGAR <ACCEPTANCE-DATETIME> session shift); 281/281 consistency checks. |
+| **06. Sealed-Window Replication** | `GQH_MASSIVE_FINAL.ipynb` §6, §10 | Hermetically isolated holdout replication behind `RUN_CUSTOM_JUDGE` toggle; pre-registered directional prediction (`Edge < 0`); zero OOS tuning. |
+
 The [remote experiment history](submission/evidence/remote_experiments/README.md) includes the completed priced earnings benchmark, 9B cash-secured-put test and Experiment 10 covered-call test, with actual event/control net returns, costs and sensitivity. These supporting in-sample studies failed their original gates; they do not replace F1. Experiments 11–13 remain unpriced supporting work, with numbered artifacts unavailable at the fetched remote tip.
 
 ## Install and run

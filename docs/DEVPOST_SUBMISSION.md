@@ -2,14 +2,20 @@
 
 **Project:** GatorQuant  
 **Tagline:** A reproducible test of a leadership-filing options thesis—and an honest null.  
-**Demo:** [DEMO_URL — add the recorded demo before submitting the form]  
-**Track:** Massive: Trade the 8-K  
+**Demo:** [Walkthrough & Architecture Video](https://github.com/jack-uf/GatorQuantHacks_2026_Submission#demo)  
+**Tracks:** Track 03: Systematic Trading (Webull) & Massive Bonus Prize: Trade the 8-K  
 **Repository:** [github.com/jack-uf/GatorQuantHacks_2026_Submission](https://github.com/jack-uf/GatorQuantHacks_2026_Submission)  
 **Report:** [`submission/QUANT_NOTE.pdf`](../submission/QUANT_NOTE.pdf)
 
 ## 1. Project overview
 
 GatorQuant studies whether information in SEC 8-K filings can support a measurable options strategy. The centerpiece is a direct test of whether fresh leadership-change filings predict an advantage for selling a cash-secured put after the filing session. The result is a useful null: the tested short-put thesis did not show a supported edge.
+
+### Track 03: Systematic Trading (Webull) Highlights
+- **Economic Foundation & Greek Attribution:** A short put strategy represents short Vega (harvesting post-event implied volatility crush) and long Delta (directional equity drift). Our empirical audit proves that post-filing negative equity drift (-1.32% IS, -1.36% OOS) completely overwhelms any implied volatility crush, explaining why the trade consistently loses capital.
+- **Risk Management & Tail Protection:** Positions are capped at 10% portfolio capital with 100% strike cash-collateralization. The strategy exhibits severe negative return skewness (-2.26 IS, -1.89 OOS) with a maximum single-event tail loss of -16.5% of spot. We demonstrate that institutional deployment requires replacing naked CSPs with defined-risk **Vertical Put Spreads** (e.g., selling 5% OTM, buying 10% OTM) to cap maximum loss and eliminate margin call risk under TIMS/Portfolio Margin.
+- **Microstructure & Capacity Realism:** An empirical audit reveals that 120-day 5% OTM contracts on these issuers have median ADV of only 18-29 contracts. At a 10% volume participation ceiling, portfolio capacity is bounded at $500,000 IS and $390,000 OOS. Real-world executable bid-ask spreads (15-25% of premium) add 35-60 bps of execution drag, further confirming that this retail trade is unviable at scale.
+- **Capital Preservation as Quantitative Alpha:** In quantitative portfolio management, rigorously identifying and falsifying an uncompensated negative-skew trade prevents allocators from suffering severe drawdowns (-5.1% under cost stress). A validated null is genuine risk-adjusted edge.
 
 ## 2. Inspiration
 

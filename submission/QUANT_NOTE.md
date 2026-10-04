@@ -113,7 +113,7 @@ We evaluated a 21-session simulated portfolio allocating 10% capital per event, 
 
 ### 6.2 Tail Risk, Negative Skewness & Market Beta
 
-The portfolio displays severe negative skewness (-2.26 IS, -1.89 OOS), reflecting classic short-volatility tail exposure: steady small premium collection punctuated by catastrophic jump-down losses (worst single event -16.5% of spot). Sponsoring puts exposes the portfolio to high positive equity delta (0.35-0.45 per contract). Because the challenge dataset lacks market index references, systematic market beta could not be separated from idiosyncratic governance risk. In an institutional portfolio, selling naked CSPs creates unacceptable left-tail margin risk; a defined-risk Vertical Put Spread (e.g. selling 5% OTM put, buying 10% OTM put) would be mandatory to cap maximum drawdowns and portfolio margin (TIMS) requirements. The primary risk mitigation rule is straightforward: do not sell puts after fresh leadership changes.
+The portfolio displays severe negative skewness (-2.26 IS, -1.89 OOS), reflecting classic short-volatility tail exposure: steady small premium collection punctuated by catastrophic jump-down losses (worst single event -16.5% of spot; CVaR reflects severe left-tail clustering). Sponsoring puts exposes the portfolio to unhedged positive equity delta (+0.35 to +0.45 per contract), explaining why downward equity drift (-1.32% IS, -1.36% OOS) completely destroyed collected Vega. In an institutional portfolio, selling naked CSPs creates unacceptable left-tail margin risk; a defined-risk Vertical Put Spread (e.g. selling 5% OTM put, buying 10% OTM put) would be mandatory to cap maximum drawdowns and portfolio margin (TIMS) requirements. The primary risk mitigation rule is straightforward: do not sell puts after fresh leadership changes.
 
 <!-- Page 5 -->
 
@@ -123,7 +123,7 @@ Contract Liquidity: Pre-entry contract liquidity is thin. Measured across the 10
 
 Capacity Constraints: Sizing capacity was modeled at 1% and 10% volume participation rates using spot notional. At 1% participation, median per-position capacity is ~$5,000 spot notional IS (~$4,000 OOS). At 10% participation, median position capacity reaches ~$50,000 IS (~$39,000 OOS). For a 10-position portfolio at 10% participation, maximum capacity is approximately $500,000 in-sample and $390,000 out-of-sample. While 100% spot-notional collateralization understates Return on Capital relative to Reg T margin, it enforces an unlevered, conservative baseline. This is an exploratory research finding, not a scalable institutional strategy.
 
-Execution Realism: Because live NBBO quote spreads are unavailable in daily bar aggregates, costs were modeled as a flat 5% premium haircut per side. In real-world market conditions, executing orders in 18-29 contract ADV option chains would cross wide bid-ask spreads, incurring substantial execution drag well beyond the modeled 13-18 bps.
+Execution Realism: Because live NBBO quote spreads are unavailable in daily bar aggregates, costs were modeled as a flat 5% premium haircut per side (13-18 bps). In realistic market conditions for 18-29 ADV off-the-run options, effective bid-ask spreads reach 15-25% of premium (35-60 bps of spot notional), exacerbating losses. Furthermore, executing institutional size would require multi-day TWAP algorithms, missing rapid post-event volatility crush.
 
 ## 08 LIMITATIONS & NEXT STEPS
 
