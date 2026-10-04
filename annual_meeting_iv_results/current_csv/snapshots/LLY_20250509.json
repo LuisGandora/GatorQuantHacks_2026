@@ -1,0 +1,25 @@
+{
+  "ticker": "LLY",
+  "day": "2025-05-09",
+  "status": "collected",
+  "spot": 734.57,
+  "strike": 710.0,
+  "symbol": "O:LLY250919P00710000",
+  "expiry": "2025-09-19",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9665518602719958,
+  "rv20": 0.7842579420722919,
+  "rv60": 0.5338855686077031,
+  "dividend_yield": 0.00735123950066025,
+  "quote": {
+    "symbol": "O:LLY250919P00710000",
+    "day": "2025-05-09",
+    "status": "valid",
+    "age_seconds": 9.718045376,
+    "bid": 51.05,
+    "ask": 52.95,
+    "bid_size": 12,
+    "ask_size": 22
+  }
+}

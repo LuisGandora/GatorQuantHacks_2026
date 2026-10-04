@@ -1,0 +1,25 @@
+{
+  "ticker": "SBUX",
+  "day": "2023-01-05",
+  "status": "collected",
+  "spot": 104.43,
+  "strike": 97.5,
+  "symbol": "O:SBUX230421P00097500",
+  "expiry": "2023-04-21",
+  "dte_days": 106,
+  "dte_sessions": 73,
+  "moneyness": 0.9336397586900316,
+  "rv20": 0.21942939953197108,
+  "rv60": 0.3215316705263933,
+  "dividend_yield": 0.019151584793641672,
+  "quote": {
+    "symbol": "O:SBUX230421P00097500",
+    "day": "2023-01-05",
+    "status": "valid",
+    "age_seconds": 1.984480768,
+    "bid": 3.7,
+    "ask": 3.8,
+    "bid_size": 74,
+    "ask_size": 66
+  }
+}

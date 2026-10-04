@@ -1,0 +1,25 @@
+{
+  "ticker": "BAC",
+  "day": "2023-05-01",
+  "status": "collected",
+  "spot": 29.04,
+  "strike": 27.0,
+  "symbol": "O:BAC230818P00027000",
+  "expiry": "2023-08-18",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9297520661157025,
+  "rv20": 0.2677418778237933,
+  "rv60": 0.31916412487655005,
+  "dividend_yield": 0.029958677685950414,
+  "quote": {
+    "symbol": "O:BAC230818P00027000",
+    "day": "2023-05-01",
+    "status": "valid",
+    "age_seconds": 2.997835264,
+    "bid": 0.98,
+    "ask": 1.01,
+    "bid_size": 1172,
+    "ask_size": 162
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "AIG",
+  "day": "2023-05-16",
+  "status": "collected",
+  "spot": 52.31,
+  "strike": 45.0,
+  "symbol": "O:AIG230818P00045000",
+  "expiry": "2023-08-18",
+  "dte_days": 94,
+  "dte_sessions": 65,
+  "moneyness": 0.8602561651691837,
+  "rv20": 0.3546371671501599,
+  "rv60": 0.4010385713993562,
+  "dividend_yield": 0.02446950869814567,
+  "quote": {
+    "symbol": "O:AIG230818P00045000",
+    "day": "2023-05-16",
+    "status": "valid",
+    "age_seconds": 194.30843648,
+    "bid": 1.05,
+    "ask": 1.15,
+    "bid_size": 120,
+    "ask_size": 117
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "ABBV",
+  "day": "2025-05-14",
+  "status": "collected",
+  "spot": 177.44,
+  "strike": 175.0,
+  "symbol": "O:ABBV250919P00175000",
+  "expiry": "2025-09-19",
+  "dte_days": 128,
+  "dte_sessions": 88,
+  "moneyness": 0.986248872858431,
+  "rv20": 0.342396507909956,
+  "rv60": 0.33392444151987083,
+  "dividend_yield": 0.03544860234445446,
+  "quote": {
+    "symbol": "O:ABBV250919P00175000",
+    "day": "2025-05-14",
+    "status": "valid",
+    "age_seconds": 0.266003223,
+    "bid": 10.45,
+    "ask": 11,
+    "bid_size": 57,
+    "ask_size": 15
+  }
+}

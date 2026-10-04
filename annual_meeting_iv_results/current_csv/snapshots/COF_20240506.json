@@ -1,0 +1,25 @@
+{
+  "ticker": "COF",
+  "day": "2024-05-06",
+  "status": "collected",
+  "spot": 143.33,
+  "strike": 135.0,
+  "symbol": "O:COF240920P00135000",
+  "expiry": "2024-09-20",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9418823693574269,
+  "rv20": 0.23487129369073584,
+  "rv60": 0.22735312878534195,
+  "dividend_yield": 0.016744575455243143,
+  "quote": {
+    "symbol": "O:COF240920P00135000",
+    "day": "2024-05-06",
+    "status": "valid",
+    "age_seconds": 1.601791488,
+    "bid": 5.5,
+    "ask": 5.9,
+    "bid_size": 32,
+    "ask_size": 49
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "PFE",
+  "day": "2025-06-24",
+  "status": "collected",
+  "spot": 24.31,
+  "strike": 22.0,
+  "symbol": "O:PFE251017P00022000",
+  "expiry": "2025-10-17",
+  "dte_days": 115,
+  "dte_sessions": 81,
+  "moneyness": 0.9049773755656109,
+  "rv20": 0.1851589561746136,
+  "rv60": 0.3118881724547957,
+  "dividend_yield": 0.06993006993006994,
+  "quote": {
+    "symbol": "O:PFE251017P00022000",
+    "day": "2025-06-24",
+    "status": "valid",
+    "age_seconds": 0.266035859,
+    "bid": 0.48,
+    "ask": 0.51,
+    "bid_size": 35,
+    "ask_size": 40
+  }
+}

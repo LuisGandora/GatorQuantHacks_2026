@@ -1,0 +1,25 @@
+{
+  "ticker": "EMR",
+  "day": "2024-03-11",
+  "status": "collected",
+  "spot": 109.65,
+  "strike": 100.0,
+  "symbol": "O:EMR240621P00100000",
+  "expiry": "2024-06-21",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9119927040583675,
+  "rv20": 0.11333002294967369,
+  "rv60": 0.27460991166405296,
+  "dividend_yield": 0.01427268581851345,
+  "quote": {
+    "symbol": "O:EMR240621P00100000",
+    "day": "2024-03-11",
+    "status": "valid",
+    "age_seconds": 28.709717504,
+    "bid": 1.3,
+    "ask": 1.45,
+    "bid_size": 52,
+    "ask_size": 50
+  }
+}

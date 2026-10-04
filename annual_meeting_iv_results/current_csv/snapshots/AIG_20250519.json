@@ -1,0 +1,25 @@
+{
+  "ticker": "AIG",
+  "day": "2025-05-19",
+  "status": "collected",
+  "spot": 84.34,
+  "strike": 80.0,
+  "symbol": "O:AIG250919P00080000",
+  "expiry": "2025-09-19",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9485416172634574,
+  "rv20": 0.2353089942347331,
+  "rv60": 0.3220392240295929,
+  "dividend_yield": 0.01897083234526915,
+  "quote": {
+    "symbol": "O:AIG250919P00080000",
+    "day": "2025-05-19",
+    "status": "valid",
+    "age_seconds": 0.498278673,
+    "bid": 2.65,
+    "ask": 2.8,
+    "bid_size": 33,
+    "ask_size": 16
+  }
+}

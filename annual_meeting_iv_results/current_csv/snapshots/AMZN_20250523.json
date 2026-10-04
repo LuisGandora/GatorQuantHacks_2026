@@ -1,0 +1,25 @@
+{
+  "ticker": "AMZN",
+  "day": "2025-05-23",
+  "status": "collected",
+  "spot": 200.99,
+  "strike": 190.0,
+  "symbol": "O:AMZN250919P00190000",
+  "expiry": "2025-09-19",
+  "dte_days": 119,
+  "dte_sessions": 81,
+  "moneyness": 0.9453206627195383,
+  "rv20": 0.3543110722797718,
+  "rv60": 0.4858581032839488,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMZN250919P00190000",
+    "day": "2025-05-23",
+    "status": "valid",
+    "age_seconds": 0.185736049,
+    "bid": 9.8,
+    "ask": 9.9,
+    "bid_size": 9,
+    "ask_size": 4
+  }
+}

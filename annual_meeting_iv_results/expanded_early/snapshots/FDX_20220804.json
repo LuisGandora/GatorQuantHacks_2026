@@ -1,0 +1,25 @@
+{
+  "ticker": "FDX",
+  "day": "2022-08-04",
+  "status": "collected",
+  "spot": 236.1,
+  "strike": 220.0,
+  "symbol": "O:FDX221216P00220000",
+  "expiry": "2022-12-16",
+  "dte_days": 134,
+  "dte_sessions": 94,
+  "moneyness": 0.9318085556967387,
+  "rv20": 0.2570665627749519,
+  "rv60": 0.4669931623297176,
+  "dividend_yield": 0.014400677678949597,
+  "quote": {
+    "symbol": "O:FDX221216P00220000",
+    "day": "2022-08-04",
+    "status": "valid",
+    "age_seconds": 8.858554368,
+    "bid": 11.25,
+    "ask": 11.8,
+    "bid_size": 17,
+    "ask_size": 60
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "C",
+  "day": "2023-06-29",
+  "status": "collected",
+  "spot": 46.29,
+  "strike": 43.0,
+  "symbol": "O:C231215P00043000",
+  "expiry": "2023-12-15",
+  "dte_days": 169,
+  "dte_sessions": 118,
+  "moneyness": 0.9289263339814214,
+  "rv20": 0.19371177667734119,
+  "rv60": 0.23769260590932897,
+  "dividend_yield": 0.044069993519118604,
+  "quote": {
+    "symbol": "O:C231215P00043000",
+    "day": "2023-06-29",
+    "status": "valid",
+    "age_seconds": 3.102996992,
+    "bid": 1.77,
+    "ask": 1.81,
+    "bid_size": 25,
+    "ask_size": 9
+  }
+}

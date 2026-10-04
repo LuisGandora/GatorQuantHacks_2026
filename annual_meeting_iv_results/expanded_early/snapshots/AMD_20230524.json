@@ -1,0 +1,25 @@
+{
+  "ticker": "AMD",
+  "day": "2023-05-24",
+  "status": "collected",
+  "spot": 108.27,
+  "strike": 100.0,
+  "symbol": "O:AMD230915P00100000",
+  "expiry": "2023-09-15",
+  "dte_days": 114,
+  "dte_sessions": 78,
+  "moneyness": 0.9236168837166344,
+  "rv20": 0.532598255345776,
+  "rv60": 0.4411803585935739,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMD230915P00100000",
+    "day": "2023-05-24",
+    "status": "valid",
+    "age_seconds": 2.814372352,
+    "bid": 6.6,
+    "ask": 6.75,
+    "bid_size": 203,
+    "ask_size": 505
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "numerical_model_checks": "passed",
+  "matching_and_exclusion_accounting": "passed",
+  "starter_rate": 0.04,
+  "all_conclusions": "inconclusive",
+  "confidence_intervals": "unavailable: sample and dependence gates fail"
+}

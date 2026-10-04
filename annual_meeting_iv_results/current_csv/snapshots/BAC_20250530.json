@@ -1,0 +1,25 @@
+{
+  "ticker": "BAC",
+  "day": "2025-05-30",
+  "status": "collected",
+  "spot": 44.13,
+  "strike": 42.0,
+  "symbol": "O:BAC250919P00042000",
+  "expiry": "2025-09-19",
+  "dte_days": 112,
+  "dte_sessions": 77,
+  "moneyness": 0.9517335146159075,
+  "rv20": 0.23107898040746572,
+  "rv60": 0.41247554262725067,
+  "dividend_yield": 0.023113528212100613,
+  "quote": {
+    "symbol": "O:BAC250919P00042000",
+    "day": "2025-05-30",
+    "status": "valid",
+    "age_seconds": 0.399900106,
+    "bid": 1.72,
+    "ask": 1.75,
+    "bid_size": 13,
+    "ask_size": 6
+  }
+}

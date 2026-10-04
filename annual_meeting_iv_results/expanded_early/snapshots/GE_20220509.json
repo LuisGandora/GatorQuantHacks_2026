@@ -1,0 +1,25 @@
+{
+  "ticker": "GE",
+  "day": "2022-05-09",
+  "status": "collected",
+  "spot": 72.97,
+  "strike": 70.0,
+  "symbol": "O:GE220916P00070000",
+  "expiry": "2022-09-16",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.959298341784295,
+  "rv20": 0.4855586104405251,
+  "rv60": 0.4037888895595581,
+  "dividend_yield": 0.003426065506372482,
+  "quote": {
+    "symbol": "O:GE220916P00070000",
+    "day": "2022-05-09",
+    "status": "valid",
+    "age_seconds": 1.816372736,
+    "bid": 5.6,
+    "ask": 5.8,
+    "bid_size": 28,
+    "ask_size": 44
+  }
+}

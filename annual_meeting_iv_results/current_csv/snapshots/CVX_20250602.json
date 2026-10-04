@@ -1,0 +1,25 @@
+{
+  "ticker": "CVX",
+  "day": "2025-06-02",
+  "status": "collected",
+  "spot": 137.84,
+  "strike": 125.0,
+  "symbol": "O:CVX250919P00125000",
+  "expiry": "2025-09-19",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9068485200232153,
+  "rv20": 0.2003676652612796,
+  "rv60": 0.36879247964616374,
+  "dividend_yield": 0.047881601857225765,
+  "quote": {
+    "symbol": "O:CVX250919P00125000",
+    "day": "2025-06-02",
+    "status": "valid",
+    "age_seconds": 1.541177124,
+    "bid": 3.25,
+    "ask": 3.35,
+    "bid_size": 56,
+    "ask_size": 109
+  }
+}

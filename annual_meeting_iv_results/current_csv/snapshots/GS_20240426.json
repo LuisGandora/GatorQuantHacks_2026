@@ -1,0 +1,25 @@
+{
+  "ticker": "GS",
+  "day": "2024-04-26",
+  "status": "collected",
+  "spot": 427.57,
+  "strike": 390.0,
+  "symbol": "O:GS240816P00390000",
+  "expiry": "2024-08-16",
+  "dte_days": 112,
+  "dte_sessions": 77,
+  "moneyness": 0.9121313469139556,
+  "rv20": 0.24133429289941047,
+  "rv60": 0.2137756296381498,
+  "dividend_yield": 0.02514208199826929,
+  "quote": {
+    "symbol": "O:GS240816P00390000",
+    "day": "2024-04-26",
+    "status": "valid",
+    "age_seconds": 1.059497472,
+    "bid": 6.55,
+    "ask": 6.85,
+    "bid_size": 20,
+    "ask_size": 3
+  }
+}

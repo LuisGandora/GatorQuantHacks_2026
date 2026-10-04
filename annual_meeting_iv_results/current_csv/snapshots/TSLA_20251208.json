@@ -1,0 +1,25 @@
+{
+  "ticker": "TSLA",
+  "day": "2025-12-08",
+  "status": "collected",
+  "spot": 439.58,
+  "strike": 430.0,
+  "symbol": "O:TSLA260417P00430000",
+  "expiry": "2026-04-17",
+  "dte_days": 130,
+  "dte_sessions": 89,
+  "moneyness": 0.9782064698120934,
+  "rv20": 0.457479673440936,
+  "rv60": 0.5021398890664571,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:TSLA260417P00430000",
+    "day": "2025-12-08",
+    "status": "valid",
+    "age_seconds": 1.383518928,
+    "bid": 46,
+    "ask": 46.2,
+    "bid_size": 4,
+    "ask_size": 5
+  }
+}

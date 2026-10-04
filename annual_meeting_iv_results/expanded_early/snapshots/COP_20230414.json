@@ -1,0 +1,25 @@
+{
+  "ticker": "COP",
+  "day": "2023-04-14",
+  "status": "collected",
+  "spot": 108.5,
+  "strike": 100.0,
+  "symbol": "O:COP230818P00100000",
+  "expiry": "2023-08-18",
+  "dte_days": 126,
+  "dte_sessions": 87,
+  "moneyness": 0.9216589861751152,
+  "rv20": 0.3959952042502306,
+  "rv60": 0.39480906004701183,
+  "dividend_yield": 0.04645161290322581,
+  "quote": {
+    "symbol": "O:COP230818P00100000",
+    "day": "2023-04-14",
+    "status": "valid",
+    "age_seconds": 13.687382784,
+    "bid": 4.95,
+    "ask": 5.15,
+    "bid_size": 1,
+    "ask_size": 10
+  }
+}

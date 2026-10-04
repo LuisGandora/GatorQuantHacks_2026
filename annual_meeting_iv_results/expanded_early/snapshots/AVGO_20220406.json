@@ -1,0 +1,25 @@
+{
+  "ticker": "AVGO",
+  "day": "2022-04-06",
+  "status": "collected",
+  "spot": 602.0,
+  "strike": 580.0,
+  "symbol": "O:AVGO220715P00580000",
+  "expiry": "2022-07-15",
+  "dte_days": 100,
+  "dte_sessions": 68,
+  "moneyness": 0.9634551495016611,
+  "rv20": 0.3491584202016726,
+  "rv60": 0.38117241709352195,
+  "dividend_yield": 0.025581395348837205,
+  "quote": {
+    "symbol": "O:AVGO220715P00580000",
+    "day": "2022-04-06",
+    "status": "valid",
+    "age_seconds": 0.37889152,
+    "bid": 31.1,
+    "ask": 34.7,
+    "bid_size": 3,
+    "ask_size": 126
+  }
+}

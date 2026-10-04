@@ -1,0 +1,25 @@
+{
+  "ticker": "MDT",
+  "day": "2022-11-09",
+  "status": "collected",
+  "spot": 79.29,
+  "strike": 75.0,
+  "symbol": "O:MDT230317P00075000",
+  "expiry": "2023-03-17",
+  "dte_days": 128,
+  "dte_sessions": 87,
+  "moneyness": 0.9458948164964055,
+  "rv20": 0.3445618100517354,
+  "rv60": 0.286834755216347,
+  "dividend_yield": 0.033043258922941104,
+  "quote": {
+    "symbol": "O:MDT230317P00075000",
+    "day": "2022-11-09",
+    "status": "valid",
+    "age_seconds": 135.383528704,
+    "bid": 3.35,
+    "ask": 3.8,
+    "bid_size": 157,
+    "ask_size": 99
+  }
+}

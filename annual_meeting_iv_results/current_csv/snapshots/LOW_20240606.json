@@ -1,0 +1,25 @@
+{
+  "ticker": "LOW",
+  "day": "2024-06-06",
+  "status": "collected",
+  "spot": 218.45,
+  "strike": 200.0,
+  "symbol": "O:LOW240920P00200000",
+  "expiry": "2024-09-20",
+  "dte_days": 106,
+  "dte_sessions": 73,
+  "moneyness": 0.9155413138017854,
+  "rv20": 0.2138264342029182,
+  "rv60": 0.20608065362870961,
+  "dividend_yield": 0.020141908903639278,
+  "quote": {
+    "symbol": "O:LOW240920P00200000",
+    "day": "2024-06-06",
+    "status": "valid",
+    "age_seconds": 13.567934208,
+    "bid": 3.15,
+    "ask": 3.4,
+    "bid_size": 31,
+    "ask_size": 30
+  }
+}

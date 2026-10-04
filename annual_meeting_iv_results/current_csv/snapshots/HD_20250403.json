@@ -1,0 +1,25 @@
+{
+  "ticker": "HD",
+  "day": "2025-04-03",
+  "status": "collected",
+  "spot": 355.91,
+  "strike": 350.0,
+  "symbol": "O:HD250815P00350000",
+  "expiry": "2025-08-15",
+  "dte_days": 134,
+  "dte_sessions": 92,
+  "moneyness": 0.9833946784299401,
+  "rv20": 0.2814479539291371,
+  "rv60": 0.24666573805394737,
+  "dividend_yield": 0.025427776685117025,
+  "quote": {
+    "symbol": "O:HD250815P00350000",
+    "day": "2025-04-03",
+    "status": "valid",
+    "age_seconds": 18.546669056,
+    "bid": 20.05,
+    "ask": 20.85,
+    "bid_size": 4,
+    "ask_size": 1
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "ORCL",
+  "day": "2023-11-20",
+  "status": "collected",
+  "spot": 116.92,
+  "strike": 105.0,
+  "symbol": "O:ORCL240315P00105000",
+  "expiry": "2024-03-15",
+  "dte_days": 116,
+  "dte_sessions": 79,
+  "moneyness": 0.89804994868286,
+  "rv20": 0.19579564325873816,
+  "rv60": 0.3920826542953266,
+  "dividend_yield": 0.013000342114266164,
+  "quote": {
+    "symbol": "O:ORCL240315P00105000",
+    "day": "2023-11-20",
+    "status": "valid",
+    "age_seconds": 19.666027008,
+    "bid": 2.68,
+    "ask": 2.73,
+    "bid_size": 1,
+    "ask_size": 19
+  }
+}

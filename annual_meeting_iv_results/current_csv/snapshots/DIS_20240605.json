@@ -1,0 +1,25 @@
+{
+  "ticker": "DIS",
+  "day": "2024-06-05",
+  "status": "collected",
+  "spot": 101.5,
+  "strike": 95.0,
+  "symbol": "O:DIS240920P00095000",
+  "expiry": "2024-09-20",
+  "dte_days": 107,
+  "dte_sessions": 74,
+  "moneyness": 0.9359605911330049,
+  "rv20": 0.39200429551331556,
+  "rv60": 0.2816300002900489,
+  "dividend_yield": 0.0029556650246305416,
+  "quote": {
+    "symbol": "O:DIS240920P00095000",
+    "day": "2024-06-05",
+    "status": "valid",
+    "age_seconds": 22.13339264,
+    "bid": 2.28,
+    "ask": 2.33,
+    "bid_size": 5,
+    "ask_size": 69
+  }
+}

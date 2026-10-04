@@ -1,0 +1,25 @@
+{
+  "ticker": "MA",
+  "day": "2025-04-11",
+  "status": "collected",
+  "spot": 509.75,
+  "strike": 470.0,
+  "symbol": "O:MA250718P00470000",
+  "expiry": "2025-07-18",
+  "dte_days": 98,
+  "dte_sessions": 66,
+  "moneyness": 0.9220205983325159,
+  "rv20": 0.4561909758268583,
+  "rv60": 0.30956482869411867,
+  "dividend_yield": 0.005375183913683178,
+  "quote": {
+    "symbol": "O:MA250718P00470000",
+    "day": "2025-04-11",
+    "status": "valid",
+    "age_seconds": 1.994200832,
+    "bid": 16.45,
+    "ask": 17.6,
+    "bid_size": 6,
+    "ask_size": 9
+  }
+}

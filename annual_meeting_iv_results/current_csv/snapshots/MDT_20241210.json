@@ -1,0 +1,25 @@
+{
+  "ticker": "MDT",
+  "day": "2024-12-10",
+  "status": "collected",
+  "spot": 83.58,
+  "strike": 77.5,
+  "symbol": "O:MDT250516P00077500",
+  "expiry": "2025-05-16",
+  "dte_days": 157,
+  "dte_sessions": 107,
+  "moneyness": 0.9272553242402489,
+  "rv20": 0.18359312544104814,
+  "rv60": 0.16340730285917288,
+  "dividend_yield": 0.033261545824359896,
+  "quote": {
+    "symbol": "O:MDT250516P00077500",
+    "day": "2024-12-10",
+    "status": "valid",
+    "age_seconds": 9.83363968,
+    "bid": 1.75,
+    "ask": 2.67,
+    "bid_size": 30,
+    "ask_size": 37
+  }
+}

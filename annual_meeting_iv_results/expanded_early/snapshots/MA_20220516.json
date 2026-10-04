@@ -1,0 +1,25 @@
+{
+  "ticker": "MA",
+  "day": "2022-05-16",
+  "status": "collected",
+  "spot": 329.73,
+  "strike": 315.0,
+  "symbol": "O:MA220916P00315000",
+  "expiry": "2022-09-16",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9553270857974706,
+  "rv20": 0.4709963119861345,
+  "rv60": 0.38497720039194744,
+  "dividend_yield": 0.005640978982804112,
+  "quote": {
+    "symbol": "O:MA220916P00315000",
+    "day": "2022-05-16",
+    "status": "valid",
+    "age_seconds": 2.526822656,
+    "bid": 20.7,
+    "ask": 21.4,
+    "bid_size": 5,
+    "ask_size": 20
+  }
+}

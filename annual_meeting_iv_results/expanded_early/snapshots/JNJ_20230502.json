@@ -1,0 +1,25 @@
+{
+  "ticker": "JNJ",
+  "day": "2023-05-02",
+  "status": "collected",
+  "spot": 165.03,
+  "strike": 155.0,
+  "symbol": "O:JNJ230915P00155000",
+  "expiry": "2023-09-15",
+  "dte_days": 136,
+  "dte_sessions": 94,
+  "moneyness": 0.9392231715445677,
+  "rv20": 0.2189239971530092,
+  "rv60": 0.170421708748683,
+  "dividend_yield": 0.0273889595831061,
+  "quote": {
+    "symbol": "O:JNJ230915P00155000",
+    "day": "2023-05-02",
+    "status": "valid",
+    "age_seconds": 0.126976,
+    "bid": 3,
+    "ask": 3.15,
+    "bid_size": 88,
+    "ask_size": 109
+  }
+}

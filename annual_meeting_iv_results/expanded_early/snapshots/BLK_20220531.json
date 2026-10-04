@@ -1,0 +1,25 @@
+{
+  "ticker": "BLK",
+  "day": "2022-05-31",
+  "status": "collected",
+  "spot": 669.08,
+  "strike": 620.0,
+  "symbol": "O:BLK221021P00620000",
+  "expiry": "2022-10-21",
+  "dte_days": 143,
+  "dte_sessions": 100,
+  "moneyness": 0.9266455431338554,
+  "rv20": 0.4088335159884146,
+  "rv60": 0.3717518612334924,
+  "dividend_yield": 0.02581156214503497,
+  "quote": {
+    "symbol": "O:BLK221021P00620000",
+    "day": "2022-05-31",
+    "status": "valid",
+    "age_seconds": 9.74297984,
+    "bid": 32.5,
+    "ask": 37,
+    "bid_size": 20,
+    "ask_size": 18
+  }
+}

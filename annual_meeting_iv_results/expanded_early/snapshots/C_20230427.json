@@ -1,0 +1,20 @@
+{
+  "ticker": "C",
+  "day": "2023-04-27",
+  "status": "collected",
+  "spot": 47.03,
+  "strike": 44.0,
+  "symbol": "O:C230915P00044000",
+  "expiry": "2023-09-15",
+  "dte_days": 141,
+  "dte_sessions": 97,
+  "moneyness": 0.9355730384860727,
+  "rv20": 0.2586159303975997,
+  "rv60": 0.34273598248823883,
+  "dividend_yield": 0.043376568147990645,
+  "quote": {
+    "symbol": "O:C230915P00044000",
+    "day": "2023-04-27",
+    "status": "missing"
+  }
+}

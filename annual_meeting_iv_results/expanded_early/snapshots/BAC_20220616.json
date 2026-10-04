@@ -1,0 +1,25 @@
+{
+  "ticker": "BAC",
+  "day": "2022-06-16",
+  "status": "collected",
+  "spot": 31.85,
+  "strike": 30.0,
+  "symbol": "O:BAC221021P00030000",
+  "expiry": "2022-10-21",
+  "dte_days": 127,
+  "dte_sessions": 88,
+  "moneyness": 0.9419152276295133,
+  "rv20": 0.3713037992859855,
+  "rv60": 0.3330689082744125,
+  "dividend_yield": 0.025431711145996856,
+  "quote": {
+    "symbol": "O:BAC221021P00030000",
+    "day": "2022-06-16",
+    "status": "valid",
+    "age_seconds": 0.492532224,
+    "bid": 2,
+    "ask": 2.06,
+    "bid_size": 2,
+    "ask_size": 1451
+  }
+}

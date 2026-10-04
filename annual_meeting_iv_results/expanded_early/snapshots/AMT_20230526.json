@@ -1,0 +1,25 @@
+{
+  "ticker": "AMT",
+  "day": "2023-05-26",
+  "status": "collected",
+  "spot": 182.18,
+  "strike": 170.0,
+  "symbol": "O:AMT231020P00170000",
+  "expiry": "2023-10-20",
+  "dte_days": 147,
+  "dte_sessions": 101,
+  "moneyness": 0.9331430453397738,
+  "rv20": 0.2722615299605215,
+  "rv60": 0.2809824077160938,
+  "dividend_yield": 0.03304424195850258,
+  "quote": {
+    "symbol": "O:AMT231020P00170000",
+    "day": "2023-05-26",
+    "status": "valid",
+    "age_seconds": 15.423426048,
+    "bid": 8.4,
+    "ask": 8.8,
+    "bid_size": 6,
+    "ask_size": 24
+  }
+}

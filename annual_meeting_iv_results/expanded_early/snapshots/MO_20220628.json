@@ -1,0 +1,25 @@
+{
+  "ticker": "MO",
+  "day": "2022-06-28",
+  "status": "collected",
+  "spot": 43.19,
+  "strike": 40.0,
+  "symbol": "O:MO221118P00040000",
+  "expiry": "2022-11-18",
+  "dte_days": 143,
+  "dte_sessions": 101,
+  "moneyness": 0.9261403102570039,
+  "rv20": 0.4852616437557293,
+  "rv60": 0.3654096926718239,
+  "dividend_yield": 0.08242648761287336,
+  "quote": {
+    "symbol": "O:MO221118P00040000",
+    "day": "2022-06-28",
+    "status": "valid",
+    "age_seconds": 119.808251392,
+    "bid": 1.97,
+    "ask": 2.03,
+    "bid_size": 171,
+    "ask_size": 24
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "CAT",
+  "day": "2023-04-05",
+  "status": "collected",
+  "spot": 213.53,
+  "strike": 200.0,
+  "symbol": "O:CAT230818P00200000",
+  "expiry": "2023-08-18",
+  "dte_days": 135,
+  "dte_sessions": 93,
+  "moneyness": 0.9366365381913548,
+  "rv20": 0.38624820272027127,
+  "rv60": 0.3049891448159639,
+  "dividend_yield": 0.022057790474406407,
+  "quote": {
+    "symbol": "O:CAT230818P00200000",
+    "day": "2023-04-05",
+    "status": "valid",
+    "age_seconds": 1.392921856,
+    "bid": 10.45,
+    "ask": 10.7,
+    "bid_size": 7,
+    "ask_size": 11
+  }
+}

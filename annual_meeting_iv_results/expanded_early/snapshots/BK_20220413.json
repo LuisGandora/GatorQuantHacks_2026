@@ -1,0 +1,20 @@
+{
+  "ticker": "BK",
+  "day": "2022-04-13",
+  "status": "collected",
+  "spot": 48.34,
+  "strike": 45.0,
+  "symbol": "O:BK220916P00045000",
+  "expiry": "2022-09-16",
+  "dte_days": 156,
+  "dte_sessions": 107,
+  "moneyness": 0.9309060819197351,
+  "rv20": 0.2384115542106735,
+  "rv60": 0.36671223161239014,
+  "dividend_yield": 0.027513446421183283,
+  "quote": {
+    "symbol": "O:BK220916P00045000",
+    "day": "2022-04-13",
+    "status": "missing"
+  }
+}

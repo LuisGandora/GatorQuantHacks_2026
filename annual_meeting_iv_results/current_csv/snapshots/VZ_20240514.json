@@ -1,0 +1,25 @@
+{
+  "ticker": "VZ",
+  "day": "2024-05-14",
+  "status": "collected",
+  "spot": 40.49,
+  "strike": 37.0,
+  "symbol": "O:VZ240920P00037000",
+  "expiry": "2024-09-20",
+  "dte_days": 129,
+  "dte_sessions": 89,
+  "moneyness": 0.9138058779945665,
+  "rv20": 0.24144853808858294,
+  "rv60": 0.18529349517069593,
+  "dividend_yield": 0.06538651518893554,
+  "quote": {
+    "symbol": "O:VZ240920P00037000",
+    "day": "2024-05-14",
+    "status": "valid",
+    "age_seconds": 14.04378624,
+    "bid": 0.61,
+    "ask": 0.63,
+    "bid_size": 13,
+    "ask_size": 79
+  }
+}

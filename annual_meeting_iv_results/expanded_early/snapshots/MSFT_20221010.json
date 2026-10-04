@@ -1,0 +1,25 @@
+{
+  "ticker": "MSFT",
+  "day": "2022-10-10",
+  "status": "collected",
+  "spot": 229.25,
+  "strike": 220.0,
+  "symbol": "O:MSFT230217P00220000",
+  "expiry": "2023-02-17",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9596510359869138,
+  "rv20": 0.36132907346038295,
+  "rv60": 0.32025329360073934,
+  "dividend_yield": 0.010817884405670665,
+  "quote": {
+    "symbol": "O:MSFT230217P00220000",
+    "day": "2022-10-10",
+    "status": "valid",
+    "age_seconds": 4.095431936,
+    "bid": 14.6,
+    "ask": 14.85,
+    "bid_size": 40,
+    "ask_size": 79
+  }
+}

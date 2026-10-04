@@ -1,0 +1,25 @@
+{
+  "ticker": "JPM",
+  "day": "2024-05-24",
+  "status": "collected",
+  "spot": 200.71,
+  "strike": 185.0,
+  "symbol": "O:JPM240920P00185000",
+  "expiry": "2024-09-20",
+  "dte_days": 119,
+  "dte_sessions": 81,
+  "moneyness": 0.9217278660754322,
+  "rv20": 0.2191398123817804,
+  "rv60": 0.22700525597477564,
+  "dividend_yield": 0.021174829355786955,
+  "quote": {
+    "symbol": "O:JPM240920P00185000",
+    "day": "2024-05-24",
+    "status": "valid",
+    "age_seconds": 0.362750464,
+    "bid": 2.79,
+    "ask": 2.9,
+    "bid_size": 20,
+    "ask_size": 18
+  }
+}

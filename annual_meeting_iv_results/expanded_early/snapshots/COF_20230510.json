@@ -1,0 +1,25 @@
+{
+  "ticker": "COF",
+  "day": "2023-05-10",
+  "status": "collected",
+  "spot": 87.04,
+  "strike": 80.0,
+  "symbol": "O:COF230915P00080000",
+  "expiry": "2023-09-15",
+  "dte_days": 128,
+  "dte_sessions": 88,
+  "moneyness": 0.9191176470588235,
+  "rv20": 0.31376290533157986,
+  "rv60": 0.3329748859213336,
+  "dividend_yield": 0.0275735294117647,
+  "quote": {
+    "symbol": "O:COF230915P00080000",
+    "day": "2023-05-10",
+    "status": "valid",
+    "age_seconds": 0.489065984,
+    "bid": 5.1,
+    "ask": 5.4,
+    "bid_size": 50,
+    "ask_size": 64
+  }
+}

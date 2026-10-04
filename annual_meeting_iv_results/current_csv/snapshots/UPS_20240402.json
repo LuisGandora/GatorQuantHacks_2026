@@ -1,0 +1,25 @@
+{
+  "ticker": "UPS",
+  "day": "2024-04-02",
+  "status": "collected",
+  "spot": 149.15,
+  "strike": 140.0,
+  "symbol": "O:UPS240719P00140000",
+  "expiry": "2024-07-19",
+  "dte_days": 108,
+  "dte_sessions": 75,
+  "moneyness": 0.9386523633925578,
+  "rv20": 0.3590190103161318,
+  "rv60": 0.3178957640400393,
+  "dividend_yield": 0.043513241702983575,
+  "quote": {
+    "symbol": "O:UPS240719P00140000",
+    "day": "2024-04-02",
+    "status": "valid",
+    "age_seconds": 3.729835264,
+    "bid": 3.8,
+    "ask": 3.95,
+    "bid_size": 73,
+    "ask_size": 199
+  }
+}

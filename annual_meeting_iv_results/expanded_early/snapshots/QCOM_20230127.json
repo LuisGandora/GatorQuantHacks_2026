@@ -1,0 +1,25 @@
+{
+  "ticker": "QCOM",
+  "day": "2023-01-27",
+  "status": "collected",
+  "spot": 133.4,
+  "strike": 125.0,
+  "symbol": "O:QCOM230616P00125000",
+  "expiry": "2023-06-16",
+  "dte_days": 140,
+  "dte_sessions": 97,
+  "moneyness": 0.937031484257871,
+  "rv20": 0.43266033803154647,
+  "rv60": 0.481470604302868,
+  "dividend_yield": 0.0219640179910045,
+  "quote": {
+    "symbol": "O:QCOM230616P00125000",
+    "day": "2023-01-27",
+    "status": "valid",
+    "age_seconds": 0.131508992,
+    "bid": 7.7,
+    "ask": 7.85,
+    "bid_size": 20,
+    "ask_size": 15
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "MDT",
+  "day": "2025-12-10",
+  "status": "collected",
+  "spot": 100.77,
+  "strike": 92.5,
+  "symbol": "O:MDT260320P00092500",
+  "expiry": "2026-03-20",
+  "dte_days": 100,
+  "dte_sessions": 68,
+  "moneyness": 0.9179319241837849,
+  "rv20": 0.2540784709534116,
+  "rv60": 0.1912858537730042,
+  "dividend_yield": 0.027984519202143496,
+  "quote": {
+    "symbol": "O:MDT260320P00092500",
+    "day": "2025-12-10",
+    "status": "valid",
+    "age_seconds": 0.356958559,
+    "bid": 1.27,
+    "ask": 1.39,
+    "bid_size": 44,
+    "ask_size": 57
+  }
+}

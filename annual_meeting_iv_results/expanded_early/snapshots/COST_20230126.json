@@ -1,0 +1,25 @@
+{
+  "ticker": "COST",
+  "day": "2023-01-26",
+  "status": "collected",
+  "spot": 498.3,
+  "strike": 460.0,
+  "symbol": "O:COST230616P00460000",
+  "expiry": "2023-06-16",
+  "dte_days": 141,
+  "dte_sessions": 98,
+  "moneyness": 0.9231386714830423,
+  "rv20": 0.3124597788369667,
+  "rv60": 0.30380717736856905,
+  "dividend_yield": 0.007003812964077865,
+  "quote": {
+    "symbol": "O:COST230616P00460000",
+    "day": "2023-01-26",
+    "status": "valid",
+    "age_seconds": 14.92119424,
+    "bid": 13.3,
+    "ask": 13.65,
+    "bid_size": 19,
+    "ask_size": 14
+  }
+}

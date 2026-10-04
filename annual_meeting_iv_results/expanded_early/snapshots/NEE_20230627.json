@@ -1,0 +1,25 @@
+{
+  "ticker": "NEE",
+  "day": "2023-06-27",
+  "status": "collected",
+  "spot": 73.91,
+  "strike": 70.0,
+  "symbol": "O:NEE231117P00070000",
+  "expiry": "2023-11-17",
+  "dte_days": 143,
+  "dte_sessions": 101,
+  "moneyness": 0.9470978216750102,
+  "rv20": 0.1693938009665338,
+  "rv60": 0.18879451664869853,
+  "dividend_yield": 0.02415099445271276,
+  "quote": {
+    "symbol": "O:NEE231117P00070000",
+    "day": "2023-06-27",
+    "status": "valid",
+    "age_seconds": 10.879928832,
+    "bid": 2.1,
+    "ask": 2.2,
+    "bid_size": 126,
+    "ask_size": 298
+  }
+}

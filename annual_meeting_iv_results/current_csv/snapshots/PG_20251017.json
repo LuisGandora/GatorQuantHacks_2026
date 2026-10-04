@@ -1,0 +1,25 @@
+{
+  "ticker": "PG",
+  "day": "2025-10-17",
+  "status": "collected",
+  "spot": 151.4,
+  "strike": 140.0,
+  "symbol": "O:PG260116P00140000",
+  "expiry": "2026-01-16",
+  "dte_days": 91,
+  "dte_sessions": 62,
+  "moneyness": 0.9247027741083222,
+  "rv20": 0.1491298202200772,
+  "rv60": 0.1481658192029073,
+  "dividend_yield": 0.027256274768824303,
+  "quote": {
+    "symbol": "O:PG260116P00140000",
+    "day": "2025-10-17",
+    "status": "valid",
+    "age_seconds": 60.570851305,
+    "bid": 2.22,
+    "ask": 2.33,
+    "bid_size": 3,
+    "ask_size": 35
+  }
+}

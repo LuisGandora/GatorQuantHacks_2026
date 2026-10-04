@@ -1,0 +1,25 @@
+{
+  "ticker": "AMZN",
+  "day": "2023-05-30",
+  "status": "collected",
+  "spot": 121.66,
+  "strike": 112.5,
+  "symbol": "O:AMZN230915P00112500",
+  "expiry": "2023-09-15",
+  "dte_days": 108,
+  "dte_sessions": 75,
+  "moneyness": 0.9247082031892159,
+  "rv20": 0.29403984556540436,
+  "rv60": 0.3239375100287535,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMZN230915P00112500",
+    "day": "2023-05-30",
+    "status": "valid",
+    "age_seconds": 0.61253248,
+    "bid": 4.75,
+    "ask": 4.85,
+    "bid_size": 33,
+    "ask_size": 969
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "BKNG",
+  "day": "2025-06-05",
+  "status": "collected",
+  "spot": 5570.52,
+  "strike": 5250.0,
+  "symbol": "O:BKNG250919P05250000",
+  "expiry": "2025-09-19",
+  "dte_days": 106,
+  "dte_sessions": 73,
+  "moneyness": 0.9424613860106417,
+  "rv20": 0.18142651820794056,
+  "rv60": 0.3585440754428643,
+  "dividend_yield": 0.006435664893044096,
+  "quote": {
+    "symbol": "O:BKNG250919P05250000",
+    "day": "2025-06-05",
+    "status": "valid",
+    "age_seconds": 38.597289682,
+    "bid": 173.1,
+    "ask": 196.7,
+    "bid_size": 6,
+    "ask_size": 7
+  }
+}

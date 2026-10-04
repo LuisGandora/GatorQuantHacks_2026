@@ -1,0 +1,25 @@
+{
+  "ticker": "SCHW",
+  "day": "2025-05-27",
+  "status": "collected",
+  "spot": 88.63,
+  "strike": 82.5,
+  "symbol": "O:SCHW250919P00082500",
+  "expiry": "2025-09-19",
+  "dte_days": 115,
+  "dte_sessions": 80,
+  "moneyness": 0.9308360600248223,
+  "rv20": 0.1317420652463787,
+  "rv60": 0.35658795169544777,
+  "dividend_yield": 0.011734175786979578,
+  "quote": {
+    "symbol": "O:SCHW250919P00082500",
+    "day": "2025-05-27",
+    "status": "valid",
+    "age_seconds": 0.719714943,
+    "bid": 2.61,
+    "ask": 2.77,
+    "bid_size": 66,
+    "ask_size": 47
+  }
+}

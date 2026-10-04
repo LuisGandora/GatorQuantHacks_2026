@@ -1,0 +1,25 @@
+{
+  "ticker": "GS",
+  "day": "2025-06-06",
+  "status": "collected",
+  "spot": 614.0,
+  "strike": 570.0,
+  "symbol": "O:GS250919P00570000",
+  "expiry": "2025-09-19",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9283387622149837,
+  "rv20": 0.2482727037275892,
+  "rv60": 0.44875750186066854,
+  "dividend_yield": 0.019136807817589578,
+  "quote": {
+    "symbol": "O:GS250919P00570000",
+    "day": "2025-06-06",
+    "status": "valid",
+    "age_seconds": 0.100302892,
+    "bid": 18.75,
+    "ask": 19.05,
+    "bid_size": 6,
+    "ask_size": 12
+  }
+}

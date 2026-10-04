@@ -1,0 +1,25 @@
+{
+  "ticker": "CRM",
+  "day": "2022-06-14",
+  "status": "collected",
+  "spot": 164.45,
+  "strike": 155.0,
+  "symbol": "O:CRM221021P00155000",
+  "expiry": "2022-10-21",
+  "dte_days": 129,
+  "dte_sessions": 90,
+  "moneyness": 0.9425357251444209,
+  "rv20": 0.5988793124735475,
+  "rv60": 0.5217262151896457,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:CRM221021P00155000",
+    "day": "2022-06-14",
+    "status": "valid",
+    "age_seconds": 31.958307328,
+    "bid": 12.7,
+    "ask": 12.95,
+    "bid_size": 9,
+    "ask_size": 70
+  }
+}

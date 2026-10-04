@@ -1,0 +1,25 @@
+{
+  "ticker": "NOW",
+  "day": "2023-06-05",
+  "status": "collected",
+  "spot": 556.71,
+  "strike": 520.0,
+  "symbol": "O:NOW231117P00520000",
+  "expiry": "2023-11-17",
+  "dte_days": 165,
+  "dte_sessions": 116,
+  "moneyness": 0.9340590253453324,
+  "rv20": 0.3015435502347432,
+  "rv60": 0.36439320834072986,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:NOW231117P00520000",
+    "day": "2023-06-05",
+    "status": "valid",
+    "age_seconds": 1.142209024,
+    "bid": 33.2,
+    "ask": 35,
+    "bid_size": 38,
+    "ask_size": 7
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "GOOGL",
+  "day": "2024-06-14",
+  "status": "collected",
+  "spot": 176.79,
+  "strike": 165.0,
+  "symbol": "O:GOOGL241018P00165000",
+  "expiry": "2024-10-18",
+  "dte_days": 126,
+  "dte_sessions": 87,
+  "moneyness": 0.9333107076192093,
+  "rv20": 0.15854421779893205,
+  "rv60": 0.2806964331919916,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:GOOGL241018P00165000",
+    "day": "2024-06-14",
+    "status": "valid",
+    "age_seconds": 2.191339008,
+    "bid": 4.85,
+    "ask": 5,
+    "bid_size": 165,
+    "ask_size": 67
+  }
+}

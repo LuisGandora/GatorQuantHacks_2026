@@ -1,0 +1,25 @@
+{
+  "ticker": "SO",
+  "day": "2025-04-09",
+  "status": "collected",
+  "spot": 87.8,
+  "strike": 82.5,
+  "symbol": "O:SO250815P00082500",
+  "expiry": "2025-08-15",
+  "dte_days": 128,
+  "dte_sessions": 88,
+  "moneyness": 0.9396355353075171,
+  "rv20": 0.2147712432551408,
+  "rv60": 0.23054722361491845,
+  "dividend_yield": 0.03280182232346242,
+  "quote": {
+    "symbol": "O:SO250815P00082500",
+    "day": "2025-04-09",
+    "status": "valid",
+    "age_seconds": 1.358733312,
+    "bid": 1.75,
+    "ask": 3,
+    "bid_size": 117,
+    "ask_size": 18
+  }
+}

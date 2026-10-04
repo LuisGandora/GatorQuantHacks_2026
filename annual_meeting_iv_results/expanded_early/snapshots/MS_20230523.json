@@ -1,0 +1,25 @@
+{
+  "ticker": "MS",
+  "day": "2023-05-23",
+  "status": "collected",
+  "spot": 82.64,
+  "strike": 77.5,
+  "symbol": "O:MS230915P00077500",
+  "expiry": "2023-09-15",
+  "dte_days": 115,
+  "dte_sessions": 79,
+  "moneyness": 0.9378025169409487,
+  "rv20": 0.25926849219301545,
+  "rv60": 0.2870691672579306,
+  "dividend_yield": 0.037512100677637945,
+  "quote": {
+    "symbol": "O:MS230915P00077500",
+    "day": "2023-05-23",
+    "status": "valid",
+    "age_seconds": 1.25942912,
+    "bid": 3.05,
+    "ask": 3.15,
+    "bid_size": 18,
+    "ask_size": 5
+  }
+}

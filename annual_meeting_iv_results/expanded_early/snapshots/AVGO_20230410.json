@@ -1,0 +1,25 @@
+{
+  "ticker": "AVGO",
+  "day": "2023-04-10",
+  "status": "collected",
+  "spot": 627.39,
+  "strike": 590.0,
+  "symbol": "O:AVGO230721P00590000",
+  "expiry": "2023-07-21",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9404038955035943,
+  "rv20": 0.19812217771789062,
+  "rv60": 0.2315153196992764,
+  "dividend_yield": 0.027733945392817864,
+  "quote": {
+    "symbol": "O:AVGO230721P00590000",
+    "day": "2023-04-10",
+    "status": "valid",
+    "age_seconds": 17.849125632,
+    "bid": 21.4,
+    "ask": 22.1,
+    "bid_size": 1,
+    "ask_size": 92
+  }
+}

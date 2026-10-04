@@ -1,0 +1,25 @@
+{
+  "ticker": "WFC",
+  "day": "2022-05-02",
+  "status": "collected",
+  "spot": 43.67,
+  "strike": 40.0,
+  "symbol": "O:WFC220819P00040000",
+  "expiry": "2022-08-19",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9159606136936111,
+  "rv20": 0.30370461815039435,
+  "rv60": 0.38747635398662555,
+  "dividend_yield": 0.01717426150675521,
+  "quote": {
+    "symbol": "O:WFC220819P00040000",
+    "day": "2022-05-02",
+    "status": "valid",
+    "age_seconds": 7.023053568,
+    "bid": 2.28,
+    "ask": 2.39,
+    "bid_size": 98,
+    "ask_size": 124
+  }
+}

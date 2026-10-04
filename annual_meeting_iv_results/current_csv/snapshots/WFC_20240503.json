@@ -1,0 +1,25 @@
+{
+  "ticker": "WFC",
+  "day": "2024-05-03",
+  "status": "collected",
+  "spot": 59.94,
+  "strike": 55.0,
+  "symbol": "O:WFC240816P00055000",
+  "expiry": "2024-08-16",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9175842509175843,
+  "rv20": 0.1809036877460491,
+  "rv60": 0.20672747240876993,
+  "dividend_yield": 0.02252252252252252,
+  "quote": {
+    "symbol": "O:WFC240816P00055000",
+    "day": "2024-05-03",
+    "status": "valid",
+    "age_seconds": 11.993729792,
+    "bid": 1.14,
+    "ask": 1.16,
+    "bid_size": 60,
+    "ask_size": 23
+  }
+}

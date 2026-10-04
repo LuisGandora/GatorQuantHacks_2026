@@ -1,0 +1,25 @@
+{
+  "ticker": "INTC",
+  "day": "2025-06-23",
+  "status": "collected",
+  "spot": 21.19,
+  "strike": 20.0,
+  "symbol": "O:INTC251017P00020000",
+  "expiry": "2025-10-17",
+  "dte_days": 116,
+  "dte_sessions": 82,
+  "moneyness": 0.9438414346389806,
+  "rv20": 0.47868758967065794,
+  "rv60": 0.6540054388005735,
+  "dividend_yield": 0.005899008966493629,
+  "quote": {
+    "symbol": "O:INTC251017P00020000",
+    "day": "2025-06-23",
+    "status": "valid",
+    "age_seconds": 0.222327554,
+    "bid": 1.38,
+    "ask": 1.68,
+    "bid_size": 1605,
+    "ask_size": 296
+  }
+}

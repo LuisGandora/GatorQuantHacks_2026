@@ -1,0 +1,25 @@
+{
+  "ticker": "COF",
+  "day": "2022-05-09",
+  "status": "collected",
+  "spot": 123.22,
+  "strike": 120.0,
+  "symbol": "O:COF220916P00120000",
+  "expiry": "2022-09-16",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9738678785911378,
+  "rv20": 0.4570141988620409,
+  "rv60": 0.41641590116343546,
+  "dividend_yield": 0.017854244440837528,
+  "quote": {
+    "symbol": "O:COF220916P00120000",
+    "day": "2022-05-09",
+    "status": "valid",
+    "age_seconds": 0.534430976,
+    "bid": 10.8,
+    "ask": 11.3,
+    "bid_size": 40,
+    "ask_size": 54
+  }
+}

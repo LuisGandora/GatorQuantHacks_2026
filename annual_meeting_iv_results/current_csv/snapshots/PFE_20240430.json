@@ -1,0 +1,25 @@
+{
+  "ticker": "PFE",
+  "day": "2024-04-30",
+  "status": "collected",
+  "spot": 25.62,
+  "strike": 24.0,
+  "symbol": "O:PFE240816P00024000",
+  "expiry": "2024-08-16",
+  "dte_days": 108,
+  "dte_sessions": 75,
+  "moneyness": 0.9367681498829039,
+  "rv20": 0.21693118253897542,
+  "rv60": 0.23102016114390292,
+  "dividend_yield": 0.06440281030444964,
+  "quote": {
+    "symbol": "O:PFE240816P00024000",
+    "day": "2024-04-30",
+    "status": "valid",
+    "age_seconds": 6.593187584,
+    "bid": 0.96,
+    "ask": 1,
+    "bid_size": 323,
+    "ask_size": 64
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "CRM",
+  "day": "2024-07-02",
+  "status": "collected",
+  "spot": 256.19,
+  "strike": 240.0,
+  "symbol": "O:CRM241018P00240000",
+  "expiry": "2024-10-18",
+  "dte_days": 108,
+  "dte_sessions": 76,
+  "moneyness": 0.9368047152504001,
+  "rv20": 0.2906703404509095,
+  "rv60": 0.553457403738809,
+  "dividend_yield": 0.0015613411920840003,
+  "quote": {
+    "symbol": "O:CRM241018P00240000",
+    "day": "2024-07-02",
+    "status": "valid",
+    "age_seconds": 1.1927296,
+    "bid": 7.7,
+    "ask": 8.5,
+    "bid_size": 31,
+    "ask_size": 11
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "TSLA",
+  "day": "2024-06-17",
+  "status": "collected",
+  "spot": 187.44,
+  "strike": 165.0,
+  "symbol": "O:TSLA241018P00165000",
+  "expiry": "2024-10-18",
+  "dte_days": 123,
+  "dte_sessions": 86,
+  "moneyness": 0.8802816901408451,
+  "rv20": 0.40961453025975697,
+  "rv60": 0.5650361644167824,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:TSLA241018P00165000",
+    "day": "2024-06-17",
+    "status": "valid",
+    "age_seconds": 0.998583552,
+    "bid": 9.95,
+    "ask": 10.15,
+    "bid_size": 2,
+    "ask_size": 79
+  }
+}

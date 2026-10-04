@@ -1,0 +1,25 @@
+{
+  "ticker": "WMT",
+  "day": "2025-06-09",
+  "status": "collected",
+  "spot": 97.45,
+  "strike": 92.5,
+  "symbol": "O:WMT250919P00092500",
+  "expiry": "2025-09-19",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9492047203694202,
+  "rv20": 0.1511446653566069,
+  "rv60": 0.30377538572004736,
+  "dividend_yield": 0.009081580297588506,
+  "quote": {
+    "symbol": "O:WMT250919P00092500",
+    "day": "2025-06-09",
+    "status": "valid",
+    "age_seconds": 1.872423045,
+    "bid": 2.82,
+    "ask": 2.88,
+    "bid_size": 14,
+    "ask_size": 28
+  }
+}

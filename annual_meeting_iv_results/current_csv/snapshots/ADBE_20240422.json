@@ -1,0 +1,25 @@
+{
+  "ticker": "ADBE",
+  "day": "2024-04-22",
+  "status": "collected",
+  "spot": 466.89,
+  "strike": 440.0,
+  "symbol": "O:ADBE240816P00440000",
+  "expiry": "2024-08-16",
+  "dte_days": 116,
+  "dte_sessions": 81,
+  "moneyness": 0.9424061342072009,
+  "rv20": 0.17554030269021484,
+  "rv60": 0.42787046457618916,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:ADBE240816P00440000",
+    "day": "2024-04-22",
+    "status": "valid",
+    "age_seconds": 0.84541824,
+    "bid": 18.8,
+    "ask": 19.05,
+    "bid_size": 2,
+    "ask_size": 9
+  }
+}

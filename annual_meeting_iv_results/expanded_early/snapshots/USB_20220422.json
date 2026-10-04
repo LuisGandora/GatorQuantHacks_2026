@@ -1,0 +1,25 @@
+{
+  "ticker": "USB",
+  "day": "2022-04-22",
+  "status": "collected",
+  "spot": 50.83,
+  "strike": 50.0,
+  "symbol": "O:USB220916P00050000",
+  "expiry": "2022-09-16",
+  "dte_days": 147,
+  "dte_sessions": 101,
+  "moneyness": 0.9836710603974032,
+  "rv20": 0.2551624683599796,
+  "rv60": 0.2890326881806107,
+  "dividend_yield": 0.03541215817430651,
+  "quote": {
+    "symbol": "O:USB220916P00050000",
+    "day": "2022-04-22",
+    "status": "valid",
+    "age_seconds": 0.96562176,
+    "bid": 3.4,
+    "ask": 3.6,
+    "bid_size": 244,
+    "ask_size": 231
+  }
+}

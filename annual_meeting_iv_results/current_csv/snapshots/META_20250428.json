@@ -1,0 +1,25 @@
+{
+  "ticker": "META",
+  "day": "2025-04-28",
+  "status": "collected",
+  "spot": 549.74,
+  "strike": 510.0,
+  "symbol": "O:META250815P00510000",
+  "expiry": "2025-08-15",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9277112816968021,
+  "rv20": 0.7724140488051977,
+  "rv60": 0.5174112380371099,
+  "dividend_yield": 0.0036835595008549494,
+  "quote": {
+    "symbol": "O:META250815P00510000",
+    "day": "2025-04-28",
+    "status": "valid",
+    "age_seconds": 0.045992129,
+    "bid": 30.85,
+    "ask": 31.1,
+    "bid_size": 5,
+    "ask_size": 9
+  }
+}

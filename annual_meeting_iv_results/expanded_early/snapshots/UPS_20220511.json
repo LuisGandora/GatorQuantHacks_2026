@@ -1,0 +1,25 @@
+{
+  "ticker": "UPS",
+  "day": "2022-05-11",
+  "status": "collected",
+  "spot": 177.46,
+  "strike": 170.0,
+  "symbol": "O:UPS221021P00170000",
+  "expiry": "2022-10-21",
+  "dte_days": 163,
+  "dte_sessions": 113,
+  "moneyness": 0.9579623577144145,
+  "rv20": 0.3154273017929223,
+  "rv60": 0.29698534777987523,
+  "dividend_yield": 0.025808632931364813,
+  "quote": {
+    "symbol": "O:UPS221021P00170000",
+    "day": "2022-05-11",
+    "status": "valid",
+    "age_seconds": 2.964847616,
+    "bid": 12.8,
+    "ask": 13.35,
+    "bid_size": 31,
+    "ask_size": 21
+  }
+}

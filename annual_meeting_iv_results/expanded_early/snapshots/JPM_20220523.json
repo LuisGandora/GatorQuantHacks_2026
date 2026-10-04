@@ -1,0 +1,25 @@
+{
+  "ticker": "JPM",
+  "day": "2022-05-23",
+  "status": "collected",
+  "spot": 124.6,
+  "strike": 110.0,
+  "symbol": "O:JPM220916P00110000",
+  "expiry": "2022-09-16",
+  "dte_days": 116,
+  "dte_sessions": 80,
+  "moneyness": 0.882825040128411,
+  "rv20": 0.30443625370052346,
+  "rv60": 0.3195417157258552,
+  "dividend_yield": 0.03130016051364366,
+  "quote": {
+    "symbol": "O:JPM220916P00110000",
+    "day": "2022-05-23",
+    "status": "valid",
+    "age_seconds": 0.446453248,
+    "bid": 3.95,
+    "ask": 4.1,
+    "bid_size": 10,
+    "ask_size": 73
+  }
+}

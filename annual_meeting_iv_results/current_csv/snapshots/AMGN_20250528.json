@@ -1,0 +1,25 @@
+{
+  "ticker": "AMGN",
+  "day": "2025-05-28",
+  "status": "collected",
+  "spot": 278.4,
+  "strike": 260.0,
+  "symbol": "O:AMGN250919P00260000",
+  "expiry": "2025-09-19",
+  "dte_days": 114,
+  "dte_sessions": 79,
+  "moneyness": 0.9339080459770116,
+  "rv20": 0.32879765385068804,
+  "rv60": 0.3061670483615001,
+  "dividend_yield": 0.03279454022988506,
+  "quote": {
+    "symbol": "O:AMGN250919P00260000",
+    "day": "2025-05-28",
+    "status": "valid",
+    "age_seconds": 51.430860835,
+    "bid": 11,
+    "ask": 11.8,
+    "bid_size": 22,
+    "ask_size": 13
+  }
+}

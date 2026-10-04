@@ -1,0 +1,25 @@
+{
+  "ticker": "BLK",
+  "day": "2025-05-19",
+  "status": "collected",
+  "spot": 993.66,
+  "strike": 940.0,
+  "symbol": "O:BLK250919P00940000",
+  "expiry": "2025-09-19",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9459976249421331,
+  "rv20": 0.24460852077737263,
+  "rv60": 0.3991081648973894,
+  "dividend_yield": 0.020640863071875692,
+  "quote": {
+    "symbol": "O:BLK250919P00940000",
+    "day": "2025-05-19",
+    "status": "valid",
+    "age_seconds": 2.360191224,
+    "bid": 28.2,
+    "ask": 34.2,
+    "bid_size": 4,
+    "ask_size": 1
+  }
+}

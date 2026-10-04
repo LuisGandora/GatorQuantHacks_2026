@@ -1,0 +1,25 @@
+{
+  "ticker": "CVS",
+  "day": "2023-05-25",
+  "status": "collected",
+  "spot": 67.67,
+  "strike": 65.0,
+  "symbol": "O:CVS231117P00065000",
+  "expiry": "2023-11-17",
+  "dte_days": 176,
+  "dte_sessions": 122,
+  "moneyness": 0.9605438155755874,
+  "rv20": 0.2624528072349049,
+  "rv60": 0.2343882640617999,
+  "dividend_yield": 0.03413624944584011,
+  "quote": {
+    "symbol": "O:CVS231117P00065000",
+    "day": "2023-05-25",
+    "status": "valid",
+    "age_seconds": 27.14521216,
+    "bid": 3.65,
+    "ask": 3.8,
+    "bid_size": 49,
+    "ask_size": 81
+  }
+}

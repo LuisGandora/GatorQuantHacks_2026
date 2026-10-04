@@ -1,0 +1,25 @@
+{
+  "ticker": "TXN",
+  "day": "2022-06-06",
+  "status": "collected",
+  "spot": 167.76,
+  "strike": 160.0,
+  "symbol": "O:TXN220916P00160000",
+  "expiry": "2022-09-16",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9537434430138293,
+  "rv20": 0.3035987481007584,
+  "rv60": 0.29941262824377113,
+  "dividend_yield": 0.026645207439198855,
+  "quote": {
+    "symbol": "O:TXN220916P00160000",
+    "day": "2022-06-06",
+    "status": "valid",
+    "age_seconds": 7.843717888,
+    "bid": 7.7,
+    "ask": 7.95,
+    "bid_size": 10,
+    "ask_size": 32
+  }
+}

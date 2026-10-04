@@ -1,0 +1,25 @@
+{
+  "ticker": "ADBE",
+  "day": "2023-04-25",
+  "status": "collected",
+  "spot": 369.59,
+  "strike": 355.0,
+  "symbol": "O:ADBE231020P00355000",
+  "expiry": "2023-10-20",
+  "dte_days": 178,
+  "dte_sessions": 124,
+  "moneyness": 0.9605238236965287,
+  "rv20": 0.15652281783986166,
+  "rv60": 0.3343060218786876,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:ADBE231020P00355000",
+    "day": "2023-04-25",
+    "status": "valid",
+    "age_seconds": 2.259091712,
+    "bid": 23.85,
+    "ask": 24.25,
+    "bid_size": 58,
+    "ask_size": 8
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "DE",
+  "day": "2024-01-08",
+  "status": "collected",
+  "spot": 397.98,
+  "strike": 370.0,
+  "symbol": "O:DE240621P00370000",
+  "expiry": "2024-06-21",
+  "dte_days": 165,
+  "dte_sessions": 114,
+  "moneyness": 0.9296949595457058,
+  "rv20": 0.2649780244842196,
+  "rv60": 0.2390558850794852,
+  "dividend_yield": 0.012689079853258957,
+  "quote": {
+    "symbol": "O:DE240621P00370000",
+    "day": "2024-01-08",
+    "status": "valid",
+    "age_seconds": 0.022038272,
+    "bid": 12.5,
+    "ask": 13.5,
+    "bid_size": 91,
+    "ask_size": 88
+  }
+}

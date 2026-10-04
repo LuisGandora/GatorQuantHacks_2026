@@ -1,0 +1,25 @@
+{
+  "ticker": "TSLA",
+  "day": "2023-05-23",
+  "status": "collected",
+  "spot": 185.77,
+  "strike": 175.0,
+  "symbol": "O:TSLA230915P00175000",
+  "expiry": "2023-09-15",
+  "dte_days": 115,
+  "dte_sessions": 79,
+  "moneyness": 0.9420250847822575,
+  "rv20": 0.4099540317283073,
+  "rv60": 0.5124790426645526,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:TSLA230915P00175000",
+    "day": "2023-05-23",
+    "status": "valid",
+    "age_seconds": 1.589433856,
+    "bid": 14.6,
+    "ask": 15,
+    "bid_size": 26,
+    "ask_size": 6
+  }
+}

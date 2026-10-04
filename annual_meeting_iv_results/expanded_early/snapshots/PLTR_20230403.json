@@ -1,0 +1,25 @@
+{
+  "ticker": "PLTR",
+  "day": "2023-04-03",
+  "status": "collected",
+  "spot": 8.38,
+  "strike": 8.0,
+  "symbol": "O:PLTR230721P00008000",
+  "expiry": "2023-07-21",
+  "dte_days": 109,
+  "dte_sessions": 75,
+  "moneyness": 0.954653937947494,
+  "rv20": 0.47333662654738223,
+  "rv60": 0.7072614407387087,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:PLTR230721P00008000",
+    "day": "2023-04-03",
+    "status": "valid",
+    "age_seconds": 22.535849216,
+    "bid": 0.78,
+    "ask": 0.81,
+    "bid_size": 18,
+    "ask_size": 240
+  }
+}

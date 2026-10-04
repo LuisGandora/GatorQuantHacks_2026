@@ -1,0 +1,25 @@
+{
+  "ticker": "MMM",
+  "day": "2025-05-15",
+  "status": "collected",
+  "spot": 148.74,
+  "strike": 140.0,
+  "symbol": "O:MMM250919P00140000",
+  "expiry": "2025-09-19",
+  "dte_days": 127,
+  "dte_sessions": 87,
+  "moneyness": 0.9412397472098964,
+  "rv20": 0.4257732525644926,
+  "rv60": 0.4437575529642342,
+  "dividend_yield": 0.019026489175742907,
+  "quote": {
+    "symbol": "O:MMM250919P00140000",
+    "day": "2025-05-15",
+    "status": "valid",
+    "age_seconds": 0.868945352,
+    "bid": 5.55,
+    "ask": 5.75,
+    "bid_size": 10,
+    "ask_size": 15
+  }
+}

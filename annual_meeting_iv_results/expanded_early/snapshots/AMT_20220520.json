@@ -1,0 +1,25 @@
+{
+  "ticker": "AMT",
+  "day": "2022-05-20",
+  "status": "collected",
+  "spot": 244.28,
+  "strike": 220.0,
+  "symbol": "O:AMT221021P00220000",
+  "expiry": "2022-10-21",
+  "dte_days": 154,
+  "dte_sessions": 106,
+  "moneyness": 0.9006058621254298,
+  "rv20": 0.3368005862161907,
+  "rv60": 0.28931777787695295,
+  "dividend_yield": 0.021982970361879812,
+  "quote": {
+    "symbol": "O:AMT221021P00220000",
+    "day": "2022-05-20",
+    "status": "valid",
+    "age_seconds": 25.903225856,
+    "bid": 9.6,
+    "ask": 10.3,
+    "bid_size": 20,
+    "ask_size": 40
+  }
+}

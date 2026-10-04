@@ -1,0 +1,25 @@
+{
+  "ticker": "NVDA",
+  "day": "2024-09-04",
+  "status": "collected",
+  "spot": 106.21,
+  "strike": 102.0,
+  "symbol": "O:NVDA241220P00102000",
+  "expiry": "2024-12-20",
+  "dte_days": 107,
+  "dte_sessions": 76,
+  "moneyness": 0.9603615478768478,
+  "rv20": 0.6967945004487986,
+  "rv60": 0.6652423061157549,
+  "dividend_yield": 0.0012239902080783355,
+  "quote": {
+    "symbol": "O:NVDA241220P00102000",
+    "day": "2024-09-04",
+    "status": "valid",
+    "age_seconds": 3.35846784,
+    "bid": 9.75,
+    "ask": 9.85,
+    "bid_size": 176,
+    "ask_size": 17
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "TMUS",
+  "day": "2024-06-17",
+  "status": "collected",
+  "spot": 177.38,
+  "strike": 165.0,
+  "symbol": "O:TMUS240920P00165000",
+  "expiry": "2024-09-20",
+  "dte_days": 95,
+  "dte_sessions": 66,
+  "moneyness": 0.9302063366783178,
+  "rv20": 0.19012085598535539,
+  "rv60": 0.1287522128919146,
+  "dividend_yield": 0.01099334761528921,
+  "quote": {
+    "symbol": "O:TMUS240920P00165000",
+    "day": "2024-06-17",
+    "status": "valid",
+    "age_seconds": 8.696484096,
+    "bid": 2.75,
+    "ask": 3.65,
+    "bid_size": 10,
+    "ask_size": 5
+  }
+}

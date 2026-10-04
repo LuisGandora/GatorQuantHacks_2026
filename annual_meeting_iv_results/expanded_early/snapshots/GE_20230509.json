@@ -1,0 +1,25 @@
+{
+  "ticker": "GE",
+  "day": "2023-05-09",
+  "status": "collected",
+  "spot": 101.0,
+  "strike": 95.0,
+  "symbol": "O:GE230915P00095000",
+  "expiry": "2023-09-15",
+  "dte_days": 129,
+  "dte_sessions": 89,
+  "moneyness": 0.9405940594059405,
+  "rv20": 0.20203162033178018,
+  "rv60": 0.23389826413650325,
+  "dividend_yield": 0.0031683168316831685,
+  "quote": {
+    "symbol": "O:GE230915P00095000",
+    "day": "2023-05-09",
+    "status": "valid",
+    "age_seconds": 5.995444224,
+    "bid": 4.2,
+    "ask": 4.35,
+    "bid_size": 33,
+    "ask_size": 99
+  }
+}

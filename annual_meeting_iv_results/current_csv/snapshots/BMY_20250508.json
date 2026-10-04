@@ -1,0 +1,25 @@
+{
+  "ticker": "BMY",
+  "day": "2025-05-08",
+  "status": "collected",
+  "spot": 46.88,
+  "strike": 45.0,
+  "symbol": "O:BMY250919P00045000",
+  "expiry": "2025-09-19",
+  "dte_days": 134,
+  "dte_sessions": 92,
+  "moneyness": 0.9598976109215016,
+  "rv20": 0.3620810228755916,
+  "rv60": 0.3251105719147165,
+  "dividend_yield": 0.05204778156996587,
+  "quote": {
+    "symbol": "O:BMY250919P00045000",
+    "day": "2025-05-08",
+    "status": "valid",
+    "age_seconds": 2.598932643,
+    "bid": 2.81,
+    "ask": 3.05,
+    "bid_size": 55,
+    "ask_size": 46
+  }
+}

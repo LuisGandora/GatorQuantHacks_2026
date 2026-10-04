@@ -1,0 +1,25 @@
+{
+  "ticker": "AMGN",
+  "day": "2024-04-23",
+  "status": "collected",
+  "spot": 273.54,
+  "strike": 250.0,
+  "symbol": "O:AMGN240816P00250000",
+  "expiry": "2024-08-16",
+  "dte_days": 115,
+  "dte_sessions": 80,
+  "moneyness": 0.9139431161804489,
+  "rv20": 0.20326258579440465,
+  "rv60": 0.23007550454936537,
+  "dividend_yield": 0.031585874095196316,
+  "quote": {
+    "symbol": "O:AMGN240816P00250000",
+    "day": "2024-04-23",
+    "status": "valid",
+    "age_seconds": 0.089596672,
+    "bid": 7.45,
+    "ask": 7.65,
+    "bid_size": 15,
+    "ask_size": 30
+  }
+}

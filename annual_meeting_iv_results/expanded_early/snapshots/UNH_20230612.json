@@ -1,0 +1,25 @@
+{
+  "ticker": "UNH",
+  "day": "2023-06-12",
+  "status": "collected",
+  "spot": 492.59,
+  "strike": 460.0,
+  "symbol": "O:UNH230915P00460000",
+  "expiry": "2023-09-15",
+  "dte_days": 95,
+  "dte_sessions": 66,
+  "moneyness": 0.9338395014109098,
+  "rv20": 0.170093782527172,
+  "rv60": 0.21309250255909076,
+  "dividend_yield": 0.013398566759373922,
+  "quote": {
+    "symbol": "O:UNH230915P00460000",
+    "day": "2023-06-12",
+    "status": "valid",
+    "age_seconds": 3.41777408,
+    "bid": 8.15,
+    "ask": 8.65,
+    "bid_size": 281,
+    "ask_size": 7
+  }
+}

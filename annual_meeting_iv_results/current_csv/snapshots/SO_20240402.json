@@ -1,0 +1,25 @@
+{
+  "ticker": "SO",
+  "day": "2024-04-02",
+  "status": "collected",
+  "spot": 71.34,
+  "strike": 67.5,
+  "symbol": "O:SO240816P00067500",
+  "expiry": "2024-08-16",
+  "dte_days": 136,
+  "dte_sessions": 95,
+  "moneyness": 0.9461732548359966,
+  "rv20": 0.1526442654416344,
+  "rv60": 0.16592735758564303,
+  "dividend_yield": 0.03924866834875245,
+  "quote": {
+    "symbol": "O:SO240816P00067500",
+    "day": "2024-04-02",
+    "status": "valid",
+    "age_seconds": 9.908722176,
+    "bid": 1.45,
+    "ask": 1.6,
+    "bid_size": 52,
+    "ask_size": 25
+  }
+}

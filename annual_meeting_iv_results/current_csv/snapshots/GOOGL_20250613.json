@@ -1,0 +1,25 @@
+{
+  "ticker": "GOOGL",
+  "day": "2025-06-13",
+  "status": "collected",
+  "spot": 174.67,
+  "strike": 165.0,
+  "symbol": "O:GOOGL251017P00165000",
+  "expiry": "2025-10-17",
+  "dte_days": 126,
+  "dte_sessions": 87,
+  "moneyness": 0.9446384610980707,
+  "rv20": 0.2408189772450115,
+  "rv60": 0.3975671964407665,
+  "dividend_yield": 0.0045800652659300405,
+  "quote": {
+    "symbol": "O:GOOGL251017P00165000",
+    "day": "2025-06-13",
+    "status": "valid",
+    "age_seconds": 0.046628129,
+    "bid": 7.7,
+    "ask": 7.85,
+    "bid_size": 7,
+    "ask_size": 113
+  }
+}

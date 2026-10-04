@@ -1,0 +1,25 @@
+{
+  "ticker": "C",
+  "day": "2025-05-02",
+  "status": "collected",
+  "spot": 70.59,
+  "strike": 62.5,
+  "symbol": "O:C250919P00062500",
+  "expiry": "2025-09-19",
+  "dte_days": 140,
+  "dte_sessions": 96,
+  "moneyness": 0.8853945318033716,
+  "rv20": 0.708044526899305,
+  "rv60": 0.4824999135931172,
+  "dividend_yield": 0.031307550644567216,
+  "quote": {
+    "symbol": "O:C250919P00062500",
+    "day": "2025-05-02",
+    "status": "valid",
+    "age_seconds": 1.140393755,
+    "bid": 2.46,
+    "ask": 2.51,
+    "bid_size": 14,
+    "ask_size": 10
+  }
+}

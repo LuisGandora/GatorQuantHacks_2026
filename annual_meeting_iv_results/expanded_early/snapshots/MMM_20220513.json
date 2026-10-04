@@ -1,0 +1,25 @@
+{
+  "ticker": "MMM",
+  "day": "2022-05-13",
+  "status": "collected",
+  "spot": 149.3,
+  "strike": 140.0,
+  "symbol": "O:MMM221021P00140000",
+  "expiry": "2022-10-21",
+  "dte_days": 161,
+  "dte_sessions": 111,
+  "moneyness": 0.9377093101138646,
+  "rv20": 0.31634147871467794,
+  "rv60": 0.2713225140533955,
+  "dividend_yield": 0.039718687206965836,
+  "quote": {
+    "symbol": "O:MMM221021P00140000",
+    "day": "2022-05-13",
+    "status": "valid",
+    "age_seconds": 8.280037632,
+    "bid": 7.45,
+    "ask": 7.75,
+    "bid_size": 44,
+    "ask_size": 41
+  }
+}

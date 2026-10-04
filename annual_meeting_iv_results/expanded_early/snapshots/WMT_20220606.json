@@ -1,0 +1,25 @@
+{
+  "ticker": "WMT",
+  "day": "2022-06-06",
+  "status": "collected",
+  "spot": 124.87,
+  "strike": 115.0,
+  "symbol": "O:WMT220916P00115000",
+  "expiry": "2022-09-16",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9209577961079523,
+  "rv20": 0.5432990998883359,
+  "rv60": 0.35654045173489385,
+  "dividend_yield": 0.017778489629214383,
+  "quote": {
+    "symbol": "O:WMT220916P00115000",
+    "day": "2022-06-06",
+    "status": "valid",
+    "age_seconds": 0.916805888,
+    "bid": 3,
+    "ask": 3.15,
+    "bid_size": 60,
+    "ask_size": 413
+  }
+}

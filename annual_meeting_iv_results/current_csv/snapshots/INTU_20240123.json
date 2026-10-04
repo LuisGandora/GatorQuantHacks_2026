@@ -1,0 +1,25 @@
+{
+  "ticker": "INTU",
+  "day": "2024-01-23",
+  "status": "collected",
+  "spot": 635.82,
+  "strike": 590.0,
+  "symbol": "O:INTU240621P00590000",
+  "expiry": "2024-06-21",
+  "dte_days": 150,
+  "dte_sessions": 104,
+  "moneyness": 0.9279355792519894,
+  "rv20": 0.2110250776538397,
+  "rv60": 0.23468985556270755,
+  "dividend_yield": 0.00528451448523167,
+  "quote": {
+    "symbol": "O:INTU240621P00590000",
+    "day": "2024-01-23",
+    "status": "valid",
+    "age_seconds": 0.217116416,
+    "bid": 21.5,
+    "ask": 22.3,
+    "bid_size": 38,
+    "ask_size": 44
+  }
+}

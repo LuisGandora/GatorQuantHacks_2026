@@ -1,0 +1,25 @@
+{
+  "ticker": "CHTR",
+  "day": "2022-05-02",
+  "status": "collected",
+  "spot": 432.54,
+  "strike": 400.0,
+  "symbol": "O:CHTR220916P00400000",
+  "expiry": "2022-09-16",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9247699634715864,
+  "rv20": 0.4486527274661475,
+  "rv60": 0.3407019919625167,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:CHTR220916P00400000",
+    "day": "2022-05-02",
+    "status": "valid",
+    "age_seconds": 4.861437952,
+    "bid": 22,
+    "ask": 25.4,
+    "bid_size": 13,
+    "ask_size": 7
+  }
+}

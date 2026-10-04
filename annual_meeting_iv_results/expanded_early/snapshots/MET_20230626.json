@@ -1,0 +1,25 @@
+{
+  "ticker": "MET",
+  "day": "2023-06-26",
+  "status": "collected",
+  "spot": 54.06,
+  "strike": 50.0,
+  "symbol": "O:MET231215P00050000",
+  "expiry": "2023-12-15",
+  "dte_days": 172,
+  "dte_sessions": 121,
+  "moneyness": 0.9248982611912689,
+  "rv20": 0.3735338716503717,
+  "rv60": 0.3477986279716393,
+  "dividend_yield": 0.03736588975212726,
+  "quote": {
+    "symbol": "O:MET231215P00050000",
+    "day": "2023-06-26",
+    "status": "valid",
+    "age_seconds": 10.361431808,
+    "bid": 2.4,
+    "ask": 2.55,
+    "bid_size": 136,
+    "ask_size": 112
+  }
+}

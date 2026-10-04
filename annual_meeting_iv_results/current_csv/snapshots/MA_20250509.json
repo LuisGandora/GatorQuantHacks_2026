@@ -1,0 +1,25 @@
+{
+  "ticker": "MA",
+  "day": "2025-05-09",
+  "status": "collected",
+  "spot": 568.64,
+  "strike": 520.0,
+  "symbol": "O:MA250919P00520000",
+  "expiry": "2025-09-19",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9144625773776027,
+  "rv20": 0.22670917696682255,
+  "rv60": 0.30867714575716626,
+  "dividend_yield": 0.004818514350028138,
+  "quote": {
+    "symbol": "O:MA250919P00520000",
+    "day": "2025-05-09",
+    "status": "valid",
+    "age_seconds": 0.82364408,
+    "bid": 13.05,
+    "ask": 13.4,
+    "bid_size": 6,
+    "ask_size": 5
+  }
+}

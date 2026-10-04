@@ -1,0 +1,25 @@
+{
+  "ticker": "MS",
+  "day": "2022-05-31",
+  "status": "collected",
+  "spot": 86.14,
+  "strike": 80.0,
+  "symbol": "O:MS220916P00080000",
+  "expiry": "2022-09-16",
+  "dte_days": 108,
+  "dte_sessions": 75,
+  "moneyness": 0.9287206872533086,
+  "rv20": 0.3717158063384219,
+  "rv60": 0.35981929228158377,
+  "dividend_yield": 0.0325052240538658,
+  "quote": {
+    "symbol": "O:MS220916P00080000",
+    "day": "2022-05-31",
+    "status": "valid",
+    "age_seconds": 2.708211712,
+    "bid": 3.7,
+    "ask": 3.9,
+    "bid_size": 14,
+    "ask_size": 44
+  }
+}

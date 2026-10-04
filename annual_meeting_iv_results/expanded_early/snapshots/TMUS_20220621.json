@@ -1,0 +1,25 @@
+{
+  "ticker": "TMUS",
+  "day": "2022-06-21",
+  "status": "collected",
+  "spot": 131.67,
+  "strike": 120.0,
+  "symbol": "O:TMUS221118P00120000",
+  "expiry": "2022-11-18",
+  "dte_days": 150,
+  "dte_sessions": 106,
+  "moneyness": 0.911369332421964,
+  "rv20": 0.2899763817476349,
+  "rv60": 0.3281244417776997,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:TMUS221118P00120000",
+    "day": "2022-06-21",
+    "status": "valid",
+    "age_seconds": 141.675949568,
+    "bid": 5.75,
+    "ask": 6,
+    "bid_size": 309,
+    "ask_size": 18
+  }
+}

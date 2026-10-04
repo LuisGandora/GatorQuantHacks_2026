@@ -1,0 +1,25 @@
+{
+  "ticker": "RTX",
+  "day": "2024-05-07",
+  "status": "collected",
+  "spot": 103.23,
+  "strike": 95.0,
+  "symbol": "O:RTX240920P00095000",
+  "expiry": "2024-09-20",
+  "dte_days": 136,
+  "dte_sessions": 94,
+  "moneyness": 0.9202751138235009,
+  "rv20": 0.08815228698132618,
+  "rv60": 0.11946953287134092,
+  "dividend_yield": 0.02286157124866802,
+  "quote": {
+    "symbol": "O:RTX240920P00095000",
+    "day": "2024-05-07",
+    "status": "valid",
+    "age_seconds": 1.444636928,
+    "bid": 1.14,
+    "ask": 1.4,
+    "bid_size": 151,
+    "ask_size": 45
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "COP",
+  "day": "2024-04-05",
+  "status": "collected",
+  "spot": 133.52,
+  "strike": 125.0,
+  "symbol": "O:COP240719P00125000",
+  "expiry": "2024-07-19",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9361893349310964,
+  "rv20": 0.14028317282175945,
+  "rv60": 0.19509852038052686,
+  "dividend_yield": 0.031306171360095864,
+  "quote": {
+    "symbol": "O:COP240719P00125000",
+    "day": "2024-04-05",
+    "status": "valid",
+    "age_seconds": 42.766824448,
+    "bid": 3,
+    "ask": 3.2,
+    "bid_size": 42,
+    "ask_size": 38
+  }
+}

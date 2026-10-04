@@ -1,0 +1,25 @@
+{
+  "ticker": "MRK",
+  "day": "2025-05-30",
+  "status": "collected",
+  "spot": 76.84,
+  "strike": 70.0,
+  "symbol": "O:MRK250919P00070000",
+  "expiry": "2025-09-19",
+  "dte_days": 112,
+  "dte_sessions": 77,
+  "moneyness": 0.9109838625715773,
+  "rv20": 0.3978396687959131,
+  "rv60": 0.3521764700623786,
+  "dividend_yield": 0.04112441436751692,
+  "quote": {
+    "symbol": "O:MRK250919P00070000",
+    "day": "2025-05-30",
+    "status": "valid",
+    "age_seconds": 2.169453105,
+    "bid": 3.25,
+    "ask": 3.4,
+    "bid_size": 149,
+    "ask_size": 83
+  }
+}

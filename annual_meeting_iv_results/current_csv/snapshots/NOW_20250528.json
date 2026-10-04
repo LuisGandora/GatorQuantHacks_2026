@@ -1,0 +1,25 @@
+{
+  "ticker": "NOW",
+  "day": "2025-05-28",
+  "status": "collected",
+  "spot": 1021.3,
+  "strike": 960.0,
+  "symbol": "O:NOW250919P00960000",
+  "expiry": "2025-09-19",
+  "dte_days": 114,
+  "dte_sessions": 79,
+  "moneyness": 0.9399784588269853,
+  "rv20": 0.21828129600122795,
+  "rv60": 0.586131250145122,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:NOW250919P00960000",
+    "day": "2025-05-28",
+    "status": "valid",
+    "age_seconds": 12.268059183,
+    "bid": 49.3,
+    "ask": 51.4,
+    "bid_size": 10,
+    "ask_size": 16
+  }
+}

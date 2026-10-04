@@ -1,0 +1,25 @@
+{
+  "ticker": "LMT",
+  "day": "2022-04-22",
+  "status": "collected",
+  "spot": 445.79,
+  "strike": 415.0,
+  "symbol": "O:LMT220916P00415000",
+  "expiry": "2022-09-16",
+  "dte_days": 147,
+  "dte_sessions": 101,
+  "moneyness": 0.9309316045671728,
+  "rv20": 0.23081160221528843,
+  "rv60": 0.30916957283289287,
+  "dividend_yield": 0.024226653805603536,
+  "quote": {
+    "symbol": "O:LMT220916P00415000",
+    "day": "2022-04-22",
+    "status": "valid",
+    "age_seconds": 22.685597952,
+    "bid": 18.2,
+    "ask": 18.9,
+    "bid_size": 33,
+    "ask_size": 9
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "BMY",
+  "day": "2023-06-09",
+  "status": "collected",
+  "spot": 64.8,
+  "strike": 60.0,
+  "symbol": "O:BMY230915P00060000",
+  "expiry": "2023-09-15",
+  "dte_days": 98,
+  "dte_sessions": 67,
+  "moneyness": 0.9259259259259259,
+  "rv20": 0.15785683240127651,
+  "rv60": 0.16766258028172418,
+  "dividend_yield": 0.03425925925925926,
+  "quote": {
+    "symbol": "O:BMY230915P00060000",
+    "day": "2023-06-09",
+    "status": "valid",
+    "age_seconds": 1.677394688,
+    "bid": 0.96,
+    "ask": 1.03,
+    "bid_size": 70,
+    "ask_size": 33
+  }
+}

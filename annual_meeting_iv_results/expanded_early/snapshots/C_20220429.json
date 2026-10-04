@@ -1,0 +1,25 @@
+{
+  "ticker": "C",
+  "day": "2022-04-29",
+  "status": "collected",
+  "spot": 48.21,
+  "strike": 47.5,
+  "symbol": "O:C220819P00047500",
+  "expiry": "2022-08-19",
+  "dte_days": 112,
+  "dte_sessions": 77,
+  "moneyness": 0.9852727649865173,
+  "rv20": 0.2513862228962843,
+  "rv60": 0.26456301571715424,
+  "dividend_yield": 0.042314872433105166,
+  "quote": {
+    "symbol": "O:C220819P00047500",
+    "day": "2022-04-29",
+    "status": "valid",
+    "age_seconds": 1.277856768,
+    "bid": 3.6,
+    "ask": 3.75,
+    "bid_size": 103,
+    "ask_size": 76
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "LMT",
+  "day": "2023-04-28",
+  "status": "collected",
+  "spot": 464.45,
+  "strike": 440.0,
+  "symbol": "O:LMT230915P00440000",
+  "expiry": "2023-09-15",
+  "dte_days": 140,
+  "dte_sessions": 96,
+  "moneyness": 0.9473570890300356,
+  "rv20": 0.22044416206657075,
+  "rv60": 0.17173190708795072,
+  "dividend_yield": 0.024975777801700936,
+  "quote": {
+    "symbol": "O:LMT230915P00440000",
+    "day": "2023-04-28",
+    "status": "valid",
+    "age_seconds": 10.33292544,
+    "bid": 12.8,
+    "ask": 13.5,
+    "bid_size": 51,
+    "ask_size": 49
+  }
+}

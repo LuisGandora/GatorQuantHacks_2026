@@ -1,0 +1,25 @@
+{
+  "ticker": "KO",
+  "day": "2024-06-14",
+  "status": "collected",
+  "spot": 62.55,
+  "strike": 57.5,
+  "symbol": "O:KO240920P00057500",
+  "expiry": "2024-09-20",
+  "dte_days": 98,
+  "dte_sessions": 67,
+  "moneyness": 0.9192645883293366,
+  "rv20": 0.11619076970358522,
+  "rv60": 0.11146789082863996,
+  "dividend_yield": 0.029816147082334134,
+  "quote": {
+    "symbol": "O:KO240920P00057500",
+    "day": "2024-06-14",
+    "status": "valid",
+    "age_seconds": 10.271831296,
+    "bid": 0.28,
+    "ask": 0.32,
+    "bid_size": 143,
+    "ask_size": 178
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "PG",
+  "day": "2024-10-11",
+  "status": "collected",
+  "spot": 171.09,
+  "strike": 160.0,
+  "symbol": "O:PG250117P00160000",
+  "expiry": "2025-01-17",
+  "dte_days": 98,
+  "dte_sessions": 66,
+  "moneyness": 0.9351803144543808,
+  "rv20": 0.13650906794763695,
+  "rv60": 0.1875448062389562,
+  "dividend_yield": 0.022762288853819628,
+  "quote": {
+    "symbol": "O:PG250117P00160000",
+    "day": "2024-10-11",
+    "status": "valid",
+    "age_seconds": 0.511951104,
+    "bid": 1.79,
+    "ask": 2.37,
+    "bid_size": 192,
+    "ask_size": 218
+  }
+}

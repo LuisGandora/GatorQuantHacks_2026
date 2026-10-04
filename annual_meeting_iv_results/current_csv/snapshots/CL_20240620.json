@@ -1,0 +1,25 @@
+{
+  "ticker": "CL",
+  "day": "2024-06-20",
+  "status": "collected",
+  "spot": 96.95,
+  "strike": 90.0,
+  "symbol": "O:CL241115P00090000",
+  "expiry": "2024-11-15",
+  "dte_days": 148,
+  "dte_sessions": 104,
+  "moneyness": 0.9283135636926251,
+  "rv20": 0.15674933196660543,
+  "rv60": 0.1298585843503272,
+  "dividend_yield": 0.014853017019082,
+  "quote": {
+    "symbol": "O:CL241115P00090000",
+    "day": "2024-06-20",
+    "status": "valid",
+    "age_seconds": 2.621433088,
+    "bid": 1.3,
+    "ask": 1.45,
+    "bid_size": 17,
+    "ask_size": 57
+  }
+}

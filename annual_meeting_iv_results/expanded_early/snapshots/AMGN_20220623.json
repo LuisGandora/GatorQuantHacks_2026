@@ -1,0 +1,25 @@
+{
+  "ticker": "AMGN",
+  "day": "2022-06-23",
+  "status": "collected",
+  "spot": 243.09,
+  "strike": 225.0,
+  "symbol": "O:AMGN221021P00225000",
+  "expiry": "2022-10-21",
+  "dte_days": 120,
+  "dte_sessions": 84,
+  "moneyness": 0.9255831173639393,
+  "rv20": 0.18140688616474537,
+  "rv60": 0.1828326269017275,
+  "dividend_yield": 0.030441400304414005,
+  "quote": {
+    "symbol": "O:AMGN221021P00225000",
+    "day": "2022-06-23",
+    "status": "valid",
+    "age_seconds": 129.500886016,
+    "bid": 5.85,
+    "ask": 7.15,
+    "bid_size": 5,
+    "ask_size": 16
+  }
+}

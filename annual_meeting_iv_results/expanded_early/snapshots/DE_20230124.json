@@ -1,0 +1,25 @@
+{
+  "ticker": "DE",
+  "day": "2023-01-24",
+  "status": "collected",
+  "spot": 416.67,
+  "strike": 380.0,
+  "symbol": "O:DE230616P00380000",
+  "expiry": "2023-06-16",
+  "dte_days": 143,
+  "dte_sessions": 100,
+  "moneyness": 0.9119927040583675,
+  "rv20": 0.24861934632635535,
+  "rv60": 0.2232713914466654,
+  "dividend_yield": 0.010463916288669689,
+  "quote": {
+    "symbol": "O:DE230616P00380000",
+    "day": "2023-01-24",
+    "status": "valid",
+    "age_seconds": 1.032632832,
+    "bid": 12.6,
+    "ask": 13.8,
+    "bid_size": 41,
+    "ask_size": 26
+  }
+}

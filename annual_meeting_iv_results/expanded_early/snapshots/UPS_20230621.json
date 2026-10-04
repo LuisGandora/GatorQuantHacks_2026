@@ -1,0 +1,25 @@
+{
+  "ticker": "UPS",
+  "day": "2023-06-21",
+  "status": "collected",
+  "spot": 173.63,
+  "strike": 165.0,
+  "symbol": "O:UPS231020P00165000",
+  "expiry": "2023-10-20",
+  "dte_days": 121,
+  "dte_sessions": 85,
+  "moneyness": 0.9502966077290791,
+  "rv20": 0.19295631354768386,
+  "rv60": 0.2901224045245278,
+  "dividend_yield": 0.036168864827506766,
+  "quote": {
+    "symbol": "O:UPS231020P00165000",
+    "day": "2023-06-21",
+    "status": "valid",
+    "age_seconds": 25.380290048,
+    "bid": 5.4,
+    "ask": 5.55,
+    "bid_size": 54,
+    "ask_size": 25
+  }
+}

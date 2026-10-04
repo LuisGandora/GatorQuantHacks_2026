@@ -1,0 +1,25 @@
+{
+  "ticker": "PEP",
+  "day": "2022-05-09",
+  "status": "collected",
+  "spot": 171.7,
+  "strike": 160.0,
+  "symbol": "O:PEP221021P00160000",
+  "expiry": "2022-10-21",
+  "dte_days": 165,
+  "dte_sessions": 115,
+  "moneyness": 0.9318578916715201,
+  "rv20": 0.24303558321648824,
+  "rv60": 0.21624612340566537,
+  "dividend_yield": 0.025043680838672103,
+  "quote": {
+    "symbol": "O:PEP221021P00160000",
+    "day": "2022-05-09",
+    "status": "valid",
+    "age_seconds": 67.998830336,
+    "bid": 6.2,
+    "ask": 6.5,
+    "bid_size": 64,
+    "ask_size": 14
+  }
+}

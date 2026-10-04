@@ -1,0 +1,25 @@
+{
+  "ticker": "CSCO",
+  "day": "2023-12-11",
+  "status": "collected",
+  "spot": 49.39,
+  "strike": 45.0,
+  "symbol": "O:CSCO240419P00045000",
+  "expiry": "2024-04-19",
+  "dte_days": 130,
+  "dte_sessions": 89,
+  "moneyness": 0.911115610447459,
+  "rv20": 0.39335887037558476,
+  "rv60": 0.2620412519377198,
+  "dividend_yield": 0.03138287102652359,
+  "quote": {
+    "symbol": "O:CSCO240419P00045000",
+    "day": "2023-12-11",
+    "status": "valid",
+    "age_seconds": 0.013252608,
+    "bid": 0.82,
+    "ask": 0.87,
+    "bid_size": 56,
+    "ask_size": 152
+  }
+}

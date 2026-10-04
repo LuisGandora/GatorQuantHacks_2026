@@ -1,0 +1,25 @@
+{
+  "ticker": "GE",
+  "day": "2025-04-07",
+  "status": "collected",
+  "spot": 167.7,
+  "strike": 155.0,
+  "symbol": "O:GE250815P00155000",
+  "expiry": "2025-08-15",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9242695289206918,
+  "rv20": 0.5419324215675394,
+  "rv60": 0.40227751545334656,
+  "dividend_yield": 0.006678592725104354,
+  "quote": {
+    "symbol": "O:GE250815P00155000",
+    "day": "2025-04-07",
+    "status": "valid",
+    "age_seconds": 7.081827328,
+    "bid": 12,
+    "ask": 12.55,
+    "bid_size": 1,
+    "ask_size": 38
+  }
+}

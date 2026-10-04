@@ -1,0 +1,25 @@
+{
+  "ticker": "ISRG",
+  "day": "2024-06-12",
+  "status": "collected",
+  "spot": 428.1,
+  "strike": 395.0,
+  "symbol": "O:ISRG241018P00395000",
+  "expiry": "2024-10-18",
+  "dte_days": 128,
+  "dte_sessions": 89,
+  "moneyness": 0.9226816164447559,
+  "rv20": 0.1858685448036016,
+  "rv60": 0.19626980831387214,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:ISRG241018P00395000",
+    "day": "2024-06-12",
+    "status": "valid",
+    "age_seconds": 0.191390976,
+    "bid": 11,
+    "ask": 14.6,
+    "bid_size": 21,
+    "ask_size": 49
+  }
+}

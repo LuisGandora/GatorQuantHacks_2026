@@ -1,0 +1,25 @@
+{
+  "ticker": "WFC",
+  "day": "2025-05-05",
+  "status": "collected",
+  "spot": 73.85,
+  "strike": 70.0,
+  "symbol": "O:WFC250815P00070000",
+  "expiry": "2025-08-15",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9478672985781992,
+  "rv20": 0.473286619309164,
+  "rv60": 0.4195684112037343,
+  "dividend_yield": 0.02098849018280298,
+  "quote": {
+    "symbol": "O:WFC250815P00070000",
+    "day": "2025-05-05",
+    "status": "valid",
+    "age_seconds": 1.631050729,
+    "bid": 3.25,
+    "ask": 3.35,
+    "bid_size": 360,
+    "ask_size": 260
+  }
+}

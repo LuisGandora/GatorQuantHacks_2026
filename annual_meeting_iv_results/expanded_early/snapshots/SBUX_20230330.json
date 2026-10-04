@@ -1,0 +1,20 @@
+{
+  "ticker": "SBUX",
+  "day": "2023-03-30",
+  "status": "collected",
+  "spot": 101.32,
+  "strike": 95.0,
+  "symbol": "O:SBUX230721P00095000",
+  "expiry": "2023-07-21",
+  "dte_days": 113,
+  "dte_sessions": 77,
+  "moneyness": 0.9376233714962495,
+  "rv20": 0.18577824149839628,
+  "rv60": 0.2106495818259595,
+  "dividend_yield": 0.020134228187919465,
+  "quote": {
+    "symbol": "O:SBUX230721P00095000",
+    "day": "2023-03-30",
+    "status": "missing"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "EMR",
+  "day": "2023-02-13",
+  "status": "collected",
+  "spot": 86.91,
+  "strike": 80.0,
+  "symbol": "O:EMR230616P00080000",
+  "expiry": "2023-06-16",
+  "dte_days": 123,
+  "dte_sessions": 86,
+  "moneyness": 0.9204924634679554,
+  "rv20": 0.3690483893492332,
+  "rv60": 0.26796428620453344,
+  "dividend_yield": 0.0237602117132666,
+  "quote": {
+    "symbol": "O:EMR230616P00080000",
+    "day": "2023-02-13",
+    "status": "valid",
+    "age_seconds": 8.089740032,
+    "bid": 2.2,
+    "ask": 2.4,
+    "bid_size": 47,
+    "ask_size": 38
+  }
+}

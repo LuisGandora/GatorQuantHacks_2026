@@ -1,0 +1,25 @@
+{
+  "ticker": "LMT",
+  "day": "2025-06-09",
+  "status": "collected",
+  "spot": 480.83,
+  "strike": 455.0,
+  "symbol": "O:LMT250919P00455000",
+  "expiry": "2025-09-19",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9462803901586839,
+  "rv20": 0.23063545698834,
+  "rv60": 0.26623661998862075,
+  "dividend_yield": 0.026828608863839608,
+  "quote": {
+    "symbol": "O:LMT250919P00455000",
+    "day": "2025-06-09",
+    "status": "valid",
+    "age_seconds": 0.323700674,
+    "bid": 13.1,
+    "ask": 14.2,
+    "bid_size": 26,
+    "ask_size": 78
+  }
+}

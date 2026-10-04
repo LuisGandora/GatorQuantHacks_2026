@@ -1,0 +1,25 @@
+{
+  "ticker": "JNJ",
+  "day": "2022-05-02",
+  "status": "collected",
+  "spot": 178.64,
+  "strike": 170.0,
+  "symbol": "O:JNJ221021P00170000",
+  "expiry": "2022-10-21",
+  "dte_days": 172,
+  "dte_sessions": 120,
+  "moneyness": 0.9516345723242275,
+  "rv20": 0.21136991214578077,
+  "rv60": 0.20743973640171212,
+  "dividend_yield": 0.023734885803851323,
+  "quote": {
+    "symbol": "O:JNJ221021P00170000",
+    "day": "2022-05-02",
+    "status": "valid",
+    "age_seconds": 0.104550656,
+    "bid": 7.4,
+    "ask": 8.15,
+    "bid_size": 142,
+    "ask_size": 40
+  }
+}

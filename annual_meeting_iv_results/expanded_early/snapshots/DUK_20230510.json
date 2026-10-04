@@ -1,0 +1,25 @@
+{
+  "ticker": "DUK",
+  "day": "2023-05-10",
+  "status": "collected",
+  "spot": 99.14,
+  "strike": 90.0,
+  "symbol": "O:DUK231020P00090000",
+  "expiry": "2023-10-20",
+  "dte_days": 163,
+  "dte_sessions": 113,
+  "moneyness": 0.9078071414161791,
+  "rv20": 0.1424064924661157,
+  "rv60": 0.20271917837796757,
+  "dividend_yield": 0.040346984062941293,
+  "quote": {
+    "symbol": "O:DUK231020P00090000",
+    "day": "2023-05-10",
+    "status": "valid",
+    "age_seconds": 4.44133888,
+    "bid": 2.1,
+    "ask": 2.3,
+    "bid_size": 171,
+    "ask_size": 61
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "LOW",
+  "day": "2022-06-03",
+  "status": "collected",
+  "spot": 195.45,
+  "strike": 185.0,
+  "symbol": "O:LOW220916P00185000",
+  "expiry": "2022-09-16",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9465336403172168,
+  "rv20": 0.40874406405396735,
+  "rv60": 0.3581169593036456,
+  "dividend_yield": 0.016372473778459965,
+  "quote": {
+    "symbol": "O:LOW220916P00185000",
+    "day": "2022-06-03",
+    "status": "valid",
+    "age_seconds": 4.677392896,
+    "bid": 9.55,
+    "ask": 9.95,
+    "bid_size": 44,
+    "ask_size": 45
+  }
+}

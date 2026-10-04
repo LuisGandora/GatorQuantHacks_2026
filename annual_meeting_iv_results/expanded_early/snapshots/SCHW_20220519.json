@@ -1,0 +1,25 @@
+{
+  "ticker": "SCHW",
+  "day": "2022-05-19",
+  "status": "collected",
+  "spot": 62.66,
+  "strike": 60.0,
+  "symbol": "O:SCHW220916P00060000",
+  "expiry": "2022-09-16",
+  "dte_days": 120,
+  "dte_sessions": 82,
+  "moneyness": 0.9575486753909991,
+  "rv20": 0.40155689361998304,
+  "rv60": 0.481715457352421,
+  "dividend_yield": 0.011809766996488988,
+  "quote": {
+    "symbol": "O:SCHW220916P00060000",
+    "day": "2022-05-19",
+    "status": "valid",
+    "age_seconds": 4.899200768,
+    "bid": 4.5,
+    "ask": 4.8,
+    "bid_size": 503,
+    "ask_size": 93
+  }
+}

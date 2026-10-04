@@ -1,0 +1,25 @@
+{
+  "ticker": "RTX",
+  "day": "2025-05-06",
+  "status": "collected",
+  "spot": 128.16,
+  "strike": 120.0,
+  "symbol": "O:RTX250919P00120000",
+  "expiry": "2025-09-19",
+  "dte_days": 136,
+  "dte_sessions": 94,
+  "moneyness": 0.9363295880149813,
+  "rv20": 0.5230009165446934,
+  "rv60": 0.40800502186448356,
+  "dividend_yield": 0.019662921348314606,
+  "quote": {
+    "symbol": "O:RTX250919P00120000",
+    "day": "2025-05-06",
+    "status": "valid",
+    "age_seconds": 5.355635463,
+    "bid": 4.2,
+    "ask": 4.45,
+    "bid_size": 40,
+    "ask_size": 32
+  }
+}

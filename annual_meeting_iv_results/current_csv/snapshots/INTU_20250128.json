@@ -1,0 +1,25 @@
+{
+  "ticker": "INTU",
+  "day": "2025-01-28",
+  "status": "collected",
+  "spot": 600.66,
+  "strike": 570.0,
+  "symbol": "O:INTU250620P00570000",
+  "expiry": "2025-06-20",
+  "dte_days": 143,
+  "dte_sessions": 99,
+  "moneyness": 0.9489561482369394,
+  "rv20": 0.19616103565719728,
+  "rv60": 0.3157569316716954,
+  "dividend_yield": 0.006459561149402325,
+  "quote": {
+    "symbol": "O:INTU250620P00570000",
+    "day": "2025-01-28",
+    "status": "valid",
+    "age_seconds": 82.110359296,
+    "bid": 27,
+    "ask": 28.5,
+    "bid_size": 20,
+    "ask_size": 20
+  }
+}

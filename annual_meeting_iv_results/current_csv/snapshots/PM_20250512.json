@@ -1,0 +1,25 @@
+{
+  "ticker": "PM",
+  "day": "2025-05-12",
+  "status": "collected",
+  "spot": 164.83,
+  "strike": 160.0,
+  "symbol": "O:PM250919P00160000",
+  "expiry": "2025-09-19",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9706970818418976,
+  "rv20": 0.18819634144249991,
+  "rv60": 0.2577690854175216,
+  "dividend_yield": 0.03245768367408845,
+  "quote": {
+    "symbol": "O:PM250919P00160000",
+    "day": "2025-05-12",
+    "status": "valid",
+    "age_seconds": 5.901926524,
+    "bid": 6.8,
+    "ask": 7.1,
+    "bid_size": 39,
+    "ask_size": 43
+  }
+}

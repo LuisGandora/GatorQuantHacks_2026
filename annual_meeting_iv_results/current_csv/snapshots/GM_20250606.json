@@ -1,0 +1,25 @@
+{
+  "ticker": "GM",
+  "day": "2025-06-06",
+  "status": "collected",
+  "spot": 47.47,
+  "strike": 44.0,
+  "symbol": "O:GM250919P00044000",
+  "expiry": "2025-09-19",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9269012007583737,
+  "rv20": 0.33652421463155496,
+  "rv60": 0.3865944016998007,
+  "dividend_yield": 0.010111649462818622,
+  "quote": {
+    "symbol": "O:GM250919P00044000",
+    "day": "2025-06-06",
+    "status": "valid",
+    "age_seconds": 0.197070169,
+    "bid": 1.83,
+    "ask": 2.49,
+    "bid_size": 11,
+    "ask_size": 61
+  }
+}

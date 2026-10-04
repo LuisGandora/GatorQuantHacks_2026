@@ -1,0 +1,25 @@
+{
+  "ticker": "XOM",
+  "day": "2024-06-03",
+  "status": "collected",
+  "spot": 114.45,
+  "strike": 110.0,
+  "symbol": "O:XOM240920P00110000",
+  "expiry": "2024-09-20",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9611183923110528,
+  "rv20": 0.18906740004831404,
+  "rv60": 0.16551807258726592,
+  "dividend_yield": 0.032503276539973786,
+  "quote": {
+    "symbol": "O:XOM240920P00110000",
+    "day": "2024-06-03",
+    "status": "valid",
+    "age_seconds": 0.309942784,
+    "bid": 2.87,
+    "ask": 2.92,
+    "bid_size": 3,
+    "ask_size": 9
+  }
+}

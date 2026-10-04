@@ -1,0 +1,25 @@
+{
+  "ticker": "ADBE",
+  "day": "2025-04-25",
+  "status": "collected",
+  "spot": 367.72,
+  "strike": 340.0,
+  "symbol": "O:ADBE250815P00340000",
+  "expiry": "2025-08-15",
+  "dte_days": 112,
+  "dte_sessions": 77,
+  "moneyness": 0.9246165560752746,
+  "rv20": 0.4363084881603664,
+  "rv60": 0.44091540079559355,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:ADBE250815P00340000",
+    "day": "2025-04-25",
+    "status": "valid",
+    "age_seconds": 12.152453228,
+    "bid": 14.6,
+    "ask": 15.85,
+    "bid_size": 14,
+    "ask_size": 14
+  }
+}

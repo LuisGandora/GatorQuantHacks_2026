@@ -1,0 +1,25 @@
+{
+  "ticker": "HD",
+  "day": "2024-05-23",
+  "status": "collected",
+  "spot": 326.89,
+  "strike": 310.0,
+  "symbol": "O:HD240920P00310000",
+  "expiry": "2024-09-20",
+  "dte_days": 120,
+  "dte_sessions": 82,
+  "moneyness": 0.9483312429257549,
+  "rv20": 0.2086338087328821,
+  "rv60": 0.20757884828868162,
+  "dividend_yield": 0.02606381351524978,
+  "quote": {
+    "symbol": "O:HD240920P00310000",
+    "day": "2024-05-23",
+    "status": "valid",
+    "age_seconds": 2.89117824,
+    "bid": 7.65,
+    "ask": 8.3,
+    "bid_size": 26,
+    "ask_size": 21
+  }
+}

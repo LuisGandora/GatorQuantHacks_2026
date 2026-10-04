@@ -1,0 +1,25 @@
+{
+  "ticker": "MA",
+  "day": "2024-06-24",
+  "status": "collected",
+  "spot": 456.96,
+  "strike": 430.0,
+  "symbol": "O:MA241018P00430000",
+  "expiry": "2024-10-18",
+  "dte_days": 116,
+  "dte_sessions": 82,
+  "moneyness": 0.9410014005602241,
+  "rv20": 0.11262685980306791,
+  "rv60": 0.12266602578139663,
+  "dividend_yield": 0.005383403361344538,
+  "quote": {
+    "symbol": "O:MA241018P00430000",
+    "day": "2024-06-24",
+    "status": "valid",
+    "age_seconds": 1.246498816,
+    "bid": 6.85,
+    "ask": 7.15,
+    "bid_size": 14,
+    "ask_size": 38
+  }
+}

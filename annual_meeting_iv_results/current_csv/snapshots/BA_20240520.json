@@ -1,0 +1,25 @@
+{
+  "ticker": "BA",
+  "day": "2024-05-20",
+  "status": "collected",
+  "spot": 186.61,
+  "strike": 175.0,
+  "symbol": "O:BA240920P00175000",
+  "expiry": "2024-09-20",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9377846846364074,
+  "rv20": 0.3288146361971529,
+  "rv60": 0.2831364474831564,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:BA240920P00175000",
+    "day": "2024-05-20",
+    "status": "valid",
+    "age_seconds": 5.25201024,
+    "bid": 7.15,
+    "ask": 7.25,
+    "bid_size": 81,
+    "ask_size": 73
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "CVS",
+  "day": "2022-05-17",
+  "status": "collected",
+  "spot": 99.38,
+  "strike": 92.5,
+  "symbol": "O:CVS220819P00092500",
+  "expiry": "2022-08-19",
+  "dte_days": 94,
+  "dte_sessions": 65,
+  "moneyness": 0.9307707788287383,
+  "rv20": 0.34148687234819125,
+  "rv60": 0.27211709278173823,
+  "dividend_yield": 0.021131012276111895,
+  "quote": {
+    "symbol": "O:CVS220819P00092500",
+    "day": "2022-05-17",
+    "status": "valid",
+    "age_seconds": 1.26063488,
+    "bid": 2.93,
+    "ask": 3.2,
+    "bid_size": 342,
+    "ask_size": 292
+  }
+}

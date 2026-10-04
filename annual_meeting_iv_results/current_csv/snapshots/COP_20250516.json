@@ -1,0 +1,25 @@
+{
+  "ticker": "COP",
+  "day": "2025-05-16",
+  "status": "collected",
+  "spot": 92.43,
+  "strike": 87.5,
+  "symbol": "O:COP250919P00087500",
+  "expiry": "2025-09-19",
+  "dte_days": 126,
+  "dte_sessions": 86,
+  "moneyness": 0.9466623390674023,
+  "rv20": 0.32321141307041507,
+  "rv60": 0.5260204113852269,
+  "dividend_yield": 0.03375527426160337,
+  "quote": {
+    "symbol": "O:COP250919P00087500",
+    "day": "2025-05-16",
+    "status": "valid",
+    "age_seconds": 13.265902534,
+    "bid": 4.45,
+    "ask": 4.65,
+    "bid_size": 8,
+    "ask_size": 8
+  }
+}

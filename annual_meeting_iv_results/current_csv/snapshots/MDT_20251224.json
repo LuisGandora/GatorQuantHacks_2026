@@ -1,0 +1,20 @@
+{
+  "ticker": "MDT",
+  "day": "2025-12-24",
+  "status": "collected",
+  "spot": 97.27,
+  "strike": 92.5,
+  "symbol": "O:MDT260515P00092500",
+  "expiry": "2026-05-15",
+  "dte_days": 142,
+  "dte_sessions": 97,
+  "moneyness": 0.9509612419039787,
+  "rv20": 0.15153777278243208,
+  "rv60": 0.19239138909916015,
+  "dividend_yield": 0.02899146705047805,
+  "quote": {
+    "symbol": "O:MDT260515P00092500",
+    "day": "2025-12-24",
+    "status": "missing"
+  }
+}

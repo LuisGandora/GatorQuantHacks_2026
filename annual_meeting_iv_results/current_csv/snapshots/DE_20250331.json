@@ -1,0 +1,25 @@
+{
+  "ticker": "DE",
+  "day": "2025-03-31",
+  "status": "collected",
+  "spot": 469.35,
+  "strike": 440.0,
+  "symbol": "O:DE250919P00440000",
+  "expiry": "2025-09-19",
+  "dte_days": 172,
+  "dte_sessions": 119,
+  "moneyness": 0.9374667092787897,
+  "rv20": 0.31059774187822903,
+  "rv60": 0.2906617102873447,
+  "dividend_yield": 0.012847555129434324,
+  "quote": {
+    "symbol": "O:DE250919P00440000",
+    "day": "2025-03-31",
+    "status": "valid",
+    "age_seconds": 13.482505728,
+    "bid": 21.75,
+    "ask": 24.5,
+    "bid_size": 19,
+    "ask_size": 18
+  }
+}

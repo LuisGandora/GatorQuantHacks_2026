@@ -1,0 +1,25 @@
+{
+  "ticker": "GOOGL",
+  "day": "2023-06-09",
+  "status": "collected",
+  "spot": 122.23,
+  "strike": 115.0,
+  "symbol": "O:GOOGL231020P00115000",
+  "expiry": "2023-10-20",
+  "dte_days": 133,
+  "dte_sessions": 92,
+  "moneyness": 0.9408492186860836,
+  "rv20": 0.28067251936377263,
+  "rv60": 0.2895579843355251,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:GOOGL231020P00115000",
+    "day": "2023-06-09",
+    "status": "valid",
+    "age_seconds": 0.35812352,
+    "bid": 4.3,
+    "ask": 4.45,
+    "bid_size": 499,
+    "ask_size": 566
+  }
+}

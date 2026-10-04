@@ -1,0 +1,25 @@
+{
+  "ticker": "MO",
+  "day": "2023-05-23",
+  "status": "collected",
+  "spot": 44.93,
+  "strike": 42.5,
+  "symbol": "O:MO230915P00042500",
+  "expiry": "2023-09-15",
+  "dte_days": 115,
+  "dte_sessions": 79,
+  "moneyness": 0.9459158691297574,
+  "rv20": 0.12720770949526605,
+  "rv60": 0.1605209172232132,
+  "dividend_yield": 0.08279545960382817,
+  "quote": {
+    "symbol": "O:MO230915P00042500",
+    "day": "2023-05-23",
+    "status": "valid",
+    "age_seconds": 7.913740032,
+    "bid": 1.37,
+    "ask": 1.38,
+    "bid_size": 6,
+    "ask_size": 3
+  }
+}

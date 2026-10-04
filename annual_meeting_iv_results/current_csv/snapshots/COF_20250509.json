@@ -1,0 +1,25 @@
+{
+  "ticker": "COF",
+  "day": "2025-05-09",
+  "status": "collected",
+  "spot": 187.76,
+  "strike": 180.0,
+  "symbol": "O:COF250919P00180000",
+  "expiry": "2025-09-19",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9586706433745207,
+  "rv20": 0.4237285301097914,
+  "rv60": 0.5706624862146038,
+  "dividend_yield": 0.01278227524499361,
+  "quote": {
+    "symbol": "O:COF250919P00180000",
+    "day": "2025-05-09",
+    "status": "valid",
+    "age_seconds": 20.104042715,
+    "bid": 11.6,
+    "ask": 12.3,
+    "bid_size": 15,
+    "ask_size": 68
+  }
+}

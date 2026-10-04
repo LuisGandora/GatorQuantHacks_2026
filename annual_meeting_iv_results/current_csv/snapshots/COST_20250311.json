@@ -1,0 +1,25 @@
+{
+  "ticker": "COST",
+  "day": "2025-03-11",
+  "status": "collected",
+  "spot": 930.49,
+  "strike": 885.0,
+  "symbol": "O:COST250718P00885000",
+  "expiry": "2025-07-18",
+  "dte_days": 129,
+  "dte_sessions": 89,
+  "moneyness": 0.9511117798149362,
+  "rv20": 0.3262306084704601,
+  "rv60": 0.24278492195193668,
+  "dividend_yield": 0.004986619952928027,
+  "quote": {
+    "symbol": "O:COST250718P00885000",
+    "day": "2025-03-11",
+    "status": "valid",
+    "age_seconds": 8.037174784,
+    "bid": 32.4,
+    "ask": 34.25,
+    "bid_size": 15,
+    "ask_size": 15
+  }
+}

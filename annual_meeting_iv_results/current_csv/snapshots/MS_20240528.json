@@ -1,0 +1,25 @@
+{
+  "ticker": "MS",
+  "day": "2024-05-28",
+  "status": "collected",
+  "spot": 98.67,
+  "strike": 92.5,
+  "symbol": "O:MS240920P00092500",
+  "expiry": "2024-09-20",
+  "dte_days": 115,
+  "dte_sessions": 80,
+  "moneyness": 0.9374683287726766,
+  "rv20": 0.16896685083336616,
+  "rv60": 0.24796953581974412,
+  "dividend_yield": 0.034458295327860544,
+  "quote": {
+    "symbol": "O:MS240920P00092500",
+    "day": "2024-05-28",
+    "status": "valid",
+    "age_seconds": 1.706467072,
+    "bid": 2.17,
+    "ask": 2.35,
+    "bid_size": 31,
+    "ask_size": 33
+  }
+}

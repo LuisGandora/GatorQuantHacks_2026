@@ -1,0 +1,25 @@
+{
+  "ticker": "MRK",
+  "day": "2023-06-27",
+  "status": "collected",
+  "spot": 113.32,
+  "strike": 105.0,
+  "symbol": "O:MRK231020P00105000",
+  "expiry": "2023-10-20",
+  "dte_days": 115,
+  "dte_sessions": 81,
+  "moneyness": 0.9265795975997176,
+  "rv20": 0.20406640108732138,
+  "rv60": 0.17540511119964877,
+  "dividend_yield": 0.025061771973173316,
+  "quote": {
+    "symbol": "O:MRK231020P00105000",
+    "day": "2023-06-27",
+    "status": "valid",
+    "age_seconds": 0.65042688,
+    "bid": 1.79,
+    "ask": 1.87,
+    "bid_size": 6,
+    "ask_size": 3
+  }
+}

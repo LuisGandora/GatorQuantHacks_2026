@@ -1,0 +1,25 @@
+{
+  "ticker": "DHR",
+  "day": "2024-04-05",
+  "status": "collected",
+  "spot": 244.28,
+  "strike": 220.0,
+  "symbol": "O:DHR240920P00220000",
+  "expiry": "2024-09-20",
+  "dte_days": 168,
+  "dte_sessions": 116,
+  "moneyness": 0.9006058621254298,
+  "rv20": 0.14991580450435113,
+  "rv60": 0.20078908825275385,
+  "dividend_yield": 0.004298346160144097,
+  "quote": {
+    "symbol": "O:DHR240920P00220000",
+    "day": "2024-04-05",
+    "status": "valid",
+    "age_seconds": 13.976126464,
+    "bid": 5.9,
+    "ask": 6.3,
+    "bid_size": 31,
+    "ask_size": 30
+  }
+}

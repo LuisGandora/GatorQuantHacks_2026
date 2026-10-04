@@ -1,0 +1,25 @@
+{
+  "ticker": "AMT",
+  "day": "2025-05-16",
+  "status": "collected",
+  "spot": 213.38,
+  "strike": 200.0,
+  "symbol": "O:AMT250919P00200000",
+  "expiry": "2025-09-19",
+  "dte_days": 126,
+  "dte_sessions": 86,
+  "moneyness": 0.9372949667260287,
+  "rv20": 0.3712539021883973,
+  "rv60": 0.329877402213671,
+  "dividend_yield": 0.030743274908613744,
+  "quote": {
+    "symbol": "O:AMT250919P00200000",
+    "day": "2025-05-16",
+    "status": "valid",
+    "age_seconds": 0.851930882,
+    "bid": 5.8,
+    "ask": 6.3,
+    "bid_size": 8,
+    "ask_size": 12
+  }
+}

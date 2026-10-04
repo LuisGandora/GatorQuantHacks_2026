@@ -1,0 +1,25 @@
+{
+  "ticker": "UNP",
+  "day": "2024-04-08",
+  "status": "collected",
+  "spot": 240.29,
+  "strike": 225.0,
+  "symbol": "O:UNP240816P00225000",
+  "expiry": "2024-08-16",
+  "dte_days": 130,
+  "dte_sessions": 91,
+  "moneyness": 0.9363685546631154,
+  "rv20": 0.14095694062929734,
+  "rv60": 0.14884469569224765,
+  "dividend_yield": 0.02164051770776978,
+  "quote": {
+    "symbol": "O:UNP240816P00225000",
+    "day": "2024-04-08",
+    "status": "valid",
+    "age_seconds": 0.153254656,
+    "bid": 5.3,
+    "ask": 5.7,
+    "bid_size": 38,
+    "ask_size": 56
+  }
+}

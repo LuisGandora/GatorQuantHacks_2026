@@ -1,0 +1,25 @@
+{
+  "ticker": "SBUX",
+  "day": "2025-03-17",
+  "status": "collected",
+  "spot": 99.08,
+  "strike": 90.0,
+  "symbol": "O:SBUX250718P00090000",
+  "expiry": "2025-07-18",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9083568833266048,
+  "rv20": 0.337119802662098,
+  "rv60": 0.3164491794237661,
+  "dividend_yield": 0.02381913605167541,
+  "quote": {
+    "symbol": "O:SBUX250718P00090000",
+    "day": "2025-03-17",
+    "status": "valid",
+    "age_seconds": 3.92896256,
+    "bid": 3.1,
+    "ask": 3.2,
+    "bid_size": 70,
+    "ask_size": 16
+  }
+}

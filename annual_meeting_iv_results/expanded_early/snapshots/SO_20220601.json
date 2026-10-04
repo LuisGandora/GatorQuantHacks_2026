@@ -1,0 +1,25 @@
+{
+  "ticker": "SO",
+  "day": "2022-06-01",
+  "status": "collected",
+  "spot": 75.55,
+  "strike": 70.0,
+  "symbol": "O:SO221118P00070000",
+  "expiry": "2022-11-18",
+  "dte_days": 170,
+  "dte_sessions": 119,
+  "moneyness": 0.9265387160820648,
+  "rv20": 0.14772138672468121,
+  "rv60": 0.19905100326406502,
+  "dividend_yield": 0.03494374586366645,
+  "quote": {
+    "symbol": "O:SO221118P00070000",
+    "day": "2022-06-01",
+    "status": "valid",
+    "age_seconds": 4.934423296,
+    "bid": 2.5,
+    "ask": 2.7,
+    "bid_size": 429,
+    "ask_size": 20
+  }
+}

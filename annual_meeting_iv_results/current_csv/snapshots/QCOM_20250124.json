@@ -1,0 +1,25 @@
+{
+  "ticker": "QCOM",
+  "day": "2025-01-24",
+  "status": "collected",
+  "spot": 172.11,
+  "strike": 165.0,
+  "symbol": "O:QCOM250516P00165000",
+  "expiry": "2025-05-16",
+  "dte_days": 112,
+  "dte_sessions": 78,
+  "moneyness": 0.9586892103887048,
+  "rv20": 0.25608842179980806,
+  "rv60": 0.31971603591071834,
+  "dividend_yield": 0.019464296089710068,
+  "quote": {
+    "symbol": "O:QCOM250516P00165000",
+    "day": "2025-01-24",
+    "status": "valid",
+    "age_seconds": 40.90904832,
+    "bid": 8.95,
+    "ask": 9.15,
+    "bid_size": 8,
+    "ask_size": 207
+  }
+}

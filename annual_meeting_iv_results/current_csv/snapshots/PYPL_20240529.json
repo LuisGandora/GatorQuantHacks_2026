@@ -1,0 +1,25 @@
+{
+  "ticker": "PYPL",
+  "day": "2024-05-29",
+  "status": "collected",
+  "spot": 61.05,
+  "strike": 57.5,
+  "symbol": "O:PYPL240920P00057500",
+  "expiry": "2024-09-20",
+  "dte_days": 114,
+  "dte_sessions": 79,
+  "moneyness": 0.9418509418509419,
+  "rv20": 0.2476975784094814,
+  "rv60": 0.2593393633881376,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:PYPL240920P00057500",
+    "day": "2024-05-29",
+    "status": "valid",
+    "age_seconds": 24.97262336,
+    "bid": 2.66,
+    "ask": 2.72,
+    "bid_size": 10,
+    "ask_size": 63
+  }
+}

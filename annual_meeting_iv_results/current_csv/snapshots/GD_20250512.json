@@ -1,0 +1,25 @@
+{
+  "ticker": "GD",
+  "day": "2025-05-12",
+  "status": "collected",
+  "spot": 276.24,
+  "strike": 250.0,
+  "symbol": "O:GD250919P00250000",
+  "expiry": "2025-09-19",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9050101361135244,
+  "rv20": 0.17719853397528657,
+  "rv60": 0.29355798290246843,
+  "dividend_yield": 0.020851433536055602,
+  "quote": {
+    "symbol": "O:GD250919P00250000",
+    "day": "2025-05-12",
+    "status": "valid",
+    "age_seconds": 42.445324024,
+    "bid": 4.4,
+    "ask": 5.3,
+    "bid_size": 8,
+    "ask_size": 10
+  }
+}

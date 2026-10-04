@@ -1,0 +1,25 @@
+{
+  "ticker": "BMY",
+  "day": "2022-05-06",
+  "status": "collected",
+  "spot": 76.67,
+  "strike": 70.0,
+  "symbol": "O:BMY220916P00070000",
+  "expiry": "2022-09-16",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9130037824442415,
+  "rv20": 0.204827232010102,
+  "rv60": 0.15960763273205894,
+  "dividend_yield": 0.02686839702621625,
+  "quote": {
+    "symbol": "O:BMY220916P00070000",
+    "day": "2022-05-06",
+    "status": "valid",
+    "age_seconds": 29.789262336,
+    "bid": 1.94,
+    "ask": 2.02,
+    "bid_size": 79,
+    "ask_size": 102
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "PYPL",
+  "day": "2025-06-10",
+  "status": "collected",
+  "spot": 74.76,
+  "strike": 67.5,
+  "symbol": "O:PYPL251017P00067500",
+  "expiry": "2025-10-17",
+  "dte_days": 129,
+  "dte_sessions": 90,
+  "moneyness": 0.9028892455858747,
+  "rv20": 0.20522388053003254,
+  "rv60": 0.4166699167346309,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:PYPL251017P00067500",
+    "day": "2025-06-10",
+    "status": "valid",
+    "age_seconds": 26.986740596,
+    "bid": 2.72,
+    "ask": 2.78,
+    "bid_size": 204,
+    "ask_size": 1
+  }
+}

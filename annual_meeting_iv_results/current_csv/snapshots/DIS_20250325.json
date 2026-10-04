@@ -1,0 +1,25 @@
+{
+  "ticker": "DIS",
+  "day": "2025-03-25",
+  "status": "collected",
+  "spot": 101.61,
+  "strike": 95.0,
+  "symbol": "O:DIS250718P00095000",
+  "expiry": "2025-07-18",
+  "dte_days": 115,
+  "dte_sessions": 79,
+  "moneyness": 0.9349473477019978,
+  "rv20": 0.30710654492958406,
+  "rv60": 0.22630744661453617,
+  "dividend_yield": 0.009349473477019978,
+  "quote": {
+    "symbol": "O:DIS250718P00095000",
+    "day": "2025-03-25",
+    "status": "valid",
+    "age_seconds": 2.780414464,
+    "bid": 3,
+    "ask": 3.15,
+    "bid_size": 444,
+    "ask_size": 281
+  }
+}

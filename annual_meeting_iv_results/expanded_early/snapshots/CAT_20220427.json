@@ -1,0 +1,25 @@
+{
+  "ticker": "CAT",
+  "day": "2022-04-27",
+  "status": "collected",
+  "spot": 213.96,
+  "strike": 195.0,
+  "symbol": "O:CAT220819P00195000",
+  "expiry": "2022-08-19",
+  "dte_days": 114,
+  "dte_sessions": 79,
+  "moneyness": 0.9113853056646102,
+  "rv20": 0.3493848253434036,
+  "rv60": 0.31403325103512225,
+  "dividend_yield": 0.02037764068050103,
+  "quote": {
+    "symbol": "O:CAT220819P00195000",
+    "day": "2022-04-27",
+    "status": "valid",
+    "age_seconds": 2.608054784,
+    "bid": 8.75,
+    "ask": 9.2,
+    "bid_size": 2,
+    "ask_size": 1
+  }
+}

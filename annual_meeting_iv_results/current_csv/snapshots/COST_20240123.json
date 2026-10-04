@@ -1,0 +1,25 @@
+{
+  "ticker": "COST",
+  "day": "2024-01-23",
+  "status": "collected",
+  "spot": 687.59,
+  "strike": 655.0,
+  "symbol": "O:COST240517P00655000",
+  "expiry": "2024-05-17",
+  "dte_days": 115,
+  "dte_sessions": 81,
+  "moneyness": 0.952602568391047,
+  "rv20": 0.13069688601758922,
+  "rv60": 0.1984035399555278,
+  "dividend_yield": 0.02757457205602176,
+  "quote": {
+    "symbol": "O:COST240517P00655000",
+    "day": "2024-01-23",
+    "status": "valid",
+    "age_seconds": 43.94409088,
+    "bid": 13.2,
+    "ask": 13.6,
+    "bid_size": 9,
+    "ask_size": 9
+  }
+}

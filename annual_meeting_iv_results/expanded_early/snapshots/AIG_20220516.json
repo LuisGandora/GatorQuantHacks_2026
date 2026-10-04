@@ -1,0 +1,25 @@
+{
+  "ticker": "AIG",
+  "day": "2022-05-16",
+  "status": "collected",
+  "spot": 58.64,
+  "strike": 55.0,
+  "symbol": "O:AIG220916P00055000",
+  "expiry": "2022-09-16",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9379263301500682,
+  "rv20": 0.4227702409741013,
+  "rv60": 0.3930310721326417,
+  "dividend_yield": 0.021828103683492497,
+  "quote": {
+    "symbol": "O:AIG220916P00055000",
+    "day": "2022-05-16",
+    "status": "valid",
+    "age_seconds": 17.947358976,
+    "bid": 3.3,
+    "ask": 3.6,
+    "bid_size": 352,
+    "ask_size": 399
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "USB",
+  "day": "2023-04-21",
+  "status": "collected",
+  "spot": 33.52,
+  "strike": 32.5,
+  "symbol": "O:USB230721P00032500",
+  "expiry": "2023-07-21",
+  "dte_days": 91,
+  "dte_sessions": 62,
+  "moneyness": 0.9695704057279235,
+  "rv20": 0.24863014605393413,
+  "rv60": 0.4928287077741473,
+  "dividend_yield": 0.05668257756563245,
+  "quote": {
+    "symbol": "O:USB230721P00032500",
+    "day": "2023-04-21",
+    "status": "valid",
+    "age_seconds": 38.934756864,
+    "bid": 2.2,
+    "ask": 2.3,
+    "bid_size": 46,
+    "ask_size": 20
+  }
+}

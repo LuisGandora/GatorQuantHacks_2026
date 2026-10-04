@@ -1,0 +1,25 @@
+{
+  "ticker": "MS",
+  "day": "2025-05-19",
+  "status": "collected",
+  "spot": 130.84,
+  "strike": 125.0,
+  "symbol": "O:MS250919P00125000",
+  "expiry": "2025-09-19",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9553653317028431,
+  "rv20": 0.2747502349681533,
+  "rv60": 0.49700529986542713,
+  "dividend_yield": 0.028278813818404157,
+  "quote": {
+    "symbol": "O:MS250919P00125000",
+    "day": "2025-05-19",
+    "status": "valid",
+    "age_seconds": 0.807557335,
+    "bid": 5.65,
+    "ask": 5.75,
+    "bid_size": 14,
+    "ask_size": 79
+  }
+}

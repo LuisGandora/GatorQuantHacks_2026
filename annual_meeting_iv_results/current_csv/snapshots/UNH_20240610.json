@@ -1,0 +1,25 @@
+{
+  "ticker": "UNH",
+  "day": "2024-06-10",
+  "status": "collected",
+  "spot": 495.0,
+  "strike": 460.0,
+  "symbol": "O:UNH240920P00460000",
+  "expiry": "2024-09-20",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9292929292929293,
+  "rv20": 0.2349892198593786,
+  "rv60": 0.26342138830769857,
+  "dividend_yield": 0.01519191919191919,
+  "quote": {
+    "symbol": "O:UNH240920P00460000",
+    "day": "2024-06-10",
+    "status": "valid",
+    "age_seconds": 2.639890176,
+    "bid": 8.4,
+    "ask": 8.85,
+    "bid_size": 7,
+    "ask_size": 6
+  }
+}

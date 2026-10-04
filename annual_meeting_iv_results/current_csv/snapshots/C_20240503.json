@@ -1,0 +1,25 @@
+{
+  "ticker": "C",
+  "day": "2024-05-03",
+  "status": "collected",
+  "spot": 61.52,
+  "strike": 57.5,
+  "symbol": "O:C240920P00057500",
+  "expiry": "2024-09-20",
+  "dte_days": 140,
+  "dte_sessions": 96,
+  "moneyness": 0.9346553966189857,
+  "rv20": 0.2586140422385864,
+  "rv60": 0.20744519362174663,
+  "dividend_yield": 0.034135240572171655,
+  "quote": {
+    "symbol": "O:C240920P00057500",
+    "day": "2024-05-03",
+    "status": "valid",
+    "age_seconds": 47.025035776,
+    "bid": 1.86,
+    "ask": 1.9,
+    "bid_size": 91,
+    "ask_size": 66
+  }
+}

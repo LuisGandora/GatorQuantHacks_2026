@@ -1,0 +1,25 @@
+{
+  "ticker": "GOOGL",
+  "day": "2022-04-25",
+  "status": "collected",
+  "spot": 2461.48,
+  "strike": 2200.0,
+  "symbol": "O:GOOGL220819P02200000",
+  "expiry": "2022-08-19",
+  "dte_days": 116,
+  "dte_sessions": 81,
+  "moneyness": 0.8937712270666428,
+  "rv20": 0.2880058884943847,
+  "rv60": 0.36623385914786727,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:GOOGL220819P02200000",
+    "day": "2022-04-25",
+    "status": "valid",
+    "age_seconds": 36.18210304,
+    "bid": 104.1,
+    "ask": 107.2,
+    "bid_size": 4,
+    "ask_size": 5
+  }
+}

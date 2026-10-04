@@ -1,0 +1,25 @@
+{
+  "ticker": "TMO",
+  "day": "2023-04-25",
+  "status": "collected",
+  "spot": 548.38,
+  "strike": 540.0,
+  "symbol": "O:TMO230915P00540000",
+  "expiry": "2023-09-15",
+  "dte_days": 143,
+  "dte_sessions": 99,
+  "moneyness": 0.9847186257704511,
+  "rv20": 0.18419373533641112,
+  "rv60": 0.20413715065143626,
+  "dividend_yield": 0.002279441263357526,
+  "quote": {
+    "symbol": "O:TMO230915P00540000",
+    "day": "2023-04-25",
+    "status": "valid",
+    "age_seconds": 2.609071616,
+    "bid": 28.4,
+    "ask": 30.9,
+    "bid_size": 1,
+    "ask_size": 6
+  }
+}

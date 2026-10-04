@@ -1,0 +1,25 @@
+{
+  "ticker": "NEE",
+  "day": "2024-04-24",
+  "status": "collected",
+  "spot": 66.56,
+  "strike": 62.5,
+  "symbol": "O:NEE240920P00062500",
+  "expiry": "2024-09-20",
+  "dte_days": 149,
+  "dte_sessions": 103,
+  "moneyness": 0.9390024038461539,
+  "rv20": 0.25435972155576175,
+  "rv60": 0.25813638419619234,
+  "dividend_yield": 0.02880859375,
+  "quote": {
+    "symbol": "O:NEE240920P00062500",
+    "day": "2024-04-24",
+    "status": "valid",
+    "age_seconds": 24.280088064,
+    "bid": 2.2,
+    "ask": 2.24,
+    "bid_size": 15,
+    "ask_size": 10
+  }
+}

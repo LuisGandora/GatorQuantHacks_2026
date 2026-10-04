@@ -1,0 +1,25 @@
+{
+  "ticker": "SO",
+  "day": "2024-06-25",
+  "status": "collected",
+  "spot": 78.02,
+  "strike": 75.0,
+  "symbol": "O:SO241115P00075000",
+  "expiry": "2024-11-15",
+  "dte_days": 143,
+  "dte_sessions": 101,
+  "moneyness": 0.9612919764163036,
+  "rv20": 0.16244062857162225,
+  "rv60": 0.16946899872134968,
+  "dividend_yield": 0.03614457831325301,
+  "quote": {
+    "symbol": "O:SO241115P00075000",
+    "day": "2024-06-25",
+    "status": "valid",
+    "age_seconds": 9.029874176,
+    "bid": 1.85,
+    "ask": 2,
+    "bid_size": 35,
+    "ask_size": 12
+  }
+}

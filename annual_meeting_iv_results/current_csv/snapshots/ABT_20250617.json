@@ -1,0 +1,25 @@
+{
+  "ticker": "ABT",
+  "day": "2025-06-17",
+  "status": "collected",
+  "spot": 132.28,
+  "strike": 125.0,
+  "symbol": "O:ABT250919P00125000",
+  "expiry": "2025-09-19",
+  "dte_days": 94,
+  "dte_sessions": 65,
+  "moneyness": 0.9449652252797097,
+  "rv20": 0.12384287741365901,
+  "rv60": 0.22326173302412886,
+  "dividend_yield": 0.017236165709101907,
+  "quote": {
+    "symbol": "O:ABT250919P00125000",
+    "day": "2025-06-17",
+    "status": "valid",
+    "age_seconds": 32.325193473,
+    "bid": 3.25,
+    "ask": 3.5,
+    "bid_size": 5,
+    "ask_size": 16
+  }
+}

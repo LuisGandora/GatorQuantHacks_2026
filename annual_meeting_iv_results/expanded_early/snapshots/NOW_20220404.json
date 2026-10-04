@@ -1,0 +1,25 @@
+{
+  "ticker": "NOW",
+  "day": "2022-04-04",
+  "status": "collected",
+  "spot": 574.82,
+  "strike": 520.0,
+  "symbol": "O:NOW220819P00520000",
+  "expiry": "2022-08-19",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9046310149264116,
+  "rv20": 0.6285123912188233,
+  "rv60": 0.5923666984121404,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:NOW220819P00520000",
+    "day": "2022-04-04",
+    "status": "valid",
+    "age_seconds": 4.168688896,
+    "bid": 31.4,
+    "ask": 37.5,
+    "bid_size": 58,
+    "ask_size": 97
+  }
+}

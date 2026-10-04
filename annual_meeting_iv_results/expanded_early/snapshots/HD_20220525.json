@@ -1,0 +1,25 @@
+{
+  "ticker": "HD",
+  "day": "2022-05-25",
+  "status": "collected",
+  "spot": 293.57,
+  "strike": 270.0,
+  "symbol": "O:HD220916P00270000",
+  "expiry": "2022-09-16",
+  "dte_days": 114,
+  "dte_sessions": 78,
+  "moneyness": 0.9197125046837211,
+  "rv20": 0.41087867304224346,
+  "rv60": 0.3329382107242024,
+  "dividend_yield": 0.023333446878086996,
+  "quote": {
+    "symbol": "O:HD220916P00270000",
+    "day": "2022-05-25",
+    "status": "valid",
+    "age_seconds": 0.687398912,
+    "bid": 12.55,
+    "ask": 13.35,
+    "bid_size": 20,
+    "ask_size": 30
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "VZ",
+  "day": "2025-05-29",
+  "status": "collected",
+  "spot": 43.33,
+  "strike": 40.0,
+  "symbol": "O:VZ250919P00040000",
+  "expiry": "2025-09-19",
+  "dte_days": 113,
+  "dte_sessions": 78,
+  "moneyness": 0.9231479344564967,
+  "rv20": 0.19860840294161036,
+  "rv60": 0.2926704887209505,
+  "dividend_yield": 0.06225478882990999,
+  "quote": {
+    "symbol": "O:VZ250919P00040000",
+    "day": "2025-05-29",
+    "status": "valid",
+    "age_seconds": 11.172786963,
+    "bid": 0.93,
+    "ask": 0.95,
+    "bid_size": 78,
+    "ask_size": 1
+  }
+}

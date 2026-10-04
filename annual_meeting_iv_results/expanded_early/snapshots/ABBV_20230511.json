@@ -1,0 +1,25 @@
+{
+  "ticker": "ABBV",
+  "day": "2023-05-11",
+  "status": "collected",
+  "spot": 146.59,
+  "strike": 135.0,
+  "symbol": "O:ABBV230818P00135000",
+  "expiry": "2023-08-18",
+  "dte_days": 99,
+  "dte_sessions": 68,
+  "moneyness": 0.9209359437887986,
+  "rv20": 0.33280203892816806,
+  "rv60": 0.23341928648019572,
+  "dividend_yield": 0.0389521795484003,
+  "quote": {
+    "symbol": "O:ABBV230818P00135000",
+    "day": "2023-05-11",
+    "status": "valid",
+    "age_seconds": 3.839047936,
+    "bid": 2.64,
+    "ask": 2.73,
+    "bid_size": 1,
+    "ask_size": 1
+  }
+}

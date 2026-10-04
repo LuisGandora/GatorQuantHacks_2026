@@ -1,0 +1,25 @@
+{
+  "ticker": "UNP",
+  "day": "2025-05-12",
+  "status": "collected",
+  "spot": 230.87,
+  "strike": 200.0,
+  "symbol": "O:UNP250919P00200000",
+  "expiry": "2025-09-19",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.8662883874041668,
+  "rv20": 0.20074561457037998,
+  "rv60": 0.2892894089138416,
+  "dividend_yield": 0.02304327110495084,
+  "quote": {
+    "symbol": "O:UNP250919P00200000",
+    "day": "2025-05-12",
+    "status": "valid",
+    "age_seconds": 217.895824706,
+    "bid": 3.2,
+    "ask": 3.6,
+    "bid_size": 19,
+    "ask_size": 22
+  }
+}

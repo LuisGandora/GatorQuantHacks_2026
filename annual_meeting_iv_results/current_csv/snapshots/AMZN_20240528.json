@@ -1,0 +1,25 @@
+{
+  "ticker": "AMZN",
+  "day": "2024-05-28",
+  "status": "collected",
+  "spot": 182.15,
+  "strike": 170.0,
+  "symbol": "O:AMZN240920P00170000",
+  "expiry": "2024-09-20",
+  "dte_days": 115,
+  "dte_sessions": 80,
+  "moneyness": 0.9332967334614328,
+  "rv20": 0.21696098029169497,
+  "rv60": 0.218661726908304,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMZN240920P00170000",
+    "day": "2024-05-28",
+    "status": "valid",
+    "age_seconds": 0.373568,
+    "bid": 5.45,
+    "ask": 5.6,
+    "bid_size": 99,
+    "ask_size": 49
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "C",
+  "day": "2022-06-24",
+  "status": "collected",
+  "spot": 47.86,
+  "strike": 42.5,
+  "symbol": "O:C221021P00042500",
+  "expiry": "2022-10-21",
+  "dte_days": 119,
+  "dte_sessions": 83,
+  "moneyness": 0.88800668616799,
+  "rv20": 0.34513121043971556,
+  "rv60": 0.3751309073118832,
+  "dividend_yield": 0.04262432093606352,
+  "quote": {
+    "symbol": "O:C221021P00042500",
+    "day": "2022-06-24",
+    "status": "valid",
+    "age_seconds": 0.145323776,
+    "bid": 1.88,
+    "ask": 2.02,
+    "bid_size": 18,
+    "ask_size": 51
+  }
+}

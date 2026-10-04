@@ -1,0 +1,25 @@
+{
+  "ticker": "BKNG",
+  "day": "2022-06-13",
+  "status": "collected",
+  "spot": 1979.32,
+  "strike": 1980.0,
+  "symbol": "O:BKNG221021P01980000",
+  "expiry": "2022-10-21",
+  "dte_days": 130,
+  "dte_sessions": 91,
+  "moneyness": 1.0003435523311037,
+  "rv20": 0.5373534158395665,
+  "rv60": 0.45700943420359924,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:BKNG221021P01980000",
+    "day": "2022-06-13",
+    "status": "valid",
+    "age_seconds": 33.787735296,
+    "bid": 209.1,
+    "ask": 219,
+    "bid_size": 7,
+    "ask_size": 9
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "ticker": "PG",
+  "day": "2024-11-29",
+  "status": "collected",
+  "spot": 179.26,
+  "strike": 170.0,
+  "symbol": "O:PG250321P00170000",
+  "expiry": "2025-03-21",
+  "dte_days": 112,
+  "dte_sessions": 75,
+  "moneyness": 0.9483431886645097,
+  "rv20": 0.1840917862402995,
+  "rv60": 0.15519916763028216,
+  "dividend_yield": 0.022091933504407007,
+  "quote": {
+    "symbol": "O:PG250321P00170000",
+    "day": "2024-11-29",
+    "status": "missing"
+  }
+}

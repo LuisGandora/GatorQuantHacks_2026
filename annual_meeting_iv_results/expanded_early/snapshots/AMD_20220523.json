@@ -1,0 +1,25 @@
+{
+  "ticker": "AMD",
+  "day": "2022-05-23",
+  "status": "collected",
+  "spot": 95.07,
+  "strike": 87.5,
+  "symbol": "O:AMD220916P00087500",
+  "expiry": "2022-09-16",
+  "dte_days": 116,
+  "dte_sessions": 80,
+  "moneyness": 0.9203744609235301,
+  "rv20": 0.8475319770107516,
+  "rv60": 0.6862767871716166,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMD220916P00087500",
+    "day": "2022-05-23",
+    "status": "valid",
+    "age_seconds": 1.380558848,
+    "bid": 8.6,
+    "ask": 8.7,
+    "bid_size": 32,
+    "ask_size": 7
+  }
+}

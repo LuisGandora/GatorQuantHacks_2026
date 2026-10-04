@@ -1,0 +1,25 @@
+{
+  "ticker": "GS",
+  "day": "2022-05-02",
+  "status": "collected",
+  "spot": 310.42,
+  "strike": 290.0,
+  "symbol": "O:GS220916P00290000",
+  "expiry": "2022-09-16",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9342181560466465,
+  "rv20": 0.31290788363465183,
+  "rv60": 0.28577428629734175,
+  "dividend_yield": 0.02335545390116616,
+  "quote": {
+    "symbol": "O:GS220916P00290000",
+    "day": "2022-05-02",
+    "status": "valid",
+    "age_seconds": 1.509248256,
+    "bid": 18.25,
+    "ask": 18.7,
+    "bid_size": 10,
+    "ask_size": 16
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "CL",
+  "day": "2022-04-07",
+  "status": "collected",
+  "spot": 80.42,
+  "strike": 72.5,
+  "symbol": "O:CL220819P00072500",
+  "expiry": "2022-08-19",
+  "dte_days": 134,
+  "dte_sessions": 92,
+  "moneyness": 0.9015170355632927,
+  "rv20": 0.23842614375860893,
+  "rv60": 0.2133910244951695,
+  "dividend_yield": 0.022382491917433474,
+  "quote": {
+    "symbol": "O:CL220819P00072500",
+    "day": "2022-04-07",
+    "status": "valid",
+    "age_seconds": 19.671951104,
+    "bid": 1.15,
+    "ask": 1.75,
+    "bid_size": 530,
+    "ask_size": 261
+  }
+}

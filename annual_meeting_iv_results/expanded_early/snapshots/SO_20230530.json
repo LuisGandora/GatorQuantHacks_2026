@@ -1,0 +1,25 @@
+{
+  "ticker": "SO",
+  "day": "2023-05-30",
+  "status": "collected",
+  "spot": 69.83,
+  "strike": 65.0,
+  "symbol": "O:SO231117P00065000",
+  "expiry": "2023-11-17",
+  "dte_days": 171,
+  "dte_sessions": 120,
+  "moneyness": 0.9308320206215094,
+  "rv20": 0.1600705238833583,
+  "rv60": 0.18015314873388488,
+  "dividend_yield": 0.03895173993985394,
+  "quote": {
+    "symbol": "O:SO231117P00065000",
+    "day": "2023-05-30",
+    "status": "valid",
+    "age_seconds": 32.25799424,
+    "bid": 2,
+    "ask": 2.15,
+    "bid_size": 86,
+    "ask_size": 54
+  }
+}

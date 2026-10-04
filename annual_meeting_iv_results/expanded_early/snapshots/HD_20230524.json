@@ -1,0 +1,25 @@
+{
+  "ticker": "HD",
+  "day": "2023-05-24",
+  "status": "collected",
+  "spot": 291.1,
+  "strike": 280.0,
+  "symbol": "O:HD230915P00280000",
+  "expiry": "2023-09-15",
+  "dte_days": 114,
+  "dte_sessions": 78,
+  "moneyness": 0.9618687736173136,
+  "rv20": 0.2646834575530592,
+  "rv60": 0.21285296245388613,
+  "dividend_yield": 0.026760563380281686,
+  "quote": {
+    "symbol": "O:HD230915P00280000",
+    "day": "2023-05-24",
+    "status": "valid",
+    "age_seconds": 2.367243776,
+    "bid": 11.55,
+    "ask": 11.75,
+    "bid_size": 8,
+    "ask_size": 20
+  }
+}

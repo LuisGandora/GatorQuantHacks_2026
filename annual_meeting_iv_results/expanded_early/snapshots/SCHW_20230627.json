@@ -1,0 +1,25 @@
+{
+  "ticker": "SCHW",
+  "day": "2023-06-27",
+  "status": "collected",
+  "spot": 55.22,
+  "strike": 50.0,
+  "symbol": "O:SCHW231020P00050000",
+  "expiry": "2023-10-20",
+  "dte_days": 115,
+  "dte_sessions": 81,
+  "moneyness": 0.9054690329590728,
+  "rv20": 0.22427515590406227,
+  "rv60": 0.34845216394004563,
+  "dividend_yield": 0.017022817819630567,
+  "quote": {
+    "symbol": "O:SCHW231020P00050000",
+    "day": "2023-06-27",
+    "status": "valid",
+    "age_seconds": 1.966415616,
+    "bid": 1.99,
+    "ask": 2.06,
+    "bid_size": 71,
+    "ask_size": 22
+  }
+}

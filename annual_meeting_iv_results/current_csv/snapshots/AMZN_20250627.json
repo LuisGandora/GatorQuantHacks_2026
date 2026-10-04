@@ -1,0 +1,25 @@
+{
+  "ticker": "AMZN",
+  "day": "2025-06-27",
+  "status": "collected",
+  "spot": 223.3,
+  "strike": 205.0,
+  "symbol": "O:AMZN251017P00205000",
+  "expiry": "2025-10-17",
+  "dte_days": 112,
+  "dte_sessions": 78,
+  "moneyness": 0.9180474697716077,
+  "rv20": 0.204565973692347,
+  "rv60": 0.454930281215714,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMZN251017P00205000",
+    "day": "2025-06-27",
+    "status": "valid",
+    "age_seconds": 6.474846916,
+    "bid": 6.75,
+    "ask": 6.9,
+    "bid_size": 22,
+    "ask_size": 454
+  }
+}

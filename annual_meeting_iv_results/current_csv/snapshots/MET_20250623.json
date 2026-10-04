@@ -1,0 +1,25 @@
+{
+  "ticker": "MET",
+  "day": "2025-06-23",
+  "status": "collected",
+  "spot": 79.63,
+  "strike": 75.0,
+  "symbol": "O:MET250919P00075000",
+  "expiry": "2025-09-19",
+  "dte_days": 88,
+  "dte_sessions": 62,
+  "moneyness": 0.9418560843903052,
+  "rv20": 0.1703488932750738,
+  "rv60": 0.4192991714171566,
+  "dividend_yield": 0.027659173678261966,
+  "quote": {
+    "symbol": "O:MET250919P00075000",
+    "day": "2025-06-23",
+    "status": "valid",
+    "age_seconds": 291.059924942,
+    "bid": 1.85,
+    "ask": 2.5,
+    "bid_size": 16,
+    "ask_size": 17
+  }
+}

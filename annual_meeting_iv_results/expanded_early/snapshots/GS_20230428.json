@@ -1,0 +1,25 @@
+{
+  "ticker": "GS",
+  "day": "2023-04-28",
+  "status": "collected",
+  "spot": 343.44,
+  "strike": 320.0,
+  "symbol": "O:GS230915P00320000",
+  "expiry": "2023-09-15",
+  "dte_days": 140,
+  "dte_sessions": 96,
+  "moneyness": 0.9317493594223154,
+  "rv20": 0.154234007284233,
+  "rv60": 0.2525469389885279,
+  "dividend_yield": 0.027661309107849988,
+  "quote": {
+    "symbol": "O:GS230915P00320000",
+    "day": "2023-04-28",
+    "status": "valid",
+    "age_seconds": 1.127617792,
+    "bid": 11.55,
+    "ask": 11.9,
+    "bid_size": 12,
+    "ask_size": 11
+  }
+}

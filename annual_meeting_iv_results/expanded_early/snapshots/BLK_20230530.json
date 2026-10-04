@@ -1,0 +1,25 @@
+{
+  "ticker": "BLK",
+  "day": "2023-05-30",
+  "status": "collected",
+  "spot": 673.58,
+  "strike": 630.0,
+  "symbol": "O:BLK231020P00630000",
+  "expiry": "2023-10-20",
+  "dte_days": 143,
+  "dte_sessions": 100,
+  "moneyness": 0.9353009293625107,
+  "rv20": 0.24605687010454239,
+  "rv60": 0.237127042646291,
+  "dividend_yield": 0.029157635321713827,
+  "quote": {
+    "symbol": "O:BLK231020P00630000",
+    "day": "2023-05-30",
+    "status": "valid",
+    "age_seconds": 18.357545984,
+    "bid": 25.9,
+    "ask": 28.6,
+    "bid_size": 10,
+    "ask_size": 10
+  }
+}

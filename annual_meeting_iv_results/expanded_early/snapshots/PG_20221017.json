@@ -1,0 +1,25 @@
+{
+  "ticker": "PG",
+  "day": "2022-10-17",
+  "status": "collected",
+  "spot": 127.34,
+  "strike": 115.0,
+  "symbol": "O:PG230217P00115000",
+  "expiry": "2023-02-17",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9030940788440396,
+  "rv20": 0.20368936688053366,
+  "rv60": 0.2351686346485887,
+  "dividend_yield": 0.028005340034553166,
+  "quote": {
+    "symbol": "O:PG230217P00115000",
+    "day": "2022-10-17",
+    "status": "valid",
+    "age_seconds": 1.90419328,
+    "bid": 3.65,
+    "ask": 3.8,
+    "bid_size": 104,
+    "ask_size": 57
+  }
+}

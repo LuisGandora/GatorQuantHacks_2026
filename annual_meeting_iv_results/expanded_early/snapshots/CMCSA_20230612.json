@@ -1,0 +1,25 @@
+{
+  "ticker": "CMCSA",
+  "day": "2023-06-12",
+  "status": "collected",
+  "spot": 40.69,
+  "strike": 37.5,
+  "symbol": "O:CMCSA231020P00037500",
+  "expiry": "2023-10-20",
+  "dte_days": 130,
+  "dte_sessions": 91,
+  "moneyness": 0.9216023593020398,
+  "rv20": 0.2037856347083782,
+  "rv60": 0.27509987157851595,
+  "dividend_yield": 0.02703366920619317,
+  "quote": {
+    "symbol": "O:CMCSA231020P00037500",
+    "day": "2023-06-12",
+    "status": "valid",
+    "age_seconds": 3.411532032,
+    "bid": 1.01,
+    "ask": 1.06,
+    "bid_size": 83,
+    "ask_size": 121
+  }
+}

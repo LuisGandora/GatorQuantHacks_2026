@@ -1,0 +1,25 @@
+{
+  "ticker": "MRK",
+  "day": "2022-05-27",
+  "status": "collected",
+  "spot": 93.08,
+  "strike": 87.5,
+  "symbol": "O:MRK221021P00087500",
+  "expiry": "2022-10-21",
+  "dte_days": 147,
+  "dte_sessions": 101,
+  "moneyness": 0.9400515685431887,
+  "rv20": 0.17565401584204912,
+  "rv60": 0.17884962975002566,
+  "dividend_yield": 0.02879243661366566,
+  "quote": {
+    "symbol": "O:MRK221021P00087500",
+    "day": "2022-05-27",
+    "status": "valid",
+    "age_seconds": 15.997627904,
+    "bid": 3.35,
+    "ask": 3.5,
+    "bid_size": 17,
+    "ask_size": 2
+  }
+}

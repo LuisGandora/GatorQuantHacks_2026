@@ -1,0 +1,25 @@
+{
+  "ticker": "MDLZ",
+  "day": "2024-04-04",
+  "status": "collected",
+  "spot": 68.21,
+  "strike": 62.5,
+  "symbol": "O:MDLZ240920P00062500",
+  "expiry": "2024-09-20",
+  "dte_days": 169,
+  "dte_sessions": 117,
+  "moneyness": 0.916287934320481,
+  "rv20": 0.15369227613810538,
+  "rv60": 0.15260192411732493,
+  "dividend_yield": 0.023750183257586866,
+  "quote": {
+    "symbol": "O:MDLZ240920P00062500",
+    "day": "2024-04-04",
+    "status": "valid",
+    "age_seconds": 9.075701248,
+    "bid": 1.3,
+    "ask": 1.45,
+    "bid_size": 1,
+    "ask_size": 24
+  }
+}

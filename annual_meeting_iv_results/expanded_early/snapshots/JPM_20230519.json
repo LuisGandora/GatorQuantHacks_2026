@@ -1,0 +1,25 @@
+{
+  "ticker": "JPM",
+  "day": "2023-05-19",
+  "status": "collected",
+  "spot": 139.18,
+  "strike": 130.0,
+  "symbol": "O:JPM230915P00130000",
+  "expiry": "2023-09-15",
+  "dte_days": 119,
+  "dte_sessions": 81,
+  "moneyness": 0.9340422474493462,
+  "rv20": 0.23407348908652426,
+  "rv60": 0.3149327479513074,
+  "dividend_yield": 0.02873976145997988,
+  "quote": {
+    "symbol": "O:JPM230915P00130000",
+    "day": "2023-05-19",
+    "status": "valid",
+    "age_seconds": 1.971228928,
+    "bid": 4,
+    "ask": 4.15,
+    "bid_size": 161,
+    "ask_size": 61
+  }
+}

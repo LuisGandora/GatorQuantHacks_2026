@@ -1,0 +1,25 @@
+{
+  "ticker": "LIN",
+  "day": "2023-08-28",
+  "status": "collected",
+  "spot": 382.07,
+  "strike": 360.0,
+  "symbol": "O:LIN240119P00360000",
+  "expiry": "2024-01-19",
+  "dte_days": 144,
+  "dte_sessions": 99,
+  "moneyness": 0.942235715968278,
+  "rv20": 0.11862170404867507,
+  "rv60": 0.16436757938622418,
+  "dividend_yield": 0.006674169654775302,
+  "quote": {
+    "symbol": "O:LIN240119P00360000",
+    "day": "2023-08-28",
+    "status": "valid",
+    "age_seconds": 4.03816832,
+    "bid": 9.3,
+    "ask": 11.3,
+    "bid_size": 19,
+    "ask_size": 19
+  }
+}

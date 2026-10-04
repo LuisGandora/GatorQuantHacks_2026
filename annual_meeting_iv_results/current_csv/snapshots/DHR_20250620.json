@@ -1,0 +1,25 @@
+{
+  "ticker": "DHR",
+  "day": "2025-06-20",
+  "status": "collected",
+  "spot": 196.39,
+  "strike": 180.0,
+  "symbol": "O:DHR250919P00180000",
+  "expiry": "2025-09-19",
+  "dte_days": 91,
+  "dte_sessions": 63,
+  "moneyness": 0.916543612200214,
+  "rv20": 0.29989833531425664,
+  "rv60": 0.44033675867633626,
+  "dividend_yield": 0.005753857121034677,
+  "quote": {
+    "symbol": "O:DHR250919P00180000",
+    "day": "2025-06-20",
+    "status": "valid",
+    "age_seconds": 292.484784129,
+    "bid": 5.2,
+    "ask": 6,
+    "bid_size": 9,
+    "ask_size": 13
+  }
+}

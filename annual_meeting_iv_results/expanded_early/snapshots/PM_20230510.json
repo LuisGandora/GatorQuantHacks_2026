@@ -1,0 +1,25 @@
+{
+  "ticker": "PM",
+  "day": "2023-05-10",
+  "status": "collected",
+  "spot": 95.1,
+  "strike": 90.0,
+  "symbol": "O:PM230915P00090000",
+  "expiry": "2023-09-15",
+  "dte_days": 128,
+  "dte_sessions": 88,
+  "moneyness": 0.9463722397476342,
+  "rv20": 0.23473960440233096,
+  "rv60": 0.2057623275584627,
+  "dividend_yield": 0.053207150368033654,
+  "quote": {
+    "symbol": "O:PM230915P00090000",
+    "day": "2023-05-10",
+    "status": "valid",
+    "age_seconds": 136.927316224,
+    "bid": 2.65,
+    "ask": 2.85,
+    "bid_size": 100,
+    "ask_size": 350
+  }
+}

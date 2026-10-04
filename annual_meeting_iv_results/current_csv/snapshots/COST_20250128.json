@@ -1,0 +1,25 @@
+{
+  "ticker": "COST",
+  "day": "2025-01-28",
+  "status": "collected",
+  "spot": 958.67,
+  "strike": 915.0,
+  "symbol": "O:COST250620P00915000",
+  "expiry": "2025-06-20",
+  "dte_days": 143,
+  "dte_sessions": 99,
+  "moneyness": 0.9544473072068596,
+  "rv20": 0.18936080929719545,
+  "rv60": 0.17954550444503484,
+  "dividend_yield": 0.00469400315019767,
+  "quote": {
+    "symbol": "O:COST250620P00915000",
+    "day": "2025-01-28",
+    "status": "valid",
+    "age_seconds": 0.914377984,
+    "bid": 28.8,
+    "ask": 29.95,
+    "bid_size": 9,
+    "ask_size": 11
+  }
+}

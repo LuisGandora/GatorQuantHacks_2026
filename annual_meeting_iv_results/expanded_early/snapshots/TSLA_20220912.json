@@ -1,0 +1,25 @@
+{
+  "ticker": "TSLA",
+  "day": "2022-09-12",
+  "status": "collected",
+  "spot": 304.42,
+  "strike": 283.33,
+  "symbol": "O:TSLA230120P00283330",
+  "expiry": "2023-01-20",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9307207148019183,
+  "rv20": 0.36018019421793646,
+  "rv60": 0.5395932222004468,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:TSLA230120P00283330",
+    "day": "2022-09-12",
+    "status": "valid",
+    "age_seconds": 0.426076672,
+    "bid": 27.55,
+    "ask": 28,
+    "bid_size": 9,
+    "ask_size": 27
+  }
+}

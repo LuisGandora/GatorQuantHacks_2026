@@ -1,0 +1,25 @@
+{
+  "ticker": "V",
+  "day": "2023-01-26",
+  "status": "collected",
+  "spot": 224.71,
+  "strike": 210.0,
+  "symbol": "O:V230616P00210000",
+  "expiry": "2023-06-16",
+  "dte_days": 141,
+  "dte_sessions": 98,
+  "moneyness": 0.9345378487828757,
+  "rv20": 0.17569794692307805,
+  "rv60": 0.2625275311102032,
+  "dividend_yield": 0.007009033865871568,
+  "quote": {
+    "symbol": "O:V230616P00210000",
+    "day": "2023-01-26",
+    "status": "valid",
+    "age_seconds": 4.70734208,
+    "bid": 6.65,
+    "ask": 6.8,
+    "bid_size": 1,
+    "ask_size": 5
+  }
+}

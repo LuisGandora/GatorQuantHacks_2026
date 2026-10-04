@@ -1,0 +1,25 @@
+{
+  "ticker": "TMO",
+  "day": "2022-05-20",
+  "status": "collected",
+  "spot": 555.15,
+  "strike": 520.0,
+  "symbol": "O:TMO220916P00520000",
+  "expiry": "2022-09-16",
+  "dte_days": 119,
+  "dte_sessions": 81,
+  "moneyness": 0.936683779158786,
+  "rv20": 0.48249712140742945,
+  "rv60": 0.36438291553473146,
+  "dividend_yield": 0.0019454201567144017,
+  "quote": {
+    "symbol": "O:TMO220916P00520000",
+    "day": "2022-05-20",
+    "status": "valid",
+    "age_seconds": 0.298736384,
+    "bid": 24.3,
+    "ask": 26.1,
+    "bid_size": 41,
+    "ask_size": 20
+  }
+}

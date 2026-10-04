@@ -1,0 +1,25 @@
+{
+  "ticker": "UNH",
+  "day": "2022-06-13",
+  "status": "collected",
+  "spot": 469.7,
+  "strike": 460.0,
+  "symbol": "O:UNH220916P00460000",
+  "expiry": "2022-09-16",
+  "dte_days": 95,
+  "dte_sessions": 66,
+  "moneyness": 0.9793485203321269,
+  "rv20": 0.23888393980815611,
+  "rv60": 0.2369477851116399,
+  "dividend_yield": 0.012348307430274643,
+  "quote": {
+    "symbol": "O:UNH220916P00460000",
+    "day": "2022-06-13",
+    "status": "valid",
+    "age_seconds": 0.490496256,
+    "bid": 25.35,
+    "ask": 26.75,
+    "bid_size": 30,
+    "ask_size": 20
+  }
+}

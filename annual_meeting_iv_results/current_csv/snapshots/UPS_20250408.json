@@ -1,0 +1,25 @@
+{
+  "ticker": "UPS",
+  "day": "2025-04-08",
+  "status": "collected",
+  "spot": 91.92,
+  "strike": 90.0,
+  "symbol": "O:UPS250718P00090000",
+  "expiry": "2025-07-18",
+  "dte_days": 101,
+  "dte_sessions": 69,
+  "moneyness": 0.97911227154047,
+  "rv20": 0.4122729260869119,
+  "rv60": 0.43080445088814134,
+  "dividend_yield": 0.07104003481288075,
+  "quote": {
+    "symbol": "O:UPS250718P00090000",
+    "day": "2025-04-08",
+    "status": "valid",
+    "age_seconds": 10.442754048,
+    "bid": 7.1,
+    "ask": 8.1,
+    "bid_size": 56,
+    "ask_size": 34
+  }
+}

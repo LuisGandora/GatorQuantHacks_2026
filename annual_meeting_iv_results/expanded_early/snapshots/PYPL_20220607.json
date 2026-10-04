@@ -1,0 +1,25 @@
+{
+  "ticker": "PYPL",
+  "day": "2022-06-07",
+  "status": "collected",
+  "spot": 88.59,
+  "strike": 80.0,
+  "symbol": "O:PYPL221021P00080000",
+  "expiry": "2022-10-21",
+  "dte_days": 136,
+  "dte_sessions": 95,
+  "moneyness": 0.9030364600970764,
+  "rv20": 0.5421317161484545,
+  "rv60": 0.6184036668967446,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:PYPL221021P00080000",
+    "day": "2022-06-07",
+    "status": "valid",
+    "age_seconds": 27.380389376,
+    "bid": 7.3,
+    "ask": 7.45,
+    "bid_size": 47,
+    "ask_size": 26
+  }
+}

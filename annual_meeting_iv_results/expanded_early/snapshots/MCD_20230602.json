@@ -1,0 +1,25 @@
+{
+  "ticker": "MCD",
+  "day": "2023-06-02",
+  "status": "collected",
+  "spot": 289.91,
+  "strike": 270.0,
+  "symbol": "O:MCD230915P00270000",
+  "expiry": "2023-09-15",
+  "dte_days": 105,
+  "dte_sessions": 72,
+  "moneyness": 0.9313235141940601,
+  "rv20": 0.1025935875175728,
+  "rv60": 0.11167191237691487,
+  "dividend_yield": 0.02000620882342796,
+  "quote": {
+    "symbol": "O:MCD230915P00270000",
+    "day": "2023-06-02",
+    "status": "valid",
+    "age_seconds": 40.339764224,
+    "bid": 3,
+    "ask": 3.15,
+    "bid_size": 5,
+    "ask_size": 1
+  }
+}

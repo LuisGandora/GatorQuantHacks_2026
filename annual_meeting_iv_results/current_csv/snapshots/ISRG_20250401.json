@@ -1,0 +1,25 @@
+{
+  "ticker": "ISRG",
+  "day": "2025-04-01",
+  "status": "collected",
+  "spot": 496.36,
+  "strike": 470.0,
+  "symbol": "O:ISRG250718P00470000",
+  "expiry": "2025-07-18",
+  "dte_days": 108,
+  "dte_sessions": 74,
+  "moneyness": 0.9468933838343138,
+  "rv20": 0.4482122351546555,
+  "rv60": 0.36249910717511813,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:ISRG250718P00470000",
+    "day": "2025-04-01",
+    "status": "valid",
+    "age_seconds": 53.540875264,
+    "bid": 23.4,
+    "ask": 24,
+    "bid_size": 13,
+    "ask_size": 52
+  }
+}

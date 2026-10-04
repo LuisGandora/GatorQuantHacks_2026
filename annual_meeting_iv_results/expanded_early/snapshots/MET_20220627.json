@@ -1,0 +1,25 @@
+{
+  "ticker": "MET",
+  "day": "2022-06-27",
+  "status": "collected",
+  "spot": 63.58,
+  "strike": 60.0,
+  "symbol": "O:MET221118P00060000",
+  "expiry": "2022-11-18",
+  "dte_days": 144,
+  "dte_sessions": 102,
+  "moneyness": 0.9436929852154766,
+  "rv20": 0.34568285686917444,
+  "rv60": 0.2781082050628541,
+  "dividend_yield": 0.030512739855300407,
+  "quote": {
+    "symbol": "O:MET221118P00060000",
+    "day": "2022-06-27",
+    "status": "valid",
+    "age_seconds": 48.27036672,
+    "bid": 3.4,
+    "ask": 3.7,
+    "bid_size": 51,
+    "ask_size": 152
+  }
+}

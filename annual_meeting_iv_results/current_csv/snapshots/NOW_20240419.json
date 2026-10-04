@@ -1,0 +1,25 @@
+{
+  "ticker": "NOW",
+  "day": "2024-04-19",
+  "status": "collected",
+  "spot": 713.91,
+  "strike": 690.0,
+  "symbol": "O:NOW240816P00690000",
+  "expiry": "2024-08-16",
+  "dte_days": 119,
+  "dte_sessions": 82,
+  "moneyness": 0.9665083834096735,
+  "rv20": 0.2476593093430792,
+  "rv60": 0.2914725607695662,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:NOW240816P00690000",
+    "day": "2024-04-19",
+    "status": "valid",
+    "age_seconds": 0.152253952,
+    "bid": 42.8,
+    "ask": 44.2,
+    "bid_size": 4,
+    "ask_size": 5
+  }
+}

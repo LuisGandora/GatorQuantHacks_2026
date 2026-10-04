@@ -1,0 +1,25 @@
+"""Create a separate runnable notebook with saved input/result displays."""
+import json
+from pathlib import Path
+
+root=Path(__file__).resolve().parent
+starter=json.loads((root/'gator-quant-hacks-8k-options-challenge.ipynb').read_text(encoding='utf-8'))
+cells=[]
+def markdown(text):cells.append(dict(cell_type='markdown',metadata={},source=text.splitlines(keepends=True)))
+def code(text):cells.append(dict(cell_type='code',metadata={},execution_count=None,outputs=[],source=text.splitlines(keepends=True)))
+markdown('# Annual-meeting put IV mechanism test\n\nSeparate experiment: current CSV sample and expanded Massive history. **Conclusion: inconclusive.** This tests entry pricing, not protective-put profitability. Choices were frozen before IV differences; historical candidate selection followed related P&L discovery. Original starter notebook and harness are untouched.\n')
+code('import json\nimport pandas as pd\nimport annual_meeting_iv_test as study\nimport annual_meeting_iv_analysis as analysis\nfrom verify_annual_meeting_iv import run as verify\n# Set True to retrieve/rebuild using the existing local Massive key; never print it.\nREBUILD = False\nstudy.freeze()\ndisplay(json.loads((study.OUT / "registration.json").read_text()))\n')
+markdown('## Sample counts before IV\n\nPreserve the 2024–2025 CSV event sample; retrieve March 7, 2022–December 2023 from Massive. January–August 2026 is a separate replication feasibility check. Controls use the full Massive all-tag calendar, not CSV absence.\n')
+code('if REBUILD:\n    study.counts()\ndisplay(pd.read_csv(study.OUT / "calendar_counts.csv"))\n')
+markdown('## Entry inputs\n\nStarter 3–6-month expiry and 5% OTM strike algorithms use the prior session. Entry is the first trading close strictly after the filing date. Valid latest bid/ask quotes must precede 16:00 ET and be no older than 60 seconds. RV uses adjusted-close returns ending strictly before entry. Actual entry K/S is matched, as are expiry and RV. No exit prices are needed.\n')
+code('if REBUILD:\n    study.collect()\nfor window in ["current_csv", "expanded_early"]:\n    completion = json.loads((study.OUT / window / "collection_complete.json").read_text())\n    display({"window": window, **completion})\n')
+markdown('## American put IV and conditional comparison\n\nInvert a 200-step American CRR tree at the quote midpoint, with trailing paid dividends as a continuous yield proxy and the starter constant rate. Regress each event-minus-control IV difference on differences in pre-entry RV, log maturity and actual K/S. Intercept estimates are descriptive with these small samples. Dependence links repeated companies and overlapping volatility-input/control windows. Confidence intervals require 40 events and five dependence components; the 120-comparison discovery correction remains.\n')
+code('if REBUILD:\n    analysis.run()\nresults = pd.read_csv(study.OUT / "results.csv")\nprimary = results[(results.variant == "primary") & (results.quote_age == 60)].copy()\nfor col in ["mean_event_iv", "mean_ordinary_iv", "mean_iv_difference", "adjusted_iv_difference"]:\n    primary[col] *= 100\ndisplay(primary[["window", "n", "companies", "dependence_groups", "mean_event_iv", "mean_ordinary_iv", "mean_iv_difference", "adjusted_iv_difference", "conclusion"]])\nprint("IV columns are annualized percentage points, not percent changes or P&L.")\n')
+code('display(pd.read_csv(study.OUT / "exclusion_counts.csv"))\nsensitivity = results[results.quote_age == 60].copy()\nsensitivity["adjusted_iv_difference"] *= 100\ndisplay(sensitivity[["window", "variant", "n", "adjusted_iv_difference", "conclusion"]])\n')
+code('verify()\n')
+markdown('## Interpretation\n\nCurrent sample: 9 matched events, raw IV difference −2.00 points and adjusted difference −2.50 points. Expanded early sample: 5 matched events, raw difference +1.22 points and adjusted difference −4.44 points. With 60-return RV adjustment, the expanded estimate reverses to +19.44 points; four regression coefficients on five events are unstable. Neither sample passes count/dependence gates, so no valid registered interval is available. The 2026 calendar upper bound is 36 and it was not priced.\n\n**Inconclusive:** the data do not establish cheaper post-meeting insurance or absence of an effect. Fixed rates, continuous historical dividend proxies, stock closing prices rather than quote-synchronous stock ticks, static starter-universe survivorship, scheduling/earnings confounds, retrospective tags, and small matched samples limit interpretation. Quote bid/ask, rates, dividends, tree steps, and RV sensitivities are reported; they do not establish executable returns. Entry-only IV has no fixed holding horizon: earlier P&L horizon studies remain separate. See `annual_meeting_iv_results/RESULTS.md` and the frozen registration.\n')
+starter['cells']=cells
+starter['metadata'].setdefault('kernelspec',dict(display_name='Python 3',language='python',name='python3'))
+path=root/'gator-quant-hacks-8k-options-annual-meeting-iv.ipynb'
+path.write_text(json.dumps(starter,indent=1,ensure_ascii=False),encoding='utf-8')
+print(path)

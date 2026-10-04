@@ -1,0 +1,25 @@
+{
+  "ticker": "GOOGL",
+  "day": "2022-06-06",
+  "status": "collected",
+  "spot": 2336.41,
+  "strike": 2170.0,
+  "symbol": "O:GOOGL220916P02170000",
+  "expiry": "2022-09-16",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9287753433686725,
+  "rv20": 0.39110263960909614,
+  "rv60": 0.383183015505618,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:GOOGL220916P02170000",
+    "day": "2022-06-06",
+    "status": "valid",
+    "age_seconds": 4.12749696,
+    "bid": 105.8,
+    "ask": 109,
+    "bid_size": 1,
+    "ask_size": 2
+  }
+}

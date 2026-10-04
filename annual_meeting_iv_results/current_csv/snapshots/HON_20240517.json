@@ -1,0 +1,25 @@
+{
+  "ticker": "HON",
+  "day": "2024-05-17",
+  "status": "collected",
+  "spot": 205.97,
+  "strike": 195.0,
+  "symbol": "O:HON240920P00195000",
+  "expiry": "2024-09-20",
+  "dte_days": 126,
+  "dte_sessions": 86,
+  "moneyness": 0.9467398164781279,
+  "rv20": 0.12453162698205278,
+  "rv60": 0.14344716115531556,
+  "dividend_yield": 0.02048842064378308,
+  "quote": {
+    "symbol": "O:HON240920P00195000",
+    "day": "2024-05-17",
+    "status": "valid",
+    "age_seconds": 0.56772096,
+    "bid": 3.1,
+    "ask": 3.4,
+    "bid_size": 41,
+    "ask_size": 62
+  }
+}

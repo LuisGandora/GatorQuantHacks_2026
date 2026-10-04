@@ -1,0 +1,25 @@
+{
+  "ticker": "AMZN",
+  "day": "2022-05-31",
+  "status": "collected",
+  "spot": 2404.19,
+  "strike": 2180.0,
+  "symbol": "O:AMZN220916P02180000",
+  "expiry": "2022-09-16",
+  "dte_days": 108,
+  "dte_sessions": 75,
+  "moneyness": 0.9067502984373115,
+  "rv20": 0.5831218733381162,
+  "rv60": 0.5677445426956435,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:AMZN220916P02180000",
+    "day": "2022-05-31",
+    "status": "valid",
+    "age_seconds": 2.259070464,
+    "bid": 128.2,
+    "ask": 131.6,
+    "bid_size": 5,
+    "ask_size": 2
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "GILD",
+  "day": "2025-06-13",
+  "status": "collected",
+  "spot": 109.98,
+  "strike": 105.0,
+  "symbol": "O:GILD250919P00105000",
+  "expiry": "2025-09-19",
+  "dte_days": 98,
+  "dte_sessions": 67,
+  "moneyness": 0.9547190398254227,
+  "rv20": 0.26342396363766346,
+  "rv60": 0.3378347323675979,
+  "dividend_yield": 0.028186943080560103,
+  "quote": {
+    "symbol": "O:GILD250919P00105000",
+    "day": "2025-06-13",
+    "status": "valid",
+    "age_seconds": 7.402130701,
+    "bid": 4.4,
+    "ask": 5.4,
+    "bid_size": 50,
+    "ask_size": 4
+  }
+}

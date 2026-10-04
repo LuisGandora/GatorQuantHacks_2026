@@ -1,0 +1,25 @@
+{
+  "ticker": "CMCSA",
+  "day": "2022-06-06",
+  "status": "collected",
+  "spot": 42.28,
+  "strike": 40.0,
+  "symbol": "O:CMCSA220916P00040000",
+  "expiry": "2022-09-16",
+  "dte_days": 102,
+  "dte_sessions": 71,
+  "moneyness": 0.9460737937559129,
+  "rv20": 0.2256855515722612,
+  "rv60": 0.2788187657147275,
+  "dividend_yield": 0.024124881740775782,
+  "quote": {
+    "symbol": "O:CMCSA220916P00040000",
+    "day": "2022-06-06",
+    "status": "valid",
+    "age_seconds": 7.985928192,
+    "bid": 1.64,
+    "ask": 1.69,
+    "bid_size": 87,
+    "ask_size": 9
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "V",
+  "day": "2025-03-27",
+  "status": "collected",
+  "spot": 349.86,
+  "strike": 325.0,
+  "symbol": "O:V250919P00325000",
+  "expiry": "2025-09-19",
+  "dte_days": 176,
+  "dte_sessions": 121,
+  "moneyness": 0.928943005773738,
+  "rv20": 0.2328805761890754,
+  "rv60": 0.17508425152891954,
+  "dividend_yield": 0.006345395300977533,
+  "quote": {
+    "symbol": "O:V250919P00325000",
+    "day": "2025-03-27",
+    "status": "valid",
+    "age_seconds": 0.020076032,
+    "bid": 9.65,
+    "ask": 10,
+    "bid_size": 21,
+    "ask_size": 23
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "NOW",
+  "day": "2024-05-24",
+  "status": "collected",
+  "spot": 738.51,
+  "strike": 720.0,
+  "symbol": "O:NOW240920P00720000",
+  "expiry": "2024-09-20",
+  "dte_days": 119,
+  "dte_sessions": 81,
+  "moneyness": 0.974936019823699,
+  "rv20": 0.3035783777115702,
+  "rv60": 0.3178049016655644,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:NOW240920P00720000",
+    "day": "2024-05-24",
+    "status": "valid",
+    "age_seconds": 10.77738496,
+    "bid": 35.9,
+    "ask": 38.2,
+    "bid_size": 15,
+    "ask_size": 3
+  }
+}

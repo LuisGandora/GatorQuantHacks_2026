@@ -1,0 +1,25 @@
+{
+  "ticker": "TXN",
+  "day": "2024-04-29",
+  "status": "collected",
+  "spot": 179.29,
+  "strike": 165.0,
+  "symbol": "O:TXN240920P00165000",
+  "expiry": "2024-09-20",
+  "dte_days": 144,
+  "dte_sessions": 100,
+  "moneyness": 0.9202967259746779,
+  "rv20": 0.31858322900229524,
+  "rv60": 0.24911321635175687,
+  "dividend_yield": 0.028333984048190083,
+  "quote": {
+    "symbol": "O:TXN240920P00165000",
+    "day": "2024-04-29",
+    "status": "valid",
+    "age_seconds": 0.566577152,
+    "bid": 4.95,
+    "ask": 5.2,
+    "bid_size": 21,
+    "ask_size": 31
+  }
+}

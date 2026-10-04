@@ -1,0 +1,25 @@
+{
+  "ticker": "CMCSA",
+  "day": "2024-04-04",
+  "status": "collected",
+  "spot": 41.11,
+  "strike": 37.5,
+  "symbol": "O:CMCSA240719P00037500",
+  "expiry": "2024-07-19",
+  "dte_days": 106,
+  "dte_sessions": 73,
+  "moneyness": 0.9121868158598881,
+  "rv20": 0.17610792375081633,
+  "rv60": 0.22180425780503243,
+  "dividend_yield": 0.02821697883726587,
+  "quote": {
+    "symbol": "O:CMCSA240719P00037500",
+    "day": "2024-04-04",
+    "status": "valid",
+    "age_seconds": 5.7174784,
+    "bid": 0.87,
+    "ask": 0.93,
+    "bid_size": 4,
+    "ask_size": 12
+  }
+}

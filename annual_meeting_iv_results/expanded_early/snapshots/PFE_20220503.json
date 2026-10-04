@@ -1,0 +1,25 @@
+{
+  "ticker": "PFE",
+  "day": "2022-05-03",
+  "status": "collected",
+  "spot": 49.29,
+  "strike": 45.0,
+  "symbol": "O:PFE1220916P00045000",
+  "expiry": "2022-09-16",
+  "dte_days": 136,
+  "dte_sessions": 94,
+  "moneyness": 0.9129640900791236,
+  "rv20": 0.317507864547627,
+  "rv60": 0.29301831860687094,
+  "dividend_yield": 0.03185230269831609,
+  "quote": {
+    "symbol": "O:PFE1220916P00045000",
+    "day": "2022-05-03",
+    "status": "valid",
+    "age_seconds": 10.345835008,
+    "bid": 0.24,
+    "ask": 4,
+    "bid_size": 990,
+    "ask_size": 942
+  }
+}

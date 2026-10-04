@@ -1,0 +1,25 @@
+{
+  "ticker": "WMT",
+  "day": "2024-05-06",
+  "status": "collected",
+  "spot": 59.87,
+  "strike": 56.67,
+  "symbol": "O:WMT240920P00056670",
+  "expiry": "2024-09-20",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9465508601970938,
+  "rv20": 0.14035147825730124,
+  "rv60": 0.14063171543794095,
+  "dividend_yield": 0.03202772674127276,
+  "quote": {
+    "symbol": "O:WMT240920P00056670",
+    "day": "2024-05-06",
+    "status": "valid",
+    "age_seconds": 1.123401728,
+    "bid": 1.31,
+    "ask": 1.37,
+    "bid_size": 289,
+    "ask_size": 345
+  }
+}

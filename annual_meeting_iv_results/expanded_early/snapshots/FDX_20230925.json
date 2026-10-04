@@ -1,0 +1,25 @@
+{
+  "ticker": "FDX",
+  "day": "2023-09-25",
+  "status": "collected",
+  "spot": 266.43,
+  "strike": 240.0,
+  "symbol": "O:FDX240119P00240000",
+  "expiry": "2024-01-19",
+  "dte_days": 116,
+  "dte_sessions": 80,
+  "moneyness": 0.9007994595203243,
+  "rv20": 0.2254748301956067,
+  "rv60": 0.19275529274665773,
+  "dividend_yield": 0.017678189393086362,
+  "quote": {
+    "symbol": "O:FDX240119P00240000",
+    "day": "2023-09-25",
+    "status": "valid",
+    "age_seconds": 0.356139264,
+    "bid": 5.4,
+    "ask": 5.55,
+    "bid_size": 42,
+    "ask_size": 27
+  }
+}

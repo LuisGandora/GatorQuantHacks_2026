@@ -1,0 +1,25 @@
+{
+  "ticker": "BKNG",
+  "day": "2023-06-08",
+  "status": "collected",
+  "spot": 2647.46,
+  "strike": 2510.0,
+  "symbol": "O:BKNG231020P02510000",
+  "expiry": "2023-10-20",
+  "dte_days": 134,
+  "dte_sessions": 93,
+  "moneyness": 0.948078535653041,
+  "rv20": 0.27244925921784374,
+  "rv60": 0.24290644414090654,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:BKNG231020P02510000",
+    "day": "2023-06-08",
+    "status": "valid",
+    "age_seconds": 2.670566656,
+    "bid": 100.1,
+    "ask": 114,
+    "bid_size": 2,
+    "ask_size": 22
+  }
+}

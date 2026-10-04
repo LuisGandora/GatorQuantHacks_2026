@@ -1,0 +1,25 @@
+{
+  "ticker": "MSFT",
+  "day": "2025-12-09",
+  "status": "collected",
+  "spot": 492.02,
+  "strike": 465.0,
+  "symbol": "O:MSFT260417P00465000",
+  "expiry": "2026-04-17",
+  "dte_days": 129,
+  "dte_sessions": 88,
+  "moneyness": 0.9450835331897077,
+  "rv20": 0.22862170022095774,
+  "rv60": 0.19099384519941046,
+  "dividend_yield": 0.006747693183203935,
+  "quote": {
+    "symbol": "O:MSFT260417P00465000",
+    "day": "2025-12-09",
+    "status": "valid",
+    "age_seconds": 0.021650241,
+    "bid": 17.1,
+    "ask": 17.4,
+    "bid_size": 67,
+    "ask_size": 109
+  }
+}

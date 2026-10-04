@@ -1,0 +1,25 @@
+{
+  "ticker": "BK",
+  "day": "2025-04-17",
+  "status": "collected",
+  "spot": 76.34,
+  "strike": 70.0,
+  "symbol": "O:BK250919P00070000",
+  "expiry": "2025-09-19",
+  "dte_days": 155,
+  "dte_sessions": 106,
+  "moneyness": 0.9169504846738276,
+  "rv20": 0.4997236253214151,
+  "rv60": 0.3367907627046182,
+  "dividend_yield": 0.02397170552790149,
+  "quote": {
+    "symbol": "O:BK250919P00070000",
+    "day": "2025-04-17",
+    "status": "valid",
+    "age_seconds": 10.303790051,
+    "bid": 3.2,
+    "ask": 3.6,
+    "bid_size": 66,
+    "ask_size": 17
+  }
+}

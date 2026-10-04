@@ -1,0 +1,38 @@
+{
+  "id": "AM-IV-v1",
+  "hypothesis": "Annual-meeting entry put IV is lower than matched ordinary-day IV conditional on maturity, actual moneyness and pre-entry realized volatility",
+  "windows": {
+    "current_csv": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "expanded_early": [
+      "2022-03-07",
+      "2023-12-31"
+    ],
+    "replication_2026": [
+      "2026-01-01",
+      "2026-08-31"
+    ]
+  },
+  "tag": "annual_meeting_results",
+  "universe": "unchanged starter TOP_100; survivorship limitation",
+  "entry": "following trading close strictly after filing date; entry-only study has no holding horizon",
+  "selection": "starter expiry and paired-strike algorithms, prior-session stock/chain, 3-6m bucket, 5% OTM put; exclude entry moneyness outside 0.90..0.98",
+  "controls": "same issuer/year/quarter/weekday, within 63 sessions, no ANY disclosure within 30 calendar days, DTE within 7 trading sessions, actual K/S within .01, pre-entry RV20 ratio within .80..1.25; nearest three",
+  "primary": "event midpoint American IV minus mean matched ordinary midpoint American IV, adjusted by differenced regression on RV20, log calendar DTE and K/S; intercept is adjusted effect",
+  "model": "200-step CRR American put, continuous trailing-paid-dividend yield; ACT/365 maturity; starter constant risk-free rate, not historical yield curve",
+  "volatility": "20 adjusted-close log returns ending strictly before entry; 60-return sensitivity",
+  "quotes": "latest strictly before 16 ET, positive two-sided prices/sizes, age <=60 sec; 300-sec sensitivity; no stale replacement",
+  "sensitivity": [
+    "bid and ask IV",
+    "RV60 adjustment",
+    "rate 0% and 6%",
+    "zero dividend yield",
+    "400-step tree"
+  ],
+  "uncertainty": "company and overlapping pre-entry 20-session volatility/control windows connected-component bootstrap, 10000 draws seed20261003; >=40 events and >=5 components; Bonferroni family120",
+  "history": "Selected after related P&L discovery; current and related 2026 data already exposed; early window new to this mechanism test, not pristine prospective OOS; no profitability claim",
+  "exclusions": "counts before IV differences; preserve failures, no replacement window or relaxed filters",
+  "decision": "supported only if adjusted corrected interval entirely negative in discovery and separate replication; positive replication interval contradicts, otherwise inconclusive"
+}

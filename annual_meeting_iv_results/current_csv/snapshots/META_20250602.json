@@ -1,0 +1,25 @@
+{
+  "ticker": "META",
+  "day": "2025-06-02",
+  "status": "collected",
+  "spot": 670.9,
+  "strike": 615.0,
+  "symbol": "O:META250919P00615000",
+  "expiry": "2025-09-19",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.9166790877925175,
+  "rv20": 0.3597978788710405,
+  "rv60": 0.5459537119456587,
+  "dividend_yield": 0.0030183335817558503,
+  "quote": {
+    "symbol": "O:META250919P00615000",
+    "day": "2025-06-02",
+    "status": "valid",
+    "age_seconds": 0.992806375,
+    "bid": 25.6,
+    "ask": 25.85,
+    "bid_size": 17,
+    "ask_size": 15
+  }
+}

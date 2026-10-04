@@ -1,0 +1,25 @@
+{
+  "ticker": "GD",
+  "day": "2024-06-17",
+  "status": "collected",
+  "spot": 293.83,
+  "strike": 270.0,
+  "symbol": "O:GD241115P00270000",
+  "expiry": "2024-11-15",
+  "dte_days": 151,
+  "dte_sessions": 106,
+  "moneyness": 0.9188986829118879,
+  "rv20": 0.13163786831301852,
+  "rv60": 0.1573173855147542,
+  "dividend_yield": 0.018309907089133173,
+  "quote": {
+    "symbol": "O:GD241115P00270000",
+    "day": "2024-06-17",
+    "status": "valid",
+    "age_seconds": 72.731122176,
+    "bid": 3.9,
+    "ask": 4.6,
+    "bid_size": 21,
+    "ask_size": 48
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "NVDA",
+  "day": "2022-04-19",
+  "status": "collected",
+  "spot": 221.98,
+  "strike": 205.0,
+  "symbol": "O:NVDA220819P00205000",
+  "expiry": "2022-08-19",
+  "dte_days": 122,
+  "dte_sessions": 85,
+  "moneyness": 0.9235066222182179,
+  "rv20": 0.5978888108968872,
+  "rv60": 0.6727189563836702,
+  "dividend_yield": 0.0012613748986395172,
+  "quote": {
+    "symbol": "O:NVDA220819P00205000",
+    "day": "2022-04-19",
+    "status": "valid",
+    "age_seconds": 0.011574016,
+    "bid": 17.3,
+    "ask": 17.9,
+    "bid_size": 35,
+    "ask_size": 38
+  }
+}

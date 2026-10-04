@@ -1,0 +1,25 @@
+{
+  "ticker": "INTC",
+  "day": "2023-05-18",
+  "status": "collected",
+  "spot": 29.68,
+  "strike": 27.0,
+  "symbol": "O:INTC230915P00027000",
+  "expiry": "2023-09-15",
+  "dte_days": 120,
+  "dte_sessions": 82,
+  "moneyness": 0.9097035040431267,
+  "rv20": 0.3493556031531574,
+  "rv60": 0.35096473036130277,
+  "dividend_yield": 0.04919137466307277,
+  "quote": {
+    "symbol": "O:INTC230915P00027000",
+    "day": "2023-05-18",
+    "status": "valid",
+    "age_seconds": 46.228214272,
+    "bid": 1.12,
+    "ask": 1.16,
+    "bid_size": 16,
+    "ask_size": 20
+  }
+}

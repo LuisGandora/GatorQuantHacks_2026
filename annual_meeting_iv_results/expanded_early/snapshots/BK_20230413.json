@@ -1,0 +1,25 @@
+{
+  "ticker": "BK",
+  "day": "2023-04-13",
+  "status": "collected",
+  "spot": 46.2,
+  "strike": 40.0,
+  "symbol": "O:BK230915P00040000",
+  "expiry": "2023-09-15",
+  "dte_days": 155,
+  "dte_sessions": 107,
+  "moneyness": 0.8658008658008658,
+  "rv20": 0.3280664080132365,
+  "rv60": 0.29121108219227715,
+  "dividend_yield": 0.031385281385281384,
+  "quote": {
+    "symbol": "O:BK230915P00040000",
+    "day": "2023-04-13",
+    "status": "valid",
+    "age_seconds": 180.401993984,
+    "bid": 1.2,
+    "ask": 1.35,
+    "bid_size": 103,
+    "ask_size": 50
+  }
+}

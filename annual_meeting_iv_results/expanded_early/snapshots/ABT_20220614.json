@@ -1,0 +1,25 @@
+{
+  "ticker": "ABT",
+  "day": "2022-06-14",
+  "status": "collected",
+  "spot": 102.94,
+  "strike": 100.0,
+  "symbol": "O:ABT221118P00100000",
+  "expiry": "2022-11-18",
+  "dte_days": 157,
+  "dte_sessions": 110,
+  "moneyness": 0.9714396735962697,
+  "rv20": 0.2949195401596566,
+  "rv60": 0.2915469316906574,
+  "dividend_yield": 0.01787448999417136,
+  "quote": {
+    "symbol": "O:ABT221118P00100000",
+    "day": "2022-06-14",
+    "status": "valid",
+    "age_seconds": 15.32835712,
+    "bid": 6.5,
+    "ask": 7.15,
+    "bid_size": 71,
+    "ask_size": 45
+  }
+}

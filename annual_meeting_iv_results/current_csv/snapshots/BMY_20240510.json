@@ -1,0 +1,25 @@
+{
+  "ticker": "BMY",
+  "day": "2024-05-10",
+  "status": "collected",
+  "spot": 44.94,
+  "strike": 42.0,
+  "symbol": "O:BMY240920P00042000",
+  "expiry": "2024-09-20",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9345794392523364,
+  "rv20": 0.3525309806180351,
+  "rv60": 0.2663539239093662,
+  "dividend_yield": 0.0520694259012016,
+  "quote": {
+    "symbol": "O:BMY240920P00042000",
+    "day": "2024-05-10",
+    "status": "valid",
+    "age_seconds": 0.02187776,
+    "bid": 1.27,
+    "ask": 1.32,
+    "bid_size": 47,
+    "ask_size": 57
+  }
+}

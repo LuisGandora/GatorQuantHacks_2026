@@ -1,0 +1,25 @@
+{
+  "ticker": "DIS",
+  "day": "2022-03-11",
+  "status": "collected",
+  "spot": 131.75,
+  "strike": 125.0,
+  "symbol": "O:DIS220715P00125000",
+  "expiry": "2022-07-15",
+  "dte_days": 126,
+  "dte_sessions": 86,
+  "moneyness": 0.9487666034155597,
+  "rv20": 0.3380628782676611,
+  "rv60": 0.3053604940204123,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:DIS220715P00125000",
+    "day": "2022-03-11",
+    "status": "valid",
+    "age_seconds": 6.009129472,
+    "bid": 7.7,
+    "ask": 7.95,
+    "bid_size": 10,
+    "ask_size": 187
+  }
+}

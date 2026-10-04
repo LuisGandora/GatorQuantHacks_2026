@@ -1,0 +1,25 @@
+{
+  "ticker": "EMR",
+  "day": "2025-02-10",
+  "status": "collected",
+  "spot": 126.75,
+  "strike": 115.0,
+  "symbol": "O:EMR250620P00115000",
+  "expiry": "2025-06-20",
+  "dte_days": 130,
+  "dte_sessions": 90,
+  "moneyness": 0.9072978303747534,
+  "rv20": 0.2592107729705251,
+  "rv60": 0.22099016102994815,
+  "dividend_yield": 0.01658777120315582,
+  "quote": {
+    "symbol": "O:EMR250620P00115000",
+    "day": "2025-02-10",
+    "status": "valid",
+    "age_seconds": 7.644917504,
+    "bid": 2.25,
+    "ask": 5,
+    "bid_size": 16,
+    "ask_size": 34
+  }
+}

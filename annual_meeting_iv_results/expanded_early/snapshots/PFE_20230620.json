@@ -1,0 +1,25 @@
+{
+  "ticker": "PFE",
+  "day": "2023-06-20",
+  "status": "collected",
+  "spot": 39.34,
+  "strike": 37.5,
+  "symbol": "O:PFE230915P00037500",
+  "expiry": "2023-09-15",
+  "dte_days": 87,
+  "dte_sessions": 61,
+  "moneyness": 0.953228266395526,
+  "rv20": 0.2992228244009329,
+  "rv60": 0.20962927911742274,
+  "dividend_yield": 0.04117946110828673,
+  "quote": {
+    "symbol": "O:PFE230915P00037500",
+    "day": "2023-06-20",
+    "status": "valid",
+    "age_seconds": 0.019025408,
+    "bid": 0.83,
+    "ask": 0.85,
+    "bid_size": 15,
+    "ask_size": 10
+  }
+}

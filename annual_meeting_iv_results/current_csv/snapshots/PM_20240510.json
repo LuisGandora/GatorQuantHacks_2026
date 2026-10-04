@@ -1,0 +1,25 @@
+{
+  "ticker": "PM",
+  "day": "2024-05-10",
+  "status": "collected",
+  "spot": 99.66,
+  "strike": 90.0,
+  "symbol": "O:PM240920P00090000",
+  "expiry": "2024-09-20",
+  "dte_days": 133,
+  "dte_sessions": 91,
+  "moneyness": 0.9030704394942806,
+  "rv20": 0.22405384015475546,
+  "rv60": 0.17796306464419814,
+  "dividend_yield": 0.05187637969094923,
+  "quote": {
+    "symbol": "O:PM240920P00090000",
+    "day": "2024-05-10",
+    "status": "valid",
+    "age_seconds": 41.809739264,
+    "bid": 0.9,
+    "ask": 1.15,
+    "bid_size": 108,
+    "ask_size": 198
+  }
+}

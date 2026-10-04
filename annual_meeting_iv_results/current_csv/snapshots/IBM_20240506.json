@@ -1,0 +1,25 @@
+{
+  "ticker": "IBM",
+  "day": "2024-05-06",
+  "status": "collected",
+  "spot": 168.61,
+  "strike": 155.0,
+  "symbol": "O:IBM240920P00155000",
+  "expiry": "2024-09-20",
+  "dte_days": 137,
+  "dte_sessions": 95,
+  "moneyness": 0.9192811814245893,
+  "rv20": 0.32585304816393795,
+  "rv60": 0.2562698675452416,
+  "dividend_yield": 0.03938081964296305,
+  "quote": {
+    "symbol": "O:IBM240920P00155000",
+    "day": "2024-05-06",
+    "status": "valid",
+    "age_seconds": 0.014689536,
+    "bid": 3.25,
+    "ask": 3.85,
+    "bid_size": 53,
+    "ask_size": 120
+  }
+}

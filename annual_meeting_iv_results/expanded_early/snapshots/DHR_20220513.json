@@ -1,0 +1,25 @@
+{
+  "ticker": "DHR",
+  "day": "2022-05-13",
+  "status": "collected",
+  "spot": 249.19,
+  "strike": 220.0,
+  "symbol": "O:DHR220916P00220000",
+  "expiry": "2022-09-16",
+  "dte_days": 126,
+  "dte_sessions": 86,
+  "moneyness": 0.882860467916048,
+  "rv20": 0.33728283716096635,
+  "rv60": 0.3169314069758884,
+  "dividend_yield": 0.003531441871664192,
+  "quote": {
+    "symbol": "O:DHR220916P00220000",
+    "day": "2022-05-13",
+    "status": "valid",
+    "age_seconds": 3.923982592,
+    "bid": 8.9,
+    "ask": 9.6,
+    "bid_size": 31,
+    "ask_size": 159
+  }
+}

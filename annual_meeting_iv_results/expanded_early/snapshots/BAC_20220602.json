@@ -1,0 +1,20 @@
+{
+  "ticker": "BAC",
+  "day": "2022-06-02",
+  "status": "collected",
+  "spot": 36.7,
+  "strike": 34.0,
+  "symbol": "O:BAC220916P00034000",
+  "expiry": "2022-09-16",
+  "dte_days": 106,
+  "dte_sessions": 73,
+  "moneyness": 0.9264305177111716,
+  "rv20": 0.37523656318435344,
+  "rv60": 0.3422746868056647,
+  "dividend_yield": 0.022070844686648498,
+  "quote": {
+    "symbol": "O:BAC220916P00034000",
+    "day": "2022-06-02",
+    "status": "missing"
+  }
+}

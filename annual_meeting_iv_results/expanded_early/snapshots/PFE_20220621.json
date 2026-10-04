@@ -1,0 +1,20 @@
+{
+  "ticker": "PFE",
+  "day": "2022-06-21",
+  "status": "collected",
+  "spot": 48.11,
+  "strike": 42.0,
+  "symbol": "O:PFE1220916P00042000",
+  "expiry": "2022-09-16",
+  "dte_days": 87,
+  "dte_sessions": 61,
+  "moneyness": 0.8729993764290168,
+  "rv20": 0.30488007991664884,
+  "rv60": 0.2787825315599936,
+  "dividend_yield": 0.03284140511328206,
+  "quote": {
+    "symbol": "O:PFE1220916P00042000",
+    "day": "2022-06-21",
+    "status": "missing"
+  }
+}

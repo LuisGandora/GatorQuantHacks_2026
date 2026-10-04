@@ -1,0 +1,25 @@
+{
+  "ticker": "IBM",
+  "day": "2022-05-02",
+  "status": "collected",
+  "spot": 133.04,
+  "strike": 125.0,
+  "symbol": "O:IBM220819P00125000",
+  "expiry": "2022-08-19",
+  "dte_days": 109,
+  "dte_sessions": 76,
+  "moneyness": 0.93956704750451,
+  "rv20": 0.30736994167900733,
+  "rv60": 0.23282002355760895,
+  "dividend_yield": 0.04930847865303668,
+  "quote": {
+    "symbol": "O:IBM220819P00125000",
+    "day": "2022-05-02",
+    "status": "valid",
+    "age_seconds": 8.693870848,
+    "bid": 5.35,
+    "ask": 5.8,
+    "bid_size": 51,
+    "ask_size": 35
+  }
+}

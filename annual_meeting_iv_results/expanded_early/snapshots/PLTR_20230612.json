@@ -1,0 +1,25 @@
+{
+  "ticker": "PLTR",
+  "day": "2023-06-12",
+  "status": "collected",
+  "spot": 15.65,
+  "strike": 14.0,
+  "symbol": "O:PLTR231117P00014000",
+  "expiry": "2023-11-17",
+  "dte_days": 158,
+  "dte_sessions": 111,
+  "moneyness": 0.8945686900958466,
+  "rv20": 0.7393996640619099,
+  "rv60": 0.687373136668748,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:PLTR231117P00014000",
+    "day": "2023-06-12",
+    "status": "valid",
+    "age_seconds": 0.59216768,
+    "bid": 1.77,
+    "ask": 1.83,
+    "bid_size": 238,
+    "ask_size": 220
+  }
+}

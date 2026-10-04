@@ -1,0 +1,25 @@
+{
+  "ticker": "UBER",
+  "day": "2023-05-15",
+  "status": "collected",
+  "spot": 38.14,
+  "strike": 35.0,
+  "symbol": "O:UBER230915P00035000",
+  "expiry": "2023-09-15",
+  "dte_days": 123,
+  "dte_sessions": 85,
+  "moneyness": 0.9176717357105401,
+  "rv20": 0.5174742100449716,
+  "rv60": 0.41945522899874066,
+  "dividend_yield": 0.0,
+  "quote": {
+    "symbol": "O:UBER230915P00035000",
+    "day": "2023-05-15",
+    "status": "valid",
+    "age_seconds": 55.199309312,
+    "bid": 2,
+    "ask": 2.03,
+    "bid_size": 1,
+    "ask_size": 8
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "ticker": "QCOM",
+  "day": "2022-03-15",
+  "status": "collected",
+  "spot": 144.21,
+  "strike": 130.0,
+  "symbol": "O:QCOM220715P00130000",
+  "expiry": "2022-07-15",
+  "dte_days": 122,
+  "dte_sessions": 84,
+  "moneyness": 0.9014631440260731,
+  "rv20": 0.5549929726522078,
+  "rv60": 0.49698876520130547,
+  "dividend_yield": 0.018861382705776298,
+  "quote": {
+    "symbol": "O:QCOM220715P00130000",
+    "day": "2022-03-15",
+    "status": "valid",
+    "age_seconds": 0.012269824,
+    "bid": 9.5,
+    "ask": 9.9,
+    "bid_size": 471,
+    "ask_size": 36
+  }
+}
