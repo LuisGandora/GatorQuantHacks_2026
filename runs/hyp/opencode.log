@@ -1,0 +1,29 @@
+[0m
+> Sisyphus - ultraworker · nemotron-3-ultra-free
+[0m
+[0m$ [0m.venv\Scripts\python hyp.py report
+# Twelve conditional-edge hypotheses · 2026-10-04 01:38 · hyp-v1
+
+Edge = strategy P&L on selected events minus on ordinary days (same tickers, bucket, entry), mean over h=21, h=42 and expiry, per $1 of spot. 95% CI resamples calendar months. BH at q=0.10 across all tested hypotheses. Net = the selected events' own mean P&L after a 5%-of-premium round trip (1x) and doubled (2x). A candidate edge needs BH in-sample, the same sign out-of-sample, and net at 2x above zero in both windows (runs/PREREG_HYP.md).
+
+| hypothesis | status | n selected / pool | edge vs ordinary days | 95% CI | p | BH | edge vs rest of pool | net 1x | net 2x | OOS edge | OOS net 2x | verdict |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| H01_drift_after_drop | OK | 334 / 1150 | +0.47% | -0.82% to +1.73% | 0.464 |  | +0.48% | +0.93% | +0.74% |  |  |  |
+| H02_reversal_after_drop | OK | 365 / 1150 | +0.27% | -0.47% to +0.91% | 0.442 |  | +0.41% | +0.47% | +0.28% |  |  |  |
+| H03_inverted_term | OK | 307 / 1102 | +0.24% | -1.17% to +1.60% | 0.705 |  | -0.26% | +1.17% | +0.97% |  |  |  |
+| H04_rich_put_skew | OK | 351 / 1110 | +0.17% | -0.50% to +0.77% | 0.585 |  | +0.25% | +0.37% | +0.20% |  |  |  |
+| H05_sticky_vol | OK | 299 / 1130 | +0.32% | -0.91% to +1.55% | 0.618 |  | +0.58% | +0.83% | +0.70% |  |  |  |
+| H06_attention_calls | OK | 328 / 1162 | +0.58% | -0.74% to +1.83% | 0.376 |  | +0.28% | +1.58% | +1.43% |  |  |  |
+| H07_prefiling_put_volume | OK | 329 / 1162 | -0.05% | -1.30% to +1.20% | 0.966 |  | -0.39% | +0.43% | +0.32% |  |  |  |
+| H08_negative_tone | OK | 19 / 1289 | -1.83% | -4.72% to +1.29% | 0.224 |  | -1.96% | -1.30% | -1.47% |  |  |  |
+| H09_outside_successor | TOO FEW (<15 selected) | 12 / 47 |  |  to  |  |  |  |  |  |  |  |  |
+| H10_bundled_filing | OK | 112 / 1289 | -1.09% | -2.50% to +0.51% | 0.170 |  | -1.01% | -0.21% | -0.32% |  |  |  |
+| H11_dividend_raise | TOO FEW (<15 selected) | 8 / 76 |  |  to  |  |  |  |  |  |  |  |  |
+| H12_resolution_events | OK | 49 / 57 | -0.71% | -1.54% to +0.20% | 0.124 |  |  | -0.03% | -0.34% |  |  |  |
+[0m
+[0m→ [0mRead runs/hyp/RESULTS.md
+[0m→ [0mRead runs/PREREG_HYP.md
+[0m• [0mWrite hyp REVIEW.md[90m Unknown Agent[0m
+Now I have both files. Let me delegate the writing of REVIEW.md to a writing subagent.
+[0m✓ [0mWrite hyp REVIEW.md[90m Unknown Agent[0m
+[0m→ [0mRead runs/hyp/REVIEW.md
