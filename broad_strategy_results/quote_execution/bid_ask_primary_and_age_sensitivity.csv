@@ -1,0 +1,101 @@
+tag,strategy,horizon,max_age_seconds,events,companies,dependence_clusters,difference,ci_lo,ci_hi,conclusion
+annual_meeting_results,long_call,21,60,50,38,3,-0.0057999693029183175,,,INCONCLUSIVE
+annual_meeting_results,covered_call,21,60,40,32,3,0.000614560090674264,,,INCONCLUSIVE
+annual_meeting_results,protective_put,21,60,49,37,2,0.006615214789241301,,,INCONCLUSIVE
+annual_meeting_results,collar,21,60,39,31,3,-0.0008226349459592705,,,INCONCLUSIVE
+annual_meeting_results,cash_secured_put,21,60,49,37,2,-0.006915799355624064,,,INCONCLUSIVE
+annual_meeting_results,long_call,21,300,53,40,2,-0.005621470485463177,,,EXPLORATORY SENSITIVITY
+annual_meeting_results,covered_call,21,300,51,39,3,0.004645978995223922,,,EXPLORATORY SENSITIVITY
+annual_meeting_results,protective_put,21,300,52,39,2,0.008521528350907335,,,EXPLORATORY SENSITIVITY
+annual_meeting_results,collar,21,300,50,38,3,0.013506036893411462,,,EXPLORATORY SENSITIVITY
+annual_meeting_results,cash_secured_put,21,300,52,39,2,-0.008844774472928694,,,EXPLORATORY SENSITIVITY
+debt_issuance,long_call,21,60,65,41,1,-0.004408372727786146,,,INCONCLUSIVE
+debt_issuance,covered_call,21,60,60,39,1,0.00736106153741326,,,INCONCLUSIVE
+debt_issuance,protective_put,21,60,62,37,1,0.0008258615180978112,,,INCONCLUSIVE
+debt_issuance,collar,21,60,51,33,1,0.008160047483778259,,,INCONCLUSIVE
+debt_issuance,cash_secured_put,21,60,62,37,1,-0.00027041208495840965,,,INCONCLUSIVE
+debt_issuance,long_call,21,300,71,42,1,-0.0067606365123007986,,,EXPLORATORY SENSITIVITY
+debt_issuance,covered_call,21,300,70,43,1,0.0076632363289947285,,,EXPLORATORY SENSITIVITY
+debt_issuance,protective_put,21,300,72,42,1,0.000771461301107834,,,EXPLORATORY SENSITIVITY
+debt_issuance,collar,21,300,69,42,1,0.010330080826223288,,,EXPLORATORY SENSITIVITY
+debt_issuance,cash_secured_put,21,300,72,42,1,-0.00012831502675455882,,,EXPLORATORY SENSITIVITY
+director_appointment,long_call,21,60,27,26,1,-0.00543313622167737,,,INCONCLUSIVE
+director_appointment,covered_call,21,60,22,21,1,0.015019036768400522,,,INCONCLUSIVE
+director_appointment,protective_put,21,60,26,25,1,0.0004907627471896864,,,INCONCLUSIVE
+director_appointment,collar,21,60,22,21,1,0.015139329868945532,,,INCONCLUSIVE
+director_appointment,cash_secured_put,21,60,26,25,1,-0.0006897122907199744,,,INCONCLUSIVE
+director_appointment,long_call,21,300,28,27,1,-0.004705798884123052,,,EXPLORATORY SENSITIVITY
+director_appointment,covered_call,21,300,27,26,1,0.010328253657955998,,,EXPLORATORY SENSITIVITY
+director_appointment,protective_put,21,300,28,27,1,-0.00025811988473691737,,,EXPLORATORY SENSITIVITY
+director_appointment,collar,21,300,27,26,1,0.010615164515527263,,,EXPLORATORY SENSITIVITY
+director_appointment,cash_secured_put,21,300,28,27,1,9.891181572048609e-05,,,EXPLORATORY SENSITIVITY
+director_departure,long_call,21,60,28,23,1,-0.006770696148515764,,,INCONCLUSIVE
+director_departure,covered_call,21,60,25,20,1,-0.0006097746500377141,,,INCONCLUSIVE
+director_departure,protective_put,21,60,27,22,2,0.005358678523977124,,,INCONCLUSIVE
+director_departure,collar,21,60,22,18,2,0.005201733995708704,,,INCONCLUSIVE
+director_departure,cash_secured_put,21,60,27,22,2,-0.004093077500984642,,,INCONCLUSIVE
+director_departure,long_call,21,300,30,24,1,-0.003743211912969664,,,EXPLORATORY SENSITIVITY
+director_departure,covered_call,21,300,29,23,1,0.0004872700158404761,,,EXPLORATORY SENSITIVITY
+director_departure,protective_put,21,300,29,23,1,0.0051445560091640165,,,EXPLORATORY SENSITIVITY
+director_departure,collar,21,300,28,22,1,0.00570839706457459,,,EXPLORATORY SENSITIVITY
+director_departure,cash_secured_put,21,300,29,23,1,-0.003230610398824275,,,EXPLORATORY SENSITIVITY
+executive_compensation_change,long_call,21,60,46,34,1,-0.009172924127904382,,,INCONCLUSIVE
+executive_compensation_change,covered_call,21,60,48,35,1,0.004255630451686021,,,INCONCLUSIVE
+executive_compensation_change,protective_put,21,60,48,35,1,-0.0013115435368702322,,,INCONCLUSIVE
+executive_compensation_change,collar,21,60,42,32,1,0.004385894664666205,,,INCONCLUSIVE
+executive_compensation_change,cash_secured_put,21,60,48,35,1,0.0023262584717042754,,,INCONCLUSIVE
+executive_compensation_change,long_call,21,300,56,39,1,-0.0037339404756263858,,,EXPLORATORY SENSITIVITY
+executive_compensation_change,covered_call,21,300,55,39,1,0.0026078332911169664,,,EXPLORATORY SENSITIVITY
+executive_compensation_change,protective_put,21,300,56,39,1,-0.0016741674957196442,,,EXPLORATORY SENSITIVITY
+executive_compensation_change,collar,21,300,55,39,1,0.00044724824947079274,,,EXPLORATORY SENSITIVITY
+executive_compensation_change,cash_secured_put,21,300,56,39,1,0.0028973737166397666,,,EXPLORATORY SENSITIVITY
+executive_officer_appointment,long_call,21,60,29,25,1,-0.009126544713327259,,,INCONCLUSIVE
+executive_officer_appointment,covered_call,21,60,27,24,2,0.006750084457356155,,,INCONCLUSIVE
+executive_officer_appointment,protective_put,21,60,29,26,1,-0.0002784773186240521,,,INCONCLUSIVE
+executive_officer_appointment,collar,21,60,23,21,2,0.00151332844856451,,,INCONCLUSIVE
+executive_officer_appointment,cash_secured_put,21,60,29,26,1,0.0006389305308541207,,,INCONCLUSIVE
+executive_officer_appointment,long_call,21,300,36,31,1,-0.011011742889118912,,,EXPLORATORY SENSITIVITY
+executive_officer_appointment,covered_call,21,300,35,31,1,0.009421710625173914,,,EXPLORATORY SENSITIVITY
+executive_officer_appointment,protective_put,21,300,36,31,1,-0.00026225487816545763,,,EXPLORATORY SENSITIVITY
+executive_officer_appointment,collar,21,300,34,30,1,0.005037864832818463,,,EXPLORATORY SENSITIVITY
+executive_officer_appointment,cash_secured_put,21,300,36,31,1,-0.00093709390839722,,,EXPLORATORY SENSITIVITY
+guidance_issuance_or_update,long_call,21,60,14,10,1,0.015218367106972651,,,INCONCLUSIVE
+guidance_issuance_or_update,covered_call,21,60,13,10,1,-0.0077516423678412796,,,INCONCLUSIVE
+guidance_issuance_or_update,protective_put,21,60,12,9,1,-0.005478918149426119,,,INCONCLUSIVE
+guidance_issuance_or_update,collar,21,60,10,8,2,-0.009043468761040367,,,INCONCLUSIVE
+guidance_issuance_or_update,cash_secured_put,21,60,12,9,1,0.0035322808722803713,,,INCONCLUSIVE
+guidance_issuance_or_update,long_call,21,300,14,10,1,0.015218367106972651,,,EXPLORATORY SENSITIVITY
+guidance_issuance_or_update,covered_call,21,300,14,10,1,-0.008063139522753207,,,EXPLORATORY SENSITIVITY
+guidance_issuance_or_update,protective_put,21,300,14,10,1,-0.005837017304978691,,,EXPLORATORY SENSITIVITY
+guidance_issuance_or_update,collar,21,300,14,10,1,-0.01390015682773189,,,EXPLORATORY SENSITIVITY
+guidance_issuance_or_update,cash_secured_put,21,300,14,10,1,0.0054231509014905635,,,EXPLORATORY SENSITIVITY
+quarterly_earnings,long_call,21,60,29,12,1,0.0211052709567219,,,INCONCLUSIVE
+quarterly_earnings,covered_call,21,60,27,12,1,-0.010819034764936609,,,INCONCLUSIVE
+quarterly_earnings,protective_put,21,60,26,11,1,-0.010454456051411837,,,INCONCLUSIVE
+quarterly_earnings,collar,21,60,23,11,1,-0.009307552463786398,,,INCONCLUSIVE
+quarterly_earnings,cash_secured_put,21,60,26,11,1,0.013880555711671435,,,INCONCLUSIVE
+quarterly_earnings,long_call,21,300,31,12,1,0.018445540209432305,,,EXPLORATORY SENSITIVITY
+quarterly_earnings,covered_call,21,300,31,12,1,-0.011426028174236892,,,EXPLORATORY SENSITIVITY
+quarterly_earnings,protective_put,21,300,31,12,1,-0.010987776089386211,,,EXPLORATORY SENSITIVITY
+quarterly_earnings,collar,21,300,31,12,1,-0.021959312546097252,,,EXPLORATORY SENSITIVITY
+quarterly_earnings,cash_secured_put,21,300,31,12,1,0.014552352842881767,,,EXPLORATORY SENSITIVITY
+shareholder_proposal_outcome,long_call,21,60,42,37,3,-0.0030478709838976975,,,INCONCLUSIVE
+shareholder_proposal_outcome,covered_call,21,60,36,32,3,-0.004967513647525319,,,INCONCLUSIVE
+shareholder_proposal_outcome,protective_put,21,60,40,35,3,0.006208009967696466,,,INCONCLUSIVE
+shareholder_proposal_outcome,collar,21,60,35,31,3,-0.0036758447082170225,,,INCONCLUSIVE
+shareholder_proposal_outcome,cash_secured_put,21,60,40,35,3,-0.006588037472289862,,,INCONCLUSIVE
+shareholder_proposal_outcome,long_call,21,300,45,39,3,-0.003982154069109775,,,EXPLORATORY SENSITIVITY
+shareholder_proposal_outcome,covered_call,21,300,44,39,3,0.000593175244936167,,,EXPLORATORY SENSITIVITY
+shareholder_proposal_outcome,protective_put,21,300,44,38,3,0.007253250342435353,,,EXPLORATORY SENSITIVITY
+shareholder_proposal_outcome,collar,21,300,43,38,3,0.006940833508081073,,,EXPLORATORY SENSITIVITY
+shareholder_proposal_outcome,cash_secured_put,21,300,44,38,3,-0.007917296996999569,,,EXPLORATORY SENSITIVITY
+underwriting_agreement,long_call,21,60,35,30,1,-0.00041749561606636924,,,INCONCLUSIVE
+underwriting_agreement,covered_call,21,60,34,29,1,0.0033196321767555432,,,INCONCLUSIVE
+underwriting_agreement,protective_put,21,60,33,28,1,0.003048836172665084,,,INCONCLUSIVE
+underwriting_agreement,collar,21,60,28,25,1,0.009756197220458313,,,INCONCLUSIVE
+underwriting_agreement,cash_secured_put,21,60,33,28,1,-0.0017429953979998497,,,INCONCLUSIVE
+underwriting_agreement,long_call,21,300,40,33,1,-0.005305068704671927,,,EXPLORATORY SENSITIVITY
+underwriting_agreement,covered_call,21,300,41,34,1,0.004733843682292324,,,EXPLORATORY SENSITIVITY
+underwriting_agreement,protective_put,21,300,41,33,1,0.0019745405284341587,,,EXPLORATORY SENSITIVITY
+underwriting_agreement,collar,21,300,40,33,1,0.005205289069949132,,,EXPLORATORY SENSITIVITY
+underwriting_agreement,cash_secured_put,21,300,41,33,1,-0.0007891236036758034,,,EXPLORATORY SENSITIVITY

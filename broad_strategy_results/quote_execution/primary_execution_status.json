@@ -1,0 +1,13 @@
+{
+  "quote_collection_complete": true,
+  "execution_accounting_verified": true,
+  "primary_comparisons": 50,
+  "quote_age_sensitivity_comparisons": 50,
+  "adequate_sample_comparisons": 17,
+  "estimable_primary_intervals": 0,
+  "discovery_signals": 0,
+  "independent_validation_complete": false,
+  "all_fixed_quote_horizons_complete": false,
+  "research_complete": false,
+  "goal_achieved": false
+}

@@ -1,0 +1,46 @@
+strategy,max_age_seconds,status,trades
+cash_secured_put,60,invalid_latest,5
+cash_secured_put,60,missing,112
+cash_secured_put,60,no priced contract or eligible exit,259
+cash_secured_put,60,stale quote,277
+cash_secured_put,60,usable,2190
+cash_secured_put,300,invalid_latest,5
+cash_secured_put,300,missing,119
+cash_secured_put,300,no priced contract or eligible exit,259
+cash_secured_put,300,usable,2460
+collar,60,invalid_latest,7
+collar,60,missing,160
+collar,60,no priced contract or eligible exit,259
+collar,60,stale quote,456
+collar,60,usable,1961
+collar,300,invalid_latest,9
+collar,300,missing,181
+collar,300,no priced contract or eligible exit,259
+collar,300,usable,2394
+covered_call,60,invalid_latest,4
+covered_call,60,missing,128
+covered_call,60,no priced contract or eligible exit,259
+covered_call,60,stale quote,267
+covered_call,60,usable,2185
+covered_call,300,invalid_latest,4
+covered_call,300,missing,134
+covered_call,300,no priced contract or eligible exit,259
+covered_call,300,usable,2446
+long_call,60,invalid_latest,1
+long_call,60,missing,89
+long_call,60,no priced contract or eligible exit,259
+long_call,60,stale quote,214
+long_call,60,usable,2280
+long_call,300,invalid_latest,1
+long_call,300,missing,90
+long_call,300,no priced contract or eligible exit,259
+long_call,300,usable,2493
+protective_put,60,invalid_latest,5
+protective_put,60,missing,112
+protective_put,60,no priced contract or eligible exit,259
+protective_put,60,stale quote,277
+protective_put,60,usable,2190
+protective_put,300,invalid_latest,5
+protective_put,300,missing,119
+protective_put,300,no priced contract or eligible exit,259
+protective_put,300,usable,2460
