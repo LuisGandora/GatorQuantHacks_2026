@@ -1,0 +1,685 @@
+{
+  "experiment": "credit-term source-evidence measurement feasibility pilot (fixed 12 original 8-Ks)",
+  "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149",
+  "selection_sha256": "633ee51633d2e11bca4c79f0b5d3adc6583366a5055020f3ea1666023ae77e10",
+  "research_kind": "outcome-blind source-only numerical measurement feasibility pilot; no economic outcome, no trade hypothesis, no classifier, no semantic score, no model call",
+  "provenance": {
+    "annotation_author": "opencode-go/deepseek-v4.1-flash",
+    "human_authorship": false,
+    "human_validation": false,
+    "additional_runtime_inference_during_pipeline": false,
+    "runtime_model_or_jev_calls": 0,
+    "protocol_no_model_call_clause_qualification": "The frozen protocol research_kind string says \"no model call\". That clause is disclosed as a limitation/ambiguity, not satisfied on every interpretation: it holds only as no additional runtime inference or model call during pipeline execution; it is NOT a claim that no model authored the annotations or this report, which were model-authored as the user required, with no human validation. See CREDIT_TERMS_PILOT.md \"Provenance and annotation scope\".",
+    "annotation_scope": "sequence-1 original 8-K body only (exact-quote bound facts); an audited subset, not an exhaustive whole-package annotation",
+    "exhibit_paired_term_search": "the independent audit extended the paired-term search to every text-bearing exhibit and found no additional explicit same-facility old/new pair beyond PM",
+    "exhaustive_package_annotation": false,
+    "independent_audit_files": [
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "CREDIT_TERMS_PILOT_REVIEW.json"
+    ],
+    "corrections_record": "CREDIT_TERMS_PILOT_CORRECTIONS.md",
+    "pre_correction_archive": "credit_terms_pilot/audit_history/MANIFEST.json"
+  },
+  "is_measurement_feasibility_pilot": true,
+  "is_population_prevalence_estimate": false,
+  "is_economic_result": false,
+  "economic_outcomes_read": false,
+  "market_data_requests": 0,
+  "jev_or_model_calls": 0,
+  "trade_hypothesis_frozen": false,
+  "oos_or_judges_opened": false,
+  "statistics": {
+    "filings": 12,
+    "years": {
+      "2022": 3,
+      "2023": 3,
+      "2024": 3,
+      "2025": 3
+    },
+    "paired_maturity_filings": 1,
+    "paired_capacity_filings": 0,
+    "paired_both_filings": 0,
+    "unlinked_maturity_filings": 0,
+    "unlinked_capacity_filings": 0,
+    "unknown_maturity_filings": 11,
+    "unknown_capacity_filings": 12,
+    "item_2_02_filings": 0
+  },
+  "by_year": {
+    "2022": 3,
+    "2023": 3,
+    "2024": 3,
+    "2025": 3
+  },
+  "selection": [
+    {
+      "accession": "0001193125-22-062961",
+      "ticker": "T",
+      "year": "2022",
+      "sha256": "0c3423b2c1f56643e4087ba87cad9b1a50c2132c303bb15f46728370f28b9e15"
+    },
+    {
+      "accession": "0001193125-22-263732",
+      "ticker": "TMUS",
+      "year": "2022",
+      "sha256": "1be5fb42c55f7dedec17c3d1d781af3f42ac4d5f26e0f2ccf567491a084b62c7"
+    },
+    {
+      "accession": "0000018230-22-000199",
+      "ticker": "CAT",
+      "year": "2022",
+      "sha256": "1df0cbfc285f0db819cf7e665e9d257b2aacf4c2ddf59dfe5b8214c71425798b"
+    },
+    {
+      "accession": "0001193125-23-250325",
+      "ticker": "GM",
+      "year": "2023",
+      "sha256": "117980f466e7cc6f451982648000af1fc19cf5fad4e9299e353a101d76e9009c"
+    },
+    {
+      "accession": "0001075531-23-000033",
+      "ticker": "BKNG",
+      "year": "2023",
+      "sha256": "12ad0f829bd9bbbee8aad0180b408a65b255eb86ed23ac6c4f41fa2881bf65f1"
+    },
+    {
+      "accession": "0001193125-23-010953",
+      "ticker": "ADBE",
+      "year": "2023",
+      "sha256": "203bf4bb6ff66e611f1ef261f4a49c05e9ed051b75f9831adb2384342a127bb2"
+    },
+    {
+      "accession": "0001104659-24-096572",
+      "ticker": "CAT",
+      "year": "2024",
+      "sha256": "01fddb9aec219b835bc0371b9b26391dc70425f582aa792b114d0fcdce65006a"
+    },
+    {
+      "accession": "0001193125-24-174346",
+      "ticker": "HON",
+      "year": "2024",
+      "sha256": "064465dd2d3ecb38ad1c8896f47ce09be5e494bf11f99fba658d3234d4d82bf3"
+    },
+    {
+      "accession": "0001104659-24-006244",
+      "ticker": "PM",
+      "year": "2024",
+      "sha256": "097b2d99ceb907e90689926200c2f6da993884041c8db88f02c4bb83dfbe8b61"
+    },
+    {
+      "accession": "0001193125-25-055636",
+      "ticker": "HON",
+      "year": "2025",
+      "sha256": "01ffb8c7e87b5df31eb3b3a36f8d043669108ff1bb2079e9feee359d3c032a6a"
+    },
+    {
+      "accession": "0000060667-25-000199",
+      "ticker": "LOW",
+      "year": "2025",
+      "sha256": "02fcdd5fc2056f7f6366d2ff5a456d30b22942ae434b85424aa709b96f029049"
+    },
+    {
+      "accession": "0001193125-25-067902",
+      "ticker": "AMD",
+      "year": "2025",
+      "sha256": "0bec173ae8425d8e0fc6f1ab702bcc1b5b26d71ca23c41e0f6c449b5183c61c6"
+    }
+  ],
+  "source_evidence": [
+    {
+      "accession": "0001193125-22-062961",
+      "ticker": "T",
+      "filing_date": "2022-03-02",
+      "filing_timestamp": "2022-03-02 16:06:07 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "Amended and Restated Term Loan Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2022-12-31",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 7350000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2022-03-02",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-22-263732",
+      "ticker": "TMUS",
+      "filing_date": "2022-10-17",
+      "filing_timestamp": "2022-10-17 16:15:09 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 3,
+      "facility_rows": [
+        {
+          "id": "Amended and Restated Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2027-10-17",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 7500000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2022-10-17",
+          "paired": null
+        },
+        {
+          "id": "letter of credit sub-facility",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 1500000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "swingline loan sub-facility",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 500000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0000018230-22-000199",
+      "ticker": "CAT",
+      "filing_date": "2022-09-06",
+      "filing_timestamp": "2022-09-06 17:04:23 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 5,
+      "facility_rows": [
+        {
+          "id": "364-Day Facility",
+          "old_maturity": null,
+          "new_maturity": "2023-08-31",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 3150000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2022-09-01",
+          "paired": null
+        },
+        {
+          "id": "Local Currency Addendum",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 100000000.0,
+          "currency": "USD",
+          "borrowing_currency": "Pounds Sterling and Euros (approved local currencies)",
+          "currency_note": "USD $100 million is the stated USD-equivalent ceiling of this addendum sub-limit, not the currency borrowed; borrowings are in approved local currencies including Pounds Sterling and Euros. Kept separate from, and never summed into, the $3.15 billion 364-Day Aggregate Commitment.",
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "Japan Local Currency Addendum",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 100000000.0,
+          "currency": "USD",
+          "borrowing_currency": "Japanese Yen",
+          "currency_note": "USD $100 million is the stated USD-equivalent ceiling of this addendum sub-limit, not the currency borrowed; borrowings are in Japanese Yen. Kept separate from, and never summed into, the $3.15 billion 364-Day Aggregate Commitment.",
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "Three-Year Facility",
+          "old_maturity": null,
+          "new_maturity": "2025-08-29",
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": null,
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2022-09-01",
+          "paired": null
+        },
+        {
+          "id": "Five-Year Facility",
+          "old_maturity": null,
+          "new_maturity": "2027-09-01",
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": null,
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2022-09-01",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-23-250325",
+      "ticker": "GM",
+      "filing_date": "2023-10-04",
+      "filing_timestamp": "2023-10-04 06:30:29 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "364-Day Revolving Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2024-10-01",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 6000000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2023-10-03",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001075531-23-000033",
+      "ticker": "BKNG",
+      "filing_date": "2023-05-19",
+      "filing_timestamp": "2023-05-19 16:12:47 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 4,
+      "facility_rows": [
+        {
+          "id": "Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2028-05-17",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 2000000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2023-05-17",
+          "paired": null
+        },
+        {
+          "id": "letters of credit",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 80000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "swingline loans",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 100000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "credit agreement, dated as of August 14, 2019",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": 2000000000.0,
+          "new_capacity_usd": null,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-23-010953",
+      "ticker": "ADBE",
+      "filing_date": "2023-01-19",
+      "filing_timestamp": "2023-01-19 16:06:00 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "Term Loan Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 3500000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2023-01-19",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001104659-24-096572",
+      "ticker": "CAT",
+      "filing_date": "2024-09-04",
+      "filing_timestamp": "2024-09-04 06:07:48 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 5,
+      "facility_rows": [
+        {
+          "id": "364-Day Facility",
+          "old_maturity": null,
+          "new_maturity": "2025-08-28",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 3150000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2024-08-29",
+          "paired": null
+        },
+        {
+          "id": "Local Currency Addendum",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 100000000.0,
+          "currency": "USD",
+          "borrowing_currency": "Pounds Sterling and Euros (approved local currencies)",
+          "currency_note": "USD $100 million is the stated USD-equivalent ceiling of this addendum sub-limit, not the currency borrowed; borrowings are in approved local currencies including Pounds Sterling and Euros. Kept separate from, and never summed into, the $3.15 billion 364-Day Aggregate Commitment.",
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "Japan Local Currency Addendum",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 100000000.0,
+          "currency": "USD",
+          "borrowing_currency": "Japanese Yen",
+          "currency_note": "USD $100 million is the stated USD-equivalent ceiling of this addendum sub-limit, not the currency borrowed; borrowings are in Japanese Yen. Kept separate from, and never summed into, the $3.15 billion 364-Day Aggregate Commitment.",
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "Three-Year Facility",
+          "old_maturity": null,
+          "new_maturity": "2027-08-29",
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": null,
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2024-08-29",
+          "paired": null
+        },
+        {
+          "id": "Five-Year Facility",
+          "old_maturity": null,
+          "new_maturity": "2029-08-29",
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": null,
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2024-08-29",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-24-174346",
+      "ticker": "HON",
+      "filing_date": "2024-07-02",
+      "filing_timestamp": "2024-07-02 16:20:03 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "Second 364-Day Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2025-07-01",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 1500000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2024-07-02",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001104659-24-006244",
+      "ticker": "PM",
+      "filing_date": "2024-01-24",
+      "filing_timestamp": "2024-01-24 16:06:38 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "364-day revolving credit facility",
+          "old_maturity": "2024-01-30",
+          "new_maturity": "2025-01-28",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 1700000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2024-01-30",
+          "paired": "maturity"
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-25-055636",
+      "ticker": "HON",
+      "filing_date": "2025-03-17",
+      "filing_timestamp": "2025-03-17 16:22:58 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 2,
+      "facility_rows": [
+        {
+          "id": "364-Day Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2026-03-16",
+          "old_capacity_usd": null,
+          "new_capacity_usd": 3000000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2025-03-17",
+          "paired": null
+        },
+        {
+          "id": "364-day credit agreement dated as of March 18, 2024",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": 1500000000.0,
+          "new_capacity_usd": null,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": null,
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0000060667-25-000199",
+      "ticker": "LOW",
+      "filing_date": "2025-10-09",
+      "filing_timestamp": "2025-10-09 07:32:07 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 1,
+      "facility_rows": [
+        {
+          "id": "Term Loan Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": 2000000000.0,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": null,
+          "effective_date": "2025-09-16",
+          "paired": null
+        }
+      ]
+    },
+    {
+      "accession": "0001193125-25-067902",
+      "ticker": "AMD",
+      "filing_date": "2025-03-31",
+      "filing_timestamp": "2025-03-31 08:37:51 America/New_York (SEC acceptance)",
+      "item_2_02": false,
+      "facilities": 2,
+      "facility_rows": [
+        {
+          "id": "ZT Credit Agreement",
+          "old_maturity": null,
+          "new_maturity": "2026-12-31",
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": {
+            "field": "new_capacity",
+            "document": "d943962d8k.htm",
+            "quote": "an amount up to $641,666,666.67",
+            "raw_usd": 641666666.67,
+            "reason": "The source states a raw dollar figure with no explicit thousands/millions/billions scaling word, which the frozen 'amounts' clause forbids recording as an amount. The numeric capacity is null; the raw figure is retained here only as an off-protocol provenance note and is never scaled, counted, or treated as evidence.",
+            "start": 4821,
+            "end": 4852,
+            "document_sha256": "4215c5108abc81dc83b209e3bb711a82d9bb2867b3734e7334fd8f0940799d6d"
+          },
+          "effective_date": null,
+          "paired": null
+        },
+        {
+          "id": "master receivables purchase agreement",
+          "old_maturity": null,
+          "new_maturity": null,
+          "old_capacity_usd": null,
+          "new_capacity_usd": null,
+          "currency": "USD",
+          "borrowing_currency": null,
+          "currency_note": null,
+          "off_protocol": {
+            "field": "new_capacity",
+            "document": "d943962d8k.htm",
+            "quote": "a facility limit of $850,000,000",
+            "raw_usd": 850000000.0,
+            "reason": "The source states a raw dollar figure with no explicit thousands/millions/billions scaling word, which the frozen 'amounts' clause forbids recording as an amount. The numeric capacity is null; the raw figure is retained here only as an off-protocol provenance note and is never scaled, counted, or treated as evidence.",
+            "start": 6925,
+            "end": 6957,
+            "document_sha256": "4215c5108abc81dc83b209e3bb711a82d9bb2867b3734e7334fd8f0940799d6d"
+          },
+          "effective_date": null,
+          "paired": null
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "historical_credit_coverage_protocol_sha256": "726caa85be518c3a4a3791bdc8b43db99bad0adcf44868252dcaaf267c164062",
+    "historical_credit_coverage_protocol_recomputed": "726caa85be518c3a4a3791bdc8b43db99bad0adcf44868252dcaaf267c164062",
+    "historical_credit_coverage_protocol_md_sha256": "a683359b7eab8b86ab54c9e55bbbd00920affd8bebe074b1a1bfe5c4011d3a50",
+    "enrollment_digest": "03631b66f5976457a13ffb86cd8351383ddcd2bdc165a0ea779071f5213a9574",
+    "enrollment_bytes_sha256": "6d265d57b8f008ac71432ad3f151a41a336b45363f654ec447b49be06e7f7553",
+    "earnings_payoff_freeze_json_sha256": "bfb148b3ec039e7c783d1f5f1e5e2f2e57a06abb0b64e178429992d8b06ff8b8",
+    "earnings_payoff_freeze_recomputed": {
+      "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+      "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+      "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+      "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+      "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+      "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+    }
+  },
+  "retrieval": {
+    "0001193125-22-062961": {
+      "success": true,
+      "bytes": 918461
+    },
+    "0001193125-22-263732": {
+      "success": true,
+      "bytes": 1275683
+    },
+    "0000018230-22-000199": {
+      "success": true,
+      "bytes": 6080307
+    },
+    "0001193125-23-250325": {
+      "success": true,
+      "bytes": 1087005
+    },
+    "0001075531-23-000033": {
+      "success": true,
+      "bytes": 46419286
+    },
+    "0001193125-23-010953": {
+      "success": true,
+      "bytes": 751505
+    },
+    "0001104659-24-096572": {
+      "success": true,
+      "bytes": 2292528
+    },
+    "0001193125-24-174346": {
+      "success": true,
+      "bytes": 840109
+    },
+    "0001104659-24-006244": {
+      "success": true,
+      "bytes": 524535
+    },
+    "0001193125-25-055636": {
+      "success": true,
+      "bytes": 924279
+    },
+    "0000060667-25-000199": {
+      "success": true,
+      "bytes": 352646
+    },
+    "0001193125-25-067902": {
+      "success": true,
+      "bytes": 1376381
+    }
+  }
+}

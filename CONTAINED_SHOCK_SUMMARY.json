@@ -1,0 +1,154 @@
+{
+  "experiment": "7 contained-shock 8-K semantic experiment",
+  "decision": "contained_shock_gate_failed",
+  "hypothesis": "Among earnings-related 8-K disclosures containing a material adverse current-period operating development, filings in which management maintains or raises quantitative forward guidance and JEV verifies from contemporaneous disclosure evidence that remediation of the causal source of the adverse development is already materially operational will realize less subsequent downside than the post-filing options market prices. Consequently a 5%-OTM cash-secured put entered at the tradeable post-filing (t_0) close using the 3-to-6-month expiry bucket will outperform issuer-matched ordinary-day cash-secured puts after costs, with +21 trading sessions as the primary evaluation horizon. The JEV-conditioned rule should also improve upon a simpler adverse-event + non-deteriorating-guidance baseline.",
+  "protocol_sha256": "ded46220c12c5a98fc104e5cef82afb5b49d7688954cd69dbaafe9eec19180f3",
+  "semantic_dataset_sha256": "0aeca1c49e2f72c996a3cfc3da94925b4f210d87552a845641ae19eabe1c464d",
+  "events": 130,
+  "issuers": 28,
+  "groups": {
+    "CONTAINED_SHOCK": {
+      "events": 0,
+      "issuers": 0
+    },
+    "FORWARD_DETERIORATION": {
+      "events": 0,
+      "issuers": 0
+    },
+    "PLANNED_RECOVERY": {
+      "events": 1,
+      "issuers": 1
+    },
+    "SOFT_REASSURANCE": {
+      "events": 6,
+      "issuers": 4
+    },
+    "SIMPLE_GUIDANCE_BASELINE": {
+      "events": 1,
+      "issuers": 1
+    },
+    "UNCLASSIFIED": {
+      "events": 122,
+      "issuers": 28
+    }
+  },
+  "gate": {
+    "n_contained_shock": 0,
+    "issuers_contained_shock": 0,
+    "max_issuer_share": 0.0,
+    "evidence_complete": true,
+    "issuer_counts": {},
+    "thresholds": {
+      "min_contained_shock": 20,
+      "min_issuers": 10,
+      "max_issuer_share": 0.2,
+      "evidence_completeness_conditions": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ]
+    },
+    "passed": false
+  },
+  "source": {
+    "events": 130,
+    "package_bytes": 10714066,
+    "passages": 4905,
+    "level1_batches": 671,
+    "max_level1_batch_bytes": 25935,
+    "included_type_bytes": {
+      "8-K": 805132,
+      "EX-99.1": 5305668,
+      "EX-99.2": 3335965,
+      "EX-99.3": 847877,
+      "EX-99.4": 337458,
+      "EX-99.01": 5059,
+      "EX-99.02": 5230,
+      "EX-99.03": 4831,
+      "EX-99.04": 4458,
+      "EX-99.05": 1837,
+      "EX-99.06": 943,
+      "EX-99.07": 1608,
+      "EX-99": 38127
+    },
+    "excluded_types": {
+      "EX-101.SCH": {
+        "count": 130,
+        "bytes": 34675
+      },
+      "EX-101.DEF": {
+        "count": 109,
+        "bytes": 0
+      },
+      "EX-101.LAB": {
+        "count": 118,
+        "bytes": 324450
+      },
+      "EX-101.PRE": {
+        "count": 118,
+        "bytes": 0
+      },
+      "GRAPHIC": {
+        "count": 1193,
+        "bytes": 146060265
+      },
+      "XML": {
+        "count": 650,
+        "bytes": 2347974
+      },
+      "EXCEL": {
+        "count": 101,
+        "bytes": 563725
+      },
+      "JSON": {
+        "count": 130,
+        "bytes": 2936027
+      },
+      "ZIP": {
+        "count": 130,
+        "bytes": 8256474
+      }
+    }
+  },
+  "controls": {
+    "controls": 390,
+    "parent_accessions": 130,
+    "controls_per_event_distribution": {
+      "3": 130
+    }
+  },
+  "ambiguity": {
+    "direction_mixed": 21,
+    "direction_unavailable": 98,
+    "containment_state_unclear": 0,
+    "no_adverse_selection": 3,
+    "no_outlook_selection": 35,
+    "no_remediation_selection": 13
+  },
+  "jev": {
+    "requests": 1217,
+    "valid_responses": 1214,
+    "malformed_responses": 3,
+    "valid_rate": 0.9975349219391948,
+    "malformed_rate": 0.0024650780608052587,
+    "wall_s": 65.72800650002318,
+    "latency_mean_s": 0.31750906366474574,
+    "latency_median_s": 0.31076924997614697,
+    "latency_p95_s": 0.3863557500008028,
+    "judgments_per_second": 14.277635105898927
+  },
+  "events_multi_round": 65,
+  "invalid_events": [
+    "0000066740-25-000061",
+    "0001413329-24-000012",
+    "0001413329-25-000011"
+  ],
+  "invalid_event_count": 3,
+  "economic_outcomes_computed": false,
+  "prices_read": 0,
+  "ordinary_day_market_read": false,
+  "oos_opened": false,
+  "judges_opened": false,
+  "note": "Semantic measurement only. No price, option, payoff, ordinary-day market record, 2026 filing or judges artifact was read, and no P&L was computed."
+}

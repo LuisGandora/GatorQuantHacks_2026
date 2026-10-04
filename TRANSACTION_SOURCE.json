@@ -1,0 +1,573 @@
+{
+  "experiment": "acquisition-lifecycle source-only taxonomy/disclosure feasibility census",
+  "protocol_sha256": "870a1f428ace3f456f198a145e53300357dcdbebc04fcb289e0856b5092003a7",
+  "implementation_sha256": "1d770f60d4e86ca41a68e57d17d474b5c8af75d76aab70c69e795975bb22b38c",
+  "reused_module_sha256": "7ca3797f613b7a8455c924267e4a11524cfaa0118d2a3bd694f7cea4d2aa66af",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "families": {
+    "signing": [
+      "merger_agreement",
+      "acquisition_agreement"
+    ],
+    "completion": [
+      "merger_completion",
+      "acquisition_completion"
+    ]
+  },
+  "tags": [
+    "merger_agreement",
+    "acquisition_agreement",
+    "merger_completion",
+    "acquisition_completion"
+  ],
+  "primary_family": "completion",
+  "comparison_family": "signing",
+  "universe": {
+    "size": 100,
+    "sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "requests": {
+    "invocation_scope": "final reprocessing invocation (cache-backed); these are not lifetime totals",
+    "taxonomy_pages": 1,
+    "network_requests": 0,
+    "cache_hits": 9,
+    "pages_by_tag": {
+      "merger_agreement": 3,
+      "acquisition_agreement": 2,
+      "merger_completion": 1,
+      "acquisition_completion": 2
+    },
+    "raw_request_envelopes_preserved": 9,
+    "cumulative_observed_network_requests": 9,
+    "cumulative_observed_network_breakdown": "1 live taxonomy request + 8 disclosure-page requests",
+    "initial_invocation_cache_hits": 0,
+    "cumulative_observed_note": "Final invocation reused the preserved HTTP cache (0 network, 9 cache hits). Across the whole worker episode 9 live network requests were observed, with 0 cache hits on the initial acquisition over 6299 raw rows."
+  },
+  "audit_history": {
+    "status": "bounded provenance correction; no code changed",
+    "first_freeze_protocol_sha256": "cc91ca0487e00d1eb77e9fdeda9e14bb75cba3c961c4fc9f3e9fe9b443523514",
+    "first_freeze_preceded_first_acquisition": true,
+    "initial_acquisition": {
+      "network_requests": 9,
+      "breakdown": "1 taxonomy request + 8 disclosure pages",
+      "raw_rows": 6299,
+      "initial_cache_hits": 0
+    },
+    "initial_code_defect": "the first implementation retained missing-ticker rows in enrollment",
+    "initial_enrollment_counts": {
+      "union": 902,
+      "signing": 507,
+      "completion": 437
+    },
+    "unambiguous_counts_before_correction": {
+      "signing_dedup_accessions": 52,
+      "signing_unambiguous_issuers": 24,
+      "completion_dedup_accessions": 26,
+      "completion_unambiguous_issuers": 21,
+      "both_gates_failed": true
+    },
+    "correction_applied": "missing-ticker rows were excluded from enrollment",
+    "corrected_protocol_sha256": "870a1f428ace3f456f198a145e53300357dcdbebc04fcb289e0856b5092003a7",
+    "non_http_manifests_rebuilt": "deleted and rebuilt twice after the initial acquisition",
+    "http_envelopes_preserved": 9,
+    "final_invocation": {
+      "network_requests": 0,
+      "cache_hits": 9,
+      "note": "reprocessing reused the preserved HTTP envelope cache"
+    },
+    "immutable_manifest_discipline_violated": true,
+    "immutable_manifest_disclosure": "The requested immutable-manifest discipline was violated: non-http manifests were deleted and rebuilt twice after the initial acquisition. Disclosed as a provenance defect.",
+    "final_protocol_and_code_frozen_before_initial_acquisition": false,
+    "final_counts_are": "corrected descriptive reprocessing, not pristine prospective processing",
+    "preserved_unchanged": "original taxonomy, date window, universe, family definitions, the 80/20 gate and the gate-fail outcome are unchanged",
+    "no_text_models_jev_prices_or_oos": true,
+    "historical_first_manifests_lost": true,
+    "original_implementation_snapshot_available": false,
+    "original_custody_recovered": false,
+    "fabricated_hashes_or_recreated_old_artifacts": false,
+    "verify_covers": "CURRENT code, CURRENT manifests and raw payload integrity only; it does not verify original freeze history",
+    "source_evidence": "orchestrator-observed process output from the prior worker transcript; the raw first-run manifest is not magically recoverable"
+  },
+  "exact_tag_counts": {
+    "merger_agreement": {
+      "raw_rows": 2918,
+      "in_universe_rows": 33,
+      "outside_universe_rows": 2604,
+      "missing_ticker_rows": 281,
+      "dedup_accessions": 29
+    },
+    "acquisition_agreement": {
+      "raw_rows": 1425,
+      "in_universe_rows": 31,
+      "outside_universe_rows": 1187,
+      "missing_ticker_rows": 207,
+      "dedup_accessions": 30
+    },
+    "merger_completion": {
+      "raw_rows": 880,
+      "in_universe_rows": 9,
+      "outside_universe_rows": 719,
+      "missing_ticker_rows": 152,
+      "dedup_accessions": 9
+    },
+    "acquisition_completion": {
+      "raw_rows": 1076,
+      "in_universe_rows": 24,
+      "outside_universe_rows": 787,
+      "missing_ticker_rows": 265,
+      "dedup_accessions": 24
+    }
+  },
+  "unassigned_accessions": 818,
+  "unassigned_ticker_rows_by_tag": {
+    "merger_agreement": 281,
+    "acquisition_agreement": 207,
+    "merger_completion": 152,
+    "acquisition_completion": 265
+  },
+  "per_tag": {
+    "merger_agreement": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 2918,
+      "in_universe_rows": 33,
+      "outside_universe_rows": 2604,
+      "missing_ticker_rows": 281,
+      "pages": 3,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 29,
+      "unambiguous_accessions": 29,
+      "unambiguous_issuers": 11,
+      "yearly": {
+        "2024": 13,
+        "2025": 16
+      }
+    },
+    "acquisition_agreement": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 1425,
+      "in_universe_rows": 31,
+      "outside_universe_rows": 1187,
+      "missing_ticker_rows": 207,
+      "pages": 2,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 30,
+      "unambiguous_accessions": 26,
+      "unambiguous_issuers": 18,
+      "yearly": {
+        "2024": 11,
+        "2025": 19
+      }
+    },
+    "merger_completion": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 880,
+      "in_universe_rows": 9,
+      "outside_universe_rows": 719,
+      "missing_ticker_rows": 152,
+      "pages": 1,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 9,
+      "unambiguous_accessions": 8,
+      "unambiguous_issuers": 8,
+      "yearly": {
+        "2024": 7,
+        "2025": 2
+      }
+    },
+    "acquisition_completion": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 1076,
+      "in_universe_rows": 24,
+      "outside_universe_rows": 787,
+      "missing_ticker_rows": 265,
+      "pages": 2,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 24,
+      "unambiguous_accessions": 21,
+      "unambiguous_issuers": 16,
+      "yearly": {
+        "2024": 10,
+        "2025": 14
+      }
+    }
+  },
+  "family_counts": {
+    "signing": {
+      "accessions": 56,
+      "unambiguous_accessions": 52,
+      "ambiguous_accessions": 4,
+      "unambiguous_issuers": 24,
+      "tickers": [
+        "ABT",
+        "AMD",
+        "BA",
+        "CHTR",
+        "COF",
+        "COP",
+        "CRM",
+        "CVX",
+        "EMR",
+        "GOOGL",
+        "HD",
+        "INTC",
+        "ISRG",
+        "LOW",
+        "NFLX",
+        "NOW",
+        "QCOM",
+        "SCHW",
+        "T",
+        "TMO",
+        "TMUS",
+        "UBER",
+        "UNP",
+        "VZ"
+      ],
+      "ticker_count": 24,
+      "ciks": [
+        "0000001800",
+        "0000002488",
+        "0000012927",
+        "0000032604",
+        "0000050863",
+        "0000060667",
+        "0000093410",
+        "0000097745",
+        "0000100885",
+        "0000316709",
+        "0000354950",
+        "0000732712",
+        "0000732717",
+        "0000804328",
+        "0000927628",
+        "0001035267",
+        "0001065280",
+        "0001091667",
+        "0001108524",
+        "0001163165",
+        "0001283699",
+        "0001364742",
+        "0001373715",
+        "0001543151",
+        "0001652044",
+        "0002012383"
+      ],
+      "cik_count": 26,
+      "yearly": {
+        "2024": 21,
+        "2025": 35
+      }
+    },
+    "completion": {
+      "accessions": 30,
+      "unambiguous_accessions": 26,
+      "ambiguous_accessions": 4,
+      "unambiguous_issuers": 21,
+      "tickers": [
+        "ABBV",
+        "AMD",
+        "AVGO",
+        "BA",
+        "BMY",
+        "COF",
+        "COP",
+        "CSCO",
+        "CVX",
+        "EMR",
+        "FDX",
+        "GILD",
+        "HD",
+        "HON",
+        "INTC",
+        "LOW",
+        "MET",
+        "PFE",
+        "TMO",
+        "TMUS",
+        "XOM"
+      ],
+      "ticker_count": 21,
+      "ciks": [
+        "0000002488",
+        "0000012927",
+        "0000014272",
+        "0000032604",
+        "0000034088",
+        "0000050863",
+        "0000060667",
+        "0000078003",
+        "0000093410",
+        "0000097745",
+        "0000354950",
+        "0000773840",
+        "0000858877",
+        "0000882095",
+        "0000927628",
+        "0001048911",
+        "0001099219",
+        "0001163165",
+        "0001283699",
+        "0001364742",
+        "0001551152",
+        "0001730168",
+        "0002012383"
+      ],
+      "cik_count": 23,
+      "yearly": {
+        "2024": 14,
+        "2025": 16
+      }
+    }
+  },
+  "cross_family_overlap": {
+    "accessions": 2,
+    "accession_numbers": [
+      "0000050863-24-000110",
+      "0001140361-25-008247"
+    ]
+  },
+  "union": {
+    "accessions": 84,
+    "unambiguous_accessions": 76,
+    "ambiguous_accessions": 8,
+    "unambiguous_issuers": 34,
+    "tickers": [
+      "ABBV",
+      "ABT",
+      "AMD",
+      "AVGO",
+      "BA",
+      "BMY",
+      "CHTR",
+      "COF",
+      "COP",
+      "CRM",
+      "CSCO",
+      "CVX",
+      "EMR",
+      "FDX",
+      "GILD",
+      "GOOGL",
+      "HD",
+      "HON",
+      "INTC",
+      "ISRG",
+      "LOW",
+      "MET",
+      "NFLX",
+      "NOW",
+      "PFE",
+      "QCOM",
+      "SCHW",
+      "T",
+      "TMO",
+      "TMUS",
+      "UBER",
+      "UNP",
+      "VZ",
+      "XOM"
+    ],
+    "ticker_count": 34,
+    "ciks": [
+      "0000001800",
+      "0000002488",
+      "0000012927",
+      "0000014272",
+      "0000032604",
+      "0000034088",
+      "0000050863",
+      "0000060667",
+      "0000078003",
+      "0000093410",
+      "0000097745",
+      "0000100885",
+      "0000316709",
+      "0000354950",
+      "0000732712",
+      "0000732717",
+      "0000773840",
+      "0000804328",
+      "0000858877",
+      "0000882095",
+      "0000927628",
+      "0001035267",
+      "0001048911",
+      "0001065280",
+      "0001091667",
+      "0001099219",
+      "0001108524",
+      "0001163165",
+      "0001283699",
+      "0001364742",
+      "0001373715",
+      "0001543151",
+      "0001551152",
+      "0001652044",
+      "0001730168",
+      "0002012383"
+    ],
+    "cik_count": 36,
+    "yearly": {
+      "2024": 34,
+      "2025": 50
+    },
+    "tag_membership_counts": {
+      "acquisition_agreement": 30,
+      "acquisition_completion": 24,
+      "merger_agreement": 29,
+      "merger_completion": 9
+    },
+    "multi_tag_accessions": 8
+  },
+  "collisions": {
+    "ambiguous_multi_ticker_accessions": 0,
+    "conflicting_metadata_accessions": 0,
+    "cik_with_multiple_tickers": 0,
+    "ticker_with_multiple_ciks": 1,
+    "same_cik_filing_date_groups": 3,
+    "same_cik_filing_date_accessions": 6,
+    "unresolved_identity_accessions": 8,
+    "outside_ticker_aliases_recorded": 81
+  },
+  "yearly_distribution": {
+    "2024": 34,
+    "2025": 50
+  },
+  "gates": {
+    "gates": {
+      "signing": {
+        "family": "signing",
+        "rule": {
+          "min_unambiguous_dedup_accessions": 80,
+          "min_unambiguous_canonical_ticker_issuers": 20,
+          "census_complete": true
+        },
+        "checks": {
+          "unambiguous_dedup_accessions": false,
+          "unambiguous_canonical_ticker_issuers": true,
+          "census_complete": true
+        },
+        "passed": false,
+        "census_complete": true,
+        "observed": {
+          "dedup_accessions": 56,
+          "unambiguous_dedup_accessions": 52,
+          "unambiguous_canonical_ticker_issuers": 24
+        },
+        "decision": "family_gate_failed",
+        "caveat": "Internal source-only feasibility screen; not an organizer rule and not proof of matched economic power or a tradable edge. Never rescued by the union or by the other family."
+      },
+      "completion": {
+        "family": "completion",
+        "rule": {
+          "min_unambiguous_dedup_accessions": 80,
+          "min_unambiguous_canonical_ticker_issuers": 20,
+          "census_complete": true
+        },
+        "checks": {
+          "unambiguous_dedup_accessions": false,
+          "unambiguous_canonical_ticker_issuers": true,
+          "census_complete": true
+        },
+        "passed": false,
+        "census_complete": true,
+        "observed": {
+          "dedup_accessions": 30,
+          "unambiguous_dedup_accessions": 26,
+          "unambiguous_canonical_ticker_issuers": 21
+        },
+        "decision": "family_gate_failed",
+        "caveat": "Internal source-only feasibility screen; not an organizer rule and not proof of matched economic power or a tradable edge. Never rescued by the union or by the other family."
+      }
+    },
+    "primary_family": "completion",
+    "comparison_family": "signing",
+    "union_descriptive_only": true,
+    "decision": "primary_completion_gate_failed",
+    "stop_at_metadata": true,
+    "reason": "Both family gates must hold; the union is descriptive only and never rescues a failing family. No extraction and no price read occurs in this census regardless.",
+    "caveat": "Internal source-only feasibility gate, not an organizer rule and not proof of matched economic power."
+  },
+  "decision": "primary_completion_gate_failed",
+  "stop_at_metadata": true,
+  "custody": {
+    "checks": {
+      "code_sha256_matches_frozen": true,
+      "reused_module_sha256_matches_frozen": true,
+      "raw_request_envelopes_preserved": true,
+      "all_payload_hashes_valid": true,
+      "taxonomy_pages_match": true,
+      "pages_match_acquisition": true,
+      "rows_match_acquisition": true,
+      "rows_in_window": true,
+      "rows_exact_tag": true,
+      "private_custody_ignored": true
+    },
+    "passed": true,
+    "raw_request_envelopes": 9,
+    "taxonomy_pages": 1,
+    "disclosure_pages": 8,
+    "raw_rows": 6299,
+    "in_window_rows": 6299,
+    "exact_tag_rows": 6299
+  },
+  "source_only": true,
+  "financial_outcomes_read": false,
+  "market_data_requests": 0,
+  "text_endpoint_requests": 0,
+  "model_requests": 0,
+  "jev_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "classification_source": "vendor taxonomy reused as-is; consuming the vendor tag is part of the Massive framework, not a new classifier",
+  "provenance_note": "A tag is a vendor classification and does not prove a signed deal, a completed transaction or a tradable event.",
+  "source_vs_financial": "This is a source metadata census only. It is not a financial finding and says nothing about returns, completion drift, option value or strategy profitability; no price, option, payoff or model was opened.",
+  "extraction_boundary": "No JEV call is made by this census. Any later verbatim date-span measurement is a separate, not-yet-authorized step whose incremental utility remains unvalidated; arithmetic date subtraction and its sign are not classifiers, but judging an extracted date role is a not-yet-validated judgment.",
+  "preservation": {
+    "earnings_payoff_freeze": {
+      "all_unchanged": true,
+      "checks": {
+        "protocol_sha256": true,
+        "events_sha256": true,
+        "universe_sha256": true,
+        "implementation_sha256": true,
+        "implementation_files_6": true,
+        "source_preservation_sha256": true
+      },
+      "implementation_file_hashes": {
+        "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+        "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+        "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+        "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+        "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+        "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+      }
+    },
+    "credit_terms_protocol": {
+      "all_unchanged": true,
+      "checks": {
+        "declared_matches_protocol_file": true,
+        "metrics_matches_declared": true
+      },
+      "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+    }
+  },
+  "source_constraints": [
+    "static September-2026 TOP_100 carries survivorship bias",
+    "static membership excludes targets already acquired or delisted before the snapshot, but does not logically exclude historical target agreements that remain unresolved, nor all target scenarios",
+    "2024-2025 only; 2026 and the sealed judges window are unopened",
+    "tag rows are vendor classifications, not verified signed deals or completed transactions",
+    "a family gate pass is not a matched-power, trading-proof or profitability claim; the union is descriptive only",
+    "the sealed out-of-sample window is future validation, not a prerequisite to source research; absent NBBO limits executions and marks, not source research"
+  ]
+}

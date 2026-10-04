@@ -1,0 +1,975 @@
+{
+  "taxonomy": "Massive disclosure taxonomy 1.0 (119 event types)",
+  "taxonomy_sha256": "428f5757088272be3bed07c8fd3a71d003611ab41ae43a399f2abe0250b4b40d",
+  "included_tags": [
+    "ceo_appointment",
+    "ceo_departure",
+    "cfo_appointment",
+    "cfo_departure",
+    "executive_officer_appointment",
+    "executive_officer_departure"
+  ],
+  "tag_precedence": [
+    "ceo_departure",
+    "cfo_departure",
+    "executive_officer_departure",
+    "ceo_appointment",
+    "cfo_appointment",
+    "executive_officer_appointment"
+  ],
+  "no_separate_succession_tag": "The cached Massive disclosure taxonomy (119 event types, taxonomy 1.0) contains no separate executive_succession or interim_executive_appointment tertiary category. Executive succession and interim executive leadership are folded into the executive_leadership appointment and departure tags. The frozen list therefore contains exactly six directly executive leadership appointment/departure tags.",
+  "rows": [
+    {
+      "tertiary_category": "credit_rating_change",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "credit_ratings",
+      "description": "Credit rating upgrade, downgrade, outlook modification, or watch placement by rating agencies.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "credit_facility",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Credit agreement, loan facility, or revolving credit arrangement. Includes amendments modifying capacity, rates, covenants, or maturity.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "credit_facility_draw",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Borrowing under existing credit facilities or term loans with amount and purpose.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "debt_issuance",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Bonds, notes, or debentures issuance with principal, rate, maturity, covenants, and use of proceeds.",
+      "decision": "EXCLUDE",
+      "rationale": "Financing event: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "debt_retirement",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Purchase, redemption, tender, or early retirement of outstanding debt securities.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "guarantee_or_letter_of_credit",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Issuance or release of guarantees, letters of credit, or keepwell agreements.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "off_balance_sheet_arrangement",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_activity",
+      "description": "Off-balance sheet obligations including VIEs, synthetic leases, or structured finance with real exposure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "covenant_violation",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_distress",
+      "description": "Breach or anticipated breach of financial covenants, with waivers obtained or amendments to cure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "debt_acceleration",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_distress",
+      "description": "Events triggering debt acceleration, interest rate increases, or debt term modifications.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "payment_default",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_distress",
+      "description": "Actual failure to make required principal or interest payment on outstanding debt.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "rating_downgrade_trigger",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "debt_distress",
+      "description": "Credit rating downgrade triggering contractual consequences (increased rates, collateral, acceleration).",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "acquisition_consideration_shares",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Unregistered securities issued as merger or acquisition consideration.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "equity_compensation_grant",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Unregistered securities under equity compensation plans for employees, directors, or consultants.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "pipe_transaction",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "PIPE transaction involving unregistered securities at market discount with registration rights.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "private_placement",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Private placement of unregistered equity to accredited investors or QIBs, with terms and registration rights.",
+      "decision": "EXCLUDE",
+      "rationale": "Equity financing event: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "public_offering",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Public equity offering or registered direct offering with underwriting terms.",
+      "decision": "EXCLUDE",
+      "rationale": "Equity financing event: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "rights_offering",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Rights offering to existing shareholders to purchase additional shares at a discount.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "underwriting_agreement",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Underwriting or placement agent agreement for securities distribution in offerings.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "warrant_or_conversion",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "equity_activity",
+      "description": "Unregistered securities from warrant/option exercise or convertible security conversion.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "dividend_declaration",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "shareholder_returns",
+      "description": "Cash dividend, special dividend, or distribution declaration with amount, record date, and payment date.",
+      "decision": "EXCLUDE",
+      "rationale": "Shareholder-return event: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "dividend_policy_change",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "shareholder_returns",
+      "description": "Material change to dividend policy including suspension, reduction, or significant increase.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "share_repurchase_program",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "shareholder_returns",
+      "description": "Share buyback program authorization, expansion, or update with amount and timing.",
+      "decision": "EXCLUDE",
+      "rationale": "Shareholder-return event: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "stock_split",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "shareholder_returns",
+      "description": "Forward or reverse stock split with ratio, dates, and share impact.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "tender_offer",
+      "primary_category": "capital_and_financing",
+      "secondary_category": "shareholder_returns",
+      "description": "Tender offer to acquire outstanding securities (equity, debt, or trust preferred) with pricing and conditions.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "annual_earnings",
+      "primary_category": "financial_results",
+      "secondary_category": "earnings_and_performance",
+      "description": "Annual financial results with year-over-year comparisons, key metrics, and forward outlook.",
+      "decision": "EXCLUDE",
+      "rationale": "Ordinary earnings announcement: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "nav_per_share",
+      "primary_category": "financial_results",
+      "secondary_category": "earnings_and_performance",
+      "description": "Net asset value per share for BDCs, closed-end funds, interval funds, or non-traded REITs.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "preliminary_results",
+      "primary_category": "financial_results",
+      "secondary_category": "earnings_and_performance",
+      "description": "Preliminary or unaudited financial results before formal statement preparation.",
+      "decision": "EXCLUDE",
+      "rationale": "Preliminary financial results: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "quarterly_earnings",
+      "primary_category": "financial_results",
+      "secondary_category": "earnings_and_performance",
+      "description": "Quarterly financial results including revenue, net income, EPS, and key operating metrics with management commentary.",
+      "decision": "EXCLUDE",
+      "rationale": "Ordinary earnings announcement: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "accounting_error_correction",
+      "primary_category": "financial_results",
+      "secondary_category": "financial_integrity",
+      "description": "Material accounting error correction not requiring full restatement but requiring disclosure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "audit_opinion_withdrawal",
+      "primary_category": "financial_results",
+      "secondary_category": "financial_integrity",
+      "description": "Withdrawal of auditor opinion on prior statements requiring reissuance.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "financial_restatement",
+      "primary_category": "financial_results",
+      "secondary_category": "financial_integrity",
+      "description": "Prior financial statements should not be relied upon due to material errors requiring restatement.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "internal_control_weakness",
+      "primary_category": "financial_results",
+      "secondary_category": "financial_integrity",
+      "description": "Material weakness in internal control over financial reporting requiring disclosure and remediation.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "guidance_issuance_or_update",
+      "primary_category": "financial_results",
+      "secondary_category": "guidance_and_outlook",
+      "description": "Issuance, revision, or reaffirmation of financial guidance including revenue projections, earnings estimates, and key metric forecasts. Consolidates all guidance-related disclosures regardless of disclosure mechanism.",
+      "decision": "EXCLUDE",
+      "rationale": "Financial guidance: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "guidance_withdrawal",
+      "primary_category": "financial_results",
+      "secondary_category": "guidance_and_outlook",
+      "description": "Withdrawal or suspension of previously issued financial guidance.",
+      "decision": "EXCLUDE",
+      "rationale": "Guidance withdrawal: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "asset_impairment",
+      "primary_category": "financial_results",
+      "secondary_category": "impairments_and_charges",
+      "description": "Long-lived or intangible asset impairment or write-down with asset nature and circumstances.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "goodwill_impairment",
+      "primary_category": "financial_results",
+      "secondary_category": "impairments_and_charges",
+      "description": "Goodwill impairment charge when carrying value exceeds fair value, with amount and affected reporting unit.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "investment_impairment",
+      "primary_category": "financial_results",
+      "secondary_category": "impairments_and_charges",
+      "description": "Other-than-temporary impairment on investments or securities with amount and nature.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "material_charge_or_gain",
+      "primary_category": "financial_results",
+      "secondary_category": "impairments_and_charges",
+      "description": "Material nonrecurring charges, gains, or unusual items significantly affecting results (e.g., restructuring charges, legal settlements, one-time gains).",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "director_appointment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "board_of_directors",
+      "description": "New director election or appointment with background, qualifications, and committee assignments.",
+      "decision": "EXCLUDE",
+      "rationale": "Director-only election or appointment with no executive-management transition; the ontology departing-executive referent is absent."
+    },
+    {
+      "tertiary_category": "director_departure",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "board_of_directors",
+      "description": "Director resignation, removal, retirement, or decision not to stand for re-election, including any disagreements causing departure.",
+      "decision": "EXCLUDE",
+      "rationale": "Director-only resignation or removal with no executive-management transition; the ontology departing-executive referent is absent."
+    },
+    {
+      "tertiary_category": "control_acquisition",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "corporate_control",
+      "description": "Acquisition of controlling interest by new shareholder, investor group, or entity.",
+      "decision": "EXCLUDE",
+      "rationale": "Acquisition of a controlling interest: a corporate-control event, not an executive leadership transition."
+    },
+    {
+      "tertiary_category": "control_disposition",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "corporate_control",
+      "description": "Loss of controlling interest through sale, dilution, or other transaction.",
+      "decision": "EXCLUDE",
+      "rationale": "Disposition of a controlling interest: a corporate-control event, not an executive leadership transition."
+    },
+    {
+      "tertiary_category": "going_private_transaction",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "corporate_control",
+      "description": "Going-private, management buyout, or similar transaction ending public trading.",
+      "decision": "EXCLUDE",
+      "rationale": "Going-private or buyout transaction: an ownership/control event, not an executive leadership transition."
+    },
+    {
+      "tertiary_category": "reverse_merger",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "corporate_control",
+      "description": "Reverse merger where private operating company merges with public shell, becoming publicly traded. Includes shell company status changes.",
+      "decision": "EXCLUDE",
+      "rationale": "Reverse merger or shell status change: an M&A/control event, not an executive leadership transition."
+    },
+    {
+      "tertiary_category": "ceo_appointment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "New CEO appointment with background, employment terms, and compensation.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "ceo_departure",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "CEO departure, resignation, retirement, termination, or death with circumstances and transition.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "cfo_appointment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "New CFO appointment with background, terms, and transition timeline.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "cfo_departure",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "CFO departure with circumstances and transition arrangements.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "executive_compensation_change",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "Material executive or director compensation changes including new employment agreements, amendments, severance, change-in-control provisions, or equity awards. Consolidates all compensation-related events into a single tag.",
+      "decision": "EXCLUDE",
+      "rationale": "Compensation and employment terms, not a leadership appointment or departure; the six-dimension succession ontology does not apply."
+    },
+    {
+      "tertiary_category": "executive_officer_appointment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "Other named executive officer appointment with position and terms.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "executive_officer_departure",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "executive_leadership",
+      "description": "Other named executive officer departure with circumstances.",
+      "decision": "INCLUDE",
+      "rationale": "Directly denotes an executive leadership appointment or departure for which the Experiment 9 six-dimension governance-state ontology is economically meaningful."
+    },
+    {
+      "tertiary_category": "bylaw_amendment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Bylaw amendment with nature of changes and impact on governance or shareholder rights.",
+      "decision": "EXCLUDE",
+      "rationale": "Bylaw amendment: a governance-document change, not a leadership transition."
+    },
+    {
+      "tertiary_category": "charter_amendment",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Certificate or articles of incorporation amendment, including changes to shareholder voting, dividend, or liquidation rights. Use this for the governance action; use preferred_stock_modification for preferred-specific term changes.",
+      "decision": "EXCLUDE",
+      "rationale": "Charter amendment: a governance-document change, not a leadership transition."
+    },
+    {
+      "tertiary_category": "code_of_ethics_change",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Code of ethics amendment or waiver for principal executive, financial, or accounting officers.",
+      "decision": "EXCLUDE",
+      "rationale": "Code-of-ethics amendment or waiver: a governance-document change, not a leadership transition."
+    },
+    {
+      "tertiary_category": "fiscal_year_change",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Fiscal year end change with old and new dates, transition period, and rationale.",
+      "decision": "EXCLUDE",
+      "rationale": "Fiscal-year change: a governance-document change, not a leadership transition."
+    },
+    {
+      "tertiary_category": "preferred_stock_modification",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Material modification of preferred stock terms including conversion, dividend, redemption, or voting provisions.",
+      "decision": "EXCLUDE",
+      "rationale": "Governance-document amendment; no leadership transition."
+    },
+    {
+      "tertiary_category": "shareholder_rights_plan",
+      "primary_category": "leadership_and_governance",
+      "secondary_category": "governance_documents",
+      "description": "Adoption, amendment, or termination of a shareholder rights plan (poison pill) or similar anti-takeover mechanism.",
+      "decision": "EXCLUDE",
+      "rationale": "Governance-document amendment; no leadership transition."
+    },
+    {
+      "tertiary_category": "clinical_trial_results",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Clinical trial data for pharma, biotech, or medical devices including efficacy and safety findings.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "esg_sustainability_commitment",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Material ESG initiative, sustainability target, or environmental/social development the company considers significant.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "patent_milestone",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Patent grants, issuances, or significant IP milestones from USPTO or international offices.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "product_or_service_launch",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Significant new product, service offering, or technology development affecting future performance.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "regulatory_decision",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Regulatory approvals, rejections, complete response letters, or information requests from FDA, EPA, or other agencies.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "significant_contract_award",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Material contract win or commercial agreement outside ordinary course affecting future revenues.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "strategic_initiative",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "business_developments",
+      "description": "Strategic plans, business transformation, or market entry/exit that represent material changes to business direction.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "lease_agreement",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "material_agreements",
+      "description": "Significant lease for real property, equipment, or facilities including operating, finance, and sale-leaseback.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "partnership_or_collaboration",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "material_agreements",
+      "description": "Partnership, collaboration, or commercial relationship agreement affecting operations or competitive position.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "settlement_agreement",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "material_agreements",
+      "description": "Settlement resolving material litigation, regulatory proceedings, or disputes. Use this instead of material_litigation when the event is the settlement itself.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "supply_or_distribution_agreement",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "material_agreements",
+      "description": "Material supply, distribution, or purchasing commitment establishing long-term obligations.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "business_line_exit",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "restructuring",
+      "description": "Decision to exit or discontinue a business line, product category, or market segment.",
+      "decision": "EXCLUDE",
+      "rationale": "Business-line exit: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "facility_closure",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "restructuring",
+      "description": "Facility closures, consolidations, or relocations with locations, employees, and charges.",
+      "decision": "EXCLUDE",
+      "rationale": "Facility closure or relocation: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "restructuring_plan",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "restructuring",
+      "description": "Restructuring or cost reduction initiative with expected charges, timeline, and anticipated savings.",
+      "decision": "EXCLUDE",
+      "rationale": "Restructuring or cost-reduction initiative: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "workforce_reduction",
+      "primary_category": "operations_and_strategy",
+      "secondary_category": "restructuring",
+      "description": "Significant layoffs, RIFs, or voluntary separation programs with positions, severance, and timeline.",
+      "decision": "EXCLUDE",
+      "rationale": "Layoffs or separation programs: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "abs_distribution_failure",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "asset_backed_securities",
+      "description": "Failure to make required ABS distribution with missed amount, reasons, and expected remediation.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "abs_structural_change",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "asset_backed_securities",
+      "description": "Material changes to ABS structure including servicer/trustee replacement, credit enhancement modification, or trust document amendments.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "auditor_disagreement",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "auditor_matters",
+      "description": "Disagreements with auditors on accounting principles, disclosures, or audit scope.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "auditor_dismissal",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "auditor_matters",
+      "description": "Independent auditor dismissal with reasons and reportable events.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "auditor_resignation",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "auditor_matters",
+      "description": "Independent auditor resignation with date and any disagreements.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "new_auditor_engagement",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "auditor_matters",
+      "description": "New auditor engagement with prior consultations and change disclosures.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "delisting_determination",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "exchange_listing",
+      "description": "Exchange determination to delist securities with effective date and reasons.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "listing_compliance_regained",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "exchange_listing",
+      "description": "Regained listing compliance after previous deficiency notice.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "listing_deficiency_notice",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "exchange_listing",
+      "description": "Notice of failure to satisfy continued listing requirements with cure period.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "listing_transfer",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "exchange_listing",
+      "description": "Transfer between exchanges or market tiers, or initial listing approval.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "voluntary_delisting",
+      "primary_category": "regulatory_and_compliance",
+      "secondary_category": "exchange_listing",
+      "description": "Voluntary decision to delist with rationale and alternative trading arrangements.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "bankruptcy_emergence",
+      "primary_category": "risk_events",
+      "secondary_category": "bankruptcy_and_insolvency",
+      "description": "Confirmation of reorganization plan or emergence from bankruptcy with creditor treatment and new capital structure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "going_concern",
+      "primary_category": "risk_events",
+      "secondary_category": "bankruptcy_and_insolvency",
+      "description": "Going concern doubt expressed by auditors or management, substantial doubt about ability to continue operations.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "involuntary_bankruptcy",
+      "primary_category": "risk_events",
+      "secondary_category": "bankruptcy_and_insolvency",
+      "description": "Involuntary bankruptcy petition by creditors with petitioner identity and amounts.",
+      "decision": "EXCLUDE",
+      "rationale": "Bankruptcy or insolvency: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "receivership_appointment",
+      "primary_category": "risk_events",
+      "secondary_category": "bankruptcy_and_insolvency",
+      "description": "Appointment of receiver, trustee, or conservator to control assets with scope and duration.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "voluntary_bankruptcy",
+      "primary_category": "risk_events",
+      "secondary_category": "bankruptcy_and_insolvency",
+      "description": "Voluntary bankruptcy filing (Chapter 7, 11, 15) with circumstances and expected impact.",
+      "decision": "EXCLUDE",
+      "rationale": "Bankruptcy or insolvency: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "class_action_filing",
+      "primary_category": "risk_events",
+      "secondary_category": "legal_proceedings",
+      "description": "Class action lawsuit filed against the company with claims and potential exposure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "material_litigation",
+      "primary_category": "risk_events",
+      "secondary_category": "legal_proceedings",
+      "description": "Significant litigation updates, outcomes, or judgments not covered by settlement_agreement.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "regulatory_investigation",
+      "primary_category": "risk_events",
+      "secondary_category": "legal_proceedings",
+      "description": "SEC, DOJ, or other regulatory investigation, Wells notice, or enforcement action.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "cybersecurity_incident",
+      "primary_category": "risk_events",
+      "secondary_category": "security_and_safety",
+      "description": "Material cybersecurity incident, data breach, ransomware, or information security event affecting systems or data.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "mine_closure",
+      "primary_category": "risk_events",
+      "secondary_category": "security_and_safety",
+      "description": "Mining operations closure due to safety concerns or violation patterns with production impact.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "mine_safety_violation",
+      "primary_category": "risk_events",
+      "secondary_category": "security_and_safety",
+      "description": "Mine safety violations, citations, or penalties from MSHA requiring corrective action or fines.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "natural_disaster_impact",
+      "primary_category": "risk_events",
+      "secondary_category": "security_and_safety",
+      "description": "Natural disaster, catastrophic event, or force majeure impact on operations, facilities, or financial condition.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "benefit_plan_blackout",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "insider_trading",
+      "description": "Blackout period notice during which benefit plan trading will be suspended.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "trading_plan_10b5_1",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "insider_trading",
+      "description": "Rule 10b5-1 trading plan adoption, modification, or termination by officers, directors, or affiliates.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "business_update",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "investor_communications",
+      "description": "Business performance, market conditions, or operational updates communicated to investors.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "capital_allocation_update",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "investor_communications",
+      "description": "Capital allocation strategy, financial plan, or investment priorities communicated to investment community.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "investor_presentation",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "investor_communications",
+      "description": "Investor presentations, conference materials, or earnings call supplements disclosed for broad dissemination.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "activist_investor_campaign",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_activism",
+      "description": "Activist engagement including demands, proxy contests, settlements, or board nominations.",
+      "decision": "EXCLUDE",
+      "rationale": "Shareholder activism: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "director_nomination",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_activism",
+      "description": "Shareholder director nominations under proxy access or advance notice bylaws.",
+      "decision": "EXCLUDE",
+      "rationale": "Shareholder director nomination: a director-level governance contest, not an executive leadership transition."
+    },
+    {
+      "tertiary_category": "shareholder_proposal_outcome",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_activism",
+      "description": "Shareholder proposal outcomes with support levels and management response.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "annual_meeting_results",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_meetings",
+      "description": "Annual meeting results including elections, ratifications, and proposal outcomes.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "shareholder_meeting_notice",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_meetings",
+      "description": "Annual or special meeting announcement with dates, agenda, and record date.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "special_meeting_results",
+      "primary_category": "shareholder_activity",
+      "secondary_category": "shareholder_meetings",
+      "description": "Special meeting results on mergers, charter amendments, or other significant actions.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "acquisition_agreement",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_agreements",
+      "description": "Definitive agreement to acquire a business, subsidiary, or division, specifying price, financing, and conditions.",
+      "decision": "EXCLUDE",
+      "rationale": "M&A deal agreement: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "divestiture_agreement",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_agreements",
+      "description": "Definitive agreement to sell a business unit, subsidiary, or product line.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "joint_venture_agreement",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_agreements",
+      "description": "Joint venture, partnership, or collaboration agreement defining shared activities and governance.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "licensing_agreement",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_agreements",
+      "description": "Licensing or technology transfer agreement for patents, trademarks, or proprietary technology.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "merger_agreement",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_agreements",
+      "description": "Definitive merger or business combination agreement with exchange ratios and terms.",
+      "decision": "EXCLUDE",
+      "rationale": "M&A deal agreement: a different economic mechanism."
+    },
+    {
+      "tertiary_category": "acquisition_completion",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_completions",
+      "description": "Completed business acquisition with final purchase price, financing, and integration plans.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "asset_purchase_or_sale",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_completions",
+      "description": "Completed purchase or sale of significant individual assets (real estate, equipment, IP) outside ordinary course.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "divestiture_completion",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_completions",
+      "description": "Completed sale or divestiture with proceeds, gain/loss, and strategic rationale.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "merger_completion",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_completions",
+      "description": "Completed merger or business combination with resulting ownership structure.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "spinoff_completion",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_completions",
+      "description": "Completed spinoff, split-off, or separation creating independent entity with distribution details.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "deal_breach_default",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_terminations",
+      "description": "Termination of a material agreement due to breach or default, with associated penalties or disputes.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "deal_termination",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_terminations",
+      "description": "Termination, expiration, or non-renewal of a material agreement due to term completion, mutual agreement, or exercise of termination rights.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    },
+    {
+      "tertiary_category": "deal_withdrawal",
+      "primary_category": "strategic_transactions",
+      "secondary_category": "deal_terminations",
+      "description": "Withdrawal from or cancellation of a pending agreement before completion, with rationale and any fees.",
+      "decision": "EXCLUDE",
+      "rationale": "Not an executive leadership appointment/departure; excluded by the frozen inclusion criterion."
+    }
+  ]
+}

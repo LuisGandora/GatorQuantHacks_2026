@@ -1,0 +1,224 @@
+{
+  "record": "CREDIT_TERMS_PILOT_CORRECTIONS",
+  "kind": "audited correction record for the fixed 12-filing credit-term source-evidence measurement pilot",
+  "authored_by": "opencode-go/deepseek-v4.1-flash (sole correction worker)",
+  "human_authorship": false,
+  "human_validation": false,
+  "correction_time_local": "2026-10-03 04:36 EDT",
+  "scope": {
+    "edited_files": [
+      "credit_terms_pilot.py",
+      "CREDIT_TERMS_PILOT.md",
+      "CREDIT_TERMS_PILOT.json",
+      "credit_terms_pilot/metrics.json",
+      "credit_terms_pilot/source_evidence.json",
+      "README.md",
+      "RESEARCH_NEXT_DIRECTION.md",
+      "RESEARCH_ROUTE_REVIEW.md",
+      "RESEARCH_ROUTE_REVIEW.json",
+      "CREDIT_TERMS_PILOT_CORRECTIONS.md",
+      "CREDIT_TERMS_PILOT_CORRECTIONS.json",
+      "RESEARCH_FINDINGS_DRAFT.md"
+    ],
+    "derived_and_ignored_files": [
+      "credit_terms_pilot/metrics.json",
+      "credit_terms_pilot/source_evidence.json",
+      "credit_terms_pilot/audit_history/",
+      "credit_terms_pilot/audit_history/final_review/"
+    ],
+    "frozen_files_not_edited": [
+      "CREDIT_TERMS_PILOT_PROTOCOL.md",
+      "credit_terms_pilot/protocol.json",
+      "credit_terms_pilot/protocol_hash.json",
+      "credit_terms_pilot/selection.json",
+      "credit_terms_pilot/selection_hash.json",
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "CREDIT_TERMS_PILOT_REVIEW.json",
+      "EARNINGS_PAYOFF_FREEZE.json",
+      "historical_credit_coverage/*",
+      "BENCHMARK_*",
+      ".agents/"
+    ],
+    "no_network_or_source_acquisition": true,
+    "no_market_data_outcomes_oos_or_judges": true,
+    "no_classifier_or_semantic_score": true,
+    "committed": false
+  },
+  "original_audit": {
+    "files": [
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "CREDIT_TERMS_PILOT_REVIEW.json"
+    ],
+    "auditor": "opencode-go/deepseek-v4.1-flash",
+    "human_validation": false,
+    "audited_snapshot_local_time": "2026-10-03 04:20 America/New_York",
+    "original_audit_hashes": {
+      "CREDIT_TERMS_PILOT.md": "274872e6541e0f47ef0165a7a9ff0e5854bd72d3af212e0eec521cd91d070d03",
+      "CREDIT_TERMS_PILOT.json": "51038612401f93f0bbeff2618f9ea702ddd9386b21ab7d0d5055e28fbbb0303f",
+      "credit_terms_pilot/metrics.json": "51038612401f93f0bbeff2618f9ea702ddd9386b21ab7d0d5055e28fbbb0303f",
+      "credit_terms_pilot/source_evidence.json": "3e3feca4f3cc93bfa4259147eb427042e980dca31f8144f37d3b8dcad7fb4d53",
+      "credit_terms_pilot.py": "a60831528507008f783d35cdfa2c77d61515d03d7c2a9ed51bdf17114fd5f511",
+      "protocol_sha256_declared": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149",
+      "selection_sha256_declared": "633ee51633d2e11bca4c79f0b5d3adc6583366a5055020f3ea1666023ae77e10"
+    }
+  },
+  "frozen_identity_unchanged": {
+    "protocol_sha256_declared": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149",
+    "protocol_json_raw_sha256": "3378493237704c33a018202a5cf3963ebd5f045e7d60b88a4271d9f14bfef824",
+    "protocol_json_raw_sha256_before_correction": "3378493237704c33a018202a5cf3963ebd5f045e7d60b88a4271d9f14bfef824",
+    "selection_sha256_declared": "633ee51633d2e11bca4c79f0b5d3adc6583366a5055020f3ea1666023ae77e10",
+    "selection_json_raw_sha256": "3b63293370a89d9aedf45d67b79b01e35f7478f27a0ba03cc749eb7346aa197f",
+    "selection_json_raw_sha256_before_correction": "3b63293370a89d9aedf45d67b79b01e35f7478f27a0ba03cc749eb7346aa197f",
+    "protocol_and_selection_unchanged": true
+  },
+  "corrected_hashes": {
+    "credit_terms_pilot.py": "00cd78c094e37316231337dcec53f01a1f144842e533b843b068489c4f87736c",
+    "CREDIT_TERMS_PILOT.md": "7bf3205b5fa14214a562e5a8ef3c5c935ae99023be75089e989a256fc63a4191",
+    "CREDIT_TERMS_PILOT.json": "5f508d3fe0e114fb81fe762475e7c0b54037dd1e5ac663671a62e3c05ea0c4f4",
+    "credit_terms_pilot/metrics.json": "5f508d3fe0e114fb81fe762475e7c0b54037dd1e5ac663671a62e3c05ea0c4f4",
+    "credit_terms_pilot/source_evidence.json": "9af825ff05234008540df04ffa53d711ee0e0afa57e4e87e33343e6ce84cc738",
+    "CREDIT_TERMS_PILOT_PROTOCOL.md": "8b206ab00e03adb73ee67802841e24bebd5213a228ab3b7af6083f9c15cfb511",
+    "credit_terms_pilot/protocol.json": "3378493237704c33a018202a5cf3963ebd5f045e7d60b88a4271d9f14bfef824",
+    "credit_terms_pilot/selection.json": "3b63293370a89d9aedf45d67b79b01e35f7478f27a0ba03cc749eb7346aa197f",
+    "CREDIT_TERMS_PILOT_REVIEW.md": "ef6c2b8b45500d8023dc0e656896ca258b70a88a619e845c3900b3712073deee",
+    "CREDIT_TERMS_PILOT_REVIEW.json": "d270c8b10f2f4ffaf352cb094f8b421ca0be61b3f5a53e2981deb0331a54b2bf",
+    "credit_terms_pilot/audit_history/MANIFEST.json": "e2eaccd4e46bf2d5f634f18a95b043bfe4fc7bb23e3f5505c6f012b025b2094c",
+    "credit_terms_pilot/audit_history/final_review/MANIFEST.json": "78299375000e389436f9f6e7339fa8686c433a0ed2060c54e4d22b0b7d1f1860"
+  },
+  "corrected_hashes_note": "Phase 1 corrected hashes for the source-evidence facts are unchanged (source_evidence.json 9af825...); the code/report/metrics hashes are the phase-2 (final bounded factual cleanup) regenerated values and are the ones this record attests. The pre-phase-2 corrected code/report/metrics bytes are archived under credit_terms_pilot/audit_history/final_review/ with manifest 782993... .",
+  "phase_2_final_cleanup": {
+    "kind": "final bounded factual cleanup of the corrected pilot, minimal changes, no edit to the frozen protocol/selection or the independent audit",
+    "status": "complete",
+    "author": "opencode-go/deepseek-v4.1-flash",
+    "human_validation": false,
+    "changes": [
+      "wording: every 11/12 new-term-only claim replaced with 11/12 lacking a verifiable paired maturity change (missing reads as unknown, not evidence that all 11 state a new term)",
+      "wording: the pilot opening now says no market or strategy outcome was read, names the model-authored annotations, and states no additional pipeline inference or model call and no human validation",
+      "disclosure: the frozen protocol's no-model-call clause is explicitly recorded as a limitation/ambiguity satisfied only as no additional runtime inference, not on every interpretation, because the model authored the annotations and report as the user required",
+      "code: removed the unused unit-less capacity metric arithmetic fallback in summarise(); canonical numeric capacities require an explicit unit and use direct UNITS[unit]; null stays null; the fail-fast raw-amount validator is unchanged"
+    ],
+    "preserved_before_regeneration": "credit_terms_pilot/audit_history/final_review/ (static archive of the phase-1 corrected credit_terms_pilot.py, CREDIT_TERMS_PILOT.md, CREDIT_TERMS_PILOT.json, metrics.json, source_evidence.json) with MANIFEST.json 78299375000e389436f9f6e7339fa8686c433a0ed2060c54e4d22b0b7d1f1860",
+    "regenerated": [
+      "credit_terms_pilot.py",
+      "CREDIT_TERMS_PILOT.md",
+      "CREDIT_TERMS_PILOT.json",
+      "credit_terms_pilot/metrics.json"
+    ],
+    "source_evidence_unchanged": "credit_terms_pilot/source_evidence.json 9af825ff05234008540df04ffa53d711ee0e0afa57e4e87e33343e6ce84cc738",
+    "pairing_result_unchanged": {
+      "paired_maturity_filings": 1,
+      "paired_capacity_filings": 0,
+      "paired_both_filings": 0,
+      "unknown_maturity_filings": 11,
+      "unknown_capacity_filings": 12
+    },
+    "frozen_protocol_and_selection_unchanged": true,
+    "independent_audit_unchanged": true,
+    "committed": false
+  },
+  "deviations": [
+    {
+      "id": "DEV-1",
+      "severity": "protocol",
+      "status": "closed",
+      "title": "Two AMD capacity facts violated the frozen scaling-word rule",
+      "resolution": "The numeric new_capacity for the AMD ZT Credit Agreement ($641,666,666.67) and the AMD master receivables purchase agreement ($850,000,000) is now null, because the frozen amounts clause records an amount only with an explicit thousands/millions/billions word. Each raw figure is retained only as an off-protocol provenance note with its exact quote and verified offsets (d943962d8k.htm start 4821 and 6925), and is never scaled, counted or treated as evidence. A fail-fast validator in check_fact and validate_amount_rule now rejects any numeric amount without an explicit scaling word. The frozen rule was not relaxed.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-2",
+      "severity": "completeness",
+      "status": "closed",
+      "title": "CAT 2024 local-currency sub-limit rows were missing",
+      "resolution": "The two distinct local-currency addenda in 0001104659-24-096572 (tm2423020d1_8k.htm) are now recorded as separate rows: Local Currency Addendum (id offset 3336; capacity quote offset 3418) and Japan Local Currency Addendum (id offset 3669; capacity quote offset 3727), each a $100 million USD-equivalent sub-limit inside the 364-Day Aggregate Commitment. They are kept separate from and never summed into the $3.15 billion parent. Each carries an explicit borrowing_currency annotation (Pounds Sterling/Euros; Japanese Yen) so the USD-equivalent ceiling is not confused with the borrowing currency. The analogous CAT 2022 wording was inspected and the two 2022 addenda rows now carry the same clarification.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-3",
+      "severity": "scope",
+      "status": "accepted-limitation",
+      "title": "Audited sequence-1 subset, not an exhaustive whole-package annotation",
+      "resolution": "CREDIT_TERMS_PILOT.md now states the evidence set audits the sequence-1 original 8-K body only (an audited subset) and that the independent audit separately extended the paired-term search to every text-bearing exhibit, finding no additional explicit same-facility old/new pair beyond PM. No exhaustive whole-package annotation is claimed.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-4",
+      "severity": "reporting",
+      "status": "addressed",
+      "title": "jev_or_model_calls: 0 is a runtime count, not no model involvement",
+      "resolution": "CREDIT_TERMS_PILOT.md and CREDIT_TERMS_PILOT.json now carry a provenance block: annotations are authored by opencode-go/deepseek-v4.1-flash, human_authorship is false, and the zero is an explicit additional-runtime-inference count, not a claim that no model was involved.",
+      "does_not_change_pairing": true
+    },
+    {
+      "id": "DEV-5",
+      "severity": "guardrail",
+      "status": "compliant",
+      "title": "No economic inference from source-only counts",
+      "resolution": "Unchanged: the 1/12 and 0/12 figures remain fixed-set measurement feasibility counts, not prevalence or an effect.",
+      "does_not_change_pairing": true
+    }
+  ],
+  "scope_statements": {
+    "annotation_author": "opencode-go/deepseek-v4.1-flash",
+    "human_authorship": false,
+    "additional_runtime_inference_during_pipeline": false,
+    "annotation_scope": "sequence-1 original 8-K body only (exact-quote bound facts); an audited subset, not an exhaustive whole-package annotation",
+    "exhibit_paired_term_search": "the independent audit extended the paired-term search to every text-bearing exhibit and found no additional explicit same-facility old/new pair beyond PM",
+    "exhaustive_package_annotation": false,
+    "no_human_authorship_claimed": true
+  },
+  "pairing_result_unchanged": {
+    "paired_maturity_filings": 1,
+    "paired_capacity_filings": 0,
+    "paired_both_filings": 0,
+    "unknown_maturity_filings": 11,
+    "unknown_capacity_filings": 12,
+    "item_2_02_filings": 0,
+    "expected_unmoved": true
+  },
+  "recommendation_change": {
+    "removed": "extend the numerical source measurement to all 147 filings",
+    "reason": "The audited paired yield is low (1/12 maturity, 0/12 capacity; the remaining 11/12 lack a verifiable paired maturity change, which is unknown rather than evidence that all 11 state a new term) and the authorized 2024-2025 financial cohort is only about 62 credit events, so financial feasibility is insufficient.",
+    "replacement": "Do not extend to all 147; keep the pilot as a measurement-feasibility result with no price study or trade hypothesis frozen."
+  },
+  "archive": {
+    "location": "credit_terms_pilot/audit_history/",
+    "manifest": "credit_terms_pilot/audit_history/MANIFEST.json",
+    "manifest_sha256": "e2eaccd4e46bf2d5f634f18a95b043bfe4fc7bb23e3f5505c6f012b025b2094c",
+    "static_read_only_record": true,
+    "compatibility_execution_path": false,
+    "read_by_corrected_pipeline": false
+  },
+  "verification": {
+    "commands": [
+      ".venv/bin/python credit_terms_pilot.py audit",
+      ".venv/bin/python credit_terms_pilot.py report",
+      ".venv/bin/python credit_terms_pilot.py verify"
+    ],
+    "audit_stdout": "Audited 12 filings; paired maturity 1, paired capacity 0",
+    "verify_stdout": "Verified pilot: 1 paired maturity / 0 paired capacity / 0 both / 11 unknown maturity / 12 unknown capacity / 0 Item 2.02",
+    "quote_date_amount_bindings_reverified": true,
+    "selection_reproduced_from_enrollment_by_sha256": true,
+    "historical_credit_coverage_protocol_digest_recomputed": "726caa85be518c3a4a3791bdc8b43db99bad0adcf44868252dcaaf267c164062",
+    "historical_credit_coverage_protocol_md_sha256": "a683359b7eab8b86ab54c9e55bbbd00920affd8bebe074b1a1bfe5c4011d3a50",
+    "enrollment_digest": "03631b66f5976457a13ffb86cd8351383ddcd2bdc165a0ea779071f5213a9574",
+    "earnings_payoff_freeze_json_sha256": "bfb148b3ec039e7c783d1f5f1e5e2f2e57a06abb0b64e178429992d8b06ff8b8",
+    "six_earnings_implementation_hashes_recomputed": {
+      "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+      "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+      "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+      "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+      "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+      "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+    },
+    "prior_frozen_experiments_modified": false,
+    "phase_2_regeneration_stdout": {
+      "audit": "Audited 12 filings; paired maturity 1, paired capacity 0",
+      "verify": "Verified pilot: 1 paired maturity / 0 paired capacity / 0 both / 11 unknown maturity / 12 unknown capacity / 0 Item 2.02"
+    },
+    "phase_2_py_compile": "credit_terms_pilot.py compiles under .venv/bin/python -m py_compile",
+    "phase_2_json_valid": true,
+    "phase_2_correction_hash_check": "every file named in corrected_hashes recomputed to the recorded sha256"
+  },
+  "guarantee": "No positive result is guaranteed; the route scores are advisory and the pilot is a measurement-feasibility result."
+}

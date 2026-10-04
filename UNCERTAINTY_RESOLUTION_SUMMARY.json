@@ -1,0 +1,446 @@
+{
+  "experiment": "9 uncertainty resolution delta",
+  "decision": "no_candidate_feasibility_failure",
+  "terminal_decision": "no_candidate_feasibility_failure",
+  "frozen_measurement_decision": "uncertainty_resolution_feasibility_failed",
+  "gate_verdict": "failed",
+  "hypothesis": "Among leadership-change 8-K disclosures, filings that newly resolve material governance uncertainty that was still open immediately before the filing will subsequently realize less downside uncertainty than comparable leadership-change filings that leave those questions unresolved or create new uncertainty. Because investors may continue paying for downside protection around a salient governance event after part of the underlying uncertainty has been resolved, 5%-OTM cash-secured puts entered using Massive's tradeable post-filing t0 rule with the 3-to-6-month expiry bucket should outperform issuer-matched ordinary-day cash-secured puts following high positive uncertainty-resolution events. The primary evaluation horizon is +21 trading sessions.",
+  "protocol_sha256": "c9cd27944acc262cc28e302ee5737c899e769f7f2f751b9f30afbe7d54c82b01",
+  "superseded_protocol_sha256": "76b33de8bc0e58603a8eb7f33ae1609d1ffe501a4eee12b1c86d68dcbdf00bd4",
+  "state_table_sha256": "96ea2310432d3021d1d6551b4d632c7e47ed9be1a9700c51ab80ef000900dcf2",
+  "delta_table_sha256": "b5015dbfc006ed01ff0b51f00884790de2e103b2a11fafb2b14bf164cef82fa2",
+  "feasibility_audit_sha256": "00fb44bf891f51050f0f4a77000da1ea3b58049664a50b34a45c6c9ab1c91604",
+  "primary_rule_sha256": "902f787c9601b5c710c4c455689fee230e6906e789091a8c7d6429981a076561",
+  "events": 132,
+  "issuers": 68,
+  "audit": {
+    "events_available": 132,
+    "distinct_issuers": 68,
+    "coverage_adequate_count": 76,
+    "window_complete_count": 76,
+    "prior_retrieved_count": 122,
+    "events_with_class_p": 91,
+    "events_with_class_c": 10,
+    "events_with_class_c_lexical_match": 10,
+    "events_trimmed": 2,
+    "valid_dimensions_distribution": {
+      "0": 53,
+      "1": 24,
+      "2": 20,
+      "3": 12,
+      "4": 8,
+      "5": 11,
+      "6": 4
+    },
+    "transition_distribution": {
+      "closing": 27,
+      "insufficient_evidence": 581,
+      "opening": 34,
+      "unchanged": 150
+    },
+    "resolution_delta_distribution": {
+      "-3": 1,
+      "-2": 8,
+      "-1": 13,
+      "0": 94,
+      "1": 10,
+      "2": 3,
+      "3": 3
+    },
+    "freshness_distribution": {
+      "fresh": 15,
+      "stale": 91,
+      "unknown": 26
+    },
+    "freshness_lag_distribution": {
+      "0": 15,
+      "10": 2,
+      "100": 1,
+      "104": 1,
+      "109": 2,
+      "110": 1,
+      "112": 1,
+      "113": 1,
+      "119": 1,
+      "12": 1,
+      "124": 1,
+      "125": 1,
+      "127": 1,
+      "13": 2,
+      "130": 1,
+      "133": 1,
+      "134": 1,
+      "138": 1,
+      "141": 1,
+      "142": 1,
+      "144": 1,
+      "155": 1,
+      "16": 1,
+      "166": 1,
+      "167": 1,
+      "169": 1,
+      "17": 2,
+      "171": 1,
+      "182": 1,
+      "19": 2,
+      "2": 1,
+      "20": 1,
+      "206": 1,
+      "207": 1,
+      "210": 1,
+      "22": 1,
+      "23": 1,
+      "236": 1,
+      "238": 1,
+      "24": 1,
+      "243": 1,
+      "248": 1,
+      "30": 1,
+      "32": 1,
+      "33": 1,
+      "36": 2,
+      "37": 1,
+      "38": 1,
+      "39": 1,
+      "41": 1,
+      "42": 1,
+      "45": 1,
+      "46": 1,
+      "47": 1,
+      "51": 1,
+      "52": 1,
+      "53": 1,
+      "57": 2,
+      "58": 1,
+      "6": 1,
+      "60": 1,
+      "61": 1,
+      "64": 2,
+      "65": 2,
+      "66": 1,
+      "68": 2,
+      "71": 1,
+      "73": 1,
+      "75": 1,
+      "77": 1,
+      "78": 1,
+      "8": 1,
+      "84": 2,
+      "85": 1,
+      "88": 1,
+      "89": 3,
+      "91": 1,
+      "93": 1,
+      "97": 1,
+      "unknown": 26
+    },
+    "freshness_lag_statistics": {
+      "events_with_lag": 106,
+      "events_unknown_lag": 26,
+      "min": 0,
+      "median": 62.5,
+      "mean": 72.99056603773585,
+      "max": 248
+    },
+    "after_package": {
+      "events": 132,
+      "fallback_count": 0,
+      "combined_sha256": "3152a61e060b24994612f04208d42d28861f92ed1b4a454c18795e6729b90dd2",
+      "bytes": {
+        "min": 2620,
+        "median": 5323.0,
+        "mean": 8395.969696969696,
+        "max": 71263
+      }
+    },
+    "issuer_concentration": {
+      "events": 132,
+      "issuers": 68,
+      "max_issuer_share": 0.03787878787878788,
+      "largest_issuer_cik": "0001613103"
+    },
+    "dimension_pairs_lost": {
+      "insufficient_evidence": 581,
+      "not_disclosed": 0,
+      "not_applicable": 0,
+      "unlisted_pair": 0
+    },
+    "not_disclosed_side_states": 0,
+    "per_dimension_measurability": {
+      "successor_identity": {
+        "before_states": {
+          "insufficient_evidence": 90,
+          "known": 42
+        },
+        "after_states": {
+          "insufficient_evidence": 64,
+          "known": 65,
+          "unknown": 3
+        },
+        "valid_transitions": 22,
+        "closing": 0,
+        "opening": 1
+      },
+      "successor_permanence": {
+        "before_states": {
+          "insufficient_evidence": 107,
+          "interim_or_acting": 5,
+          "none_identified": 2,
+          "permanent": 18
+        },
+        "after_states": {
+          "insufficient_evidence": 87,
+          "interim_or_acting": 4,
+          "none_identified": 6,
+          "permanent": 35
+        },
+        "valid_transitions": 6,
+        "closing": 3,
+        "opening": 1
+      },
+      "search_status": {
+        "before_states": {
+          "insufficient_evidence": 106,
+          "not_needed_or_completed": 21,
+          "ongoing": 5
+        },
+        "after_states": {
+          "insufficient_evidence": 68,
+          "not_needed_or_completed": 51,
+          "ongoing": 13
+        },
+        "valid_transitions": 14,
+        "closing": 3,
+        "opening": 0
+      },
+      "effective_timing": {
+        "before_states": {
+          "approximate_or_conditional": 8,
+          "insufficient_evidence": 49,
+          "specific_and_known": 75
+        },
+        "after_states": {
+          "approximate_or_conditional": 15,
+          "insufficient_evidence": 5,
+          "specific_and_known": 112
+        },
+        "valid_transitions": 79,
+        "closing": 7,
+        "opening": 7
+      },
+      "transition_arrangement": {
+        "before_states": {
+          "defined_transition_or_handoff": 48,
+          "insufficient_evidence": 75,
+          "limited_transition_information": 8,
+          "no_transition_identified": 1
+        },
+        "after_states": {
+          "defined_transition_or_handoff": 77,
+          "insufficient_evidence": 21,
+          "limited_transition_information": 21,
+          "no_transition_identified": 13
+        },
+        "valid_transitions": 51,
+        "closing": 7,
+        "opening": 16
+      },
+      "leadership_continuity": {
+        "before_states": {
+          "continuity_established": 41,
+          "continuity_unresolved": 2,
+          "insufficient_evidence": 80,
+          "temporary_continuity": 9
+        },
+        "after_states": {
+          "continuity_established": 61,
+          "continuity_unresolved": 17,
+          "insufficient_evidence": 29,
+          "temporary_continuity": 25
+        },
+        "valid_transitions": 39,
+        "closing": 7,
+        "opening": 9
+      }
+    },
+    "unlisted_pairs": [],
+    "floor": {
+      "min_events": 20,
+      "min_issuers": 10,
+      "max_issuer_share": 0.2
+    }
+  },
+  "primary_rule": {
+    "selection_rule": "Primary rule form: valid dimensions >= K, ResolutionDelta >= R, at least one closing transition, zero opening transitions. K and R are selected from the outcome-blind distribution by a predeclared strictness order: among the grid K in {6,5,4,3,2,1} and R in {3,2,1}, take the lexicographically largest (K, R) whose primary group meets the frozen floor of at least 20 events, at least 10 distinct issuers and a largest-issuer share at most 0.20. A higher K requires more dimensions to be independently measured; a higher R requires more net closings. Because the rule maximises strictness rather than sample size, it cannot manufacture N by relaxing. If no grid point meets the floor, the feasibility gate FAILS and the experiment terminates without opening any economic outcome. The ontology and the transition rules are never weakened to manufacture N.",
+    "K": null,
+    "R": null,
+    "feasibility": null,
+    "feasibility_gate": "failed",
+    "final": "Feasibility gate FAILED: no K and R on the predeclared grid produce a primary group meeting the floor of at least 20 events, at least 10 distinct issuers and a largest-issuer share at most 0.20. The experiment terminates without opening any economic outcome."
+  },
+  "measurement_validation": {
+    "kind": "bounded blinded transition-sign validation",
+    "validator": "uncertainty_resolution_validation.py",
+    "reviewer": "separate blinded text-only reader",
+    "audited_subset": {
+      "events": 40,
+      "pairs": 120,
+      "packet_bytes": 358057,
+      "truncated_passages": 5,
+      "identifier_redactions": 256,
+      "pairs_source_kind_current_filing_prior_statement": 0,
+      "selection": {
+        "closing_only_events": 15,
+        "opening_events": 24,
+        "hash_filled_events": 1
+      },
+      "pairs_per_dimension": {
+        "successor_identity": 36,
+        "successor_permanence": 27,
+        "search_status": 4,
+        "effective_timing": 14,
+        "transition_arrangement": 23,
+        "leadership_continuity": 16
+      }
+    },
+    "frozen_gate_statement": "The sign of the aggregate closing-minus-opening count must survive the independent read on the audited subset.",
+    "gate_verdict": "PASS",
+    "aggregate_counts": {
+      "jev": {
+        "closing": 27,
+        "opening": 34,
+        "closing_minus_opening": -7,
+        "sign": -1
+      },
+      "independent": {
+        "closing": 22,
+        "opening": 30,
+        "closing_minus_opening": -8,
+        "sign": -1
+      }
+    },
+    "agreement": {
+      "exact_before": {
+        "matched": 98,
+        "n": 120,
+        "rate": 0.817
+      },
+      "exact_after": {
+        "matched": 99,
+        "n": 120,
+        "rate": 0.825
+      },
+      "exact_both": {
+        "matched": 83,
+        "n": 120,
+        "rate": 0.692
+      },
+      "transition_sign_all_pairs_both_unknown_agree": {
+        "matched": 102,
+        "n": 120,
+        "rate": 0.85
+      },
+      "transition_sign_both_determinate": {
+        "matched": 53,
+        "n": 69,
+        "rate": 0.768
+      }
+    },
+    "independent_insufficient_evidence": {
+      "before": 30,
+      "after": 32
+    },
+    "false_resolution_rate": {
+      "jev_called_closing": 27,
+      "independent_disagreed": 9,
+      "rate": 0.333
+    },
+    "false_opening_rate": {
+      "jev_called_opening": 34,
+      "independent_disagreed": 7,
+      "rate": 0.206
+    },
+    "per_dimension_sign_agreement": {
+      "successor_identity": {
+        "matched": 34,
+        "n": 36
+      },
+      "successor_permanence": {
+        "matched": 27,
+        "n": 27
+      },
+      "search_status": {
+        "matched": 4,
+        "n": 4
+      },
+      "effective_timing": {
+        "matched": 10,
+        "n": 14
+      },
+      "transition_arrangement": {
+        "matched": 15,
+        "n": 23
+      },
+      "leadership_continuity": {
+        "matched": 12,
+        "n": 16
+      }
+    },
+    "feasibility_gate_verdict": "failed",
+    "interpretation": "Individual transition labels are noisy at roughly one in three for closings and one in five for openings, which is why the protocol gate was written on the aggregate sign rather than per-pair identity. The aggregate direction replicated: both reads put the audited subset on the opening side of zero."
+  },
+  "amendment": {
+    "version": 2,
+    "date": "2026-10-03",
+    "pre_measurement": true,
+    "superseded_protocol_sha256": "76b33de8bc0e58603a8eb7f33ae1609d1ffe501a4eee12b1c86d68dcbdf00bd4",
+    "no_outcome_opened_under_version_1": true,
+    "changes": [
+      {
+        "id": "C1",
+        "title": "Repair the after-state source",
+        "v1_after_median_characters": 239,
+        "v1_after_max_characters": 736,
+        "v1_events_with_at_least_3_valid_dimensions": 10,
+        "v1_insufficient_evidence_dimension_pairs": 672,
+        "v2_after_median_bytes": 5323,
+        "v2_after_max_bytes": 71263,
+        "v2_events_with_at_least_3_valid_dimensions": 35,
+        "v2_insufficient_evidence_dimension_pairs": 581
+      },
+      {
+        "id": "C2",
+        "title": "Fix the calendar-freshness baseline"
+      }
+    ],
+    "note": "Version 1 was superseded before any outcome was opened. The version-1 tables are not retained, so the version-1 figures are the amendment's recorded values; the version-2 figures were read from the frozen v2 state and delta tables."
+  },
+  "jev": {
+    "requests": 528,
+    "stage_a_requests": 264,
+    "stage_b_requests": 264,
+    "distinct_requests": 441,
+    "distinct_stage_a_requests": 227,
+    "distinct_stage_b_requests": 214,
+    "job_slot_requests": 528,
+    "cache_hits": 266,
+    "live_requests": 262,
+    "http_attempts": 441,
+    "valid_responses": 434,
+    "malformed_responses": 7,
+    "valid_rate": 0.9841269841269841,
+    "malformed_rate": 0.015873015873015872,
+    "wall_s": 19.577067167003406,
+    "latency_mean_s": 0.27830087482978594,
+    "latency_median_s": 0.268867415987188,
+    "latency_p95_s": 0.47146658299607225,
+    "judgments": 2392,
+    "judgments_per_second": 19.489828353923002
+  },
+  "economic_outcomes_computed": false,
+  "prices_read": 0,
+  "ordinary_day_market_read": false,
+  "oos_opened": false,
+  "judges_opened": false,
+  "note": "Semantic measurement only. No price, option record, payoff, ordinary-day market record, 2026 filing or judges artifact was read, and no P&L was computed."
+}

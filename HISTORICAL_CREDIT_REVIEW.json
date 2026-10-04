@@ -1,0 +1,154 @@
+{
+  "review": "independent bounded audit of historical_credit_coverage.py and its public source-only outputs",
+  "kind": "read-only source-identity and mechanism review; no economic outcome, no option or market data, no JEV or model call, no text classifier, no regex eligibility estimate",
+  "reviewed_on": "2026-10-03",
+  "reviewed_artifacts": [
+    "historical_credit_coverage.py",
+    "HISTORICAL_CREDIT_COVERAGE.json",
+    "HISTORICAL_CREDIT_COVERAGE.md",
+    "HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md",
+    "historical_credit_coverage/enrollment.json",
+    "historical_credit_coverage/enrollment_counts.json",
+    "historical_credit_coverage/gate.json",
+    "historical_credit_coverage/disclosures_2022-01-01_2023-05-31.json",
+    "historical_credit_coverage/disclosures_2023-09-01_2023-12-31.json",
+    "historical_credit_coverage/disclosures_2024-01-01_2025-12-31.json",
+    "historical_credit_coverage/http/ (8 request records)",
+    "EARNINGS_PAYOFF_FREEZE.json",
+    "SOURCE_IDENTITY_REVIEW.md",
+    "SOURCE_IDENTITY_REVIEW.json",
+    "CREDIT_FACILITY_FEASIBILITY.md",
+    "REPURCHASE_SOURCE_RESULTS.md",
+    "REPURCHASE_SOURCE_METRICS.json"
+  ],
+  "decision": {
+    "historical_raw_source_gate": "passed",
+    "economic_result": "UNKNOWN",
+    "clean_eligible_renewals": "UNKNOWN",
+    "source_feasible_label_meaning": "raw sparsity result only; not a clean cohort, not a mechanism, not a direction, not an effect"
+  },
+  "frozen_verification": {
+    "command": ".venv/bin/python historical_credit_coverage.py verify",
+    "result": "PASS",
+    "verified_dedup_filings": 147,
+    "gate_passed": true,
+    "enrollment_digest_replay": "match",
+    "requires_network": false
+  },
+  "earnings_freeze_hash_check": {
+    "protocol_sha256": "verified",
+    "events_sha256": "verified",
+    "universe_sha256": "verified",
+    "implementation_sha256": "verified",
+    "implementation_files_six_sha256": "verified",
+    "source_preservation_sha256": "verified",
+    "original_source_manifest_entries": 628,
+    "original_source_manifest_mismatches": 0
+  },
+  "direct_ticker_counts": {
+    "tag_rows_all_filers_allowed_intervals": 13809,
+    "outside_universe_rows": 13615,
+    "enrolled_8k_union": 147,
+    "by_interval": {
+      "2022-01-01..2023-05-31": 72,
+      "2023-09-01..2023-12-31": 13,
+      "2024-01-01..2025-12-31": 62
+    },
+    "direct_tickers": 54,
+    "direct_ciks": 55,
+    "accessions_with_multiple_tickers": 0,
+    "cik_conflicts": {
+      "BLK": [
+        "0001364742",
+        "0002012383"
+      ]
+    }
+  },
+  "unresolved_cik_claim": {
+    "reported_unresolved_cik_rows": 0,
+    "reported_unresolved_cik_accessions": [],
+    "meaning": "every enrolled direct-ticker row carries a cik field; this is not a resolution of tickerless all-filer rows",
+    "mechanism": "historical_credit_coverage.py:365 enroll() drops any row without a direct canonical ticker before CIK is read; unresolved_cik_rows at historical_credit_coverage.py:377 counts only enrolled rows lacking a cik field; no identity evidence is consulted",
+    "conclusion": "zero unresolved CIK rows means only enrolled rows are CIK-complete, not that all tickerless all-filer rows were resolved"
+  },
+  "identity_unresolved_residual": {
+    "evidence_base": "the 20 source-only 2024-2025 files in SOURCE_IDENTITY_REVIEW.json; novelty_results/source_filings.json excluded; no 2023 reserved metadata and no old novelty cache read",
+    "base_corpus_canonical_coverage": "96 of 100",
+    "base_corpus_missing_tickers": ["AMGN", "AMZN", "TMO", "V"],
+    "extended_corpus_canonical_coverage": "99 of 100",
+    "extended_corpus_missing_tickers": ["V"],
+    "extension_added_tickers": ["AMGN", "AMZN", "TMO"],
+    "ciK_recoverable_accessions": 0,
+    "base_corpus": {
+      "direct_accessions": 147,
+      "identity_unresolved_accessions": 2026,
+      "identity_unresolved_ciks": 606,
+      "identity_only_upper_bound_accessions": 2173
+    },
+    "extended_corpus": {
+      "direct_accessions": 147,
+      "identity_unresolved_accessions": 1923,
+      "identity_only_upper_bound_accessions": 2070
+    },
+    "per_interval_extended": {
+      "2022-01-01..2023-05-31": {"direct_accessions": 72, "identity_unresolved_accessions": 694, "upper_bound": 766},
+      "2023-09-01..2023-12-31": {"direct_accessions": 13, "identity_unresolved_accessions": 165, "upper_bound": 178},
+      "2024-01-01..2025-12-31": {"direct_accessions": 62, "identity_unresolved_accessions": 1064, "upper_bound": 1126}
+    },
+    "claim": "the 147 / 54 direct counts are a lower bound; the identity-unresolved residual is about 1923 to 2026 accessions over the four-year union; unknown issuers stay explicit and are not inferred",
+    "caveat": "the residual is a property of the local git-ignored evidence cache, not reproducible from committed files alone"
+  },
+  "holdout_and_cursor_validation": {
+    "rows_dated_inside_2023-06-01..2023-08-31": 0,
+    "rows_dated_2026_or_later": 0,
+    "http_request_records": 8,
+    "http_request_window_violations": 0,
+    "windows_seen": ["2022-01-01..2023-05-31 (6 pages)", "2023-09-01..2023-12-31 (2 pages)"],
+    "cursor_embedded_dates_in_reserved_or_2026_range": "none"
+  },
+  "reserved_window_exposure_ledger": {
+    "file": "novelty_results/source_filings.json",
+    "reserved_window": "2023-06-01..2023-08-31 (notebook HOLDOUT_START..HOLDOUT_END)",
+    "records_seen": 1093,
+    "reserved_date_records_seen": 74,
+    "what_was_read": "cached filing metadata only (cik, ticker, accession, filing_date, items_text); no reserved financial data, no option price, no payoff, no new source request",
+    "status": "excluded from the identity corpus and not read again; the historical credit acquisition itself never touched the holdout",
+    "cannot_restore": "a previously cached file cannot be made pristine again",
+    "judge_window": "the actual judge-selected reserved window is unknown because the judges set HOLDOUT_START..HOLDOUT_END",
+    "year_2026": "unopened",
+    "financial_outcome_replication": "unrun",
+    "claim_boundary": "this review does not claim the sealed data was entirely untouched"
+  },
+  "documentation_corrections": {
+    "complete_population_claim": "corrected: direct-ticker raw population with an identity-unresolved residual of about 2026 accessions, not a complete census",
+    "cik_recovery_claim": "corrected: CIK is read from an existing field, it is not resolved from identity evidence",
+    "source_novel_claim": "corrected: extending the tag count to earlier years changes the source window, not an economic fact",
+    "cash_secured_put_example": "corrected: no option price or strategy outcome was read; mechanism and expression are untested"
+  },
+  "source_rule_checks": {
+    "strategy_library": ["stock", "long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+    "standalone_long_put_present": false,
+    "raw_floor_80_20_is_coverage_only": true,
+    "repurchase_direct_count_36_is_lower_bound": true,
+    "repurchase_standalone_12_issuers_10_is_provisional": true,
+    "credit_direct_count_62_is_lower_bound": true,
+    "clean_eligible_renewal_count": "UNKNOWN",
+    "repurchase_report_generator": "repurchase_source_audit.py remains a frozen historical snapshot; its unqualified census conclusions are superseded by SOURCE_IDENTITY_REVIEW.md; generator not edited and hashes unchanged"
+  },
+  "next_direction_owner": "GPT",
+  "next_direction_note": "the frozen report's recommended small fixed outcome-blind numerical-source-term audit (facility size, current and prior maturity, renewal/extension timing) is sound and remains not built and not run here; the credit-facility terms pilot is owned by another worker and is not touched",
+  "boundaries": {
+    "network_requests": 0,
+    "options_or_market_data_read": false,
+    "payoffs_read": false,
+    "jev_or_model_calls": 0,
+    "year_2026_read": false,
+    "judges_window_read": false,
+    "text_classifier_built": false,
+    "regex_eligibility_built": false,
+    "frozen_artifacts_edited": false,
+    "pilot_files_read_or_edited": false,
+    "trade_hypothesis_frozen": false,
+    "commit_made": false
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "experiment": "credit-facility liquidity-insurance source feasibility audit",
+  "protocol_sha256": "be15f1c949796a6fbbc51793d3929bb7864b8dd77c66a3a8418645c486750c6d",
+  "kind": "outcome-blind source-only feasibility audit; no economic outcome, no trade hypothesis, no classifier, no scoring",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "tag": {
+    "primary_category": "capital_and_financing",
+    "secondary_category": "debt_activity",
+    "tertiary_category": "credit_facility",
+    "description": "Credit agreement, loan facility, or revolving credit arrangement. Includes amendments modifying capacity, rates, covenants, or maturity.",
+    "taxonomy": "1.0"
+  },
+  "universe_tickers": 100,
+  "taxonomy_from_cache_only": true,
+  "taxonomy_tag_verified": true,
+  "retrieval": {
+    "endpoint": "/stocks/filings/8-K/vX/disclosures",
+    "cache_dir": "credit_facility_feasibility/http",
+    "pages": 7,
+    "tag_rows_all_filers": 6983,
+    "outside_universe_rows": 6899
+  },
+  "enrollment": {
+    "dedup_original_8k_filings_in_top100": 62,
+    "economic_ticker_issuers": 38,
+    "ciks": 39,
+    "accessions_with_multiple_tickers": 0
+  },
+  "year_concentration": {
+    "2024": 27,
+    "2025": 35
+  },
+  "issuer_concentration": {
+    "HON": 4,
+    "BA": 3,
+    "BLK": 3,
+    "HD": 3,
+    "LMT": 3,
+    "LOW": 3,
+    "PM": 3,
+    "AMT": 2,
+    "CAT": 2,
+    "CRM": 2,
+    "GM": 2,
+    "IBM": 2,
+    "LIN": 2,
+    "NFLX": 2,
+    "NKE": 2,
+    "TGT": 2,
+    "ABBV": 1,
+    "ABT": 1,
+    "ACN": 1,
+    "AIG": 1,
+    "AMD": 1,
+    "AVGO": 1,
+    "BKNG": 1,
+    "CMCSA": 1,
+    "CSCO": 1,
+    "DIS": 1,
+    "EMR": 1,
+    "FDX": 1,
+    "INTU": 1,
+    "MA": 1,
+    "MDLZ": 1,
+    "MO": 1,
+    "PEP": 1,
+    "PYPL": 1,
+    "QCOM": 1,
+    "SBUX": 1,
+    "T": 1,
+    "UBER": 1
+  },
+  "cik_by_ticker": {
+    "ABBV": [
+      "0001551152"
+    ],
+    "ABT": [
+      "0000001800"
+    ],
+    "ACN": [
+      "0001467373"
+    ],
+    "AIG": [
+      "0000005272"
+    ],
+    "AMD": [
+      "0000002488"
+    ],
+    "AMT": [
+      "0001053507"
+    ],
+    "AVGO": [
+      "0001730168"
+    ],
+    "BA": [
+      "0000012927"
+    ],
+    "BKNG": [
+      "0001075531"
+    ],
+    "BLK": [
+      "0001364742",
+      "0002012383"
+    ],
+    "CAT": [
+      "0000018230"
+    ],
+    "CMCSA": [
+      "0001166691"
+    ],
+    "CRM": [
+      "0001108524"
+    ],
+    "CSCO": [
+      "0000858877"
+    ],
+    "DIS": [
+      "0001744489"
+    ],
+    "EMR": [
+      "0000032604"
+    ],
+    "FDX": [
+      "0001048911"
+    ],
+    "GM": [
+      "0001467858"
+    ],
+    "HD": [
+      "0000354950"
+    ],
+    "HON": [
+      "0000773840"
+    ],
+    "IBM": [
+      "0000051143"
+    ],
+    "INTU": [
+      "0000896878"
+    ],
+    "LIN": [
+      "0001707925"
+    ],
+    "LMT": [
+      "0000936468"
+    ],
+    "LOW": [
+      "0000060667"
+    ],
+    "MA": [
+      "0001141391"
+    ],
+    "MDLZ": [
+      "0001103982"
+    ],
+    "MO": [
+      "0000764180"
+    ],
+    "NFLX": [
+      "0001065280"
+    ],
+    "NKE": [
+      "0000320187"
+    ],
+    "PEP": [
+      "0000077476"
+    ],
+    "PM": [
+      "0001413329"
+    ],
+    "PYPL": [
+      "0001633917"
+    ],
+    "QCOM": [
+      "0000804328"
+    ],
+    "SBUX": [
+      "0000829224"
+    ],
+    "T": [
+      "0000732717"
+    ],
+    "TGT": [
+      "0000027419"
+    ],
+    "UBER": [
+      "0001543151"
+    ]
+  },
+  "effective_issuer_n": 30.03125,
+  "max_issuer_share": 0.06451612903225806,
+  "clean_eligible_renewals": {
+    "value": null,
+    "status": "UNKNOWN",
+    "reason": "No text classification, scoring, or regex eligibility estimate is permitted, so the clean eligible-renewal subset cannot be counted in this audit."
+  },
+  "source_gate": {
+    "passed": false,
+    "checks": {
+      "min_dedup_filings": false,
+      "min_economic_ticker_issuers": true
+    },
+    "required": {
+      "min_dedup_filings": 80,
+      "min_economic_ticker_issuers": 20
+    },
+    "observed": {
+      "dedup_filings": 62,
+      "economic_ticker_issuers": 38
+    }
+  },
+  "decision": "source_infeasible",
+  "five_factor_assessment": {
+    "note": "Qualitative, source-grounded assessment. No numeric efficacy score is produced or implied.",
+    "evidence_novelty": {
+      "verdict": "source-novel; economically incremental at most",
+      "basis": "The Massive credit_facility tag has not been counted in the prior experiments cited here; the earnings benchmark covers Item 2.02 only. The underlying action is a routine, widely anticipated financing event, so any novelty is in the source screen, not in a newly discovered economic fact."
+    },
+    "economic_mechanism": {
+      "verdict": "weak-or-absent for the canonical TOP_100",
+      "basis": "A renewed or extended revolver can lower near-term liquidity risk, but the tag alone resolves none of the listed counterarguments: unused commitment does not remove business risk, draws differ from renewals, and mega-cap funding is rarely constrained. Direction and sign are unproven."
+    },
+    "data_feasibility": {
+      "verdict": "retrieval feasible; clean-cohort feasibility UNKNOWN",
+      "basis": "One endpoint returned 6,983 tagged rows; 62 de-duplicated 8-Ks fall in the canonical TOP_100 across 38 ticker issuers. Whether those filings disclose an eligible renewal or extension with explicit size and maturity is not measured here and remains UNKNOWN."
+    },
+    "cost_robustness": {
+      "verdict": "untestable at this stage",
+      "basis": "No option price was read. Any eventual expression (for example a 5% OTM cash-secured put) would face the same modeled per-side premium haircut and funding drag used elsewhere; a small liquidity-risk effect would be cost-sensitive. No break-even estimate is possible without prices."
+    },
+    "track_fit": {
+      "verdict": "expressible; evidence direction unsupported",
+      "basis": "The long-or-neutral strategy library can express a downside-support view (cash-secured put, protective put), so the category is not sign-blocked like equity issuance. But the challenge rewards a well-argued null, and the stated mechanism is more likely a coverage-and-fragility study than a positive edge. This is not a prediction of sign."
+    }
+  },
+  "critical_counterarguments": [
+    "TOP-100 funding is rarely constrained: the canonical universe is mega-cap, so a credit-facility event is unlikely to change fundamental downside risk.",
+    "An unused commitment does not remove business risk: revolver availability says little about operating, demand, or litigation risk.",
+    "Draws differ from renewals: borrowing under an existing facility is a different disclosure and economic event from renewing or extending the facility.",
+    "The market anticipates routine refinancing: revolver renewals and amendments are often scheduled and priced in ahead of the 8-K.",
+    "Any put edge could be stock drift, not premium: a positive cash-secured-put result may reflect underlying returns rather than a mispriced option premium.",
+    "A discrete maturity-extension amount is not cash available: an extended maturity or headline commitment is not liquid capital the firm can deploy."
+  ],
+  "method": "Retrieve exactly one Massive endpoint (/stocks/filings/8-K/vX/disclosures) for tertiary_category=credit_facility over 2024-01-01..2025-12-31 with complete next_url pagination, host/endpoint/date/category validation, and an immutable HTTP cache under credit_facility_feasibility/http. Read the taxonomy only from the cached Massive response; make no taxonomy request and no second-category request. De-duplicate one 8-K per accession_number, normalize tickers (BRK/B -> BRK.B), and collapse CIK aliases to one ticker for issuer counts; report year, issuer and concentration counts. Build no text classifier, no scoring and no regex eligibility rule; the clean eligible-renewal count is UNKNOWN.",
+  "pitfalls": [
+    "The clean eligible-renewal cohort is UNKNOWN. This audit does not classify text and therefore cannot separate a new agreement, an amendment, a renewal/extension, a covenant-only amendment, or an earnings-bundled disclosure.",
+    "The tag description explicitly includes amendments modifying capacity, rates, covenants, or maturity, so the raw population is broader than renewal/extension events.",
+    "The canonical TOP_100 is a static September-2026 list, so it carries survivorship and large-cap selection bias and understates funding-constrained issuers.",
+    "A filing tagged with several in-universe tickers is de-duplicated to one 8-K; issuer counts expand matched tickers, so filing and issuer counts are not the same denominator.",
+    "The source gate is a raw sparsity safeguard. Passing it does not establish a clean cohort, a mechanism, a direction, or an effect, and it does not authorize a trade.",
+    "CIK aliases are collapsed to one ticker for issuer counts; the CIK-by-ticker map is retained so aliasing is visible rather than silently hidden.",
+    "The prior earnings benchmark is context only. Its 0.5% net-per-five-session threshold and 60/20 coverage floor are that protocol's design gates, not a proven universal track rule, and its null concerns post-earnings premium harvesting, not liquidity insurance."
+  ],
+  "recommended_next_step": null,
+  "boundaries": {
+    "source_only": true,
+    "economic_outcomes_read": false,
+    "market_data_requests": 0,
+    "jev_requests": 0,
+    "model_or_scoring": false,
+    "text_classification": false,
+    "options_data_read": false,
+    "second_category_requested": false,
+    "taxonomy_http_requested": false,
+    "oos_opened": false,
+    "judges_opened": false,
+    "trade_hypothesis_frozen": false,
+    "commit_made": false,
+    "efficacy_scores": null
+  }
+}

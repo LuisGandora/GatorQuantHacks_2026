@@ -9,13 +9,155 @@ __pycache__/
 runs/audit/
 runs/*.csv
 .omo/
-.hypothesis_deps/
-covered_call_results/*_matched_outcomes.json
-!covered_call_results/*_baseline_matched_outcomes.json
-covered_call_results/all_horizons_sensitivity.csv
-financing_results/*_matched_outcomes.json
-!financing_results/*_baseline_matched_outcomes.json
-financing_results/*_sensitivity.csv
-financing_results/*_execution.log
-four_hypothesis_results/*execution.log
-four_hypothesis_results/core_text_evidence_audit.csv
+
+# Local credentials, API exports, and machine state
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+.massive_cache*/
+.polygon_cache*/
+data/raw/
+exports/
+runs/**/*.csv
+runs/**/*.log
+
+# Local agent command configuration
+.opencode/
+
+# Local QA/notebook execution products and agent state
+.codex/
+.agents/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.tmp
+*.bak
+submission_judge_outputs/
+runs/nb_check.ipynb
+
+# Local experiment caches and scratch outputs
+.*_cache*/
+adverse_current_intact_forward.py
+adverse_current_intact_forward_results/
+adverse_intact_label_audit/
+adverse_intact_results/
+contained_shock_audit/
+contained_shock_results/
+credit_facility_feasibility/
+credit_terms_pilot/
+departure_results/
+departure_results_initial_selection/
+dividend_source/
+earnings_payoff_results/
+equity_issuance_source/
+executive_date_validation/
+executive_runway_pilot/
+expanded_guidance_results/
+experiment_results/
+fingerprint_results/
+full_source_results/
+guidance_results/
+historical_credit_coverage/
+label_benchmark/
+novelty_results/
+repurchase_results/
+restructuring_source/
+risk_composition_results/
+settlement_source/
+stability_results/
+stability_results_api_rejected_v1/
+transaction_identity_review/
+transaction_source/
+uncertainty_resolution_expanded_results/
+uncertainty_resolution_expanded_validation/
+uncertainty_resolution_results/
+uncertainty_resolution_validation/
+
+# ---- From the experiments branch (jack-uf): private experiment inputs and caches ----
+# Your API key and raw API responses never leave your machine
+
+
+# Private filing evidence, JEV requests, and derived experiment outputs
+.jev_cache/
+.novelty_cache/
+.departure_cache/
+.stability_cache/
+.stability_cache_api_rejected_v1/
+
+.fingerprint_cache/
+
+# Original filing packages and source-backed Experiment 3B audit records
+
+# Guidance source packages, exact JEV records, and historical outcomes
+
+# Earnings-resolution numerical benchmark market panel and controls
+
+# Credit-facility liquidity-insurance source feasibility cache (vendor responses)
+
+# Standalone share-repurchase source audit: private original SEC packages, parsed
+# text and HTTP cache. Only aggregate public reports are committed.
+.repurchase_cache/
+
+# Standalone settlement source census: private HTTP cache and frozen inputs.
+# Only the aggregate public reports (SETTLEMENT_SOURCE.md/json) are repository-visible.
+
+# Standalone restructuring-plan source availability census: private HTTP cache and
+# frozen inputs. Only the aggregate public reports (RESTRUCTURING_SOURCE.md/json)
+# and the protocol are repository-visible.
+
+# Private frozen input manifest for the transaction identity review. Only the public
+# aggregate reports (TRANSACTION_IDENTITY_REVIEW.md/json) are committed.
+
+# Private frozen inputs and raw date extraction for the executive-runway
+# date-candidate pilot. Only the aggregate public reports
+# (EXECUTIVE_RUNWAY_PILOT.md/json) and the protocol are repository-visible.
+
+# Private model-assisted reference, raw TypeSafe JEV requests/responses and derived
+# outputs for the executive effective-date span-selection validation. Only the
+# aggregate public reports (EXECUTIVE_DATE_VALIDATION.md/json) and the protocol are
+# repository-visible.
+
+# Private Experiment 7 contained-shock source passages, raw TypeSafe JEV
+# requests/responses and frozen semantic outputs. Only the aggregate public reports
+# (CONTAINED_SHOCK_EVIDENCE_AUDIT.md, CONTAINED_SHOCK_SUMMARY.json) and the protocol
+# are repository-visible.
+.contained_shock_cache/
+
+# Private bounded blinded diagnostic packet, deterministic subset, reviewer
+# instructions and verdicts for the Experiment 7 contained-shock audit. Only the
+# root-level runner contained_shock_audit.py is repository-visible.
+
+# Private Experiment 8 adverse-current / intact-forward source passages, raw TypeSafe
+# JEV requests/responses and frozen semantic outputs. Only the aggregate public reports
+# (ADVERSE_INTACT_EVIDENCE_AUDIT.md, ADVERSE_INTACT_SUMMARY.json) and the protocol are
+# repository-visible.
+.adverse_intact_cache/
+
+# Private bounded blinded label-verification packet, deterministic subset, reviewer
+# instructions and verdicts for the Experiment 8 guidance-direction audit. Only the
+# root-level runner adverse_intact_label_audit.py is repository-visible.
+
+# Private Experiment 9 uncertainty-resolution before/after source passages, raw
+# TypeSafe JEV requests/responses and frozen semantic outputs. Only the aggregate
+# public reports (UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md,
+# UNCERTAINTY_RESOLUTION_SUMMARY.json) and the protocol are repository-visible.
+.uncertainty_resolution_cache/
+
+# Private Experiment 9 blinded governance-state validation packet, deterministic
+# subset provenance, reviewer instructions and verdicts. Only the root-level runner
+# uncertainty_resolution_validation.py is repository-visible.
+
+# Private Experiment 9B expanded leadership-transition source packages, raw
+# TypeSafe JEV requests/responses and frozen semantic outputs. Only the aggregate
+# public reports (UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md,
+# UNCERTAINTY_RESOLUTION_EXPANDED_SUMMARY.json), the protocol and the taxonomy
+# decision table are repository-visible.
+.uncertainty_resolution_expanded_cache/
+
+# Private Experiment 9B blinded governance-state validation packet, deterministic
+# subset provenance, reviewer instructions and verdicts. Only the root-level runner
+# uncertainty_resolution_expanded_validation.py is repository-visible.

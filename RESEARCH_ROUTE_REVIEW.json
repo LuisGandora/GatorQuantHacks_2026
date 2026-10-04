@@ -1,0 +1,428 @@
+{
+  "document": "RESEARCH_ROUTE_REVIEW",
+  "kind": "bounded independent research-route review; source-only; advisory; corrected revision",
+  "version": 2,
+  "authority": "advisory input to GPT, who owns the direction decision; freezes nothing",
+  "author": "opencode-go/deepseek-v4.1-flash",
+  "authorship_note": "Orchestrator record from the actual model invocation; not a user-supplied authorship provenance statement.",
+  "boundaries_observed": {
+    "read_only_public_files": true,
+    "opened_raw_payoff_rows": false,
+    "opened_comparison_grid_cells": false,
+    "opened_outcomes_sqlite": false,
+    "read_2026_data": false,
+    "read_reserved_2023_jun_aug": false,
+    "read_novelty_results_source_filings_json": false,
+    "network_requests": 0,
+    "model_or_api_calls": 0,
+    "implementation_or_financial_run": false,
+    "files_created": [
+      "RESEARCH_ROUTE_REVIEW.md",
+      "RESEARCH_ROUTE_REVIEW.json"
+    ],
+    "files_edited_other_than_created": []
+  },
+  "floor_policy": {
+    "internal_80_20_treated_as_organizer_law": false,
+    "internal_0_005_treated_as_organizer_law": false,
+    "note": "Both are Experiment 6 team design choices. A new protocol declares and justifies its own floor by a power argument."
+  },
+  "pilot_provenance_review": {
+    "public_outputs": [
+      "CREDIT_TERMS_PILOT.md",
+      "CREDIT_TERMS_PILOT.json",
+      "CREDIT_TERMS_PILOT_PROTOCOL.md",
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "CREDIT_TERMS_PILOT_REVIEW.json",
+      "CREDIT_TERMS_PILOT_CORRECTIONS.md",
+      "CREDIT_TERMS_PILOT_CORRECTIONS.json",
+      "credit_terms_pilot/metrics.json",
+      "credit_terms_pilot/protocol.json",
+      "credit_terms_pilot/selection.json",
+      "credit_terms_pilot/preservation.json",
+      "credit_terms_pilot/source_evidence.json"
+    ],
+    "separate_independent_pilot_report_exists": true,
+    "pilot_status": "independently audited; two protocol deviations closed; corrected snapshot (phase 2 final bounded cleanup) regenerated under the unchanged frozen protocol/selection; this review is against the as-reviewed corrected snapshot, and no commit has occurred",
+    "independent_audit": {
+      "files": ["CREDIT_TERMS_PILOT_REVIEW.md", "CREDIT_TERMS_PILOT_REVIEW.json"],
+      "auditor": "opencode-go/deepseek-v4.1-flash",
+      "human_validation": false,
+      "deviations_closed": [
+        "DEV-1: two AMD raw dollar amounts nulled under the frozen scaling-word rule; raw figures retained only as off-protocol provenance",
+        "DEV-2: two CAT 2024 local-currency addendum sub-limits added, parallel to the CAT 2022 rows"
+      ]
+    },
+    "corrections_record": ["CREDIT_TERMS_PILOT_CORRECTIONS.md", "CREDIT_TERMS_PILOT_CORRECTIONS.json"],
+    "audited_paired_yield": {"paired_maturity_filings": 1, "paired_capacity_filings": 0, "lacking_verifiable_paired_maturity_change_filings": 11},
+    "observed_statistics": {
+      "filings": 12,
+      "paired_maturity_filings": 1,
+      "paired_capacity_filings": 0,
+      "paired_both_filings": 0,
+      "unknown_maturity_filings": 11,
+      "unknown_capacity_filings": 12,
+      "literal_item_2_02_filings": 0,
+      "only_verified_pair": "PM 2024-01-24, one facility extended 2024-01-30 to 2025-01-28 (364 days)"
+    },
+    "flags": {
+      "is_measurement_feasibility_pilot": true,
+      "is_population_prevalence_estimate": false,
+      "is_economic_result": false,
+      "economic_outcomes_read": false,
+      "market_data_requests": 0,
+      "jev_or_model_calls": 0,
+      "trade_hypothesis_frozen": false
+    },
+    "conclusions": [
+      "The corrected public pilot files now name the annotation author (opencode-go/deepseek-v4.1-flash) and state that the annotations are not human-authored and no human validation is claimed.",
+      "The 'no model call' string describes no additional runtime inference, not authorship of the numerical annotations; the corrected pilot discloses that clause as a limitation/ambiguity rather than claiming every interpretation was met.",
+      "The corrected public pilot files name the annotation author (opencode-go/deepseek-v4.1-flash) as an orchestrator/model record of the actual invocation; it is not independent human validation.",
+      "Quote/offset checks validate span existence, not semantic attribution or pairing correctness.",
+      "1/12 and 0/12 are fixed-set measurement results, not prevalence; missing is unknown, never zero; no extrapolation to the 147-filing population is licensed."
+    ]
+  },
+  "evidence_base": {
+    "market_outcome_programs": [
+      {
+        "name": "Departure Experiment 2 (continuous semantic stability)",
+        "outcomes_opened": true,
+        "summary": "Exp 2 evaluated in-sample semantic intensity/stability vs realized-to-implied absolute movement",
+        "decision": "no_candidate"
+      },
+      {
+        "name": "Experiment 3B full-source recovery",
+        "outcomes_opened": true,
+        "note": "Recorded in the repository prior-exposure ledger as part of the departure line that opened 2024-2025 market outcomes; the public FULL_SOURCE_EXPERIMENT code retains the gated outcome-join path. The unchanged semantic gate failed, so no economic test was authorized. The original Experiment 3 fingerprint source gate opened no market outcomes.",
+        "decision": "no_candidate"
+      },
+      {
+        "name": "Experiment 6 earnings payoff",
+        "outcomes_opened": true,
+        "primary": {
+          "strategy": "cash_secured_put",
+          "horizon": 5,
+          "bucket": "3-6m",
+          "otm": 0.05,
+          "matched_events": 54,
+          "clusters": 17,
+          "net_paired_edge": 0.000881,
+          "gross_paired_edge": 0.000934,
+          "net_interval": null,
+          "horizon_10": -0.000005,
+          "year_2025": -0.000115,
+          "scaled_movement_event": 0.9147,
+          "scaled_movement_control": 0.7566,
+          "scaled_movement_diff": 0.1582,
+          "ratio_full_event": 0.2215,
+          "ratio_full_control": 0.1887
+        },
+        "sensitivity_rows_with_valid_intervals": [
+          {"row": "bucket_2m", "events": 62, "companies": 20, "contains_zero": true},
+          {"row": "max_stale_3", "events": 69, "companies": 21, "contains_zero": true}
+        ],
+        "decision": "no_supported_numerical_candidate"
+      }
+    ],
+    "source_or_semantic_only_programs": [
+      {"name": "Guidance 4", "decision": "source_infeasible"},
+      {"name": "Expanded guidance 4B", "decision": "semantic_infeasible"},
+      {"name": "Risk composition 5A", "decision": "measurement_not_validated"},
+      {"name": "Information novelty", "decision": "sample_gate_failed"},
+      {"name": "Repurchase", "decision": "source_infeasible", "provisional_count": "12/10"},
+      {"name": "Credit coverage", "decision": "source_feasible", "counts": "147/54", "clean_cohort": "UNKNOWN"},
+      {"name": "Credit-terms pilot", "decision": "measurement_feasibility_pilot", "provisional": false, "as_reviewed_snapshot": true, "audited": true, "deviations_closed": ["DEV-1", "DEV-2"], "corrections_record": "CREDIT_TERMS_PILOT_CORRECTIONS.md"}
+    ],
+    "constraints": {
+      "configured_in_sample_window": "2024-01-01..2025-12-31",
+      "authorized_financial_window": "2024-01-01..2025-12-31",
+      "configured_window_interpretation": "The notebook explicitly instructs that options history on contestant keys covers the in-sample and out-of-sample windows in section 2 and says 'do not move them earlier'. This is an explicit organizer/contestant financial restriction: the authorized financial window is fixed at 2024-2025 and earlier marks are outside the authorized contestant financial study irrespective of whether the provider could serve them.",
+      "notebook_source_text": [
+        "STUDY_START, STUDY_END = \"2024-01-01\", \"2025-12-31\"  # in-sample (plan has ~2 years of options history)",
+        "Filings & Disclosures begins January 2022 and is marked experimental",
+        "coverage from January 2022",
+        "Options history on contestant keys covers the in-sample and out-of-sample windows in section 2; do not move them earlier"
+      ],
+      "provider_declared_8k_availability_start": "2022-01",
+      "historical_credit_blocks": ["2022-01-01..2023-05-31", "2023-09-01..2023-12-31"],
+      "earlier_marks_validated_usable": false,
+      "provider_earliest_usable_marks": "UNKNOWN; no provider options horizon is declared here",
+      "earlier_marks_authorized_for_financial_study": false,
+      "january_2022_meaning": "Filings & Disclosures availability only, not permission to extend the financial study",
+      "categorical_2022_2023_provider_unpriceable_claim": false,
+      "strategy_library_raw": ["stock", "long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+      "strategy_library_five_structures": ["long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+      "stock_row_role": "same-source synthetic stock benchmark, not a sixth trade",
+      "standalone_long_put": false,
+      "pure_short_volatility_structure": false,
+      "marks": "last-trade closes, no NBBO",
+      "costs": "modeled scenarios, not measured fills",
+      "negative_direction_expressible_via": ["protective_put", "collar"]
+    }
+  },
+  "prior_exposure_ledger": {
+    "outcomes_opened": [
+      "Departure Experiment 2 continuous stability (2024-2025)",
+      "Experiment 3B full-source recovery (2024-2025)",
+      "Experiment 6 earnings payoff (2024-2025)"
+    ],
+    "not_opened_by_original_fingerprint_source_gate": [
+      "Experiment 3 short-excerpt fingerprint gate",
+      "Experiment 1 executive-departure semantic audit"
+    ],
+    "outcomes_never_opened": [
+      "guidance",
+      "expanded guidance",
+      "information novelty",
+      "risk composition",
+      "repurchase",
+      "credit coverage",
+      "credit-terms pilot"
+    ],
+    "reserved_window_exposure": {
+      "file": "novelty_results/source_filings.json",
+      "records_total": 1093,
+      "records_in_reserved_2023_06_01_2023_08_31": 74,
+      "data_kind_read": "cached filing metadata only (cik, ticker, accession, filing_date, items_text)",
+      "reserved_financial_or_option_data_read": false,
+      "pristine_holdout_restorable": false,
+      "judges_window_unknown": true,
+      "2026_window_opened": false,
+      "treatment": "recorded, repeated, not softened; file excluded from identity corpus"
+    },
+    "source_lower_bounds_not_census": {
+      "repurchase_direct_accessions": 36,
+      "repurchase_identity_unresolved": 57,
+      "repurchase_identity_only_upper_bound": 93,
+      "credit_direct_accessions": 62,
+      "credit_identity_unresolved": 1096,
+      "credit_identity_only_upper_bound": 1158,
+      "historical_credit_accessions": 147,
+      "historical_credit_identity_residual_approx": "1923-2026"
+    }
+  },
+  "failure_taxonomy": {
+    "source_failure_nothing_financial_tested": [
+      "guidance 4",
+      "repurchase",
+      "credit clean cohort",
+      "credit-terms pilot"
+    ],
+    "semantic_or_measurement_failure_nothing_financial_tested": [
+      "expanded guidance 4B",
+      "fingerprint 3",
+      "risk composition 5A",
+      "information novelty"
+    ],
+    "underpowered_financial_run_tested_not_estimable": [
+      "Experiment 6 earnings payoff"
+    ],
+    "tested_in_sample_association_no_candidate": [
+      "Experiment 2 stability"
+    ],
+    "key_finding": "No qualified positive candidate exists. The primary earnings interval is unavailable; the two fixed sensitivity cells carry estimable intervals that both contain zero; the remaining economic stops are source/semantic failures or an underpowered run. No repository-wide clean-null claim is made without independent review of every published interval."
+  },
+  "grading_scale": {
+    "1": "weakest",
+    "5": "strongest",
+    "note": "Higher novelty is not automatically better; unsupported novelty scores low."
+  },
+  "routes": [
+    {
+      "id": "route_1_credit_maturity",
+      "name": "Credit-facility paired maturity extension, relative downside",
+      "basis": "numerical source field",
+      "mechanism": "Refinancing-runway / liquidity insurance; a maturity extension pushes out the rollover calendar. Relative downside expressible via protective put or collar; not rejected for negative direction.",
+      "classifier_required": false,
+      "endpoint": "count of explicit paired maturity changes in a bounded subsample, then conditional paired event-minus-ordinary payoff",
+      "grades": {
+        "novelty": 2,
+        "economic_mechanism": 3,
+        "feasible_source_and_market_data": 2,
+        "robustness_to_uncertainty_and_costs": 2,
+        "massive_fit": 3,
+        "total": 12
+      },
+      "steelman": "Refinancing-runway risk is a genuine downside channel even for an undrawn facility; the pilot shows measurement is exactly verifiable and cleanly separates verified change from unknown; a bounded amendment-exhibit screen would convert UNKNOWN clean renewals into a measured count and is a legitimate classifier-free contribution even if the economic result is null.",
+      "strongest_failure_case": "Disclosure structure rarely recites both dates, so the screen may again find almost no pairs (a source failure, not a mechanism test); the audited pilot yield is already low (1/12 maturity, 0/12 capacity). Even if pairs are found, mega-cap issuers are rarely funding-constrained and an undrawn revolver does not remove operating risk, so the usable economic sample may be below any defensible floor. The 2022-2023 block is outside the authorized contestant financial study ('do not move them earlier'), independent of any provider availability question.",
+      "failure_class_if_null": "source_or_measurement",
+      "evidence_support": ["CREDIT_TERMS_PILOT.md", "CREDIT_TERMS_PILOT_CORRECTIONS.md", "HISTORICAL_CREDIT_COVERAGE.md", "CREDIT_FACILITY_FEASIBILITY.md"],
+      "unknowns": ["true paired-maturity rate in the 147", "authorized 2024-2025 marked subset"]
+    },
+    {
+      "id": "route_2_calibration_hedging",
+      "name": "Option-implied uncertainty calibration / hedging utility",
+      "basis": "market-derived numerical endpoint using existing fields; cohort defined by a single taxonomy tag",
+      "mechanism": "Options are event insurance; test whether event option-implied uncertainty is miscalibrated relative to matched ordinary days and whether that is capturable as hedging utility rather than greatest mean P&L.",
+      "classifier_required": false,
+      "endpoint": "paired event-minus-ordinary mean net value of a predeclared 5% OTM protective-put hedge leg at one horizon/bucket, valued by mark-to-market",
+      "hedge_leg_definition": {
+        "method": "canonical mark-to-market, not expiration intrinsic",
+        "formula": "H_i = protective_put_i - stock_i = (P_L_exit - P_L_entry) / S_entry, plus frozen modeled commission, funding and premium haircut",
+        "intrinsic_formula_rejected": "max(K_i - S_i,h, 0) - P_i",
+        "intrinsic_valid_only_at": "expiration; used only for the reported exp horizon",
+        "not_a_standalone_long_put_trade": true
+      },
+      "calibration_secondary": {
+        "formula": "|realized| - implied_move * sqrt(h/DTE)",
+        "label": "assumption-dependent straddle-sqrt-time proxy",
+        "guaranteed_unbiased": false,
+        "is_true_annualized_iv": false,
+        "is_model_free_iv": false
+      },
+      "grades": {
+        "novelty": 3,
+        "economic_mechanism": 4,
+        "feasible_source_and_market_data": 4,
+        "robustness_to_uncertainty_and_costs": 3,
+        "massive_fit": 4,
+        "total": 18
+      },
+      "steelman": "The repository already computed implied and realized movement for every event and control; reframing the endpoint from greatest mean P&L to whether event insurance is mispriced makes the failed movement gate informative, uses no new classifier or feed, and yields a rubric-competitive result whether the sign is positive or negative; relative downside value remains expressible via a protective put or collar.",
+      "strongest_failure_case": "At horizon 5 events moved more than ordinary days on an absolute basis, so event insurance was not obviously overpriced; the implied move is a crude straddle proxy, not model-free IV, and inherits documented entry-timing, contamination, BLK-cluster and strict-mark defects; a +0.158 difference in a 54-event cell with no interval is a hypothesis, not a result; reusing the earnings cohort is exposed exploration and a fresh tag cohort may be too small.",
+      "failure_class_if_null": "financial (interval contains zero = mispricing result) versus source (too small to price = source failure); reported separately",
+      "evidence_support": ["EARNINGS_PAYOFF_RESULTS.md", "EARNINGS_PAYOFF_REVIEW.md", "STABILITY_EXPERIMENT_RESULTS.md", "gator-quant-hacks-8k-options-challenge.ipynb"],
+      "unknowns": ["calibration sign stability", "power of a 62-filing tag cohort after strict marks", "whether hedge-leg value differs from zero"]
+    },
+    {
+      "id": "route_3_equity_issuance",
+      "name": "Equity-issuance / dilution tag, relative downside",
+      "basis": "source tag (public_offering, private_placement, pipe_transaction)",
+      "mechanism": "Dilution plus adverse-selection drift predicts negative short-horizon drift; relative downside expressible via protective put or collar. Blanket sign rejection does not apply.",
+      "classifier_required": false,
+      "endpoint": "paired event-minus-ordinary payoff for a predeclared relative-downside structure",
+      "authorized_window_note": "Authorized financial window is 2024-2025 ('do not move them earlier'); earlier marks are outside the authorized contestant financial study, not merely unvalidated.",
+      "grades": {
+        "novelty": 3,
+        "economic_mechanism": 3,
+        "feasible_source_and_market_data": 2,
+        "robustness_to_uncertainty_and_costs": 2,
+        "massive_fit": 3,
+        "total": 13
+      },
+      "steelman": "A negative-sign mechanism is an unexploited corner of a long-or-neutral library and the correction recorded in section 2 preserves protective-put and collar value; dilution and adverse selection are clean, well-motivated economics, and the tag is numerical and classifier-free.",
+      "strongest_failure_case": "The tag counts are unverified keyword proxies (219 hits / 62 issuers) and may be dominated by shelf registrations rather than actual issuance; SEO drift is among the most studied effects and is likely priced; a small drift is easily eaten by option premium and spreads in the mega-cap universe.",
+      "failure_class_if_null": "source (unverified or small cohort) versus financial null (interval contains zero); reported separately",
+      "evidence_support": ["RESEARCH_NEXT_DIRECTION.md"],
+      "unknowns": ["true tag counts", "eligible issuance share", "effect size at mega-caps"]
+    }
+  ],
+  "cross_route_ranking": [
+    {"rank": 1, "route": "route_2_calibration_hedging", "total": 18},
+    {"rank": 2, "route": "route_3_equity_issuance", "total": 13},
+    {"rank": 3, "route": "route_1_credit_maturity", "total": 12}
+  ],
+  "route_scores_advisory": true,
+  "route_scores_note": "Advisory input to GPT's direction decision; freezes nothing. Does not override the audited low paired yield or the absence of a qualified positive candidate.",
+  "recommended_next_step": {
+    "kind": "advisory; freezable before new prices; not executed",
+    "selection": "Option-implied uncertainty calibration / hedging-utility experiment on a single classifier-free source tag; credit_facility is the leading cohort candidate",
+    "why": [
+      "credit_facility cleared a raw source gate (147/54 historical) but its economic outcome is UNKNOWN, so an economic read is fresh on the outcome side",
+      "membership is a taxonomy tag, so no new classifier or semantic score is introduced; new/amendment/earnings-bundled mixture is a declared scope limitation",
+      "the authorized 2024-2025 financial direct cohort is approximately 62 filings / 38 issuers; this is an explicit contestant window restriction ('do not move them earlier') and the binding risk, and must be checked by a frozen power argument",
+      "the endpoint reuses already-computable implied and realized movement fields and introduces no speculative extra feed"
+    ],
+    "primary_question": "For 8-K events carrying the predeclared tag in the canonical TOP_100 during the authorized 2024-2025 financial window, is option-implied event uncertainty miscalibrated relative to matched same-issuer ordinary days, and is that miscalibration a hedging-utility edge rather than a directional mean-P&L edge?",
+    "primary_endpoint": {
+      "name": "paired event-minus-ordinary mean net value of a predeclared 5% OTM protective-put hedge leg",
+      "formula": "H_i = protective_put_i - stock_i = (P_L_exit - P_L_entry) / S_entry, plus frozen modeled commission, funding and premium haircut",
+      "valuation": "mark-to-market from entry mark to exit mark on the same source; the expiration intrinsic max(K - S_exit, 0) - P_entry is not used because the option is held 5 sessions with a 3-6 month expiry and intrinsic is valid only at expiration",
+      "inference": "company-cluster bootstrap interval on mean(H_event - H_ordinary)",
+      "sidedness": "two-sided; no direction asserted as guaranteed",
+      "secondary_consistency_check": "calibration residual |realized| - implied_move*sqrt(h/DTE) must agree in sign; disagreement reported as inconsistent; the residual is an assumption-dependent straddle-sqrt-time proxy, not a guaranteed-unbiased estimator or true annualized IV"
+    },
+    "matched_ordinary_day_baseline": "same issuer, same calendar year, predeclared gap from any same-tag event, up to three controls per event, hash-ordered and frozen before pricing",
+    "all_five_payoff_reports": {
+      "structures": ["long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+      "stock_benchmark": "same-source synthetic stock row is the reference, not a sixth trade",
+      "horizons": [1, 2, 3, 5, 10, 21, 42, 63, "exp"],
+      "reported_event_and_ordinary": true,
+      "reported_gross_and_net": true,
+      "best_cell_selection": false,
+      "standalone_long_put_trade_proposed": false
+    },
+    "uncertainty_and_multiplicity": {
+      "primary": "one predeclared comparison",
+      "bootstrap": "company-cluster, 1000 draws, fixed seed, minimum finite-draw fraction 0.80",
+      "descriptive_family": "5 structures x 9 horizons declared as a family with a predeclared family-wise treatment (max-statistic or Bonferroni)",
+      "concentration_reported": true
+    },
+    "costs": {
+      "model": "fixed commission, funding, premium haircut",
+      "haircut_scenarios": [0.0, 0.05, 0.10],
+      "break_even_reported": true,
+      "nbbo": false,
+      "unmodeled": ["exercise", "assignment", "dividends", "short-option margin"]
+    },
+    "timing": {
+      "entry": "uniform post-news entry; never before the filing",
+      "acceptance_check": "SEC acceptance timestamp required",
+      "pre_open_vs_post_close_acceptance_handled_explicitly": true,
+      "entry_delays": [0, 1],
+      "pre_news_jump_used": false
+    },
+    "sealed_pricing_date_guards": {
+      "window": "2024-01-01..2025-12-31",
+      "window_note": "authorized contestant financial window ('do not move them earlier'); earlier marks are outside the authorized financial study regardless of possible provider availability",
+      "2026_data": false,
+      "out_of_sample_window": false,
+      "judges_window": false,
+      "reserved_2023_06_01_2023_08_31": false,
+      "freeze_hashes_before_new_price_read": true,
+      "cached_prices_for_cohort_opened_only_after_freeze": true,
+      "missing_marks_replaced_with_zero": false,
+      "implementation_change_requires_new_named_version": true
+    },
+    "stop_rule": "If the frozen source/power gate shows the proposed cohort cannot support inference, report a descriptive calibration and stop; do not widen the window, relax marks, add tags, or touch 2026 or the judges window."
+  },
+  "supported_by_existing_evidence": [
+    "credit tag has a real raw population and an UNKNOWN economic outcome",
+    "implied and realized movement already exist for the earnings cohort; h5 ratio_scaled diff +0.1582 and ratio_full 0.2215 vs 0.1887, with unavailable interval",
+    "no standalone long put; relative downside value expressible only via a protective put or collar",
+    "no qualified positive candidate; primary earnings interval unavailable; two fixed sensitivity cells carry estimable intervals that both contain zero; no repository-wide clean-null claim without independent review of every published interval"
+  ],
+  "remains_unknown": [
+    "power of the tag cohort after strict marks",
+    "provider earliest usable option marks (UNKNOWN; no provider horizon declared here), distinct from the financial-study scope: the authorized financial window is fixed at 2024-2025 ('do not move them earlier'), so earlier marks are outside the authorized contestant financial study irrespective of provider availability",
+    "calibration sign stability",
+    "hedge-leg value sign",
+    "whether 1/12 maturity and 0/12 capacity reflect rarity or disclosure structure",
+    "identity-unresolved residuals and the authorized 2024-2025 marked subset",
+    "the judge-selected reserved window and whether the cached-metadata read is clean"
+  ],
+  "ambiguities_recorded_not_resolved": [
+    "Authorship vs runtime: 'no model call' plausibly means no additional runtime inference, not that the annotations were not model-authored. The corrected public pilot files name the annotation author (opencode-go/deepseek-v4.1-flash) and disclose this clause as a limitation/ambiguity. That named record is an orchestrator/model record of the actual invocation, not independent human validation. Frozen protocol not edited.",
+    "Quote existence vs semantic attribution: verify proves spans exist, not pairing correctness; whether PM is the only true pair is unknown.",
+    "Pilot completeness and audit: the pilot is independently audited and its two deviations are closed in CREDIT_TERMS_PILOT_CORRECTIONS.md/json. This review and the corrected pilot are recorded against as-reviewed snapshots with hashes; no commit has occurred, so no committed-status claim is made. The 1/12 and 0/12 figures are audited on the frozen as-reviewed snapshot.",
+    "Floor portability: 80/20 and 0.005 are internal choices, not organizer laws; any new floor is a new declared decision.",
+    "Endpoint legitimacy: whether a calibration/hedging scalar counts as a payoff under the rubric is an untested reading and must be labeled plainly.",
+    "Tag taxonomy drift: taxonomy is versioned and experimental; membership was read from cache."
+  ],
+  "bounded_recommendation": [
+    "Do not start a positive-edge hunt; the well-argued post-earnings null is already the rubric-competitive deliverable.",
+    "If one more route is authorized, choose Route 2 on a single classifier-free tag (credit_facility recommended), frozen before any new price, with the single hedge-leg endpoint and all five structures descriptive.",
+    "Keep Routes 1 and 3 as documented alternatives, not parallel starts; do not reject Route 3 for its negative direction.",
+    "If the frozen source/power gate fails, report descriptively and stop; do not relax.",
+    "Route scores are advisory; the independently audited credit pilot has a low paired yield (1/12 maturity, 0/12 capacity), the corrected pilot no longer recommends annotating all 147, and the authorized 2024-2025 financial cohort is only ~62 filings. There is no qualified positive candidate.",
+    "No guaranteed positive result is claimed; any route may end as a source failure, an underpowered run, or a measured calibration with or without an edge."
+  ],
+  "revision_and_validation": {
+    "purpose": "correct the advisory review before commit; corrections affect feasibility and interpretation, not positive proof",
+    "corrections": [
+      "options availability and financial-study scope: distinguished UNKNOWN provider earliest marks from the EXPLICIT organizer/contestant financial restriction (notebook: options history on contestant keys covers the in-sample and out-of-sample windows in section 2; do not move them earlier); authorized financial window fixed at 2024-2025 and earlier marks outside the authorized contestant financial study regardless of provider availability; January 2022 is filings/disclosures availability only, not permission to extend the financial study; removed every may-priceable and window-choice implication",
+      "hedge-leg definition: replaced expiration intrinsic with canonical mark-to-market protective_put minus same-source stock benchmark; intrinsic valid only at expiration and used only for the exp horizon; reported five canonical structures; no standalone long-put trade; calibration secondary labeled assumption-dependent straddle-sqrt-time proxy, not guaranteed unbiased or true annualized IV",
+      "null and exposure: removed sweeping no clean estimable financial null claim; no qualified positive candidate; primary earnings interval unavailable; fixed sensitivities have estimable CIs containing zero; Experiment 3B full-source recovery recorded in the opened-outcome set while the original fingerprint source gate did not; 'no model call' corrected to no additional runtime inference and disclosed as a limitation/ambiguity; named this document author opencode-go/deepseek-v4.1-flash; orchestrator/model authorship provenance rather than user-supplied; pilot independently audited and two deviations closed in CREDIT_TERMS_PILOT_CORRECTIONS.md/json, recorded against an as-reviewed snapshot with no committed status claim; every 11/12 new-term-only claim replaced with 11/12 lacking a verifiable paired maturity change (unknown, not evidence all 11 state a new term); unused unit-less capacity metric fallback removed",
+      "pilot audited corrections and low yield: DEV-1 two AMD raw dollar amounts nulled under the frozen scaling-word rule with off-protocol provenance; DEV-2 CAT 2024 local-currency addendum sub-limits added with the analogous CAT 2022 borrowing-currency clarification; fail-fast scaling-word validator added; audited paired yield stays 1/12 maturity and 0/12 capacity; the corrected pilot removes the recommendation to annotate all 147 because the authorized 2024-2025 financial cohort is only ~62 filings and financial feasibility is insufficient; route scores remain advisory with no qualified positive candidate"
+    ],
+    "validation": [
+      "this route-review revision changed only RESEARCH_ROUTE_REVIEW.md and RESEARCH_ROUTE_REVIEW.json; the separate pilot corrections are recorded in CREDIT_TERMS_PILOT_CORRECTIONS.md/json and do not edit the independent audit",
+      "JSON re-parsed as valid JSON and checked consistent with the markdown",
+      "no financial read, no network request, no new classifier, no commit"
+    ]
+  },
+  "files_written": [
+    "RESEARCH_ROUTE_REVIEW.md",
+    "RESEARCH_ROUTE_REVIEW.json"
+  ]
+}

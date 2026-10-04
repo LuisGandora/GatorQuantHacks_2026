@@ -1,0 +1,14 @@
+{
+  "reference_labels_unchanged": true,
+  "reviewer_kind": "GPT-6 Luna semantic evidence review; not human gold",
+  "cases": 50,
+  "current_support": {
+    "yes": 36,
+    "uncertain": 3,
+    "no": 11
+  },
+  "prior_support": {
+    "yes": 46,
+    "no": 4
+  }
+}

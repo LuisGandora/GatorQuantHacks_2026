@@ -1,0 +1,90 @@
+{
+  "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+  "role": "Supporting research history; F1 remains final hypothesis.",
+  "priced_primary_results": [
+    {
+      "experiment": "6",
+      "source_file": "EARNINGS_PAYOFF_METRICS.json",
+      "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+      "strategy": "cash_secured_put",
+      "horizon": 5,
+      "matched_events": 54,
+      "issuer_clusters": 17,
+      "usable_controls": 135,
+      "event_net": -0.0008814971928573535,
+      "ordinary_net": -0.0017625435468962092,
+      "net_edge": 0.0008810463540388555,
+      "event_gross": 0.002724756333250981,
+      "ordinary_gross": 0.0017906951737736414,
+      "gross_edge": 0.0009340611594773398,
+      "mean_event_cost": null,
+      "ci95": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0
+      },
+      "decision": "no_supported_numerical_candidate",
+      "oos_opened": false,
+      "judges_opened": false,
+      "window": "2024-2025; in-sample only",
+      "return_unit": "fraction of parity spot; not collateral return"
+    },
+    {
+      "experiment": "9B",
+      "source_file": "UNCERTAINTY_RESOLUTION_EXPANDED_ECONOMIC_SUMMARY.json",
+      "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+      "strategy": "cash_secured_put",
+      "horizon": 21,
+      "matched_events": 7,
+      "issuer_clusters": 7,
+      "usable_controls": 20,
+      "event_net": -0.024801047694226374,
+      "ordinary_net": -0.023072693175198004,
+      "net_edge": -0.0017283545190283742,
+      "event_gross": -0.015022875119956794,
+      "ordinary_gross": -0.013416004794356748,
+      "gross_edge": -0.0016068703256000433,
+      "mean_event_cost": 0.009778172574269583,
+      "ci95": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0,
+        "reason": "below_frozen_floor"
+      },
+      "decision": "no_candidate_economic_failure",
+      "oos_opened": false,
+      "judges_opened": false,
+      "window": "2024-2025; in-sample only",
+      "return_unit": "fraction of parity spot; not collateral return"
+    },
+    {
+      "experiment": "10",
+      "source_file": "UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_SUMMARY.json",
+      "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+      "strategy": "covered_call",
+      "horizon": 21,
+      "matched_events": 6,
+      "issuer_clusters": 6,
+      "usable_controls": 17,
+      "event_net": -0.05514856302712887,
+      "ordinary_net": -0.046157161419700866,
+      "net_edge": -0.008991401607428002,
+      "event_gross": -0.02936202412458074,
+      "ordinary_gross": -0.01594317043243761,
+      "gross_edge": -0.013418853692143124,
+      "mean_event_cost": 0.025786538902548128,
+      "ci95": {
+        "low": null,
+        "high": null,
+        "valid_draws": 0,
+        "reason": "below_frozen_floor"
+      },
+      "decision": "no_candidate_economic_failure",
+      "oos_opened": false,
+      "judges_opened": false,
+      "window": "2024-2025; in-sample only",
+      "return_unit": "fraction of parity spot; not collateral return"
+    }
+  ],
+  "experiments_11_13": "User identifies these as unpriced supporting work. Numbered protocols/results 11-13 are absent from fetched remote tip; no numbering or economic result inferred."
+}

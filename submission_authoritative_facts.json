@@ -1,0 +1,1875 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-04",
+  "source_main_commit": "5871597e3ecab5e0dbbc55d80314e1939d182224",
+  "research_status": "closed; aggregate recovery only",
+  "facts": [
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "hypothesis",
+      "value": "Fresh leadership filings cause overpayment for downside protection, favoring post-filing cash-secured put sales",
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/PREREG.md; pairings.json F1-leadership-fresh",
+      "status": "CONFIRMED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "categories",
+      "value": [
+        "ceo_appointment",
+        "ceo_departure",
+        "cfo_appointment",
+        "cfo_departure",
+        "executive_officer_appointment"
+      ],
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "pairings.json F1-leadership-fresh.tags",
+      "status": "CONFIRMED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "strategy",
+      "value": {
+        "pairing": "F1-leadership-fresh",
+        "event_tags": [
+          "ceo_appointment",
+          "ceo_departure",
+          "cfo_appointment",
+          "cfo_departure",
+          "executive_officer_appointment"
+        ],
+        "freshness_proxy": "EDGAR CONFORMED PERIOD OF REPORT to after-close-shifted filing session; fresh lag <= 1 trading session",
+        "freshness_limitation": "Proxy consistency is not validation of earliest public disclosure; classification error can bias in either direction.",
+        "strategy": "cash_secured_put",
+        "entry": "post filing-session close",
+        "otm_pct": 5,
+        "expiry_bucket": "3-6m",
+        "expiry_days": [
+          90,
+          180
+        ],
+        "expiry_target_days": 120,
+        "headline_horizons": [
+          21,
+          42,
+          "expiry"
+        ],
+        "ordinary_draws_per_window": 120,
+        "cost_assumption": "5% of option premium per side; assumed, not quote-observed",
+        "portfolio_holding_sessions": 21,
+        "portfolio_capital_fraction_per_event": 0.1,
+        "pre_registered_primary_estimand": "fresh_minus_stale",
+        "reported_headline_estimand": "fresh_vs_ordinary"
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "pairings.json; original notebook configuration; runs/PREREG.md",
+      "status": "CONFIRMED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "insample",
+      "metric": "fresh_headline_difference",
+      "value": -0.011934055638365507,
+      "sample_denominator": 55,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 1,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:87; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "insample",
+      "metric": "stale_headline_difference",
+      "value": -0.0016249592619809866,
+      "sample_denominator": 95,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 0,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:88; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "insample",
+      "metric": "fresh-stale_headline_difference",
+      "value": -0.01030909637638452,
+      "sample_denominator": 55,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 0,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:89; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "oos",
+      "metric": "fresh_headline_difference",
+      "value": -0.00695474531050351,
+      "sample_denominator": 25,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 0,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:95; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "oos",
+      "metric": "stale_headline_difference",
+      "value": 0.021274986107952126,
+      "sample_denominator": 40,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 2,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:96; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "oos",
+      "metric": "fresh-stale_headline_difference",
+      "value": -0.028229731418455636,
+      "sample_denominator": 25,
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross per $1 spot; equal-weight mean of three horizon differences",
+      "uncertainty": {
+        "significant_horizons": 2,
+        "numeric_endpoints": null
+      },
+      "source_artifact": "runs/ledger.jsonl:97; submission/recovered_headline_aggregates.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.17,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.31,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.31,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.65,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.88,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.56,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -1.03,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -1.63,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -1.99,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output15; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.3,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.02,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.07,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.24,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.23,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.28,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.04,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.02,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.16,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output17; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": 0.13,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.29,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.24,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.41,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.65,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.28,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.99,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -1.65,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "in_sample",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -1.83,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell44 output19; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.0,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.08,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.05,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.01,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.25,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -0.58,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -1.67,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": -1.55,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.16,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output10; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.12,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.15,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.03,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.22,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.28,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 0.64,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 1.88,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 2.14,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "stale_vs_ordinary_fixed_horizon_difference_pct",
+      "value": 3.86,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output12; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.12,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 1,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.23,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 2,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": 0.03,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 3,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.23,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 5,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -0.54,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 10,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -1.21,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": false,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -3.55,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 42,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -3.69,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": 63,
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "reported_oos",
+      "metric": "fresh_minus_stale_fixed_horizon_difference_pct",
+      "value": -3.7,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": "exp",
+      "gross_net": "gross percentage points of spot notional",
+      "uncertainty": {
+        "ci_excludes_zero": true,
+        "numeric_endpoints": null,
+        "precision_pct_points": 0.01
+      },
+      "source_artifact": "5871597e3ecab5e0dbbc55d80314e1939d182224:gator-quant-hacks-8k-options-challenge.ipynb cell45 output14; submission/recovered_fixed_horizons.json",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "discovered_in_sample",
+      "value": {
+        "fresh": 62,
+        "stale": 108
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "discovered_reported_oos",
+      "value": {
+        "fresh": 27,
+        "stale": 42
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "priced_primary_in_sample",
+      "value": {
+        "fresh": 55,
+        "stale": 95
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "priced_primary_reported_oos",
+      "value": {
+        "fresh": 25,
+        "stale": 40
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "capacity_sample",
+      "value": {
+        "in_sample": 56,
+        "reported_oos": 25
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "calendar_year_counts",
+      "value": {
+        "in_sample_2024": 27,
+        "in_sample_2025": 32,
+        "reported_oos_2026": 27
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md; original saved notebook counts; report_extras.capacity/by_year_edge",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "ordinary_day_draws_per_window",
+      "value": 120,
+      "sample_denominator": "sampled ticker/dates before price/drop/exit eligibility; not matched inference N",
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "original notebook N_PLACEBO; runs/PREREG.md",
+      "status": "CONFIRMED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "control_n",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "matched_n",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "issuer_n",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "absolute_signal_gross_return",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "absolute_control_gross_return",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "historical_net_difference",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "historical_signal_net_return",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "historical_control_net_return",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "numeric_f1_ci_endpoints",
+      "value": null,
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Not recoverable from authorized committed aggregates",
+      "status": "UNAVAILABLE"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "inference",
+      "value": {
+        "bootstrap_draws": 2000,
+        "difference_seed": 1,
+        "absolute_mean_seed": 0,
+        "interval": "percentile 2.5/97.5",
+        "unit": "independent row resampling per group; not issuer-clustered",
+        "source": "gator-quant-hacks-8k-options-challenge.ipynb cell25 functions bootstrap_ci/difference_board"
+      },
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "gator-quant-hacks-8k-options-challenge.ipynb cell25 functions bootstrap_ci/difference_board",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "costs_liquidity_capacity",
+      "value": {
+        "cost_haircut_per_side_pct_premium": 5,
+        "median_cost_bps_per_side": {
+          "in_sample": 13,
+          "reported_oos": 18
+        },
+        "cost_iqr_bps_per_side": {
+          "in_sample": [
+            10,
+            18
+          ],
+          "reported_oos": [
+            15,
+            26
+          ]
+        },
+        "two_x_cost_scenario": "doubles the assumed cost haircut",
+        "median_option_volume_contracts_per_session": {
+          "in_sample": 29,
+          "reported_oos": 18
+        },
+        "rough_capacity_10_positions_10pct_participation_usd": {
+          "in_sample": 500000,
+          "reported_oos": 390000
+        },
+        "capacity_qualification": "Historical option volume and spot notional proxy; not strike collateral or guaranteed executable capacity."
+      },
+      "sample_denominator": {
+        "in_sample": 56,
+        "reported_oos": 25
+      },
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "assumed premium haircut; volume-derived spot-notional capacity",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/EXTRAS.md; report_extras.py; ledger123124 aggregates",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "net_portfolio",
+      "value": [
+        {
+          "window": "in-sample",
+          "cost_multiple": "1x",
+          "n": 55,
+          "annual_return_pct": -1.2,
+          "annual_volatility_pct": 2.1,
+          "sharpe": -0.57,
+          "max_drawdown_pct": -4.6,
+          "skew": -2.26,
+          "worst_month_pct": -1.51,
+          "turnover_per_year": 2.7,
+          "worst_event_pct": -16.5,
+          "max_concurrent_positions": 7
+        },
+        {
+          "window": "in-sample",
+          "cost_multiple": "2x",
+          "n": 55,
+          "annual_return_pct": -2.0,
+          "annual_volatility_pct": 2.1,
+          "sharpe": -0.97,
+          "max_drawdown_pct": -5.1,
+          "skew": -2.3,
+          "worst_month_pct": -1.62,
+          "turnover_per_year": 2.7,
+          "worst_event_pct": -16.9,
+          "max_concurrent_positions": null
+        },
+        {
+          "window": "reported out-of-sample",
+          "cost_multiple": "1x",
+          "n": 25,
+          "annual_return_pct": -3.0,
+          "annual_volatility_pct": 2.3,
+          "sharpe": -1.31,
+          "max_drawdown_pct": -2.5,
+          "skew": -1.89,
+          "worst_month_pct": -1.11,
+          "turnover_per_year": 3.4,
+          "worst_event_pct": -10.1,
+          "max_concurrent_positions": 8
+        },
+        {
+          "window": "reported out-of-sample",
+          "cost_multiple": "2x",
+          "n": 25,
+          "annual_return_pct": -4.6,
+          "annual_volatility_pct": 2.3,
+          "sharpe": -1.98,
+          "max_drawdown_pct": -3.5,
+          "skew": -1.84,
+          "worst_month_pct": -1.27,
+          "turnover_per_year": 3.4,
+          "worst_event_pct": -11.2,
+          "max_concurrent_positions": null
+        }
+      ],
+      "sample_denominator": "55 IS /25 reportedOOS 21-session paths; annualized absolute portfolio, not event/control difference",
+      "issuer_denominator": null,
+      "horizon": 21,
+      "gross_net": "net at1x/2x assumed costs",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/FINDINGS.md; runs/EXTRAS.md",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "sensitivity",
+      "value": [
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -0.65,
+          "n": 56,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -0.38,
+          "n": 55,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -0.12,
+          "n": 54,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -0.0,
+          "n": 51,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -1.05,
+          "n": 44,
+          "significant_horizons_reported": 1
+        },
+        {
+          "window": "in-sample",
+          "bucket": "1m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -0.91,
+          "n": 45,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -1.25,
+          "n": 51,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -1.12,
+          "n": 50,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -1.3,
+          "n": 50,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -1.02,
+          "n": 50,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -1.3,
+          "n": 49,
+          "significant_horizons_reported": 1
+        },
+        {
+          "window": "in-sample",
+          "bucket": "2m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -1.21,
+          "n": 49,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -1.32,
+          "n": 55,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -1.21,
+          "n": 55,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -1.19,
+          "n": 55,
+          "significant_horizons_reported": 1
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -1.11,
+          "n": 54,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -1.03,
+          "n": 54,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "in-sample",
+          "bucket": "3-6m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -0.91,
+          "n": 55,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -0.9,
+          "n": 21,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -1.24,
+          "n": 22,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -0.23,
+          "n": 20,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -1.06,
+          "n": 22,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -0.1,
+          "n": 20,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "1m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -0.31,
+          "n": 21,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -2.06,
+          "n": 26,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -2.56,
+          "n": 26,
+          "significant_horizons_reported": 3
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -2.05,
+          "n": 26,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -2.49,
+          "n": 26,
+          "significant_horizons_reported": 3
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -1.41,
+          "n": 26,
+          "significant_horizons_reported": 1
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "2m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -1.72,
+          "n": 26,
+          "significant_horizons_reported": 3
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.03,
+          "entry": "post",
+          "edge_pct": -0.25,
+          "n": 25,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.03,
+          "entry": "pre",
+          "edge_pct": -0.76,
+          "n": 25,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.05,
+          "entry": "post",
+          "edge_pct": -0.7,
+          "n": 25,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.05,
+          "entry": "pre",
+          "edge_pct": -1.04,
+          "n": 24,
+          "significant_horizons_reported": 0
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.1,
+          "entry": "post",
+          "edge_pct": -0.27,
+          "n": 24,
+          "significant_horizons_reported": 1
+        },
+        {
+          "window": "out-of-sample",
+          "bucket": "3-6m",
+          "otm": 0.1,
+          "entry": "pre",
+          "edge_pct": -0.49,
+          "n": 24,
+          "significant_horizons_reported": 1
+        }
+      ],
+      "sample_denominator": "18settings/window; original headline N varies",
+      "issuer_denominator": null,
+      "horizon": [
+        21,
+        42,
+        "exp"
+      ],
+      "gross_net": "gross differences; negative including rounded -0.00%",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/EXTRAS.md; ledger123124",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "2026_status",
+      "value": "Already-reported Jan-Aug2026 historical OOS; repeated here from existing aggregates. Not newly opened or judges sealed.",
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/PREREG.md; ledger95-97; original notebook OOS_START/OOS_END",
+      "status": "CONFIRMED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "judge_sealed_status",
+      "value": "Untouched; dates and outcomes unknown",
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "Submission QA restrictions and no custom research executed",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "result_classification",
+      "value": "Positive payoff hypothesis rejected. Primary IS contrast not supported; secondary negative sign repeats in historical OOS without significant secondary OOS horizons. No proven protective-put benefit.",
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "N/A",
+      "source_artifact": "runs/PREREG.md; ledger87-89,95-97; runs/FINDINGS.md",
+      "status": "QUALIFIED"
+    },
+    {
+      "experiment": "F1-leadership-fresh",
+      "window": "all",
+      "metric": "preregistration_custody",
+      "value": "Hypothesis recorded before first recorded outcomes; date windows corrected after OOS. Authentic tag custody and independent unlock not established.",
+      "sample_denominator": null,
+      "issuer_denominator": null,
+      "horizon": null,
+      "gross_net": "N/A",
+      "uncertainty": "custody limitation",
+      "source_artifact": "docs/RESEARCH_PROVENANCE.md; protocol27af5e6/outcome580fb2f/amendment2969b2a",
+      "status": "QUALIFIED"
+    }
+  ]
+}

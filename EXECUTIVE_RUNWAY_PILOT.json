@@ -1,0 +1,109 @@
+{
+  "experiment": "executive-runway date-candidate source-availability pilot",
+  "kind": "bounded offline date-candidate availability pilot",
+  "protocol_sha256": "fb12dfc59a7fc138b8cdb09706e78097686894a6861d9bc4d1bda5369410d628",
+  "implementation_sha256": "e40f5ad6d4fe8424ead1dc20034f1ddbd3671efe14fe06f9c1328b38dd14aebd",
+  "input_source": {
+    "path": "departure_results/events.csv",
+    "sha256": "1dfba404107e5fcf0f5a80a1dff81c09184b5ebf40c494215eb3ca5d1b8f48ff"
+  },
+  "selection": {
+    "seed": "executive-runway-v1",
+    "rule": "sort the 132 enrolled accessions by sha256(seed + accession_number) hex ascending, ties by accession ascending, take the first 30; deterministic and independent of text",
+    "n": 30,
+    "enrolled": 132,
+    "selected_sha256": "3d2a7342dcf51897a2ae5d37caf4b8c44fde05c783adc4b2230772eca0b80d7c"
+  },
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "measured": {
+    "rows": 30,
+    "issuers_ticker": 27,
+    "issuers_cik": 27,
+    "text_length": {
+      "median": 244.0,
+      "min": 108,
+      "max": 651
+    },
+    "rows_with_date_candidates": 28,
+    "date_candidates_total": 48,
+    "rows_0_dates": 2,
+    "rows_1_date": 12,
+    "rows_multiple_dates": 16,
+    "dates_per_row_distribution": {
+      "0": 2,
+      "1": 12,
+      "2": 12,
+      "3": 4
+    },
+    "candidate_level": {
+      "same_year": 35,
+      "older": 17,
+      "future": 28,
+      "same_day": 3
+    },
+    "missing_year_rows": 0,
+    "missing_year_mentions": 0,
+    "unparsed_date_matches": 0,
+    "nearby_context_proposal": {
+      "kind": "proposal_only_not_applied; no date chosen and no label emitted",
+      "fixed_tokens": [
+        "effective",
+        "cease",
+        "resign",
+        "retire",
+        "retirement",
+        "transition",
+        "step down",
+        "stepping down",
+        "depart",
+        "termination",
+        "successor",
+        "appointment",
+        "as of",
+        "immediately"
+      ],
+      "candidates_with_any_token": 35,
+      "per_token": {
+        "effective": 23,
+        "cease": 3,
+        "resign": 5,
+        "retire": 15,
+        "retirement": 4,
+        "transition": 2,
+        "step down": 2,
+        "stepping down": 1,
+        "depart": 0,
+        "termination": 0,
+        "successor": 0,
+        "appointment": 1,
+        "as of": 5,
+        "immediately": 0
+      }
+    },
+    "advisory_sufficiency": {
+      "threshold_rows": 10,
+      "threshold_issuers": 5,
+      "nonempty_candidate_rows": 28,
+      "issuers": 27,
+      "sufficient": true,
+      "meaning": "advisory source availability sufficient to pursue a later date-span validation step; not a gate for alpha and not a financial finding"
+    }
+  },
+  "interpretation": {
+    "candidates_not_ground_truth": "Date candidates do not establish effective-date coverage, JEV accuracy or a financial edge; a nearby date may be an appointment, prior-filing, signature, transition end or unrelated date. Proximity is not ground truth.",
+    "no_date_chosen": "No date was chosen or labelled as the departure/effective date.",
+    "hypothesis_not_tested": "A longer-runway uncertainty-reduction hypothesis is speculative and would require an ordinary-day comparison; it is not tested here.",
+    "signed_days": "Negative, zero and positive filing-to-date differences are all valid observed values; unknown is kept separate and zero is not missing.",
+    "advisory_only": "The advisory sufficiency rule is source availability, not a gate for alpha; no economic quantity or magnitude threshold is selected from these counts.",
+    "next_step": "If advisory sufficiency holds, the next bounded step is a deterministic proximity/date-span role baseline and a later ordinary-day validation; neither is performed here."
+  },
+  "privacy": "Aggregate counts only; no accession, ticker, CIK, character offset, individual date or filing text.",
+  "no_model_call": true,
+  "network_requests": 0,
+  "jev_calls": 0,
+  "market_reads": 0,
+  "out_of_sample_reads": 0
+}

@@ -1,0 +1,341 @@
+{
+  "study": "executive departure semantic discovery",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "category": "executive_officer_departure",
+  "candidates": [
+    {
+      "category": "ceo_departure",
+      "description": "CEO departure, resignation, retirement, termination, or death with circumstances and transition.",
+      "all_disclosures": 1951,
+      "universe_filings": 31,
+      "priceable": null,
+      "cue_counts": {
+        "retirement": 10,
+        "resignation": 3,
+        "termination": 1,
+        "immediate": 1,
+        "disagreement": 3,
+        "misconduct": 0,
+        "personal_reasons": 0,
+        "another_opportunity": 1,
+        "previously_announced": 0,
+        "succession": 7
+      },
+      "eligible": true,
+      "reason": "officer scope; adequate sample and heterogeneous fixed text cues",
+      "data_hash": "8a7a501c2fa010b08c74b538f49f26a92a3483dab3d5c253e47b5245530dda47"
+    },
+    {
+      "category": "cfo_departure",
+      "description": "CFO departure with circumstances and transition arrangements.",
+      "all_disclosures": 1859,
+      "universe_filings": 31,
+      "priceable": null,
+      "cue_counts": {
+        "retirement": 9,
+        "resignation": 6,
+        "termination": 0,
+        "immediate": 1,
+        "disagreement": 0,
+        "misconduct": 0,
+        "personal_reasons": 0,
+        "another_opportunity": 0,
+        "previously_announced": 3,
+        "succession": 14
+      },
+      "eligible": true,
+      "reason": "officer scope; adequate sample and heterogeneous fixed text cues",
+      "data_hash": "3f43079fed28f10a251f8c580633b817250ae8c141c4409a0be1f51e4a98515e"
+    },
+    {
+      "category": "executive_officer_departure",
+      "description": "Other named executive officer departure with circumstances.",
+      "all_disclosures": 3964,
+      "universe_filings": 132,
+      "priceable": null,
+      "cue_counts": {
+        "retirement": 65,
+        "resignation": 21,
+        "termination": 4,
+        "immediate": 5,
+        "disagreement": 3,
+        "misconduct": 0,
+        "personal_reasons": 0,
+        "another_opportunity": 9,
+        "previously_announced": 2,
+        "succession": 33
+      },
+      "eligible": true,
+      "reason": "officer scope; adequate sample and heterogeneous fixed text cues",
+      "data_hash": "7dca39f6708f4bfb2440127c580d04e46d3e05eb684b90ddc0ca8e74585ec245"
+    },
+    {
+      "category": "director_departure",
+      "description": "Director resignation, removal, retirement, or decision not to stand for re-election, including any disagreements causing departure.",
+      "all_disclosures": 6108,
+      "universe_filings": 101,
+      "priceable": null,
+      "cue_counts": {
+        "retirement": 38,
+        "resignation": 35,
+        "termination": 0,
+        "immediate": 11,
+        "disagreement": 30,
+        "misconduct": 0,
+        "personal_reasons": 7,
+        "another_opportunity": 0,
+        "previously_announced": 0,
+        "succession": 2
+      },
+      "eligible": false,
+      "reason": "outside officer scope",
+      "data_hash": "7e694288570c44def1b5583b2e6e8e0c8533f0949e68ad9b01b237f8ff935bc0"
+    }
+  ],
+  "companies_enrolled": 68,
+  "coverage": {
+    "total": 132,
+    "priceable": 113,
+    "eligible": 107,
+    "earnings_nearby": 16,
+    "jev_all": {
+      "routine": {
+        "events": 104,
+        "companies": 59
+      },
+      "abrupt_adverse": {
+        "events": 3,
+        "companies": 3
+      },
+      "intermediate": {
+        "events": 24,
+        "companies": 21
+      }
+    },
+    "baseline_all": {
+      "routine": {
+        "events": 60,
+        "companies": 38
+      },
+      "abrupt_adverse": {
+        "events": 40,
+        "companies": 24
+      },
+      "intermediate": {
+        "events": 32,
+        "companies": 21
+      }
+    },
+    "protocol_hash": "eb39220099dd5aa3074b87efbdfd172cde47a581d2a6bea562bddcc2720f6d13",
+    "selection_hash": "c8938094052ed094273221e776cd0c25cfb8f1e9585c04678dac332f346da77c",
+    "labels_hash": "93fe0bba663562524cf8be5e0c4a742ab92cdd907d1e7f78474db0f613a8d0a4"
+  },
+  "attrition": {
+    "enrolled": 132,
+    "after_evidence": 107,
+    "after_entry_coverage": 91,
+    "after_earnings_exclusion": 79,
+    "clean_companies": 51
+  },
+  "gate": {
+    "passed": false,
+    "reasons": [
+      "sparse_abrupt_adverse",
+      "excessive_evidence_inconsistency"
+    ],
+    "rule": {
+      "min_priceable_events": 30,
+      "min_events_per_group": 10,
+      "min_companies_per_group": 5,
+      "min_feature_range": 2,
+      "min_feature_sd": 0.35,
+      "max_invalid_fraction": 0.05,
+      "min_group_disagreement_count": 5,
+      "min_group_disagreement_fraction": 0.1
+    },
+    "clean_priceable": 79,
+    "jev_counts": {
+      "routine": {
+        "events": 64,
+        "companies": 45
+      },
+      "abrupt_adverse": {
+        "events": 1,
+        "companies": 1
+      },
+      "intermediate": {
+        "events": 14,
+        "companies": 12
+      }
+    },
+    "baseline_counts": {
+      "routine": {
+        "events": 37,
+        "companies": 27
+      },
+      "abrupt_adverse": {
+        "events": 21,
+        "companies": 15
+      },
+      "intermediate": {
+        "events": 21,
+        "companies": 15
+      }
+    },
+    "invalid": 25,
+    "earnings_excluded": 16,
+    "compression": {
+      "severity": {
+        "range": 2.0,
+        "sd": 0.5206826278785601
+      },
+      "abruptness": {
+        "range": 3.0,
+        "sd": 0.7582267914871866
+      }
+    },
+    "group_disagreements": 38
+  },
+  "clean_year_counts": {
+    "2025": 51,
+    "2024": 28
+  },
+  "evidence_failures": {
+    "unsupported_prior_announcement_status": 12,
+    "known_status_lacks_prior_or_explicit_announcement_evidence": 7,
+    "unsupported_severity|unsupported_prior_announcement_status": 2,
+    "unsupported_severity|unsupported_abruptness|unsupported_adverse_circumstances|unsupported_prior_announcement_status|unsupported_directional_impact": 2,
+    "unsupported_abruptness": 1,
+    "invalid_feature_response: JEV Choice is not a highest-probability option.": 1
+  },
+  "clean_group_overlap": {
+    "abrupt_adverse": {
+      "abrupt_adverse": 1,
+      "intermediate": 3,
+      "routine": 17
+    },
+    "intermediate": {
+      "abrupt_adverse": 0,
+      "intermediate": 7,
+      "routine": 14
+    },
+    "routine": {
+      "abrupt_adverse": 0,
+      "intermediate": 4,
+      "routine": 33
+    }
+  },
+  "jev_group_abstentions": 1,
+  "confidence": {
+    "mean": 0.6291603053435114,
+    "median": 0.66,
+    "meaning": "minimum substantive feature confidence; not calibrated accuracy"
+  },
+  "jev_usage": {
+    "recorded_requests": 263,
+    "substantive_feature_answers": 660,
+    "evidence_answers": 655,
+    "http_attempts": 263,
+    "recorded_request_latency_seconds": 75.96347199595766,
+    "input_tokens": 1576464,
+    "output_tokens": 95499,
+    "dollar_cost": null
+  },
+  "endpoints": {
+    "status": "not_run_measurement_gate",
+    "specifications": 36,
+    "horizons": 9,
+    "strategy_cells": 1620,
+    "strategies": [
+      "long_call",
+      "covered_call",
+      "protective_put",
+      "collar",
+      "cash_secured_put"
+    ],
+    "usable_outcome_sample": null,
+    "gross_edge": null,
+    "net_edge": null,
+    "uncertainty_intervals": null,
+    "cost_sensitivity": null,
+    "horizon_consistency": null
+  },
+  "decision": {
+    "status": "no_candidate",
+    "reason": "measurement_gate_failed",
+    "category": "executive_officer_departure",
+    "protocol_hash": "eb39220099dd5aa3074b87efbdfd172cde47a581d2a6bea562bddcc2720f6d13",
+    "selection_hash": "c8938094052ed094273221e776cd0c25cfb8f1e9585c04678dac332f346da77c",
+    "labels_hash": "93fe0bba663562524cf8be5e0c4a742ab92cdd907d1e7f78474db0f613a8d0a4",
+    "gate": {
+      "passed": false,
+      "reasons": [
+        "sparse_abrupt_adverse",
+        "excessive_evidence_inconsistency"
+      ],
+      "rule": {
+        "min_priceable_events": 30,
+        "min_events_per_group": 10,
+        "min_companies_per_group": 5,
+        "min_feature_range": 2,
+        "min_feature_sd": 0.35,
+        "max_invalid_fraction": 0.05,
+        "min_group_disagreement_count": 5,
+        "min_group_disagreement_fraction": 0.1
+      },
+      "clean_priceable": 79,
+      "jev_counts": {
+        "routine": {
+          "events": 64,
+          "companies": 45
+        },
+        "abrupt_adverse": {
+          "events": 1,
+          "companies": 1
+        },
+        "intermediate": {
+          "events": 14,
+          "companies": 12
+        }
+      },
+      "baseline_counts": {
+        "routine": {
+          "events": 37,
+          "companies": 27
+        },
+        "abrupt_adverse": {
+          "events": 21,
+          "companies": 15
+        },
+        "intermediate": {
+          "events": 21,
+          "companies": 15
+        }
+      },
+      "invalid": 25,
+      "earnings_excluded": 16,
+      "compression": {
+        "severity": {
+          "range": 2.0,
+          "sd": 0.5206826278785601
+        },
+        "abruptness": {
+          "range": 3.0,
+          "sd": 0.7582267914871866
+        }
+      },
+      "group_disagreements": 38
+    },
+    "hypothesis": null,
+    "strategy": null,
+    "oos_rule": null,
+    "economic_outcomes": "not_opened",
+    "oos_2026": "not_opened",
+    "judges_window": "not_opened"
+  },
+  "decision_hash": "f2fe2f589ab0c8fc603d3eea4fa6079c83340565aede71d916bf7d61a52b51c9",
+  "interpretation": "Feasibility failure, not evidence of zero returns or proof that JEV improves on the baseline."
+}

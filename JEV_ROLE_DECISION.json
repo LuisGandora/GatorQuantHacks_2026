@@ -1,0 +1,186 @@
+{
+  "document": "JEV_ROLE_DECISION",
+  "kind": "bounded independent JEV-role review; advisory; freezes nothing",
+  "version": 2,
+  "author": "opencode-go/deepseek-v4.1-flash (JEV-role reviewer; recorded from the actual model invocation)",
+  "authority": "advisory input to the research owner; GPT owns the direction decision",
+  "decision": "no_supported_financial_edge_currently_demonstrated_via_JEV",
+  "recommended_role": null,
+  "headline": "No JEV route has yet shown a supported financial edge; R1 is an unselected, untested advisory proposal; the direction owner rejects R1 for now.",
+  "successful_tool_is_not_a_positive_financial_finding": true,
+  "direction_owner_decision": {
+    "value": "reject_R1_for_now",
+    "reason": "R1 has not demonstrated incremental usefulness, and its verdict scoring may conflict with the user's no-classifiers constraint. Compliance is not declared on the user's behalf.",
+    "r1_status": "untested advisory proposal; selected false; recommended_role null; not implemented",
+    "incremental_usefulness_demonstrated": false,
+    "authorizations": {
+      "new_api_calls": false,
+      "classifier": false,
+      "price_reads": false,
+      "oos_access": false
+    },
+    "note": "This correction authorizes no new API call, no classifier, no price read and no OOS access. It neither implements nor endorses R1."
+  },
+  "inference_exposure_ledger": {
+    "read_public": [
+      "gator-quant-hacks-8k-options-challenge.ipynb (rubric cells only)",
+      "EXPERIMENT_RESULTS.md",
+      "STABILITY_EXPERIMENT_RESULTS.md",
+      "BENCHMARK_RESULTS.md",
+      "RISK_COMPOSITION_REVIEW.md",
+      "EARNINGS_PAYOFF_RESULTS.md",
+      "RESEARCH_NEXT_DIRECTION.md",
+      "MECHANISM_DECISION.md",
+      "MECHANISM_DECISION.json",
+      "SEMANTIC_DISCOVERY_PROMPT.md",
+      "README.md"
+    ],
+    "read_code_for_request_answer_types_only": [
+      "jev_experiment.py",
+      "test_jev_experiment.py",
+      "stability_experiment.py",
+      "risk_composition_audit.py",
+      "expanded_guidance_semantics.py"
+    ],
+    "not_read": [
+      ".env or any secret/credential",
+      "any private cache (.jev_cache, .massive_cache, .stability_cache, .novelty_cache, .departure_cache, .repurchase_cache, .fingerprint_cache)",
+      "raw filings, raw payoff rows, outcomes.sqlite, comparisons.json, pricing_coverage.json, any outcomes.csv or tests.csv",
+      "any 2026 filing or 2026 outcome",
+      "any record inside the reserved 2023-06-01..2023-08-31 window",
+      "CONTINUATION_GATE.md/json (owned by another worker)",
+      "equity audit outputs (owned by another worker)"
+    ],
+    "network_requests": 0,
+    "api_calls": 0,
+    "jev_requests": 0,
+    "financial_code_execution": false,
+    "classifier_built": false,
+    "committed": false
+  },
+  "api_capability_confirmed_from_local_source": {
+    "endpoint": "POST https://api.typesafe.ai/v1/systemone",
+    "payload": ["model", "state", "questions"],
+    "state": "dict; observed keys include supporting_text, disclosure_category, passages",
+    "answer_types_locally_observed": ["score", "choice"],
+    "free_form_evaluation_supported": "not established",
+    "free_form_notes": "Only the score and choice answer types appear in the local requests and in validate_response. Local request code establishes only the locally implemented score/choice capabilities; it does not establish the provider's full API surface. This review therefore does not claim free-form evaluation is universally unsupported, nor that it is supported. As used locally, JEV is given an explanation in state and asked typed score/choice questions about it.",
+    "scalar_score_supported": true,
+    "multi_score_request_supported": true,
+    "multi_question_batching_evidence": [
+      "jev_experiment.py sends 5 score questions in one request",
+      "stability_experiment.py sends 10 score questions in one request",
+      "risk_composition_audit.py sends 8 choice questions in one request",
+      "expanded_guidance_semantics.py mixes choice and score questions"
+    ],
+    "score_response_shape": "{type:'score', score:int 0..len(criteria)-1, confidence:0..1, probabilities:{index->p}}",
+    "choice_response_shape": "{type:'choice', choice:key, confidence:0..1, probabilities:{key->p}}",
+    "validator_note": "validate_response rejects any answer type other than Score or Choice; a model or question-set mismatch stops scoring."
+  },
+  "two_interpretations": {
+    "supported_financial_edge": {
+      "currently_demonstrated": false,
+      "ever_possible": "not disproven",
+      "reason": "Not currently demonstrated: JEV is barred from defining or classifying events; STABILITY is no_candidate; BENCHMARK is 35/39 versus a 35/39 deterministic baseline with no increment; RISK_COMPOSITION is measurement_not_validated; EARNINGS_PAYOFF is a below-floor stopped benchmark whose primary interval is UNAVAILABLE because the sample floor was not met (not a null interval). This is a statement about current evidence, not proof that no non-classifier JEV route could ever work."
+    },
+    "guideline_compliant_submission_with_validated_JEV_component": {
+      "achievable": "conditional",
+      "condition_met": false,
+      "reason": "Conditional, not achieved. It requires a component that is actually validated. R1 is a proposal for such a component and has not demonstrated incremental usefulness, so the condition is unmet and no compliance is declared on the user's behalf."
+    }
+  },
+  "roles": [
+    {
+      "id": "R1_evidence_constrained_falsification_auditor",
+      "name": "Evidence-constrained falsification/consistency auditor over a fixed historical evidence table",
+      "selected": false,
+      "status": "untested advisory proposal; not implemented",
+      "incremental_usefulness_demonstrated": false,
+      "endpoint_kind": "measurement validity (agreement + incremental correctness), not returns",
+      "uses_free_form": false,
+      "grades": {"novelty": 3, "economic_mechanism": 2, "data_feasibility": 4, "robustness": 3, "massive_fit": 3, "total": 15},
+      "grade_caveat": "advisory projections for an endpoint that has never been run; not results",
+      "concrete_evidence": [
+        "rubric fixes one category, one strategy, all five structures, ordinary-day baseline, nine horizons, costs and the OTM/bucket/entry/sensitivity grid, all already public",
+        "reads only public aggregates (EARNINGS_PAYOFF_HORIZONS.json) plus Massive disclosure_category and supporting_text",
+        "no event is defined or selected by the verdict, so it stays outside the stop-classifiers rule",
+        "numerical-table reasoning is a known weak point, which caps robustness and mechanism grades"
+      ]
+    },
+    {
+      "id": "R2_evidence_constrained_council",
+      "name": "Evidence-constrained council / multi-judge adjudication of competing explanations",
+      "selected": false,
+      "reason": "collapses into R1; council aggregation risks circularity and, if confidence-weighted, becomes confidence-as-alpha",
+      "grades": {"novelty": 3, "economic_mechanism": 2, "data_feasibility": 3, "robustness": 2, "massive_fit": 3, "total": 13}
+    },
+    {
+      "id": "R3_jev_predictor_severity_label",
+      "name": "JEV as a predictor or severity label feeding the sample or strategy choice",
+      "selected": false,
+      "reason": "disqualified: it is exactly the forbidden classifier; BENCHMARK already shows no incremental accuracy over the simple deterministic baseline",
+      "grades": {"novelty": 2, "economic_mechanism": 3, "data_feasibility": 1, "robustness": 1, "massive_fit": 4, "total": 11}
+    },
+    {
+      "id": "R4_confidence_as_alpha",
+      "name": "Use JEV internal confidence as correctness or alpha",
+      "selected": false,
+      "reason": "disqualified: confidence is not correctness; STABILITY and BENCHMARK explicitly report high confidence and agreement without incremental predictive value",
+      "grades": {"novelty": 1, "economic_mechanism": 1, "data_feasibility": 5, "robustness": 1, "massive_fit": 2, "total": 10}
+    }
+  ],
+  "falsification_role_design": {
+    "status": "proposal only; unselected and untested; recorded to document what was considered, not endorsed",
+    "endpoint": "item-level agreement between JEV's typed falsification verdict and a blinded independent reference on a fixed battery of pre-registered explanations (one per structure), each judged against a frozen historical evidence table",
+    "evidence_table": "public EARNINGS_PAYOFF_HORIZONS.json (five structures, ordinary baseline, horizons, costs, sensitivity) plus Massive disclosure_category and supporting_text",
+    "blinded_independent_reference": "a reference authored without seeing JEV outputs; model-reviewed or human as available, with provenance stated honestly",
+    "simple_baseline": "deterministic keyword-overlap plus recorded-sign rule on the same table",
+    "latency_benchmark": "per-request wall time, p50/p95, judgments/second on the fixed battery",
+    "robustness_benchmark": "paraphrase and option-order perturbation; report verdict stability and abstentions; this is endpoint reliability, not a rerun of the market stability experiment",
+    "refusals": [
+      "no model confidence as correctness",
+      "no council averaging",
+      "no verdict used to pick the category or strategy",
+      "no free-form parsing",
+      "no new outcome read",
+      "no stimulus or threshold chosen from outcomes"
+    ],
+    "no_guarantee": true
+  },
+  "financial_track_obligations_consumed_not_reestimated": {
+    "five_structures": ["long_call", "covered_call", "protective_put", "collar", "cash_secured_put"],
+    "ordinary_baseline": "event-weighted ordinary-day control per event",
+    "horizons": [1, 2, 3, 5, 10, 21, 42, 63, "exp"],
+    "costs_and_sensitivity": "flat commission, funding and premium-haircut scenarios plus the frozen OTM/bucket/entry/stale grid",
+    "note": "these remain the financial track's obligations; the JEV role consumes them as fixed table content and does not re-estimate them"
+  },
+  "rejected_as_cosmetic_or_invalid": [
+    "cosmetic dressing of an unchanged financial result",
+    "circular judging where the reference is derived from JEV",
+    "unvalidated conclusions presented as findings",
+    "using model confidence as alpha"
+  ],
+  "next_action": {
+    "new_JEV_requirement_changes_next_action": false,
+    "defensible_next_action": "keep the well-argued null write-up the rubric rewards; treat the R1 measurement audit as a conditional, unvalidated candidate, not a validated component",
+    "implementation_possible_without_financial_OOS_access": true,
+    "reason_implementation_possible": "the R1 endpoint would read only public aggregates and Massive in-sample text; it defines no event and estimates no payoff",
+    "financial_claim_blocked": true,
+    "financial_claim_blocker": "any financial claim needs OOS replication (in-sample hypotheses do not need OOS to be reported honestly, but replication does) plus a non-classifier JEV mechanism not currently demonstrated",
+    "authorized_by_this_correction": {
+      "new_api_calls": false,
+      "classifier": false,
+      "price_reads": false,
+      "oos_access": false
+    }
+  },
+  "files_written": [
+    "JEV_ROLE_DECISION.md",
+    "JEV_ROLE_DECISION.json"
+  ],
+  "files_not_touched": [
+    "CONTINUATION_GATE.md",
+    "CONTINUATION_GATE.json",
+    "any equity-audit output"
+  ]
+}

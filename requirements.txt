@@ -1,12 +1,11 @@
-# Gator Quant Hacks 2026 · Trade the 8-K starter notebook
-# Python 3.10+ required. Tested with Python 3.14.3 and the versions noted below.
-
-pandas>=2.2        # tested 3.0.5
-numpy>=2.0         # tested 2.5.2
-requests>=2.31     # tested 2.34.2
-matplotlib>=3.8    # tested 3.11.1
-typesafe-sdk>=0.7  # tested 0.7.2; only for `python jev.py --fill` (TypeSafe Jev scores)
-
-# Running the notebook
-ipykernel>=6.29    # tested 7.3.0
-jupyterlab>=4.0    # skip if you use VS Code with the Jupyter extension
+# Submission notebook and offline QA. Python 3.10+; see the QA checklist for
+# the interpreter and resolved versions actually verified for this snapshot.
+pandas>=2.2,<4
+numpy>=2.0,<3
+requests>=2.31,<3
+matplotlib>=3.8,<4
+ipykernel>=6.29,<8
+jupyterlab>=4.0,<5
+nbformat>=5.10,<6
+nbconvert>=7.16,<8
+typesafe-sdk>=0.7,<1   # TypeSafe Jev: jev.py --fill and hyp.py text features

@@ -1,0 +1,41 @@
+{
+  "post_measurement_descriptive_supplement": true,
+  "gate_or_labels_changed": false,
+  "agreement_wilson_95pct": {
+    "demand": [
+      0.7575059933447592,
+      1
+    ],
+    "margin": [
+      0.7575059933447592,
+      1
+    ],
+    "financing": [
+      0.7575059933447592,
+      1
+    ],
+    "execution": [
+      0.5519691377470266,
+      0.9530348578161463
+    ]
+  },
+  "positive_citation_wilson_95pct": {
+    "demand": null,
+    "margin": [
+      0.4385029682449546,
+      1
+    ],
+    "financing": null,
+    "execution": [
+      0.34238022750665303,
+      1
+    ]
+  },
+  "pricing": {
+    "usd_per_million_input_tokens": 0.042,
+    "output_tokens_free": true,
+    "official_source": "https://docs.typesafe.ai/models.md",
+    "retrieved": "2026-10-03"
+  },
+  "estimated_jev_input_cost_usd": 0.0022995840000000004
+}
