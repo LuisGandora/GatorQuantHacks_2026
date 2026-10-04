@@ -27,6 +27,14 @@ def run():
                       'upside_tail_5pct', 'downside_tail_5pct']:
             row['event_'+field] = group['event_'+field].mean()
             row['ordinary_'+field] = group['ordinary_'+field].mean()
+            predictor = group['event_'+field]-group['ordinary_'+field]
+            row['spearman_difference_vs_'+field] = (
+                group.difference.rank().corr(predictor.rank())
+                if len(group) >= 3 and group.difference.nunique() > 1 and predictor.nunique() > 1 else np.nan)
+        row['spearman_difference_vs_spread_drag'] = (
+            group.difference.rank().corr(spread_difference.rank())
+            if len(group) >= 3 and group.difference.nunique() > 1 and spread_difference.nunique() > 1 else np.nan)
+        row['correlation_caution'] = 'Payoff mechanics induce correlation; no causal or independent-alpha interpretation'
         rows.append(row)
     result = pd.DataFrame(rows)
     result.to_csv(OUT/'bid_ask_diagnostics.csv', index=False)
