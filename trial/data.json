@@ -1,0 +1,77 @@
+[
+  {
+    "accession_number": "0000764180-25-000133",
+    "ticker": "MO",
+    "filing_date": "2025-12-11",
+    "category": "cfo_appointment",
+    "excerpt": "On December 10, 2025, the Board elected Salvatore Mancuso to become Altria's CEO and Heather A. Newman to become Altria's Executive Vice President and Chief Financial Officer ('CFO'), in each case, effective May 14, 2026 at the conclusion of the 2026 Annual Meeting. Ms. Newman, age 48, currently serves as Altria's Senior Vice President, Chief Strategy & Growth Officer since March 2022.",
+    "at_filing": {
+      "jev_intensity": 3.6,
+      "jev_stability_pct": 98.4,
+      "jev_confidence": 0.894,
+      "rubric_level": 4,
+      "classification": "Meaningful leadership change affecting financial oversight, but no disclosed strategy change.",
+      "implied_move_pct": 4.8,
+      "implied_move_to_expiry_pct": 8.4
+    },
+    "outcome": {
+      "horizon_sessions": 21,
+      "realized_move_pct": 4.1,
+      "strategy": "cash-secured put (5% out of the money, 3-6 month expiry)",
+      "pnl_pct_of_spot": 1.2,
+      "entry": "close of the session before the filing (a was-it-priced diagnostic, not a tradeable entry)"
+    },
+    "judge_verdict": "JEV intensity 3.6 out of 10, stability 98.4 percent. Classification: rubric level 4, Meaningful leadership change affecting financial oversight, but no disclosed strategy change. Before the filing, the option chain priced a move of plus or minus 4.8 percent over 21 sessions.",
+    "judge_outcome": "The outcome, revealed after the verdict: the stock rose 4.1 percent, and the cash-secured put (5% out of the money, 3-6 month expiry) gained 1.20 percent of spot at 21 sessions."
+  },
+  {
+    "accession_number": "0001193125-25-075089",
+    "ticker": "CVS",
+    "filing_date": "2025-04-08",
+    "category": "cfo_appointment",
+    "excerpt": "On April 7, 2025, the Board of Directors of CVS Health Corporation appointed Brian O. Newman to serve as Executive Vice President and Chief Financial Officer of CVS Health, effective May 12, 2025. Mr. Newman will receive an annualized base salary of $1.0 million and will be eligible to participate in CVS Health's annual bonus plan with a target annual cash bonus opportunity of 150% of his base salary. Mr. Newman's target annual equity award compensation will be $7.0 million, which for calendar year 2025 will be comprised of 60% performance stock units, 20% restricted stock units and 20% stock options.",
+    "at_filing": {
+      "jev_intensity": 3.29,
+      "jev_stability_pct": 99.1,
+      "jev_confidence": 0.98,
+      "rubric_level": 3,
+      "classification": "Limited change to financial leadership with a narrow effect on execution.",
+      "implied_move_pct": 9.4,
+      "implied_move_to_expiry_pct": 19.1
+    },
+    "outcome": {
+      "horizon_sessions": 21,
+      "realized_move_pct": 7.2,
+      "strategy": "cash-secured put (5% out of the money, 3-6 month expiry)",
+      "pnl_pct_of_spot": 4.16,
+      "entry": "close of the session before the filing (a was-it-priced diagnostic, not a tradeable entry)"
+    },
+    "judge_verdict": "JEV intensity 3.3 out of 10, stability 99.1 percent. Classification: rubric level 3, Limited change to financial leadership with a narrow effect on execution. Before the filing, the option chain priced a move of plus or minus 9.4 percent over 21 sessions.",
+    "judge_outcome": "The outcome, revealed after the verdict: the stock rose 7.2 percent, and the cash-secured put (5% out of the money, 3-6 month expiry) gained 4.16 percent of spot at 21 sessions."
+  },
+  {
+    "accession_number": "0001090727-24-000038",
+    "ticker": "UPS",
+    "filing_date": "2024-07-09",
+    "category": "cfo_appointment",
+    "excerpt": "United Parcel Service, Inc. announced that it is appointing Brian M. Dykes as Executive Vice President and Chief Financial Officer, effective immediately. Mr. Dykes, age 46, has been employed by the Company for over 25 years, most recently serving as Senior Vice President, Global Finance and Planning since April 2023.",
+    "at_filing": {
+      "jev_intensity": 2.89,
+      "jev_stability_pct": 96.2,
+      "jev_confidence": 0.83,
+      "rubric_level": 3,
+      "classification": "Limited change to financial leadership with a narrow effect on execution.",
+      "implied_move_pct": 6.1,
+      "implied_move_to_expiry_pct": 11.0
+    },
+    "outcome": {
+      "horizon_sessions": 21,
+      "realized_move_pct": -9.3,
+      "strategy": "cash-secured put (5% out of the money, 3-6 month expiry)",
+      "pnl_pct_of_spot": -2.65,
+      "entry": "close of the session before the filing (a was-it-priced diagnostic, not a tradeable entry)"
+    },
+    "judge_verdict": "JEV intensity 2.9 out of 10, stability 96.2 percent. Classification: rubric level 3, Limited change to financial leadership with a narrow effect on execution. Before the filing, the option chain priced a move of plus or minus 6.1 percent over 21 sessions.",
+    "judge_outcome": "The outcome, revealed after the verdict: the stock fell 9.3 percent, and the cash-secured put (5% out of the money, 3-6 month expiry) lost 2.65 percent of spot at 21 sessions."
+  }
+]

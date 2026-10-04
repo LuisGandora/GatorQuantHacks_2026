@@ -1,0 +1,24 @@
+{
+  "status": "NEEDS HUMAN REVIEW: drafted from the excerpts only; edit before recording, then run trial/build.py and trial/render_audio.py",
+  "needs_human_review": true,
+  "filings": {
+    "0000764180-25-000133": {
+      "prosecution": "Altria's board replaced both of its top two officers in a single filing: a new CEO and a new CFO. The excerpt gives no reason for either change, and it describes the incoming CFO's current role as strategy and growth, not finance.",
+      "prosecution_quote": "On December 10, 2025, the Board elected Salvatore Mancuso to become Altria's CEO and Heather A. Newman to become Altria's Executive Vice President and Chief Financial Officer ('CFO'), in each case, effective May 14, 2026 at the conclusion of the 2026 Annual Meeting.",
+      "defense": "This is a planned succession with a five-month runway, timed to the annual meeting rather than forced by events. The incoming CFO is an insider who has held a senior strategy role since March 2022.",
+      "defense_quote": "Ms. Newman, age 48, currently serves as Altria's Senior Vice President, Chief Strategy & Growth Officer since March 2022."
+    },
+    "0001193125-25-075089": {
+      "prosecution": "The excerpt does not support a claim that this filing is materially adverse. It names a new CFO, a start date and a pay package; the only economic fact is a $7.0 million target equity award, which is compensation, not a change in the business.",
+      "prosecution_quote": "Mr. Newman's target annual equity award compensation will be $7.0 million, which for calendar year 2025 will be comprised of 60% performance stock units, 20% restricted stock units and 20% stock options.",
+      "defense": "The board made an orderly appointment with a fixed start date about five weeks out. Nothing in the excerpt suggests a departure under pressure or a change in strategy.",
+      "defense_quote": "On April 7, 2025, the Board of Directors of CVS Health Corporation appointed Brian O. Newman to serve as Executive Vice President and Chief Financial Officer of CVS Health, effective May 12, 2025."
+    },
+    "0001090727-24-000038": {
+      "prosecution": "The appointment is effective immediately, with no transition period. The excerpt does not say why the CFO seat needed filling at once or what happened to the previous CFO.",
+      "prosecution_quote": "United Parcel Service, Inc. announced that it is appointing Brian M. Dykes as Executive Vice President and Chief Financial Officer, effective immediately.",
+      "defense": "The new CFO is a 25-year company veteran who was already running global finance and planning. Promoting the person closest to the numbers is continuity, not disruption.",
+      "defense_quote": "Mr. Dykes, age 46, has been employed by the Company for over 25 years, most recently serving as Senior Vice President, Global Finance and Planning since April 2023."
+    }
+  }
+}

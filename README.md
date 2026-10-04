@@ -47,7 +47,54 @@ while; later runs read the cache.
 | `gator-quant-hacks-8k-options-challenge.ipynb` | **The notebook**: starter pipeline, Part A, Part B, `run()` |
 | `runs/PREREG*.md`, `runs/ledger.jsonl` | Pre-registrations, and the append-only log of every test run |
 | `harness.py`, `pair_test.py`, `vrp.py`, `hyp.py`, `report_extras.py` | Research code the notebook calls |
+| `trial/` | Optional Filing Trial demo (ElevenLabs), described below |
 | `submission/`, `GQH_MASSIVE_FINAL.ipynb`, `docs/` | jack-uf's earlier submission package (below) |
+
+## Optional demo: Filing Trial (MLH Best Use of ElevenLabs)
+
+A separate demo in [trial/](trial/), built for the **MLH Best Use of ElevenLabs** prize. It is not part of the research
+and is not needed to judge it. It leaves the notebook and its dependencies untouched, so the main pipeline still needs
+only `MASSIVE_API_KEY`.
+
+Three 8-K filings go on trial. A prosecutor argues each filing is materially adverse and a defender argues the outlook is
+intact; both use only the filing's excerpt, and the page highlights the sentence each relies on. A Quant Judge then reads a
+fixed template filled only with computed values known at filing time: JEV intensity and stability, the rubric
+classification and the move the option chain priced. Only after the verdict does the page reveal the outcome, the
+realized move and the backtest P&L, clearly labeled as the outcome. ElevenLabs voices the three roles with three distinct
+voices. Data comes from jack-uf's JEV-stability results (`experiment_results/outcomes.csv`) and the exact excerpts JEV
+scored (`.jev_cache/`).
+
+### How to use it
+
+**Just watch the demo (no keys, no setup):** open [trial/index.html](trial/index.html) in any browser. It works offline
+once the MP3s in `trial/audio/` are committed. For each filing:
+1. Read the excerpt. The red highlight is the sentence the prosecution relies on; the green one is the defense's.
+2. Play **Prosecution**, then **Defense**, then **Judge**. The judge gives a verdict from filing-time values only.
+3. Check the **Known at filing time** table: these are the only numbers the verdict uses.
+4. Expand **Outcome, revealed after the verdict** and play the judge's outcome clip: the realized move and the backtest P&L.
+
+**Rebuild or re-record it** (from the repository root, with the project's `.venv` active):
+1. Edit the arguments in [trial/scripts.json](trial/scripts.json). Every `*_quote` must be an exact sentence from that
+   filing's excerpt; the build checks this. When you are happy, set `"needs_human_review": false`.
+2. Rebuild the page and the judge's lines (no API calls):
+   ```bash
+   python trial/build.py
+   ```
+3. Add your key to `.env` (gitignored; never commit it): `ELEVENLABS_API_KEY=...`. This is the only key the demo reads.
+4. Record the audio. The script prints the character count before calling ElevenLabs, which bills by character
+   (about 3,000–4,000 characters for the default three filings). It skips clips that already exist; delete an MP3 to
+   re-record it.
+   ```bash
+   python trial/render_audio.py
+   ```
+5. Open `trial/index.html` to check it, then commit `trial/audio/` and the rebuilt `trial/index.html` so the demo works offline.
+
+Optional: pick different voices with `ELEVENLABS_VOICE_PROSECUTION`, `ELEVENLABS_VOICE_DEFENSE` and `ELEVENLABS_VOICE_JUDGE`
+(voice ids) in `.env`, or a different model with `ELEVENLABS_MODEL`.
+
+`python trial/build.py ACC1 ACC2 ...` swaps in other filings, which must appear in `experiment_results/outcomes.csv` and
+need an entry in `scripts.json`. The default three are the highest-, median- and lowest-intensity filings, chosen from text
+scores only, never from outcomes. The demo is not a trading signal: the main study found no edge.
 
 ---
 
