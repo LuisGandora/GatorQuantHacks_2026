@@ -1,0 +1,18 @@
+{
+  "hypothesis_id": "GOV-annual-meeting-protective-put-v1",
+  "historical_oos_start": "2026-01-01",
+  "historical_oos_end": "2026-08-31",
+  "raw_disclosure_rows": 2560,
+  "starter_universe_rows_before_deduplication": 69,
+  "eligible_company_dates": 69,
+  "companies": 69,
+  "raw_count_gate_passed": true,
+  "prepricing_event_only_dependence_groups": 1,
+  "dependence_note": "Event-only calendar diagnostic, not a usable matched-trade count; quote exclusions and control intervals may change the graph",
+  "usable_matched_options_count": "not established",
+  "dependence_groups": "not established",
+  "option_prices_requested": false,
+  "validation_returns_read": false,
+  "pristine_window": false,
+  "decision": "Proceed to control/quote coverage only if the preliminary count gate passes; no significance claim"
+}
