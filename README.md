@@ -1,78 +1,61 @@
 # Do fresh leadership 8-Ks reward put sellers?
 
-Gator Quant Hacks 2026 · Massive **Trade the 8-K**.
+Gator Quant Hacks 2026 · Systematic Trading track · Massive **Trade the 8-K** bonus.
 
-We tested whether freshly disclosed leadership changes cause investors to overpay for
-downside protection. The fixed trade sells a **5% OTM cash-secured put**, after the
-filing-adjusted session closes, with **90–180-day expiry targeting 120 days**. The five
-Massive categories are CEO appointment/departure, CFO appointment/departure, and
-executive-officer appointment. Freshness uses SEC EDGAR period-of-report metadata;
-it does not establish the first public disclosure.
+## Start here (judges)
 
-**The proposed payoff is unsupported.** The primary fresh-minus-stale gross difference
-is **−1.03% in-sample**, with no headline-horizon interval excluding zero. The separate
-fresh-minus-ordinary comparison is **−1.19% in 2024–2025 (maximum valid headline N=55)**
-and **−0.70% in the already-reported January–August 2026 OOS window (N=25)**. These
-average the differences at 21 sessions, 42 sessions and expiry; they are neither
-absolute returns nor annual returns. All 18 neighboring specifications per window
-were negative. OOS ordinary-day comparisons were not significant. No profitable
-opposite-side trade was established, and judges’ sealed data remains untouched.
+1. **Read the quant note: [runs/QUANT_NOTE.pdf](runs/QUANT_NOTE.pdf)** (5 pages plus appendix; HTML source
+   [runs/QUANT_NOTE.html](runs/QUANT_NOTE.html)). Every number in it is printed by the notebook below.
+2. **Open the notebook: [gator-quant-hacks-8k-options-challenge.ipynb](gator-quant-hacks-8k-options-challenge.ipynb).**
+   It is committed with its outputs from a clean top-to-bottom run, so you can read the results without running anything.
+   - Part A (LuisGandora): section 12 is the headline fresh-vs-stale test.
+   - Part B (jack-uf): the JEV-stability and novelty experiments.
+   - **Reproduce every headline result:** `run(start_date, end_date)`, near the end of the notebook. The "F1 findings table"
+     cell prints every number the note uses: every horizon, both windows, gross and net, with 95% intervals,
+     the portfolio and the robustness checks.
 
-Read the **[five-page quant note](submission/QUANT_NOTE.pdf)**, then open
-**[GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb)**. The
-[QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
-[authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.
+**Finding.** We pre-registered ([runs/PREREG.md](runs/PREREG.md), git tag `freeze-v2`) that a cash-secured put sold after a
+*fresh* leadership-change 8-K beats ordinary days. **It is rejected in the opposite direction, and the rejection held its sign
+out-of-sample.** Net of costs, the fresh-filing put did −1.16% vs ordinary days in-sample (n = 55) and −0.71% out-of-sample
+(n = 25), averaged over h = 21, 42 and expiry. Every other test we ran is null, and the note counts every variant tried.
 
-## Judge's Guide to the Rubrics
+## Run it yourself
 
-| Rubric Criterion (Track 03 & Massive) | Primary Artifact | Key Evidence / Verification |
-|---|---|---|
-| **01. Economic Foundation & Hypothesis** | `QUANT_NOTE.pdf` §01–§02 | Delta vs. Vega decomposition; why post-filing downward equity drift (-1.32% IS) destroys short-put Vega capture; `runs/PREREG.md`. |
-| **02. Innovation & Research Funnel** | `QUANT_NOTE.pdf` Table 0 & A1 | 13-stage structured research progression; multi-category 18-tag Variance Risk Premium map under Benjamini-Hochberg FDR control (q=0.10). |
-| **03. Risk Management Plan** | `QUANT_NOTE.pdf` §06 & Figure 1 | Unlevered 10% sizing; 2x cost stress test; negative skewness (-2.26 IS, -1.89 OOS); -16.5% max drop; defined-risk **Vertical Put Spread** & TIMS mitigation. |
-| **04. Liquidity & Capital** | `QUANT_NOTE.pdf` §07 | Empirical 10-day pre-entry option ADV audit (18-29 contracts); 1% & 10% volume participation ceilings ($500k IS / $390k OOS book capacity); 15-25% bid-ask spread reality. |
-| **05. Performance & Analytical Evidence** | `QUANT_NOTE.pdf` §05, Table 1 & 2 | All 54 recovered fixed horizons; 36-cell sensitivity grid; 120-draw placebo baseline; zero lookahead (EDGAR <ACCEPTANCE-DATETIME> session shift); 281/281 consistency checks. |
-| **06. Sealed-Window Replication** | `GQH_MASSIVE_FINAL.ipynb` §6, §10 | Hermetically isolated holdout replication behind `RUN_CUSTOM_JUDGE` toggle; pre-registered directional prediction (`Edge < 0`); zero OOS tuning. |
-
-The [remote experiment history](submission/evidence/remote_experiments/README.md) includes the completed priced earnings benchmark, 9B cash-secured-put test and Experiment 10 covered-call test, with actual event/control net returns, costs and sensitivity. These supporting in-sample studies failed their original gates; they do not replace F1. Experiments 11–13 remain unpriced supporting work, with numbered artifacts unavailable at the fetched remote tip.
-
-## Install and run
-
-Use **Python 3.10+**, from the repository root. One submission installation path:
+Use Python 3.10+, from the repository root.
 
 ```bash
-git clone https://github.com/jack-uf/GatorQuantHacks_2026_Submission.git
-cd GatorQuantHacks_2026_Submission
-bash setup.sh
-source .venv/bin/activate
-jupyter lab GQH_MASSIVE_FINAL.ipynb
+git clone https://github.com/LuisGandora/GatorQuantHacks_2026.git
+cd GatorQuantHacks_2026
+bash setup.sh                 # Windows: powershell -ExecutionPolicy Bypass -File setup.ps1
+source .venv/bin/activate     # Windows: .venv\Scripts\Activate.ps1
+jupyter lab gator-quant-hacks-8k-options-challenge.ipynb
 ```
 
-Windows: run `powershell -ExecutionPolicy Bypass -File setup.ps1`, then
-`.venv\Scripts\Activate.ps1` and the same Jupyter command. Select
-**Python (Gator Quant Hacks .venv)**. Setup installs `requirements.txt` and creates a
-private `.env` from `.env.example`. Replace `your-key-here` with your Massive API key,
-or set `MASSIVE_API_KEY` in the environment. Never place a key in a notebook cell.
-For the optional live path, also set `SEC_USER_AGENT` in `.env` or the environment
-to your project name and real contact email; SEC metadata requests require it.
-Default **Run All** displays the committed evidence with no key or API requests.
+Setup creates a private `.env` from `.env.example`. Put your `MASSIVE_API_KEY` there; also set `TYPESAFE_API_KEY` for
+jack-uf's Part B (JEV) experiments, and `SEC_USER_AGENT` (project name and contact email) for the EDGAR timestamps. Never put a
+key in a notebook cell. `.env` and `.massive_cache/` are gitignored. Then **Run All**. A first run downloads data and takes a
+while; later runs read the cache.
 
-For authorized judge execution, set the top configuration cell’s `START_DATE` and
-`END_DATE` to inclusive ISO dates, and set `RUN_CUSTOM_JUDGE = True`. Only dates may
-change; the economic specification is checked. Explicitly set
-`AUTHORIZE_RESTRICTED_DATES = True` if the event or forward-pricing envelope intersects
-the protected 2026 range or the starter’s holdout placeholder. The placeholder is
-not a verified judges’ window. Selection and ordinary-day sampling use your date
-bounds; lookback and forward option prices extend beyond them. Unsupported windows
-fail explicitly because the unchanged calendar spans June 2021–December 2027.
+**Sealed window.** Set the sealed dates and `RUN_HOLDOUT = True` in the configuration cell (section 2), or call
+`run(HOLDOUT_START, HOLDOUT_END)`. Our sealed-window predictions are in the note (§8) and in `runs/PREREG.md`.
 
-Live execution requires disclosure, options-reference and historical-options access.
-It reports gross and net comparisons at **1, 2, 3, 5, 10, 21, 42, 63 sessions and expiry**,
-using the original bootstrap and unchanged costs. Missing prices remain missing.
-**Live endpoint entitlements and economic reproduction were not verified: no API key
-was configured during QA.** Ordered offline execution and synthetic date propagation
-passed; they are not a market-data reproduction. See
-[reproducibility instructions](docs/REPRODUCIBILITY.md).
+## Where things are
+
+| Location | What it is |
+|---|---|
+| `runs/QUANT_NOTE.pdf` | **The quant note** (the Devpost submission) |
+| `gator-quant-hacks-8k-options-challenge.ipynb` | **The notebook**: starter pipeline, Part A, Part B, `run()` |
+| `runs/PREREG*.md`, `runs/ledger.jsonl` | Pre-registrations, and the append-only log of every test run |
+| `harness.py`, `pair_test.py`, `vrp.py`, `hyp.py`, `report_extras.py` | Research code the notebook calls |
+| `submission/`, `GQH_MASSIVE_FINAL.ipynb`, `docs/` | jack-uf's earlier submission package (below) |
+
+---
+
+# jack-uf's submission package
+
+This section is jack-uf's earlier submission package, kept as written. Its note, [submission/QUANT_NOTE.pdf](submission/QUANT_NOTE.pdf),
+and notebook, [GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb), are separate from the note above, and their numbers have not
+been checked against the main notebook's output.
 
 ## Evidence, provenance and layout
 
