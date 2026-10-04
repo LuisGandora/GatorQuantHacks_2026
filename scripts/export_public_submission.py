@@ -9,6 +9,8 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / 'scripts'))
 ROOT_FILES = (
     '.env.example', '.gitignore', 'README.md', 'GQH_MASSIVE_FINAL.ipynb',
     'gator-quant-hacks-8k-options-challenge.ipynb', 'submission_pipeline.py',
@@ -19,6 +21,7 @@ ROOT_FILES = (
     'submission_authoritative_facts.json', 'SUBMISSION_AUTHORITATIVE_FACTS.md',
     'SUBMISSION_EVIDENCE_PACKET.md', 'SUBMISSION_NOTEBOOK_REPORT_MAP.md',
     'SUBMISSION_QA_CHECKLIST.md', 'SUBMISSION_CONSISTENCY_AUDIT.md',
+    'pytest.ini',
 )
 DOCS = (
     'DEVPOST.md', 'DEVPOST_SUBMISSION.md', 'PAIR_TEST_README.md',
