@@ -7,13 +7,16 @@ from unittest.mock import patch
 import numpy as np
 import pandas as pd
 import broad_quote_analysis as analysis
+import finish_broad_quote_experiment as finish
 
 
 class AnalysisIntegrationTest(unittest.TestCase):
     def test_matching_exclusions_and_insufficient_dependence(self):
         # Keep fixture creation and cleanup inside the explicitly writable workspace.
         with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent, prefix='quote_test_') as directory:
-            base = Path(directory)
+            root = Path(directory)
+            base = root/'broad_strategy_results'
+            base.mkdir()
             out = base/'quote_execution'
             out.mkdir()
             folder = base/'test_category'
@@ -52,6 +55,21 @@ class AnalysisIntegrationTest(unittest.TestCase):
             self.assertEqual(matches.controls.tolist(), [2, 2])
             excluded = pd.read_csv(out/'bid_ask_matching_exclusions.csv')
             self.assertEqual(len(excluded), 18)
+            pd.DataFrame({'strategy': ['covered_call', 'covered_call'], 'max_age_seconds': [60, 300],
+                'fully_usable': [True, True], 'trades': [4, 4]}).to_csv(
+                    out/'fully_usable_counts_before_returns.csv', index=False)
+            with patch.object(finish, 'ROOT', root), patch.object(finish, 'OUT', out):
+                finish.verify()
+            status = json.loads((out/'primary_execution_status.json').read_text())
+            self.assertEqual(status['primary_comparisons'], 5)
+            self.assertEqual(status['estimable_primary_intervals'], 0)
+            self.assertFalse(status['goal_achieved'])
+            # A row-count mismatch must prevent a success status from being regenerated.
+            pd.DataFrame({'strategy': ['covered_call'], 'max_age_seconds': [60],
+                'fully_usable': [True], 'trades': [3]}).to_csv(out/'fully_usable_counts_before_returns.csv', index=False)
+            with patch.object(finish, 'ROOT', root), patch.object(finish, 'OUT', out):
+                with self.assertRaisesRegex(RuntimeError, 'pre-return usable counts'):
+                    finish.verify()
 
 
 if __name__ == '__main__':
