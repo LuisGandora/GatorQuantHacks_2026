@@ -23,12 +23,18 @@ def choose_controls(event, candidates, session_positions):
     return [item[2] for item in chosen[:3]]
 
 
-def analyze():
-    if not (OUT/'collection_complete.json').exists():
+def analyze(out=None, horizon='21', prefix=''):
+    out = Path(out) if out is not None else OUT
+    horizon = str(horizon)
+    if not (out/'collection_complete.json').exists():
         raise RuntimeError('Collection remains incomplete')
-    outcomes = pd.read_csv(OUT/'bid_ask_trade_outcomes.csv.gz', parse_dates=['entry_date', 'exit_date'])
-    if outcomes.duplicated(['ticker', 'entry_date', 'strategy', 'max_age_seconds']).any():
+    outcomes = pd.read_csv(out/'bid_ask_trade_outcomes.csv.gz', parse_dates=['entry_date', 'exit_date'])
+    if 'horizon' not in outcomes:
+        outcomes['horizon'] = '21'
+    outcomes['horizon'] = outcomes.horizon.astype(str)
+    if outcomes.duplicated(['ticker', 'entry_date', 'horizon', 'strategy', 'max_age_seconds']).any():
         raise RuntimeError('Duplicate quote outcomes')
+    outcomes = outcomes[outcomes.horizon == horizon]
     p.load_starter()
     positions = {day: i for i, day in enumerate(p.CAL)}
     links = pd.read_csv(BASE/'full_calendar_control_candidates.csv', parse_dates=['event_entry', 't_0'])
@@ -47,7 +53,7 @@ def analyze():
                 for event in events.itertuples(index=False):
                     key = (event.ticker, event.t_0)
                     if key not in indexed.index:
-                        exclusions.append(dict(tag=tag, strategy=strategy, max_age_seconds=age,
+                        exclusions.append(dict(tag=tag, strategy=strategy, horizon=horizon, max_age_seconds=age,
                             ticker=event.ticker, entry_date=event.t_0, reason='unusable event quote or stock'))
                         continue
                     priced = indexed.loc[key]
@@ -55,10 +61,10 @@ def analyze():
                     candidates = cell[(cell.ticker == event.ticker) & cell.entry_date.isin(allowed)]
                     ordinary = choose_controls(priced, candidates, positions)
                     if not ordinary:
-                        exclusions.append(dict(tag=tag, strategy=strategy, max_age_seconds=age,
+                        exclusions.append(dict(tag=tag, strategy=strategy, horizon=horizon, max_age_seconds=age,
                             ticker=event.ticker, entry_date=event.t_0, reason='no usable strict ordinary-day match'))
                         continue
-                    row = dict(tag=tag, strategy=strategy, max_age_seconds=age, ticker=event.ticker,
+                    row = dict(tag=tag, strategy=strategy, horizon=horizon, max_age_seconds=age, ticker=event.ticker,
                         entry_date=str(event.t_0.date()), controls=len(ordinary),
                         intervals=[(str(event.t_0.date()), str(priced.exit_date.date()))] +
                                   [(str(x.entry_date.date()), str(x.exit_date.date())) for x in ordinary])
@@ -81,18 +87,26 @@ def analyze():
                     means = sums[draws].sum(axis=1)/sizes[draws].sum(axis=1)
                     alpha = .05/(2*SPEC['family_size'])
                     lo, hi = np.quantile(means, [alpha, 1-alpha])
-                summaries.append(dict(tag=tag, strategy=strategy, max_age_seconds=age, events=len(frame),
+                summaries.append(dict(tag=tag, strategy=strategy, horizon=horizon, max_age_seconds=age, events=len(frame),
                     companies=frame.ticker.nunique() if len(frame) else 0, dependence_clusters=len(labels),
                     difference=frame.difference.mean() if len(frame) else np.nan, ci_lo=lo, ci_hi=hi,
-                    conclusion='EXPLORATORY SENSITIVITY' if age != 60 else
+                    conclusion='EXPLORATORY SENSITIVITY' if age != 60 or horizon != '21' else
                     'DISCOVERY SIGNAL: VALIDATION REQUIRED' if np.isfinite(lo) and (lo > 0 or hi < 0) else 'INCONCLUSIVE'))
-    pd.DataFrame(matches).to_json(OUT/'bid_ask_strict_matches.json.gz', orient='records', compression='gzip')
-    pd.DataFrame(exclusions).to_csv(OUT/'bid_ask_matching_exclusions.csv', index=False)
-    pd.DataFrame(summaries).to_csv(OUT/'bid_ask_primary_and_age_sensitivity.csv', index=False)
-    primary_count = sum(row['max_age_seconds'] == 60 for row in summaries)
+    pd.DataFrame(matches).to_json(out/f'{prefix}bid_ask_strict_matches.json.gz', orient='records', compression='gzip')
+    pd.DataFrame(exclusions).to_csv(out/f'{prefix}bid_ask_matching_exclusions.csv', index=False)
+    pd.DataFrame(summaries).to_csv(out/f'{prefix}bid_ask_primary_and_age_sensitivity.csv', index=False)
+    primary_count = sum(row['max_age_seconds'] == 60 and horizon == '21' for row in summaries)
     sensitivity_count = len(summaries)-primary_count
     print(f'Saved {primary_count} primary comparisons and {sensitivity_count} quote-age sensitivities; validation remains separate.')
+    return pd.DataFrame(summaries)
 
 
 if __name__ == '__main__':
-    analyze()
+    import sys
+    if '--all-horizons' in sys.argv:
+        extended = OUT/'all_horizons'
+        horizons = json.loads((extended/'registration.json').read_text())['fixed_horizons']
+        frames = [analyze(extended, horizon, prefix=f'horizon_{horizon}_') for horizon in horizons]
+        pd.concat(frames, ignore_index=True).to_csv(extended/'all_fixed_horizon_summary.csv', index=False)
+    else:
+        analyze()

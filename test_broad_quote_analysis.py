@@ -70,6 +70,22 @@ class AnalysisIntegrationTest(unittest.TestCase):
             with patch.object(finish, 'ROOT', root), patch.object(finish, 'OUT', out):
                 with self.assertRaisesRegex(RuntimeError, 'pre-return usable counts'):
                     finish.verify()
+            # A strong synthetic one-session result must not leak into the primary horizon.
+            primary_rows = pd.DataFrame(rows)
+            primary_rows['horizon'] = '21'
+            short_rows = primary_rows.copy()
+            short_rows['horizon'] = '1'
+            event_mask = short_rows.entry_date == '2024-03-04'
+            short_rows.loc[event_mask, ['net', 'midpoint_net']] += .50
+            pd.concat([primary_rows, short_rows], ignore_index=True).to_csv(
+                out/'bid_ask_trade_outcomes.csv.gz', index=False)
+            with patch.object(analysis, 'BASE', base), patch.object(analysis, 'OUT', out), \
+                 patch.object(analysis.p, 'load_starter'), patch.object(analysis.p, 'CAL', calendar, create=True):
+                sensitivity = analysis.analyze(horizon='1', prefix='horizon_1_')
+                repeated_primary = analysis.analyze()
+            np.testing.assert_allclose(sensitivity[sensitivity.strategy == 'covered_call'].difference, [.52, .52])
+            self.assertTrue((sensitivity.conclusion == 'EXPLORATORY SENSITIVITY').all())
+            np.testing.assert_allclose(repeated_primary[repeated_primary.strategy == 'covered_call'].difference, [.02, .02])
 
 
 if __name__ == '__main__':
