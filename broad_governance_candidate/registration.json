@@ -1,0 +1,29 @@
+{
+  "id": "GOV-broad-routine-covered-call-v1",
+  "hypothesis": "Covered calls after routine affirmative annual-meeting recaps add more net value over stock than matched ordinary-day calls because subsequent upside surrendered is limited relative to premium collected.",
+  "universe": "All historically mapped filing tickers outside starter TOP_100; no current-active or current market-cap filter. Listed standard options and equity type still require point-in-time verification.",
+  "windows": {
+    "discovery": [
+      "2022-03-07",
+      "2023-12-31"
+    ],
+    "validation": [
+      "2024-01-01",
+      "2025-12-31"
+    ]
+  },
+  "public_entry": "Following trading close strictly after date-only public filing",
+  "arm": "Routine-compatible affirmative election/ratification/approval excerpts; exclude charter/bylaw/control/voting-rights changes and unknown/adverse flags; expectations not proven, full text audit required.",
+  "controls": "Original ANY-disclosure \u00b130 calendar-day exclusion; same company/year/quarter/weekday within63 sessions, nearest3; later DTE\u00b17 and identical starter strike algorithms",
+  "blocks": "Event and control 21-session primary holding intervals must fit entirely inside the same calendar quarter. One event per issuer per window chosen by fixed SHA256 accession/date ordering, before quote coverage; no replacement after missing quotes.",
+  "rationale": "No issuer repeats and quarter-contained primary event/control intervals keep calendar blocks separate under the unchanged union dependence method. Avoid selection on trade outcomes.",
+  "primary_horizon": 21,
+  "expiry": "starter3-6m",
+  "strike": "starter5%OTM call",
+  "minimum_events": 40,
+  "minimum_dependence_components": 5,
+  "pricing": "Buy stock at observed entry price; sell call bid and close ask; commission65c percontractside; valid sized latestquotes before16ET age60s; capacity diagnostic",
+  "history": "Selected after related TOP_100 governance outcomes; excluded previously studied companies to keep newly expanded validation outcomes uninspected; not a judges sealed window.",
+  "decision": "Feasible only after quote-covered matched counts and >=5 dependence groups in both windows. This stage only verifies calendar upper bounds; no supporting effect claim.",
+  "sensitivity": "Every fixed horizon and expiry; 300-second quotes, costs, actual moneyness/RV, text uncertainty; inference separately recomputed for long overlapping horizons; 120-comparison family retained"
+}

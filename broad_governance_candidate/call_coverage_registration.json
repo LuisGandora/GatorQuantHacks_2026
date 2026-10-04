@@ -1,0 +1,15 @@
+{
+  "id": "GOV-broad-call-coverage-v1",
+  "scope": "Contracts/quotes and stock inputs only, never compute P&L",
+  "equity_types": [
+    "CS",
+    "ADRC"
+  ],
+  "selection": "All count-eligible candidates in fixed SHA256 order within quarters, visit quarters round-robin",
+  "stop": "Coverage collection may stop after >=40 usable matched events and >=5 primary dependence components per window; no outcome consulted. Count checkpoint is not a final effect estimate.",
+  "contract": "Starter3-6m expiry and5%OTMcall selected prior-session observedstock; actual entry strike must exceed spot",
+  "quote": "Latest before16ET, age<=60s, positivebid/ask andsizes atentry and21-sessionexit",
+  "controls": "Nearest3 usable sameissuer controls withDTE difference<=7sessions, fixedcalendarcandidateinventory, no replacements for failed eventquotes",
+  "stock": "Exclude split adjustment-factor changes >.5% across selection/hold; all prices positive",
+  "sensitivity": "All fixed horizons still required for eventual performance test; only primary coverage established here"
+}
