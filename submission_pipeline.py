@@ -25,6 +25,7 @@ SUMMARY_PATHS = (
 )
 PINNED_CODE_PATHS = (
     "gator-quant-hacks-8k-options-challenge.ipynb", "pair_test.py", "pairings.json",
+    "harness.py", "jev.py", "jev_scores.csv",
 )
 FIXED_HORIZONS = (1, 2, 3, 5, 10, 21, 42, 63, "exp")
 PRIMARY = {"strategy": "cash_secured_put", "bucket": "3-6m",

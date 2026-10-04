@@ -1,5 +1,12 @@
 # Submission Evidence Packet
 
+
+**October 4, 2026 QA addendum.** The final note now targets at most two pages,
+which satisfies both supplied page ceilings. Current `runs/FINDINGS.md` corrects
+the unsupported underpricing headline and VRP gross/net wording without changing
+any numeric result. The snapshot and discrepancy register below describe the
+original pinned artifacts; these corrections do not retroactively alter them.
+The older PDF remains historical documentation and is not a final submission note.
 **Purpose.** Factual handoff for the eventual Massive quant note and notebook. This packet summarizes only the committed aggregate evidence in snapshot `5d7b7b57879b6b4cb27319b827ad97d9783e63d8`. It is not the final report and does not authorize another market-data run. Aggregate values below are attributed to the documents that report them; unopened event-level records have not been independently recomputed.
 
 **Snapshot boundary.** Experiments 8–12, experiment 9B, later blind reviews, numeric-guidance work, implementation/source audits, and their result artifacts are absent from this snapshot. No values or methods from unmerged work are included. The current tree has no committed `runs/audit/*.csv` files. Documents describe `freeze-v2` and `vrp-v1`, but the corresponding tags are missing from the available local/origin tag set; exact tag provenance and guards therefore remain unverified. Treat these as blockers to reproducibility claims, not as evidence that a freeze can be recreated. The historical OOS results below were already reported by the project; this worker did not open raw OOS or sealed observations.

@@ -35,7 +35,8 @@ or bypass the guards to get a result.
    and machine-readable reported metrics.
 4. [runs/FINDINGS.md](runs/FINDINGS.md): existing research narrative;
    [runs/FINDINGS.pdf](runs/FINDINGS.pdf) is an existing four-page draft, **not the final
-   report**. The final note must be reviewed for factual consistency and length.
+   report**. Write the final note within **two pages**, satisfying both the starter
+   maximum and the supplied five-page ceiling; review factual consistency before submission.
 5. [runs/PREREG.md](runs/PREREG.md), [runs/APPENDIX.md](runs/APPENDIX.md),
    [runs/EXTRAS.md](runs/EXTRAS.md), [runs/audit_notes.md](runs/audit_notes.md), and
    [runs/APPENDIX_VRP.md](runs/APPENDIX_VRP.md): protocol, methodology, audits,

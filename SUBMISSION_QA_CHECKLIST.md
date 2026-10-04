@@ -54,17 +54,17 @@ original package versions or a claim of bit-for-bit provider reproduction.
 | Authoritative evidence packet | PASS | Worker A completed the 15-section packet from pinned committed aggregate sources, with missing metrics and disagreements explicit. |
 | Experiments 8–12 / newer semantic research in briefs | BLOCKER | Not present in current remote main. Do not substitute private logs, another branch, or invented results. If these are required for the intended final submission, merge their completed, reviewed, publication-safe artifacts first. |
 | F1 headline | PASS | LEADERBOARD, FINDINGS and EXTRAS agree on −1.19% IS n55 and −0.70% reported 2026 OOS n25 for the gross headline edge. |
-| Underpricing as established mechanism | FAIL | Negative put-selling edge is not by itself proof of mispricing or a profitable mirror trade. README now reports rejection of the original hypothesis and qualifies the interpretation. |
+| Underpricing interpretation | PASS | README, notebook and current FINDINGS now report the failed payoff hypothesis and qualify the post-hoc mechanism. Counterparty motives were not observed; the protective-put mirror was not tested. Pinned historical wording is preserved with an explicit correction. |
 | Denominator consistency | BLOCKER | EXTRAS capacity n56 versus headline55; yearly rows n27/32 and OOS27 versus headline25 lack a public row-level population/horizon reconciliation. Packet records each separately. |
 | Full per-horizon numeric counts/CIs in public summaries | BLOCKER | Display all fixed horizons with missing fields explicit. Do not invent detailed intervals from stars or headline averages. Live reproduction or reviewed safe aggregate export is needed for complete numbers. |
 | 2026 status | PASS | F1 OOS was reported opened; VRP pooled H2 OOS was reported opened. No category advanced from VRP BH selection. Do not claim all 2026 remained sealed. |
-| Gross/net consistency | FAIL | Historical FINDINGS calls both VRP strategy edge and own net P&L gross; preregistration/MAP distinguish gross event-minus-control edge from own net return after assumed costs. Packet records the discrepancy; historical result not altered. |
+| Gross/net consistency | PASS | Current FINDINGS corrects the wording: VRP strategy edge is gross event-minus-ordinary return; own net P&L is after assumed costs. No numeric result changed. Packet and metrics retain the pinned historical discrepancy and document the correction. |
 | Preregistered primary versus headline | PASS | Packet distinguishes fresh-minus-stale primary (IS −1.03%, interval includes zero) from fresh-versus-ordinary headline. Neither is a supported profitable strategy. |
 | Judges' sealed status | PASS | No sealed evaluation performed in this task. Existing predictions are separate from observed replication. |
-| Historical results / protocols / research code | PASS | No research outcomes, membership, thresholds, strategies, costs, controls, budget guards or historical ledger edited by QA. Verify final diff. |
+| Historical results / protocols / research code | PASS | No research outcomes, membership, thresholds, strategies, costs, controls, budget guards or historical ledger edited by QA. Findings changes correct prose only; pinned numerical evidence remains unchanged. |
 | Official challenge reference | PASS | Organizer-provided starter notebook and supplied rubric are identifiable; internal research gates are separate requirements. No updated organizer page-limit reference has been supplied. |
-| Report page limit | BLOCKER | Organizer starter says at most two pages; worker brief says five. Clarification pending; a four-page draft cannot be assumed compliant. |
-| Existing PDF versus Markdown findings | FAIL | Four-page PDF predates the VRP extension in Markdown. It describes VRP as prospective work, not the committed extension results; retain as a labeled historical draft. |
+| Report page limit | PASS | Final note targets at most two pages, satisfying both the organizer starter maximum and the supplied five-page ceiling. No organizer rule change is asserted. |
+| Existing PDF versus Markdown findings | PENDING | Older four-page PDF is explicitly labeled historical and excluded from final report use. Final note remains unwritten; it must incorporate the current evidence and be checked separately. |
 
 ## Notebook, README and date interface
 
@@ -95,7 +95,7 @@ original package versions or a claim of bit-for-bit provider reproduction.
 | Uncertainty | BLOCKER | Headline significance does not supply missing numeric per-horizon intervals; preserve original event-row bootstrap limits. |
 | Notebook runs | PASS | Offline Run All passed with HTTP blocked; live execution blocked by freeze provenance. |
 | Configurable judge dates | PASS | Interface and synthetic propagation passed; frozen calendar limits disclosed. |
-| Quant note / applicable page limit | PENDING | Final note not written; organizer starter says two pages while worker brief says five. Resolve limit before final review. |
+| Quant note / applicable page limit | PENDING | Final note not written. Selected two-page maximum meets both supplied ceilings; check the final PDF when the report writer produces it. |
 | Public GitHub / dependencies | PASS | Current main publicly referenced; fresh submission install verified. |
 | No key / `.env` / licensed cache in current tree | PASS | Configured scan and tracked path inspection passed. Historical publication issue remains. |
 | Sealed-window replication /20 | PENDING | Unscored; no judges' window result exists in this QA. |
@@ -120,5 +120,20 @@ status is checked after the consolidated QA commit. No private Codex logs were
 needed or published. No report writer
 should independently rediscover or repair the research: factual inputs are packet +
 unified notebook/metrics + QA output, with blockers retained.
+
+## Follow-up fixes, October 4, 2026
+
+- Corrected the current findings title, underpricing interpretation, unobserved
+  counterparty claims, and VRP gross/net wording. Every numeric result and the
+  original preregistered hypothesis remain unchanged.
+- Selected a two-page report target and reconciled the README, notebook, report
+  handoff, map, evidence addendum and metrics status. Preserved the older PDF as
+  historical documentation; final report production remains pending.
+- Extended judge-source integrity checks to `harness.py`, `jev.py` and
+  `jev_scores.csv`, alongside the original notebook, `pair_test.py` and
+  `pairings.json`. Missing historical freeze tags still fail before any live run.
+- Inspected commit metadata for freeze references. Multiple commits mention
+  `freeze-v2`; commit messages do not establish the missing historical tag object.
+  No tag was fabricated, research stage executed, or sealed/raw OOS data read.
 
 SUBMISSION QA: BLOCKED

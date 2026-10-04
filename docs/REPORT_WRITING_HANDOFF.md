@@ -122,9 +122,9 @@ Figure inventory: the packet identifies an existing F1 portfolio curve, the F1 a
 
 ## Page limit and publication blockers
 
-The page limit is unresolved. The challenge starter notebook says a maximum of two pages; the supplied report brief requests five pages. The five-page request is not evidence that the organizer permits five pages. Confirm the applicable rule before report layout or submission. Until then, maintain a two-page compression path and a five-page expanded path, but do not choose one as compliant.
+Use a **two-page maximum** for the final note. It satisfies the challenge starter's two-page maximum and the supplied five-page ceiling. This conservative target resolves the layout decision without asserting that the organizer changed its rules. The five-page outline in the original packet is historical planning only.
 
-The existing `runs/FINDINGS.pdf` is four pages and predates the completed VRP extension in the Markdown findings. It omits the completed VRP results and is not a final report. Do not reuse it as the submission PDF. If a five-page cap is confirmed, the packet's conditional five-page structure is a reasonable layout. If the two-page rule governs, use the packet's two-page compression: page one for hypothesis, method, and core results; page two for sensitivity, risk, and limitations, with VRP reduced to a short context line or compact table.
+The existing `runs/FINDINGS.pdf` is four pages and predates the completed VRP extension in the Markdown findings. It omits the completed VRP results and is not a final report. Do not reuse it as the submission PDF. Use the packet's two-page compression: page one for hypothesis, method, and core results; page two for sensitivity, risk, and limitations, with VRP reduced to a short context line or compact table.
 
 Other factual and provenance blockers to retain in the report review:
 
@@ -136,7 +136,7 @@ Other factual and provenance blockers to retain in the report review:
 - Exact F1 CI endpoints, issuer count, common matched count, absolute signal/control means, net edge, and bootstrap details are unavailable in the safe aggregate inputs.
 - The audit summary contains a prose/table disagreement on bottom events and a missing ACN table mean. Do not repeat inconsistent event names as verified findings.
 - The period-of-report proxy is not evidence of first public disclosure. No blind independent validation is available.
-- The historical findings text has a VRP gross/net wording discrepancy. Follow the distinction in the preregistration and map: strategy edge is gross event-minus-control; own net P&L is after assumed costs. Flag the source discrepancy for the parent.
+- The pinned historical findings text has a VRP gross/net wording discrepancy. Current Markdown corrects that wording; the pinned evidence snapshot is preserved. Follow the preregistration and map: strategy edge is gross event-minus-control; own net P&L is after assumed costs.
 - No actual sealed-window observations, dates, or result are available. Do not claim the project-reported 2026 OOS look is the sealed evaluation.
 
 The parent QA packet marks mock-date handling and a fresh offline Run All as passing. Those checks support notebook preparation only. They do not resolve the missing static F1 horizon-specific estimates, issuer counts, or numeric CI endpoints, and they do not establish live or sealed replication.
@@ -157,7 +157,7 @@ The report writer should verify each item before calling the report ready:
 - It treats VRP as a null map with zero of 18 BH passes and no category OOS look; it does not promote its descriptive strategy mapping.
 - It does not claim successful sealed replication, results for absent experiments, or that all 2026 evidence is unseen.
 - It includes material limitations: small reported OOS n, missing issuer/matched counts and numeric CI endpoints, assumed costs, static universe, and unresolved provenance.
-- It resolves the official two-page versus requested five-page conflict before final layout. The four-page PDF is not reused as final because it omits the VRP extension.
+- It fits within the selected two-page maximum, satisfying both supplied ceilings. The four-page PDF is not reused as final because it omits the VRP extension.
 - It cites the final metrics JSON as versioned to build `5d7b7b57879b6b4cb27319b827ad97d9783e63d8`, reports the matching headline comparisons, and preserves its null fields as unavailable.
 - Every figure, table, title, caption, and abstract uses the same estimand, units, costs, window labels, and qualifications as the text.
 - No figure implies values for unavailable metrics; no chart silently combines counts from different stages.

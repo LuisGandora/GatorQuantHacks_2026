@@ -52,10 +52,16 @@ class SubmissionSafetyTests(unittest.TestCase):
             loader.assert_not_called()
 
     def test_judge_sources_must_match_pinned_build(self):
-        with patch.object(S.subprocess, "run", return_value=types.SimpleNamespace(
-                returncode=0, stdout=b"different bytes")):
-            with self.assertRaisesRegex(S.SubmissionBlocked, "differs from pinned build"):
-                S.verify_pinned_sources(Path("."))
+        original_run = S.subprocess.run
+        for dependency in S.PINNED_CODE_PATHS:
+            with self.subTest(dependency=dependency):
+                def changed_source(command, **kwargs):
+                    if command[-1] == f"{S.BUILD_COMMIT}:{dependency}":
+                        return types.SimpleNamespace(returncode=0, stdout=b"different bytes")
+                    return original_run(command, **kwargs)
+                with patch.object(S.subprocess, "run", side_effect=changed_source):
+                    with self.assertRaisesRegex(S.SubmissionBlocked, "differs from pinned build"):
+                        S.verify_pinned_sources(Path("."))
         S.verify_pinned_sources(Path("."))
 
     def test_mock_judge_propagates_dates_and_displays_every_horizon(self):

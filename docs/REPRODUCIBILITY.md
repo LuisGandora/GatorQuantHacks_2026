@@ -96,6 +96,10 @@ artifacts; disagreement must be documented in the evidence packet and QA checkli
 The existing PDF is a four-page research draft and predates the variance-premium
 extension now described in the Markdown findings. It is not a synchronized final
 report. The organizer text in the starter notebook specifies at most two pages;
-the worker brief specifies five. Confirm the applicable limit before finalizing.
+the worker brief specifies a five-page ceiling. The submission target is **at most
+two pages**, which satisfies both stated limits. A five-page layout is unnecessary.
+The older PDF is preserved solely as historical documentation and must not be uploaded
+as the final note. Current Markdown corrects interpretation and gross/net wording;
+the notebook's pinned historical source and all numeric results remain unchanged.
 Check the final note against the evidence packet, metrics JSON, report map, and QA
 output. A report draft cannot resolve missing provenance or unsupported claims.

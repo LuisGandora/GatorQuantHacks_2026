@@ -5,8 +5,9 @@
     "status": "reconciled_with_documented_gaps",
     "evidence_packet": "SUBMISSION_EVIDENCE_PACKET.md",
     "evidence_packet_status": "complete and reconciled against pinned aggregate artifacts",
-    "final_report_status": "not ready: page limit conflict remains unresolved",
-    "reconciliation_note": "Notebook and metrics use only the committed aggregate snapshot. Missing fields remain null; reported OOS is labeled historical aggregate, not newly opened."
+    "final_report_status": "not written; selected maximum two pages satisfies both supplied ceilings",
+    "reconciliation_note": "Notebook and metrics use only the committed aggregate snapshot. Missing fields remain null; reported OOS is labeled historical aggregate, not newly opened.",
+    "documentation_corrections": "October 4, 2026: current FINDINGS.md qualifies underpricing and corrects VRP gross/net wording. Pinned historical evidence and all numeric metrics remain unchanged."
   },
   "recommended_centerpiece": "Rejected pre-registered fresh-leadership cash-secured-put hypothesis; no supported economic edge.",
   "primary_spec": {
@@ -1068,13 +1069,13 @@
   "known_discrepancies_and_blockers": [
     "Experiments 8–12, 9B, later blind reviews, numeric-guidance work, implementation/source audits, and related result artifacts are absent/unmerged in this snapshot.",
     "freeze-v* and vrp-v* tags are unavailable; historical tag provenance and guards cannot be independently verified.",
-    "Organizer starter specifies at most two pages; handoff brief requests five pages. Resolve before final report.",
+    "Organizer starter specifies at most two pages; handoff brief sets a five-page ceiling. Final note targets at most two pages, satisfying both.",
     "Pinned four-page FINDINGS.pdf references the planned variance-premium map but omits the completed VRP results in current FINDINGS.md.",
     "F1 preregistered primary is fresh-minus-stale; prominent headline is fresh-versus-ordinary. Both are retained; IS primary contrast is not supported.",
     "F1 denominators differ across discovery, priced primary, capacity, and calendar-year aggregates; no row-level reconciliation.",
     "Exact F1 CI endpoints, individual-horizon values, issuer counts, common matched N, and absolute signal/control gross/net means are unavailable.",
-    "FINDINGS.md underpricing title/summary is stronger than supported; this is a post-hoc unconfirmed mechanism and protective-put mirror was not tested.",
-    "VRP FINDINGS prose conflates gross strategy edge with own post-cost net P&L; current metrics preserve the source-specific distinction.",
+    "Pinned FINDINGS.md underpricing title/summary is stronger than supported; current Markdown corrects it. Mechanism remains post hoc and unconfirmed; protective-put mirror was not tested.",
+    "Pinned VRP FINDINGS prose conflates gross edge and own post-cost P&L; current Markdown corrects it, with all numerical metrics unchanged.",
     "Actual judge-sealed dates/results are unknown. The 2023-06..08 notebook dates are a configured placeholder, not verified judges dates."
   ],
   "unavailable_fields": {
