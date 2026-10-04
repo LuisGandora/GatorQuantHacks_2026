@@ -62,27 +62,20 @@ The `build_events` function (from the notebook, via `pair_test.py`) assumes ever
 
 **OOS API response for `investment_impairment`:**
 ```json
-{
-  "cik": "0001331421",
-  "accession_number": "0001493152-26-026929",
-  "filing_date": "2026-06-03",
-  "primary_category": "financial_results",
-  "secondary_category": "impairments_and_charges",
-  "tertiary_category": "investment_impairment",
-  "supporting_text": "The Company had previously determined the Traderverse Note to be impaired...",
-  "filing_url": "https://www.sec.gov/Archives/edgar/data/1331421/0001493152-26-026929.txt"
-}
+{"results": [{"tickers": "<field absent>"}]}
 ```
+
+This is a schematic description, not an API response. The original filing-level
+response has been removed from the public document. The defect was the absence
+of `tickers`; no filing excerpt or provider record is needed to explain it.
 Note: **no `tickers` key**.
 
 The in-sample response for the same category DOES have `tickers`:
 ```json
-{
-  "tickers": ["ES"],
-  "cik": "0000072741",
-  ...
-}
+{"results": [{"tickers": ["EXAMPLE"]}]}
 ```
+
+`EXAMPLE` is a synthetic symbol used only to illustrate the expected shape.
 
 ## Affected Code (cannot be edited per instructions)
 - `gator-quant-hacks-8k-options-challenge.ipynb` → `build_events` function (line 23)

@@ -9,3 +9,18 @@ __pycache__/
 runs/audit/
 runs/*.csv
 .omo/
+
+# Local credentials, API exports, and machine state
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store
+.massive_cache*/
+.polygon_cache*/
+data/raw/
+exports/
+runs/**/*.csv
+runs/**/*.log

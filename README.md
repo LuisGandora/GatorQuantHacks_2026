@@ -7,6 +7,11 @@ so a cash-secured put sold after them beats ordinary days. It is rejected in the
 worse than on ordinary days in-sample (−1.19%, n=55) and out-of-sample (−0.70%, n=25), negative in all 18 parameter
 neighbours in both windows. Capacity is small (about $0.5M), so this is a research finding, not a scalable strategy.
 
+## Devpost submission
+
+Start with [docs/DEVPOST.md](docs/DEVPOST.md) for the submission materials and data-sharing policy.
+Saved notebook outputs are cleared for publication; reproduce results locally with your own API access.
+
 ## Read in this order
 
 1. [`runs/FINDINGS.md`](runs/FINDINGS.md): the quant note (the PDF submitted on Devpost is this file).
@@ -29,6 +34,28 @@ same rule when `RUN_HOLDOUT = True`. The robustness tables come from `python rep
 | `report_extras.py` | Skew, months, years, costs in bps, capacity, sensitivity |
 | `vrp.py`, `runs/PREREG_VRP.md` | The next experiment: a pre-registered variance-premium map across all 8-K categories |
 | `jev.py`, `pairings.json` | The earlier JEV-based pairings (null results, appendix A3) |
+
+
+## Repository layout
+
+The root contains the runnable research pipeline, its inputs, the current submission notebook,
+and environment setup. Run all commands from the repository root so notebook imports and
+relative data paths resolve consistently.
+
+| Location | Contents and purpose |
+|---|---|
+| `gator-quant-hacks-8k-options-challenge.ipynb` | Current executable submission notebook; start here after setup. |
+| `harness.py`, `pair_test.py`, `jev.py`, `vrp.py`, `report_extras.py` | Research stages, scoring, and reporting. Their root paths are used by the notebook and experiment freeze checks. |
+| `pairings.json`, `*_labels.csv`, `jev_scores.csv` | Research specifications, human labels, and cached scores consumed by the pipeline. |
+| `runs/` | Preregistrations, findings, append-only ledger, and generated experiment artifacts. Preserve these as research evidence. |
+| [docs/PAIR_TEST_README.md](docs/PAIR_TEST_README.md) | Detailed category-to-strategy testing guide, including gates and audit interpretation. |
+| [archive/](archive/README.md) | Original starter notebook and historical development scripts; these are not the current research entry points. |
+| `.opencode/command/` | Research workflow commands for OpenCode. |
+| `setup.sh`, `setup.ps1`, `requirements.txt`, `.env.example` | Environment setup; `run_vrp.ps1` runs the VRP workflow on Windows. |
+
+Research entry points and inputs retain their current paths while an experiment is underway.
+Moving them requires a separately planned change to imports, notebook references, and freeze
+checks; an organizational cleanup must not silently change the frozen research implementation.
 
 ---
 
