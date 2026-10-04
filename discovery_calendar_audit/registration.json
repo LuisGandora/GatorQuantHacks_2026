@@ -1,0 +1,7 @@
+{
+  "reason": "The discovery control calendar used only the teammate CSV, which does not contain all Massive disclosures.",
+  "source": "Saved bid/ask matched intervals and all-tag Massive filing dates, padded by 30 calendar days",
+  "operation": "Flag saved ordinary dates with any same-company disclosure within 30 calendar days; count remaining controls without reading P&L values.",
+  "selection": "All ten categories and five strategies, primary 60-second quote age; no outcome-based event exclusion",
+  "interpretation": "Data-quality diagnostic, not a modified significance test or a replacement for saved baseline results"
+}

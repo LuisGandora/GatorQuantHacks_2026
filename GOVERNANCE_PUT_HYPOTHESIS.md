@@ -1,6 +1,8 @@
 # Testable hypothesis: cheaper downside insurance after annual meetings
 
-**Primary candidate:** Following an `annual_meeting_results` disclosure, the starter protective put adds more net value over stock alone than it does on comparable ordinary days. The proposed mechanism is cheaper downside insurance without a proportionate reduction in subsequent downside exposure.
+**Working candidate, now subject to a control-data-quality qualification:** Following an `annual_meeting_results` disclosure, the starter protective put adds more net value over stock alone than it does on comparable ordinary days. The proposed mechanism is cheaper downside insurance without a proportionate reduction in subsequent downside exposure.
+
+**Important update:** The initial discovery averages below use CSV-calendar controls. An all-tag disclosure-calendar audit finds that only 32 of the 49 protective-put events retain any clean saved control. Do not describe the initial +0.66-point average as a verified clean-baseline result. The baseline is preserved for transparency; clean rematching and usable counts must precede any revised performance calculation.
 
 This is a predictive category-to-strategy link, not a claim that routine voting causes a selloff. A plausible explanation is that a scheduled governance milestone coincides with reduced option uncertainty while residual business and calendar risks remain. Earnings timing, volatility differences, and contract moneyness are competing explanations that must be checked.
 
@@ -52,3 +54,5 @@ The January–August 2026 starter window contains 69 eligible annual-meeting com
 Because the source CSV ends in 2025, it cannot establish clean ordinary days in 2026. `governance_put_results/control_calendar_amendment.json` records a correction made before validation prices: use the full Massive all-tag disclosure calendar, with 30-day padding. It preserves the economic hypothesis, matching rules, costs and gates. Missing 2026 CSV records are not treated as proof of no disclosure.
 
 An outcome-free check of all ten previously screened categories found that none has 40 control-eligible validation events. Counts are in `validation_feasibility_results/category_coverage.csv`. The governance candidate remains a plausible discovery-selected hypothesis, but **the prescribed historical validation is currently not feasible**. Do not lower the event gate, loosen disclosure exclusions, or pool unrelated tags simply to obtain a result. A larger independent validation sample or a separately justified research design would be needed for a conclusive claim.
+
+The discovery-calendar audit also found zero of the 50 saved primary cells retaining 40 events with any clean saved control. That audit considers the controls already selected; it does not prove that rematching the entire existing pool cannot recover other clean controls. Counts and flagged rows are in `discovery_calendar_audit/`. No discovery returns were recalculated by that audit.
