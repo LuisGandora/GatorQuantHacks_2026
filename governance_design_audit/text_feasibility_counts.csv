@@ -1,0 +1,8 @@
+window,classification,events,companies,calendar_matched_upper_bound,existing_iv_matched_inputs,calendar_count_gate
+current_csv,routine_compatible,111,66,52,4.0,True
+current_csv,unknown_review,39,26,21,5.0,False
+expanded_early,adverse_review,1,1,1,0.0,False
+expanded_early,routine_compatible,105,63,52,5.0,True
+expanded_early,unknown_review,34,26,11,0.0,False
+replication_2026,routine_compatible,56,56,27,,False
+replication_2026,unknown_review,13,13,9,,False

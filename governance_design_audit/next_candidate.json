@@ -1,0 +1,19 @@
+{
+  "id": "GOV-routine-recap-covered-call-design-v1",
+  "status": "Design candidate only; no pricing authorized by this registration",
+  "hypothesis": "Covered calls after routine affirmative annual-meeting recaps add more net value relative to stock alone than matched ordinary-day calls because limited subsequent upside makes the surrendered upside smaller relative to premium received.",
+  "tag": "annual_meeting_results",
+  "strategy": "covered_call",
+  "selection_basis": "Text-only event abundance and calendar coverage, not returns",
+  "classification": "Provisional; validate ordinary elections/ratification, exclude consequential governance changes using a prospective text rule, retain unknowns as unknown",
+  "primary_horizon": 21,
+  "expiry": "starter 3-6 months",
+  "strike": "starter 5% OTM call",
+  "baseline": "Original full-calendar 30-day ordinary matching retained",
+  "alternative_calendar": "Not selected or adopted; requires an economic rationale and taxonomy audit before pricing",
+  "minimum_events": 40,
+  "minimum_dependence_components": 5,
+  "validation": "Baseline routine 2026 calendar upper bound 27; fails before pricing. Alternative diagnostic upper bounds are not usable trade counts or independent replication.",
+  "history": "Related annual-meeting P&L already inspected; discovery-selected hypothesis, not unseen validation",
+  "next_action": "Blinded text and material-calendar validation, then prospective call-specific coverage count; no return test yet"
+}

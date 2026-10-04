@@ -1,0 +1,13 @@
+window,diagnostic,events,outcomes_read
+current_csv,event_usable,131,False
+current_csv,baseline,9,False
+current_csv,no_maturity,20,False
+current_csv,no_moneyness,17,False
+current_csv,no_rv,17,False
+current_csv,quote_only,64,False
+expanded_early,event_usable,118,False
+expanded_early,baseline,5,False
+expanded_early,no_maturity,12,False
+expanded_early,no_moneyness,12,False
+expanded_early,no_rv,11,False
+expanded_early,quote_only,51,False

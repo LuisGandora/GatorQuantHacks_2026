@@ -1,0 +1,11 @@
+{
+  "id": "GOV-text-and-matching-audit-v1",
+  "scope": "Text and existing entry-input metadata only; never load IV matches, returns or P&L",
+  "routine": "Explicit completed annual meeting and affirmative election/ratification/approval evidence; no adverse-review flag. Routine-compatible evidence, not proof of expectations.",
+  "adverse": "Explicit failed board-nominee election, rejected say-on-pay/management compensation, proxy contest or contested election. Adverse-review candidate, not proof of unexpected outcome.",
+  "ambiguity": "Rejection of shareholder proposals alone is not adverse; ambiguous excerpts remain unknown. Conflicting evidence goes to review.",
+  "gate_audit": "Keep baseline gates. Report one-at-a-time omissions as metadata coverage diagnostics only; no alternative prices or outcomes.",
+  "calendar_diagnostic": "Compare baseline all-tag \u00b130d with all-tag \u00b17d and all-tag \u00b11d plus earnings/leadership/financing/acquisition/regulatory \u00b130d. Proposed alternatives, not adopted controls.",
+  "strategies": "Routine-compatible -> covered call candidate; adverse-review -> protective put candidate; choose based on coverage only; >=40 and independent validation required",
+  "warning": "Post-discovery research; text flags are provisional until blinded manual audit; no high/low JEV changes"
+}
