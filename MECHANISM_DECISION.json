@@ -1,0 +1,239 @@
+{
+  "document": "MECHANISM_DECISION",
+  "kind": "bounded mechanism critique and next-action decision; advisory; freezes nothing",
+  "version": 2,
+  "author": "DeepSeek (opencode-go/deepseek-v4.1-flash)",
+  "authorship_note": "Orchestrator record from the actual model invocation.",
+  "authority": "advisory input to the research owner, who owns the direction decision",
+  "worker_mandate_note": "The worker-specific read-only / no-financial-run mandate constrains what this worker executes; it is NOT a project-level authorization barrier. The user broadly authorized research, and no new approval is required for routine, permitted acquisitions. B is rejected on weak identification and an incomplete current source base, not on unauthorized acquisition.",
+  "decision": "no_defensible_new_financial_test",
+  "recommended_bounded_action": "C_measurement_integrity_no_edge",
+  "rejected_as_financial_tests_now": [
+    {
+      "id": "A_credit_calibration_hedge",
+      "reason": "only mechanism worth a frozen source/power gate, but the gate is likely to fail and it is not recommended to start now"
+    },
+    {
+      "id": "B_metadata_information_saturation",
+      "reason": "weak identification and an incomplete current source base; NOT unauthorized acquisition"
+    }
+  ],
+  "selection_basis": "identification and power, not largest point estimate; the repository has no qualified, supported positive candidate; earnings has positive point estimates in places and the two estimable fixed sensitivity intervals both contain zero, while the primary interval is unavailable",
+  "qualified_positive_candidate": false,
+  "earnings_positive_point_estimates_exist": true,
+  "earnings_estimable_sensitivity_intervals_both_contain_zero": true,
+  "inference_exposure_ledger": {
+    "read_public": [
+      "gator-quant-hacks-8k-options-challenge.ipynb",
+      "README.md",
+      "RESEARCH_ROUTE_REVIEW.md",
+      "RESEARCH_ROUTE_REVIEW.json",
+      "RESEARCH_NEXT_DIRECTION.md",
+      "EXPERIMENT.md",
+      "SEMANTIC_DISCOVERY_PROMPT.md",
+      "EARNINGS_PAYOFF_RESULTS.md",
+      "EARNINGS_PAYOFF_REVIEW.md",
+      "EARNINGS_PAYOFF_PROTOCOL.md",
+      "EARNINGS_PAYOFF_HORIZONS.json",
+      "EARNINGS_PAYOFF_SENSITIVITY.json",
+      "EARNINGS_PAYOFF_FREEZE.json",
+      "CREDIT_FACILITY_FEASIBILITY.md",
+      "HISTORICAL_CREDIT_COVERAGE.md",
+      "HISTORICAL_CREDIT_REVIEW.md",
+      "CREDIT_TERMS_PILOT.md",
+      "CREDIT_TERMS_PILOT_PROTOCOL.md",
+      "CREDIT_TERMS_PILOT_REVIEW.md",
+      "NOVELTY_RESULTS.md",
+      "EXPANDED_GUIDANCE_RESULTS.md",
+      "RISK_COMPOSITION_REVIEW.md",
+      "REPURCHASE_SOURCE_RESULTS.md",
+      "BENCHMARK_RESULTS.md"
+    ],
+    "read_commands": "local read-only only: git status, wc, glob, grep, plus read-only parsing of the public JSON aggregates above",
+    "not_read": [
+      "any raw payoff row",
+      "outcomes.sqlite",
+      "comparisons.json",
+      "pricing_coverage.json",
+      "any outcomes.csv or tests.csv",
+      "any private cache",
+      "credit_terms_pilot/source_evidence.json",
+      "novelty_results/source_filings.json",
+      ".novelty_cache",
+      ".massive_cache",
+      "any 2026 filing or outcome",
+      "any record inside 2023-06-01..2023-08-31"
+    ],
+    "network_requests": 0,
+    "model_or_api_calls": 0,
+    "jev_requests": 0,
+    "financial_code_execution": false,
+    "public_json_parsed_read_only": true,
+    "no_code_execution_claim_removed": "the earlier blanket no-code-execution claim was false because public JSON was parsed; the correct claim is no financial code execution",
+    "classifier_or_semantic_score_built": false,
+    "files_created": [
+      "MECHANISM_DECISION.md",
+      "MECHANISM_DECISION.json",
+      "RESEARCH_FINDINGS_DRAFT.md"
+    ],
+    "files_edited_other_than_created": [
+      "MECHANISM_DECISION.md",
+      "MECHANISM_DECISION.json"
+    ],
+    "committed": false
+  },
+  "stop_classifiers_interpretation": {
+    "instruction": "no classifiers, no semantic extraction scores, no inference pipeline",
+    "reading": [
+      "forbids text-based or model-based labeling used to define events, severity or novelty",
+      "forbids a pipeline that infers economic facts the source does not state",
+      "a deterministic partition from recorded metadata fields is not automatically a classifier",
+      "that interpretation does not rescue B, whose endpoint is a financial outcome and whose identification is weak",
+      "a metadata rule drifts into a classifier once it encodes filing type, materiality or same-event judgments"
+    ]
+  },
+  "candidates": [
+    {
+      "id": "A_credit_calibration_hedge",
+      "name": "Credit-tag calibration and the protective-put-minus-stock hedge leg",
+      "basis": "taxonomy tag cohort plus option chain; mark-to-market hedge leg H = protective_put - stock",
+      "window": "2024-01-01..2025-12-31",
+      "disciplining_facts": [
+        "pilot paired maturity 1/12, paired capacity 0/12",
+        "configured 2024-2025 direct cohort about 62 filings / 38 issuers",
+        "notebook fixes contestant financial dates, so the 147-filing historical block cannot raise financial N",
+        "clean eligible-renewal cohort UNKNOWN and no text classifier permitted",
+        "Experiment 6 130 source events to 54 matched / 17 clusters is TOTAL strict eligibility and matching attrition, not all attributable to the mark rule",
+        "no transferable observed retention assumption from Experiment 6 to A"
+      ],
+      "grades": {
+        "novelty": 3,
+        "economic_mechanism": 3,
+        "data_feasibility": 2,
+        "robustness_to_costs_and_uncertainty": 2,
+        "massive_fit": 4,
+        "total": 14
+      }
+    },
+    {
+      "id": "B_metadata_information_saturation",
+      "name": "Metadata information saturation (issuer's first filing after a quiet interval vs a filing preceded by the same issuer's earlier filing)",
+      "basis": "original Massive accession/issuer/filing-date metadata only",
+      "treatment": "issuer's first filing after a fixed 20-session quiet interval versus a filing preceded by the same issuer's earlier filing in the prior 20 sessions",
+      "intended_reading": "same-issuer earlier filing, which the prompt explicitly intended; the literal cross-issuer reading is dropped",
+      "financial_window": "2024-01-01..2025-12-31",
+      "left_truncation": "January 2022 is not a left-truncation problem for the 2024-2025 financial window given an adequate allowed pre-2024 warmup",
+      "remaining_concerns": [
+        "tag-selected caches do not hold the issuer's complete all-filings history, so a quiet interval cannot be proven",
+        "event co-occurrence: one accession can carry several item tags and issuers; accessions vs filings vs issuer-days not cleanly countable",
+        "identification is weak because first-versus-repeat conflates filing type, earnings co-occurrence and issuer news cadence"
+      ],
+      "status": "rejected on weak identification and an incomplete current source base; NOT unauthorized acquisition",
+      "grades": {
+        "novelty": 3,
+        "economic_mechanism": 2,
+        "data_feasibility": 1,
+        "robustness_to_costs_and_uncertainty": 2,
+        "massive_fit": 2,
+        "total": 10
+      }
+    },
+    {
+      "id": "C_measurement_integrity_no_edge",
+      "name": "Technical measurement / replication-integrity result with no trading claim",
+      "basis": "already-published aggregates and frozen identity only",
+      "claim": "no positive trading edge; measurement only",
+      "cost_robustness_note": "cost-robustness is n/a, not 4: a factual measurement makes no cost-sensitive claim, so nothing about it is robust to costs; calling it robust would pretend a known research outcome",
+      "grades": {
+        "novelty": 2,
+        "economic_mechanism": 1,
+        "data_feasibility": 5,
+        "robustness_to_costs_and_uncertainty": null,
+        "massive_fit": 3,
+        "total_excluding_na": 11
+      }
+    }
+  ],
+  "five_factor_comparison": {
+    "scale": "1 weakest, 5 strongest; higher novelty is not automatically better",
+    "totals_are_descriptive_not_the_decision_rule": true,
+    "C_ranks_highest_only_because_feasible_and_makes_no_claim": true,
+    "C_ranking_does_not_identify_a_positive_financial_solution": true,
+    "table": [
+      {"axis": "novelty", "A": 3, "B": 3, "C": 2},
+      {"axis": "economic_mechanism", "A": 3, "B": 2, "C": 1},
+      {"axis": "data_feasibility", "A": 2, "B": 1, "C": 5},
+      {"axis": "robustness_to_costs_and_uncertainty", "A": 2, "B": 2, "C": null},
+      {"axis": "massive_fit", "A": 4, "B": 2, "C": 3},
+      {"axis": "total_excluding_na", "A": 14, "B": 10, "C": 11}
+    ]
+  },
+  "required_gate_template_for_any_financial_candidate": {
+    "source_power_gate_before_any_price": true,
+    "identification_before_estimation": "one predeclared treatment with a clean counterfactual; no metadata rule that encodes semantics; no weak first-versus-repeat instrument",
+    "one_fixed_primary_plus_horizon_5": true,
+    "fixed_primary_plus_horizon_5_is_advisory_legacy": "the fixed primary-plus-horizon-5 choice is an advisory legacy convention, not a law; a new study needs its own prospective economic justification for its horizon",
+    "all_five_structures_historical_event_vs_ordinary": [
+      "long_call",
+      "covered_call",
+      "protective_put",
+      "collar",
+      "cash_secured_put"
+    ],
+    "stock_row": "same-source synthetic benchmark reference, not a sixth trade",
+    "option_exit_marks_before_expiry": "mark-to-market; expiration intrinsic valid only at the exp horizon",
+    "company_cluster_cis": "fixed seed, 1000 draws, minimum finite-draw fraction, one primary comparison, declared multiplicity treatment",
+    "costs": "commission, funding, premium-haircut scenarios plus modeled break-even haircut; no executable-spread claim",
+    "year_and_horizon_sensitivity": "2024 and 2025 separately, all fixed horizons, full frozen OTM/bucket/entry-delay/stale grid",
+    "no_lookahead_and_timing": "first eligible session after publication; acceptance pre-open vs post-close handled; filing lag named; pre-news jump never used",
+    "no_floor_relaxation": "60 matched / 20 issuer is an internal Experiment 6 gate, not an organizer rule; replace only via a new pre-outcome power-justified floor"
+  },
+  "candidate_b_source_completeness": {
+    "binding_gap_all_filings_history": "a 20-session quiet interval needs the issuer's complete filing history; tag-selected caches miss filings under other tags and cannot prove an interval was quiet",
+    "event_co_occurrence": "one accession can carry several item tags and issuers; must state accessions vs filings vs issuer-days and avoid double counting",
+    "warmup_not_truncation": "January 2022 is not a left-truncation bias for the 2024-2025 financial window when an adequate allowed pre-2024 warmup is used",
+    "timing_lag": "filing_date has no time of day and the 8-K is due within four business days; the 20-session window is a filing-date window",
+    "deterministic_selection": "split and interval length must be frozen with fixed tie-breaking; no post-outcome length choice",
+    "sample_and_multiple_testing": "threshold, split and controls form a family; one primary comparison and declared multiplicity treatment required",
+    "classifier_drift": "first vs repeat is metadata; it becomes a classifier if it adds filing type, materiality or same-topic judgments",
+    "conclusion": "B is rejected for weak identification and an incomplete current source base, not for unauthorized acquisition"
+  },
+  "prior_primary_literature": {
+    "status": "removed_until_verified",
+    "note": "No NBER link or orchestrator-supplied characterization is used as evidence in this review; literature claims and citations are removed until a permitted, verified read exists."
+  },
+  "guarantees_power_and_fishing": {
+    "guaranteed_positive_candidate": false,
+    "significance_fishing_rejected": true,
+    "no_tag_strategy_horizon_bucket_otm_threshold_search": true,
+    "no_dropping_failed_cells": true,
+    "no_post_outcome_threshold_change": true,
+    "no_point_estimate_substitution": true,
+    "earnings_positive_point_estimates_exist": true,
+    "earnings_fixed_sensitivity_cells_both_contain_zero": true,
+    "earnings_primary_interval_estimable": false,
+    "upgraded_to_positive": false,
+    "qualified_positive_candidate": false
+  },
+  "recommendation": {
+    "no_defensible_new_financial_test_now": true,
+    "bounded_next_action": "C_measurement_integrity_no_edge",
+    "C_scope": "verify published aggregates and frozen identity, restate implied-versus-realized calibration as a measurement, state plainly it is not a signal or an edge",
+    "C_constraints": [
+      "no new acquisition",
+      "no classifier or semantic score",
+      "no private payoff read",
+      "no 2026 or reserved-window read",
+      "no best-cell selection",
+      "no claimed sign"
+    ],
+    "factual_audits_support_measurement_validity_only": true,
+    "override_option": "if a financial route is authorized, only A, and only behind the frozen source/power gate; expects a source/power failure on the ~62-event cohort under strict marks; B is not a fallback",
+    "totals_not_used_as_selection_rule": true
+  },
+  "files_written": [
+    "MECHANISM_DECISION.md",
+    "MECHANISM_DECISION.json",
+    "RESEARCH_FINDINGS_DRAFT.md"
+  ]
+}

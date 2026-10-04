@@ -1,0 +1,106 @@
+{
+  "experiment": "4_guidance_uncertainty",
+  "protocol_sha256": "a7da4b630438cf02a2cb1dc2d25ea054c54c01d94bd3971552592bae68a9626c",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "universe_members": 100,
+  "enrollment": {
+    "taxonomy_rows": 1645,
+    "outside_universe_rows": 1584,
+    "filings": 60,
+    "companies": 27,
+    "same_day_collision_filings": 0,
+    "tags": {
+      "guidance_issuance_or_update": 60
+    }
+  },
+  "source_gate": {
+    "passed": false,
+    "checks": {
+      "potential_pairs": false,
+      "companies": false,
+      "source_failures": true
+    },
+    "potential_pairs": 43,
+    "companies": 17,
+    "failures": 0,
+    "exclusions": {
+      "no_current_bounded_candidate": 17
+    },
+    "caveat": "Potential candidates are not validated comparable forecasts or a statistical power estimate."
+  },
+  "citations": {
+    "candidate_quotes": 416,
+    "candidate_contexts": 416,
+    "parsed_packages": 60
+  },
+  "filings_by_year": {
+    "2024": 32,
+    "2025": 28
+  },
+  "source_http_cache_records": 4,
+  "prior_research_files_preserved": 2365,
+  "semantic": {
+    "status": "not_run_source_gate_failed",
+    "requests": 0,
+    "features": null,
+    "JEV_vs_baseline": null,
+    "latency": null,
+    "model_usage_cost_usd": 0
+  },
+  "economic": {
+    "status": "not_run_source_gate_failed",
+    "association": null,
+    "uncertainty_intervals": null,
+    "sensitivity": null,
+    "strategies": {
+      "long_call": {
+        "status": "not_run_source_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "covered_call": {
+        "status": "not_run_source_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "protective_put": {
+        "status": "not_run_source_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "collar": {
+        "status": "not_run_source_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "cash_secured_put": {
+        "status": "not_run_source_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      }
+    }
+  },
+  "decision": {
+    "status": "source_infeasible",
+    "hypothesis_tested": false,
+    "strategy_selected": null,
+    "oos_opened": false,
+    "judges_opened": false,
+    "reason": "43 potential numerical-range filings / 17 companies are below the frozen 80 / 20 feasibility floors. Even all 60 enrolled filings cannot reach 80. This is not a null economic result."
+  },
+  "limitations": [
+    "Massive guidance-tag coverage is not all corporate guidance disclosures.",
+    "Range candidates are unvalidated forecasts; comparability and semantic eligibility are unknown.",
+    "Sources before2024 are outside the boundary, reducing prior-guidance availability.",
+    "A static current universe can introduce survivorship bias.",
+    "Source/API subscription costs were not measured; zero model calls imply zero incremental JEV usage."
+  ]
+}

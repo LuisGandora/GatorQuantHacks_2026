@@ -1,0 +1,337 @@
+{
+  "reference_kind": "Luna model-reviewed, source-validated; not human gold",
+  "all": {
+    "cases": 50,
+    "accuracy": 0.84,
+    "macro_f1_supported_classes": 0.6558375754147813,
+    "per_class": {
+      "new_appointment": {
+        "support": 31,
+        "predicted": 33,
+        "precision": 0.9393939393939394,
+        "recall": 1.0,
+        "f1": 0.96875
+      },
+      "material_update": {
+        "support": 4,
+        "predicted": 2,
+        "precision": 0.5,
+        "recall": 0.25,
+        "f1": 0.3333333333333333
+      },
+      "routine_confirmation": {
+        "support": 4,
+        "predicted": 9,
+        "precision": 0.4444444444444444,
+        "recall": 1.0,
+        "f1": 0.6153846153846154
+      },
+      "insufficient_evidence": {
+        "support": 11,
+        "predicted": 6,
+        "precision": 1.0,
+        "recall": 0.5454545454545454,
+        "f1": 0.7058823529411765
+      }
+    },
+    "confusion": {
+      "new_appointment": {
+        "new_appointment": 31,
+        "material_update": 0,
+        "routine_confirmation": 0,
+        "insufficient_evidence": 0
+      },
+      "material_update": {
+        "new_appointment": 0,
+        "material_update": 1,
+        "routine_confirmation": 3,
+        "insufficient_evidence": 0
+      },
+      "routine_confirmation": {
+        "new_appointment": 0,
+        "material_update": 0,
+        "routine_confirmation": 4,
+        "insufficient_evidence": 0
+      },
+      "insufficient_evidence": {
+        "new_appointment": 2,
+        "material_update": 1,
+        "routine_confirmation": 2,
+        "insufficient_evidence": 6
+      }
+    },
+    "contradictions": 3,
+    "binary_cases": 39,
+    "baseline_binary_correct": 35,
+    "jev_binary_correct_counting_abstentions_as_errors": 35,
+    "jev_binary_usable": 37
+  },
+  "by_split": {
+    "development": {
+      "cases": 31,
+      "accuracy": 0.8709677419354839,
+      "macro_f1_supported_classes": 0.6476301476301476,
+      "per_class": {
+        "new_appointment": {
+          "support": 19,
+          "predicted": 20,
+          "precision": 0.95,
+          "recall": 1.0,
+          "f1": 0.9743589743589743
+        },
+        "material_update": {
+          "support": 3,
+          "predicted": 0,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "routine_confirmation": {
+          "support": 4,
+          "predicted": 7,
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1": 0.7272727272727273
+        },
+        "insufficient_evidence": {
+          "support": 5,
+          "predicted": 4,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.8888888888888888
+        }
+      },
+      "confusion": {
+        "new_appointment": {
+          "new_appointment": 19,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "material_update": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 3,
+          "insufficient_evidence": 0
+        },
+        "routine_confirmation": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 4,
+          "insufficient_evidence": 0
+        },
+        "insufficient_evidence": {
+          "new_appointment": 1,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 4
+        }
+      },
+      "contradictions": 2,
+      "binary_cases": 26,
+      "baseline_binary_correct": 23,
+      "jev_binary_correct_counting_abstentions_as_errors": 22,
+      "jev_binary_usable": 24
+    },
+    "evaluation": {
+      "cases": 19,
+      "accuracy": 0.7894736842105263,
+      "macro_f1_supported_classes": 0.7088888888888888,
+      "per_class": {
+        "new_appointment": {
+          "support": 12,
+          "predicted": 13,
+          "precision": 0.9230769230769231,
+          "recall": 1.0,
+          "f1": 0.96
+        },
+        "material_update": {
+          "support": 1,
+          "predicted": 2,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "routine_confirmation": {
+          "support": 0,
+          "predicted": 2,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 6,
+          "predicted": 2,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        }
+      },
+      "confusion": {
+        "new_appointment": {
+          "new_appointment": 12,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "material_update": {
+          "new_appointment": 0,
+          "material_update": 1,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "routine_confirmation": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "insufficient_evidence": {
+          "new_appointment": 1,
+          "material_update": 1,
+          "routine_confirmation": 2,
+          "insufficient_evidence": 2
+        }
+      },
+      "contradictions": 1,
+      "binary_cases": 13,
+      "baseline_binary_correct": 12,
+      "jev_binary_correct_counting_abstentions_as_errors": 13,
+      "jev_binary_usable": 13
+    }
+  },
+  "by_cohort": {
+    "additional": {
+      "cases": 16,
+      "accuracy": 0.5625,
+      "macro_f1_supported_classes": 0.4264705882352941,
+      "per_class": {
+        "new_appointment": {
+          "support": 2,
+          "predicted": 4,
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666
+        },
+        "material_update": {
+          "support": 2,
+          "predicted": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "routine_confirmation": {
+          "support": 1,
+          "predicted": 5,
+          "precision": 0.2,
+          "recall": 1.0,
+          "f1": 0.3333333333333333
+        },
+        "insufficient_evidence": {
+          "support": 11,
+          "predicted": 6,
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1": 0.7058823529411765
+        }
+      },
+      "confusion": {
+        "new_appointment": {
+          "new_appointment": 2,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "material_update": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 2,
+          "insufficient_evidence": 0
+        },
+        "routine_confirmation": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 1,
+          "insufficient_evidence": 0
+        },
+        "insufficient_evidence": {
+          "new_appointment": 2,
+          "material_update": 1,
+          "routine_confirmation": 2,
+          "insufficient_evidence": 6
+        }
+      },
+      "contradictions": 2,
+      "binary_cases": 5,
+      "baseline_binary_correct": 4,
+      "jev_binary_correct_counting_abstentions_as_errors": 3,
+      "jev_binary_usable": 4
+    },
+    "original": {
+      "cases": 34,
+      "accuracy": 0.9705882352941176,
+      "macro_f1_supported_classes": 0.8412698412698413,
+      "per_class": {
+        "new_appointment": {
+          "support": 29,
+          "predicted": 29,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "material_update": {
+          "support": 2,
+          "predicted": 1,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "routine_confirmation": {
+          "support": 3,
+          "predicted": 4,
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571
+        },
+        "insufficient_evidence": {
+          "support": 0,
+          "predicted": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "confusion": {
+        "new_appointment": {
+          "new_appointment": 29,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        },
+        "material_update": {
+          "new_appointment": 0,
+          "material_update": 1,
+          "routine_confirmation": 1,
+          "insufficient_evidence": 0
+        },
+        "routine_confirmation": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 3,
+          "insufficient_evidence": 0
+        },
+        "insufficient_evidence": {
+          "new_appointment": 0,
+          "material_update": 0,
+          "routine_confirmation": 0,
+          "insufficient_evidence": 0
+        }
+      },
+      "contradictions": 1,
+      "binary_cases": 34,
+      "baseline_binary_correct": 31,
+      "jev_binary_correct_counting_abstentions_as_errors": 32,
+      "jev_binary_usable": 33
+    }
+  }
+}

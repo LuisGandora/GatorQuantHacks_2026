@@ -1,0 +1,162 @@
+{
+  "experiment": "4B_expanded_guidance_uncertainty",
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "protocol_sha256": "3381fe03259605daf0df83ada082cb8ed98118b0cca26b0c5103e25ff6019b56",
+  "measurement_sha256": "aacae871d8d882395ef72a99d5dabcdbbcec17b0f405097fd654eb90b63fbc1a",
+  "enrollment": {
+    "taxonomy_rows": 5465,
+    "outside_universe_rows": 5237,
+    "filings": 208,
+    "companies": 54,
+    "same_day_collision_filings": 0,
+    "tags": {
+      "guidance_issuance_or_update": 60,
+      "preliminary_results": 25,
+      "quarterly_earnings": 131,
+      "annual_earnings": 11
+    }
+  },
+  "filings_by_year": {
+    "2024": 115,
+    "2025": 93
+  },
+  "source_gate": {
+    "passed": true,
+    "checks": {
+      "potential_pairs": true,
+      "companies": true,
+      "source_failures": true
+    },
+    "potential_pairs": 127,
+    "companies": 36,
+    "failures": 0,
+    "exclusions": {
+      "no_current_bounded_candidate": 81
+    },
+    "caveat": "Potential candidates are not validated comparable forecasts or a statistical power estimate."
+  },
+  "citations": {
+    "packages": 208,
+    "exact_range_quotes": 1015,
+    "exact_range_contexts": 1015
+  },
+  "semantic": {
+    "gate": {
+      "passed": false,
+      "checks": {
+        "eligible": false,
+        "companies": false,
+        "effective_company_n": false,
+        "company_share": false,
+        "malformed_fraction": true,
+        "uncertainty_sd": false,
+        "explicit_changed_events": false,
+        "changed_companies": false
+      },
+      "eligible": 3,
+      "companies": 1,
+      "effective_company_n": 1.0,
+      "max_company_share": 1.0,
+      "uncertainty_sd": 0.04041451884327371,
+      "malformed_fraction": 0.007874015748031496,
+      "explicit_changed_events": 0,
+      "changed_companies": 0,
+      "groups": {
+        "unchanged": 3
+      },
+      "exclusions": {
+        "no_confident_comparable_prior": 9,
+        "no_confident_current_guidance": 76,
+        "request1_capacity": 22,
+        "request2_capacity": 11,
+        "malformed_request1": 1,
+        "unchanged_with_claimed_change_evidence": 5
+      }
+    },
+    "source_candidates": 127,
+    "request_batches": 130,
+    "questions": 477,
+    "valid_questions": 473,
+    "malformed_requests": 1,
+    "batches_by_question_count": {
+      "4": 105,
+      "1": 17,
+      "5": 8
+    },
+    "http_attempts": 130,
+    "retries": 0,
+    "sum_request_wall_s": 36.161413914960576,
+    "mean_request_wall_s": 0.2781647224227737,
+    "median_request_wall_s": 0.2707259789967793,
+    "p95_request_wall_s": 0.3567703623535635,
+    "input_tokens": 660054,
+    "output_tokens": 24181,
+    "usage_missing_responses": 0,
+    "estimated_jev_cost_usd": 0.027722268,
+    "current_abstentions": 50,
+    "current_below_probability_floor": 26,
+    "complete_pair_measurements": 8,
+    "reviewed_pairs": 6,
+    "latest_prior_review_discrepancies": 3
+  },
+  "economic": {
+    "status": "not_run_semantic_gate_failed",
+    "JEV_vs_baseline": null,
+    "group_separation": null,
+    "uncertainty_intervals": null,
+    "sensitivity": null,
+    "strategies": {
+      "long_call": {
+        "status": "not_run_semantic_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "covered_call": {
+        "status": "not_run_semantic_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "protective_put": {
+        "status": "not_run_semantic_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "collar": {
+        "status": "not_run_semantic_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "cash_secured_put": {
+        "status": "not_run_semantic_gate_failed",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      }
+    }
+  },
+  "decision": {
+    "status": "semantic_infeasible",
+    "hypothesis_tested": false,
+    "strategy_selected": null,
+    "oos_opened": false,
+    "judges_opened": false,
+    "reason": "Expanded source coverage passed, but only three eligible unchanged forecasts from one company survived. No explicit changed-state contrast exists; this is not a null economic result."
+  },
+  "prior_research_files_preserved": 2574,
+  "limitations": [
+    "The 30,000-byte request ceiling is conservative and excluded 33 events across the first two stages.",
+    "Selected-range probabilities are not calibrated factual accuracy; one response violated the documented Choice argmax contract.",
+    "The deterministic review found three rejected pairs whose current text references a later prior forecast absent from the selected source pair.",
+    "The three eligible events are all Verizon 2024 adjusted EPS reaffirmations, not a representative sample of guidance disclosures.",
+    "Sources before2024 are excluded, reducing prior availability; static universe selection can cause survivorship bias.",
+    "Recurring contingency language is not an explicit change. No semantic superiority, economic null, or trading edge has been established.",
+    "Rate-based JEV usage estimate is not an invoice. Massive subscription and SEC acquisition costs were not measured."
+  ]
+}

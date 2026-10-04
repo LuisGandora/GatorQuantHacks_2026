@@ -1,0 +1,1227 @@
+{
+  "experiment": "9B uncertainty resolution delta, expanded leadership-transition cohort",
+  "decision": "eligible_for_economic_test",
+  "final_decision": null,
+  "hypothesis": "Among executive leadership-transition 8-K disclosures, filings that newly resolve material governance uncertainty that was still open immediately before the filing will subsequently realize less downside uncertainty than comparable leadership-transition filings that leave those questions unresolved or create new uncertainty. Because investors may continue paying for downside protection around a salient leadership transition after part of the underlying uncertainty has been resolved, 5%-OTM cash-secured puts entered using Massive's tradeable post-filing t0 rule with the 3-to-6-month expiry bucket should outperform issuer-matched ordinary-day cash-secured puts following positive uncertainty-resolution events. The primary evaluation horizon is +21 trading sessions.",
+  "protocol_sha256": "541101f997b5ebf7f4c9b26f60443a1ca217576e75fea513820e3194e077e5b0",
+  "taxonomy_decision_table_sha256": "7659521f22637435b68c60871bd9903bbbe2db7154fc841b226b572f9fed3b08",
+  "semantic": {
+    "state_evidence_sha256": "ce42c1c282aa13bc6d84db16eba6285ae407a8d1c806c3b0bad2b55738c15f9d",
+    "transitions_sha256": "b6f26549916aabe16c25a88d57005789335f02294050a6c620866d6da2c275f7",
+    "filing_deltas_sha256": "8e14527cd7c1a94800596625fab7e122de33d344f494e0cb863b0d115a0da691",
+    "feasibility_audit_sha256": "32554ee5276027e897dfaa55c57bf089273f306b6a9e9ca4e699e8a96c40b2d8",
+    "primary_rule_sha256": "df9a22b7618c57dffc597822f70c7d0ac68a3edf2f7ba14d200627b6cba2e075",
+    "exclusions_sha256": "a800c707a48d601badd91197b308769f22438fdd2bea8104ec4ca9360675922b",
+    "timing_sha256": "b95ff357b959640947cd028f6a01616c53f0b14e4ce5a7551b01244cda6c6f8f",
+    "semantic_sha256": "9a1f8e309fb06ffacd7363a89d5e3cb0272960e42412e829d361065bb9f94d30"
+  },
+  "semantic_sha256": "9a1f8e309fb06ffacd7363a89d5e3cb0272960e42412e829d361065bb9f94d30",
+  "validation_sha256": "9687a5e99a9a723b5e846ccd189d4737c4670199d2009792237ecfb36cda80f0",
+  "git": {
+    "head": "f8f9f18a499a4a0f1dc9466a755529abf2c8096c",
+    "preregistration_freeze": "f328387bed8ae51a4dfb07a93afe678f965437bc",
+    "enrollment_correction": "f8f9f18a499a4a0f1dc9466a755529abf2c8096c",
+    "short": {
+      "preregistration_freeze": "f328387",
+      "enrollment_correction": "f8f9f18"
+    }
+  },
+  "gate_verdicts": {
+    "measurement_validation": "PASS",
+    "feasibility": "passed"
+  },
+  "population": {
+    "window": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "enrolled_events": 242,
+    "enrolled_issuers": 87,
+    "enrolled_date_range": [
+      "2024-01-03",
+      "2025-12-23"
+    ],
+    "measured_events": 226,
+    "measured_issuers": 84,
+    "measured_date_range": [
+      "2024-01-03",
+      "2025-12-23"
+    ],
+    "oversized_exclusions": 16
+  },
+  "composition": {
+    "window": [
+      "2024-01-01",
+      "2025-12-31"
+    ],
+    "enrolled": {
+      "events": 242,
+      "issuers": 87,
+      "date_range": [
+        "2024-01-03",
+        "2025-12-23"
+      ],
+      "all_tag": {
+        "ceo_appointment": {
+          "events": 17,
+          "issuers": 15
+        },
+        "ceo_departure": {
+          "events": 31,
+          "issuers": 25
+        },
+        "cfo_appointment": {
+          "events": 34,
+          "issuers": 29
+        },
+        "cfo_departure": {
+          "events": 31,
+          "issuers": 24
+        },
+        "executive_officer_appointment": {
+          "events": 106,
+          "issuers": 62
+        },
+        "executive_officer_departure": {
+          "events": 132,
+          "issuers": 68
+        }
+      }
+    },
+    "measured": {
+      "events": 226,
+      "issuers": 84,
+      "date_range": [
+        "2024-01-03",
+        "2025-12-23"
+      ],
+      "all_tag": {
+        "ceo_appointment": {
+          "events": 16,
+          "issuers": 14
+        },
+        "ceo_departure": {
+          "events": 28,
+          "issuers": 23
+        },
+        "cfo_appointment": {
+          "events": 32,
+          "issuers": 27
+        },
+        "cfo_departure": {
+          "events": 28,
+          "issuers": 22
+        },
+        "executive_officer_appointment": {
+          "events": 98,
+          "issuers": 60
+        },
+        "executive_officer_departure": {
+          "events": 125,
+          "issuers": 67
+        }
+      },
+      "primary_tag": {
+        "ceo_appointment": {
+          "events": 1,
+          "issuers": 1
+        },
+        "ceo_departure": {
+          "events": 28,
+          "issuers": 23
+        },
+        "cfo_appointment": {
+          "events": 8,
+          "issuers": 7
+        },
+        "cfo_departure": {
+          "events": 27,
+          "issuers": 21
+        },
+        "executive_officer_appointment": {
+          "events": 41,
+          "issuers": 33
+        },
+        "executive_officer_departure": {
+          "events": 121,
+          "issuers": 65
+        }
+      },
+      "multi_tag_accessions": 91
+    },
+    "primary_group": {
+      "events": 25,
+      "issuers": 22,
+      "by_primary_tag": {
+        "ceo_appointment": {
+          "events": 1,
+          "issuers": 1,
+          "share": 0.04
+        },
+        "ceo_departure": {
+          "events": 1,
+          "issuers": 1,
+          "share": 0.04
+        },
+        "cfo_appointment": {
+          "events": 2,
+          "issuers": 2,
+          "share": 0.08
+        },
+        "cfo_departure": {
+          "events": 4,
+          "issuers": 4,
+          "share": 0.16
+        },
+        "executive_officer_appointment": {
+          "events": 3,
+          "issuers": 3,
+          "share": 0.12
+        },
+        "executive_officer_departure": {
+          "events": 14,
+          "issuers": 14,
+          "share": 0.56
+        }
+      },
+      "by_all_tag": {
+        "ceo_appointment": 2,
+        "ceo_departure": 1,
+        "cfo_appointment": 5,
+        "cfo_departure": 4,
+        "executive_officer_appointment": 16,
+        "executive_officer_departure": 14
+      },
+      "tags_over_60_percent": [],
+      "diagnostic": null
+    },
+    "original_departure": {
+      "tag": "executive_officer_departure",
+      "enrolled_all_tag_events": 132,
+      "measured_primary_tag_events": 121,
+      "measured_all_tag_events": 125,
+      "note": "Membership uses all_tags, not merely the primary tag, because an accession whose primary tag is another included tag can still carry the original executive_officer_departure tag."
+    }
+  },
+  "audit": {
+    "events_available": 226,
+    "distinct_issuers": 84,
+    "coverage_adequate_count": 133,
+    "window_complete_count": 133,
+    "prior_retrieved_count": 215,
+    "events_with_class_p": 159,
+    "events_with_class_c": 55,
+    "events_with_class_c_lexical_match": 55,
+    "events_trimmed": 3,
+    "valid_dimensions_distribution": {
+      "0": 61,
+      "1": 47,
+      "2": 32,
+      "3": 19,
+      "4": 22,
+      "5": 30,
+      "6": 15
+    },
+    "transition_distribution": {
+      "closing": 50,
+      "insufficient_evidence": 860,
+      "opening": 47,
+      "unchanged": 399
+    },
+    "resolution_delta_distribution": {
+      "-3": 1,
+      "-2": 8,
+      "-1": 23,
+      "0": 159,
+      "1": 27,
+      "2": 6,
+      "3": 2
+    },
+    "freshness_distribution": {
+      "fresh": 26,
+      "stale": 158,
+      "unknown": 42
+    },
+    "freshness_lag_distribution": {
+      "0": 25,
+      "1": 1,
+      "10": 2,
+      "100": 1,
+      "102": 1,
+      "103": 2,
+      "104": 1,
+      "109": 3,
+      "11": 2,
+      "110": 1,
+      "112": 2,
+      "113": 2,
+      "115": 1,
+      "116": 1,
+      "118": 1,
+      "119": 1,
+      "12": 1,
+      "124": 1,
+      "125": 1,
+      "126": 1,
+      "127": 1,
+      "13": 2,
+      "130": 1,
+      "131": 1,
+      "133": 1,
+      "134": 1,
+      "138": 2,
+      "140": 1,
+      "141": 1,
+      "142": 2,
+      "144": 1,
+      "146": 1,
+      "149": 1,
+      "15": 3,
+      "155": 1,
+      "16": 3,
+      "166": 1,
+      "167": 1,
+      "169": 2,
+      "17": 3,
+      "171": 1,
+      "19": 2,
+      "2": 2,
+      "20": 2,
+      "206": 1,
+      "207": 2,
+      "21": 1,
+      "210": 1,
+      "219": 1,
+      "22": 1,
+      "23": 3,
+      "236": 2,
+      "238": 1,
+      "24": 1,
+      "243": 2,
+      "248": 1,
+      "25": 1,
+      "30": 1,
+      "31": 1,
+      "32": 1,
+      "33": 2,
+      "35": 2,
+      "36": 3,
+      "37": 1,
+      "38": 3,
+      "39": 2,
+      "4": 2,
+      "41": 2,
+      "42": 1,
+      "43": 1,
+      "44": 1,
+      "45": 2,
+      "46": 1,
+      "47": 1,
+      "51": 2,
+      "52": 1,
+      "53": 1,
+      "56": 1,
+      "57": 2,
+      "58": 1,
+      "6": 1,
+      "60": 3,
+      "61": 1,
+      "62": 1,
+      "64": 2,
+      "65": 2,
+      "66": 1,
+      "68": 2,
+      "71": 1,
+      "73": 2,
+      "75": 1,
+      "77": 1,
+      "78": 1,
+      "8": 3,
+      "82": 1,
+      "84": 2,
+      "85": 1,
+      "86": 1,
+      "88": 2,
+      "89": 5,
+      "9": 1,
+      "90": 1,
+      "91": 2,
+      "93": 2,
+      "97": 2,
+      "98": 1,
+      "unknown": 42
+    },
+    "freshness_lag_statistics": {
+      "events_with_lag": 184,
+      "events_unknown_lag": 42,
+      "min": 0,
+      "median": 56.5,
+      "mean": 68.36413043478261,
+      "max": 248
+    },
+    "after_package": {
+      "events": 226,
+      "fallback_count": 0,
+      "combined_sha256": "b68102c42e8ea2d7c4b32c25946005335859a0b053d787567c38d28e02655aac",
+      "bytes": {
+        "min": 2620,
+        "median": 5814.0,
+        "mean": 7406.809734513275,
+        "max": 19045
+      },
+      "fallback_support_removed": true,
+      "fallback_policy": "Full after-state sources are mandatory; a missing or unparsed package fails fast and is never replaced by supporting_text."
+    },
+    "issuer_concentration": {
+      "events": 226,
+      "issuers": 84,
+      "max_issuer_share": 0.035398230088495575,
+      "largest_issuer_cik": "0000731766"
+    },
+    "dimension_pairs_lost": {
+      "insufficient_evidence": 860,
+      "not_disclosed": 0,
+      "not_applicable": 0,
+      "unlisted_pair": 0
+    },
+    "not_disclosed_side_states": 0,
+    "per_dimension_measurability": {
+      "successor_identity": {
+        "before_states": {
+          "insufficient_evidence": 127,
+          "known": 97,
+          "unknown": 2
+        },
+        "after_states": {
+          "insufficient_evidence": 86,
+          "known": 136,
+          "unknown": 4
+        },
+        "valid_transitions": 67,
+        "closing": 2,
+        "opening": 1
+      },
+      "successor_permanence": {
+        "before_states": {
+          "insufficient_evidence": 167,
+          "interim_or_acting": 8,
+          "none_identified": 4,
+          "permanent": 47
+        },
+        "after_states": {
+          "insufficient_evidence": 143,
+          "interim_or_acting": 7,
+          "none_identified": 6,
+          "permanent": 70
+        },
+        "valid_transitions": 25,
+        "closing": 2,
+        "opening": 1
+      },
+      "search_status": {
+        "before_states": {
+          "insufficient_evidence": 156,
+          "not_needed_or_completed": 58,
+          "ongoing": 12
+        },
+        "after_states": {
+          "insufficient_evidence": 114,
+          "not_needed_or_completed": 96,
+          "ongoing": 16
+        },
+        "valid_transitions": 39,
+        "closing": 6,
+        "opening": 1
+      },
+      "effective_timing": {
+        "before_states": {
+          "approximate_or_conditional": 12,
+          "insufficient_evidence": 59,
+          "specific_and_known": 155
+        },
+        "after_states": {
+          "approximate_or_conditional": 20,
+          "insufficient_evidence": 5,
+          "not_applicable": 1,
+          "specific_and_known": 200
+        },
+        "valid_transitions": 163,
+        "closing": 11,
+        "opening": 13
+      },
+      "transition_arrangement": {
+        "before_states": {
+          "defined_transition_or_handoff": 107,
+          "insufficient_evidence": 99,
+          "limited_transition_information": 18,
+          "no_transition_identified": 2
+        },
+        "after_states": {
+          "defined_transition_or_handoff": 141,
+          "insufficient_evidence": 38,
+          "limited_transition_information": 32,
+          "no_transition_identified": 15
+        },
+        "valid_transitions": 106,
+        "closing": 13,
+        "opening": 19
+      },
+      "leadership_continuity": {
+        "before_states": {
+          "continuity_established": 90,
+          "continuity_unresolved": 4,
+          "insufficient_evidence": 109,
+          "temporary_continuity": 23
+        },
+        "after_states": {
+          "continuity_established": 132,
+          "continuity_unresolved": 22,
+          "insufficient_evidence": 40,
+          "temporary_continuity": 32
+        },
+        "valid_transitions": 96,
+        "closing": 16,
+        "opening": 12
+      }
+    },
+    "unlisted_pairs": [],
+    "floor": {
+      "min_events": 20,
+      "min_issuers": 10,
+      "max_issuer_share": 0.2
+    },
+    "excluded_oversized": {
+      "events": 16,
+      "rows": [
+        {
+          "accession_number": "0000764180-24-000007",
+          "cik": "0000764180",
+          "ticker": "MO",
+          "filing_date": "2024-02-01",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 71263,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001613103-24-000006",
+          "cik": "0001613103",
+          "ticker": "MDT",
+          "filing_date": "2024-02-20",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 46028,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001193125-24-139371",
+          "cik": "0000858877",
+          "ticker": "CSCO",
+          "filing_date": "2024-05-15",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure",
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 53012,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001373715-24-000269",
+          "cik": "0001373715",
+          "ticker": "NOW",
+          "filing_date": "2024-07-24",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure",
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 43433,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0000066740-24-000088",
+          "cik": "0000066740",
+          "ticker": "MMM",
+          "filing_date": "2024-08-01",
+          "tag": "cfo_departure",
+          "all_tags": [
+            "cfo_departure",
+            "cfo_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 30019,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001108524-24-000020",
+          "cik": "0001108524",
+          "ticker": "CRM",
+          "filing_date": "2024-08-28",
+          "tag": "cfo_departure",
+          "all_tags": [
+            "cfo_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 46314,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001373715-24-000342",
+          "cik": "0001373715",
+          "ticker": "NOW",
+          "filing_date": "2024-10-23",
+          "tag": "executive_officer_appointment",
+          "all_tags": [
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 47199,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0000050863-24-000173",
+          "cik": "0000050863",
+          "ticker": "INTC",
+          "filing_date": "2024-12-03",
+          "tag": "ceo_departure",
+          "all_tags": [
+            "ceo_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 21366,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0000004962-25-000010",
+          "cik": "0000004962",
+          "ticker": "AXP",
+          "filing_date": "2025-01-30",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 19955,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0000773840-25-000025",
+          "cik": "0000773840",
+          "ticker": "HON",
+          "filing_date": "2025-04-08",
+          "tag": "executive_officer_appointment",
+          "all_tags": [
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 62846,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001065280-25-000175",
+          "cik": "0001065280",
+          "ticker": "NFLX",
+          "filing_date": "2025-04-17",
+          "tag": "ceo_departure",
+          "all_tags": [
+            "ceo_departure"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 39106,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001373715-25-000124",
+          "cik": "0001373715",
+          "ticker": "NOW",
+          "filing_date": "2025-04-23",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure",
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 40273,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001613103-25-000078",
+          "cik": "0001613103",
+          "ticker": "MDT",
+          "filing_date": "2025-05-21",
+          "tag": "executive_officer_departure",
+          "all_tags": [
+            "executive_officer_departure",
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 66993,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001193125-25-209990",
+          "cik": "0001283699",
+          "ticker": "TMUS",
+          "filing_date": "2025-09-22",
+          "tag": "ceo_departure",
+          "all_tags": [
+            "ceo_departure",
+            "ceo_appointment",
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 43166,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0000077476-25-000055",
+          "cik": "0000077476",
+          "ticker": "PEP",
+          "filing_date": "2025-10-09",
+          "tag": "cfo_departure",
+          "all_tags": [
+            "cfo_departure",
+            "cfo_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 58690,
+          "trimmed": []
+        },
+        {
+          "accession_number": "0001628280-25-048526",
+          "cik": "0001413329",
+          "ticker": "PM",
+          "filing_date": "2025-11-04",
+          "tag": "executive_officer_appointment",
+          "all_tags": [
+            "executive_officer_appointment"
+          ],
+          "reason": "current_package_exceeds_request_ceiling",
+          "before_over_ceiling": false,
+          "after_over_ceiling": true,
+          "after_package_bytes": 19721,
+          "trimmed": []
+        }
+      ],
+      "by_tag": {
+        "ceo_departure": {
+          "events": 3,
+          "issuers": 3
+        },
+        "cfo_departure": {
+          "events": 3,
+          "issuers": 3
+        },
+        "executive_officer_appointment": {
+          "events": 3,
+          "issuers": 3
+        },
+        "executive_officer_departure": {
+          "events": 7,
+          "issuers": 5
+        }
+      },
+      "events_accounted_for": 242,
+      "source_gate_impact": "Request-ceiling exclusions are source-gate exclusions: every excluded event is listed in exclusions.json with its reason and ceiling flags and is not measured; no event is silently dropped, and the ceiling rule is never used to truncate current-filing text."
+    },
+    "events_available_before_exclusion": 242,
+    "tag_composition": {
+      "events": 226,
+      "by_tag": {
+        "ceo_appointment": {
+          "events": 1,
+          "issuers": 1,
+          "share_of_primary_group": 0.004424778761061947
+        },
+        "ceo_departure": {
+          "events": 28,
+          "issuers": 23,
+          "share_of_primary_group": 0.12389380530973451
+        },
+        "cfo_appointment": {
+          "events": 8,
+          "issuers": 7,
+          "share_of_primary_group": 0.035398230088495575
+        },
+        "cfo_departure": {
+          "events": 27,
+          "issuers": 21,
+          "share_of_primary_group": 0.11946902654867257
+        },
+        "executive_officer_appointment": {
+          "events": 41,
+          "issuers": 33,
+          "share_of_primary_group": 0.18141592920353983
+        },
+        "executive_officer_departure": {
+          "events": 121,
+          "issuers": 65,
+          "share_of_primary_group": 0.5353982300884956
+        }
+      },
+      "tags_over_60_percent": [],
+      "flag": null
+    },
+    "mechanism_composition": {
+      "Resolution": {
+        "events": 33,
+        "issuers": 27
+      },
+      "Neutral": {
+        "events": 95,
+        "issuers": 51
+      },
+      "Opening": {
+        "events": 37,
+        "issuers": 25
+      },
+      "unmeasured": {
+        "events": 61,
+        "issuers": 49
+      },
+      "expected_csp_edge_order": [
+        "Resolution",
+        "Neutral",
+        "Opening"
+      ]
+    },
+    "original_departure_subgroup": {
+      "events": 121,
+      "issuers": 65,
+      "share_of_primary_group": 1.0
+    }
+  },
+  "primary_rule": {
+    "selection_rule": "RESOLUTION_EVENT: at least 3 valid governance dimensions are measurable; ResolutionDelta >= +1; at least one uncertainty-closing transition exists; zero uncertainty-opening transitions exist. The three-dimension requirement prevents a filing from qualifying on one isolated semantic judgment. Fixed before Experiment 9B semantic counts and before any Experiment 9B market outcome; never altered after counts.",
+    "K": 3,
+    "R": 1,
+    "feasibility": {
+      "n": 25,
+      "issuers": 22,
+      "max_issuer_share": 0.08,
+      "issuer_counts": {
+        "0000064803": 1,
+        "0000886982": 1,
+        "0000731766": 1,
+        "0000059478": 2,
+        "0000796343": 1,
+        "0000002488": 1,
+        "0001053507": 1,
+        "0001613103": 2,
+        "0001108524": 1,
+        "0000066740": 1,
+        "0000773840": 2,
+        "0000831001": 1,
+        "0000050863": 1,
+        "0001283699": 1,
+        "0000021665": 1,
+        "0001543151": 1,
+        "0000092122": 1,
+        "0000320193": 1,
+        "0000014272": 1,
+        "0000909832": 1,
+        "0000027419": 1,
+        "0001166691": 1
+      },
+      "meets_floor": true
+    },
+    "feasibility_gate": "passed",
+    "final": "Feasibility gate passed; the economic stage may proceed only after the blinded transition-sign validation passes."
+  },
+  "measurement_validation": {
+    "kind": "bounded blinded transition-sign validation",
+    "validator": "uncertainty_resolution_expanded_validation.py",
+    "reviewer": "separate blinded text-only reader",
+    "audited_subset": {
+      "target_events": 60,
+      "actual_events": 74,
+      "pairs": 223,
+      "pairs_per_dimension": {
+        "successor_identity": 70,
+        "successor_permanence": 55,
+        "search_status": 11,
+        "effective_timing": 25,
+        "transition_arrangement": 33,
+        "leadership_continuity": 29
+      },
+      "pairs_per_tag": {
+        "ceo_appointment": 3,
+        "ceo_departure": 9,
+        "cfo_appointment": 15,
+        "cfo_departure": 31,
+        "executive_officer_appointment": 36,
+        "executive_officer_departure": 129
+      },
+      "pairs_per_transition_class": {
+        "closing": 50,
+        "opening": 47,
+        "unchanged": 33,
+        "other": 93
+      },
+      "strata_present": [
+        "effective_timing|closing",
+        "effective_timing|opening",
+        "effective_timing|unchanged",
+        "leadership_continuity|closing",
+        "leadership_continuity|opening",
+        "leadership_continuity|unchanged",
+        "search_status|closing",
+        "search_status|opening",
+        "search_status|unchanged",
+        "successor_identity|closing",
+        "successor_identity|opening",
+        "successor_identity|unchanged",
+        "successor_permanence|closing",
+        "successor_permanence|opening",
+        "successor_permanence|unchanged",
+        "transition_arrangement|closing",
+        "transition_arrangement|opening",
+        "transition_arrangement|unchanged"
+      ],
+      "strata_uncovered": [],
+      "truncated_passages": 27,
+      "class_c_pairs": 28,
+      "redactions": 574,
+      "packet_bytes": 668282,
+      "note": "Mandatory strata and pairs can push the packet above the at-most-60-event target; the actual event count is reported directly."
+    },
+    "reviewer_totals": {
+      "verdicts": 223,
+      "distinct_pair_ids": 223
+    },
+    "frozen_gate_statement": "The sign of the aggregate closing-minus-opening count on the audited subset must be non-zero for both reads and must agree. A zero sign on either read fails the gate.",
+    "gate_verdict": "PASS",
+    "aggregate_counts": {
+      "jev": {
+        "closing": 50,
+        "opening": 47,
+        "closing_minus_opening": 3,
+        "sign": 1
+      },
+      "independent": {
+        "closing": 29,
+        "opening": 28,
+        "closing_minus_opening": 1,
+        "sign": 1
+      }
+    },
+    "agreement": {
+      "exact_before": [
+        167,
+        223
+      ],
+      "exact_after": [
+        186,
+        223
+      ],
+      "exact_both": [
+        140,
+        223
+      ],
+      "sign_all_pairs": [
+        170,
+        223
+      ],
+      "sign_both_determinate": [
+        85,
+        129
+      ]
+    },
+    "per_dimension_sign_agreement": {
+      "successor_identity": [
+        59,
+        70
+      ],
+      "successor_permanence": [
+        54,
+        55
+      ],
+      "search_status": [
+        10,
+        11
+      ],
+      "effective_timing": [
+        13,
+        25
+      ],
+      "transition_arrangement": [
+        14,
+        33
+      ],
+      "leadership_continuity": [
+        20,
+        29
+      ]
+    },
+    "per_tag_sign_agreement": {
+      "ceo_appointment": [
+        0,
+        3
+      ],
+      "ceo_departure": [
+        9,
+        9
+      ],
+      "cfo_appointment": [
+        10,
+        15
+      ],
+      "cfo_departure": [
+        21,
+        31
+      ],
+      "executive_officer_appointment": [
+        28,
+        36
+      ],
+      "executive_officer_departure": [
+        102,
+        129
+      ]
+    },
+    "false_resolution": [
+      24,
+      50
+    ],
+    "false_opening": [
+      20,
+      47
+    ],
+    "note": "An aggregate gate pass is not perfect labeling. Per-pair labels are noisy; the gate is on the aggregate direction only."
+  },
+  "jev": {
+    "requests": 904,
+    "stage_a_requests": 452,
+    "stage_b_requests": 452,
+    "job_slots": 904,
+    "distinct_request_payloads": 786,
+    "cache_hits": 113,
+    "live_requests": 791,
+    "http_attempts": 791,
+    "valid_responses": 903,
+    "malformed_responses": 1,
+    "valid_rate": 0.9988938053097345,
+    "malformed_rate": 0.0011061946902654867,
+    "judgments": 4810,
+    "total_latency_s": 202.50808621081524,
+    "wall_s": 51.91363595900475,
+    "latency_mean_s": 0.25601527965969056,
+    "latency_median_s": 0.250355041003786,
+    "latency_p95_s": 0.33291812500101514,
+    "judgments_per_second": 92.65388391979266,
+    "serial_equivalent_judgments_per_second": 23.75213795163067,
+    "malformed_requests": [
+      [
+        "B",
+        "0000059478-24-000146",
+        "after"
+      ]
+    ],
+    "events": 226
+  },
+  "economics": {
+    "computed": false,
+    "status": "not_run",
+    "design": {
+      "primary_strategy": "cash_secured_put",
+      "primary_bucket": "3-6m",
+      "primary_otm": 0.05,
+      "primary_entry_delay_sessions": 0,
+      "primary_max_stale_sessions": 0,
+      "primary_premium_haircut_each_side": 0.05,
+      "primary_horizon": 21
+    },
+    "primary": {
+      "status": "not_run",
+      "actual_pnl": null,
+      "ordinary_day_baseline": null,
+      "confidence_interval": null
+    },
+    "strategies": {
+      "long_call": {
+        "status": "not_run",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "covered_call": {
+        "status": "not_run",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "protective_put": {
+        "status": "not_run",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "collar": {
+        "status": "not_run",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      },
+      "cash_secured_put": {
+        "status": "not_run",
+        "historical_edge": null,
+        "after_cost_edge": null,
+        "interval": null
+      }
+    },
+    "horizons": {
+      "1": "not_run",
+      "2": "not_run",
+      "3": "not_run",
+      "5": "not_run",
+      "10": "not_run",
+      "21": "not_run",
+      "42": "not_run",
+      "63": "not_run",
+      "exp": "not_run"
+    },
+    "sensitivities": {
+      "status": "not_run"
+    },
+    "incremental_value": {
+      "status": "not_run"
+    },
+    "baselines": {
+      "A_massive_tag_alone": {
+        "status": "not_run"
+      },
+      "B_calendar_freshness": {
+        "status": "not_run"
+      },
+      "C_original_departures_only": {
+        "status": "not_run"
+      }
+    },
+    "oos_2026": {
+      "status": "not_run",
+      "opened": false
+    },
+    "judges_sealed": {
+      "status": "not_run",
+      "opened": false
+    },
+    "reason": "Both upstream gates passed. Economics remains not_run here because this module never runs economics; the orchestrator runs the frozen economic stage separately. Economic work remains.",
+    "eligible_for_economic_test": true
+  },
+  "next_action": {
+    "action": "orchestrator_may_run_economic_stage",
+    "alternative_hypothesis_search": false,
+    "text": "Both upstream gates passed. This module stops at the intermediate eligible_for_economic_test status. Economic work remains: the orchestrator runs the frozen economic stage separately. No alternative hypothesis search was performed."
+  },
+  "custody": {
+    "combined_manifest_created_after_semantic_run": true,
+    "combined_manifest_helper_invoked_before_semantics": false,
+    "prior_source_pool_hash_invented": false,
+    "available_individual_enrollment_digest": "9c713ada5d54cc957d09f9dcc1be6fd0a575f55b8093cb8a5686547f477c3d1b",
+    "available_per_tag_raw_digests": {
+      "ceo_appointment": "23e9ad9dae79c6575be3c197ea7c893b054a7974c1fea0b54e8e761487f97337",
+      "ceo_departure": "8a7a501c2fa010b08c74b538f49f26a92a3483dab3d5c253e47b5245530dda47",
+      "cfo_appointment": "023f497883975c641ee040c2903d1e0df0e2a7f2d6a3e87d22f7dcdd55e58cef",
+      "cfo_departure": "3f43079fed28f10a251f8c580633b817250ae8c141c4409a0be1f51e4a98515e",
+      "executive_officer_appointment": "955fc222d8da40d21a40bed06b7f4cd09ea53aeb310dfbb8a7f557dcdcce8040",
+      "executive_officer_departure": "7dca39f6708f4bfb2440127c580d04e46d3e05eb684b90ddc0ca8e74585ec245"
+    },
+    "available_source_filings_sha256": "1ae61af325773f8582fdca7d5d052e06b0f47952ecc1e0d1b4e18a4df8fe4e92",
+    "file_mtimes": {
+      "protocol.json": {
+        "sha256": "1de38250e96e98df085cd32ceab3b11cd03da3ad10a0f1212936fc518eeccb48",
+        "mtime": 1791058923.77707
+      },
+      "protocol_hash.json": {
+        "sha256": "c778762d726d5b3ab339e0512202d91b5827016bee757bed4f83d778d73712d2",
+        "mtime": 1791058923.777286
+      },
+      "taxonomy_decision_table.json": {
+        "sha256": "1aef4feda512fb90204df234b8bafd2076efe505b51b999a6365f9b116654aeb",
+        "mtime": 1791058923.7768042
+      },
+      "taxonomy_decision_table_hash.json": {
+        "sha256": "c9157696b9fe3aff808a69ae5c31e072ff5630447b758c4c12fd92ae76e35a95",
+        "mtime": 1791058923.776893
+      },
+      "code.json": {
+        "sha256": "d62815025adb7cc624d2a0e2ac974f7f2567b4ca85fbc052897947aa3a804b76",
+        "mtime": 1791059290.300628
+      },
+      "protected_artifacts.json": {
+        "sha256": "48c8ef89907ba80dcce8fa5d4e6b846245601de17f15db7c53368335f6997dfb",
+        "mtime": 1791058923.7861085
+      },
+      "exposure.json": {
+        "sha256": "141e4a895ded8235e362f4aaa492aacceaecfef1391ca4529e88d0eabf2e6028",
+        "mtime": 1791058923.7862203
+      },
+      "enroll/events.json": {
+        "sha256": "53f167fc272c62299a673b1346996cecadb737db4c590328df5f5140dc6a2b96",
+        "mtime": 1791059449.0885477
+      },
+      "enroll/enrollment.json": {
+        "sha256": "b020c83734cd1f1a6ae737ae843766316835a13ffa8af5d6ab64a2256045da7d",
+        "mtime": 1791059449.0890903
+      },
+      "sequential/semantic/filing_deltas.json": 1791059590.6681824,
+      "sequential/semantic/state_evidence.json": 1791059590.6385279,
+      "sequential/semantic/transitions.json": 1791059590.6649833,
+      "sequential/semantic/feasibility_audit.json": 1791059590.6704235,
+      "sequential/semantic/primary_rule.json": 1791059590.6706598,
+      "sequential/semantic/timing.json": 1791059590.6708,
+      "sequential/validation/subset.json": 1791059603.4538982
+    },
+    "validation_artifact_sha256": {
+      "subset.json": "6f7aa2d89467d778af10e149197192428c8f87b9d687f3643bc97ed428578535",
+      "packet.json": "34085563ea86a038acd9d11b01e020f2891890263224a3aa0df4fd52015979d7"
+    },
+    "finalization_recorded_at": "2026-10-03T20:47:58.351755+00:00",
+    "chronology_note": "Individual events/enrollment/source_filings/package files were written through freeze() before the live semantic calls, so their mtimes precede the semantic tables. The combined input_manifest.json is created now, after the semantic run and before any economics. No data changed. There is no pre-existing prior_source_pool_hash; the source-filings digest here is computed at finalization.",
+    "limitation": "Explicit reporting-custody limitation, not a silent implementation or design alteration. The committed protocol and its digest are not revised to hide it."
+  },
+  "economic_outcomes_computed": false,
+  "prices_read": 0,
+  "ordinary_day_market_read": false,
+  "oos_opened": false,
+  "judges_opened": false
+}

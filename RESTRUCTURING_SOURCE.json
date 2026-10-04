@@ -1,0 +1,186 @@
+{
+  "experiment": "restructuring-plan source-only taxonomy/disclosure availability census",
+  "protocol_sha256": "1d4114cd93ec13ba853f194413fc0286152098eb7ac502a67fafb0e0381931d3",
+  "implementation_sha256": "e2bf6b39b81146503c58a54183038158e4b36cd14da159fe468d1d93254cf2c8",
+  "dependencies": {
+    "equity_issuance_source_audit.py": "7ca3797f613b7a8455c924267e4a11524cfaa0118d2a3bd694f7cea4d2aa66af",
+    "settlement_source_audit.py": "9bc196394474e380fde98927ac22ad020a3f673e96f4a365600744803143b454"
+  },
+  "window": [
+    "2024-01-01",
+    "2025-12-31"
+  ],
+  "targets": [
+    "restructuring_plan"
+  ],
+  "target_kind": "the exact Massive tertiary_category tag id restructuring_plan only; no synonyms and no category search; workforce_reduction is not censused",
+  "universe": {
+    "size": 100,
+    "sha256": "c29eff46a4c1c76651860b747d0bc69f10998aa7372ba9fc3445e52f94b276a5"
+  },
+  "requests": {
+    "taxonomy_pages": 1,
+    "network_requests": 2,
+    "cache_hits": 0,
+    "pages_by_tag": {
+      "restructuring_plan": 1
+    },
+    "raw_request_envelopes_preserved": 2
+  },
+  "exact_tag_counts": {
+    "restructuring_plan": {
+      "status": "present",
+      "raw_rows": 434,
+      "in_universe_rows": 14,
+      "outside_universe_rows": 402,
+      "missing_ticker_rows": 18,
+      "dedup_accessions": 14
+    }
+  },
+  "pagination_complete": true,
+  "population_identity": {
+    "enrolled_accessions": 14,
+    "unambiguous_accessions": 14,
+    "ambiguous_accessions": 0,
+    "unassigned_ticker_accessions": 18,
+    "identity_complete": false
+  },
+  "unassigned_accessions": 18,
+  "unassigned_ticker_rows_by_tag": {
+    "restructuring_plan": 18
+  },
+  "per_tag": {
+    "restructuring_plan": {
+      "status": "present",
+      "reference": "cached",
+      "raw_rows": 434,
+      "in_universe_rows": 14,
+      "outside_universe_rows": 402,
+      "missing_ticker_rows": 18,
+      "pages": 1,
+      "pagination_complete": true,
+      "truncated": false,
+      "dedup_accessions": 14,
+      "yearly": {
+        "2024": 8,
+        "2025": 6
+      },
+      "unambiguous_accessions": 14,
+      "unambiguous_issuers": 9
+    }
+  },
+  "union": {
+    "accessions": 14,
+    "unambiguous_accessions": 14,
+    "ambiguous_accessions": 0,
+    "unambiguous_issuers": 9,
+    "cik_count": 9,
+    "yearly": {
+      "2024": 8,
+      "2025": 6
+    }
+  },
+  "collisions": {
+    "ambiguous_multi_ticker_accessions": 0,
+    "conflicting_metadata_accessions": 0,
+    "cik_with_multiple_tickers": 0,
+    "ticker_with_multiple_ciks": 0,
+    "same_cik_filing_date_groups": 0,
+    "same_cik_filing_date_accessions": 0,
+    "unresolved_identity_accessions": 0,
+    "outside_ticker_aliases_recorded": 5
+  },
+  "yearly_distribution": {
+    "2024": 8,
+    "2025": 6
+  },
+  "availability": {
+    "kind": "availability-only; no universal 80/20 gate is applied and no prior gate is altered",
+    "census_complete": true,
+    "observed": {
+      "dedup_accessions": 14,
+      "unambiguous_dedup_accessions": 14,
+      "unambiguous_canonical_ticker_issuers": 9
+    },
+    "caveat": "Availability measurement only; it chooses no numerical economic cutoff from these counts. A future prospective inference design and a measurement benchmark are required before any price read."
+  },
+  "custody": {
+    "checks": {
+      "code_sha256_matches_frozen": true,
+      "dependency_hashes_match_frozen": true,
+      "raw_request_envelopes_preserved": true,
+      "all_payload_hashes_valid": true,
+      "taxonomy_pages_match": true,
+      "pages_match_acquisition": true,
+      "rows_match_acquisition": true,
+      "rows_in_window": true,
+      "rows_exact_tag": true,
+      "only_restructuring_tag_rows": true,
+      "private_custody_ignored": true
+    },
+    "passed": true,
+    "raw_request_envelopes": 2,
+    "taxonomy_pages": 1,
+    "disclosure_pages": 1,
+    "raw_rows": 434,
+    "in_window_rows": 434,
+    "exact_tag_rows": 434,
+    "deviations": []
+  },
+  "decision": "availability_measured_no_gate_applied",
+  "stop_at_metadata": true,
+  "source_only": true,
+  "financial_outcomes_read": false,
+  "market_data_requests": 0,
+  "text_endpoint_requests": 0,
+  "model_requests": 0,
+  "jev_requests": 0,
+  "trade_hypothesis_frozen": false,
+  "classification_source": "vendor taxonomy reused as-is; consuming the exact vendor tag is part of the Massive framework, not a new classifier",
+  "provenance_note": "A tag is a vendor classification and does not prove a restructuring, an impairment, a savings realization or a tradable event.",
+  "source_vs_financial": "Source availability census only; not a financial finding. No price, option, payoff, filing text, JEV or model was opened and no economic effect is measured or proven.",
+  "extraction_boundary": "No JEV call and no economic quantity (charges, savings or charge-range width) is extracted here; any later verbatim monetary-span measurement is a separate step.",
+  "public_report_privacy": "No individual ticker, CIK, accession row, filing text or raw API response appears in this public aggregate; only counts are reported.",
+  "no_gate_note": "No universal 80/20 gate is applied and no prior frozen gate is lowered or reused; this census measures availability only and chooses no numerical economic cutoff.",
+  "future_requirement": "A prospective inference design and a measurement benchmark are required before any price read.",
+  "read_scope_note": "Exposure ledger: earlier research included a disclosed broad recursive content search of unverified temporal scope, so 2026 is not claimed globally pristine; this census issued no 2026 or reserved-window request. Imported helper metadata: load_universe and preservation load the canonical notebook calendar/taxonomy metadata.",
+  "preservation": {
+    "earnings_payoff_freeze": {
+      "all_unchanged": true,
+      "checks": {
+        "protocol_sha256": true,
+        "events_sha256": true,
+        "universe_sha256": true,
+        "implementation_sha256": true,
+        "implementation_files_6": true,
+        "source_preservation_sha256": true
+      },
+      "implementation_file_hashes": {
+        "earnings_payoff_experiment.py": "531f68621827b7ecc5ec4747ed10c1e0bcc9fe98a15d4bd871a44bdf19abed0a",
+        "earnings_payoff_spec.py": "43700fc2a0bf90101f8c457e5a29dc19db28de98095eed26d44b63cac69beebd",
+        "departure_experiment.py": "b903651f40ca40352d2f3c7d1a53087ae86e5de0093227330e733caafd12e13f",
+        "jev_experiment.py": "4a861ee44f2a07d3bdd45f50bc9f0cbda63902a352b29abd994ce2c2ab85245f",
+        "expanded_guidance_sources.py": "567a75e229687069c7659c38a74e650dd1cc04c7e06c8ee9a2bac7528be7c73d",
+        "gator-quant-hacks-8k-options-challenge.ipynb": "2926b21f739f4664a70770a433669b243b70a66299e7b2b81cb9120a54718ef8"
+      }
+    },
+    "credit_terms_protocol": {
+      "all_unchanged": true,
+      "checks": {
+        "declared_matches_protocol_file": true,
+        "metrics_matches_declared": true
+      },
+      "protocol_sha256": "d5f2e320f6e964e7533f5de25da8a7a17ff61c116263961cbfd138f4931df149"
+    }
+  },
+  "source_constraints": [
+    "static September-2026 TOP_100 carries survivorship bias",
+    "the exact 2024-2025 restructuring_plan count was unknown before this census and is now measured for this scope only",
+    "workforce_reduction is not censused and is not inferred to be empty",
+    "2024-2025 only; this census issued no 2026 or reserved-window request",
+    "tag rows are vendor classifications, not verified restructurings",
+    "pagination completeness and population identity completeness are reported separately",
+    "availability only: no universal 80/20 gate, no economic cutoff, no payoff or profitability claim",
+    "the sealed out-of-sample window is future validation, not a prerequisite to source research"
+  ]
+}

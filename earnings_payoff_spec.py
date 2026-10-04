@@ -1,0 +1,43 @@
+"""Numerical earnings-resolution benchmark, frozen before financial outcomes."""
+from jev_experiment import HORIZONS
+
+START, END = '2024-01-01', '2025-12-31'
+STRATEGIES = ['long_call', 'covered_call', 'protective_put', 'collar', 'cash_secured_put']
+PROTOCOL = {
+    'experiment': '6 earnings-resolution numerical payoff benchmark', 'version': 1,
+    'window': [START, END],
+    'prior_exposure': 'Earlier CFO/departure/guidance/risk studies and their results were inspected. Source-only reconnaissance counted 130 quarterly/annual earnings-tagged Item2.02 packages across28 issuers in the existing208-package source cohort. No economic earnings outcomes were inspected before this freeze. This follow-up is exploratory, not independent confirmation.',
+    'scope': 'All original 2024–2025 expanded-guidance enrollment accessions in the canonical static TOP_100 with quarterly_earnings or annual_earnings tags, exactly one original core8-K containing Item2.02 and at least one same-package EX99 HTML/text exhibit. Exclude all same-CIK same-filed-date collisions. This is the earnings-tagged Item2.02 population, not a claim that every package represents a scheduled earnings announcement. Original sources remain unchanged.',
+    'user_direction': 'Stop further qualitative label audits. This is a numerical/category benchmark; zero new JEV requests and no claim of incremental JEV predictive value. A positive benchmark alone would not establish the earlier semantic hypothesis.',
+    'hypothesis': 'Remaining option premium after a completed-period earnings disclosure is high relative to subsequent movement; selling the5%-OTM put after publication has a positive net5-session event-minus-ordinary-day edge. The primary candidate is fixed as cash_secured_put, never the largest point estimate among five structures.',
+    'primary': {'strategy': 'cash_secured_put', 'horizon': 5, 'bucket': '3-6m',
+                'otm': .05, 'entry_delay_sessions': 0, 'max_stale_sessions': 0,
+                'premium_haircut_each_side': .05},
+    'entry': 'Close of first trading session strictly after official filing date; acceptance must be no later than that close. This waits for disclosed information and intentionally does not capture the earlier earnings jump. Signal is fixed source membership, not a later semantic judgment. Controls use the same session-close convention. Delay1 means the next session after this entry, independently reselecting chain, expiry and strikes.',
+    'pricing': 'Canonical notebook price_event, PricedEvent, Leg, evaluate and strategy_pnl definitions loaded without executing research cells. Set t_pre=t_0=actual eligible entry so chains and strike selection are as of entry. Preserve only post rows; fixed horizons start at this entry. Reject extreme-strike substitution; require exact outward OTM boundaries. Primary ATM pair and used strategy legs need same-session marks and positive volume. Absolute ATM moneyness<=3%; positive finite parity spot and full straddle required. Option bars and contract as_of dates fenced2024–2025; unavailable late exits missing, never0.',
+    'movement': 'abs(S_exit/S_entry-1). Full ratio uses entry ATM(call+put)/entry parity spot; scaled ratio multiplies that implied move by sqrt(sessions held/sessions to expiry). This straddle proxy is not a calibrated expectation or model-free implied volatility. Reduced movement alone cannot establish profitable put selling.',
+    'ordinary_days': 'Before any market request, retrieve all8-K text rows for the selected issuers within2024–2025 and exclude sessions<=30calendar days from any Item2.02 filing date, including source-cohort filings. Same issuer/year as each event; choose up to3distinct controls without reuse within issuer by SHA256(earnings-payoff-v1|accession|YYYY-MM-DD). All controls and exclusions frozen before financial acquisition. No resampling missing marks. Screen covers filed8-K results, not every earlier press release or unscheduled news event; report limitations.',
+    'weighting': 'Each event equally weighted; its available controls average to one baseline. Each control belongs to one event. Primary inference requires at least2usable controls/event and matched60events/20issuers; all-available descriptive estimates remain visible. Same paired event/control mask per metric; common-five-strategy sample separately reported. Company bootstrap carries repeated events and their controls together.',
+    'source_gate': {'min_events': 80, 'min_companies': 20},
+    'economic_gate': {'min_matched_events': 60, 'min_companies': 20, 'min_controls_per_event': 2},
+    'precision': 'These floors prevent sparse comparisons; they do not guarantee power or correctness. Report observed uncertainty, concentration, common-market shocks and overlapping horizons. Do not relax floors after seeing coverage.',
+    'horizons': HORIZONS, 'buckets': {'1m': [21,45,30], '2m': [46,80,60], '3-6m': [90,180,120]},
+    'sensitivity': {'otm': [.03,.05,.10], 'entry_delay_sessions': [0,1],
+                    'max_stale_sessions': [0,3], 'premium_haircut_each_side': [0.,.05,.10],
+                    'issuer_year': '2024 and2025 separately, leave largest issuer out; no new acquisition or strategy selection. Report full grid, missing exits and common sample.'},
+    'costs': {'commission_per_contract_side': .65, 'contract_multiplier': 100,
+              'annual_funding_rate': .05,
+              'rule': 'Haircut each traded option premium at its actual entry/exit mark; add commission per contract per side. Covered call/protective put/collar use canonical synthetic stock, hence charge ATMcall+ATMput legs as well as OTM legs. Funding5%annual on gross entry capital for calendar holding days: long call=call debit; cash-secured put=put strike; coveredcall=spot; protectiveput=spot+put debit; collar=spot+max(put debit-call credit,0). Do not credit premium proceeds or collateral interest. This is an assumed fully-funded scenario, not measured fills. Exercise/assignment/dividends and short-option margin feasibility unmodeled; daily trade bars lack executableNBBO.'},
+    'report': 'Allfive structures, every horizon, event/control means and medians, paired mean differences and95%company-cluster intervals for gross/net, counts, missing marks, normalized capital, lower-tail outcomes, costs and zero-edge break-even haircut. Report stock-only movement diagnostic. Never substitute missing values with0.',
+    'bootstrap': {'draws': 1000, 'seed': 20261003, 'min_finite_fraction': .80,
+                  'inference': 'Pointwise exploratory percentile intervals, not simultaneous confidence bounds. The primary strategy is selected before outcomes; the other four are descriptive and cannot replace it. This is not independent confirmation or a causal randomization test.'},
+    'candidate_requirements': {'primary_mean_net_edge_min': .005,
+        'primary_net_ci_lower_gt': 0., 'primary_gross_ci_lower_gt': 0.,
+        'scaled_movement_ratio_event_minus_control_ci_upper_lt': 0.,
+        'net_edge_positive_at_haircut10pct': True, 'positive_primary_structure_horizons': [3,5,10],
+        'positive_both_years_and_leave_largest_issuer_out': True,
+        'common_five_strategy_primary_net_ci_lower_gt': 0.,
+        'required_numerical_increment': 'Category indicator adds held-issuer predictive information for5-session absolute movement beyond entry-implied-scaled movement, ATMmoneyness and log entry spot: held-issuerMSE improvement>=5% with paired company-cluster95%lower>0 and>=80%prediction coverage. Train-only feature centering/scaling; full-rankOLS>=5rows/parameter. This tests category beyond numerical prices, not JEV beyond a text baseline.'},
+    'final_decision': 'At most numerical_benchmark_candidate or no_supported_numerical_candidate after all fixed tests. Neither is a validated semantic solution. No final OOS rule until a complete supported research finding with source/timing/cost/realism limitations is reviewed. Do not automatically open2026 or sealed judges data.',
+    'forbidden': ['new JEV requests', '2026 financial data or filings', 'judges window', 'best-point-estimate strategy selection', 'threshold tuning after outcomes'],
+}

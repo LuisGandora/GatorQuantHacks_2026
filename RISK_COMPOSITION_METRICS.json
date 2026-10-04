@@ -1,0 +1,115 @@
+{
+  "experiment": "5A risk-composition measurement audit",
+  "protocol_sha256": "c215e001ed64181d40a83ecf2a35843be957fda5490362128d1a07e414cb1410",
+  "filings": 24,
+  "companies": 24,
+  "status_counts": {
+    "valid": 12,
+    "capacity_excluded": 12
+  },
+  "dimensions": {
+    "demand": {
+      "n": 12,
+      "reference_positive": 0,
+      "reference_negative": 12,
+      "confusion_counts": {
+        "no_supported -> no_supported": 12
+      },
+      "accuracy": 1.0,
+      "accuracy_95pct_bootstrap_interval": [
+        1.0,
+        1.0
+      ],
+      "predicted_positives": 0,
+      "positive_evidence_support": null,
+      "usable_count": 12,
+      "usable_fraction": 0.5
+    },
+    "margin": {
+      "n": 12,
+      "reference_positive": 3,
+      "reference_negative": 9,
+      "confusion_counts": {
+        "no_supported -> no_supported": 9,
+        "yes -> yes": 3
+      },
+      "accuracy": 1.0,
+      "accuracy_95pct_bootstrap_interval": [
+        1.0,
+        1.0
+      ],
+      "predicted_positives": 3,
+      "positive_evidence_support": 1.0,
+      "usable_count": 11,
+      "usable_fraction": 0.4583333333333333
+    },
+    "financing": {
+      "n": 12,
+      "reference_positive": 0,
+      "reference_negative": 12,
+      "confusion_counts": {
+        "no_supported -> no_supported": 12
+      },
+      "accuracy": 1.0,
+      "accuracy_95pct_bootstrap_interval": [
+        1.0,
+        1.0
+      ],
+      "predicted_positives": 0,
+      "positive_evidence_support": null,
+      "usable_count": 12,
+      "usable_fraction": 0.5
+    },
+    "execution": {
+      "n": 12,
+      "reference_positive": 2,
+      "reference_negative": 8,
+      "confusion_counts": {
+        "ambiguous -> no_supported": 2,
+        "no_supported -> no_supported": 8,
+        "yes -> yes": 2
+      },
+      "accuracy": 0.8333333333333334,
+      "accuracy_95pct_bootstrap_interval": [
+        0.5833333333333334,
+        1.0
+      ],
+      "predicted_positives": 2,
+      "positive_evidence_support": 1.0,
+      "usable_count": 11,
+      "usable_fraction": 0.4583333333333333
+    }
+  },
+  "gate_checks": {
+    "valid_filings": false,
+    "demand_coverage": false,
+    "demand_reference_support": false,
+    "demand_accuracy": true,
+    "demand_evidence": false,
+    "margin_coverage": false,
+    "margin_reference_support": true,
+    "margin_accuracy": true,
+    "margin_evidence": true
+  },
+  "gate_passed": false,
+  "decision": "measurement_not_validated",
+  "requests": 12,
+  "questions": 96,
+  "wall_s": 4.041779375023907,
+  "transport_retries": 0,
+  "input_tokens": 54752,
+  "output_tokens": 5658,
+  "usage_missing": 0,
+  "cost": "No project-wide or invoice cost measured; token counts reported. No market-data requests.",
+  "reference_limit": "Same implementing assistant, source-only labels frozen before JEV; not independent human gold labels.",
+  "economic_test": "not_run_measurement_audit_only",
+  "strategies": {
+    "long_call": "not_run_measurement_audit_only",
+    "covered_call": "not_run_measurement_audit_only",
+    "protective_put": "not_run_measurement_audit_only",
+    "collar": "not_run_measurement_audit_only",
+    "cash_secured_put": "not_run_measurement_audit_only"
+  },
+  "oos_opened": false,
+  "judges_opened": false
+}

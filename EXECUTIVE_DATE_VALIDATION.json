@@ -1,0 +1,180 @@
+{
+  "experiment": "executive effective-date span-selection validation",
+  "kind": "bounded literal effective-date span-selection measurement validation",
+  "protocol_sha256": "84e748091a9f2f8babf5c27cc20d2acf290789d0f4efa76799d78ac3cec56fea",
+  "implementation_sha256": "9ed72687392786cb2ec373029957f390de9801f34f1089f40abcff4b6d156346",
+  "source": {
+    "pilot_selection_sha256": "3d2a7342dcf51897a2ae5d37caf4b8c44fde05c783adc4b2230772eca0b80d7c",
+    "pilot_extraction_sha256": "f2ab53a04010d456576b747256a933c29542f8d5c232ab56c9de9a2ff6845d72",
+    "enrollment_sha256": "1dfba404107e5fcf0f5a80a1dff81c09184b5ebf40c494215eb3ca5d1b8f48ff"
+  },
+  "reference_sha256": "afd0f78a482874b92cc45d8d6544d6ffedd013bcc2dac70e25c2b7822a61ae8e",
+  "model": "jev-1.13.0",
+  "endpoint": "https://api.typesafe.ai/v1/systemone",
+  "rows": 30,
+  "docs": {
+    "index": {
+      "url": "https://docs.typesafe.ai/llms.txt",
+      "accessed": "2026-10-03"
+    },
+    "http_api": {
+      "url": "https://docs.typesafe.ai/api.md",
+      "accessed": "2026-10-03"
+    },
+    "choice": {
+      "url": "https://docs.typesafe.ai/primitives/choice.md",
+      "accessed": "2026-10-03"
+    },
+    "pre_parsed_value_extraction": {
+      "url": "https://docs.typesafe.ai/cookbooks/pre_parsed_value_extraction_cookbook.md",
+      "accessed": "2026-10-03"
+    },
+    "models": {
+      "url": "https://docs.typesafe.ai/models.md",
+      "accessed": "2026-10-03"
+    }
+  },
+  "measured": {
+    "rows": 30,
+    "valid_responses": 30,
+    "invalid_responses": 0,
+    "cache_hits": 0,
+    "live_requests": 30,
+    "http_attempts": 30,
+    "model": "jev-1.13.0",
+    "reference": {
+      "match": 16,
+      "no_match": 14,
+      "chosen_delta_days": {
+        "negative": 1,
+        "zero": 1,
+        "positive": 14,
+        "not_applicable_no_match": 14
+      },
+      "kind": "model-assisted, not independent human truth"
+    },
+    "baseline": {
+      "match": 25,
+      "no_match": 5
+    },
+    "jev": {
+      "match": 13,
+      "no_match": 17,
+      "invalid": 0
+    },
+    "agreement": {
+      "jev_vs_reference_date_all": {
+        "numerator": 27,
+        "denominator": 30,
+        "rate": 0.9,
+        "wilson95_low": 0.7437855868473339,
+        "wilson95_high": 0.9654007400402839
+      },
+      "jev_vs_reference_span_all": {
+        "numerator": 27,
+        "denominator": 30,
+        "rate": 0.9,
+        "wilson95_low": 0.7437855868473339,
+        "wilson95_high": 0.9654007400402839
+      },
+      "jev_vs_reference_date_reference_match": {
+        "numerator": 13,
+        "denominator": 16,
+        "rate": 0.8125,
+        "wilson95_low": 0.5699064013154177,
+        "wilson95_high": 0.9340852122641324
+      },
+      "jev_vs_reference_span_reference_match": {
+        "numerator": 13,
+        "denominator": 16,
+        "rate": 0.8125,
+        "wilson95_low": 0.5699064013154177,
+        "wilson95_high": 0.9340852122641324
+      },
+      "jev_no_match_given_reference_no_match": {
+        "numerator": 14,
+        "denominator": 14,
+        "rate": 1.0,
+        "wilson95_low": 0.7846829880728186,
+        "wilson95_high": 1.0
+      },
+      "baseline_vs_reference_date_all": {
+        "numerator": 19,
+        "denominator": 30,
+        "rate": 0.6333333333333333,
+        "wilson95_low": 0.45513246433604937,
+        "wilson95_high": 0.7812629779598231
+      },
+      "baseline_vs_reference_span_all": {
+        "numerator": 19,
+        "denominator": 30,
+        "rate": 0.6333333333333333,
+        "wilson95_low": 0.45513246433604937,
+        "wilson95_high": 0.7812629779598231
+      },
+      "jev_vs_baseline_date": {
+        "numerator": 16,
+        "denominator": 30,
+        "rate": 0.5333333333333333,
+        "wilson95_low": 0.3614201328152505,
+        "wilson95_high": 0.6976787277587178
+      },
+      "jev_vs_baseline_span": {
+        "numerator": 16,
+        "denominator": 30,
+        "rate": 0.5333333333333333,
+        "wilson95_low": 0.3614201328152505,
+        "wilson95_high": 0.6976787277587178
+      }
+    },
+    "confusion": {
+      "reference_match_jev_match": 13,
+      "reference_match_jev_no_match": 3,
+      "reference_match_jev_invalid": 0,
+      "reference_no_match_jev_match": 0,
+      "reference_no_match_jev_no_match": 14,
+      "reference_no_match_jev_invalid": 0,
+      "reference_match_jev_match_same_date": 13,
+      "reference_match_jev_match_same_span": 13
+    },
+    "choice_distribution": {
+      "no_match": 17,
+      "candidate": 13
+    },
+    "confidence": {
+      "mean": 0.8343333333333334,
+      "median": 0.99,
+      "note": "JEV confidence is distribution concentration for the selected option, not a correctness or accuracy probability and not a permission to act."
+    },
+    "latency": {
+      "mean_s": 0.2506222206992485,
+      "median_s": 0.23767616599798203,
+      "p95_s": 0.3687363750068471,
+      "total_s": 7.518666620977456
+    }
+  },
+  "interpretation": {
+    "measurement_only": "This measures literal date span selection, not an options edge and not a financial result.",
+    "reference_is_model_assisted": "The reference is the acting agent's own reading, not an independent human reference; agreement may reflect reference error and is not ground truth.",
+    "no_accuracy_claim": "Agreement between one model-assisted reference and one model on 30 in-sample exposed rows does not prove general accuracy and does not prove alpha.",
+    "signed_days": "A selected date yields a signed calendar-day offset from filing date; negative, zero and positive are valid and no_match is a separate category.",
+    "confidence": "JEV confidence is distribution concentration for the selected option, not correctness.",
+    "wilson_note": "Wilson intervals describe sampling noise only and do not include reference uncertainty, which is a model-assisted reading and may be wrong.",
+    "next_step": "A later financial study would need ordinary-day comparison and a predeclared economic channel; nothing here establishes one.",
+    "next_financial_study_eligibility": "Nothing here makes a financial study eligible by itself. A later financial study would require, in advance: (1) a literal, unambiguous effective-date span at coverage fixed by a predeclared rule; (2) a predeclared signed-day quantity compared with ordinary days for the same names, never fitted; (3) a predeclared economic channel from that quantity to exactly one of the five strategies before any price is opened; and (4) the out-of-sample and sealed windows untouched during design. None of these is established here, and date availability alone is not alpha."
+  },
+  "privacy": "Aggregate counts only; no accession, ticker, CIK, filing text, character offset or individual date.",
+  "network_requests": 30,
+  "jev_calls": 30,
+  "market_reads": 0,
+  "out_of_sample_reads": 0,
+  "financial_outcome_reads": 0,
+  "post_run_repair": {
+    "what": "the standalone verify subcommand had a one-line indexing defect, found after the JEV run and repaired",
+    "scope": "verification stage only; protocol, reference, inputs, state, questions, candidate spans, results and metrics are byte-identical",
+    "pre_repair_implementation_sha256": "e471562e1e44d2447c363590b64740935064f35c51b355bd30ce6b9ab6dc57a2",
+    "post_repair_implementation_sha256": "9ed72687392786cb2ec373029957f390de9801f34f1089f40abcff4b6d156346",
+    "scope_proof": "reverting the one line reproduces the pre-repair hash exactly; recorded privately in executive_date_validation/code_repair.json",
+    "live_jev_requests_during_repair": 0
+  }
+}

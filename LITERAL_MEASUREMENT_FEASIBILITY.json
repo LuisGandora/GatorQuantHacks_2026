@@ -1,0 +1,108 @@
+{
+  "artifact": "LITERAL_MEASUREMENT_FEASIBILITY",
+  "kind": "bounded_independent_economic_mechanism_review",
+  "authority": "GPT owns direction; advisory; freezes nothing; asserts no compliance",
+  "owner_files": ["LITERAL_MEASUREMENT_FEASIBILITY.md", "LITERAL_MEASUREMENT_FEASIBILITY.json"],
+  "constraints": {
+    "requires": ["Massive", "JEV", "no_classifiers"],
+    "pinned_model": "jev-1.13.0",
+    "no_actions_this_review": ["JEV_call", "vendor_api", "price_read", "filing_text", "env", "2026_or_reserved_window", "other_file_write", "commit"]
+  },
+  "read_public_cached": [
+    "MASSIVE_TRACK_REFERENCE.md", "JEV_ROLE_DECISION.md", "NOVELTY_RESULTS.md",
+    "REPURCHASE_SOURCE_RESULTS.md", "CREDIT_TERMS_PILOT.md", "EARNINGS_PAYOFF_RESULTS.md",
+    "departure_results/taxonomy.json", ".agents/skills/typesafe-ai/SKILL.md"
+  ],
+  "read_live_docs": [
+    "https://docs.typesafe.ai/llms.txt",
+    "https://docs.typesafe.ai/cookbooks/pre_parsed_value_extraction_cookbook.md",
+    "https://docs.typesafe.ai/cookbooks/date_extraction_cookbook.md",
+    "https://docs.typesafe.ai/api.md"
+  ],
+  "not_read": ["raw filings", ".env", "reserved/judges window", "filing text", "payoff values"],
+  "exposure_correction": "An earlier review ran a recursive grep over repository .py/.json/.md while matching model-version strings; that traversal passed through private folders and emitted only model names, never a filing or payoff value. This review does not claim the private caches were never read.",
+  "taxonomy_tags_exact_from_cached_departure_results": {
+    "dividend_declaration": "capital_and_financing/shareholder_returns",
+    "dividend_policy_change": "capital_and_financing/shareholder_returns",
+    "quarterly_earnings": "financial_results/earnings_and_performance",
+    "annual_earnings": "financial_results/earnings_and_performance",
+    "preliminary_results": "financial_results/earnings_and_performance",
+    "guidance_issuance_or_update": "financial_results/guidance_and_outlook"
+  },
+  "release_timestamp_tag_exists": false,
+  "counts_note": "the existing earnings cohort count is known (130 enrolled / 54 matched / 17 CIK clusters); the raw direct dividend_declaration count is unknown until the new metadata-only source census runs, and is not inferred; no synonyms invented",
+  "proposed_question": "Can JEV select a VERBATIM numerical amount or explicit announcement date from regex-enumerated source spans, with deterministic code doing the amount/date arithmetic?",
+  "extraction_vs_classifier_test": {
+    "qualifies_if": ["options are regex-found spans", "JEV emits index/part only", "code copies verbatim and normalizes", "all comparison/arithmetic deterministic"],
+    "disqualifies_if": ["model or code emits severity/material/routine/novelty label", "value invented rather than copied", "comparability of a prior declaration is inferred rather than stated in literal text"],
+    "arithmetic_note": "subtraction and its sign are arithmetic, not classifiers; any future pair must be an explicit literal-text statement that old and new are the same quantity"
+  },
+  "routes": [
+    {
+      "id": "A",
+      "name": "dividend_declaration verbatim per-share amount + dates",
+      "tags": ["dividend_declaration"],
+      "excluded_tags_reason": {"dividend_policy_change": "material-change description is a severity judgment, not an amount"},
+      "mechanism": "regex-enumerate $ spans and dates; JEV picks declared per-share cash amount and declaration date (each with none escape); code parses Decimal and counts days. Subtraction and its sign are arithmetic, not a classifier; comparability is never inferred",
+      "current_authorization": "the authorized step is a metadata-only source census with no JEV call; this JEV extraction is a later, not-yet-authorized proposal",
+      "judgment_points": ["regular vs special vs annualized vs aggregate role selection", "prohibited: inferring that a prior declaration is comparable (must be an explicit literal-text same-quantity statement)"],
+      "unresolved_user_constraint": "consuming the vendor event tag is part of the Massive framework, not a new classifier; role attribution (which span/section carries the declared amount) is a different inference and is flagged, not certified classifier-free",
+      "grade": {"novelty": 3, "mechanism": 2, "data_feasibility": 3, "robustness": 3, "massive": 3},
+      "grade_reasons": "known dividend-change anomaly (new only as JEV span-selection measurement); carry confound; verbatim but role-ambiguous, amount-extraction coverage unknown; copy resists transposition but comparability prohibited (must be a literal same-quantity statement); taxonomy/disclosures fit, no stock feed",
+      "decision": "merits_one_bounded_prospective_source_only_audit"
+    },
+    {
+      "id": "B",
+      "name": "earnings release timestamp vs SEC acceptance, elapsed delay",
+      "tags": ["quarterly_earnings", "annual_earnings", "preliminary_results"],
+      "mechanism": "JEV reads exhibit's explicit publication date/time; code subtracts SEC acceptance timestamp",
+      "judgment_points": ["which exhibit is the press release", "verbatim clock time often absent", "pre/post-market inference", "timezone"],
+      "unresolved_user_constraint": "a literal release clock time may not exist, so the route can degrade into timing classification",
+      "grade": {"novelty": 2, "mechanism": 1, "data_feasibility": 2, "robustness": 2, "massive": 2},
+      "grade_reasons": "data-quality timing feature; no payoff channel; verbatim clock time may not exist; provenance/timezone/judgment; no release-time field and cohort already consumed",
+      "decision": "not_selected_now"
+    }
+  ],
+  "decision": {
+    "selected_route": "A",
+    "audits_authorized": 1,
+    "route_b_blockers": ["verbatim timestamp existence unverified (would itself be a second audit)", "cohort overlaps already-exposed earnings 130/54/17"],
+    "selection_rule": "no outcome-driven selection; no threshold borrowed as law; no point estimate used",
+    "authorized_bounded_step": "metadata-only source census of the exact dividend_declaration tag with no JEV call; the JEV span extraction is later and is not authorized by this review"
+  },
+  "audit_bounds": {
+    "scope": "source-only, prospective, outcome-blind",
+    "current_step": "metadata-only vendor tag/disclosure census; no JEV call, no filing text, no price",
+    "inputs": ["vendor taxonomy", "vendor disclosure metadata (tags)", "regex-enumerated spans (later step only)"],
+    "model_use": "no JEV call in the authorized metadata census; the later, separately-authorized extraction would use JEV span-role and date-part questions only",
+    "code_use": "current step: metadata counts only; later step: verbatim copy, Decimal/day arithmetic",
+    "outputs": ["census counts (current step)", "later step: measurement coverage, attribution failures, abstentions"],
+    "excluded": ["price", "strategy", "model score", "outcome", "materiality label"]
+  },
+  "mechanism_confounds": {
+    "five_strategies": {
+      "A": "dividend change is a carry quantity; put-call parity synthetic shares embed dividends, so short-premium (covered call, CSP) edges can be a dividend-carry artifact; directional structures need signed drift the amount alone cannot give",
+      "B": "elapsed filing delay has no clean sign/magnitude link to any of the five strategies; it is entry-lag realism only"
+    },
+    "ordinary_day_baseline": "financial track obligation; a source-only audit cannot run it",
+    "t_pre_post_lag": "organizer direction: entry is the close of the filing session when the filing lands before the bell; the existing earnings next-session-close convention is an internal choice, not a universal rule; an extracted declaration/release time cannot locate that close; EARNINGS_PAYOFF mixes 92/130 pre-open and 38/130 post-close acceptance offsets",
+    "dividend_carry": "explicit parity carry confound for route A"
+  },
+  "sample_and_strict_mark_limits": {
+    "already_exposed_earnings": {"enrolled": 130, "matched": 54, "cik_clusters": 17},
+    "strict_marks": ["exact outward OTM strikes", "same-session positive volume", "<3pct ATM", ">=2 usable controls"],
+    "route_A_extra": "quarterly recurrence clusters events by issuer/date; effective independent issuer n small; strict marks remove more",
+    "floor_note": "internal 80/20 and 60/20 are team conventions, not organizer laws; not borrowed as laws"
+  },
+  "no_guaranteed_financial_positivity": "A valid verbatim measurement is not alpha: no interval, no edge, no strategy; carry/entry-lag confounds can generate or mask later price results; no guarantee of financial positivity is made or implied",
+  "corrections": [
+    "the authorized dividend step is a metadata-only source census with no JEV call; the JEV span extraction is later and not currently authorized",
+    "entry follows the organizer direction (close of the filing session when the filing lands before the bell); the existing earnings next-session-close convention is this team's internal choice, not a universal rule",
+    "consuming the vendor tag is part of the Massive framework, not a new classifier; role attribution remains a different inference and is not certified classifier-free",
+    "subtraction and its sign are arithmetic, not classifiers; inferring that a prior declaration is comparable is prohibited, and any future pair must state old/new as the same quantity in literal text",
+    "exposure: an earlier recursive grep over repository .py/.json/.md passed through private folders while matching model-version strings and emitted only model names (no filing or payoff values); private caches were not never-read",
+    "the existing earnings cohort count is known (130 enrolled / 54 matched / 17 CIK clusters); only the raw direct dividend_declaration count was unknown before this census"
+  ],
+  "files_written": ["LITERAL_MEASUREMENT_FEASIBILITY.md", "LITERAL_MEASUREMENT_FEASIBILITY.json"],
+  "commit": false
+}
