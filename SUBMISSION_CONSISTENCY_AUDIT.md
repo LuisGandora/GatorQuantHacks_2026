@@ -200,5 +200,94 @@ Checks of stated missing fields do not demonstrate compliance with the challenge
 | Quant note headline oos fresh-stale matches exact aggregate rounding | PASS |
 | Report distinguishes historical OOS from unknown sealed results | PASS |
 | Report preserves missing uncertainty, net contrast and custody limitations | PASS |
+| Remote branch provenance matches curated aggregate supplement | PASS |
+| Remote public evidence SHA-256: ADVERSE_INTACT_EVIDENCE_AUDIT.md | PASS |
+| Remote public evidence SHA-256: ADVERSE_INTACT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: ADVERSE_INTACT_RESULTS.md | PASS |
+| Remote public evidence SHA-256: BENCHMARK_RESULTS.md | PASS |
+| Remote public evidence SHA-256: CONTAINED_SHOCK_EVIDENCE_AUDIT.md | PASS |
+| Remote public evidence SHA-256: CONTAINED_SHOCK_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: CONTAINED_SHOCK_RESULTS.md | PASS |
+| Remote public evidence SHA-256: CREDIT_TERMS_PILOT.md | PASS |
+| Remote public evidence SHA-256: CREDIT_TERMS_PILOT_CORRECTIONS.md | PASS |
+| Remote public evidence SHA-256: CREDIT_TERMS_PILOT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: CREDIT_TERMS_PILOT_REVIEW.md | PASS |
+| Remote public evidence SHA-256: DEPARTURE_EXPERIMENT.md | PASS |
+| Remote public evidence SHA-256: DEPARTURE_RESULTS.md | PASS |
+| Remote public evidence SHA-256: DIVIDEND_SOURCE.md | PASS |
+| Remote public evidence SHA-256: DIVIDEND_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_RESULTS.md | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_REVIEW.md | PASS |
+| Remote public evidence SHA-256: EQUITY_ISSUANCE_SOURCE.md | PASS |
+| Remote public evidence SHA-256: EQUITY_ISSUANCE_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_DATE_VALIDATION.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_DATE_VALIDATION_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_DATE_VALIDATION_REVIEW.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_RUNWAY_PILOT.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_RUNWAY_PILOT_REVIEW.md | PASS |
+| Remote public evidence SHA-256: EXECUTIVE_RUNWAY_REVIEW.md | PASS |
+| Remote public evidence SHA-256: EXPANDED_GUIDANCE_MEASUREMENT.md | PASS |
+| Remote public evidence SHA-256: EXPANDED_GUIDANCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: EXPANDED_GUIDANCE_RESULTS.md | PASS |
+| Remote public evidence SHA-256: EXPERIMENT.md | PASS |
+| Remote public evidence SHA-256: EXPERIMENT_RESULTS.md | PASS |
+| Remote public evidence SHA-256: FINGERPRINT_EXPERIMENT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: FINGERPRINT_EXPERIMENT_RESULTS.md | PASS |
+| Remote public evidence SHA-256: FULL_SOURCE_EVIDENCE_AUDIT.md | PASS |
+| Remote public evidence SHA-256: FULL_SOURCE_EXPERIMENT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: GUIDANCE_EXPERIMENT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: GUIDANCE_RESULTS.md | PASS |
+| Remote public evidence SHA-256: HISTORICAL_CREDIT_COVERAGE.md | PASS |
+| Remote public evidence SHA-256: HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: LABEL_BENCHMARK.md | PASS |
+| Remote public evidence SHA-256: NOVELTY_EXPERIMENT.md | PASS |
+| Remote public evidence SHA-256: NOVELTY_RESULTS.md | PASS |
+| Remote public evidence SHA-256: REPURCHASE_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: REPURCHASE_SOURCE_RESULTS.md | PASS |
+| Remote public evidence SHA-256: RESTRUCTURING_SOURCE.md | PASS |
+| Remote public evidence SHA-256: RESTRUCTURING_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: RESTRUCTURING_SOURCE_REVIEW.md | PASS |
+| Remote public evidence SHA-256: RISK_COMPOSITION_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: RISK_COMPOSITION_RESULTS.md | PASS |
+| Remote public evidence SHA-256: RISK_COMPOSITION_REVIEW.md | PASS |
+| Remote public evidence SHA-256: SETTLEMENT_SOURCE.md | PASS |
+| Remote public evidence SHA-256: SETTLEMENT_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: SETTLEMENT_SOURCE_REVIEW.md | PASS |
+| Remote public evidence SHA-256: SOURCE_IDENTITY_REVIEW.md | PASS |
+| Remote public evidence SHA-256: STABILITY_EXPERIMENT_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: STABILITY_EXPERIMENT_RESULTS.md | PASS |
+| Remote public evidence SHA-256: TRANSACTION_IDENTITY_REVIEW.md | PASS |
+| Remote public evidence SHA-256: TRANSACTION_SOURCE.md | PASS |
+| Remote public evidence SHA-256: TRANSACTION_SOURCE_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_RESULTS.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_ECONOMIC_RESULTS.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_PROTOCOL.md | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_RESULTS.md | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_METRICS.json | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_HORIZONS.json | PASS |
+| Remote public evidence SHA-256: EARNINGS_PAYOFF_SENSITIVITY.json | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_ECONOMIC_SUMMARY.json | PASS |
+| Remote public evidence SHA-256: UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_SUMMARY.json | PASS |
+| Remote 6 exact paired net means, edge and denominators | PASS |
+| Remote 6 original decision and unavailable primary CI retained | PASS |
+| Remote 6 OOS and judges unopened, separate from F1 | PASS |
+| Remote 6 actual event/control/edge values appear in history index | PASS |
+| Remote 9B exact paired net means, edge and denominators | PASS |
+| Remote 9B original decision and unavailable primary CI retained | PASS |
+| Remote 9B OOS and judges unopened, separate from F1 | PASS |
+| Remote 9B actual event/control/edge values appear in history index | PASS |
+| Remote 10 exact paired net means, edge and denominators | PASS |
+| Remote 10 original decision and unavailable primary CI retained | PASS |
+| Remote 10 OOS and judges unopened, separate from F1 | PASS |
+| Remote 10 actual event/control/edge values appear in history index | PASS |
+| Notebook shows supporting remote actual paired returns without replacing F1 | PASS |
+| Unpriced 11-13 not represented as economic nulls or newly inferred experiment numbers | PASS |
 
-Result: **PASS**; 192/192 checks passed.
+Result: **PASS**; 281/281 checks passed.

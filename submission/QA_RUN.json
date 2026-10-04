@@ -23,8 +23,18 @@
     "Protocol windows amended after OOS; independent custody not established",
     "Static universe and unclustered row bootstrap unchanged"
   ],
-  "followup_publication": "Final report table expanded to display all 54 existing recovered values; consistency checker verifies each row. QA documentation/export-manifest changes only otherwise. No economic source changes; verify final published tip in handoff.",
+  "followup_publication": "F1 table, QA and remote documentary/aggregate supplement only. Economic source functions unchanged; no raw OOS or sealed observations opened. Final published tip recorded in handoff.",
   "consistency_checks_passed_at_initial_clone": 183,
-  "final_consistency_checks_passed": 192,
-  "verification_date": "2026-10-04"
+  "final_consistency_checks_passed": 281,
+  "verification_date": "2026-10-04",
+  "remote_history_followup": {
+    "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+    "documents": 69,
+    "aggregate_jsons": 5,
+    "source_and_publication_hashes_checked": true,
+    "notebook_run_all": "PASS, HTTP blocked after adding remote paired aggregate display",
+    "report": "2 pages; page 2 visually reviewed",
+    "economic_research_reruns": 0,
+    "numbered_11_13": "Unpriced per user; numbered artifacts unavailable at fetched tip"
+  }
 }

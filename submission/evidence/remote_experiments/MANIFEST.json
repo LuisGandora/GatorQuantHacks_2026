@@ -1,0 +1,527 @@
+{
+  "repository": "LuisGandora/GatorQuantHacks_2026",
+  "branch": "experiments",
+  "commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+  "retrieved": "2026-10-04",
+  "scope": "Public protocols/results and derived aggregate statistics only. No branch code, private provider/source/cache payloads or OOS/sealed observations imported.",
+  "files": {
+    "ADVERSE_INTACT_EVIDENCE_AUDIT.md": {
+      "source_git_blob": "0cf5bf2a0fc995a08183308cac6fbf8cf0b40bbd",
+      "source_sha256": "6e3417468d6cd4af6315e63eec87366e05881fafe45a8fed5603de5204a02ff0",
+      "sha256": "6e3417468d6cd4af6315e63eec87366e05881fafe45a8fed5603de5204a02ff0",
+      "bytes": 3250,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "ADVERSE_INTACT_PROTOCOL.md": {
+      "source_git_blob": "edae5147d646b932da77d9fc5610856907d7a863",
+      "source_sha256": "49ec881f960877f92b60994b1727b9a54517218eecef02065d868d3528dc02ad",
+      "sha256": "49ec881f960877f92b60994b1727b9a54517218eecef02065d868d3528dc02ad",
+      "bytes": 34131,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "ADVERSE_INTACT_RESULTS.md": {
+      "source_git_blob": "98c099dbe6b8fe4c601a2bec0108a7c0fc05a51c",
+      "source_sha256": "11d75568ab92ebb2f949a9ebe9443116375ae4c25dcf8e84ff03c7ab51fd13eb",
+      "sha256": "11d75568ab92ebb2f949a9ebe9443116375ae4c25dcf8e84ff03c7ab51fd13eb",
+      "bytes": 11052,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "BENCHMARK_RESULTS.md": {
+      "source_git_blob": "2e952dafb5e554b9e3be36f5e1bb708b51b89bff",
+      "source_sha256": "81341e0b982457c6dcd8eeab95f29a764a3a50546e6f641150bbd8a37989ba8b",
+      "sha256": "f035392afab15f24f53b269c0a730ea4af5bfa0fa997e3fda60ddfc13b805d0b",
+      "bytes": 9823,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CONTAINED_SHOCK_EVIDENCE_AUDIT.md": {
+      "source_git_blob": "2b4446235b7e3ae67bd02c42a81a254fce203d29",
+      "source_sha256": "cb93b1928442154dbe765b557c08fff2d0bab40900ea978cc576c49cb59b22f1",
+      "sha256": "cb93b1928442154dbe765b557c08fff2d0bab40900ea978cc576c49cb59b22f1",
+      "bytes": 3549,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CONTAINED_SHOCK_PROTOCOL.md": {
+      "source_git_blob": "046a5fe9065e5effaf32de398e590154a9d5658d",
+      "source_sha256": "2172d56d8b72c8c13056b107410be6d7809c4139154ec9393f6b99a474c74d21",
+      "sha256": "2172d56d8b72c8c13056b107410be6d7809c4139154ec9393f6b99a474c74d21",
+      "bytes": 37036,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CONTAINED_SHOCK_RESULTS.md": {
+      "source_git_blob": "4f49141626dc752a066b7ec923b4dbcccd3484f6",
+      "source_sha256": "e967ad6d191e5d5a011cf877d86b25317c058b138141b8dddfb6eae98964729e",
+      "sha256": "e967ad6d191e5d5a011cf877d86b25317c058b138141b8dddfb6eae98964729e",
+      "bytes": 11048,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CREDIT_TERMS_PILOT.md": {
+      "source_git_blob": "57ba543265263bb599ce4b90376b907285dcaaa3",
+      "source_sha256": "7bf3205b5fa14214a562e5a8ef3c5c935ae99023be75089e989a256fc63a4191",
+      "sha256": "7bf3205b5fa14214a562e5a8ef3c5c935ae99023be75089e989a256fc63a4191",
+      "bytes": 12121,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CREDIT_TERMS_PILOT_CORRECTIONS.md": {
+      "source_git_blob": "68d59f9dd3f8cb3c39a7d8564fd4004a970cb009",
+      "source_sha256": "60d2e2dd019127d424ca4e093f6862f2f8bab76ce13436cddf8f177381cb57ae",
+      "sha256": "60d2e2dd019127d424ca4e093f6862f2f8bab76ce13436cddf8f177381cb57ae",
+      "bytes": 11690,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CREDIT_TERMS_PILOT_PROTOCOL.md": {
+      "source_git_blob": "91164907275f415c05a173f23a3c61e94ced7d59",
+      "source_sha256": "8b206ab00e03adb73ee67802841e24bebd5213a228ab3b7af6083f9c15cfb511",
+      "sha256": "8b206ab00e03adb73ee67802841e24bebd5213a228ab3b7af6083f9c15cfb511",
+      "bytes": 11127,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "CREDIT_TERMS_PILOT_REVIEW.md": {
+      "source_git_blob": "f586313ba868626080efe7c2bd8706aa652740c8",
+      "source_sha256": "ef6c2b8b45500d8023dc0e656896ca258b70a88a619e845c3900b3712073deee",
+      "sha256": "ef6c2b8b45500d8023dc0e656896ca258b70a88a619e845c3900b3712073deee",
+      "bytes": 7765,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "DEPARTURE_EXPERIMENT.md": {
+      "source_git_blob": "3882cefc382ccc7a0670cd83a94d190e8d7fa111",
+      "source_sha256": "38d19483652cd63897251ef85bf49c623a76179ce6fc495393c3ccc71796753a",
+      "sha256": "127b98ac88a7338a3ae437f395946c8113cf4a0d145edae5d7d4e9637bcd2727",
+      "bytes": 15940,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "DEPARTURE_RESULTS.md": {
+      "source_git_blob": "e988f5b525b176a23e471f5cab27b0064276c5f3",
+      "source_sha256": "0467140dc1f8d1392f295a2088b645e581d1a30c013e332a43196661ef531716",
+      "sha256": "35ef3641fe2e0d1e97e372c097c2c72b379a54287dd7e6148db0affae7ba502a",
+      "bytes": 9634,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "DIVIDEND_SOURCE.md": {
+      "source_git_blob": "e7bd9525d7e8eb6b2782b34658dad2a5b34b0069",
+      "source_sha256": "cc56460d0475fc867435a2f7831b9c61bce6e8412d3699656cb1fcbc356c3480",
+      "sha256": "cc56460d0475fc867435a2f7831b9c61bce6e8412d3699656cb1fcbc356c3480",
+      "bytes": 4728,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "DIVIDEND_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "bed5fb6e11a8f13e013b65aeae48c5e58519a117",
+      "source_sha256": "a42f1765e44e0e3a00fb9db6444d5ccb8d7f3c6f538188c44bb851fe9a38795c",
+      "sha256": "a42f1765e44e0e3a00fb9db6444d5ccb8d7f3c6f538188c44bb851fe9a38795c",
+      "bytes": 7345,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EARNINGS_PAYOFF_PROTOCOL.md": {
+      "source_git_blob": "08515e3725028d6fb5cdda0ad256d0b63147fda3",
+      "source_sha256": "091c537d259f3db38b22ad7a84a4758d91c5769b153a52be34c0a5b463254e73",
+      "sha256": "091c537d259f3db38b22ad7a84a4758d91c5769b153a52be34c0a5b463254e73",
+      "bytes": 28700,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EARNINGS_PAYOFF_RESULTS.md": {
+      "source_git_blob": "84d7309689f95dec9575b43059bedd64fe50591d",
+      "source_sha256": "b261e7c390c536ca9af8b36e1739a820176bb0db4c877191c000ceef07463a1e",
+      "sha256": "b261e7c390c536ca9af8b36e1739a820176bb0db4c877191c000ceef07463a1e",
+      "bytes": 23357,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EARNINGS_PAYOFF_REVIEW.md": {
+      "source_git_blob": "e7169789739f01c2197566f830d574e4843af074",
+      "source_sha256": "fb4f06f481855599ea5106a74173d0fb4a9ca1d0e9e98fc26a9dccb140c62950",
+      "sha256": "fb4f06f481855599ea5106a74173d0fb4a9ca1d0e9e98fc26a9dccb140c62950",
+      "bytes": 12630,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EQUITY_ISSUANCE_SOURCE.md": {
+      "source_git_blob": "fd67915638e3b67df297f6cab0f6922a150917ff",
+      "source_sha256": "734429c25c3ebacfda5f5d7e266896370ac0fdc5c97ffc36cae66a588d97d4a3",
+      "sha256": "734429c25c3ebacfda5f5d7e266896370ac0fdc5c97ffc36cae66a588d97d4a3",
+      "bytes": 4330,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EQUITY_ISSUANCE_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "f5a2505f5cf3ddc56e4c2725cf57c0c934eadcfe",
+      "source_sha256": "adf2550b0daa9ab5cf08115a38936c6f3c841f2ac0dbe53036e0d1550465c6af",
+      "sha256": "adf2550b0daa9ab5cf08115a38936c6f3c841f2ac0dbe53036e0d1550465c6af",
+      "bytes": 6659,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_DATE_VALIDATION.md": {
+      "source_git_blob": "f10a72d50eed7930c03697a71f7b334178c15ac0",
+      "source_sha256": "9eeef36a9ccc01fc42a7975b0d2d57acd8e443709e36aad678f17820689b0adb",
+      "sha256": "9eeef36a9ccc01fc42a7975b0d2d57acd8e443709e36aad678f17820689b0adb",
+      "bytes": 4116,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_DATE_VALIDATION_PROTOCOL.md": {
+      "source_git_blob": "f525aee081ceaf054b025af7f660619a1873a7ca",
+      "source_sha256": "51a4e37fe14ec4926d9ad32cf2b9a73eb60d1c248e23a52274b7f4b410cd1edb",
+      "sha256": "51a4e37fe14ec4926d9ad32cf2b9a73eb60d1c248e23a52274b7f4b410cd1edb",
+      "bytes": 12589,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_DATE_VALIDATION_REVIEW.md": {
+      "source_git_blob": "a5cd4a3eb010e54d21ced7b997e677c7babcae7c",
+      "source_sha256": "0a9dfec910c0c1b07199d4898d2cf7c6f7704f4b05d86cede3602357379864a0",
+      "sha256": "0a9dfec910c0c1b07199d4898d2cf7c6f7704f4b05d86cede3602357379864a0",
+      "bytes": 11415,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_RUNWAY_PILOT.md": {
+      "source_git_blob": "6cc51f6ca0a4f03e940de51d63fd87cb54e7c77e",
+      "source_sha256": "7fa57eba94f717aad338e471c72a9506f08845e64e8217567357e9c783f08b65",
+      "sha256": "7fa57eba94f717aad338e471c72a9506f08845e64e8217567357e9c783f08b65",
+      "bytes": 2482,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_RUNWAY_PILOT_PROTOCOL.md": {
+      "source_git_blob": "1dc78a99a80a92cedb956d5e1d232754081a93d8",
+      "source_sha256": "b3b7c6b97c6a28f7fba246804945fe46a22a9ea407cf86552b9e610c577185bf",
+      "sha256": "b3b7c6b97c6a28f7fba246804945fe46a22a9ea407cf86552b9e610c577185bf",
+      "bytes": 4305,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_RUNWAY_PILOT_REVIEW.md": {
+      "source_git_blob": "b521322275c02fe0c1f97b97227be6e959ed09df",
+      "source_sha256": "ae3fb8bc7b51c062485afc3feb9078459da27e15ed1fd9bc95b80aa00bf9cab7",
+      "sha256": "ae3fb8bc7b51c062485afc3feb9078459da27e15ed1fd9bc95b80aa00bf9cab7",
+      "bytes": 5624,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXECUTIVE_RUNWAY_REVIEW.md": {
+      "source_git_blob": "44848fd8376d2107fcddc5a9ec2e257f79e7e57a",
+      "source_sha256": "564b47b619562701503b3036f174205d7468983fe6cc06c2ca8e24ad5f67553c",
+      "sha256": "564b47b619562701503b3036f174205d7468983fe6cc06c2ca8e24ad5f67553c",
+      "bytes": 12342,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXPANDED_GUIDANCE_MEASUREMENT.md": {
+      "source_git_blob": "8bef11d6c5bf5d79079552e00caf6cb651856158",
+      "source_sha256": "d8c9f008b79caccb81427c62d8cda2fd3a9f8329e8f4da881559169598ac03fe",
+      "sha256": "d8c9f008b79caccb81427c62d8cda2fd3a9f8329e8f4da881559169598ac03fe",
+      "bytes": 6653,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXPANDED_GUIDANCE_PROTOCOL.md": {
+      "source_git_blob": "57e4ff02b4d5869d9f8e69db9192d6cd330ea6d4",
+      "source_sha256": "7d63c1439f14b3ddab987f043a73457db0aa7b4c6f647d2f0efc9b120bc7d169",
+      "sha256": "7d63c1439f14b3ddab987f043a73457db0aa7b4c6f647d2f0efc9b120bc7d169",
+      "bytes": 15559,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXPANDED_GUIDANCE_RESULTS.md": {
+      "source_git_blob": "e3c8599077d5c83fdfcbc1aa64ab6b77690a6cba",
+      "source_sha256": "7c9dc1b8002e77663baee598db8ae29959515f7b78635cd28c5a5b9692302580",
+      "sha256": "7c9dc1b8002e77663baee598db8ae29959515f7b78635cd28c5a5b9692302580",
+      "bytes": 9403,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXPERIMENT.md": {
+      "source_git_blob": "ceefe4a7d2f398934aab2085b4398d94cefcdf0b",
+      "source_sha256": "a86ba6ae49eeb61e69badc122219e5a8612fd206d15f206cd7eff6fd8fa5c96e",
+      "sha256": "a86ba6ae49eeb61e69badc122219e5a8612fd206d15f206cd7eff6fd8fa5c96e",
+      "bytes": 14062,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EXPERIMENT_RESULTS.md": {
+      "source_git_blob": "2ec039e828dc5a826757b78779cde113a57feeee",
+      "source_sha256": "06d0619549abe48d4788a935e7a7e1122bea3624ad16b419a9f05e7a2b98b683",
+      "sha256": "06d0619549abe48d4788a935e7a7e1122bea3624ad16b419a9f05e7a2b98b683",
+      "bytes": 12438,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "FINGERPRINT_EXPERIMENT_PROTOCOL.md": {
+      "source_git_blob": "8cfbfe251e85ddea0a28217f847d4cfda9c482d6",
+      "source_sha256": "35d0ec458190d577ab7f7cd988a8448aec7c88772ef07bee17147e9ced0db65f",
+      "sha256": "35d0ec458190d577ab7f7cd988a8448aec7c88772ef07bee17147e9ced0db65f",
+      "bytes": 24561,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "FINGERPRINT_EXPERIMENT_RESULTS.md": {
+      "source_git_blob": "b432ba935fdd522032d43913c740e6290ef048ca",
+      "source_sha256": "13f4dca5a6a0d66df38f3e989cce986ed7040335faef24dc9aa3e6ac4673f9e4",
+      "sha256": "13f4dca5a6a0d66df38f3e989cce986ed7040335faef24dc9aa3e6ac4673f9e4",
+      "bytes": 9256,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "FULL_SOURCE_EVIDENCE_AUDIT.md": {
+      "source_git_blob": "90213c0e9abbbc57b711127c52d4aa97cb0d7693",
+      "source_sha256": "572e2170d8fa1ee8f6e5dab126d0b7d103b032daa24c8d4028a5306a503980a3",
+      "sha256": "572e2170d8fa1ee8f6e5dab126d0b7d103b032daa24c8d4028a5306a503980a3",
+      "bytes": 10765,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "FULL_SOURCE_EXPERIMENT_PROTOCOL.md": {
+      "source_git_blob": "107fceb457b9099eb2fa6b7fc9d105663de65b52",
+      "source_sha256": "ffe24d331d7c46904d38886034a20e5b2562dbcf3aea6eee1d4eecc5d196ee1a",
+      "sha256": "ffe24d331d7c46904d38886034a20e5b2562dbcf3aea6eee1d4eecc5d196ee1a",
+      "bytes": 6417,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "GUIDANCE_EXPERIMENT_PROTOCOL.md": {
+      "source_git_blob": "5211b6e659df301266bad742afc9ff44e3ca9f2c",
+      "source_sha256": "3a3f57acf698fd5c24c206f7089695b2feeb560ce5dedb3762d2256b9812b715",
+      "sha256": "3a3f57acf698fd5c24c206f7089695b2feeb560ce5dedb3762d2256b9812b715",
+      "bytes": 13158,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "GUIDANCE_RESULTS.md": {
+      "source_git_blob": "cdc73bc58a4c5613b0f9f3dfd1c72c82cb4a2efa",
+      "source_sha256": "9eb9e3adf2c2efbca1befa7429876fd4363a63f5fab9e72d256941b1e6da36c5",
+      "sha256": "9eb9e3adf2c2efbca1befa7429876fd4363a63f5fab9e72d256941b1e6da36c5",
+      "bytes": 5794,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "HISTORICAL_CREDIT_COVERAGE.md": {
+      "source_git_blob": "7ee4fcb976dab4590d50212424e63b55edb5baed",
+      "source_sha256": "d3a27f482ebd6d2b7817dc89b9e8b13fd854f7869d64a5e69d8a9c27067d09c4",
+      "sha256": "d3a27f482ebd6d2b7817dc89b9e8b13fd854f7869d64a5e69d8a9c27067d09c4",
+      "bytes": 11819,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "HISTORICAL_CREDIT_COVERAGE_PROTOCOL.md": {
+      "source_git_blob": "16ccf4b289e50b2519e3757e16028c1b5ffcd43d",
+      "source_sha256": "a683359b7eab8b86ab54c9e55bbbd00920affd8bebe074b1a1bfe5c4011d3a50",
+      "sha256": "a683359b7eab8b86ab54c9e55bbbd00920affd8bebe074b1a1bfe5c4011d3a50",
+      "bytes": 6853,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "LABEL_BENCHMARK.md": {
+      "source_git_blob": "290475c084665dec798bf33a8d9dc57a0a2a9804",
+      "source_sha256": "29b7061b4b045e13b35e39bdf35dde5dab8c5cb23811aa98f4957fb4efe63771",
+      "sha256": "ce013ec6cdaa5aca4475425d7f1dfac2899290a88e0559365bfd457068add2ab",
+      "bytes": 9390,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "NOVELTY_EXPERIMENT.md": {
+      "source_git_blob": "0b8260dfddc8c9c231d05d5acdee06136112f0af",
+      "source_sha256": "420db81fcdd86c28de4f7997237317fe44ed8e07e3ecb5aef5d15417ffdc66de",
+      "sha256": "420db81fcdd86c28de4f7997237317fe44ed8e07e3ecb5aef5d15417ffdc66de",
+      "bytes": 14746,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "NOVELTY_RESULTS.md": {
+      "source_git_blob": "01938054e4bebc8a03a27f907c81927612541392",
+      "source_sha256": "45b44127aacaa992b7e32c9245d507a210721a1d46fc83a435ed040d74f4145d",
+      "sha256": "45b44127aacaa992b7e32c9245d507a210721a1d46fc83a435ed040d74f4145d",
+      "bytes": 4079,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "REPURCHASE_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "b98055a5374f8a50838fd41bb8752a43da05d9ba",
+      "source_sha256": "09ad4e709e1074eef0ab40dc6d0139c179e417f41dbe9174c28f07cfc133a4be",
+      "sha256": "09ad4e709e1074eef0ab40dc6d0139c179e417f41dbe9174c28f07cfc133a4be",
+      "bytes": 6079,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "REPURCHASE_SOURCE_RESULTS.md": {
+      "source_git_blob": "3bca6c3e170342cf6b8007a0dce917b8d53ecc51",
+      "source_sha256": "20ed35738fc8726d638341a3aebab485cd0e216c3de2cde6733bacfc150ba946",
+      "sha256": "20ed35738fc8726d638341a3aebab485cd0e216c3de2cde6733bacfc150ba946",
+      "bytes": 8552,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RESTRUCTURING_SOURCE.md": {
+      "source_git_blob": "3a9e93eedf2e496370f1a8f743638aea6a50a6d7",
+      "source_sha256": "aaa17fbc79de702675122c0b506fa52a4f74be1002f2998c53005ea9f7c0084b",
+      "sha256": "aaa17fbc79de702675122c0b506fa52a4f74be1002f2998c53005ea9f7c0084b",
+      "bytes": 3726,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RESTRUCTURING_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "71386d65656b775fb83ec590367a81ce7f62962c",
+      "source_sha256": "1f912dd70031af6213e2109a666d88c74899cde875bf1259adc1b0e75b7193e6",
+      "sha256": "1f912dd70031af6213e2109a666d88c74899cde875bf1259adc1b0e75b7193e6",
+      "bytes": 4238,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RESTRUCTURING_SOURCE_REVIEW.md": {
+      "source_git_blob": "8d447c03a03c2788b99a11b557c3db1f5907f43f",
+      "source_sha256": "f6a1e78c8a0be1a4b9e34ea71a9f63110998eda880930b091060e0b8fb714f79",
+      "sha256": "f6a1e78c8a0be1a4b9e34ea71a9f63110998eda880930b091060e0b8fb714f79",
+      "bytes": 4843,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RISK_COMPOSITION_PROTOCOL.md": {
+      "source_git_blob": "f9a7d14546257d8d433ffb2bfdfa8491229e72c3",
+      "source_sha256": "8617c3803b603fe8b81afed6526c35d5c8fd896aa289524e12e0b3f9ae05fda3",
+      "sha256": "8617c3803b603fe8b81afed6526c35d5c8fd896aa289524e12e0b3f9ae05fda3",
+      "bytes": 7275,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RISK_COMPOSITION_RESULTS.md": {
+      "source_git_blob": "4af6f6171bff5578d9ae55cf0dd71b51b4ef259d",
+      "source_sha256": "14896141c3cf0bf264641133ff9aeda4d5cd9d771825ca9cee205bdf79fe5ba8",
+      "sha256": "14896141c3cf0bf264641133ff9aeda4d5cd9d771825ca9cee205bdf79fe5ba8",
+      "bytes": 4213,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "RISK_COMPOSITION_REVIEW.md": {
+      "source_git_blob": "becc4c41e4562c9bdd496a74a5b46b55e17a7156",
+      "source_sha256": "f554b5871dd8446d23b8363d92b70143551e736873119a33ab9dc30ce7a7fbf1",
+      "sha256": "f554b5871dd8446d23b8363d92b70143551e736873119a33ab9dc30ce7a7fbf1",
+      "bytes": 3588,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "SETTLEMENT_SOURCE.md": {
+      "source_git_blob": "e4fb252b79413159026f4adf8b4b05a3d8bfd2df",
+      "source_sha256": "c56b8d18522e343cfd6169fc9f5226f089cfa97a767a20eba28e292b7b756402",
+      "sha256": "c56b8d18522e343cfd6169fc9f5226f089cfa97a767a20eba28e292b7b756402",
+      "bytes": 5745,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "SETTLEMENT_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "267489b09f7b8e961d9e96e99f6aa794399af4af",
+      "source_sha256": "0faf4786f915eab78af17a839f39233034bddc7f753f71314da57022b106ae5a",
+      "sha256": "0faf4786f915eab78af17a839f39233034bddc7f753f71314da57022b106ae5a",
+      "bytes": 9171,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "SETTLEMENT_SOURCE_REVIEW.md": {
+      "source_git_blob": "00a317cec9fc731951a90002beb5a671659b07ed",
+      "source_sha256": "ee0ce61cd547d5f66855b0cb3ae40fa45614d50a67326d9d45a6ddc43fb38999",
+      "sha256": "ee0ce61cd547d5f66855b0cb3ae40fa45614d50a67326d9d45a6ddc43fb38999",
+      "bytes": 3467,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "SOURCE_IDENTITY_REVIEW.md": {
+      "source_git_blob": "247e880885bab7e9ca1ab7d6298e498f4e825d50",
+      "source_sha256": "4ae98bebb0d7739433a23b34bb43bbd2d51a9123a8c3684fa61fa3a4f3a89869",
+      "sha256": "4ae98bebb0d7739433a23b34bb43bbd2d51a9123a8c3684fa61fa3a4f3a89869",
+      "bytes": 14626,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "STABILITY_EXPERIMENT_PROTOCOL.md": {
+      "source_git_blob": "1dfc35394feea5a495d63a30096367e0391895af",
+      "source_sha256": "0148858c0aae69555d8d0f0578c1098a5cfe21657304341b6019c3c80e201132",
+      "sha256": "0148858c0aae69555d8d0f0578c1098a5cfe21657304341b6019c3c80e201132",
+      "bytes": 24098,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "STABILITY_EXPERIMENT_RESULTS.md": {
+      "source_git_blob": "2041160d66a7e81f01a3d12246e2918c626df7c5",
+      "source_sha256": "57b9adc288c1f06a50c305adcd37778da54a99209cd7315c8980a017e12d73dc",
+      "sha256": "57b9adc288c1f06a50c305adcd37778da54a99209cd7315c8980a017e12d73dc",
+      "bytes": 15152,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "TRANSACTION_IDENTITY_REVIEW.md": {
+      "source_git_blob": "5d7612b03dec11f46172cf7db1b43ca0aa04e55a",
+      "source_sha256": "5f2305effafb393177956b067b5ae4cf4292f37ae6e1c50e91bdda4648e02457",
+      "sha256": "20e91ede8a10dffba4107b30511788a2bf68a9e267d16de23e3736dd0f3f275b",
+      "bytes": 8586,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "TRANSACTION_SOURCE.md": {
+      "source_git_blob": "7b793407309b0ab085c45974940169034fdbc375",
+      "source_sha256": "2b0f62cd8a1998293a9c2874a3f29d69223488450eba251a7804725556281cce",
+      "sha256": "2b0f62cd8a1998293a9c2874a3f29d69223488450eba251a7804725556281cce",
+      "bytes": 8847,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "TRANSACTION_SOURCE_PROTOCOL.md": {
+      "source_git_blob": "7c716effb20abefd8f0cddb6ae5021598aa3020e",
+      "source_sha256": "4075655d57da7bf34ed93394852914b8794039b4f59eeac31ee3425f26fb454c",
+      "sha256": "4075655d57da7bf34ed93394852914b8794039b4f59eeac31ee3425f26fb454c",
+      "bytes": 10715,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EVIDENCE_AUDIT.md": {
+      "source_git_blob": "9f9b0b1f0213bdc155100f4da0865a777be3926e",
+      "source_sha256": "e282ed3f8a130ead01974a3b3fb236f691634d6fc30dc460cb982c956e91fbd9",
+      "sha256": "e282ed3f8a130ead01974a3b3fb236f691634d6fc30dc460cb982c956e91fbd9",
+      "bytes": 5774,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_PROTOCOL.md": {
+      "source_git_blob": "6da6e09b5fe1edbffdda19101c91f136b6f3d408",
+      "source_sha256": "01231d33fca7b85962de9bb60956020bab9375115dd9f8a916bee01b99da91ff",
+      "sha256": "01231d33fca7b85962de9bb60956020bab9375115dd9f8a916bee01b99da91ff",
+      "bytes": 13576,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_RESULTS.md": {
+      "source_git_blob": "5661b9eeaa0d421542cd5dd2f2d56e0f3eece41f",
+      "source_sha256": "23e163f0fe432b5f6d9829ee9cc5940a0563d18d194546cbf2e28d5167b496dc",
+      "sha256": "23e163f0fe432b5f6d9829ee9cc5940a0563d18d194546cbf2e28d5167b496dc",
+      "bytes": 7975,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_ECONOMIC_RESULTS.md": {
+      "source_git_blob": "545a852c8d10fb5d350a03e23a6bfd3289c078ac",
+      "source_sha256": "7d9e728c921c878b30c95b2cddc9dfe9c814045be55669f252e6114481c48af8",
+      "sha256": "7d9e728c921c878b30c95b2cddc9dfe9c814045be55669f252e6114481c48af8",
+      "bytes": 12934,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_EVIDENCE_AUDIT.md": {
+      "source_git_blob": "ab0582baf4bf06c2895ba67a498e23450f129b9d",
+      "source_sha256": "eb3fc726b6ef6f38bf6f6eb2db13131a561e76b87d1bed0108c300a19cfea242",
+      "sha256": "eb3fc726b6ef6f38bf6f6eb2db13131a561e76b87d1bed0108c300a19cfea242",
+      "bytes": 19558,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_PROTOCOL.md": {
+      "source_git_blob": "4bae8406038c6de0176e67a670dd8c5d12ca4e76",
+      "source_sha256": "b575cba3563a0a5fac4dc4de3862e837dabe3fb75795b84e344ad47fdeda8106",
+      "sha256": "b575cba3563a0a5fac4dc4de3862e837dabe3fb75795b84e344ad47fdeda8106",
+      "bytes": 71152,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_RESULTS.md": {
+      "source_git_blob": "c2f2530bc72088299333f9172f18cd2328003646",
+      "source_sha256": "fbefe93785d645279c637bb2164c24962d218e9d7cdc6d15fbac09807816a192",
+      "sha256": "fbefe93785d645279c637bb2164c24962d218e9d7cdc6d15fbac09807816a192",
+      "bytes": 6339,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_PROTOCOL.md": {
+      "source_git_blob": "7c3faca741a076edd1f509c91953d8df08758780",
+      "source_sha256": "133a391cc6e98241e7ecaf31c15473d415ee237db8559311fb515c6c235a4e41",
+      "sha256": "133a391cc6e98241e7ecaf31c15473d415ee237db8559311fb515c6c235a4e41",
+      "bytes": 55419,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_RESULTS.md": {
+      "source_git_blob": "81a21d2d8d03786653151b5cf6ddad16b9b05c43",
+      "source_sha256": "63267d1ec8e4d41cae92192dfb43d03b066ee34c6988b333c57514132e3e7334",
+      "sha256": "63267d1ec8e4d41cae92192dfb43d03b066ee34c6988b333c57514132e3e7334",
+      "bytes": 15448,
+      "transformation": "Machine-specific paths replaced with private-local-artifact marker; unavailable historical links labeled, remote source links pinned. Research text and numbers unchanged."
+    },
+    "EARNINGS_PAYOFF_METRICS.json": {
+      "source_git_blob": "d61892a4d81c4d42640efae2bc883137e4eda3b9",
+      "source_sha256": "5ffbbd04645b4bec891be9848da499eda120d011be4aec0dde45b8c0c0fcc811",
+      "sha256": "5ffbbd04645b4bec891be9848da499eda120d011be4aec0dde45b8c0c0fcc811",
+      "bytes": 21697,
+      "transformation": "Removed accession-identifier fields recursively; all economic aggregates unchanged."
+    },
+    "EARNINGS_PAYOFF_HORIZONS.json": {
+      "source_git_blob": "b9e408a719457ed3ee58839aa97eac5cbd04836f",
+      "source_sha256": "bb398f854b645a0c311961dc66785354f490d68580ec44801d8f4b4f907e4d84",
+      "sha256": "dead28e60e2496895bc7b5c7ce7f734496ce63f1c2fc2e77b06924dbc18ef7c9",
+      "bytes": 73307,
+      "transformation": "Removed accession-identifier fields recursively; all economic aggregates unchanged."
+    },
+    "EARNINGS_PAYOFF_SENSITIVITY.json": {
+      "source_git_blob": "5f578a05fb5977ccec75717f31b120341494eddc",
+      "source_sha256": "e777f3b079c47789c6a3af017997c93702d78afa2ac45a7012c114f135378e9a",
+      "sha256": "59fd8dc7c5d1e336c15b910abf17fab05308e935e2144d7dc86ebaab835730de",
+      "bytes": 8465,
+      "transformation": "Removed accession-identifier fields recursively; all economic aggregates unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_ECONOMIC_SUMMARY.json": {
+      "source_git_blob": "7e821d40b7d5d3a9605a10bb67084ceaa0489835",
+      "source_sha256": "6154d80c01e6694695a5bf48095956cf3ec6fedb84c91548209d22dc8e6b62bb",
+      "sha256": "e36d13fd005a5e6cb95c50c8f688d134df6f41f46dda53ca0ec96d5278cb5798",
+      "bytes": 178206,
+      "transformation": "Removed accession-identifier fields recursively; all economic aggregates unchanged."
+    },
+    "UNCERTAINTY_RESOLUTION_EXPANDED_COVERED_CALL_SUMMARY.json": {
+      "source_git_blob": "bf3f17eefd1906c28277803e715e7ce7de0a922d",
+      "source_sha256": "c4f430ef3abc245b12ab3b54c2de3de4945fe61cbb2cc832f0c9d17478cacd1e",
+      "sha256": "8a9fb04d4bc4e7d44da71b0e03c54f4ebd69d1b75959379c05ff8c339fad5f1f",
+      "bytes": 98306,
+      "transformation": "Removed accession-identifier fields recursively; all economic aggregates unchanged."
+    }
+  }
+}

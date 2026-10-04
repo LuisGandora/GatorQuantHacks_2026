@@ -59,9 +59,18 @@ or not an action this preparation task can establish.
 | Current-tree common secrets/cache scan | PASS | Configured scanner found no common credentials, tracked `.env`, caches, private paths, raw record exports, giant outputs or saved notebook state. Human labels/scalar scores and manually reviewed aggregate artifacts allowed. Finite scan, not exhaustive licensing determination. |
 | Original full history | WARNING | 37 starting-main commits: internal `.opencode` command objects and saved notebook outputs remain. No history rewrite; original research repo retained separately. Do not present it as the sanitized submission. |
 | Clean public submission history | PASS | Independent allowlisted export and new Git history; reviewed source/docs/aggregates only. Original Git objects, raw ledger/logs, archives and prompts excluded. Derivation and per-file SHA-256s recorded. |
-| Final public clone verification | PASS | Fresh GitHub clone passed documented `bash setup.sh`, all 20 tests, source fingerprints, imports in notebook context, `pip check`, publication/history scans, 192 final consistency checks (183 at first clone, plus nine full-table row checks), and ordered HTTP-blocked Run All in its new registered kernel. No original Git objects needed. See `submission/QA_RUN.json`; final published tip recorded in handoff. |
+| Final public clone verification | PASS | Fresh GitHub clone passed documented `bash setup.sh`, all 20 tests, source fingerprints, imports in notebook context, `pip check`, publication/history scans, 281 final consistency checks (192 F1/report checks plus 89 remote evidence/provenance checks), and ordered HTTP-blocked Run All in its new registered kernel. No original Git objects needed. See `submission/QA_RUN.json`; final published tip recorded in handoff. |
 | Research / sealed-data safety | PASS | No event membership, signal question/threshold, strategy, costs, controls, economic code or historical research result changed; no new economic run, raw OOS observation or judges' sealed data opened. Aggregate-only recovery was explicitly authorized. |
 
 No **BLOCKER** remains for delivery of the package. Evidence warnings can affect judging;
 they are neither hidden nor "fixed" by changing the research. Devpost submission itself
 and a demo link remain outside the automated repository handoff.
+
+## Remote experiment inclusion
+
+| Item | Status | Evidence / limits |
+|---|---|---|
+| Remote public research history | PASS | Remote experiments commit `a3e8727fdef8dac18a2458cbd6a55c93df9bb275`; 69 public methodology documents and five aggregate JSONs in a dedicated archive, source/publication hashes and transformations recorded. No branch code or private payload merged. |
+| Priced event/control outcomes | PASS | Exact net means and differences for Experiments 6/9B/10, matched/issuer/control N, original classifications and unavailable primary CI retained. Fixed horizons, costs, volume and sensitivity linked. Supporting evidence, not a replacement hypothesis. |
+| Experiments 11–13 | PENDING | User identifies these as unpriced. No numbered artifacts at fetched remote tip; no economic result or renumbering invented. Named source/measurement studies preserved. Not a blocker for F1 package delivery. |
+| Window consistency | PASS | Remote 6/9B/10 remain in-sample-only with OOS/judges false. F1 historical OOS already reported; 2026 not globally pristine. No new OOS/sealed observation opened. |

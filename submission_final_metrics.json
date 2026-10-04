@@ -75,9 +75,9 @@
       "window": "In-sample",
       "comparison": "Fresh vs ordinary days",
       "n_reported_max_per_horizon": 55,
-      "gross_edge": "−1.19%",
+      "gross_edge": "\u22121.19%",
       "ci_summary": "excludes 0 at 1 of 3 horizons",
-      "reported_gate_verdict": "worse; survives dropping best 3 (−0.45%)",
+      "reported_gate_verdict": "worse; survives dropping best 3 (\u22120.45%)",
       "numeric_ci_low": null,
       "numeric_ci_high": null,
       "matched_n": null,
@@ -93,7 +93,7 @@
       "window": "In-sample",
       "comparison": "Stale vs ordinary days",
       "n_reported_max_per_horizon": 95,
-      "gross_edge": "−0.16%",
+      "gross_edge": "\u22120.16%",
       "ci_summary": "includes 0",
       "reported_gate_verdict": "not supported",
       "numeric_ci_low": null,
@@ -109,9 +109,9 @@
     },
     {
       "window": "In-sample",
-      "comparison": "Fresh − stale",
+      "comparison": "Fresh \u2212 stale",
       "n_reported_max_per_horizon": 55,
-      "gross_edge": "−1.03%",
+      "gross_edge": "\u22121.03%",
       "ci_summary": "includes 0",
       "reported_gate_verdict": "not supported",
       "numeric_ci_low": null,
@@ -129,7 +129,7 @@
       "window": "Out-of-sample",
       "comparison": "Fresh vs ordinary days",
       "n_reported_max_per_horizon": 25,
-      "gross_edge": "−0.70%",
+      "gross_edge": "\u22120.70%",
       "ci_summary": "includes 0 at all 3",
       "reported_gate_verdict": "**same sign as in-sample**",
       "numeric_ci_low": null,
@@ -163,9 +163,9 @@
     },
     {
       "window": "Out-of-sample",
-      "comparison": "Fresh − stale",
+      "comparison": "Fresh \u2212 stale",
       "n_reported_max_per_horizon": 25,
-      "gross_edge": "−2.82%",
+      "gross_edge": "\u22122.82%",
       "ci_summary": "excludes 0 at 2 of 3",
       "reported_gate_verdict": "fails gate 1 (not significant in-sample); same sign",
       "numeric_ci_low": null,
@@ -2417,7 +2417,7 @@
     }
   ],
   "known_discrepancies_and_blockers": [
-    "Experiments 8–12, 9B, later blind reviews, numeric-guidance work, implementation/source audits, and related result artifacts are absent/unmerged in this snapshot.",
+    "Experiments 8\u201312, 9B, later blind reviews, numeric-guidance work, implementation/source audits, and related result artifacts are absent/unmerged in this snapshot.",
     "Organizer starter specifies at most two pages; handoff brief sets a five-page ceiling. Final note targets at most two pages, satisfying both.",
     "F1 preregistered primary is fresh-minus-stale; prominent headline is fresh-versus-ordinary. Both are retained; IS primary contrast is not supported.",
     "Pinned FINDINGS.md underpricing title/summary is stronger than supported; current Markdown corrects it. Mechanism remains post hoc and unconfirmed; protective-put mirror was not tested.",
@@ -2497,5 +2497,12 @@
     "interval": "percentile 2.5/97.5",
     "unit": "independent row resampling per group; not issuer-clustered",
     "source": "gator-quant-hacks-8k-options-challenge.ipynb cell25 functions bootstrap_ci/difference_board"
+  },
+  "supporting_remote_history": {
+    "source_commit": "a3e8727fdef8dac18a2458cbd6a55c93df9bb275",
+    "index": "submission/evidence/remote_experiments/README.md",
+    "aggregate_supplement": "submission/remote_experiment_aggregates.json",
+    "role": "Supporting only; F1 hypothesis and all primary metrics unchanged",
+    "numbered_experiments_11_13": "Unpriced per user; numbered artifacts not present at fetched tip"
   }
 }

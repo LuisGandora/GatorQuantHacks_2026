@@ -41,3 +41,7 @@ Numeric F1 CI endpoints, horizon-specific N, issuer N, common matched N, price-v
 ## Canonical record
 
 All parameters, classifications, denominators, costs, sensitivity cells and portfolio figures are individually represented in `submission_authoritative_facts.json`. The existing `submission_final_metrics.json` remains synchronized. Aggregate recovery details are in `submission/recovered_*.json`; research chronology is in `docs/RESEARCH_PROVENANCE.md`.
+
+## Remote supporting evidence, October 4, 2026
+
+The [remote research-history supplement](submission/evidence/remote_experiments/README.md) pins public experiments-branch evidence to `a3e8727fdef8dac18a2458cbd6a55c93df9bb275`. Priced Experiment 6, 9B and 10 retain their original failed gates; their actual event/control means, net costs, full fixed horizons, sensitivity and experiment-specific unopened OOS status are reported separately from F1. Experiments 11–13 are unpriced supporting history; numbered artifacts were not found at that remote tip. No missing F1 absolute mean, CI or denominator is filled from another experiment. The economic hypothesis and final strategy remain F1; no research is rerun.

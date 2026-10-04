@@ -34,3 +34,7 @@ All 54 rounded gross horizon differences are now present, recovered from saved o
 - The public repository is `https://github.com/jack-uf/GatorQuantHacks_2026_Submission`; GitHub visibility and a fresh public clone were verified. Its complete new reachable history has zero configured scan findings.
 
 The score should change only if new verified submission evidence appears. In particular, sealed-window outcomes are pending, not assumed to be either a pass or a failure.
+
+## Remote supporting evidence, October 4, 2026
+
+The [remote research-history supplement](../submission/evidence/remote_experiments/README.md) pins public experiments-branch evidence to `a3e8727fdef8dac18a2458cbd6a55c93df9bb275`. Priced Experiment 6, 9B and 10 retain their original failed gates; their actual event/control means, net costs, full fixed horizons, sensitivity and experiment-specific unopened OOS status are reported separately from F1. Experiments 11–13 are unpriced supporting history; numbered artifacts were not found at that remote tip. No missing F1 absolute mean, CI or denominator is filled from another experiment. The economic hypothesis and final strategy remain F1; no research is rerun.

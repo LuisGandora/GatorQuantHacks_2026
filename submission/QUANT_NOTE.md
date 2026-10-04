@@ -68,3 +68,5 @@ Judges' sealed dates and outcomes remain unknown and untouched. Our expectation 
 
 Reproducibility: GQH_MASSIVE_FINAL.ipynb; submission_authoritative_facts.json; docs/RESEARCH_PROVENANCE.md; SUBMISSION_QA_CHECKLIST.md. Final sources are committed aggregates only. Licensed API payloads and caches are excluded.
 
+Supporting remote research: priced earnings, governance-resolution CSP and covered-call tests also failed their original gates. Actual event/control net means, costs and full sensitivity are in submission/evidence/remote_experiments/README.md. Experiments 11-13 remain unpriced supporting history; numbered artifacts are unavailable at the fetched tip.
+

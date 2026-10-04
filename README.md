@@ -23,6 +23,8 @@ Read the **[two-page quant note](submission/QUANT_NOTE.pdf)**, then open
 [QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
 [authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.
 
+The [remote experiment history](submission/evidence/remote_experiments/README.md) includes the completed priced earnings benchmark, 9B cash-secured-put test and Experiment 10 covered-call test, with actual event/control net returns, costs and sensitivity. These supporting in-sample studies failed their original gates; they do not replace F1. Experiments 11–13 remain unpriced supporting work, with numbered artifacts unavailable at the fetched remote tip.
+
 ## Install and run
 
 Use **Python 3.10+**, from the repository root. One submission installation path:
