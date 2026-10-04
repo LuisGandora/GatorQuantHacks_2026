@@ -1,0 +1,101 @@
+Traceback (most recent call last):
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connectionpool.py", line 540, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connection.py", line 638, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 1459, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\http\client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\socket.py", line 729, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\util\retry.py", line 510, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connectionpool.py", line 542, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\urllib3\connectionpool.py", line 373, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\vrp.py", line 286, in <module>
+    {"counts": stage_counts, "map": stage_map, "oos": lambda P: stage_oos(P, force)}[stage](P)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\vrp.py", line 286, in <lambda>
+    {"counts": stage_counts, "map": stage_map, "oos": lambda P: stage_oos(P, force)}[stage](P)
+                                                                ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\vrp.py", line 236, in stage_oos
+    e2, r2, _ = window(P, latest("vrp_counts")[0]["eligible"], P["OOS_START"], P["OOS_END"], "out-of-sample H2")
+                ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\vrp.py", line 124, in window
+    ev = H.events(P, spec(t), start, end)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\harness.py", line 138, in events
+    late = pd.to_datetime(ev.filing_url.map(P["fetch_acceptance_time"])).dt.hour >= 16
+                          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\pandas\core\series.py", line 4675, in map
+    new_values = self._map_values(func, na_action=na_action)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\pandas\core\base.py", line 1020, in _map_values
+    return arr.map(mapper, na_action=na_action)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\pandas\core\arrays\base.py", line 2745, in map
+    return map_array(self, mapper, na_action=na_action)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\pandas\core\algorithms.py", line 1715, in map_array
+    return lib.map_infer(values, mapper)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "pandas/_libs/lib.pyx", line 3071, in pandas._libs.lib.map_infer
+  File "gator-quant-hacks-8k-options-challenge.ipynb", line 7, in fetch_acceptance_time
+    "source": [
+    
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\api.py", line 87, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\pnoyb\Downloads\VSCodeProjects\Python\gqh-massive-8k-starter\.venv\Lib\site-packages\requests\adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=30)

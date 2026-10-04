@@ -77,6 +77,7 @@ copied from runs/vrp/MAP.md and the source named:
 - **Honesty lines:** the number of categories tested, the BH correction, which categories were seen before, and the
   volatility-level confound from REVIEW.md.
 - **If nothing is flagged or confirmed,** report that as the finding.
+- **Never call the `net P&L` or `strategy edge` columns an edge.** Net P&L is the trade's absolute P&L and mostly reflects the 2024-25 rising market (protective puts own the stock); strategy edges are gross, untested and not significant. Mention them only as descriptive, with that caveat, or not at all.
 
 Then copy runs/vrp/MAP.md's table into `runs/APPENDIX_VRP.md` unchanged, and link it from the section.
 
