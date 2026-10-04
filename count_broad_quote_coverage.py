@@ -8,11 +8,12 @@ LEGS = {'long_call': ['C_K'], 'covered_call': ['C_U0.05'], 'protective_put': ['P
         'collar': ['C_U0.05', 'P_L0.05'], 'cash_secured_put': ['P_L0.05']}
 
 
-def count():
+def count(out=None, all_horizons=False):
+    out = Path(out) if out is not None else OUT
     records = {}
-    for path in (OUT/'trade_snapshots').glob('*.json'):
+    for path in (out/'trade_snapshots').glob('*.json'):
         record = json.loads(path.read_text())
-        key = (record['ticker'], record['entry_date'])
+        key = (record['ticker'], record['entry_date'], str(record.get('horizon', '21')))
         if key in records and records[key] != record:
             raise RuntimeError(f'Conflicting quote snapshots for {key}')
         records[key] = record
@@ -35,17 +36,24 @@ def count():
                                 break
                         if reason != 'usable':
                             break
-                rows.append(dict(ticker=record['ticker'], entry_date=record['entry_date'],
-                    strategy=strategy, max_age_seconds=age_limit, status=reason))
+                row = dict(ticker=record['ticker'], entry_date=record['entry_date'],
+                    strategy=strategy, max_age_seconds=age_limit, status=reason)
+                if all_horizons:
+                    row['horizon'] = str(record['horizon'])
+                rows.append(row)
     frame = pd.DataFrame(rows)
     if not frame.empty:
-        frame.to_csv(OUT/'quote_usability_inventory.csv', index=False)
-        frame.groupby(['strategy', 'max_age_seconds', 'status']).size().rename('trades').reset_index().to_csv(
-            OUT/'quote_usability_counts.csv', index=False)
+        frame.to_csv(out/'quote_usability_inventory.csv', index=False)
+        groups = (['horizon'] if all_horizons else [])+['strategy', 'max_age_seconds', 'status']
+        frame.groupby(groups).size().rename('trades').reset_index().to_csv(
+            out/'quote_usability_counts.csv', index=False)
     print(json.dumps(dict(unique_trade_snapshots=len(records),
-        collection_complete=(OUT/'collection_complete.json').exists(),
+        collection_complete=(out/'collection_complete.json').exists(),
         returns_calculated=False, matching_and_inference_pending=True), indent=2))
+    return frame
 
 
 if __name__ == '__main__':
-    count()
+    import sys
+    expanded = '--all-horizons' in sys.argv
+    count(OUT/'all_horizons' if expanded else OUT, all_horizons=expanded)
