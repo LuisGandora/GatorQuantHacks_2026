@@ -5,7 +5,7 @@
     "status": "reconciled_with_documented_gaps",
     "evidence_packet": "SUBMISSION_EVIDENCE_PACKET.md",
     "evidence_packet_status": "complete and reconciled against pinned aggregate artifacts",
-    "final_report_status": "Final two-page quant note: submission/QUANT_NOTE.pdf; source submission/QUANT_NOTE.md",
+    "final_report_status": "Final quant note: submission/QUANT_NOTE.pdf (official 5-page blueprint body + appendix); source submission/QUANT_NOTE.md",
     "reconciliation_note": "Headline aggregates checked directly against immutable ledger scalar fields. All 54 rounded fixed-horizon differences recovered from original saved notebook displays. Missing endpoints/issuer/control/matched/absolute/net fields remain null. No historical research rerun.",
     "documentation_corrections": "October 4, 2026: current FINDINGS.md qualifies underpricing and corrects VRP gross/net wording. Pinned historical evidence and all numeric metrics remain unchanged."
   },

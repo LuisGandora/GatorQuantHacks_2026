@@ -1,7 +1,7 @@
 # Submission Evidence Packet
 
 
-**Current submission status, October 4, 2026.** The final two-page report exists at `submission/QUANT_NOTE.md` and `submission/QUANT_NOTE.pdf`. It includes all 54 rounded gross F1 horizon differences recovered from saved output in the original notebook at commit `5871597e3ecab5e0dbbc55d80314e1939d182224`, cells 44 and 45. The recovery is recorded in `submission/recovered_fixed_horizons.json`; `submission/source_manifest.json` supplies source hashes for the self-contained judge path. That manifest is unsigned integrity evidence, not proof of preregistration, tag custody, or independent custody. The current report map and notebook supersede older statements below that the report or horizon values were missing.
+**Current submission status, October 4, 2026.** The final report exists at `submission/QUANT_NOTE.md` and `submission/QUANT_NOTE.pdf` (official 5-page blueprint body plus 1 uncounted appendix/references page). It includes all 54 rounded gross F1 horizon differences recovered from saved output in the original notebook at commit `5871597e3ecab5e0dbbc55d80314e1939d182224`, cells 44 and 45. The recovery is recorded in `submission/recovered_fixed_horizons.json`; `submission/source_manifest.json` supplies source hashes for the self-contained judge path. That manifest is unsigned integrity evidence, not proof of preregistration, tag custody, or independent custody. The current report map and notebook supersede older statements below that the report or horizon values were missing.
 
 **Purpose and boundary.** This packet is the factual handoff for the Massive submission. Historical experiment descriptions remain historical; current claims use the submitted notebook, `submission_final_metrics.json`, `submission_authoritative_facts.json`, `docs/RESEARCH_PROVENANCE.md`, recovered aggregate JSON, and the final report. No research was rerun and no raw OOS, sealed-window, or licensed row-level data was inspected for this documentation update.
 
@@ -27,7 +27,7 @@ Committed blob IDs useful for pinning the principal evidence files at this snaps
 
 ## 2. Challenge requirements versus project gates
 
-The committed starter/challenge notebook is the local reference for the rubric and workflow. Its rubric is Novelty 30, Analytical Rigor 30, Sealed Replication 20, Trade Mechanics 10, and Communication 10. The starter notebook specifies a two-page maximum and the supplied task brief allowed up to five pages. The final report uses two pages, satisfying both stated ceilings. This is a conservative choice, not evidence of an organizer rule change.
+The committed starter/challenge notebook is the local reference for the rubric and workflow. Its rubric is Novelty 30, Analytical Rigor 30, Sealed Replication 20, Trade Mechanics 10, and Communication 10. The starter notebook specifies a two-page maximum and the supplied task brief allowed up to five pages. The final report uses the full official 5-page blueprint body plus 1 uncounted appendix page, satisfying the five-page ceiling.
 
 | Item | What the committed local reference supports | Status / boundary |
 |---|---|---|
@@ -41,7 +41,7 @@ The committed starter/challenge notebook is the local reference for the rubric a
 | Costs | Notebook assumes 5% of option premium per side; a 2× sensitivity is reported. | Assumption, not quote-based observed execution cost. |
 | Liquidity/capacity | F1 reports option-volume-based participation estimates. | Project realism analysis; based on volume and spot notional, not actual order-book depth or strike collateral. |
 | Public GitHub | `docs/DEVPOST.md` recommends the GitHub main branch as the code link. | Local submission guidance; not independently verified as an organizer rule. |
-| Page count | Starter notebook sets a two-page maximum; the supplied brief allows up to five pages. | Final report uses two pages and satisfies both stated ceilings. |
+| Page count | Starter notebook sets a two-page maximum; the supplied brief allows up to five pages. | Final report uses the official 5-page blueprint body and satisfies the five-page ceiling. |
 | Notebook/pipeline | Starter notebook and date inputs/configuration are part of the local challenge reference. | Canonical aggregate notebook passed ordered execution with HTTP blocked; live economic reproduction remains unverified. |
 | Configurable dates | Notebook exposes study/OOS/holdout date inputs. | Project implementation criterion; do not claim current end-to-end correctness for all experiment definitions. |
 | N thresholds | `pairings.json` sets `min_events: 40`; harness has its own gates. | Internal project gates, not organizer rubric requirements. |
@@ -224,7 +224,7 @@ Stage denominators are now explicitly distinguished by source definition: discov
 | Existing artifact | What it shows | Publication status / rubric use |
 |---|---|---|
 | `runs/portfolio_F1-leadership-fresh.png` | IS/reported-OOS portfolio equity curves at 1× and 2× assumed cost. | Existing, but shows an unprofitable CSP test; usable with clear costs/windows and no claim of tradable edge. Supports rigor/trade mechanics. |
-| `runs/FINDINGS.pdf` | Historical four-page rendering of Markdown findings. It predates the VRP extension and omits its current content. | Not the final report. The current report is the two-page `submission/QUANT_NOTE.pdf`. |
+| `runs/FINDINGS.pdf` | Historical four-page rendering of Markdown findings. It predates the VRP extension and omits its current content. | Not the final report. The current report is `submission/QUANT_NOTE.pdf` (official 5-page blueprint body + appendix). |
 | `runs/FINDINGS.md` §3 | F1 edge/CI-status comparison table. | Publication-safe as an aggregate if labels distinguish gross edge from returns and endpoints unavailable. Supports rigor. |
 | `runs/FINDINGS.md` §5 | Portfolio metrics at 1×/2× costs. | Aggregate table; clarify assumed costs, annualization, and position-limit implementation. Supports trade realism. |
 | `runs/EXTRAS.md` sensitivity tables | 18 parameter cells/window, cost, capacity, mechanisms, year edges. | Safe as reported aggregate with denominators and exploratory label. Supports rigor. |
@@ -283,7 +283,7 @@ No new figure is required to establish a missing CI, issuer count, first-public-
 
 1. **Remote historical evidence recovered:** Public protocols/results and aggregate JSON from remote experiments are now attributed in the supplement. Numbered 11–13 artifacts remain unavailable; they must stay unpriced supporting history. Source hashes are integrity evidence, not independent custody. No private logs or raw observations fill missing fields.
 2. **Historical freeze tags missing:** `freeze-v*` and `vrp-v*` tags are unavailable in the reviewed refs. The current self-contained judge path checks files against `submission/source_manifest.json`, an unsigned hash manifest. That check does not establish contemporaneous preregistration, independent custody, or full historical tag provenance.
-3. **Page count:** the final note is two pages, satisfying the starter notebook two-page maximum and supplied five-page ceiling. This does not imply the organizer changed its rules.
+3. **Page count:** the final note body is 5 pages (with 1 uncounted appendix page), satisfying the supplied five-page blueprint ceiling.
 4. **No sealed evidence:** actual sealed window, actual replacement dates and any sealed output are unknown. The notebook's 2023 placeholder is not a verified judge holdout.
 5. **Historical OOS has been reported:** do not call project OOS unopened. This packet did not access raw OOS. The published aggregate is already a post-look result; the fresh-underpricing reinterpretation and mirror prediction were written afterward.
 6. **F1 specification/protocol discrepancy:** original `PREREG.md` window dates were corrected after run (IS and OOS now 2024-25 / 2026 Jan-Aug). The first sealed prediction references known OOS sample sizes and expects CI to include zero; later reframed predictions were written after OOS. Keep the original pre-P&L hypothesis distinct from post-OOS predictions.
@@ -300,7 +300,7 @@ No new figure is required to establish a missing CI, issuer count, first-public-
 17. **Historical VRP wording discrepancy:** categories overlap and can fall back to a shared control pool; four were previously seen; H1 none flagged, so no category OOS. An earlier `FINDINGS.md` version conflated strategy edge and own net P&L; current Markdown corrects the distinction made in prereg/MAP.
 18. **Reproduction docs stale:** `runs/REPRO.md` references missing audit CSVs and an obsolete `runs/jev_labels.csv` location; commands would query/write research data and were not run. Repro instructions are not a clean-room verification.
 19. **Freeze guard coverage:** documented freeze checks cover core harness/JEV files but omit dependent notebook and `pair_test.py`; VRP guard omits score cache. Missing tags compound this gap.
-20. **Historical PDF/version mismatch:** the old four-page findings PDF omits VRP material and is excluded from the public export. The final two-page `submission/QUANT_NOTE.pdf` has matching current source.
+20. **Historical PDF/version mismatch:** the old four-page findings PDF omits VRP material and is excluded from the public export. The final `submission/QUANT_NOTE.pdf` has matching current source.
 
 ## 13. Historical report plan (superseded)
 
@@ -314,7 +314,7 @@ The following five-page outline is retained as historical planning context only.
 | 4 | Neighbor sensitivity, lag, VRP null context, multiplicity. | F1 18-cell table/plot; small VRP null-map figure only if legible. |
 | 5 | Interpretation, capacity, limitations, no-edge conclusion and missing sealed validation. | Small capacity/cost table; no unsupported mechanism graphic. |
 
-The final report follows a two-page layout. No report page implies sealed replication.
+The final report follows the official 5-page blueprint layout. No report page implies sealed replication.
 
 ## 14. Notebook handoff (current state)
 
@@ -333,6 +333,6 @@ Primary factual inputs for the existing report:
 
 The report is in `submission/QUANT_NOTE.md` and `submission/QUANT_NOTE.pdf`. It draws on the notebook, `submission_final_metrics.json`, `submission_authoritative_facts.json`, `submission/recovered_fixed_horizons.json`, `docs/RESEARCH_PROVENANCE.md`, and the historical research documents listed above.
 
-Current limitations for the parent/submission lead: missing historical tags and independent custody; protocol dates amended after OOS; numbered unpriced 11–13 artifacts unavailable at the fetched remote tip; stage-specific F1 populations; unavailable issuer/matched/control N, absolute returns, all-horizon net contrasts, and numeric F1 CI endpoints; audit-note bottom-event disagreement; stale historical REPRO references; and no verified sealed-window result. The final two-page report exists. Current `runs/FINDINGS.md` corrects the underpricing headline and VRP gross/net wording; do not rewrite pinned historical evidence.
+Current limitations for the parent/submission lead: missing historical tags and independent custody; protocol dates amended after OOS; numbered unpriced 11–13 artifacts unavailable at the fetched remote tip; stage-specific F1 populations; unavailable issuer/matched/control N, absolute returns, all-horizon net contrasts, and numeric F1 CI endpoints; audit-note bottom-event disagreement; stale historical REPRO references; and no verified sealed-window result. The final report exists. Current `runs/FINDINGS.md` corrects the underpricing headline and VRP gross/net wording; do not rewrite pinned historical evidence.
 
 **SUBMISSION EVIDENCE PACKET COMPLETE.** Historical details above retain their original evidence labels; current report status and recovered-horizon availability are stated in this update.

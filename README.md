@@ -18,7 +18,7 @@ absolute returns nor annual returns. All 18 neighboring specifications per windo
 were negative. OOS ordinary-day comparisons were not significant. No profitable
 opposite-side trade was established, and judges’ sealed data remains untouched.
 
-Read the **[two-page quant note](submission/QUANT_NOTE.pdf)**, then open
+Read the **[five-page quant note](submission/QUANT_NOTE.pdf)**, then open
 **[GQH_MASSIVE_FINAL.ipynb](GQH_MASSIVE_FINAL.ipynb)**. The
 [QA checklist](SUBMISSION_QA_CHECKLIST.md) records verified checks and limitations;
 [authoritative facts](SUBMISSION_AUTHORITATIVE_FACTS.md) supply exact source attribution.

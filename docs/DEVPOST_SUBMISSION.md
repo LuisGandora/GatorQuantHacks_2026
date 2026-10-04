@@ -37,7 +37,7 @@ The event date is difficult to establish from filing metadata. EDGAR period of r
 
 ## 8. Accomplishments and lessons
 
-We recovered 54 rounded gross horizon differences from saved output in the original notebook and included them in a two-page quant note. The notebook's default offline run and the 20 reported QA tests pass. Our main lesson is methodological: preserve the original hypothesis, show the negative result, and keep unavailable values visible. A repeated negative sign is not a successful profitable strategy.
+We recovered 54 rounded gross horizon differences from saved output in the original notebook and included them in a five-page quant note. The notebook's default offline run and the 20 reported QA tests pass. Our main lesson is methodological: preserve the original hypothesis, show the negative result, and keep unavailable values visible. A repeated negative sign is not a successful profitable strategy.
 
 ## 9. What's next
 

@@ -2,7 +2,7 @@
 
 ## Status
 
-The report is complete. The source is [submission/QUANT_NOTE.md](../submission/QUANT_NOTE.md), and the two-page PDF is [submission/QUANT_NOTE.pdf](../submission/QUANT_NOTE.pdf). This document records the report's factual boundaries and historical caveats; it is no longer a request to write the report.
+The report is complete. The source is [submission/QUANT_NOTE.md](../submission/QUANT_NOTE.md), and the PDF is [submission/QUANT_NOTE.pdf](../submission/QUANT_NOTE.pdf) (official 5-page blueprint body + appendix). This document records the report's factual boundaries and historical caveats; it is no longer a request to write the report.
 
 The report uses the current canonical notebook, `submission_final_metrics.json`, `submission_authoritative_facts.json`, the recovered aggregate JSON, and `docs/RESEARCH_PROVENANCE.md`. Historical research documents supply context. No market-data query, OOS rerun, raw OOS inspection, or sealed-window inspection was part of the report update.
 
@@ -24,7 +24,7 @@ The difference bootstrap independently resamples groups and is not issuer-cluste
 
 The notebook's `submission/source_manifest.json` checks source-file hashes for the self-contained judge path. It replaces absent historical freeze tags for that file-integrity purpose only. The manifest is unsigned and does not establish independent custody or contemporaneous preregistration. The F1 protocol's exact date ranges were amended after OOS, so do not describe exact-window preregistration or custody as established.
 
-The two-page report satisfies the supplied two-page starter limit and the five-page ceiling in the task brief. This is a conservative fit, not evidence that the organizer changed its rules. The judges' sealed dates and outcomes are unknown. The reported project OOS aggregate is not a sealed result.
+The report satisfies the five-page ceiling in the task brief and official blueprint. The judges' sealed dates and outcomes are unknown. The reported project OOS aggregate is not a sealed result.
 
 The report's cost assumption is 5% of option premium per side; costs are not observed quotes. Portfolio net returns and volume-based capacity estimates are not event-level net edges or guaranteed execution capacity. The separate 18-category VRP H1 map had zero BH passes; no category received an OOS look. Its pooled H2 OOS aggregate was not confirmed.
 

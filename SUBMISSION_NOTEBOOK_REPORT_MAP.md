@@ -1,6 +1,6 @@
 # Submission notebook to report map
 
-This map routes the current two-page quant note to the canonical notebook and committed evidence. The notebook and report use static historical aggregates by default. Neither represents a new OOS look or a sealed-window result.
+This map routes the current five-page quant note to the canonical notebook and committed evidence. The notebook and report use static historical aggregates by default. Neither represents a new OOS look or a sealed-window result.
 
 | Report content | Notebook section | Current evidence and source | Qualification to retain |
 |---|---:|---|---|
@@ -15,11 +15,11 @@ This map routes the current two-page quant note to the canonical notebook and co
 | Sensitivity and mechanisms | 12, 13 | `runs/EXTRAS.md`; `runs/APPENDIX_VRP.md`; `runs/vrp/MAP.md`; `submission_final_metrics.json` VRP aggregates | The 18 neighbor signs per window are descriptive; nine settings use pre-entry dates and cannot be traded after an unexpected filing. VRP H1 is a null map, with no category OOS look. |
 | Costs, portfolio, liquidity, capacity | 14 | `runs/FINDINGS.md`; `runs/EXTRAS.md`; `submission/recovered_reporting_aggregates.json` | Portfolio returns after assumed costs differ from unavailable event-level net contrasts. Capacity uses historical volume and spot notional, not guaranteed fills or strike collateral. |
 | Reported OOS and sealed boundary | 15 | `runs/FINDINGS.md`; `runs/APPENDIX_VRP.md`; `docs/RESEARCH_PROVENANCE.md` | The project reported F1 OOS in 2026 and VRP H2 OOS. No raw OOS was reopened for this submission update. Judges' dates and sealed results remain unknown. |
-| Final report | All relevant sections | `submission/QUANT_NOTE.md`; `submission/QUANT_NOTE.pdf` | Final report exists and is two pages. The four-page `runs/FINDINGS.pdf` is historical and omits the completed VRP extension. |
+| Final report | All relevant sections | `submission/QUANT_NOTE.md`; `submission/QUANT_NOTE.pdf` | Final report exists and follows the official 5-page blueprint body (Sections 01–08) + 1 uncounted appendix page. The four-page `runs/FINDINGS.pdf` is historical and omits the completed VRP extension. |
 
 ## Current reconciliation
 
-The final report is `submission/QUANT_NOTE.md` and its two-page rendering is `submission/QUANT_NOTE.pdf`. Its 54-entry horizon table covers nine horizons, three contrasts, and two windows. The original display recovery is documented in the recovered aggregate JSON and provenance record. No horizon-specific net edge, numeric CI endpoints, event/control N by horizon, issuer N, common matched N, or absolute signal/control means are available. Keep those fields unavailable.
+The final report is `submission/QUANT_NOTE.md` and its rendering is `submission/QUANT_NOTE.pdf` (official 5-page blueprint body + appendix). Its 54-entry horizon table covers nine horizons, three contrasts, and two windows. The original display recovery is documented in the recovered aggregate JSON and provenance record. No horizon-specific net edge, numeric CI endpoints, event/control N by horizon, issuer N, common matched N, or absolute signal/control means are available. Keep those fields unavailable.
 
 `submission/source_manifest.json` replaces unavailable historical freeze tags for file-integrity checks on the self-contained judge path. It is an unsigned source-hash manifest. It does not prove contemporaneous preregistration, independent custody, or that sealed data remained unseen. The protocol's exact date windows were amended after OOS, which remains an explicit custody and rigor limitation.
 

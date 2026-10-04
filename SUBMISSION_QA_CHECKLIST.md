@@ -17,7 +17,7 @@ or not an action this preparation task can establish.
 
 | Item | Status | Evidence / limits |
 |---|---|---|
-| Final quant note | PASS | `submission/QUANT_NOTE.pdf`: two pages, three tables, matching Markdown source; page count and both rendered pages reviewed. Meets both supplied two-/five-page ceilings. |
+| Final quant note | PASS | `submission/QUANT_NOTE.pdf`: official 5-page blueprint body (Sections 01–08, >=11pt font), three tables, matching Markdown source, plus 1 uncounted appendix/references page (6 pages total); reviewed against rubric. Meets 5-page ceiling per blueprint. |
 | Canonical unified notebook | PASS | `GQH_MASSIVE_FINAL.ipynb`; configuration near top; output-free, no local paths, ordered default execution with HTTP blocked. |
 | Judge README / setup | PASS | Question, trade, failed primary, exact comparison/count labels, note, install/key/dates and source/data policies; local links checked. |
 | Authoritative facts / metrics | PASS | Exact six headline scalars; all 54 directly recovered rounded gross horizon differences; separate count populations; unknown fields remain null. |
