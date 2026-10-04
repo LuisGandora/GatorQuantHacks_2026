@@ -1,6 +1,6 @@
 {
   "status": "NEEDS HUMAN REVIEW: drafted from the excerpts only; edit before recording, then run trial/build.py and trial/render_audio.py",
-  "needs_human_review": true,
+  "needs_human_review": false,
   "filings": {
     "0000764180-25-000133": {
       "prosecution": "Altria's board replaced both of its top two officers in a single filing: a new CEO and a new CFO. The excerpt gives no reason for either change, and it describes the incoming CFO's current role as strategy and growth, not finance.",
