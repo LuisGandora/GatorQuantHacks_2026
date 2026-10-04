@@ -1,4 +1,4 @@
-# Variance-premium map · 2026-10-03 20:22
+# Variance-premium map — in-sample table (copied from runs/vrp/MAP.md)
 
 Metric: mean log(|realized move| ÷ implied move) over h=21, h=42 and expiry, events minus ordinary days. Above 0 = moved more than priced (under-priced). 95% CIs resample calendar months; BH at q=0.10.
 
