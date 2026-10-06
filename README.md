@@ -7,8 +7,8 @@ We tested whether fresh leadership-change disclosures create an opportunity to s
 - **[Submission notebook](GQH_MASSIVE_FINAL.ipynb)** — committed aggregate evidence; default execution makes no API requests.
 - **[Quant note](submission/QUANT_NOTE.pdf)** — submission report and limitations.
 - **[Main research notebook](research/gator-quant-hacks-8k-options-challenge.ipynb)** — original experiments and recorded outputs.
-- **[Research quant note](research/runs/QUANT_NOTE.pdf)** — the separate main research report.
-- **[Filing Trial demo](trial/index.html)** — optional voiced filing-evidence demo.
+- **[Research quant note](research/runs/QUANT_NOTE.pd)** — the separate main research report.
+- **[Filing Trial demo](https://luisgandora.github.io/GatorQuantHacks_2026/trial/)** — optional voiced filing-evidence demo.
 
 The aggregate submission package reports fresh-minus-stale gross edge of **−1.03%**, fresh-minus-ordinary gross edge of **−1.19%** in-sample and **−0.70%** in the reported OOS window. The OOS ordinary-day intervals include zero. These gross benchmark differences are not absolute or annual returns. No profitable opposite trade is established.
 
